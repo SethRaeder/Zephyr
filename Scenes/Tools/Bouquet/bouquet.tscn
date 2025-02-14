@@ -1,0 +1,68 @@
+[gd_scene load_steps=13 format=3 uid="uid://etaprmvcorrg"]
+
+[ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_cakw4"]
+[ext_resource type="Texture2D" uid="uid://cqgbif32f010a" path="res://images/inducing tools/Revised/Bouquet.PNG" id="2_dj4rn"]
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="2_w3qsr"]
+[ext_resource type="PackedScene" uid="uid://c3306adyeknxy" path="res://Scenes/Tools/Particles/bouquet_particle.tscn" id="3_2k08a"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_dvufp"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_qoxqd"]
+[ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="5_oy7qk"]
+
+[sub_resource type="Curve" id="Curve_e06c2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.493119, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1e3jo"]
+radius = 21.0
+height = 184.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fiu0g"]
+radius = 60.0
+
+[sub_resource type="Curve" id="Curve_56uft"]
+_data = [Vector2(0.242925, 0.211438), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3y2hv"]
+radius = 212.021
+
+[node name="RigidBody2D" type="RigidBody2D"]
+input_pickable = true
+angular_damp = 15.0
+script = ExtResource("1_cakw4")
+
+[node name="ParticleEmitter" type="Node2D" parent="."]
+position = Vector2(1, -42)
+script = ExtResource("2_w3qsr")
+particle_scene = ExtResource("3_2k08a")
+particle_spawn_velocity_curve = SubResource("Curve_e06c2")
+particle_spawn_radius = 30.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.99999, 1.00001)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_dj4rn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
+shape = SubResource("CapsuleShape2D_1e3jo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2, -42)
+shape = SubResource("CircleShape2D_fiu0g")
+
+[node name="GrabTransform" type="Marker2D" parent="."]
+position = Vector2(0, 65.63)
+script = ExtResource("3_dvufp")
+
+[node name="TickleComponent" type="Area2D" parent="."]
+position = Vector2(1, -42)
+script = ExtResource("4_qoxqd")
+tickle_type = 2
+allergy_type = ExtResource("5_oy7qk")
+intensity = 1.0
+use_velocity = true
+velocity_curve = SubResource("Curve_56uft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
+shape = SubResource("CircleShape2D_3y2hv")

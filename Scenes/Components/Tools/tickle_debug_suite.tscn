@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://0j24tufqmgt2"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_debug_suite.gd" id="1_rk5jx"]
+
+[node name="TickleDebugSuite" type="Control" groups=["ToolDebug"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -6.0
+offset_top = -15.0
+offset_right = 7.78
+offset_bottom = 16.655
+script = ExtResource("1_rk5jx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TickleIntensityBar" type="ProgressBar" parent="." groups=["ToolDebug"]]
+unique_name_in_owner = true
+modulate = Color(1, 0.168627, 0, 1)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 6.0
+offset_bottom = 29.0
+max_value = 1.0
+value = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="TickleDurabilityBar" type="ProgressBar" parent="." groups=["ToolDebug"]]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0.560784, 1)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 11.0
+offset_bottom = 29.0
+max_value = 1.0
+value = 1.0
+fill_mode = 3
+show_percentage = false

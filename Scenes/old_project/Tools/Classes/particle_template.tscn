@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkxlov6cx5b61"]
+
+[ext_resource type="Material" uid="uid://dlp4ws7vgnsex" path="res://Scenes/old_project/Tools/particleshader.tres" id="1_xe1nw"]
+[ext_resource type="Texture2D" uid="uid://b52cbp267tjla" path="res://Scenes/old_project/Tools/particletexture.tres" id="2_mnch8"]
+
+[node name="particle_template" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+material = ExtResource("1_xe1nw")
+scale = Vector2(50, 50)
+texture = ExtResource("2_mnch8")

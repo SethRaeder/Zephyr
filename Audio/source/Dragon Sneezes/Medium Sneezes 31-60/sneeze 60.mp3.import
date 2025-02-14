@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b63du5ni2r3p3"
+path="res://.godot/imported/sneeze 60.mp3-65a0af89bf1b186ebb8afb7d3b336186.mp3str"
+
+[deps]
+
+source_file="res://Audio/source/Dragon Sneezes/Medium Sneezes 31-60/sneeze 60.mp3"
+dest_files=["res://.godot/imported/sneeze 60.mp3-65a0af89bf1b186ebb8afb7d3b336186.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

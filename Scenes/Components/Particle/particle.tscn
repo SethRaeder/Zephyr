@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://domk2ggce6klf"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_7d5q0"]
+[ext_resource type="Texture2D" uid="uid://dn7tdstuhkyq6" path="res://addons/kenney_particle_pack/smoke_01.png" id="2_yotna"]
+[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="3_j0hhf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qulm0"]
+friction = 0.0
+bounce = 0.5
+absorbent = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4n3n"]
+radius = 4.12311
+
+[node name="ToolParticle" type="RigidBody2D"]
+collision_layer = 256
+collision_mask = 256
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_qulm0")
+gravity_scale = 0.15
+linear_damp = 10.0
+script = ExtResource("1_7d5q0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.301961)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yotna")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r4n3n")
+
+[node name="WindSubscriber" type="Marker2D" parent="."]
+script = ExtResource("3_j0hhf")

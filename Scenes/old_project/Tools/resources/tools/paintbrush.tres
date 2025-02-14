@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tool_Resource" load_steps=2 format=3 uid="uid://ctkvvjv81mrwg"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/Tools/resources/tool_resource.gd" id="1_0btq5"]
+
+[resource]
+script = ExtResource("1_0btq5")
+ToolName = "Paintbrush"
+ToolWeight = 0.15
+CanSpawnParticles = false
+HasAmmo = false
+max_ammo = 0
+current_ammo = 0
+can_burn = true
+max_health = 5
+current_health = 5

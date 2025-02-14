@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Particle_Resource" load_steps=2 format=3 uid="uid://gndstrihwxdu"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/Tools/resources/particle_resource.gd" id="1_7gdta"]
+
+[resource]
+script = ExtResource("1_7gdta")
+name = "pollen"
+color = Color(0.702, 0.702, 0.2, 0.5)
+HP = 20.0
+size = 0.1
+mass = 0.15
+tickle = 0.0
+irritation = 0.0
+decay = 50.0

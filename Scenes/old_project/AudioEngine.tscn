@@ -1,0 +1,192 @@
+[gd_scene load_steps=82 format=3 uid="uid://c5miaaexyeejm"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/AudioEngine.gd" id="1_wr4q3"]
+[ext_resource type="AudioStream" uid="uid://cgo0ii45jndc3" path="res://Audio/Zephyr Voice/Hitches/hitch1.wav" id="2_2kkoy"]
+[ext_resource type="AudioStream" uid="uid://cushehl57mwk5" path="res://Audio/Zephyr Voice/Hitches/hitch2.wav" id="3_dsk75"]
+[ext_resource type="AudioStream" uid="uid://df1228t63822t" path="res://Audio/Zephyr Voice/Hitches/hitch11.wav" id="4_4xu10"]
+[ext_resource type="AudioStream" uid="uid://41ejunqtvt8x" path="res://Audio/Zephyr Voice/Hitches/Hitch-2.wav" id="5_w0o5t"]
+[ext_resource type="AudioStream" uid="uid://bq3trcjlcbu3x" path="res://Audio/Zephyr Voice/Hitches/Hitch-3.wav" id="6_t6x1x"]
+[ext_resource type="AudioStream" uid="uid://dl28k8t1r23t0" path="res://Audio/Zephyr Voice/Hitches/Hitch.wav" id="7_u7l3t"]
+[ext_resource type="AudioStream" uid="uid://k0dn1f4amiqm" path="res://Audio/Zephyr Voice/Hitches/hitch3.wav" id="8_gwvrd"]
+[ext_resource type="AudioStream" uid="uid://dt1sam5avc634" path="res://Audio/Zephyr Voice/Hitches/hitch4.wav" id="9_niidw"]
+[ext_resource type="AudioStream" uid="uid://bgy76gkiqxilv" path="res://Audio/Zephyr Voice/Hitches/hitch5.wav" id="10_8kpox"]
+[ext_resource type="AudioStream" uid="uid://d3g4gw58f05jw" path="res://Audio/Zephyr Voice/Hitches/hitch6.wav" id="11_g55xj"]
+[ext_resource type="AudioStream" uid="uid://tsuax4n2sb1y" path="res://Audio/Zephyr Voice/Hitches/hitch7.wav" id="12_skpl7"]
+[ext_resource type="AudioStream" uid="uid://vd1qf5ot4ljl" path="res://Audio/Zephyr Voice/Hitches/hitch8.wav" id="13_l8cur"]
+[ext_resource type="AudioStream" uid="uid://dpejx1bexc6gg" path="res://Audio/Zephyr Voice/Hitches/hitch9.wav" id="14_n5oc0"]
+[ext_resource type="AudioStream" uid="uid://cen5hmc864fs4" path="res://Audio/Zephyr Voice/Hitches/hitch10.wav" id="15_6at7a"]
+[ext_resource type="AudioStream" uid="uid://5lfvej3sj6xs" path="res://Audio/Zephyr Voice/Sneezes/Normal/normal1.wav" id="16_esq7b"]
+[ext_resource type="AudioStream" uid="uid://bqtbvbf3gnwae" path="res://Audio/Zephyr Voice/Sneezes/Normal/normal2.wav" id="17_ixkwo"]
+[ext_resource type="AudioStream" uid="uid://5dld81d5w7ir" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-7.wav" id="18_i33gv"]
+[ext_resource type="AudioStream" uid="uid://yaca7fp3ygfd" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-8.wav" id="19_la6hu"]
+[ext_resource type="AudioStream" uid="uid://dch3qurth6o4x" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal.wav" id="20_xatid"]
+[ext_resource type="AudioStream" uid="uid://cmwrxi4ma6i5w" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze1.wav" id="21_v7hr2"]
+[ext_resource type="AudioStream" uid="uid://by6m2xeku2ckb" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze2.wav" id="22_853h8"]
+[ext_resource type="AudioStream" uid="uid://djgfcoilff4iv" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze3.wav" id="23_7vplp"]
+[ext_resource type="AudioStream" uid="uid://d4jjvsoofbgm5" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze4.wav" id="24_7iju2"]
+[ext_resource type="AudioStream" uid="uid://dmy5ucmxggj85" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze5.wav" id="25_caqos"]
+[ext_resource type="AudioStream" uid="uid://diqqilvlysar5" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze6.wav" id="26_0v6rm"]
+[ext_resource type="AudioStream" uid="uid://cqpgys178fvnf" path="res://Audio/Zephyr Voice/Sneezes/Normal/normalSneeze7.wav" id="27_axj3c"]
+[ext_resource type="AudioStream" uid="uid://dj0xy0o0lag82" path="res://Audio/Zephyr Voice/Sneezes/Normal/normal3.wav" id="28_sr0b5"]
+[ext_resource type="AudioStream" uid="uid://duqooc0eoruca" path="res://Audio/Zephyr Voice/Sneezes/Normal/normal4.wav" id="29_dfxum"]
+[ext_resource type="AudioStream" uid="uid://k7rrmfwdf5cw" path="res://Audio/Zephyr Voice/Sneezes/Normal/normal5.wav" id="30_m3ti1"]
+[ext_resource type="AudioStream" uid="uid://cljgpylpx1y21" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-2.wav" id="31_f84p1"]
+[ext_resource type="AudioStream" uid="uid://cb68qrldl4ln2" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-3.wav" id="32_g4yd7"]
+[ext_resource type="AudioStream" uid="uid://ose7ojapp2m5" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-4.wav" id="33_300hf"]
+[ext_resource type="AudioStream" uid="uid://cdbua2k3dkdab" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-5.wav" id="34_tkrun"]
+[ext_resource type="AudioStream" uid="uid://4yboqkdchv1v" path="res://Audio/Zephyr Voice/Sneezes/Normal/Normal-6.wav" id="35_exdnn"]
+[ext_resource type="AudioStream" uid="uid://bocefhmwj6oec" path="res://Audio/Zephyr Voice/Sneezes/Small/small1.wav" id="36_luarq"]
+[ext_resource type="AudioStream" uid="uid://btujxxc85nnqn" path="res://Audio/Zephyr Voice/Sneezes/Big/big1.wav" id="36_w66fw"]
+[ext_resource type="AudioStream" uid="uid://exh7tmykxpkk" path="res://Audio/Zephyr Voice/Sneezes/Small/small2.wav" id="37_l5geu"]
+[ext_resource type="AudioStream" uid="uid://b0j6bbqieecwo" path="res://Audio/Zephyr Voice/Sneezes/Big/big2.wav" id="37_yhst7"]
+[ext_resource type="AudioStream" uid="uid://cbynutp5112rk" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-7.wav" id="38_alpo4"]
+[ext_resource type="AudioStream" uid="uid://b66vyuox3ds4v" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-5.wav" id="38_c3rab"]
+[ext_resource type="AudioStream" uid="uid://dnuuhxlyan445" path="res://Audio/Zephyr Voice/Sneezes/Big/big3.wav" id="38_kn4hx"]
+[ext_resource type="AudioStream" uid="uid://dddi3ffampowq" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-8.wav" id="39_4bj4t"]
+[ext_resource type="AudioStream" uid="uid://2sebduprw6mi" path="res://Audio/Zephyr Voice/Sneezes/Big/big4.wav" id="39_k1i3m"]
+[ext_resource type="AudioStream" uid="uid://d35hu8201n4bl" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-6.wav" id="39_pvhep"]
+[ext_resource type="AudioStream" uid="uid://bqsc6wxg6jcvp" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-7.wav" id="40_cvhi1"]
+[ext_resource type="AudioStream" uid="uid://bumwesvtgg0sq" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-9.wav" id="40_k6cc4"]
+[ext_resource type="AudioStream" uid="uid://bskqlnit7g7wn" path="res://Audio/Zephyr Voice/Sneezes/Big/big5.wav" id="40_v5v2s"]
+[ext_resource type="AudioStream" uid="uid://b1qb2qigbsms7" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-8.wav" id="41_8to8q"]
+[ext_resource type="AudioStream" uid="uid://1u2lqhc7xcjj" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle.wav" id="41_mhucn"]
+[ext_resource type="AudioStream" uid="uid://bntr68osumhi1" path="res://Audio/Zephyr Voice/Sneezes/Big/big6.wav" id="41_rak4o"]
+[ext_resource type="AudioStream" uid="uid://bfqg12np3m84j" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-9.wav" id="42_1lg3l"]
+[ext_resource type="AudioStream" uid="uid://bbysrl7dtyoft" path="res://Audio/Zephyr Voice/Sneezes/Small/stifleSneeze1.wav" id="42_njq3m"]
+[ext_resource type="AudioStream" uid="uid://8kcjw2e4815v" path="res://Audio/Zephyr Voice/Sneezes/Big/big7.wav" id="42_ukedp"]
+[ext_resource type="AudioStream" uid="uid://dowxg3p5wa7p8" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-10.wav" id="43_bo1d3"]
+[ext_resource type="AudioStream" uid="uid://xlhbib0tcmbt" path="res://Audio/Zephyr Voice/Sneezes/Small/stifleSneeze2.wav" id="43_vqmu8"]
+[ext_resource type="AudioStream" uid="uid://1davuyyjwbpt" path="res://Audio/Zephyr Voice/Sneezes/Big/Big.wav" id="44_3hl6d"]
+[ext_resource type="AudioStream" uid="uid://c5vdlq2fij8n7" path="res://Audio/Zephyr Voice/Sneezes/Small/stifleSneeze3.wav" id="44_b44rh"]
+[ext_resource type="AudioStream" uid="uid://5kigigcb7yjx" path="res://Audio/Zephyr Voice/Sneezes/Small/stifleSneeze4.wav" id="45_3n6mk"]
+[ext_resource type="AudioStream" uid="uid://c7s41ix0fn87i" path="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze1.wav" id="45_pitfx"]
+[ext_resource type="AudioStream" uid="uid://bssoe34q1nc81" path="res://Audio/Zephyr Voice/Sneezes/Small/small3.wav" id="46_dtpsa"]
+[ext_resource type="AudioStream" uid="uid://ma7wacq877u7" path="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze2.wav" id="46_h61iy"]
+[ext_resource type="AudioStream" uid="uid://d0txaoe3gggnl" path="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze3.wav" id="47_bm7ny"]
+[ext_resource type="AudioStream" uid="uid://ctnekox6bkhyr" path="res://Audio/Zephyr Voice/Sneezes/Small/small4.wav" id="47_vhucv"]
+[ext_resource type="AudioStream" uid="uid://v4gkk7f1t4r1" path="res://Audio/Zephyr Voice/Sneezes/Small/small5.wav" id="48_cfev8"]
+[ext_resource type="AudioStream" uid="uid://crnvomqnisemh" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-2.wav" id="49_e440q"]
+[ext_resource type="AudioStream" uid="uid://bw1wl7xf6ydcx" path="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze4.wav" id="49_oc4rl"]
+[ext_resource type="AudioStream" uid="uid://8omksjt88sw6" path="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze5.wav" id="50_o62ft"]
+[ext_resource type="AudioStream" uid="uid://dimw165efmlaa" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-3.wav" id="50_plam2"]
+[ext_resource type="AudioStream" uid="uid://b27y40midmrme" path="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze6.wav" id="51_1af1j"]
+[ext_resource type="AudioStream" uid="uid://cwbagvdjekure" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-4.wav" id="51_x8vx0"]
+[ext_resource type="AudioStream" uid="uid://tblw8wa4rtao" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-5.wav" id="52_etxbv"]
+[ext_resource type="AudioStream" uid="uid://dqq6gx3b7yndw" path="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-6.wav" id="53_xmnmk"]
+[ext_resource type="AudioStream" uid="uid://bxxd7cdvlf5u1" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-2.wav" id="56_bgghy"]
+[ext_resource type="AudioStream" uid="uid://dod5uc7umttft" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-3.wav" id="57_h18gb"]
+[ext_resource type="AudioStream" uid="uid://djbf7gdn7ivtj" path="res://Audio/Zephyr Voice/Sneezes/Big/Big-4.wav" id="58_171mq"]
+[ext_resource type="AudioStream" uid="uid://crt44syy8i0s2" path="res://Audio/Zephyr Voice/fire.wav" id="77_2lrjh"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_awq2b"]
+streams_count = 14
+stream_0/stream = ExtResource("2_2kkoy")
+stream_1/stream = ExtResource("3_dsk75")
+stream_2/stream = ExtResource("8_gwvrd")
+stream_3/stream = ExtResource("9_niidw")
+stream_4/stream = ExtResource("10_8kpox")
+stream_5/stream = ExtResource("11_g55xj")
+stream_6/stream = ExtResource("12_skpl7")
+stream_7/stream = ExtResource("13_l8cur")
+stream_8/stream = ExtResource("14_n5oc0")
+stream_9/stream = ExtResource("15_6at7a")
+stream_10/stream = ExtResource("4_4xu10")
+stream_10/weight = 0.0
+stream_11/stream = ExtResource("5_w0o5t")
+stream_12/stream = ExtResource("6_t6x1x")
+stream_13/stream = ExtResource("7_u7l3t")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_k1ex7"]
+streams_count = 20
+stream_0/stream = ExtResource("16_esq7b")
+stream_1/stream = ExtResource("17_ixkwo")
+stream_2/stream = ExtResource("28_sr0b5")
+stream_3/stream = ExtResource("29_dfxum")
+stream_4/stream = ExtResource("30_m3ti1")
+stream_5/stream = ExtResource("31_f84p1")
+stream_6/stream = ExtResource("32_g4yd7")
+stream_7/stream = ExtResource("33_300hf")
+stream_8/stream = ExtResource("34_tkrun")
+stream_9/stream = ExtResource("35_exdnn")
+stream_10/stream = ExtResource("18_i33gv")
+stream_11/stream = ExtResource("19_la6hu")
+stream_12/stream = ExtResource("20_xatid")
+stream_13/stream = ExtResource("21_v7hr2")
+stream_14/stream = ExtResource("22_853h8")
+stream_15/stream = ExtResource("23_7vplp")
+stream_16/stream = ExtResource("24_7iju2")
+stream_17/stream = ExtResource("25_caqos")
+stream_18/stream = ExtResource("26_0v6rm")
+stream_19/stream = ExtResource("27_axj3c")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xmodu"]
+streams_count = 18
+stream_0/stream = ExtResource("36_luarq")
+stream_1/stream = ExtResource("37_l5geu")
+stream_2/stream = ExtResource("46_dtpsa")
+stream_3/stream = ExtResource("47_vhucv")
+stream_4/stream = ExtResource("48_cfev8")
+stream_5/stream = ExtResource("49_e440q")
+stream_6/stream = ExtResource("50_plam2")
+stream_7/stream = ExtResource("51_x8vx0")
+stream_8/stream = ExtResource("52_etxbv")
+stream_9/stream = ExtResource("53_xmnmk")
+stream_10/stream = ExtResource("38_alpo4")
+stream_11/stream = ExtResource("39_4bj4t")
+stream_12/stream = ExtResource("40_k6cc4")
+stream_13/stream = ExtResource("41_mhucn")
+stream_14/stream = ExtResource("42_njq3m")
+stream_15/stream = ExtResource("43_vqmu8")
+stream_16/stream = ExtResource("44_b44rh")
+stream_17/stream = ExtResource("45_3n6mk")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_aihsy"]
+streams_count = 23
+stream_0/stream = ExtResource("36_w66fw")
+stream_1/stream = ExtResource("37_yhst7")
+stream_2/stream = ExtResource("38_kn4hx")
+stream_3/stream = ExtResource("39_k1i3m")
+stream_4/stream = ExtResource("40_v5v2s")
+stream_5/stream = ExtResource("41_rak4o")
+stream_6/stream = ExtResource("42_ukedp")
+stream_7/stream = ExtResource("56_bgghy")
+stream_8/stream = ExtResource("57_h18gb")
+stream_9/stream = ExtResource("58_171mq")
+stream_10/stream = ExtResource("38_c3rab")
+stream_11/stream = ExtResource("39_pvhep")
+stream_12/stream = ExtResource("40_cvhi1")
+stream_13/stream = ExtResource("41_8to8q")
+stream_14/stream = ExtResource("42_1lg3l")
+stream_15/stream = ExtResource("43_bo1d3")
+stream_16/stream = ExtResource("44_3hl6d")
+stream_17/stream = ExtResource("45_pitfx")
+stream_18/stream = ExtResource("46_h61iy")
+stream_19/stream = ExtResource("47_bm7ny")
+stream_20/stream = ExtResource("49_oc4rl")
+stream_21/stream = ExtResource("50_o62ft")
+stream_22/stream = ExtResource("51_1af1j")
+
+[node name="AudioEngine" type="Node2D"]
+script = ExtResource("1_wr4q3")
+
+[node name="Hitch" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_awq2b")
+playback_type = 2
+
+[node name="NormalSneeze" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_k1ex7")
+playback_type = 2
+
+[node name="StifleSneeze" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_xmodu")
+playback_type = 2
+
+[node name="BigSneeze" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_aihsy")
+playback_type = 2
+
+[node name="FirePlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("77_2lrjh")
+playback_type = 2
+
+[connection signal="finished" from="FirePlayer" to="." method="_on_fire_player_finished"]

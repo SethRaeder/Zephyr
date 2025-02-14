@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5kigigcb7yjx"
+path="res://.godot/imported/stifleSneeze4.wav-3ffda5fad00224c7f37715801127417b.sample"
+
+[deps]
+
+source_file="res://Audio/Zephyr Voice/Sneezes/Small/stifleSneeze4.wav"
+dest_files=["res://.godot/imported/stifleSneeze4.wav-3ffda5fad00224c7f37715801127417b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

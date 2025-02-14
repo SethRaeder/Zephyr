@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctnekox6bkhyr"
+path="res://.godot/imported/small4.wav-51591d92df0b65a54a9c3771d1449af6.sample"
+
+[deps]
+
+source_file="res://Audio/Zephyr Voice/Sneezes/Small/small4.wav"
+dest_files=["res://.godot/imported/small4.wav-51591d92df0b65a54a9c3771d1449af6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

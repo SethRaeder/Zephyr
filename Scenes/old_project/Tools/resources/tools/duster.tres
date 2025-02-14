@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tool_Resource" load_steps=2 format=3 uid="uid://bb0ywsqyip4pd"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/Tools/resources/tool_resource.gd" id="1_5t51q"]
+
+[resource]
+script = ExtResource("1_5t51q")
+ToolName = "Duster"
+ToolWeight = 2.0
+CanSpawnParticles = true
+HasAmmo = true
+max_ammo = 100
+current_ammo = 100
+can_burn = true
+max_health = 25
+current_health = 25

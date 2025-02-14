@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dryxxbob8grcl"]
+
+[ext_resource type="PackedScene" uid="uid://b5y4n3xtllde1" path="res://rigid_body_2d_test.tscn" id="1_orhau"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_orhau")]
+position = Vector2(20, 32)

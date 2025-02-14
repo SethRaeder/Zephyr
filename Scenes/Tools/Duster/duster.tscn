@@ -1,0 +1,128 @@
+[gd_scene load_steps=19 format=3 uid="uid://qjiu4fb7fbty"]
+
+[ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_bp4m2"]
+[ext_resource type="Texture2D" uid="uid://cwbbu2ebn62aa" path="res://images/inducing tools/Revised/Duster Handle.PNG" id="2_e2fon"]
+[ext_resource type="PackedScene" uid="uid://ccdnshw4dvj87" path="res://Scenes/Components/Particle/particle_emitter.tscn" id="2_ewvqs"]
+[ext_resource type="PackedScene" uid="uid://b7j4oys1em0c1" path="res://Scenes/Tools/Particles/dust_particle.tscn" id="3_eciq1"]
+[ext_resource type="Script" path="res://Scenes/Tools/Duster/duster_handle.gd" id="3_qsmvp"]
+[ext_resource type="Script" path="res://Scenes/Tools/Duster/duster_feather_root.gd" id="4_6a3d2"]
+[ext_resource type="Texture2D" uid="uid://bbtxmp124swer" path="res://images/inducing tools/Revised/Duster Feather.PNG" id="5_pc1n5"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="6_btf2x"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="7_6newg"]
+[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="8_pevtq"]
+[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="11_shvuq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ley4e"]
+radius = 15.0
+height = 130.0
+
+[sub_resource type="Curve" id="Curve_avk7b"]
+_data = [Vector2(0, 0.179712), 0.0, 1.71798, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501597), -2.99964, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_txbus"]
+_data = [Vector2(0, 0), 0.0, 0.167743, 0, 0, Vector2(1, 1), 3.11581, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_0j4h7"]
+_data = [Vector2(0, 0.201074), 0.0, 0.0, 0, 0, Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(0.502358, 0.5), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8it7v"]
+radius = 76.0066
+
+[sub_resource type="Curve" id="Curve_kq5du"]
+_data = [Vector2(0.240566, 0.273256), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epfxd"]
+radius = 43.0465
+
+[node name="Duster" type="RigidBody2D"]
+input_pickable = true
+angular_damp = 10.0
+script = ExtResource("1_bp4m2")
+
+[node name="ParticleEmitter" parent="." instance=ExtResource("2_ewvqs")]
+position = Vector2(0, -94)
+particle_scene = ExtResource("3_eciq1")
+particle_max_count = 20
+
+[node name="DusterCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ley4e")
+
+[node name="DusterHandle" type="Sprite2D" parent="."]
+scale = Vector2(0.124, 0.124)
+texture = ExtResource("2_e2fon")
+script = ExtResource("3_qsmvp")
+spawn_graph = SubResource("Curve_avk7b")
+spawn_scale_graph = SubResource("Curve_txbus")
+
+[node name="FeatherRoot" type="Node2D" parent="DusterHandle"]
+position = Vector2(3.02557, -382.392)
+rotation = 0.114869
+scale = Vector2(1.10268, 1.39441)
+script = ExtResource("4_6a3d2")
+
+[node name="DusterFeather" type="Sprite2D" parent="DusterHandle/FeatherRoot"]
+z_index = -1
+position = Vector2(0, -326)
+texture = ExtResource("5_pc1n5")
+
+[node name="GrabTransform" type="Marker2D" parent="."]
+position = Vector2(0, -24)
+gizmo_extents = 73.5
+script = ExtResource("6_btf2x")
+
+[node name="TickleComponent" type="Area2D" parent="."]
+position = Vector2(0, -107)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("7_6newg")
+intensity = 16.0
+use_velocity = true
+velocity_curve = SubResource("Curve_0j4h7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
+shape = SubResource("CircleShape2D_8it7v")
+
+[node name="TickleDebugSuite" parent="TickleComponent" instance=ExtResource("8_pevtq")]
+offset_left = -32.0
+offset_top = 63.0
+offset_right = -18.22
+offset_bottom = 94.655
+
+[node name="DustyBurn" type="Area2D" parent="."]
+position = Vector2(0, -84)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("7_6newg")
+tickle_type = 1
+tickle_damage_limit = 100.0
+use_velocity = true
+velocity_curve = SubResource("Curve_kq5du")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustyBurn"]
+shape = SubResource("CircleShape2D_epfxd")
+
+[node name="TickleDebugSuite" parent="DustyBurn" instance=ExtResource("8_pevtq")]
+offset_left = 17.0
+offset_top = 40.0
+offset_right = 30.78
+offset_bottom = 71.655
+
+[node name="DustyBurn2" type="Area2D" parent="."]
+position = Vector2(0, -84)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("7_6newg")
+allergy_type = ExtResource("11_shvuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustyBurn2"]
+shape = SubResource("CircleShape2D_epfxd")
+
+[node name="TickleDebugSuite" parent="DustyBurn2" instance=ExtResource("8_pevtq")]
+offset_left = 17.0
+offset_top = 40.0
+offset_right = 30.78
+offset_bottom = 71.655

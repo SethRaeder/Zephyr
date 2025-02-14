@@ -1,0 +1,134 @@
+[gd_scene load_steps=13 format=3 uid="uid://t0tr1cifnv7m"]
+
+[ext_resource type="Script" path="res://Scenes/UI/toolbox.gd" id="1_r0kad"]
+[ext_resource type="Script" path="res://Scenes/UI/spawner_button.gd" id="2_mhdu0"]
+[ext_resource type="PackedScene" uid="uid://qjiu4fb7fbty" path="res://Scenes/Tools/Duster/duster.tscn" id="3_g2dwu"]
+[ext_resource type="PackedScene" uid="uid://cwr4vtymp7lac" path="res://Scenes/Tools/Feather/feather.tscn" id="3_yjca8"]
+[ext_resource type="PackedScene" uid="uid://07jfi4b7gu6h" path="res://Scenes/Tools/QTip/q_tip.tscn" id="4_3qw4e"]
+[ext_resource type="PackedScene" uid="uid://c8ks3is4b2pu8" path="res://Scenes/Tools/Brush/brush.tscn" id="5_imdf7"]
+[ext_resource type="PackedScene" uid="uid://bqkavmqdgvd6f" path="res://Scenes/Tools/Powder/powder.tscn" id="7_qrli1"]
+[ext_resource type="PackedScene" uid="uid://xwggdnmhs7mt" path="res://Scenes/Tools/Pepper/pepper.tscn" id="8_y7q6e"]
+[ext_resource type="PackedScene" uid="uid://bsbnykkg8lb1t" path="res://Scenes/Tools/Dandelion/dandelion.tscn" id="9_y101i"]
+[ext_resource type="PackedScene" uid="uid://etaprmvcorrg" path="res://Scenes/Tools/Bouquet/bouquet.tscn" id="10_gf666"]
+[ext_resource type="PackedScene" uid="uid://bwlmonrs1rnj3" path="res://Scenes/Tools/Chhinkni/chhinkni.tscn" id="11_yf6ej"]
+[ext_resource type="PackedScene" uid="uid://dryxxbob8grcl" path="res://Scenes/Tools/tool_template.tscn" id="12_yxvb5"]
+
+[node name="Toolbox" type="Control"]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 277.665
+offset_right = 100.0
+offset_bottom = -5.33496
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_r0kad")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 33.0356
+offset_top = -29.732
+offset_right = 130.036
+offset_bottom = 1.26796
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Toolbox"
+horizontal_alignment = 1
+
+[node name="Toggle" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "<<"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FeatherSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Feather"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("3_yjca8")
+
+[node name="QTipSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Q-Tip"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("4_3qw4e")
+
+[node name="BrushSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Paintbrush"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("5_imdf7")
+
+[node name="DusterSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Duster"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("3_g2dwu")
+
+[node name="DandelionSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Dandelion"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("9_y101i")
+
+[node name="BouquetSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Bouquet"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("10_gf666")
+
+[node name="PowderSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Powder"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("7_qrli1")
+
+[node name="PepperSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Pepper"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("8_y7q6e")
+
+[node name="ChhinkniSpawner" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Chhinkni"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("11_yf6ej")
+
+[node name="DebugSpawner" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+focus_mode = 0
+text = "Debug"
+alignment = 0
+script = ExtResource("2_mhdu0")
+Tool = ExtResource("12_yxvb5")
+
+[connection signal="toggled" from="HBoxContainer/Toggle" to="." method="_on_toggle_toggled"]

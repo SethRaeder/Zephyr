@@ -1,0 +1,134 @@
+[gd_scene load_steps=16 format=3 uid="uid://djy1pt0g6gk4y"]
+
+[ext_resource type="Script" path="res://pepper_test.gd" id="1_hv1su"]
+[ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://images/inducing tools/Revised/Pepper Shaker.PNG" id="1_kfyeg"]
+[ext_resource type="Texture2D" uid="uid://bpas26tvkd3sv" path="res://addons/kenney_particle_pack/window_01.png" id="2_inpko"]
+[ext_resource type="Texture2D" uid="uid://dss6ykenrvo7f" path="res://addons/kenney_particle_pack/smoke_08.png" id="2_v2dxl"]
+[ext_resource type="Texture2D" uid="uid://bbn0ir5fbtiug" path="res://addons/kenney_particle_pack/smoke_07.png" id="3_7j3ce"]
+[ext_resource type="PhysicsMaterial" uid="uid://fo4t7ytftg21" path="res://glass_physics_material.tres" id="4_kcaro"]
+[ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="4_mbxtd"]
+[ext_resource type="Script" path="res://pepper_internals.gd" id="5_bc8sw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlha5"]
+radius = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qs1ay"]
+radius = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0glcy"]
+radius = 100.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8omvi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h27my"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fhoh6"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xill2"]
+normal = Vector2(0, 1)
+
+[node name="Pepper_test" type="RigidBody2D"]
+rotation = 2.90716
+collision_layer = 256
+collision_mask = 0
+physics_material_override = ExtResource("4_kcaro")
+script = ExtResource("1_hv1su")
+
+[node name="PepperShaker" type="Sprite2D" parent="."]
+texture = ExtResource("1_kfyeg")
+
+[node name="Clip Bounds" type="Polygon2D" parent="PepperShaker"]
+clip_children = 1
+position = Vector2(0, -1)
+polygon = PackedVector2Array(24, -97, 48, -93, 57, -88, 62, -64, 63, -36, 67, 35, 71, 145, 70, 170, 60, 178, 35, 186, 0, 189, -38, 184, -64, 176, -70, 166, -71, 139, -66, 35, -63, -39, -62, -67, -58, -86, -51, -90, -41, -96, -25, -98, 1, -99)
+
+[node name="BG" type="Sprite2D" parent="PepperShaker/Clip Bounds"]
+modulate = Color(0.870588, 0.929412, 0.941176, 0.333333)
+position = Vector2(-94, 220)
+scale = Vector2(1.405, 1.75)
+texture = ExtResource("2_inpko")
+
+[node name="Bottle Center" type="Node2D" parent="PepperShaker/Clip Bounds"]
+position = Vector2(0, 35)
+
+[node name="PepperInternals" type="RigidBody2D" parent="PepperShaker/Clip Bounds/Bottle Center"]
+modulate = Color(0.2005, 0.237051, 0.219544, 1)
+position = Vector2(1.48648, -101.881)
+collision_layer = 256
+collision_mask = 256
+mass = 0.1
+gravity_scale = 2.0
+lock_rotation = true
+script = ExtResource("5_bc8sw")
+
+[node name="PepperInternalsCollision" type="CollisionShape2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals"]
+shape = SubResource("CircleShape2D_dlha5")
+debug_color = Color(1, 0.467044, 0.730665, 1)
+
+[node name="Smoke08" type="Sprite2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals"]
+texture = ExtResource("2_v2dxl")
+
+[node name="Smoke07" type="Sprite2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals"]
+position = Vector2(-13, 33)
+texture = ExtResource("3_7j3ce")
+
+[node name="PepperInternals2" type="RigidBody2D" parent="PepperShaker/Clip Bounds/Bottle Center"]
+modulate = Color(0.2005, 0.237051, 0.219544, 1)
+position = Vector2(-92.8033, 127.829)
+collision_layer = 256
+collision_mask = 256
+mass = 0.1
+gravity_scale = 5.0
+lock_rotation = true
+script = ExtResource("5_bc8sw")
+
+[node name="PepperInternalsCollision" type="CollisionShape2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals2"]
+shape = SubResource("CircleShape2D_qs1ay")
+debug_color = Color(1, 0.467044, 0.730665, 1)
+
+[node name="Smoke07" type="Sprite2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals2"]
+position = Vector2(-13, 33)
+texture = ExtResource("3_7j3ce")
+
+[node name="Smoke05" type="Sprite2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals2"]
+position = Vector2(-37, 34)
+texture = ExtResource("4_mbxtd")
+
+[node name="PepperInternals3" type="RigidBody2D" parent="PepperShaker/Clip Bounds/Bottle Center"]
+modulate = Color(0.2005, 0.237051, 0.219544, 1)
+position = Vector2(103.811, 91.2685)
+collision_layer = 256
+collision_mask = 256
+mass = 0.1
+gravity_scale = 5.0
+lock_rotation = true
+script = ExtResource("5_bc8sw")
+
+[node name="PepperInternalsCollision" type="CollisionShape2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals3"]
+shape = SubResource("CircleShape2D_0glcy")
+debug_color = Color(1, 0.467044, 0.730665, 1)
+
+[node name="Smoke05" type="Sprite2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals3"]
+position = Vector2(-37, 34)
+texture = ExtResource("4_mbxtd")
+
+[node name="Smoke08" type="Sprite2D" parent="PepperShaker/Clip Bounds/Bottle Center/PepperInternals3"]
+texture = ExtResource("2_v2dxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.72262, 270.98)
+shape = SubResource("WorldBoundaryShape2D_8omvi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-196.922, 29.5252)
+shape = SubResource("WorldBoundaryShape2D_h27my")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(209.125, 46.4425)
+shape = SubResource("WorldBoundaryShape2D_fhoh6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-1.92183, -187.385)
+shape = SubResource("WorldBoundaryShape2D_xill2")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://41ejunqtvt8x"
+path="res://.godot/imported/Hitch-2.wav-758eb6f7c214c88c318e63ec7371fa3d.sample"
+
+[deps]
+
+source_file="res://Audio/Zephyr Voice/Hitches/Hitch-2.wav"
+dest_files=["res://.godot/imported/Hitch-2.wav-758eb6f7c214c88c318e63ec7371fa3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

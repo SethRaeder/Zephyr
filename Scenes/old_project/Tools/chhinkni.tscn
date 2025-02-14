@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://7xvd3hcspgl6"]
+
+[ext_resource type="Texture2D" uid="uid://c0scbur52g3tt" path="res://images/inducing tools/chhinkni.svg" id="2_jjcxu"]
+[ext_resource type="PackedScene" uid="uid://rhoyoq84j0l5" path="res://Scenes/old_project/Tools/Classes/particle_component.tscn" id="3_nqigo"]
+[ext_resource type="Resource" uid="uid://dhljutsoc8a8g" path="res://Scenes/old_project/Tools/resources/particles/chhinkniParticle.tres" id="4_mlx4t"]
+
+[sub_resource type="Curve" id="Curve_vjsb8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.501193, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4f3kb"]
+radius = 6.82207
+height = 40.6831
+
+[node name="Chhinkni" type="RigidBody2D"]
+
+[node name="Chhinkni" type="Sprite2D" parent="."]
+light_mask = 2
+position = Vector2(12, -29)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_jjcxu")
+
+[node name="particleComponent" parent="." instance=ExtResource("3_nqigo")]
+position = Vector2(1, -19)
+spawnRate = 5
+particleResource = ExtResource("4_mlx4t")
+useVelocity = true
+velocityCurve = SubResource("Curve_vjsb8")
+maxSpeed = 2000
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+rotation = 0.124268
+shape = SubResource("CapsuleShape2D_4f3kb")

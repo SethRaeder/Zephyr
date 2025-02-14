@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt1sam5avc634"
+path="res://.godot/imported/hitch4.wav-9edc58ce308d2c92e714b1ab8aa5d6df.sample"
+
+[deps]
+
+source_file="res://Audio/Zephyr Voice/Hitches/hitch4.wav"
+dest_files=["res://.godot/imported/hitch4.wav-9edc58ce308d2c92e714b1ab8aa5d6df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

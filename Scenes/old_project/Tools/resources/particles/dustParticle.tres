@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Particle_Resource" load_steps=2 format=3 uid="uid://drj8yyxs81k8u"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/Tools/resources/particle_resource.gd" id="1_x11py"]
+
+[resource]
+script = ExtResource("1_x11py")
+name = "dust"
+color = Color(0.701961, 0.701961, 0.701961, 0.901961)
+HP = 45.0
+size = 0.5
+mass = 0.15
+tickle = 1.0
+irritation = 0.25
+decay = 20.0

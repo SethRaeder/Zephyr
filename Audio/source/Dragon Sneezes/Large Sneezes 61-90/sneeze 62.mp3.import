@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6oalfloxnr63"
+path="res://.godot/imported/sneeze 62.mp3-167c150a7085788b9dcdf8a98f85ba9a.mp3str"
+
+[deps]
+
+source_file="res://Audio/source/Dragon Sneezes/Large Sneezes 61-90/sneeze 62.mp3"
+dest_files=["res://.godot/imported/sneeze 62.mp3-167c150a7085788b9dcdf8a98f85ba9a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

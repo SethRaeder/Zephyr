@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cq2n5e0fu11di"
+path="res://.godot/imported/Sigh.wav-97e1d53bdcb6e2e5fbd8ac66036e0f1e.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Sigh/Sigh.wav"
+dest_files=["res://.godot/imported/Sigh.wav-97e1d53bdcb6e2e5fbd8ac66036e0f1e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

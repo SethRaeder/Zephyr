@@ -1,0 +1,36 @@
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://cx6f7mekqyvw6"]
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_dcawx"]
+resource_name = "EQ"
+band_db/32_hz = 2.6
+band_db/100_hz = 10.4
+band_db/320_hz = -3.9
+band_db/1000_hz = -0.4
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_0eeie"]
+resource_name = "Reverb"
+predelay_msec = 50.0
+predelay_feedback = 0.2
+room_size = 0.2
+damping = 0.3
+spread = 0.07
+hipass = 1.0
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_0hlbk"]
+resource_name = "LowPassFilter"
+resonance = 1.0
+db = 1
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_3wxgu"]
+resource_name = "PitchShift"
+pitch_scale = 0.8
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectEQ_dcawx")
+bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectReverb_0eeie")
+bus/0/effect/1/enabled = false
+bus/0/effect/2/effect = SubResource("AudioEffectLowPassFilter_0hlbk")
+bus/0/effect/2/enabled = false
+bus/0/effect/3/effect = SubResource("AudioEffectPitchShift_3wxgu")
+bus/0/effect/3/enabled = false

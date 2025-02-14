@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmc72vb8inw6"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/Tools/Classes/tickle_component.gd" id="1_51ya4"]
+
+[node name="TickleComponent" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_51ya4")

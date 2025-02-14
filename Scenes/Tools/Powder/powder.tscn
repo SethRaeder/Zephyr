@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqkavmqdgvd6f"]
+
+[ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_olvin"]
+[ext_resource type="Texture2D" uid="uid://dlwlb4knxvwa2" path="res://images/inducing tools/Revised/Makeup Brush.PNG" id="2_r0q5s"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_rqoxr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtftb"]
+height = 76.0
+
+[node name="ToolBody" type="RigidBody2D"]
+input_pickable = true
+angular_damp = 20.0
+script = ExtResource("1_olvin")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("CapsuleShape2D_gtftb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_r0q5s")
+
+[node name="GrabTransform" type="Marker2D" parent="."]
+position = Vector2(0, -8)
+gizmo_extents = 105.2
+script = ExtResource("3_rqoxr")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://robicv1ygwk7"]
+
+[ext_resource type="Texture2D" uid="uid://bs102pe4l1i8q" path="res://images/inducing tools/flower.svg" id="2_1x6p5"]
+[ext_resource type="Resource" uid="uid://gndstrihwxdu" path="res://Scenes/old_project/Tools/resources/particles/pollenParticle.tres" id="4_bbu6w"]
+[ext_resource type="PackedScene" uid="uid://rhoyoq84j0l5" path="res://Scenes/old_project/Tools/Classes/particle_component.tscn" id="4_wreyq"]
+
+[sub_resource type="Curve" id="Curve_vjsb8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.501193, 0), 0.0, 0.0, 0, 0, Vector2(0.587112, 0.163191), 0.0, 0.0, 0, 0, Vector2(0.880668, 0.304624), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4f3kb"]
+radius = 12.1554
+height = 179.602
+
+[node name="Flower" type="RigidBody2D"]
+
+[node name="Flower" type="Sprite2D" parent="."]
+light_mask = 2
+position = Vector2(28, -51)
+scale = Vector2(0.285, 0.285)
+texture = ExtResource("2_1x6p5")
+
+[node name="particleComponent" parent="." instance=ExtResource("4_wreyq")]
+position = Vector2(15, -69)
+spawnRate = 50
+particleResource = ExtResource("4_bbu6w")
+useVelocity = true
+velocityCurve = SubResource("Curve_vjsb8")
+maxSpeed = 2000
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 2)
+rotation = 0.124268
+shape = SubResource("CapsuleShape2D_4f3kb")

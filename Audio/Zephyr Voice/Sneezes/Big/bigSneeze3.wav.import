@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0txaoe3gggnl"
+path="res://.godot/imported/bigSneeze3.wav-0c5114e75e61f990a0531db9f3efd459.sample"
+
+[deps]
+
+source_file="res://Audio/Zephyr Voice/Sneezes/Big/bigSneeze3.wav"
+dest_files=["res://.godot/imported/bigSneeze3.wav-0c5114e75e61f990a0531db9f3efd459.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

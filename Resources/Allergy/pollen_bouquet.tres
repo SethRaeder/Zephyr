@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AllergyResource" load_steps=2 format=3 uid="uid://cg0wlkd00qgpj"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/allergy_resource.gd" id="1_tlgei"]
+
+[resource]
+script = ExtResource("1_tlgei")
+allergy_name = "Dust"
+tickle_amount = 1.0
+burn_amount = 1.0
+sneeze_amount = 1.0

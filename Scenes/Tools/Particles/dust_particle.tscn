@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7j4oys1em0c1"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_7cdy6"]
+[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_srpe6"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_25yxm"]
+[ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_yj65s"]
+[ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="5_nhs6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
+radius = 18.7883
+
+[node name="Dust" type="RigidBody2D"]
+mass = 0.01
+gravity_scale = 0.01
+script = ExtResource("1_7cdy6")
+particle_lifetime = 30.0
+delete_on_tickle_finished = true
+
+[node name="WindSubscriber" type="Marker2D" parent="."]
+scale = Vector2(0.18, 0.18)
+script = ExtResource("2_srpe6")
+
+[node name="Burn" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_25yxm")
+tickle_type = 1
+intensity = 10.0
+tickle_damage_limit = 0.1
+
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Burn"]
+process_mode = 3
+scale = Vector2(0.18, 0.18)
+script = ExtResource("4_yj65s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burn"]
+shape = SubResource("CircleShape2D_34lcl")
+
+[node name="Tickle" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_25yxm")
+intensity = 10.0
+tickle_damage_limit = 0.25
+
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
+process_mode = 3
+scale = Vector2(0.18, 0.18)
+script = ExtResource("4_yj65s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+shape = SubResource("CircleShape2D_34lcl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.51, 0.481695, 0.4641, 0.352941)
+z_index = 10
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("5_nhs6v")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://db7qn8epd73f4"
+path="res://.godot/imported/Buildup-5.wav-2a849b1eea4d914d7f1a05bdc577fab6.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Buildup/Buildup-5.wav"
+dest_files=["res://.godot/imported/Buildup-5.wav-2a849b1eea4d914d7f1a05bdc577fab6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

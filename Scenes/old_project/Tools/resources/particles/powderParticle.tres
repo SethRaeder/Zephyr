@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Particle_Resource" load_steps=2 format=3 uid="uid://crqwgy4n4188p"]
+
+[ext_resource type="Script" path="res://Scenes/old_project/Tools/resources/particle_resource.gd" id="1_a76de"]
+
+[resource]
+script = ExtResource("1_a76de")
+name = "powder"
+color = Color(1, 0.702, 0.702, 0.5)
+HP = 8.0
+size = 0.25
+mass = 0.1
+tickle = 10.0
+irritation = 0.5
+decay = 10.0

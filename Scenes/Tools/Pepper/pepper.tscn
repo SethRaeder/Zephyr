@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://xwggdnmhs7mt"]
+
+[ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_fi5oo"]
+[ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://images/inducing tools/Revised/Pepper Shaker.PNG" id="2_4c60o"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_2pw2t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1qc4"]
+radius = 12.0
+height = 66.0
+
+[node name="ToolBody" type="RigidBody2D"]
+input_pickable = true
+angular_damp = 30.0
+script = ExtResource("1_fi5oo")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g1qc4")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_4c60o")
+
+[node name="GrabTransform" type="Marker2D" parent="."]
+position = Vector2(0, -13)
+gizmo_extents = 105.2
+script = ExtResource("3_2pw2t")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

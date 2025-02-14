@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbynutp5112rk"
+path="res://.godot/imported/Stifle-7.wav-fd50cd80336f1103699c177460a6feb3.sample"
+
+[deps]
+
+source_file="res://Audio/Zephyr Voice/Sneezes/Small/Stifle-7.wav"
+dest_files=["res://.godot/imported/Stifle-7.wav-fd50cd80336f1103699c177460a6feb3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6b4u0l7d73c0"
+path="res://.godot/imported/sneeze 1.mp3-fd50cfbb2e1b0f1e7d9496c4eeda3ac1.mp3str"
+
+[deps]
+
+source_file="res://Audio/source/Dragon Sneezes/Stifles 1-10/sneeze 1.mp3"
+dest_files=["res://.godot/imported/sneeze 1.mp3-fd50cfbb2e1b0f1e7d9496c4eeda3ac1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
