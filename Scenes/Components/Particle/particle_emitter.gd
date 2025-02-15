@@ -5,11 +5,14 @@ class_name ParticleEmitter
 
 @export_category("Use Jerk Release")
 @export var release_on_jerk : bool = false
+@export var jerk_accelerate : bool = false
+@export var jerk_decelerate : bool = true
 @export var jerk_threshold : float = 0.0
 @export var jerk_particle_amount : int = 0
 @export var jerk_particle_variance : Vector2 = Vector2.ONE
 
 @export_category("Use Velocity Release")
+@export var release_on_speed : bool = true
 @export var particle_spawn_max_speed : float= 2000.0
 @export var particle_spawn_velocity_curve : Curve = preload("res://default_particle_spawn_curve.tres")
 
@@ -20,10 +23,15 @@ class_name ParticleEmitter
 @export var particle_size_var_range : Vector2 = Vector2(0.5,2.0)
 @export var particle_max_count : int = 100
 
+@export var particle_spawn_lifetime_limit : int = -1
+var particle_spawn_lifetime_count : int = 0
+
 var particle_count = 0
 var last_velocity := Vector2.ZERO
 
 var particle_array = []
+
+signal particles_exhausted()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -43,12 +51,13 @@ func on_move(velocity : Vector2):
 	#print("Hello?")
 
 	if release_on_jerk:
+		var delta_dot = (last_velocity.dot(velocity))
 		var jerk_speed = clampf((velocity - last_velocity).length(), 0.0, particle_spawn_max_speed)
-		if abs(jerk_speed) >= jerk_threshold:
+		if ((delta_dot > 0 and jerk_accelerate) and (jerk_speed >= jerk_threshold)) or ((delta_dot < 0 and jerk_decelerate) and (jerk_speed >= jerk_threshold)):
 			var particle_count = int(jerk_particle_amount * randf_range(jerk_particle_variance.x,jerk_particle_variance.y))
 			for i in range(particle_count):
 				spawn_particle()
-	else:
+	if release_on_speed:
 		var current_speed = clampf(velocity.length(), 0.0, particle_spawn_max_speed)
 		var sample = particle_spawn_velocity_curve.sample(current_speed / particle_spawn_max_speed)
 		if randf() < sample:
@@ -57,6 +66,17 @@ func on_move(velocity : Vector2):
 	last_velocity = velocity
 
 func spawn_particle():
+	if particle_spawn_lifetime_limit > 0:
+		particle_spawn_lifetime_count += 1
+		if particle_spawn_lifetime_count > particle_spawn_lifetime_limit:
+			particles_exhausted.emit()
+			return
+
+		elif particle_spawn_lifetime_count == particle_spawn_lifetime_limit:
+			particles_exhausted.emit()
+	
+	particle_count += 1
+	
 	if particle_count >= particle_max_count:
 		var to_delete = particle_array.pop_front()
 		if is_instance_valid(to_delete):
@@ -66,8 +86,9 @@ func spawn_particle():
 	get_tree().root.add_child(new_particle)
 	
 	particle_array.append(new_particle)
+
 	
-	particle_count += 1
+
 	new_particle.particle_die.connect(on_particle_die)
 	new_particle.sprite.scale *= randf_range(particle_size_var_range.x, particle_size_var_range.y)
 	

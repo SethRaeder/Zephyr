@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_olvin"]
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="2_aebjf"]
 [ext_resource type="Texture2D" uid="uid://dlwlb4knxvwa2" path="res://images/inducing tools/Revised/Makeup Brush.PNG" id="2_r0q5s"]
-[ext_resource type="PackedScene" uid="uid://b7j4oys1em0c1" path="res://Scenes/Tools/Particles/dust_particle.tscn" id="3_lpfoq"]
+[ext_resource type="PackedScene" uid="uid://h531dq30bvtk" path="res://Scenes/Tools/Particles/powder_particle.tscn" id="3_n0h4f"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_rqoxr"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_fufh5"]
 [ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="5_ag1u2"]
@@ -29,10 +29,11 @@ collides_with_head_held = true
 
 [node name="ParticleEmitter" type="Node2D" parent="."]
 script = ExtResource("2_aebjf")
-particle_scene = ExtResource("3_lpfoq")
+particle_scene = ExtResource("3_n0h4f")
 release_on_jerk = true
-jerk_threshold = 800.0
+jerk_threshold = 500.0
 jerk_particle_amount = 5
+release_on_speed = false
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)

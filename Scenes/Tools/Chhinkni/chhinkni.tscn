@@ -1,36 +1,83 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwlmonrs1rnj3"]
+[gd_scene load_steps=13 format=3 uid="uid://bwlmonrs1rnj3"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_kmta7"]
 [ext_resource type="Texture2D" uid="uid://dkc6rqecennaq" path="res://images/inducing tools/Revised/Chhinkni Bottle.PNG" id="2_c6cfs"]
 [ext_resource type="Texture2D" uid="uid://dm333bjkc7kvc" path="res://images/inducing tools/Revised/Chhinkni Cap.PNG" id="3_o18g1"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="4_ee42l"]
+[ext_resource type="Script" path="res://Scenes/Tools/Chhinkni/hide_cap_script.gd" id="4_l8ggx"]
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="5_jc6ru"]
+[ext_resource type="PackedScene" uid="uid://ch0l0toylwvv6" path="res://Scenes/Tools/Particles/chhinkni_particle.tscn" id="7_dd1vu"]
+[ext_resource type="PackedScene" uid="uid://cgxtaj4vrici" path="res://Scenes/Tools/Chhinkni/chhinkni_cap.tscn" id="7_h4o4n"]
+[ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="8_pfxgb"]
+[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="9_cm045"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h45xq"]
 radius = 6.0
 height = 32.0
 
-[node name="ToolBody" type="RigidBody2D"]
+[sub_resource type="Curve" id="Curve_ehxyo"]
+_data = [Vector2(0, 0.0480936), 0.0, 0.0, 0, 0, Vector2(1, 0.200173), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="ToolBody" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite")]
 input_pickable = true
 angular_damp = 20.0
 script = ExtResource("1_kmta7")
+InsertSprite = NodePath("Sprite")
+metadata/_edit_horizontal_guides_ = [-28.0]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_h45xq")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-z_index = -1
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_c6cfs")
 
-[node name="Sprite2" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(0, -17)
-scale = Vector2(0.1, 0.1)
+[node name="Cap" type="Sprite2D" parent="Sprite"]
+position = Vector2(0, -170)
 texture = ExtResource("3_o18g1")
+script = ExtResource("4_l8ggx")
 
 [node name="GrabTransform" type="Marker2D" parent="."]
 position = Vector2(0, -3)
 gizmo_extents = 105.2
 script = ExtResource("4_ee42l")
+
+[node name="MoveEmitter" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -19)
+script = ExtResource("5_jc6ru")
+particle_scene = ExtResource("7_dd1vu")
+jerk_threshold = 500.0
+jerk_particle_amount = 2
+jerk_particle_variance = Vector2(1, 2)
+release_on_speed = false
+particle_spawn_max_speed = 1000.0
+particle_spawn_lifetime_limit = 10
+
+[node name="EmitOnBreathe" type="Marker2D" parent="MoveEmitter" node_paths=PackedStringArray("wind_subscriber")]
+script = ExtResource("8_pfxgb")
+local_wind_strength_threshold = 80.0
+local_wind_strength_max = 500.0
+wind_spawn_curve = SubResource("Curve_ehxyo")
+wind_subscriber = NodePath("WindSubscriber")
+
+[node name="WindSubscriber" type="Marker2D" parent="MoveEmitter/EmitOnBreathe"]
+script = ExtResource("9_cm045")
+
+[node name="CapParticle" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -22)
+script = ExtResource("5_jc6ru")
+particle_scene = ExtResource("7_h4o4n")
+release_on_jerk = true
+jerk_accelerate = true
+jerk_threshold = 300.0
+jerk_particle_amount = 1
+release_on_speed = false
+particle_spawn_rotation_max = 0.0
+particle_size_var_range = Vector2(1, 1)
+particle_max_count = 10
+particle_spawn_lifetime_limit = 1
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

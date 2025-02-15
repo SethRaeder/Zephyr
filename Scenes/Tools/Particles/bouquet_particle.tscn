@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3306adyeknxy"]
+[gd_scene load_steps=9 format=3 uid="uid://c3306adyeknxy"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_43hvu"]
 [ext_resource type="Texture2D" uid="uid://bjo5qdfls40l1" path="res://images/inducing tools/Revised/Bouquet Petal.PNG" id="2_l8rt2"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="3_eyw80"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_p6mro"]
 [ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="5_naktk"]
+[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="6_ka1wf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rnao"]
 radius = 3.0
@@ -24,10 +25,6 @@ particle_lifetime = 120.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_7rnao")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.185, 0.185)
-texture = ExtResource("2_l8rt2")
-
 [node name="WindSubscriber" type="Marker2D" parent="."]
 script = ExtResource("3_eyw80")
 
@@ -35,8 +32,14 @@ script = ExtResource("3_eyw80")
 script = ExtResource("4_p6mro")
 tickle_type = 2
 allergy_type = ExtResource("5_naktk")
-intensity = 10.0
 tickle_damage_limit = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
 shape = SubResource("CircleShape2D_ncgkj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("2_l8rt2")
+
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+script = ExtResource("6_ka1wf")

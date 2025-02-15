@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://ch0l0toylwvv6"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_w3a1n"]
+[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_v6hoa"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_kmuw6"]
+[ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_v4n3a"]
+[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://Resources/Allergy/chhinkni.tres" id="5_lspgf"]
+[ext_resource type="Texture2D" uid="uid://chvrgso8ewj40" path="res://addons/kenney_particle_pack/smoke_03.png" id="6_67lxg"]
+[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="7_5kq1j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
+radius = 10.0499
+
+[node name="Chhinkni" type="RigidBody2D"]
+mass = 0.01
+gravity_scale = 0.2
+script = ExtResource("1_w3a1n")
+particle_lifetime = 30.0
+delete_on_tickle_finished = true
+
+[node name="WindSubscriber" type="Marker2D" parent="."]
+scale = Vector2(0.18, 0.18)
+script = ExtResource("2_v6hoa")
+
+[node name="ChhinkniDamage" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_kmuw6")
+tickle_type = 2
+allergy_type = ExtResource("5_lspgf")
+tickle_damage_limit = 0.05
+
+[node name="EnableOnBreatheComponent" type="Node2D" parent="ChhinkniDamage"]
+process_mode = 3
+scale = Vector2(0.18, 0.18)
+script = ExtResource("4_v4n3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChhinkniDamage"]
+shape = SubResource("CircleShape2D_34lcl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.423413, 0.149617, 0.00219192, 0.352941)
+z_index = 10
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("6_67lxg")
+
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+script = ExtResource("7_5kq1j")

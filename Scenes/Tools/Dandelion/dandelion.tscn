@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bsbnykkg8lb1t"]
+[gd_scene load_steps=12 format=3 uid="uid://bsbnykkg8lb1t"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_rf6xs"]
 [ext_resource type="Texture2D" uid="uid://nksmalh3kf6v" path="res://images/inducing tools/Revised/Dandelion Stem.PNG" id="2_ofm23"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_ae6g4"]
 [ext_resource type="PackedScene" uid="uid://imkp062d5m14" path="res://Scenes/Tools/Particles/dandelion_particle.tscn" id="3_pwjqy"]
 [ext_resource type="Texture2D" uid="uid://dbyby2dl5ysts" path="res://images/inducing tools/Revised/Dandelion Fluff.PNG" id="3_pxgbm"]
+[ext_resource type="Script" path="res://Scenes/Tools/Dandelion/head_hide_on_exhaust.gd" id="6_u8nj1"]
 [ext_resource type="PackedScene" uid="uid://w765tarsr8k1" path="res://Scenes/Components/Tools/tickle_component.tscn" id="7_fmhua"]
 [ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="8_fbqid"]
 
@@ -21,9 +22,17 @@ linear_damp = 10.0
 script = ExtResource("1_rf6xs")
 
 [node name="ParticleEmitter" type="Node2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(-1.8, -96.4554)
 script = ExtResource("2_pmk8i")
 particle_scene = ExtResource("3_pwjqy")
+release_on_jerk = true
+jerk_accelerate = true
+jerk_decelerate = false
+jerk_threshold = 200.0
+jerk_particle_amount = 1
+jerk_particle_variance = Vector2(1, 5)
+particle_spawn_lifetime_limit = 50
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0.199997, -35.4554)
@@ -42,6 +51,7 @@ position = Vector2(-1.8, -96.4554)
 rotation = -0.244346
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_pxgbm")
+script = ExtResource("6_u8nj1")
 
 [node name="GrabTransform" type="Marker2D" parent="."]
 gizmo_extents = 105.2

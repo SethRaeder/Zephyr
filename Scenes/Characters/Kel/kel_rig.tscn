@@ -1,4 +1,4 @@
-[gd_scene load_steps=285 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=289 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -94,9 +94,11 @@
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/detector.gd" id="84_n5npt"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_origin.gd" id="85_ascq3"]
 [ext_resource type="Texture2D" uid="uid://cch7e1588u3ep" path="res://images/Kel/Normal/Shoulder_n.png" id="86_34ury"]
+[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="87_xfbtc"]
 [ext_resource type="Texture2D" uid="uid://jmxo5cssey7a" path="res://images/Kel/Normal/Wing_n.png" id="88_a1q3i"]
 [ext_resource type="PackedScene" uid="uid://03yub1gspvk7" path="res://Scenes/Components/Character Resources/brain_debug_suite.tscn" id="94_kvgm2"]
-[ext_resource type="PackedScene" uid="uid://cs183ehlcr6t3" path="res://Scenes/Components/Util/wind_subscriber.tscn" id="97_y33ps"]
+[ext_resource type="Script" path="res://Scenes/Components/Character Resources/allergen_detector.gd" id="95_aqq7c"]
+[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://Resources/Allergy/chhinkni.tres" id="96_q1kil"]
 
 [sub_resource type="Animation" id="Animation_jwmb0"]
 length = 0.001
@@ -6915,6 +6917,14 @@ stream_11/stream = ExtResource("44_e65fr")
 radius = 59.1075
 height = 170.491
 
+[sub_resource type="Curve" id="Curve_blj1g"]
+_data = [Vector2(0, 0), 0.0, 3.51457, 0, 0, Vector2(0.504587, 1), 0.0, 0.0, 0, 0, Vector2(0.752294, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.538128), -2.61953, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_4i74g"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_yt8hw"]
 diffuse_texture = ExtResource("70_55okr")
 normal_texture = ExtResource("86_34ury")
@@ -6924,8 +6934,8 @@ diffuse_texture = ExtResource("71_i2b8v")
 normal_texture = ExtResource("88_a1q3i")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wkx0m"]
-radius = 69.3386
-height = 673.667
+radius = 85.7515
+height = 737.328
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m1w2i"]
 friction = 0.5
@@ -6940,16 +6950,16 @@ radius = 126.306
 height = 582.405
 
 [sub_resource type="Curve" id="Curve_uegr1"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.247642, 0), 0.0, 0.0, 0, 0, Vector2(0.502358, 0.203488), 0.00210132, 0.00210132, 0, 0]
-point_count = 3
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.197674), 0.00210132, 0.00210132, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve" id="Curve_mqb0w"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.504717, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.504573), 1.35287, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.896226, 0.244186), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 5.2824, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="Curve" id="Curve_adlbt"]
-_data = [Vector2(0.252358, 0), 0.0, 0.189623, 0, 0, Vector2(0.679245, 0.145349), 1.30506, 1.30506, 0, 0, Vector2(0.882075, 0.825581), 0.0, 0.0, 0, 0, Vector2(1, 0.145349), -0.0704319, 0.0, 0, 0]
-point_count = 4
+_data = [Vector2(0, 0), 0.0, 0.159536, 0, 0, Vector2(0.898585, 0.797227), 2.58047, 2.58047, 0, 0, Vector2(1, 0.352253), -0.0704319, 0.0, 0, 0]
+point_count = 3
 
 [node name="Kel_Rig" type="Node2D"]
 position = Vector2(846, 490)
@@ -7202,27 +7212,27 @@ position = Vector2(-278, 267)
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999998, 0.999998)
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999981, 0.999981)
+scale = Vector2(0.999979, 0.999979)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.999974, 0.999974)
+scale = Vector2(0.999972, 0.999972)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999979, 0.999979)
+scale = Vector2(0.999978, 0.999978)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.99994, 0.99994)
+scale = Vector2(0.999939, 0.999939)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -7335,9 +7345,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2898.89, -532.195)
-rotation = -0.278129
-scale = Vector2(0.999872, 0.999872)
+position = Vector2(-2706.6, -677.997)
+rotation = -0.402885
+scale = Vector2(0.999864, 0.999864)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -7384,9 +7394,9 @@ stream = SubResource("AudioStreamRandomizer_p1l1e")
 max_distance = 10000.0
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2902.76, -693.96)
-rotation = -0.0233109
-scale = Vector2(0.999872, 0.999872)
+position = Vector2(-2730.58, -838.021)
+rotation = -0.148067
+scale = Vector2(0.999864, 0.999864)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -7395,6 +7405,7 @@ rotation = 0.830374
 scale = Vector2(1.00064, 0.99947)
 skew = 8.57115e-05
 priority = 25
+sensitivity_multiplier_on_sneeze = 0.95
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoseRemote/NoseOuter"]
 position = Vector2(-11.2045, -7.85159)
@@ -7408,6 +7419,17 @@ offset_right = -283.301
 offset_bottom = 45.9669
 rotation = -0.613493
 scale = Vector2(8.87, 8.87)
+
+[node name="ChhinkniDetector" type="Node" parent="NoseRemote/NoseOuter"]
+script = ExtResource("95_aqq7c")
+allergen = ExtResource("96_q1kil")
+decay_time_seconds = 120.0
+effect_curve = SubResource("Curve_blj1g")
+
+[node name="DustDetector" type="Node" parent="NoseRemote/NoseOuter"]
+script = ExtResource("95_aqq7c")
+allergen = ExtResource("87_xfbtc")
+effect_curve = SubResource("Curve_4i74g")
 
 [node name="LookAtNoseTarget" type="Marker2D" parent="NoseRemote"]
 unique_name_in_owner = true
@@ -7453,9 +7475,9 @@ unique_name_in_owner = true
 position = Vector2(-615, 205)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2264.41, -1006.54)
-rotation = -0.0233109
-scale = Vector2(0.999872, 0.999872)
+position = Vector2(-2136.08, -1227.6)
+rotation = -0.148067
+scale = Vector2(0.999864, 0.999864)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -7475,7 +7497,6 @@ position = Vector2(-25.0976, 7.01343)
 polygon = PackedVector2Array(30.5437, -38.3885, 39.9248, -40.252, 53.0732, -38.4215, 63.4453, -33.6736, 67.676, -29.6969, 68.0112, -26.7708, 66.8406, -16.5967, 64.926, -10.6819, 56.0903, -4.18591, 36.8638, 5.88379, 19.4915, 14.5307, 7.66162, 26.5029, -2.35382, 44.6189, 39.6998, 207.768, 145.957, 609.342, -572.075, 657.102, -786.141, 671.341, -797.244, -492.512, 181.038, -476.059, 39.1503, -192.503, 10.0142, -44.1392)
 
 [node name="Detector" type="Area2D" parent="HeadRemote/Insertion"]
-visible = false
 script = ExtResource("84_n5npt")
 
 [node name="TestClipSprite" type="Sprite2D" parent="HeadRemote/Insertion/Detector"]
@@ -7485,7 +7506,7 @@ rotation = 1.68729
 texture = ExtResource("32_uvdvn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRemote/Insertion/Detector"]
-position = Vector2(348.091, -70.3775)
+position = Vector2(308.881, -63.0285)
 rotation = 1.26522
 shape = SubResource("CapsuleShape2D_wkx0m")
 
@@ -7505,6 +7526,7 @@ polygon = PackedVector2Array(-485.181, 287.728, -328.372, 257.392, -169.684, 220
 polygon = PackedVector2Array(-703.753, 228.186, -626.41, 251.422, -341.364, 184.982, -205.294, 138.328, -83.2129, 104.93, 50.4851, 247.695, 187.862, 177.741, 150.335, -12.207, -47.6813, -38.5548, -260.296, -11.8307, -443.376, 157.105)
 
 [node name="HeadCollisionTools" type="AnimatableBody2D" parent="HeadRemote"]
+visible = false
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_h47km")
 sync_to_physics = false
@@ -7513,6 +7535,7 @@ sync_to_physics = false
 polygon = PackedVector2Array(-79.5876, -22.4598, 35.3489, 54.9686, 104.99, 187.291, 3.19019, 312.518, -116.745, 417.955, -409.374, 457.734, -619.396, 508.727, -725.056, 435.933, -739.34, 363.23, -713.523, 245.597, -564.453, 196.696, -369.447, 155.262, -270.618, 3.22095)
 
 [node name="HeadCollisionParticles" type="AnimatableBody2D" parent="HeadRemote"]
+visible = false
 collision_layer = 256
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_h47km")
@@ -7551,6 +7574,7 @@ voice = NodePath("../../MouthRemote/Voice Box")
 hitch_curve = SubResource("Curve_uegr1")
 buildup_curve = SubResource("Curve_mqb0w")
 sneeze_curve = SubResource("Curve_adlbt")
+tickle_max = 20.0
 
 [node name="UpdateTimer" type="Timer" parent="HeadRemote/Brain"]
 wait_time = 0.5
@@ -7563,8 +7587,3 @@ offset_right = -278.177
 offset_bottom = -140.13
 rotation = 1.3176
 scale = Vector2(7.855, 7.855)
-
-[node name="WindField" type="Node2D" parent="."]
-position = Vector2(-615, 205)
-
-[node name="WindSubscriber" parent="WindField" instance=ExtResource("97_y33ps")]

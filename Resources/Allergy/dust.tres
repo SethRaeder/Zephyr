@@ -4,7 +4,6 @@
 
 [resource]
 script = ExtResource("1_vps1u")
-allergy_name = "Pollen"
-tickle_amount = 0.0
-burn_amount = 0.5
-sneeze_amount = 0.25
+allergy_name = "Dust"
+tickle_amount = 0.02
+burn_amount = 0.05

@@ -5,6 +5,7 @@ signal move(movement : Vector2)
 ##Link the sprite to be used for insertion - if null, this tool can't be inserted.
 @export var InsertSprite : Sprite2D
 @export var collides_with_head_held : bool = false
+@export var wind_subscriber : WindSubscriber
 
 var grabbed : bool = false
 var inserted : bool = false

@@ -12,7 +12,7 @@ class_name NoseTriggerZone
 
 var tickle := CustomBoundedValue.new("Tickle",0.0,50.0,0.0)
 var burn := CustomBoundedValue.new("Burn",0.0,30.0,0.0)
-var sensitivity := CustomBoundedValue.new("Sensitivity",0.0,10.0,1.0)
+var sensitivity := CustomBoundedValue.new("Sensitivity",0.0,5.0,1.0)
 
 @export var tickle_wait_seconds : float = 10.0
 @export var burn_wait_seconds : float = 20.0
@@ -38,6 +38,7 @@ var sensitivity_target = 1.0
 #signal burn_report(burnPercent : float)
 #signal sensitivity_report(sensitivityPercent : float)
 signal sneeze_trigger
+signal on_allergy_damage(damage_amount, allergy_type)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -80,7 +81,7 @@ func on_sneeze():
 	burn.add_value(burn_decay * tickle_decay_on_sneeze_seconds)
 	sensitivity.add_value(-0.75)
 
-func add_tickle(tickle_amount, damage_type):
+func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource):
 	match(damage_type):
 		TickleComponent.DAMAGE_TYPES.TICKLE:
 			tickle_decay_timer.stop()
@@ -90,3 +91,6 @@ func add_tickle(tickle_amount, damage_type):
 			tickle_decay_timer.stop()
 			tickle_decay_timer.start(burn_wait_seconds)
 			burn.add_value(tickle_amount)
+		TickleComponent.DAMAGE_TYPES.ALLERGY:
+			#print("Sending allergy damage. ", tickle_amount, ", ", allergy_type)
+			on_allergy_damage.emit(tickle_amount, allergy_type)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AllergyResource" load_steps=2 format=3 uid="uid://eiweg5js1h4j"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/allergy_resource.gd" id="1_37xgq"]
+
+[resource]
+script = ExtResource("1_37xgq")
+allergy_name = "Chhinkni"
+tickle_amount = 0.05
+burn_amount = 0.1
+sneeze_amount = 3.0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://imkp062d5m14"]
+[gd_scene load_steps=8 format=3 uid="uid://imkp062d5m14"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_yoe6j"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_ubu1b"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_ksixu"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_hc7fo"]
 [ext_resource type="Texture2D" uid="uid://ovi80ytjoy6e" path="res://images/inducing tools/Revised/Dandelion Seed.PNG" id="5_3v203"]
+[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="6_g046x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 8.0
@@ -24,7 +25,6 @@ script = ExtResource("2_ubu1b")
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_ksixu")
-intensity = 400.0
 tickle_damage_limit = 1.0
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
@@ -40,3 +40,6 @@ modulate = Color(1, 1, 1, 0.8)
 z_index = 10
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_3v203")
+
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+script = ExtResource("6_g046x")

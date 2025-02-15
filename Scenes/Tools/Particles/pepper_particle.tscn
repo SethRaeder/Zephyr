@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://bt4fb5bk0bgkf"]
+[gd_scene load_steps=8 format=3 uid="uid://bt4fb5bk0bgkf"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_sgk6t"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_exnls"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_s5p63"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_xls0g"]
 [ext_resource type="Texture2D" uid="uid://dn7tdstuhkyq6" path="res://addons/kenney_particle_pack/smoke_01.png" id="5_tpf4n"]
+[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="6_e8rtq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 18.7883
 
 [node name="Pepper" type="RigidBody2D"]
 mass = 0.01
-gravity_scale = 0.01
+gravity_scale = 0.25
 script = ExtResource("1_sgk6t")
 particle_lifetime = 30.0
 delete_on_tickle_finished = true
@@ -56,3 +57,6 @@ modulate = Color(0, 0, 0, 0.352941)
 z_index = 10
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_tpf4n")
+
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+script = ExtResource("6_e8rtq")

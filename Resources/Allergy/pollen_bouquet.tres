@@ -4,7 +4,6 @@
 
 [resource]
 script = ExtResource("1_tlgei")
-allergy_name = "Dust"
+allergy_name = "Pollen"
 tickle_amount = 1.0
 burn_amount = 1.0
-sneeze_amount = 1.0

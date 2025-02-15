@@ -52,4 +52,10 @@ func _physics_process(delta: float) -> void:
 		
 	if wind_subscriber:
 		##Handle wind stuffs
-		apply_central_force(wind_subscriber.wind_vector * delta) 
+		var force = wind_subscriber.wind_vector * delta
+		force.limit_length(1)
+		##Simulate air resistance.
+		force += lerp(Vector2.ZERO,linear_velocity * -1 * delta, linear_velocity/10)
+		apply_central_force(force)
+		
+		 

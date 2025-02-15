@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		#Add tickle to targeted area
 		if tickle_amount > 0:
 			total_tickle_damage += tickle_amount
-			targeted_area.add_tickle(tickle_amount, tickle_type)
+			targeted_area.add_tickle(tickle_amount, tickle_type, allergy_type)
 			#tickle_damage_percent.emit(total_tickle_damage / tickle_damage_limit)
 
 func get_tickle():

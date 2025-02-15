@@ -1,13 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7j4oys1em0c1"]
+[gd_scene load_steps=9 format=3 uid="uid://b7j4oys1em0c1"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_7cdy6"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_srpe6"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_25yxm"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_yj65s"]
 [ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="5_nhs6v"]
+[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="5_rkbtu"]
+[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="7_uiivb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
-radius = 18.7883
+radius = 26.0192
 
 [node name="Dust" type="RigidBody2D"]
 mass = 0.01
@@ -51,8 +53,28 @@ script = ExtResource("4_yj65s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
 shape = SubResource("CircleShape2D_34lcl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.51, 0.481695, 0.4641, 0.352941)
-z_index = 10
+[node name="DustDamage" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_25yxm")
+tickle_type = 2
+allergy_type = ExtResource("5_rkbtu")
+tickle_damage_limit = 1.0
+
+[node name="EnableOnBreatheComponent" type="Node2D" parent="DustDamage"]
+process_mode = 3
 scale = Vector2(0.18, 0.18)
+script = ExtResource("4_yj65s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustDamage"]
+shape = SubResource("CircleShape2D_34lcl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.51, 0.481695, 0.4641, 0.890196)
+z_index = 10
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_nhs6v")
+
+[node name="FadeSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
+script = ExtResource("7_uiivb")
+root_node = NodePath("../..")

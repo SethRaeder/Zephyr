@@ -27,9 +27,15 @@ texture = ExtResource("2_4c60o")
 position = Vector2(0, -13)
 gizmo_extents = 105.2
 script = ExtResource("3_2pw2t")
+snap_factor_p = 200.0
 
 [node name="ParticleEmitter" type="Node2D" parent="."]
 script = ExtResource("4_nd7ux")
 particle_scene = ExtResource("5_eacuv")
+release_on_jerk = true
+jerk_threshold = 200.0
+jerk_particle_amount = 5
+jerk_particle_variance = Vector2(1, 2)
+release_on_speed = false
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
