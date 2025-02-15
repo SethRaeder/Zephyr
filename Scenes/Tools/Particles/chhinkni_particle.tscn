@@ -28,7 +28,7 @@ collision_mask = 8
 script = ExtResource("3_kmuw6")
 tickle_type = 2
 allergy_type = ExtResource("5_lspgf")
-tickle_damage_limit = 0.05
+tickle_damage_limit = 1.0
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="ChhinkniDamage"]
 process_mode = 3
@@ -44,5 +44,6 @@ z_index = 10
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("6_67lxg")
 
-[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
 script = ExtResource("7_5kq1j")
+root_node = NodePath("../..")

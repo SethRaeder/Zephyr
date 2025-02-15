@@ -16,10 +16,10 @@ class_name Lungs
   #send "oxygen empty" signal
 
 var lungs := CustomBoundedValue.new("Lungs",0.0,100.0,0.0)
-var oxygen := CustomBoundedValue.new("Oxygen",0.0,100.0,0.0)
+var oxygen := CustomBoundedValue.new("Oxygen",-300.0,100.0,0.0)
 
 var oxygen_per_lungs = 1.0
-var oxygen_decay_rate = 10.0
+var oxygen_decay_rate = oxygen.max_value / 6.0
 
 signal breathe_in
 signal breathe_out
@@ -43,9 +43,14 @@ var breath_state_current = BREATH_STATE.IDLE
 @export var SNEEZE_WIND_BONUS = 20.0
 @export var SIGH_WIND_BONUS = 5.75
 
+@export var OXY_SNEEZE_DECAY = -20.0
+@onready var low_oxy_timer: Timer = %LowOxyTimer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("lungs")
+	
+	low_oxy_timer.timeout.connect(low_oxy_check)
 	
 	lungs.hit_max.connect(
 		func():
@@ -61,7 +66,6 @@ func _ready() -> void:
 	)
 	oxygen.hit_min.connect(must_breathe.emit)
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -84,11 +88,15 @@ func _physics_process(delta: float) -> void:
 			
 		BREATH_STATE.SNEEZE:
 			breathe(SNEEZE_RATE * lungs.get_percent(), SNEEZE_WIND_BONUS, delta)
+			oxygen.add_value(OXY_SNEEZE_DECAY * lungs.get_percent() * delta)
 		
 		BREATH_STATE.SIGH:
 			breathe(SNEEZE_RATE * lungs.get_percent(), SIGH_WIND_BONUS, delta)
 
-
+func low_oxy_check():
+	if oxygen.current_value < 0 and oxygen.min_value < 0:
+		want_breathe.emit(lerp(0.05,0.50,oxygen.current_value/oxygen.min_value))
+		
 func set_breath_state(new_state):
 	breath_state_current = new_state
 	match new_state:

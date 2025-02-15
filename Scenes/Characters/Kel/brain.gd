@@ -43,8 +43,8 @@ func _ready() -> void:
 			animation_tree.set("parameters/NoseFlareTransition/transition_request","idle")
 	)
 	
-	lungs.want_breathe.connect(start_breath.bind(false))
-	lungs.must_breathe.connect(start_breath.bind(true))
+	lungs.want_breathe.connect(want_breathe)
+	lungs.must_breathe.connect(must_breathe)
 	
 	#Attach all nose hitbox zones to the brain control
 	for node in get_tree().get_nodes_in_group("nose"):
@@ -105,6 +105,11 @@ func hold_breath():
 func sneeze_trigger():
 	sneeze_trigger_count += 1
 	
-#Takes a boolean var to indicate the priority of the breath. True indicates "Must Breathe"
-func start_breath(must_start : bool = true):
+func want_breathe(weight : float):
+	if randf() < weight:
+		print("Want Breathe Started")
+		lungs.set_breath_state(lungs.BREATH_STATE.IN)
+		
+func must_breathe():
+	print("Must Breathe Started")
 	lungs.set_breath_state(lungs.BREATH_STATE.IN)

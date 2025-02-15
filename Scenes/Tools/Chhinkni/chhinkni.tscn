@@ -43,26 +43,27 @@ position = Vector2(0, -3)
 gizmo_extents = 105.2
 script = ExtResource("4_ee42l")
 
-[node name="MoveEmitter" type="Node2D" parent="."]
+[node name="Particles" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -19)
 script = ExtResource("5_jc6ru")
 particle_scene = ExtResource("7_dd1vu")
+release_on_jerk = true
 jerk_threshold = 500.0
 jerk_particle_amount = 2
 jerk_particle_variance = Vector2(1, 2)
 release_on_speed = false
 particle_spawn_max_speed = 1000.0
-particle_spawn_lifetime_limit = 10
+particle_spawn_lifetime_limit = 500
 
-[node name="EmitOnBreathe" type="Marker2D" parent="MoveEmitter" node_paths=PackedStringArray("wind_subscriber")]
+[node name="EmitOnBreathe" type="Marker2D" parent="Particles" node_paths=PackedStringArray("wind_subscriber")]
 script = ExtResource("8_pfxgb")
 local_wind_strength_threshold = 80.0
 local_wind_strength_max = 500.0
 wind_spawn_curve = SubResource("Curve_ehxyo")
 wind_subscriber = NodePath("WindSubscriber")
 
-[node name="WindSubscriber" type="Marker2D" parent="MoveEmitter/EmitOnBreathe"]
+[node name="WindSubscriber" type="Marker2D" parent="Particles/EmitOnBreathe"]
 script = ExtResource("9_cm045")
 
 [node name="CapParticle" type="Node2D" parent="."]

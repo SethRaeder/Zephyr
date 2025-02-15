@@ -26,7 +26,6 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_s5p63")
 tickle_type = 1
-intensity = 40.0
 tickle_damage_limit = 1.0
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="Burn"]
@@ -41,7 +40,6 @@ shape = SubResource("CircleShape2D_34lcl")
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_s5p63")
-intensity = 40.0
 tickle_damage_limit = 0.5
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
@@ -58,5 +56,6 @@ z_index = 10
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_tpf4n")
 
-[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
 script = ExtResource("6_e8rtq")
+root_node = NodePath("../..")

@@ -22,5 +22,5 @@ func _process(delta: float) -> void:
 	for child : TickleComponent in tickle_components:
 		current_value += child.total_tickle_damage
 	
-	print(" Fade Sprite : ",current_value / max_value)
+	#print(" Fade Sprite : ",current_value / max_value)
 	get_parent().modulate = parent_modulate.lerp(Color.TRANSPARENT, current_value / max_value)

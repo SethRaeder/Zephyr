@@ -41,5 +41,6 @@ z_index = 10
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_3v203")
 
-[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
 script = ExtResource("6_g046x")
+root_node = NodePath("../..")

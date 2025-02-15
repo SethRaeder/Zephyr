@@ -41,5 +41,6 @@ shape = SubResource("CircleShape2D_ncgkj")
 scale = Vector2(0.185, 0.185)
 texture = ExtResource("2_l8rt2")
 
-[node name="FadeParticleSprite" type="Node" parent="Sprite2D"]
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
 script = ExtResource("6_ka1wf")
+root_node = NodePath("../..")
