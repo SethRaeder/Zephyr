@@ -14,6 +14,9 @@ var tickle := CustomBoundedValue.new("Tickle",0.0,50.0,0.0)
 var burn := CustomBoundedValue.new("Burn",0.0,30.0,0.0)
 var sensitivity := CustomBoundedValue.new("Sensitivity",0.0,10.0,1.0)
 
+@export var tickle_wait_seconds : float = 10.0
+@export var burn_wait_seconds : float = 20.0
+
 @export var tickle_decay_seconds : float = 20.0
 @export var burn_decay_seconds : float = 45.0
 @export var sensitivity_decay_seconds : float = 180.0
@@ -27,7 +30,9 @@ var sensitivity_target = 1.0
 @export var burn_decay_on_sneeze_seconds : float = 10.0
 @export var sensitivity_multiplier_on_sneeze : float = 0.7
 
-@onready var sneeze_trigger_timer: Timer = $SneezeTriggerTimer
+@onready var sneeze_trigger_timer: Timer = %SneezeTriggerTimer
+@onready var tickle_decay_timer: Timer = %TickleDecayTimer
+@onready var burn_decay_timer: Timer = %BurnDecayTimer
 
 #signal tickle_report(ticklePercent : float)
 #signal burn_report(burnPercent : float)
@@ -42,12 +47,14 @@ func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_T):
 		tickle.add_value(delta * 20.0) 
 	else:
-		tickle.add_value(delta * tickle_decay)
+		if tickle_decay_timer.is_stopped():
+			tickle.add_value(delta * tickle_decay)
 
 	if Input.is_key_pressed(KEY_B):
 		burn.add_value(delta * 20.0)
 	else:
-		burn.add_value(delta * burn_decay)
+		if burn_decay_timer.is_stopped():
+			burn.add_value(delta * burn_decay)
 
 	if Input.is_key_pressed(KEY_S):
 		sensitivity.add_value(delta * 2.0)
@@ -76,6 +83,10 @@ func on_sneeze():
 func add_tickle(tickle_amount, damage_type):
 	match(damage_type):
 		TickleComponent.DAMAGE_TYPES.TICKLE:
+			tickle_decay_timer.stop()
+			tickle_decay_timer.start(tickle_wait_seconds)
 			tickle.add_value(tickle_amount)
 		TickleComponent.DAMAGE_TYPES.BURN:
+			tickle_decay_timer.stop()
+			tickle_decay_timer.start(burn_wait_seconds)
 			burn.add_value(tickle_amount)

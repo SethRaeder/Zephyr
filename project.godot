@@ -65,5 +65,4 @@ release={
 
 textures/vram_compression/import_etc2_astc=true
 textures/light_projectors/filter=5
-environment/defaults/default_clear_color=Color(0.0901961, 0.117647, 0.14902, 1)
-viewport/transparent_background=true
+environment/defaults/default_clear_color=Color(0, 0.308712, 0.569404, 1)

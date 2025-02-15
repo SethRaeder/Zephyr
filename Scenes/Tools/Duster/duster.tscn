@@ -46,7 +46,6 @@ script = ExtResource("1_bp4m2")
 [node name="ParticleEmitter" parent="." instance=ExtResource("2_ewvqs")]
 position = Vector2(0, -94)
 particle_scene = ExtResource("3_eciq1")
-particle_max_count = 20
 
 [node name="DusterCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ley4e")
@@ -79,7 +78,6 @@ position = Vector2(0, -107)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("7_6newg")
-intensity = 16.0
 use_velocity = true
 velocity_curve = SubResource("Curve_0j4h7")
 

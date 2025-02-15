@@ -1,16 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqkavmqdgvd6f"]
+[gd_scene load_steps=12 format=3 uid="uid://bqkavmqdgvd6f"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_olvin"]
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="2_aebjf"]
 [ext_resource type="Texture2D" uid="uid://dlwlb4knxvwa2" path="res://images/inducing tools/Revised/Makeup Brush.PNG" id="2_r0q5s"]
+[ext_resource type="PackedScene" uid="uid://b7j4oys1em0c1" path="res://Scenes/Tools/Particles/dust_particle.tscn" id="3_lpfoq"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_rqoxr"]
+[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_fufh5"]
+[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="5_ag1u2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtftb"]
 height = 76.0
+
+[sub_resource type="Curve" id="Curve_pp2vd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32ge2"]
+radius = 19.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ww1rp"]
+radius = 11.0454
 
 [node name="ToolBody" type="RigidBody2D"]
 input_pickable = true
 angular_damp = 20.0
 script = ExtResource("1_olvin")
+collides_with_head_held = true
+
+[node name="ParticleEmitter" type="Node2D" parent="."]
+script = ExtResource("2_aebjf")
+particle_scene = ExtResource("3_lpfoq")
+release_on_jerk = true
+jerk_threshold = 800.0
+jerk_particle_amount = 5
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
@@ -25,5 +47,40 @@ texture = ExtResource("2_r0q5s")
 position = Vector2(0, -8)
 gizmo_extents = 105.2
 script = ExtResource("3_rqoxr")
+
+[node name="Tickle" type="Area2D" parent="."]
+position = Vector2(0, -43)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("4_fufh5")
+intensity = 3.0
+use_velocity = true
+velocity_curve = SubResource("Curve_pp2vd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+shape = SubResource("CircleShape2D_32ge2")
+
+[node name="TickleDebugSuite" parent="Tickle" instance=ExtResource("5_ag1u2")]
+offset_left = -26.0
+offset_top = 12.0
+offset_right = -12.22
+offset_bottom = 43.655
+
+[node name="Burn" type="Area2D" parent="."]
+position = Vector2(0, -39)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("4_fufh5")
+tickle_type = 1
+tickle_damage_limit = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burn"]
+shape = SubResource("CircleShape2D_ww1rp")
+
+[node name="TickleDebugSuite" parent="Burn" instance=ExtResource("5_ag1u2")]
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 25.78
+offset_bottom = 38.655
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

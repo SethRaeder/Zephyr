@@ -67,8 +67,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	oxygen.add_value(-oxygen_decay_rate * delta)
 	
-	print("Lungs: Current breath state: ",breath_state_current)
-	print("Lungs: Current value: ",lungs.current_value)
+	#print("Lungs: Current breath state: ",breath_state_current)
+	#print("Lungs: Current value: ",lungs.current_value)
 	match breath_state_current:
 		BREATH_STATE.IDLE, BREATH_STATE.HOLD:
 			breathe_rate.emit(0)

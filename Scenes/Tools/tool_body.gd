@@ -4,6 +4,7 @@ signal move(movement : Vector2)
 
 ##Link the sprite to be used for insertion - if null, this tool can't be inserted.
 @export var InsertSprite : Sprite2D
+@export var collides_with_head_held : bool = false
 
 var grabbed : bool = false
 var inserted : bool = false
@@ -17,16 +18,21 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	move.emit(linear_velocity)
+
 	#print("<ToolBody> Speed: ",linear_velocity.length())
 	
 func grab() -> void:
 	print("Grab!")
 	grabbed = true
-	set_collision_mask_value(1,false)
 	
 	if InsertSprite:
 		print("Insert Capable")
 		set_collision_mask_value(2,true)
+		set_collision_mask_value(1,false)
+	elif collides_with_head_held:
+		set_collision_mask_value(1,true)
+	else:
+		set_collision_mask_value(1,false)
 
 func release() -> void:
 	print("Release")

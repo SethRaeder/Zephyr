@@ -10,7 +10,7 @@ enum DAMAGE_TYPES {TICKLE, BURN, ALLERGY}
 
 @export var allergy_type : AllergyResource
 ## Amount of tickle to add per second
-@export var intensity : float = 8
+@export var intensity : float = 1
 ## Total amount of tickle this object can give over its lifetime
 @export var tickle_damage_limit : float = -1
 #Keep track of the current damage inflicted

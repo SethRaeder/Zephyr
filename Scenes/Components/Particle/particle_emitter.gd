@@ -3,8 +3,17 @@ class_name ParticleEmitter
 
 @export var particle_scene : PackedScene
 
+@export_category("Use Jerk Release")
+@export var release_on_jerk : bool = false
+@export var jerk_threshold : float = 0.0
+@export var jerk_particle_amount : int = 0
+@export var jerk_particle_variance : Vector2 = Vector2.ONE
+
+@export_category("Use Velocity Release")
 @export var particle_spawn_max_speed : float= 2000.0
 @export var particle_spawn_velocity_curve : Curve = preload("res://default_particle_spawn_curve.tres")
+
+@export_category("Particle Spawn Settings")
 @export var particle_spawn_radius : float = 10
 @export var particle_spawn_force_max : float = 50
 @export var particle_spawn_rotation_max : float = 2.5
@@ -32,11 +41,20 @@ func _process(delta: float) -> void:
 
 func on_move(velocity : Vector2):
 	#print("Hello?")
-	var current_speed = clampf((velocity - last_velocity).length(), 0.0, particle_spawn_max_speed)
+
+	if release_on_jerk:
+		var jerk_speed = clampf((velocity - last_velocity).length(), 0.0, particle_spawn_max_speed)
+		if abs(jerk_speed) >= jerk_threshold:
+			var particle_count = int(jerk_particle_amount * randf_range(jerk_particle_variance.x,jerk_particle_variance.y))
+			for i in range(particle_count):
+				spawn_particle()
+	else:
+		var current_speed = clampf(velocity.length(), 0.0, particle_spawn_max_speed)
+		var sample = particle_spawn_velocity_curve.sample(current_speed / particle_spawn_max_speed)
+		if randf() < sample:
+			spawn_particle()
 	
-	var sample = particle_spawn_velocity_curve.sample(current_speed / particle_spawn_max_speed)
-	if randf() < sample:
-		spawn_particle()
+	last_velocity = velocity
 
 func spawn_particle():
 	if particle_count >= particle_max_count:

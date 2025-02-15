@@ -18,8 +18,8 @@ point_count = 2
 radius = 12.0416
 
 [sub_resource type="Curve" id="Curve_ueojc"]
-_data = [Vector2(0, 0.104268), 0.0, 0.0, 0, 0, Vector2(0.177258, 0.516463), 0.0, 0.0, 0, 0, Vector2(0.316054, 0.215244), 0.0, 0.0, 0, 0, Vector2(0.531773, 0.984146), 0.0, 0.0, 0, 0, Vector2(0.744147, 0), 0.0, 0.0, 0, 0]
-point_count = 5
+_data = [Vector2(0, 0.104268), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(0.744147, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kisr"]
 radius = 7.0
@@ -48,7 +48,7 @@ position = Vector2(0, -47)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("4_8t2pl")
-intensity = 2.0
+intensity = 4.0
 use_velocity = true
 velocity_curve = SubResource("Curve_dugmu")
 
@@ -66,7 +66,6 @@ position = Vector2(0, 57)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("4_8t2pl")
-intensity = 1.0
 use_velocity = true
 velocity_curve = SubResource("Curve_ueojc")
 

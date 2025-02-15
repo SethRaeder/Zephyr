@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://xwggdnmhs7mt"]
+[gd_scene load_steps=7 format=3 uid="uid://xwggdnmhs7mt"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_fi5oo"]
 [ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://images/inducing tools/Revised/Pepper Shaker.PNG" id="2_4c60o"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_2pw2t"]
+[ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="4_nd7ux"]
+[ext_resource type="PackedScene" uid="uid://bt4fb5bk0bgkf" path="res://Scenes/Tools/Particles/pepper_particle.tscn" id="5_eacuv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1qc4"]
 radius = 12.0
@@ -25,5 +27,9 @@ texture = ExtResource("2_4c60o")
 position = Vector2(0, -13)
 gizmo_extents = 105.2
 script = ExtResource("3_2pw2t")
+
+[node name="ParticleEmitter" type="Node2D" parent="."]
+script = ExtResource("4_nd7ux")
+particle_scene = ExtResource("5_eacuv")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

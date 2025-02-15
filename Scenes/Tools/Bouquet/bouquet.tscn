@@ -37,6 +37,7 @@ script = ExtResource("2_w3qsr")
 particle_scene = ExtResource("3_2k08a")
 particle_spawn_velocity_curve = SubResource("Curve_e06c2")
 particle_spawn_radius = 30.0
+particle_max_count = 250
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.99999, 1.00001)
@@ -60,7 +61,6 @@ position = Vector2(1, -42)
 script = ExtResource("4_qoxqd")
 tickle_type = 2
 allergy_type = ExtResource("5_oy7qk")
-intensity = 1.0
 use_velocity = true
 velocity_curve = SubResource("Curve_56uft")
 

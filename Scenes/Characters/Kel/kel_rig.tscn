@@ -6948,7 +6948,7 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.504717, 0), 0.0, 0.0, 0, 0, Ve
 point_count = 3
 
 [sub_resource type="Curve" id="Curve_adlbt"]
-_data = [Vector2(0.365566, 0), 0.0, 0.189623, 0, 0, Vector2(0.679245, 0.145349), 1.30506, 1.30506, 0, 0, Vector2(0.882075, 0.825581), 0.0, 0.0, 0, 0, Vector2(1, 0.145349), -0.0704319, 0.0, 0, 0]
+_data = [Vector2(0.252358, 0), 0.0, 0.189623, 0, 0, Vector2(0.679245, 0.145349), 1.30506, 1.30506, 0, 0, Vector2(0.882075, 0.825581), 0.0, 0.0, 0, 0, Vector2(1, 0.145349), -0.0704319, 0.0, 0, 0]
 point_count = 4
 
 [node name="Kel_Rig" type="Node2D"]
@@ -7217,12 +7217,12 @@ rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.99998, 0.99998)
+scale = Vector2(0.999979, 0.999979)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999941, 0.999941)
+scale = Vector2(0.99994, 0.99994)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -7335,9 +7335,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2897.87, -533.106)
-rotation = -0.278869
-scale = Vector2(0.999874, 0.999874)
+position = Vector2(-2898.89, -532.195)
+rotation = -0.278129
+scale = Vector2(0.999872, 0.999872)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -7384,9 +7384,9 @@ stream = SubResource("AudioStreamRandomizer_p1l1e")
 max_distance = 10000.0
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2901.86, -694.868)
-rotation = -0.0240514
-scale = Vector2(0.999874, 0.999874)
+position = Vector2(-2902.76, -693.96)
+rotation = -0.0233109
+scale = Vector2(0.999872, 0.999872)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -7453,9 +7453,9 @@ unique_name_in_owner = true
 position = Vector2(-615, 205)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2263.74, -1007.92)
-rotation = -0.0240514
-scale = Vector2(0.999874, 0.999874)
+position = Vector2(-2264.41, -1006.54)
+rotation = -0.0233109
+scale = Vector2(0.999872, 0.999872)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -7504,17 +7504,23 @@ polygon = PackedVector2Array(-485.181, 287.728, -328.372, 257.392, -169.684, 220
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HeadRemote/Insertion/NoseCollision"]
 polygon = PackedVector2Array(-703.753, 228.186, -626.41, 251.422, -341.364, 184.982, -205.294, 138.328, -83.2129, 104.93, 50.4851, 247.695, 187.862, 177.741, 150.335, -12.207, -47.6813, -38.5548, -260.296, -11.8307, -443.376, 157.105)
 
-[node name="HeadCollision" type="AnimatableBody2D" parent="HeadRemote"]
-visible = false
-collision_layer = 257
+[node name="HeadCollisionTools" type="AnimatableBody2D" parent="HeadRemote"]
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_h47km")
 sync_to_physics = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HeadRemote/HeadCollision"]
-polygon = PackedVector2Array(-79.5876, -22.4598, 96.7096, 3.58435, 195.19, 201.114, 113.461, 360.675, -31.6964, 296.677, -193.323, 315.354, -409.231, 355.799, -616.083, 411.767, -718.429, 442.039, -713.523, 245.597, -564.453, 196.696, -363.042, 158.364, -270.618, 3.22095)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HeadRemote/HeadCollisionTools"]
+polygon = PackedVector2Array(-79.5876, -22.4598, 35.3489, 54.9686, 104.99, 187.291, 3.19019, 312.518, -116.745, 417.955, -409.374, 457.734, -619.396, 508.727, -725.056, 435.933, -739.34, 363.23, -713.523, 245.597, -564.453, 196.696, -369.447, 155.262, -270.618, 3.22095)
+
+[node name="HeadCollisionParticles" type="AnimatableBody2D" parent="HeadRemote"]
+collision_layer = 256
+collision_mask = 0
+physics_material_override = SubResource("PhysicsMaterial_h47km")
+sync_to_physics = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HeadRemote/HeadCollisionParticles"]
+polygon = PackedVector2Array(-79.5876, -22.4598, 35.3489, 54.9686, 104.99, 187.291, 3.19019, 312.518, -116.745, 417.955, -409.374, 457.734, -619.396, 508.727, -725.056, 435.933, -739.34, 363.23, -713.523, 245.597, -564.453, 196.696, -369.447, 155.262, -270.618, 3.22095)
 one_way_collision = true
-one_way_collision_margin = 28.1
 
 [node name="NoseInner" parent="HeadRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true

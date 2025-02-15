@@ -6,8 +6,9 @@
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_p6mro"]
 [ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="5_naktk"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o5i2l"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rnao"]
 radius = 3.0
+height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ncgkj"]
 radius = 20.025
@@ -21,7 +22,7 @@ script = ExtResource("1_43hvu")
 particle_lifetime = 120.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_o5i2l")
+shape = SubResource("CapsuleShape2D_7rnao")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.185, 0.185)
