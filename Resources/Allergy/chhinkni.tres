@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_37xgq")
 allergy_name = "Chhinkni"
-tickle_amount = 0.05
-burn_amount = 0.1
-sneeze_amount = 3.0
+tickle_amount = 0.025
+burn_amount = 0.05

@@ -10,7 +10,7 @@ func _ready() -> void:
 		queue_free()
 	else:
 		parent = get_parent()
-		sneeze_progress_bar.max_value = parent.sneeze_trigger_max
+		sneeze_progress_bar.max_value = parent.sneeze_trigger_target
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

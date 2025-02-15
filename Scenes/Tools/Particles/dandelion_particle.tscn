@@ -10,12 +10,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 8.0
 
-[node name="Dust" type="RigidBody2D"]
-mass = 0.01
-gravity_scale = 0.01
+[node name="Dandelion" type="RigidBody2D"]
+mass = 0.001
+gravity_scale = 0.05
 script = ExtResource("1_yoe6j")
 particle_lifetime = 30.0
 delete_on_tickle_finished = true
+particle_air_limit = 500.0
 
 [node name="WindSubscriber" type="Marker2D" parent="."]
 scale = Vector2(0.18, 0.18)

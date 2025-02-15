@@ -16,7 +16,7 @@ radius = 6.0
 height = 32.0
 
 [sub_resource type="Curve" id="Curve_ehxyo"]
-_data = [Vector2(0, 0.0480936), 0.0, 0.0, 0, 0, Vector2(1, 0.200173), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.0480936), 0.0, 0.0, 0, 0, Vector2(1, 0.402946), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="ToolBody" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite")]
@@ -28,6 +28,28 @@ metadata/_edit_horizontal_guides_ = [-28.0]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_h45xq")
+
+[node name="Particles" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -19)
+script = ExtResource("5_jc6ru")
+particle_scene = ExtResource("7_dd1vu")
+release_on_jerk = true
+jerk_threshold = 500.0
+jerk_particle_amount = 2
+jerk_particle_variance = Vector2(1, 2)
+particle_spawn_max_speed = 1000.0
+particle_spawn_lifetime_limit = 500
+
+[node name="EmitOnBreathe" type="Marker2D" parent="Particles" node_paths=PackedStringArray("wind_subscriber")]
+script = ExtResource("8_pfxgb")
+local_wind_strength_threshold = 50.0
+local_wind_strength_max = 500.0
+wind_spawn_curve = SubResource("Curve_ehxyo")
+wind_subscriber = NodePath("WindSubscriber")
+
+[node name="WindSubscriber" type="Marker2D" parent="Particles/EmitOnBreathe"]
+script = ExtResource("9_cm045")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
@@ -43,29 +65,6 @@ position = Vector2(0, -3)
 gizmo_extents = 105.2
 script = ExtResource("4_ee42l")
 
-[node name="Particles" type="Node2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(0, -19)
-script = ExtResource("5_jc6ru")
-particle_scene = ExtResource("7_dd1vu")
-release_on_jerk = true
-jerk_threshold = 500.0
-jerk_particle_amount = 2
-jerk_particle_variance = Vector2(1, 2)
-release_on_speed = false
-particle_spawn_max_speed = 1000.0
-particle_spawn_lifetime_limit = 500
-
-[node name="EmitOnBreathe" type="Marker2D" parent="Particles" node_paths=PackedStringArray("wind_subscriber")]
-script = ExtResource("8_pfxgb")
-local_wind_strength_threshold = 80.0
-local_wind_strength_max = 500.0
-wind_spawn_curve = SubResource("Curve_ehxyo")
-wind_subscriber = NodePath("WindSubscriber")
-
-[node name="WindSubscriber" type="Marker2D" parent="Particles/EmitOnBreathe"]
-script = ExtResource("9_cm045")
-
 [node name="CapParticle" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -22)
@@ -74,7 +73,6 @@ particle_scene = ExtResource("7_h4o4n")
 release_on_jerk = true
 jerk_accelerate = true
 jerk_threshold = 300.0
-jerk_particle_amount = 1
 release_on_speed = false
 particle_spawn_rotation_max = 0.0
 particle_size_var_range = Vector2(1, 1)

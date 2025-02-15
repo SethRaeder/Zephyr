@@ -13,6 +13,7 @@ var sprite : Sprite2D
 var wind_subscriber : WindSubscriber
 
 signal particle_die()
+@export var particle_air_limit : float = 200.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,7 +56,7 @@ func _physics_process(delta: float) -> void:
 		var force = wind_subscriber.wind_vector * delta
 		force = force.limit_length(40.0)
 		##Simulate air resistance.
-		force += Vector2.ZERO.lerp(linear_velocity * -1 * delta, linear_velocity.length() / 200.0)
+		force += Vector2.ZERO.lerp(linear_velocity * -1 * delta, linear_velocity.length() / particle_air_limit)
 		apply_central_force(force)
 		
 		 

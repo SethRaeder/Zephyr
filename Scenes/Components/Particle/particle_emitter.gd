@@ -7,8 +7,9 @@ class_name ParticleEmitter
 @export var release_on_jerk : bool = false
 @export var jerk_accelerate : bool = false
 @export var jerk_decelerate : bool = true
-@export var jerk_threshold : float = 0.0
-@export var jerk_particle_amount : int = 0
+@export var jerk_threshold : float = 10000
+@export var jerk_speed_max : float = 100000
+@export var jerk_particle_amount : int = 1
 @export var jerk_particle_variance : Vector2 = Vector2.ONE
 
 @export_category("Use Velocity Release")
@@ -31,6 +32,8 @@ var last_velocity := Vector2.ZERO
 
 var particle_array = []
 
+var emission_enabled : bool = true
+
 signal particles_exhausted()
 
 # Called when the node enters the scene tree for the first time.
@@ -43,16 +46,14 @@ func _ready() -> void:
 	var parent : SneezeTool = get_parent()
 	parent.move.connect(on_move)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func on_move(velocity : Vector2):
-	#print("Hello?")
+func on_move(velocity : Vector2, delta : float):
+	if not emission_enabled:
+		return
 
 	if release_on_jerk:
 		var delta_dot = (last_velocity.dot(velocity))
-		var jerk_speed = clampf((velocity - last_velocity).length(), 0.0, particle_spawn_max_speed)
+		var jerk_speed = clampf((velocity - last_velocity).length() / delta, 0.0, jerk_speed_max)
+		print(jerk_speed)
 		if ((delta_dot > 0 and jerk_accelerate) and (jerk_speed >= jerk_threshold)) or ((delta_dot < 0 and jerk_decelerate) and (jerk_speed >= jerk_threshold)):
 			var particle_count = int(jerk_particle_amount * randf_range(jerk_particle_variance.x,jerk_particle_variance.y))
 			for i in range(particle_count):
@@ -66,6 +67,9 @@ func on_move(velocity : Vector2):
 	last_velocity = velocity
 
 func spawn_particle():
+	if not emission_enabled:
+		return
+		
 	if particle_spawn_lifetime_limit > 0:
 		particle_spawn_lifetime_count += 1
 		if particle_spawn_lifetime_count > particle_spawn_lifetime_limit:
@@ -98,6 +102,13 @@ func spawn_particle():
 	
 	new_particle.apply_central_force(Vector2.RIGHT.rotated(randf_range(0,2*PI)) * (particle_spawn_force_max * randf()))
 	new_particle.angular_velocity = (particle_spawn_rotation_max * randf_range(-1,1))
+	
+	if get_parent().inserted:
+		for child in new_particle.get_children(true):
+			if child is TickleComponent:
+				if child.tickle_damage_limit > 0:
+					child.intensity *= 10
+				child.set_collision_mask_value(8, true)
 
 func on_particle_die(particle : ToolParticle):
 	particle_count -= 1

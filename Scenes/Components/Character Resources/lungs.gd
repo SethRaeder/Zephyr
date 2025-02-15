@@ -18,7 +18,7 @@ class_name Lungs
 var lungs := CustomBoundedValue.new("Lungs",0.0,100.0,0.0)
 var oxygen := CustomBoundedValue.new("Oxygen",-300.0,100.0,0.0)
 
-var oxygen_per_lungs = 1.0
+var oxygen_per_lungs = 2.0
 var oxygen_decay_rate = oxygen.max_value / 6.0
 
 signal breathe_in

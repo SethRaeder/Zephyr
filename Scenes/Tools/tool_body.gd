@@ -18,7 +18,7 @@ func _ready() -> void:
 			tickle_arr.append(child)
 
 func _physics_process(delta: float) -> void:
-	move.emit(linear_velocity)
+	move.emit(linear_velocity, delta)
 
 	#print("<ToolBody> Speed: ",linear_velocity.length())
 	

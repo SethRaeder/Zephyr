@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=182 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -88,7 +88,6 @@
 [ext_resource type="Texture2D" uid="uid://itnq7udoudsy" path="res://images/Kel/CLEAN/Shoulder.PNG" id="70_55okr"]
 [ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://Scenes/Components/Character Resources/lungs.tscn" id="70_xplix"]
 [ext_resource type="Texture2D" uid="uid://d3nyneviu5xal" path="res://images/Kel/CLEAN/Wing.PNG" id="71_i2b8v"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/brain.gd" id="72_bydec"]
 [ext_resource type="PackedScene" uid="uid://dwsrf2vatxr32" path="res://Scenes/Components/Character Resources/nose_debug_suite.tscn" id="84_mv1jp"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/detector.gd" id="84_n5npt"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_origin.gd" id="85_ascq3"]
@@ -98,6 +97,7 @@
 [ext_resource type="PackedScene" uid="uid://03yub1gspvk7" path="res://Scenes/Components/Character Resources/brain_debug_suite.tscn" id="94_kvgm2"]
 [ext_resource type="Script" path="res://Scenes/Components/Character Resources/allergen_detector.gd" id="95_aqq7c"]
 [ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://Resources/Allergy/chhinkni.tres" id="96_q1kil"]
+[ext_resource type="PackedScene" uid="uid://34wgpjsyur8v" path="res://Scenes/Components/Character Resources/brain.tscn" id="97_8vqa2"]
 
 [sub_resource type="Animation" id="Animation_r76hh"]
 length = 0.001
@@ -3115,10 +3115,10 @@ states/sneeze/position = Vector2(954, -17)
 states/sneeze_interrupt/node = SubResource("AnimationNodeAnimation_luweg")
 states/sneeze_interrupt/position = Vector2(678, -17)
 transitions = ["buildup", "buildup_interrupt", SubResource("AnimationNodeStateMachineTransition_78u4k"), "buildup_interrupt", "sneeze", SubResource("AnimationNodeStateMachineTransition_72kw8"), "buildup_interrupt", "buildup", SubResource("AnimationNodeStateMachineTransition_nf0du"), "hitch", "hitch_interrupt", SubResource("AnimationNodeStateMachineTransition_5d8c8"), "hitch_interrupt", "hitch", SubResource("AnimationNodeStateMachineTransition_4hccm"), "buildup_interrupt", "hitch", SubResource("AnimationNodeStateMachineTransition_en1wf"), "hitch_interrupt", "buildup", SubResource("AnimationNodeStateMachineTransition_ybmio"), "sneeze", "sneeze_interrupt", SubResource("AnimationNodeStateMachineTransition_v8v4p"), "sneeze_interrupt", "buildup", SubResource("AnimationNodeStateMachineTransition_d35ab"), "sneeze_interrupt", "hitch", SubResource("AnimationNodeStateMachineTransition_8jtp2"), "sneeze_interrupt", "sneeze", SubResource("AnimationNodeStateMachineTransition_pr66c"), "Start", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_7ksb4"), "sneeze_interrupt", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_x875l"), "hitch_interrupt", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_m447s"), "buildup_interrupt", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_0p5l1"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_kg6hv"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_gwl3x")]
-graph_offset = Vector2(-49, -286)
+graph_offset = Vector2(-84, -286)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8i024"]
-graph_offset = Vector2(263, -188)
+graph_offset = Vector2(362, -138)
 nodes/Blink/node = SubResource("AnimationNodeAnimation_uyewt")
 nodes/Blink/position = Vector2(1180, 200)
 "nodes/Blink Shot/node" = SubResource("AnimationNodeOneShot_n5m61")
@@ -3299,11 +3299,11 @@ stream_10/stream = ExtResource("43_k8cn3")
 stream_11/stream = ExtResource("44_e65fr")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6po3j"]
-radius = 59.1075
-height = 170.491
+radius = 101.293
+height = 241.4
 
 [sub_resource type="Curve" id="Curve_blj1g"]
-_data = [Vector2(0, 0), 0.0, 3.51457, 0, 0, Vector2(0.504587, 1), 0.0, 0.0, 0, 0, Vector2(0.752294, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.538128), -2.61953, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 2.34364, 0, 0, Vector2(0.555046, 0.340988), 1.10088, 1.10088, 0, 0, Vector2(0.752294, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.177643), -9.44543, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="Curve" id="Curve_4i74g"]
@@ -3332,19 +3332,7 @@ bounce = 0.09
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7cjx"]
 radius = 126.306
-height = 582.405
-
-[sub_resource type="Curve" id="Curve_uegr1"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.197674), 0.00210132, 0.00210132, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_mqb0w"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.896226, 0.244186), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 5.2824, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Curve" id="Curve_adlbt"]
-_data = [Vector2(0, 0), 0.0, 0.159536, 0, 0, Vector2(0.898585, 0.797227), 2.58047, 2.58047, 0, 0, Vector2(1, 0.352253), -0.0704319, 0.0, 0, 0]
-point_count = 3
+height = 679.068
 
 [node name="Kel_Rig" type="Node2D"]
 position = Vector2(846, 490)
@@ -3545,27 +3533,27 @@ position = Vector2(-278, 267)
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999996, 0.999996)
+scale = Vector2(0.999993, 0.999993)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999978, 0.999978)
+scale = Vector2(0.999975, 0.999975)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.999972, 0.999972)
+scale = Vector2(0.999967, 0.999967)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999977, 0.999977)
+scale = Vector2(0.999973, 0.999973)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999939, 0.999939)
+scale = Vector2(0.999935, 0.999935)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -3678,9 +3666,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2897.8, -533.14)
-rotation = -0.278898
-scale = Vector2(0.999862, 0.999862)
+position = Vector2(-2880.97, -547.842)
+rotation = -0.290915
+scale = Vector2(0.999843, 0.999843)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3727,9 +3715,9 @@ stream = SubResource("AudioStreamRandomizer_p1l1e")
 max_distance = 10000.0
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2901.81, -694.9)
-rotation = -0.0240799
-scale = Vector2(0.999862, 0.999862)
+position = Vector2(-2886.91, -709.54)
+rotation = -0.0360966
+scale = Vector2(0.999843, 0.999843)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3738,10 +3726,15 @@ rotation = 0.830374
 scale = Vector2(1.00064, 0.99947)
 skew = 8.57115e-05
 priority = 25
-sensitivity_multiplier_on_sneeze = 0.95
+tickle_wait_seconds = 5.0
+burn_wait_seconds = 30.0
+burn_decay_seconds = 120.0
+sensitivity_decay_seconds = 45.0
+burn_decay_on_sneeze_seconds = 8.0
+sensitivity_multiplier_on_sneeze = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoseRemote/NoseOuter"]
-position = Vector2(-11.2045, -7.85159)
+position = Vector2(4.99883, -16.5555)
 rotation = -0.630823
 shape = SubResource("CapsuleShape2D_6po3j")
 
@@ -3756,7 +3749,7 @@ scale = Vector2(8.87, 8.87)
 [node name="ChhinkniDetector" type="Node" parent="NoseRemote/NoseOuter"]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("96_q1kil")
-decay_time_seconds = 120.0
+max_value = 30.0
 effect_curve = SubResource("Curve_blj1g")
 
 [node name="DustDetector" type="Node" parent="NoseRemote/NoseOuter"]
@@ -3772,7 +3765,7 @@ gizmo_extents = 99.0
 
 [node name="BreathWindOrigin" type="Marker2D" parent="NoseRemote" node_paths=PackedStringArray("lungs") groups=["wind"]]
 unique_name_in_owner = true
-position = Vector2(33.3712, -14.1842)
+position = Vector2(61.7464, -25.8973)
 rotation = -3.57453
 scale = Vector2(1.00005, 1.00005)
 gizmo_extents = 558.0
@@ -3804,9 +3797,9 @@ unique_name_in_owner = true
 position = Vector2(-615, 205)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2263.7, -1007.97)
-rotation = -0.0240799
-scale = Vector2(0.999862, 0.999862)
+position = Vector2(-2252.63, -1030.25)
+rotation = -0.0360966
+scale = Vector2(0.999843, 0.999843)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -3882,9 +3875,14 @@ skew = 8.57115e-05
 collision_layer = 128
 collision_mask = 128
 priority = 25
+tickle_decay_seconds = 60.0
+burn_decay_seconds = 200.0
+sensitivity_decay_seconds = 360.0
+burn_decay_on_sneeze_seconds = 15.0
+sensitivity_multiplier_on_sneeze = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRemote/NoseInner"]
-position = Vector2(54.0181, -30.7344)
+position = Vector2(38.4302, -17.2829)
 rotation = 0.503096
 shape = SubResource("CapsuleShape2D_f7cjx")
 
@@ -3896,18 +3894,17 @@ offset_bottom = -84.9714
 rotation = 0.458802
 scale = Vector2(7.935, 7.935)
 
-[node name="Brain" type="Node2D" parent="HeadRemote" node_paths=PackedStringArray("lungs", "voice")]
-script = ExtResource("72_bydec")
+[node name="ChhinkniDetector" type="Node" parent="HeadRemote/NoseInner"]
+script = ExtResource("95_aqq7c")
+allergen = ExtResource("96_q1kil")
+decay_time_seconds = 240.0
+effect_curve = SubResource("Curve_blj1g")
+
+[node name="Brain" parent="HeadRemote" node_paths=PackedStringArray("lungs", "voice") instance=ExtResource("97_8vqa2")]
 lungs = NodePath("../../Lungs")
 voice = NodePath("../../MouthRemote/Voice Box")
-hitch_curve = SubResource("Curve_uegr1")
-buildup_curve = SubResource("Curve_mqb0w")
-sneeze_curve = SubResource("Curve_adlbt")
-tickle_max = 20.0
-
-[node name="UpdateTimer" type="Timer" parent="HeadRemote/Brain"]
-wait_time = 0.5
-autostart = true
+fit_probability = 0.25
+sneeze_multiples_bonus = 6.0
 
 [node name="BrainDebugSuite" parent="HeadRemote/Brain" instance=ExtResource("94_kvgm2")]
 offset_left = -278.177

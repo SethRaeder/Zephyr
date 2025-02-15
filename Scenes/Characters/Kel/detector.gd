@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		var sprite = tracked_dict[body]
 		#Move the sprite that used to belong to the body, to the current body position.
 		sprite.global_position = body.global_position
-		sprite.rotation = body.rotation
+		sprite.rotation = body.global_rotation
 
 func on_body_entered(body):
 	if body is SneezeTool:

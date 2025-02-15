@@ -79,17 +79,19 @@ func on_sneeze():
 	print("<NOSE> On Sneeze")
 	tickle.add_value(tickle_decay * tickle_decay_on_sneeze_seconds)
 	burn.add_value(burn_decay * tickle_decay_on_sneeze_seconds)
-	sensitivity.add_value(-0.75)
+	sensitivity.current_value = sensitivity.current_value * sensitivity_multiplier_on_sneeze
 
 func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource):
 	match(damage_type):
 		TickleComponent.DAMAGE_TYPES.TICKLE:
 			tickle_decay_timer.stop()
 			tickle_decay_timer.start(tickle_wait_seconds)
+			
 			tickle.add_value(tickle_amount)
 		TickleComponent.DAMAGE_TYPES.BURN:
-			tickle_decay_timer.stop()
-			tickle_decay_timer.start(burn_wait_seconds)
+			burn_decay_timer.stop()
+			burn_decay_timer.start(burn_wait_seconds)
+			
 			burn.add_value(tickle_amount)
 		TickleComponent.DAMAGE_TYPES.ALLERGY:
 			#print("Sending allergy damage. ", tickle_amount, ", ", allergy_type)

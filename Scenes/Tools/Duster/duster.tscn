@@ -40,12 +40,17 @@ radius = 43.0465
 
 [node name="Duster" type="RigidBody2D"]
 input_pickable = true
+mass = 0.25
 angular_damp = 10.0
 script = ExtResource("1_bp4m2")
 
 [node name="ParticleEmitter" parent="." instance=ExtResource("2_ewvqs")]
 position = Vector2(0, -94)
 particle_scene = ExtResource("3_eciq1")
+release_on_jerk = true
+jerk_accelerate = true
+release_on_speed = false
+particle_spawn_max_speed = 500.0
 
 [node name="DusterCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ley4e")
@@ -72,6 +77,7 @@ texture = ExtResource("5_pc1n5")
 position = Vector2(0, -24)
 gizmo_extents = 73.5
 script = ExtResource("6_btf2x")
+snap_factor_d = -10.0
 
 [node name="TickleComponent" type="Area2D" parent="."]
 position = Vector2(0, -107)
