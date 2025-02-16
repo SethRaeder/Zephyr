@@ -3425,7 +3425,7 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999878, 0.999878)
+scale = Vector2(0.99988, 0.99988)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
@@ -3558,9 +3558,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2858.6, -565.736)
-rotation = -0.305744
-scale = Vector2(0.999216, 0.999216)
+position = Vector2(-2863.88, -561.345)
+rotation = -0.3021
+scale = Vector2(0.99922, 0.99922)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3609,9 +3609,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2866.94, -727.226)
-rotation = -0.0509256
-scale = Vector2(0.999216, 0.999216)
+position = Vector2(-2871.63, -722.865)
+rotation = -0.0472824
+scale = Vector2(0.99922, 0.99922)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3706,9 +3706,9 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2237.87, -1057.1)
-rotation = -0.0509256
-scale = Vector2(0.999216, 0.999216)
+position = Vector2(-2241.37, -1050.44)
+rotation = -0.0472824
+scale = Vector2(0.99922, 0.99922)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true

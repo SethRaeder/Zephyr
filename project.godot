@@ -69,6 +69,8 @@ release={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 textures/light_projectors/filter=5
 environment/defaults/default_clear_color=Color(0.141176, 0.145098, 0.270588, 1)
