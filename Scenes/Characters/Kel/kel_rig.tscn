@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=183 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -60,7 +60,6 @@
 [ext_resource type="AudioStream" uid="uid://dedeomuw4x0if" path="res://Audio/Kel Voice/Sigh/Sigh-9.wav" id="30_ikv5f"]
 [ext_resource type="AudioStream" uid="uid://kmw7k8dspsbx" path="res://Audio/Kel Voice/Sigh/Sigh-10.wav" id="31_0a48m"]
 [ext_resource type="AudioStream" uid="uid://cxrn4pynue566" path="res://Audio/Kel Voice/Sneeze/Sneeze.wav" id="32_251p2"]
-[ext_resource type="Texture2D" uid="uid://dxyfqrhjw8t5y" path="res://images/inducing tools/Revised/Feather.PNG" id="32_uvdvn"]
 [ext_resource type="AudioStream" uid="uid://hlwmc8mebauv" path="res://Audio/Kel Voice/Sneeze/Sneeze Stifle-2.wav" id="33_7ahq2"]
 [ext_resource type="Texture2D" uid="uid://bw7yxnanyamgo" path="res://addons/kenney_particle_pack/light_01_small.png" id="33_svpwe"]
 [ext_resource type="AudioStream" uid="uid://dwo5eghtl0vkj" path="res://Audio/Kel Voice/Sneeze/Sneeze Stifle.wav" id="34_wgarf"]
@@ -84,13 +83,13 @@
 [ext_resource type="AudioStream" uid="uid://cpeamedggmssf" path="res://Audio/Kel Voice/Sniff/Sniff-11.wav" id="52_ni2ep"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/pupil.gd" id="68_cjxlc"]
 [ext_resource type="Script" path="res://Scenes/Characters/Kel/eye_target.gd" id="69_e8orq"]
-[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/nose.tscn" id="69_ekg2v"]
+[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/Nose/nose.tscn" id="69_ekg2v"]
 [ext_resource type="Texture2D" uid="uid://itnq7udoudsy" path="res://images/Kel/CLEAN/Shoulder.PNG" id="70_55okr"]
 [ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://Scenes/Components/Character Resources/lungs.tscn" id="70_xplix"]
 [ext_resource type="Texture2D" uid="uid://d3nyneviu5xal" path="res://images/Kel/CLEAN/Wing.PNG" id="71_i2b8v"]
-[ext_resource type="PackedScene" uid="uid://dwsrf2vatxr32" path="res://Scenes/Components/Character Resources/nose_debug_suite.tscn" id="84_mv1jp"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/detector.gd" id="84_n5npt"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_origin.gd" id="85_ascq3"]
+[ext_resource type="PackedScene" uid="uid://dwsrf2vatxr32" path="res://Scenes/Components/Character Resources/Nose/nose_debug_suite.tscn" id="84_mv1jp"]
+[ext_resource type="Script" path="res://Scripts/Characters/Nose/nose_insert_detector.gd" id="84_n5npt"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_origin.gd" id="85_ascq3"]
 [ext_resource type="Texture2D" uid="uid://cch7e1588u3ep" path="res://images/Kel/Normal/Shoulder_n.png" id="86_34ury"]
 [ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="87_xfbtc"]
 [ext_resource type="Texture2D" uid="uid://jmxo5cssey7a" path="res://images/Kel/Normal/Wing_n.png" id="88_a1q3i"]
@@ -3192,6 +3191,12 @@ normal_texture = ExtResource("25_hmdnr")
 diffuse_texture = ExtResource("15_bkugb")
 normal_texture = ExtResource("29_6h30p")
 
+[sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_p8qcc"]
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_if0c2"]
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DFABRIK_p8qcc")
+
 [sub_resource type="Curve" id="Curve_4tqut"]
 _data = [Vector2(0, 0.315789), 0.0, 0.0, 0, 0, Vector2(0.157706, 1), 0.0867695, 0.0867695, 0, 0, Vector2(0.526882, 0.221711), 2.13052, 2.13052, 0, 0, Vector2(1, 0), -0.10321, 0.0, 0, 0]
 point_count = 4
@@ -3530,30 +3535,31 @@ internal_vertex_count = 22
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 visible = false
 position = Vector2(-278, 267)
+modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999993, 0.999993)
+scale = Vector2(0.999974, 0.999974)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999975, 0.999975)
+scale = Vector2(0.99992, 0.99992)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.999967, 0.999967)
+scale = Vector2(0.999923, 0.999923)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999973, 0.999973)
+scale = Vector2(0.999919, 0.999919)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999935, 0.999935)
+scale = Vector2(0.999893, 0.999893)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -3666,9 +3672,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2880.97, -547.842)
-rotation = -0.290915
-scale = Vector2(0.999843, 0.999843)
+position = Vector2(-2775.84, -630.323)
+rotation = -0.360565
+scale = Vector2(0.99963, 0.99963)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3715,9 +3721,9 @@ stream = SubResource("AudioStreamRandomizer_p1l1e")
 max_distance = 10000.0
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2886.91, -709.54)
-rotation = -0.0360966
-scale = Vector2(0.999843, 0.999843)
+position = Vector2(-2793.03, -791.181)
+rotation = -0.105747
+scale = Vector2(0.99963, 0.99963)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3726,12 +3732,11 @@ rotation = 0.830374
 scale = Vector2(1.00064, 0.99947)
 skew = 8.57115e-05
 priority = 25
+sensitivity_multiplier_on_sneeze = 0.8
+sensitivity_decay_seconds = 45.0
 tickle_wait_seconds = 5.0
 burn_wait_seconds = 30.0
 burn_decay_seconds = 120.0
-sensitivity_decay_seconds = 45.0
-burn_decay_on_sneeze_seconds = 8.0
-sensitivity_multiplier_on_sneeze = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoseRemote/NoseOuter"]
 position = Vector2(4.99883, -16.5555)
@@ -3797,9 +3802,9 @@ unique_name_in_owner = true
 position = Vector2(-615, 205)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2252.63, -1030.25)
-rotation = -0.0360966
-scale = Vector2(0.999843, 0.999843)
+position = Vector2(-2182.73, -1155.18)
+rotation = -0.105747
+scale = Vector2(0.99963, 0.99963)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -3807,44 +3812,39 @@ position = Vector2(-305.597, -530.392)
 rotation = -0.987856
 gizmo_extents = 119.6
 
-[node name="Insertion" type="Node2D" parent="HeadRemote"]
+[node name="Nose Insertion" type="Node2D" parent="HeadRemote"]
 position = Vector2(-645.549, 297.654)
 
-[node name="InsertMask" type="Polygon2D" parent="HeadRemote/Insertion"]
+[node name="NoseInsertDetector" type="Area2D" parent="HeadRemote/Nose Insertion" node_paths=PackedStringArray("insert_mask")]
+script = ExtResource("84_n5npt")
+insert_mask = NodePath("InsertMask")
+
+[node name="InsertMask" type="Polygon2D" parent="HeadRemote/Nose Insertion/NoseInsertDetector"]
 unique_name_in_owner = true
 modulate = Color(0, 1, 0, 1)
 show_behind_parent = true
 clip_children = 1
-position = Vector2(-25.0976, 7.01343)
+position = Vector2(-25.0977, 7.01343)
+scale = Vector2(1, 1)
 polygon = PackedVector2Array(30.5437, -38.3885, 39.9248, -40.252, 53.0732, -38.4215, 63.4453, -33.6736, 67.676, -29.6969, 68.0112, -26.7708, 66.8406, -16.5967, 64.926, -10.6819, 56.0903, -4.18591, 36.8638, 5.88379, 19.4915, 14.5307, 7.66162, 26.5029, -2.35382, 44.6189, 39.6998, 207.768, 145.957, 609.342, -572.075, 657.102, -786.141, 671.341, -797.244, -492.512, 181.038, -476.059, 39.1503, -192.503, 10.0142, -44.1392)
 
-[node name="Detector" type="Area2D" parent="HeadRemote/Insertion"]
-script = ExtResource("84_n5npt")
-
-[node name="TestClipSprite" type="Sprite2D" parent="HeadRemote/Insertion/Detector"]
-visible = false
-position = Vector2(241.958, 58.1443)
-rotation = 1.68729
-texture = ExtResource("32_uvdvn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRemote/Insertion/Detector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRemote/Nose Insertion/NoseInsertDetector"]
 position = Vector2(308.881, -63.0285)
 rotation = 1.26522
 shape = SubResource("CapsuleShape2D_wkx0m")
 
-[node name="NoseCollision" type="AnimatableBody2D" parent="HeadRemote/Insertion"]
-visible = false
+[node name="NoseCollision" type="AnimatableBody2D" parent="HeadRemote/Nose Insertion"]
 position = Vector2(645.549, -297.654)
 collision_layer = 2
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_m1w2i")
 sync_to_physics = false
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="HeadRemote/Insertion/NoseCollision"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="HeadRemote/Nose Insertion/NoseCollision"]
 position = Vector2(-1.05129, -2.10228)
 polygon = PackedVector2Array(-485.181, 287.728, -328.372, 257.392, -169.684, 220.999, -3.98425, 241.221, -20.8102, 13.2195, 206.214, 96.4484, 111.178, 373.949, -359.818, 426.629, -600.561, 475.272, -711.256, 444.805, -625.911, 324.072)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HeadRemote/Insertion/NoseCollision"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HeadRemote/Nose Insertion/NoseCollision"]
 polygon = PackedVector2Array(-703.753, 228.186, -626.41, 251.422, -341.364, 184.982, -205.294, 138.328, -83.2129, 104.93, 50.4851, 247.695, 187.862, 177.741, 150.335, -12.207, -47.6813, -38.5548, -260.296, -11.8307, -443.376, 157.105)
 
 [node name="HeadCollisionTools" type="AnimatableBody2D" parent="HeadRemote"]
@@ -3875,11 +3875,10 @@ skew = 8.57115e-05
 collision_layer = 128
 collision_mask = 128
 priority = 25
+sensitivity_multiplier_on_sneeze = 0.8
+sensitivity_decay_seconds = 360.0
 tickle_decay_seconds = 60.0
 burn_decay_seconds = 200.0
-sensitivity_decay_seconds = 360.0
-burn_decay_on_sneeze_seconds = 15.0
-sensitivity_multiplier_on_sneeze = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRemote/NoseInner"]
 position = Vector2(38.4302, -17.2829)

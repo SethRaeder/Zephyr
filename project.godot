@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Zephyr"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3")
 boot_splash/bg_color=Color(0.298039, 0.298039, 0.298039, 1)
 boot_splash/show_image=false
@@ -32,12 +32,12 @@ movie_writer/movie_file="E:/Godot/Projects/Missile Command/Render.avi"
 
 [global_group]
 
-CharacterDebug=""
-ToolDebug=""
 wind=""
 nose=""
 lungs=""
 tool_particles=""
+character_debug=""
+tool_debug=""
 
 [input]
 
@@ -56,6 +56,14 @@ release={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(163, 22),"global_position":Vector2(167, 63),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="General"
+2d_physics/layer_2="Nose Internals Physics Collision"
+2d_physics/layer_4="Nose Outer Areas"
+2d_physics/layer_8="Nose Internals Areas"
+2d_physics/layer_9="Particle Collision"
 
 [physics]
 

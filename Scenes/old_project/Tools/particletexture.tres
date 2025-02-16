@@ -1,7 +1,0 @@
-[gd_resource type="CanvasTexture" load_steps=2 format=3 uid="uid://b52cbp267tjla"]
-
-[ext_resource type="Texture2D" uid="uid://dss6ykenrvo7f" path="res://addons/kenney_particle_pack/smoke_08.png" id="1_yxak4"]
-
-[resource]
-diffuse_texture = ExtResource("1_yxak4")
-texture_repeat = 2

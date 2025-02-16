@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1gmqyj0iio0h"]
-
-[ext_resource type="Script" path="res://Scenes/old_project/SneezeManager.gd" id="1_17ttu"]
-
-[node name="SneezeManager" type="Node2D"]
-script = ExtResource("1_17ttu")
-
-[node name="stateLockoutTimer" type="Timer" parent="."]
-one_shot = true

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ch0l0toylwvv6" path="res://Scenes/Tools/Particles/chhinkni_particle.tscn" id="7_dd1vu"]
 [ext_resource type="PackedScene" uid="uid://cgxtaj4vrici" path="res://Scenes/Tools/Chhinkni/chhinkni_cap.tscn" id="7_h4o4n"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="8_pfxgb"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="9_cm045"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="9_cm045"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h45xq"]
 radius = 6.0

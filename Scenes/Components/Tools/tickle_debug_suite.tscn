@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_debug_suite.gd" id="1_rk5jx"]
 
-[node name="TickleDebugSuite" type="Control" groups=["ToolDebug"]]
+[node name="TickleDebugSuite" type="Control" groups=["tool_debug"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -6.0
@@ -19,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TickleIntensityBar" type="ProgressBar" parent="." groups=["ToolDebug"]]
+[node name="TickleIntensityBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 0.168627, 0, 1)
 layout_mode = 0
@@ -32,7 +32,7 @@ value = 1.0
 fill_mode = 3
 show_percentage = false
 
-[node name="TickleDurabilityBar" type="ProgressBar" parent="." groups=["ToolDebug"]]
+[node name="TickleDurabilityBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 modulate = Color(0, 1, 0.560784, 1)
 layout_mode = 0
