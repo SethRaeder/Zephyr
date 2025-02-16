@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ghdh1u5xhvbk"
+path="res://.godot/imported/BigSneeze-4.wav-4a56416b8a880ff427d624f6a5247e53.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Sneeze/20/BigSneeze-4.wav"
+dest_files=["res://.godot/imported/BigSneeze-4.wav-4a56416b8a880ff427d624f6a5247e53.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

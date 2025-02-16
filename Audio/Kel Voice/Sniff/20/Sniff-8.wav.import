@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctkfcp0wnh7u5"
+path="res://.godot/imported/Sniff-8.wav-aa6f2fd06e0a72855f46a86bfe62ac5c.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Sniff/20/Sniff-8.wav"
+dest_files=["res://.godot/imported/Sniff-8.wav-aa6f2fd06e0a72855f46a86bfe62ac5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
