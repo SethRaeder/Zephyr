@@ -11,11 +11,12 @@ func _ready() -> void:
 	if get_parent() is not NoseTriggerZone:
 		queue_free()
 	else:
+		await owner.ready
 		parent = get_parent()
 		tickle_bar.max_value = parent.tickle.max_value
 		burn_bar.max_value = parent.burn.max_value
 		sensitivity_bar.max_value = parent.sensitivity.max_value
-
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	tickle_bar.value = parent.tickle.current_value

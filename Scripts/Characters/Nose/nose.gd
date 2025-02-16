@@ -1,10 +1,11 @@
 extends Area2D
 class_name NoseTriggerZone
 
-#Bounded values for the three main parameters in the nose
-var tickle := CustomBoundedValue.new("Tickle",0.0,50.0,0.0)
-var burn := CustomBoundedValue.new("Burn",0.0,30.0,0.0)
-var sensitivity := CustomBoundedValue.new("Sensitivity",0.0,5.0,1.0)
+@export_category("General Stats")
+@export var sneeze_trigger_amount : float = 1.0
+@export var tickle_max : float = 50.0
+@export var burn_max : float = 30.0
+@export var sensitivity_max : float = 5.0
 
 @export_category("Sensitivity")
 ##General idle sensitivity of the nose
@@ -38,11 +39,16 @@ var sensitivity := CustomBoundedValue.new("Sensitivity",0.0,5.0,1.0)
 @onready var tickle_decay_timer: Timer = %TickleDecayTimer
 @onready var burn_decay_timer: Timer = %BurnDecayTimer
 
-@onready var tickle_decay = -tickle.max_value / tickle_decay_seconds
-@onready var burn_decay = -burn.max_value / burn_decay_seconds
+#Bounded values for the three main parameters in the nose
+@onready var tickle := CustomBoundedValue.new("Tickle",0.0, tickle_max, 0.0)
+@onready var burn := CustomBoundedValue.new("Burn",0.0, burn_max, 0.0)
+@onready var sensitivity := CustomBoundedValue.new("Sensitivity",0.0, sensitivity_max, 1.0)
+
+@onready var tickle_decay = tickle.max_value / tickle_decay_seconds
+@onready var burn_decay = burn.max_value / burn_decay_seconds
 @onready var sensitivity_decay = sensitivity.max_value / sensitivity_decay_seconds
 
-signal sneeze_trigger
+signal sneeze_trigger(amount : float)
 signal on_allergy_damage(damage_amount, allergy_type)
 
 # Called when the node enters the scene tree for the first time.
@@ -77,7 +83,7 @@ func timer_timeout():
 	
 	#print("<NOSE.GD> Sneeze chance: ",sneeze_chance, " Sensitivity: ",sensitivity.current_value, " Tickle: ",tickle.current_value, " Burn: ",burn.current_value)
 	if randf()*100.0 < sneeze_chance:
-		sneeze_trigger.emit()
+		sneeze_trigger.emit(sneeze_trigger_amount)
 		#print("Trigger Sneeze")
 	#tickle_report.emit(tickle.get_percent())
 	#burn_report.emit(burn.get_percent())
@@ -85,8 +91,8 @@ func timer_timeout():
 
 func on_sneeze():
 	print("<NOSE> On Sneeze")
-	tickle.add_value(tickle_decay * tickle_decay_on_sneeze_seconds)
-	burn.add_value(burn_decay * tickle_decay_on_sneeze_seconds)
+	tickle.add_value(-tickle_decay * tickle_decay_on_sneeze_seconds)
+	burn.add_value(-burn_decay * tickle_decay_on_sneeze_seconds)
 	sensitivity.current_value = sensitivity.current_value * sensitivity_multiplier_on_sneeze
 
 func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource):

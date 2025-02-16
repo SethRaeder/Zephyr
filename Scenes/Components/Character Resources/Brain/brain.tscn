@@ -14,7 +14,7 @@ point_count = 2
 _data = [Vector2(0, 0), 0.0, 0.159536, 0, 0, Vector2(0.75, 0.296512), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="Brain" type="Node2D"]
+[node name="Brain" type="Node"]
 script = ExtResource("1_15ufg")
 hitch_curve = SubResource("Curve_uegr1")
 buildup_curve = SubResource("Curve_mqb0w")

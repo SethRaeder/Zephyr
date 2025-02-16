@@ -1,35 +1,50 @@
-extends Node2D
+extends Node
 class_name Brain
 
+@export_category("Node References")
 @export var lungs: Lungs
 @export var voice: VoiceBox
 
+@export_category("Curves")
+##Define the chances of hitch animation playing depending on sneeze level
 @export var hitch_curve : Curve
+##Define the chances of buildup animation playing depending on sneeze level
 @export var buildup_curve : Curve
+##Define the chances of sneeze animation playing depending on sneeze level
 @export var sneeze_curve : Curve
+
+##How many sneeze triggers is needed to reach max sneeze level?
+@export var sneeze_trigger_target : float = 20.0
+##How many seconds to decay sneeze trigger to zero?
+@export var sneeze_trigger_decay_seconds : float = 20.0
+##How many sneeze triggers is needed to reach max tickle level?
+@export var tickle_max := 8.0
+##How many sneeze triggers to remove on sneeze
+@export var sneeze_trigger_expel : float = 5
+##How often to check for animation transitions
+@export var update_timer_base_time := 0.25
+##Variance in the update timer, from 0 seconds to value seconds
+@export var update_timer_max_variance := 1.0
+
+@export_category("Fits")
+##How likely to have a fit? Max 1.0
+@export var fit_probability : float = 0.3
+##How many seconds should a fit last? From X to Y seconds
+@export var fit_window_seconds : Vector2 = Vector2(5.0, 20.0)
+##How much to boost sneeze level while in a fit?
+@export var fit_sneeze_bonus : float = 2.0
+
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var update_timer: Timer = $UpdateTimer
 @onready var fit_timer: Timer = $FitTimer
-
+@onready var sneeze_trigger_count := CustomBoundedValue.new("sneeze_trigger_count",0.0,sneeze_trigger_target,0.0)
+@onready var sneeze_decay_rate : float = -sneeze_trigger_target / sneeze_trigger_decay_seconds
 var idletickleblend := 0.0
 
 var hitch := false
 var buildup := false
 var sneeze := false
 var sigh := false
-
-var sneeze_trigger_count := 0.0
-@export var sneeze_trigger_target : float = 20.0
-@export var tickle_max := 8.0
-
-@export var sneeze_trigger_expel : float = 5
-
-@export var update_timer_base_time := 0.25
-@export var update_timer_max_variance := 1.0
-
-@export var fit_probability : float = 0.3
-@export var multiple_sneeze_window_seconds : Vector2 = Vector2(5.0, 20.0)
-@export var sneeze_multiples_bonus : float = 2.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -72,27 +87,27 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	idletickleblend = lerpf(idletickleblend, clamp(float(sneeze_trigger_count * (1.0 if fit_timer.is_stopped() else sneeze_multiples_bonus) /tickle_max), 0.0, 1.0), delta)
+	idletickleblend = lerpf(idletickleblend, clamp(float(sneeze_trigger_count.current_value * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) / tickle_max), 0.0, 1.0), delta)
 	
-	sneeze_trigger_count = clamp(sneeze_trigger_count - delta * 0.2,0.0,sneeze_trigger_target)
-	animation_tree.set("parameters/SneezeMachine/IdleTickle/blend_position",idletickleblend)
+	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
+	animation_tree.set("parameters/SneezeMachine/IdleTickle/blend_position", idletickleblend)
 
 func timer_timeout():
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
 	#print("<Brain> IdleTickleBlend: ",idletickleblend)
-	var sneeze_percent = clampf(sneeze_trigger_count/sneeze_trigger_target,0.0,1.0)
+	var sneeze_percent = sneeze_trigger_count.get_percent()
 	if randf() < hitch_curve.sample(sneeze_percent):
 		if not lungs.is_full():
 			hitch = true
 		else:
 			sigh = true
-	if randf() < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else sneeze_multiples_bonus):
+	if randf() < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
 		if not lungs.is_full():
 			buildup = true
 		else:
 			sigh = true
-	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else sneeze_multiples_bonus):
+	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
 		sneeze = true
 	
 	animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
@@ -113,12 +128,12 @@ func on_hitch():
 	
 func on_sneeze():
 	var sneeze_size = 1.0
-	sneeze_trigger_count = clampf(sneeze_trigger_count - (sneeze_trigger_expel * sneeze_size), 0, sneeze_trigger_target);
+	sneeze_trigger_count.add_value(-sneeze_trigger_expel * sneeze_size)
 	lungs.set_breath_state(lungs.BREATH_STATE.SNEEZE)
 	
 	if randf() < fit_probability:
 		print("Fit started")
-		fit_timer.start(randf_range(multiple_sneeze_window_seconds.x, multiple_sneeze_window_seconds.y))
+		fit_timer.start(randf_range(fit_window_seconds.x, fit_window_seconds.y))
 	
 func hold_breath():
 	lungs.set_breath_state(lungs.BREATH_STATE.HOLD)
@@ -126,8 +141,8 @@ func hold_breath():
 func breathe_out():
 	lungs.set_breath_state(lungs.BREATH_STATE.OUT)
 	
-func sneeze_trigger():
-	sneeze_trigger_count += 1
+func sneeze_trigger(value):
+	sneeze_trigger_count.add_value(value)
 	
 func want_breathe(weight : float):
 	if randf() < weight:

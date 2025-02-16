@@ -71,12 +71,11 @@ position = Vector2(0, -22)
 script = ExtResource("5_jc6ru")
 particle_scene = ExtResource("7_h4o4n")
 release_on_jerk = true
-jerk_accelerate = true
-jerk_threshold = 300.0
+jerk_threshold = 3000.0
 release_on_speed = false
 particle_spawn_rotation_max = 0.0
 particle_size_var_range = Vector2(1, 1)
-particle_max_count = 10
+particle_max_count = 20
 particle_spawn_lifetime_limit = 1
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

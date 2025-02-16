@@ -14,4 +14,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	sneeze_progress_bar.value = parent.sneeze_trigger_count
+	sneeze_progress_bar.value = parent.sneeze_trigger_count.current_value
