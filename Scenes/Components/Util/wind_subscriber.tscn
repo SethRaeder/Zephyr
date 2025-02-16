@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cs183ehlcr6t3"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="1_oif3n"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="1_oif3n"]
+
 
 [node name="WindSubscriber" type="Marker2D" groups=["wind"]]
 position = Vector2(-2577.35, -2203.15)

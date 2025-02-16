@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ch0l0toylwvv6" path="res://Scenes/Tools/Particles/chhinkni_particle.tscn" id="7_dd1vu"]
 [ext_resource type="PackedScene" uid="uid://cgxtaj4vrici" path="res://Scenes/Tools/Chhinkni/chhinkni_cap.tscn" id="7_h4o4n"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="8_pfxgb"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="9_cm045"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="9_cm045"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h45xq"]
 radius = 6.0
@@ -71,12 +71,11 @@ position = Vector2(0, -22)
 script = ExtResource("5_jc6ru")
 particle_scene = ExtResource("7_h4o4n")
 release_on_jerk = true
-jerk_accelerate = true
-jerk_threshold = 300.0
+jerk_threshold = 3000.0
 release_on_speed = false
 particle_spawn_rotation_max = 0.0
 particle_size_var_range = Vector2(1, 1)
-particle_max_count = 10
+particle_max_count = 20
 particle_spawn_lifetime_limit = 1
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

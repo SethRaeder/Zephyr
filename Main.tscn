@@ -1,0 +1,203 @@
+[gd_scene load_steps=20 format=3 uid="uid://bo6gnqhjsl6w5"]
+
+[ext_resource type="Script" path="res://center_on_screen.gd" id="1_kpnf8"]
+[ext_resource type="Texture2D" uid="uid://dg2likmstw620" path="res://icon.svg" id="1_pwu8x"]
+[ext_resource type="Texture2D" uid="uid://c3iehehdye5rj" path="res://images/Background/Cave/dergsnzbg-kel-7.png" id="1_t6vys"]
+[ext_resource type="Texture2D" uid="uid://blawpu7xr15j0" path="res://images/Background/Cave/dergsnzbg-kel-6.png" id="2_cx2mc"]
+[ext_resource type="Texture2D" uid="uid://c63i37txalq4a" path="res://images/Background/Cave/dergsnzbg-kel-5.png" id="3_7lk0x"]
+[ext_resource type="Script" path="res://Scenes/tool_trash.gd" id="3_bh12i"]
+[ext_resource type="PackedScene" uid="uid://boufv7sb4j0ec" path="res://Scenes/Characters/Kel/kel_rig.tscn" id="4_l8tuh"]
+[ext_resource type="Texture2D" uid="uid://ca7ptvmgjqn1n" path="res://images/Background/Cave/dergsnzbg-kel-4.png" id="4_w3mxs"]
+[ext_resource type="PackedScene" uid="uid://t0tr1cifnv7m" path="res://Scenes/UI/Toolbox.tscn" id="5_5jvun"]
+[ext_resource type="Texture2D" uid="uid://b5l35j13ruljk" path="res://images/Background/Cave/dergsnzbg-kel-3.png" id="5_gi44c"]
+[ext_resource type="Script" path="res://Scenes/debug_toggle.gd" id="6_qhpe8"]
+[ext_resource type="Script" path="res://Scenes/Components/Util/parallax_component.gd" id="6_w6b3a"]
+[ext_resource type="Texture2D" uid="uid://dn16xu422guo3" path="res://images/Background/Cave/dergsnzbg-kel-2.png" id="7_v421o"]
+[ext_resource type="Texture2D" uid="uid://vvppa027u41q" path="res://images/Background/Cave/dergsnzbg-kel-1.png" id="8_ysigt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xl3dr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bxoe6"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7hekf"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iwv5l"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxsi8"]
+size = Vector2(66, 63.5)
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+z_index = -10
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_kpnf8")
+
+[node name="Layer6" type="Parallax2D" parent="Background"]
+z_index = -10
+scroll_scale = Vector2(15, 15)
+follow_viewport = false
+script = ExtResource("6_w6b3a")
+
+[node name="Dergsnzbg-kel-7" type="Sprite2D" parent="Background/Layer6"]
+texture = ExtResource("1_t6vys")
+
+[node name="Layer5" type="Parallax2D" parent="Background"]
+z_index = -10
+scroll_scale = Vector2(20, 20)
+follow_viewport = false
+script = ExtResource("6_w6b3a")
+
+[node name="Dergsnzbg-kel-6" type="Sprite2D" parent="Background/Layer5"]
+texture = ExtResource("2_cx2mc")
+
+[node name="Layer4" type="Parallax2D" parent="Background"]
+z_index = -10
+scroll_scale = Vector2(30, 30)
+follow_viewport = false
+script = ExtResource("6_w6b3a")
+
+[node name="Dergsnzbg-kel-5" type="Sprite2D" parent="Background/Layer4"]
+texture = ExtResource("3_7lk0x")
+
+[node name="Layer3" type="Parallax2D" parent="Background"]
+scroll_scale = Vector2(50, 50)
+follow_viewport = false
+script = ExtResource("6_w6b3a")
+
+[node name="Dergsnzbg-kel-4" type="Sprite2D" parent="Background/Layer3"]
+z_index = -1
+texture = ExtResource("4_w3mxs")
+
+[node name="Character" type="Node2D" parent="Background/Layer3"]
+z_index = -1
+position = Vector2(1170, 402)
+scale = Vector2(0.4, 0.4)
+
+[node name="Kel_Rig" parent="Background/Layer3/Character" instance=ExtResource("4_l8tuh")]
+position = Vector2(0, 0)
+scale = Vector2(1, 1)
+
+[node name="PointLight2D" type="DirectionalLight2D" parent="Background/Layer3/Character"]
+visible = false
+position = Vector2(-6750, -3135)
+scale = Vector2(5, 5)
+energy = 4.87
+
+[node name="Layer2" type="Parallax2D" parent="Background"]
+scroll_scale = Vector2(75, 75)
+follow_viewport = false
+script = ExtResource("6_w6b3a")
+
+[node name="Dergsnzbg-kel-3" type="Sprite2D" parent="Background/Layer2"]
+texture = ExtResource("5_gi44c")
+
+[node name="Layer1" type="Parallax2D" parent="Background"]
+scroll_scale = Vector2(100, 100)
+follow_viewport = false
+script = ExtResource("6_w6b3a")
+
+[node name="Dergsnzbg-kel-3" type="Sprite2D" parent="Background/Layer1"]
+texture = ExtResource("7_v421o")
+flip_h = true
+flip_v = true
+
+[node name="Dergsnzbg-kel-2" type="Sprite2D" parent="Background/Layer1"]
+position = Vector2(-95.1219, 78.0488)
+scale = Vector2(0.93675, 1.09074)
+texture = ExtResource("7_v421o")
+
+[node name="Dergsnzbg-kel-4" type="Sprite2D" parent="Background/Layer1"]
+position = Vector2(221.951, 656.098)
+rotation = -1.55138
+scale = Vector2(1.23962, 1.10819)
+texture = ExtResource("8_ysigt")
+flip_h = true
+
+[node name="Dergsnzbg-kel-1" type="Sprite2D" parent="Background/Layer1"]
+position = Vector2(-65.8537, -102.439)
+rotation = -0.102962
+texture = ExtResource("8_ysigt")
+
+[node name="Foreground" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Foreground"]
+visible = false
+position = Vector2(250, 519)
+texture = ExtResource("1_pwu8x")
+
+[node name="World Bounds" type="StaticBody2D" parent="."]
+collision_layer = 257
+collision_mask = 257
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Bounds"]
+position = Vector2(404, 594)
+shape = SubResource("WorldBoundaryShape2D_xl3dr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Bounds"]
+position = Vector2(393, -105)
+shape = SubResource("WorldBoundaryShape2D_bxoe6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Bounds"]
+position = Vector2(6, 288)
+shape = SubResource("WorldBoundaryShape2D_7hekf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Bounds"]
+position = Vector2(795, 263)
+shape = SubResource("WorldBoundaryShape2D_iwv5l")
+
+[node name="Tools" type="Node2D" parent="."]
+z_index = 10
+position = Vector2(219, 557)
+
+[node name="UI Root" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 800.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="Toolbox" parent="UI Root" node_paths=PackedStringArray("tool_spawn_node") instance=ExtResource("5_5jvun")]
+layout_mode = 1
+tool_spawn_node = NodePath("../../Tools")
+
+[node name="Tool Trash" type="Area2D" parent="UI Root/Toolbox"]
+position = Vector2(31, -157.665)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_bh12i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI Root/Toolbox/Tool Trash"]
+position = Vector2(4, 2)
+shape = SubResource("RectangleShape2D_sxsi8")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI Root/Toolbox/Tool Trash"]
+position = Vector2(-1, 0)
+texture = ExtResource("1_pwu8x")
+
+[node name="Label" type="Label" parent="UI Root/Toolbox/Tool Trash"]
+modulate = Color(1, 0, 0, 1)
+offset_left = -52.0
+offset_top = -64.0
+offset_right = -1.0
+offset_bottom = -41.0
+scale = Vector2(2.0677, 2.0677)
+text = "TRASH"
+
+[node name="DebugToggle" type="CheckButton" parent="UI Root"]
+layout_mode = 0
+offset_right = 44.0
+offset_bottom = 24.0
+text = "Debug"
+script = ExtResource("6_qhpe8")
+
+[connection signal="toggled" from="UI Root/DebugToggle" to="UI Root/DebugToggle" method="_on_toggled"]

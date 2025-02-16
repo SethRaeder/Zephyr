@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://03yub1gspvk7"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/Brain/brain_debug_suite.gd" id="1_qhhk0"]
+
+[node name="BrainDebugSuite" type="Control" groups=["character_debug"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.76759
+offset_top = -14.5676
+offset_right = -794.203
+offset_bottom = -583.683
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhhk0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SneezeProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0.666667, 1, 1)
+layout_mode = 0
+offset_left = 3.32977
+offset_top = 2.49462
+offset_right = 7.32977
+offset_bottom = 29.4946
+max_value = 1.0
+value = 0.25
+fill_mode = 3
+show_percentage = false

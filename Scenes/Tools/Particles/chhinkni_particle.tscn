@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ch0l0toylwvv6"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_w3a1n"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_v6hoa"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="2_v6hoa"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_kmuw6"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_v4n3a"]
 [ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://Resources/Allergy/chhinkni.tres" id="5_lspgf"]

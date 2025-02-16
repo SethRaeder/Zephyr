@@ -1,13 +1,8 @@
-extends Node2D
-
-
-var start_position
-@export var move_reducer = 100.0
-
-func _ready() -> void:
-	start_position = get_parent().position
+extends Parallax2D
+class_name ParallaxMouseMove
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var offset = (get_global_mouse_position() * -1 / move_reducer)
-	get_parent().position = lerp(get_parent().position, start_position + offset, 0.05)
+	var screenDimensions = Vector2(get_viewport().size)
+	var desired_pos = (get_global_mouse_position() - (screenDimensions/2))/screenDimensions * scroll_scale
+	scroll_offset = lerp(scroll_offset, desired_pos, delta * 2.0)

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://w765tarsr8k1" path="res://Scenes/Components/Tools/tickle_component.tscn" id="7_fmhua"]
 [ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="8_fbqid"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="10_3w63j"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="11_3sci2"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="11_3sci2"]
 
 [sub_resource type="Curve" id="Curve_yfunc"]
 _data = [Vector2(0, 0), 0.0, 3.08312, 0, 0, Vector2(1, 1), 0.0327444, 0.0, 0, 0]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bt4fb5bk0bgkf"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_sgk6t"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="2_exnls"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="2_exnls"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_s5p63"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_xls0g"]
 [ext_resource type="Texture2D" uid="uid://dn7tdstuhkyq6" path="res://addons/kenney_particle_pack/smoke_01.png" id="5_tpf4n"]

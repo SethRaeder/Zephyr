@@ -17,7 +17,7 @@ enum DAMAGE_TYPES {TICKLE, BURN, ALLERGY}
 var total_tickle_damage : float = 0
 
 ## Multiplier to the intensity as damage limit is used up.
-@export var tickle_damage_curve : Curve = preload("res://Scenes/Components/Tools/default_tickle_damage_curve.tres")
+@export var tickle_damage_curve : Curve = preload("res://Resources/Curves/default_tickle_damage_curve.tres")
 
 @export_category("Velocity Settings")
 @export var use_velocity : bool

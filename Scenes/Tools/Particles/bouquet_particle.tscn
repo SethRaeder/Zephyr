@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_43hvu"]
 [ext_resource type="Texture2D" uid="uid://bjo5qdfls40l1" path="res://images/inducing tools/Revised/Bouquet Petal.PNG" id="2_l8rt2"]
-[ext_resource type="Script" path="res://Scenes/Characters/Kel/wind_subscriber.gd" id="3_eyw80"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="3_eyw80"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_p6mro"]
 [ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="5_naktk"]
 [ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="6_ka1wf"]

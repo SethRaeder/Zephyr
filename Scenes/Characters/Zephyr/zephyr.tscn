@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cdodetbrfqnnn" path="res://images/zephyr sprites/eye tickle.svg" id="27_briog"]
 [ext_resource type="Texture2D" uid="uid://brnt52c4wkob2" path="res://images/zephyr sprites/eye mask.svg" id="28_nidi1"]
 [ext_resource type="Script" path="res://Scenes/old_project/NoseHitbox.gd" id="29_3yldj"]
-[ext_resource type="Texture2D" uid="uid://dtwhiuj1cuihp" path="res://Scenes/old_project/LightFalloff.tres" id="30_1l52w"]
+[ext_resource type="Texture2D" path="res://Scenes/old_project/LightFalloff.tres" id="30_1l52w"]
 [ext_resource type="Script" path="res://Scenes/old_project/ParticleManager.gd" id="31_gssw4"]
 [ext_resource type="Texture2D" uid="uid://bo46md3clcbjd" path="res://addons/kenney_particle_pack/trace_05.png" id="32_m7de5"]
 [ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="33_l4jvx"]
@@ -40,10 +40,11 @@
 [ext_resource type="Texture2D" uid="uid://bvfmnu5stdfbt" path="res://addons/kenney_particle_pack/dirt_01.png" id="36_aj5dq"]
 [ext_resource type="Texture2D" uid="uid://bbn0ir5fbtiug" path="res://addons/kenney_particle_pack/smoke_07.png" id="37_rldi1"]
 [ext_resource type="Script" path="res://Scenes/old_project/EyeTracking.gd" id="38_3mhgl"]
-[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://Scenes/Components/Character Resources/lungs.tscn" id="41_1vjbm"]
-[ext_resource type="PackedScene" uid="uid://c5miaaexyeejm" path="res://Scenes/old_project/AudioEngine.tscn" id="41_dgbjy"]
-[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/nose.tscn" id="42_tvmmh"]
-[ext_resource type="Script" path="res://Scenes/Components/Character Resources/lungs.gd" id="42_xn2tb"]
+[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://Scenes/Components/Character Resources/Lungs/lungs.tscn" id="41_1vjbm"]
+[ext_resource type="PackedScene" path="res://Scenes/old_project/AudioEngine.tscn" id="41_dgbjy"]
+[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/Nose/nose.tscn" id="42_tvmmh"]
+[ext_resource type="Script" path="res://Scripts/Characters/Lungs/lungs.gd" id="42_xn2tb"]
+
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_moy73"]
 size = Vector2(20, 20)
