@@ -13,7 +13,7 @@ func _ready() -> void:
 	default_gravity = parent.gravity_scale
 	parent.connect("input_event",on_input_event)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if grabbed:
 		var vector = Vector2.ZERO
 		var part_p = snap_factor_p * (get_global_mouse_position() - global_position)
@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		#parent.apply_central_force(vector)
 		
 
-func on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
+func on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 	if event.is_action_pressed("grab"):
 		parent.gravity_scale = 0.0
 		grabbed = true

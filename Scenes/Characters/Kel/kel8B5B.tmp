@@ -3429,12 +3429,12 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999877, 0.999877)
+scale = Vector2(0.999879, 0.999879)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999835, 0.999835)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
@@ -3444,12 +3444,12 @@ rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999833, 0.999833)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999834, 0.999834)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -3610,9 +3610,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2792.35, -617.644)
-rotation = -0.349644
-scale = Vector2(0.999217, 0.999217)
+position = Vector2(-2883.72, -544.448)
+rotation = -0.288182
+scale = Vector2(0.999223, 0.999223)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3628,15 +3628,12 @@ trail_lifetime = 1.0
 trail_sections = 2
 trail_section_subdivisions = 1
 
-[node name="Voice Box" type="Node2D" parent="MouthRemote" node_paths=PackedStringArray("Buildup", "Hitch", "Sigh", "Sneeze", "Sniff")]
+[node name="Voice Box" type="Node2D" parent="MouthRemote" node_paths=PackedStringArray("Buildup", "Sneeze")]
 unique_name_in_owner = true
 rotation = 0.336093
 script = ExtResource("2_80oa4")
 Buildup = NodePath("AudioLoaderBuildup")
-Hitch = NodePath("AudioLoaderHitch")
-Sigh = NodePath("AudioLoaderSigh")
 Sneeze = NodePath("AudioLoaderSneeze")
-Sniff = NodePath("AudioLoaderSniff")
 
 [node name="AudioLoaderBuildup" type="AudioStreamPlayer2D" parent="MouthRemote/Voice Box"]
 max_distance = 10000.0
@@ -3654,7 +3651,6 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sigh"
 
 [node name="AudioLoaderHitch" type="AudioStreamPlayer2D" parent="MouthRemote/Voice Box"]
-volume_db = 5.0
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Hitch"
@@ -3665,9 +3661,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2807.77, -778.613)
-rotation = -0.0948258
-scale = Vector2(0.999217, 0.999217)
+position = Vector2(-2889.22, -706.061)
+rotation = -0.0333642
+scale = Vector2(0.999223, 0.999223)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3698,7 +3694,6 @@ scale = Vector2(8.87, 8.87)
 [node name="ChhinkniDetector" type="Node" parent="NoseRemote/NoseOuter"]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("96_q1kil")
-decay_time_seconds = 20.0
 
 [node name="DustDetector" type="Node" parent="NoseRemote/NoseOuter"]
 script = ExtResource("95_aqq7c")
@@ -3720,9 +3715,9 @@ script = ExtResource("85_ascq3")
 lungs = NodePath("../../Lungs")
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2193.78, -1135.77)
-rotation = -0.0948258
-scale = Vector2(0.999217, 0.999217)
+position = Vector2(-2254.45, -1024.84)
+rotation = -0.0333642
+scale = Vector2(0.999223, 0.999223)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -3813,7 +3808,7 @@ scale = Vector2(7.935, 7.935)
 [node name="ChhinkniDetector" type="Node" parent="HeadRemote/NoseInner"]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("96_q1kil")
-decay_time_seconds = 20.0
+decay_time_seconds = 240.0
 
 [node name="Eye Target" type="Marker2D" parent="."]
 unique_name_in_owner = true
@@ -3828,11 +3823,8 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 lungs = NodePath("../Lungs")
 voice = NodePath("../MouthRemote/Voice Box")
-sneeze_trigger_decay_seconds = 60.0
-sneeze_trigger_expel = 15.0
+sneeze_trigger_decay_seconds = 40.0
 fit_probability = 0.25
-fit_window_seconds = Vector2(15, 45)
-fit_sneeze_bonus = 4.0
 
 [node name="BrainDebugSuite" parent="Brain" instance=ExtResource("94_kvgm2")]
 anchors_preset = 0

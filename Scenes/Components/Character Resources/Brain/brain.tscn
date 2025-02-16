@@ -7,11 +7,11 @@ _data = [Vector2(0.101415, 0), 0.0, 0.0, 0, 0, Vector2(0.400943, 0.505814), 0.00
 point_count = 3
 
 [sub_resource type="Curve" id="Curve_mqb0w"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.681604, 0.511628), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.672986, 0.597996), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_adlbt"]
-_data = [Vector2(0, 0), 0.0, 0.159536, 0, 0, Vector2(0.75, 0.296512), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.159536, 0, 0, Vector2(0.751185, 0.501742), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Brain" type="Node"]

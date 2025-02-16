@@ -11,7 +11,7 @@ enum TRACK_MODE {MOUSE, NOSE, ROLL}
 @export var mode = TRACK_MODE.MOUSE
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match(mode):
 		TRACK_MODE.MOUSE:
 			#Lerp eye target towards mouse on every frame

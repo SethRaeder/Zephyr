@@ -18,7 +18,7 @@ func _ready() -> void:
 		sensitivity_bar.max_value = parent.sensitivity.max_value
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	tickle_bar.value = parent.tickle.current_value
 	burn_bar.value = parent.burn.current_value
 	sensitivity_bar.value = parent.sensitivity.current_value

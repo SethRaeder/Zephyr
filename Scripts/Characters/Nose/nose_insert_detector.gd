@@ -11,7 +11,7 @@ func _ready() -> void:
 	connect("body_exited",on_body_exited)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for body in tracked_dict:
 		var sprite = tracked_dict[body]
 		#Move the sprite that used to belong to the body, to the current body position.

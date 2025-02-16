@@ -22,6 +22,6 @@ func _ready() -> void:
 			tickle_durability_bar.hide()
 				
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	tickle_durability_bar.value = parent.get_durability_sample()
 	tickle_intensity_bar.value = parent.get_tickle() / parent.intensity

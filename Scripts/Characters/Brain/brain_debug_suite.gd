@@ -13,5 +13,5 @@ func _ready() -> void:
 		sneeze_progress_bar.max_value = parent.sneeze_trigger_target
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	sneeze_progress_bar.value = parent.sneeze_trigger_count.current_value

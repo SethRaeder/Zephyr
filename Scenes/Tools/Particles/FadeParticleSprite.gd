@@ -17,7 +17,7 @@ func _ready() -> void:
 				max_value += child.tickle_damage_limit
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var current_value = 0
 	for child : TickleComponent in tickle_components:
 		current_value += child.total_tickle_damage

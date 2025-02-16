@@ -14,7 +14,7 @@ func _ready() -> void:
 		
 		print("Adding new streams....")
 		
-		var loader := AudioLoader.new()
+		#var loader := AudioLoader.new()
 		
 		var files_list = get_all_files(load_audio_directory)
 		

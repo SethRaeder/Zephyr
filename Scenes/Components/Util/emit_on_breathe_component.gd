@@ -17,7 +17,7 @@ func _ready() -> void:
 		if node is Lungs:
 			node.breathe_rate.connect(on_breathe)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if breath_type_match:
 		var windspeed = wind_subscriber.wind_vector.length()
 		if windspeed >= local_wind_strength_threshold:

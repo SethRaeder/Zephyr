@@ -12,7 +12,7 @@ func _ready() -> void:
 		if wind_node is WindOrigin:
 			wind_origins.append(wind_node)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var new_wind = Vector2.ZERO
 	for wind_node : WindOrigin in wind_origins:
 		new_wind += wind_node.wind_strength * global_position.direction_to(wind_node.global_position) / global_position.distance_squared_to(wind_node.global_position)

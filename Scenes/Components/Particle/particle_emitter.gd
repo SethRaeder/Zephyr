@@ -55,8 +55,8 @@ func on_move(velocity : Vector2, delta : float):
 		var jerk_speed = clampf((velocity - last_velocity).length() / delta, 0.0, jerk_speed_max)
 		#print(jerk_speed)
 		if ((delta_dot > 0 and jerk_accelerate) and (jerk_speed >= jerk_threshold)) or ((delta_dot < 0 and jerk_decelerate) and (jerk_speed >= jerk_threshold)):
-			var particle_count = int(jerk_particle_amount * randf_range(jerk_particle_variance.x,jerk_particle_variance.y))
-			for i in range(particle_count):
+			var spawn_count = int(jerk_particle_amount * randf_range(jerk_particle_variance.x,jerk_particle_variance.y))
+			for i in range(spawn_count):
 				spawn_particle()
 	if release_on_speed:
 		var current_speed = clampf(velocity.length(), 0.0, particle_spawn_max_speed)
