@@ -18,10 +18,12 @@ func _ready() -> void:
 		
 		var files_list = get_all_files(load_audio_directory)
 		
-		for file in files_list:
+		for file : String in files_list:
 			print("File : ",file)
-			if file.ends_with(".wav"):
-				var new_stream : AudioStreamWAV = loader.loadfile(file)
+			if file.ends_with(".wav.import"):
+				file = file.split(".import")[0]
+				#var new_stream : AudioStreamWAV = loader.loadfile(file)
+				var new_stream = load(file)
 				new_stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
 				stream.add_stream(-1, new_stream, 1.0)
 
