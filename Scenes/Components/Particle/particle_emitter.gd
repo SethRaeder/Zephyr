@@ -15,7 +15,7 @@ class_name ParticleEmitter
 @export_category("Use Velocity Release")
 @export var release_on_speed : bool = true
 @export var particle_spawn_max_speed : float= 2000.0
-@export var particle_spawn_velocity_curve : Curve = preload("res://default_particle_spawn_curve.tres")
+@export var particle_spawn_velocity_curve : Curve = preload("res://Resources/Curves/default_particle_spawn_curve.tres")
 
 @export_category("Particle Spawn Settings")
 @export var particle_spawn_radius : float = 10
@@ -53,7 +53,7 @@ func on_move(velocity : Vector2, delta : float):
 	if release_on_jerk:
 		var delta_dot = (last_velocity.dot(velocity))
 		var jerk_speed = clampf((velocity - last_velocity).length() / delta, 0.0, jerk_speed_max)
-		print(jerk_speed)
+		#print(jerk_speed)
 		if ((delta_dot > 0 and jerk_accelerate) and (jerk_speed >= jerk_threshold)) or ((delta_dot < 0 and jerk_decelerate) and (jerk_speed >= jerk_threshold)):
 			var particle_count = int(jerk_particle_amount * randf_range(jerk_particle_variance.x,jerk_particle_variance.y))
 			for i in range(particle_count):

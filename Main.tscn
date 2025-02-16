@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bo6gnqhjsl6w5"]
 
-[ext_resource type="PackedScene" uid="uid://boufv7sb4j0ec" path="res://Scenes/Characters/Kel/kel_rig.tscn" id="1_3ukyd"]
-[ext_resource type="Texture2D" uid="uid://dg2likmstw620" path="res://icon.svg" id="1_wvqyn"]
-[ext_resource type="PackedScene" uid="uid://cagkbmu6juckb" path="res://Scenes/Components/Util/ParallaxComponent.tscn" id="2_i2ga4"]
-[ext_resource type="Script" path="res://Scenes/tool_trash.gd" id="3_uebrm"]
-[ext_resource type="Script" path="res://Scenes/debug_toggle.gd" id="6_32d7m"]
-[ext_resource type="PackedScene" uid="uid://t0tr1cifnv7m" path="res://Scenes/UI/Toolbox.tscn" id="11_6iqjo"]
+[ext_resource type="Texture2D" uid="uid://dg2likmstw620" path="res://icon.svg" id="1_pwu8x"]
+[ext_resource type="PackedScene" uid="uid://cagkbmu6juckb" path="res://Scenes/Components/Util/ParallaxComponent.tscn" id="2_j1fmp"]
+[ext_resource type="Script" path="res://Scenes/tool_trash.gd" id="3_bh12i"]
+[ext_resource type="PackedScene" uid="uid://boufv7sb4j0ec" path="res://Scenes/Characters/Kel/kel_rig.tscn" id="4_l8tuh"]
+[ext_resource type="PackedScene" uid="uid://t0tr1cifnv7m" path="res://Scenes/UI/Toolbox.tscn" id="5_5jvun"]
+[ext_resource type="Script" path="res://Scenes/debug_toggle.gd" id="6_qhpe8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxsi8"]
 size = Vector2(114, 113)
@@ -29,14 +29,14 @@ normal = Vector2(-1, 0)
 visible = false
 position = Vector2(88, 507)
 scale = Vector2(0.623467, 0.623467)
-texture = ExtResource("1_wvqyn")
+texture = ExtResource("1_pwu8x")
 
-[node name="ParallaxComponent" parent="Background" instance=ExtResource("2_i2ga4")]
+[node name="ParallaxComponent" parent="Background" instance=ExtResource("2_j1fmp")]
 move_reducer = 200.0
 
 [node name="Tool Trash" type="Area2D" parent="Background"]
 position = Vector2(595, 546)
-script = ExtResource("3_uebrm")
+script = ExtResource("3_bh12i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Tool Trash"]
 position = Vector2(1, -1)
@@ -45,7 +45,7 @@ shape = SubResource("RectangleShape2D_sxsi8")
 [node name="Sprite2D" type="Sprite2D" parent="Background/Tool Trash"]
 modulate = Color(1, 1, 1, 0.192157)
 position = Vector2(-1, 0)
-texture = ExtResource("1_wvqyn")
+texture = ExtResource("1_pwu8x")
 
 [node name="Label" type="Label" parent="Background/Tool Trash"]
 offset_left = -26.0
@@ -58,11 +58,11 @@ text = "TRASH"
 position = Vector2(840, 483)
 scale = Vector2(0.2, 0.2)
 
-[node name="Kel_Rig" parent="Character" instance=ExtResource("1_3ukyd")]
+[node name="Kel_Rig" parent="Character" instance=ExtResource("4_l8tuh")]
 position = Vector2(0, 0)
 scale = Vector2(1, 1)
 
-[node name="ParallaxComponent" parent="Character" instance=ExtResource("2_i2ga4")]
+[node name="ParallaxComponent" parent="Character" instance=ExtResource("2_j1fmp")]
 
 [node name="PointLight2D" type="DirectionalLight2D" parent="Character"]
 visible = false
@@ -72,13 +72,13 @@ energy = 4.87
 
 [node name="Foreground" type="Node2D" parent="."]
 
-[node name="ParallaxComponent" parent="Foreground" instance=ExtResource("2_i2ga4")]
+[node name="ParallaxComponent" parent="Foreground" instance=ExtResource("2_j1fmp")]
 move_reducer = 30.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="Foreground"]
 visible = false
 position = Vector2(250, 519)
-texture = ExtResource("1_wvqyn")
+texture = ExtResource("1_pwu8x")
 
 [node name="World Bounds" type="StaticBody2D" parent="."]
 collision_layer = 257
@@ -118,7 +118,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 
-[node name="Toolbox" parent="UI Root" node_paths=PackedStringArray("tool_spawn_node") instance=ExtResource("11_6iqjo")]
+[node name="Toolbox" parent="UI Root" node_paths=PackedStringArray("tool_spawn_node") instance=ExtResource("5_5jvun")]
 layout_mode = 1
 tool_spawn_node = NodePath("../../Tools")
 
@@ -127,6 +127,6 @@ layout_mode = 0
 offset_right = 44.0
 offset_bottom = 24.0
 text = "Debug"
-script = ExtResource("6_32d7m")
+script = ExtResource("6_qhpe8")
 
 [connection signal="toggled" from="UI Root/DebugToggle" to="UI Root/DebugToggle" method="_on_toggled"]
