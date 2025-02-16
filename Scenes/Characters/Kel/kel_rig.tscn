@@ -3425,27 +3425,27 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999876, 0.999876)
+scale = Vector2(0.999878, 0.999878)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999838, 0.999838)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999835, 0.999835)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999837, 0.999837)
+scale = Vector2(0.999834, 0.999834)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -3558,8 +3558,8 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2891.07, -538.024)
-rotation = -0.28293
+position = Vector2(-2798.01, -613.437)
+rotation = -0.346024
 scale = Vector2(0.999223, 0.999223)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
@@ -3576,15 +3576,12 @@ trail_lifetime = 1.0
 trail_sections = 2
 trail_section_subdivisions = 1
 
-[node name="Voice Box" type="Node2D" parent="MouthRemote" node_paths=PackedStringArray("Buildup", "Hitch", "Sigh", "Sneeze", "Sniff")]
+[node name="Voice Box" type="Node2D" parent="MouthRemote" node_paths=PackedStringArray("Buildup", "Sneeze")]
 unique_name_in_owner = true
 rotation = 0.336093
 script = ExtResource("2_80oa4")
 Buildup = NodePath("AudioLoaderBuildup")
-Hitch = NodePath("")
-Sigh = NodePath("")
 Sneeze = NodePath("AudioLoaderSneeze")
-Sniff = NodePath("")
 
 [node name="AudioLoaderBuildup" type="AudioStreamPlayer2D" parent="MouthRemote/Voice Box"]
 max_distance = 10000.0
@@ -3612,9 +3609,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2895.72, -699.663)
-rotation = -0.0281118
-scale = Vector2(0.999223, 0.999223)
+position = Vector2(-2812.84, -774.462)
+rotation = -0.091206
+scale = Vector2(0.999222, 0.999222)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3692,9 +3689,9 @@ script = ExtResource("69_e8orq")
 unique_name_in_owner = true
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2259.29, -1015.1)
-rotation = -0.0281118
-scale = Vector2(0.999223, 0.999223)
+position = Vector2(-2197.57, -1129.4)
+rotation = -0.091206
+scale = Vector2(0.999222, 0.999222)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true

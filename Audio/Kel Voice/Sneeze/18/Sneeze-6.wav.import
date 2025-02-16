@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhl75vbj0cy73"
+path="res://.godot/imported/Sneeze-6.wav-3e7c0c86a291f93bc0ecd016f453c213.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Sneeze/18/Sneeze-6.wav"
+dest_files=["res://.godot/imported/Sneeze-6.wav-3e7c0c86a291f93bc0ecd016f453c213.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjsrsr28dktp0"
+path="res://.godot/imported/StifleSneeze-2.wav-0841fd16af4e299e030b8f94a6cc2bc0.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Sneeze/19/StifleSneeze-2.wav"
+dest_files=["res://.godot/imported/StifleSneeze-2.wav-0841fd16af4e299e030b8f94a6cc2bc0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

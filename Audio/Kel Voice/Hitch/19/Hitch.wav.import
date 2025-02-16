@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1vf78iyt7niq"
+path="res://.godot/imported/Hitch.wav-e22a872199b5f09827141e9dcce54775.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Hitch/19/Hitch.wav"
+dest_files=["res://.godot/imported/Hitch.wav-e22a872199b5f09827141e9dcce54775.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
