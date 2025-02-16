@@ -3429,27 +3429,27 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999877, 0.999877)
+scale = Vector2(0.99988, 0.99988)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.999837, 0.999837)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999833, 0.999833)
+scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999834, 0.999834)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -3610,9 +3610,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2792.35, -617.644)
-rotation = -0.349644
-scale = Vector2(0.999217, 0.999217)
+position = Vector2(-2830.8, -588.239)
+rotation = -0.324577
+scale = Vector2(0.999228, 0.999228)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3665,9 +3665,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2807.77, -778.613)
-rotation = -0.0948258
-scale = Vector2(0.999217, 0.999217)
+position = Vector2(-2842.18, -749.546)
+rotation = -0.0697588
+scale = Vector2(0.999228, 0.999228)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3676,11 +3676,13 @@ rotation = 0.830374
 scale = Vector2(1.00064, 0.99947)
 skew = 8.57115e-05
 priority = 25
-sensitivity_multiplier_on_sneeze = 0.8
-sensitivity_decay_seconds = 45.0
+sensitivity_multiplier_on_sneeze = 0.5
+sensitivity_decay_seconds = 25.0
 tickle_wait_seconds = 5.0
+tickle_decay_on_sneeze_seconds = 10.0
 burn_wait_seconds = 30.0
-burn_decay_seconds = 120.0
+burn_decay_seconds = 60.0
+burn_decay_on_sneeze_seconds = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoseRemote/NoseOuter"]
 position = Vector2(4.99883, -16.5555)
@@ -3720,9 +3722,9 @@ script = ExtResource("85_ascq3")
 lungs = NodePath("../../Lungs")
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2193.78, -1135.77)
-rotation = -0.0948258
-scale = Vector2(0.999217, 0.999217)
+position = Vector2(-2219.43, -1091.21)
+rotation = -0.0697588
+scale = Vector2(0.999228, 0.999228)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -3792,10 +3794,11 @@ skew = 8.57115e-05
 collision_layer = 128
 collision_mask = 128
 priority = 25
-sensitivity_multiplier_on_sneeze = 0.8
+sensitivity_multiplier_on_sneeze = 0.9
 sensitivity_decay_seconds = 360.0
-tickle_decay_seconds = 60.0
-burn_decay_seconds = 200.0
+tickle_decay_seconds = 30.0
+burn_decay_seconds = 80.0
+burn_decay_on_sneeze_seconds = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRemote/NoseInner"]
 position = Vector2(38.4302, -17.2829)
@@ -3828,8 +3831,8 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 lungs = NodePath("../Lungs")
 voice = NodePath("../MouthRemote/Voice Box")
-sneeze_trigger_decay_seconds = 60.0
-sneeze_trigger_expel = 15.0
+sneeze_trigger_decay_seconds = 80.0
+sneeze_trigger_expel = 20.0
 fit_probability = 0.25
 fit_window_seconds = Vector2(15, 45)
 fit_sneeze_bonus = 4.0
