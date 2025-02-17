@@ -36,6 +36,7 @@ lungs=""
 tool_particles=""
 character_debug=""
 tool_debug=""
+tools=""
 
 [input]
 
@@ -61,7 +62,8 @@ release={
 2d_physics/layer_2="Nose Internals Physics Collision"
 2d_physics/layer_4="Nose Outer Areas"
 2d_physics/layer_8="Nose Internals Areas"
-2d_physics/layer_9="Particle Collision"
+2d_physics/layer_9="Particle Collision Head"
+2d_physics/layer_10="Particle Collision World"
 
 [physics]
 

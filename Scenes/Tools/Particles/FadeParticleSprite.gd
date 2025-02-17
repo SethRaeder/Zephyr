@@ -1,7 +1,7 @@
 extends Node
 class_name FadeParticleSprite
 
-@export var root_node : Node
+@export var root_node : ToolParticle
 
 var tickle_components = []
 var max_value = 0
@@ -23,4 +23,5 @@ func _process(_delta: float) -> void:
 		current_value += child.total_tickle_damage
 	
 	#print(" Fade Sprite : ",current_value / max_value)
-	get_parent().modulate = parent_modulate.lerp(Color.TRANSPARENT, current_value / max_value)
+	
+	get_parent().modulate = parent_modulate.lerp(Color.TRANSPARENT, root_node.lifetime / root_node.particle_lifetime )

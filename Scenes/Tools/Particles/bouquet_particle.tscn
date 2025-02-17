@@ -14,9 +14,9 @@ height = 10.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ncgkj"]
 radius = 20.025
 
-[node name="BouquetParticle" type="RigidBody2D"]
-collision_layer = 256
-collision_mask = 256
+[node name="BouquetParticle" type="RigidBody2D" groups=["tool_particles"]]
+collision_layer = 65536
+collision_mask = 66304
 mass = 0.005
 gravity_scale = 0.1
 script = ExtResource("1_43hvu")
@@ -29,10 +29,13 @@ shape = SubResource("CapsuleShape2D_7rnao")
 script = ExtResource("3_eyw80")
 
 [node name="TickleComponent" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("4_p6mro")
 tickle_type = 2
 allergy_type = ExtResource("5_naktk")
-tickle_damage_limit = 0.1
+intensity = 5.0
+tickle_damage_curve = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
 shape = SubResource("CircleShape2D_ncgkj")

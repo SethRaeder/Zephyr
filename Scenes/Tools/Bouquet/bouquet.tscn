@@ -1,15 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://etaprmvcorrg"]
+[gd_scene load_steps=18 format=3 uid="uid://etaprmvcorrg"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_cakw4"]
 [ext_resource type="Texture2D" uid="uid://cqgbif32f010a" path="res://images/inducing tools/Revised/Bouquet.PNG" id="2_dj4rn"]
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="2_w3qsr"]
 [ext_resource type="PackedScene" uid="uid://c3306adyeknxy" path="res://Scenes/Tools/Particles/bouquet_particle.tscn" id="3_2k08a"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_dvufp"]
+[ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="4_dpvgk"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_qoxqd"]
+[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="5_0q2dq"]
 [ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="5_oy7qk"]
+[ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="10_kwp2p"]
+[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="11_bwowq"]
 
 [sub_resource type="Curve" id="Curve_e06c2"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.493119, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.245492, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.510513), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_gr6fv"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.11956), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1e3jo"]
@@ -20,13 +28,13 @@ height = 184.0
 radius = 60.0
 
 [sub_resource type="Curve" id="Curve_56uft"]
-_data = [Vector2(0.242925, 0.211438), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.252427, 0.488264), 0.0, 0.0, 0, 0, Vector2(0.99999, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3y2hv"]
 radius = 212.021
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="RigidBody2D" type="RigidBody2D" groups=["tools"]]
 input_pickable = true
 angular_damp = 15.0
 script = ExtResource("1_cakw4")
@@ -38,6 +46,16 @@ particle_scene = ExtResource("3_2k08a")
 particle_spawn_velocity_curve = SubResource("Curve_e06c2")
 particle_spawn_radius = 30.0
 particle_max_count = 250
+
+[node name="EmitOnBreatheComponent" type="Node2D" parent="ParticleEmitter" node_paths=PackedStringArray("wind_subscriber")]
+script = ExtResource("4_dpvgk")
+enabled_on_breath_type = 1
+local_wind_strength_max = 1000.0
+wind_spawn_curve = SubResource("Curve_gr6fv")
+wind_subscriber = NodePath("WindSubscriber")
+
+[node name="WindSubscriber" type="Marker2D" parent="ParticleEmitter/EmitOnBreatheComponent"]
+script = ExtResource("5_0q2dq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.99999, 1.00001)
@@ -61,8 +79,19 @@ position = Vector2(1, -42)
 script = ExtResource("4_qoxqd")
 tickle_type = 2
 allergy_type = ExtResource("5_oy7qk")
+intensity = 5.0
+tickle_damage_curve = null
 use_velocity = true
 velocity_curve = SubResource("Curve_56uft")
 
+[node name="EnableOnBreatheComponent" type="Node2D" parent="TickleComponent"]
+script = ExtResource("10_kwp2p")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
 shape = SubResource("CircleShape2D_3y2hv")
+
+[node name="TickleDebugSuite" parent="TickleComponent" instance=ExtResource("11_bwowq")]
+offset_left = -53.0
+offset_top = 69.0
+offset_right = -39.22
+offset_bottom = 100.655

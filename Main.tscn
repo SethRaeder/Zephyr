@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bo6gnqhjsl6w5"]
+[gd_scene load_steps=21 format=3 uid="uid://bo6gnqhjsl6w5"]
 
 [ext_resource type="Texture2D" uid="uid://dg2likmstw620" path="res://icon.svg" id="1_pwu8x"]
 [ext_resource type="Texture2D" uid="uid://c3iehehdye5rj" path="res://images/Background/Cave/dergsnzbg-kel-7.png" id="1_t6vys"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://Scenes/Components/Util/parallax_component.gd" id="6_w6b3a"]
 [ext_resource type="Texture2D" uid="uid://dn16xu422guo3" path="res://images/Background/Cave/dergsnzbg-kel-2.png" id="7_v421o"]
 [ext_resource type="Texture2D" uid="uid://vvppa027u41q" path="res://images/Background/Cave/dergsnzbg-kel-1.png" id="8_ysigt"]
+[ext_resource type="Texture2D" uid="uid://gv2wl5uuxdcx" path="res://images/can.png" id="13_th40t"]
+[ext_resource type="Script" path="res://Scripts/UI/ClearToolsButton.gd" id="14_kynwu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xl3dr"]
 distance = -42.0
@@ -131,8 +133,8 @@ position = Vector2(250, 519)
 texture = ExtResource("1_pwu8x")
 
 [node name="World Bounds" type="StaticBody2D" parent="."]
-collision_layer = 257
-collision_mask = 257
+collision_layer = 769
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World Bounds"]
 position = Vector2(404, 594)
@@ -173,26 +175,26 @@ layout_mode = 1
 tool_spawn_node = NodePath("../../Tools")
 
 [node name="Tool Trash" type="Area2D" parent="UI Root/Toolbox"]
-position = Vector2(31, -157.665)
+position = Vector2(44, -76.665)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_bh12i")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI Root/Toolbox/Tool Trash"]
+position = Vector2(-1, 0)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("13_th40t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI Root/Toolbox/Tool Trash"]
 position = Vector2(4, 2)
 shape = SubResource("RectangleShape2D_sxsi8")
 
-[node name="Sprite2D" type="Sprite2D" parent="UI Root/Toolbox/Tool Trash"]
-position = Vector2(-1, 0)
-texture = ExtResource("1_pwu8x")
-
-[node name="Label" type="Label" parent="UI Root/Toolbox/Tool Trash"]
-modulate = Color(1, 0, 0, 1)
-offset_left = -52.0
-offset_top = -64.0
-offset_right = -1.0
-offset_bottom = -41.0
-scale = Vector2(2.0677, 2.0677)
-text = "TRASH"
+[node name="Button" type="Button" parent="UI Root/Toolbox/Tool Trash"]
+offset_left = -88.0
+offset_top = -146.0
+offset_right = 102.0
+offset_bottom = -115.0
+text = "Clear All Tools/Particles"
+script = ExtResource("14_kynwu")
 
 [node name="DebugToggle" type="CheckButton" parent="UI Root"]
 layout_mode = 0

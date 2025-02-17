@@ -2,6 +2,8 @@ extends Area2D
 class_name NoseTriggerZone
 
 @export_category("General Stats")
+@export var connected_nose : NoseTriggerZone
+@export var nose_share : float = 0.5
 @export var sneeze_trigger_amount : float = 1.0
 @export var tickle_max : float = 50.0
 @export var burn_max : float = 30.0
@@ -53,6 +55,10 @@ signal on_allergy_damage(damage_amount, allergy_type)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if connected_nose:
+		connected_nose.on_allergy_damage.connect(func(amount, type):
+			add_tickle(amount, TickleComponent.DAMAGE_TYPES.ALLERGY, type)
+		)
 	sneeze_trigger_timer.timeout.connect(timer_timeout)
 
 func _process(delta: float) -> void:

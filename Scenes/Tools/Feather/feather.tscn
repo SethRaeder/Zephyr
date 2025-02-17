@@ -33,7 +33,7 @@ point_count = 2
 radius = 16.8954
 height = 40.355
 
-[node name="Feather" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite")]
+[node name="Feather" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
 angular_damp = 20.0
 script = ExtResource("1_ktd27")

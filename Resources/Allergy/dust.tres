@@ -1,10 +1,20 @@
-[gd_resource type="Resource" script_class="AllergyResource" load_steps=2 format=3 uid="uid://4vp5va5ekxii"]
+[gd_resource type="Resource" script_class="AllergyResource" load_steps=4 format=3 uid="uid://4vp5va5ekxii"]
 
 [ext_resource type="Script" path="res://Resources/Definitions/allergy_resource.gd" id="1_vps1u"]
+
+[sub_resource type="Curve" id="Curve_vcmdw"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_d5b7q"]
+_data = [Vector2(0, 0), 0.0, 4.04574, 0, 0, Vector2(0.503411, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.303912), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [resource]
 script = ExtResource("1_vps1u")
 allergy_name = "Dust"
 max_count = 100.0
-tickle_amount_max = 10.0
-burn_amount_max = 10.0
+tickle_amount_max = 5.0
+burn_amount_max = 2.0
+tickle_curve = SubResource("Curve_d5b7q")
+burn_curve = SubResource("Curve_vcmdw")

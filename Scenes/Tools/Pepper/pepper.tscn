@@ -10,7 +10,7 @@
 radius = 12.0
 height = 66.0
 
-[node name="ToolBody" type="RigidBody2D"]
+[node name="Pepper" type="RigidBody2D" groups=["tools"]]
 input_pickable = true
 angular_damp = 30.0
 script = ExtResource("1_fi5oo")

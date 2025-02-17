@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7j4oys1em0c1"]
+[gd_scene load_steps=10 format=3 uid="uid://b7j4oys1em0c1"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_7cdy6"]
 [ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="2_srpe6"]
@@ -8,15 +8,23 @@
 [ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="5_rkbtu"]
 [ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="7_uiivb"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3i2k4"]
+radius = 6.08276
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 26.0192
 
-[node name="Dust" type="RigidBody2D"]
+[node name="Dust" type="RigidBody2D" groups=["tool_particles"]]
+collision_layer = 16777216
+collision_mask = 16777728
 mass = 0.01
 gravity_scale = 0.01
 script = ExtResource("1_7cdy6")
 particle_lifetime = 30.0
 delete_on_tickle_finished = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3i2k4")
 
 [node name="WindSubscriber" type="Marker2D" parent="."]
 scale = Vector2(0.18, 0.18)

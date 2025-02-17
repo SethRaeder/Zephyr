@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://imkp062d5m14"]
+[gd_scene load_steps=9 format=3 uid="uid://imkp062d5m14"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_yoe6j"]
 [ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="2_ubu1b"]
@@ -7,16 +7,24 @@
 [ext_resource type="Texture2D" uid="uid://ovi80ytjoy6e" path="res://images/inducing tools/Revised/Dandelion Seed.PNG" id="5_3v203"]
 [ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="6_g046x"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_t7i0l"]
+radius = 3.16228
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 8.0
 
-[node name="Dandelion" type="RigidBody2D"]
+[node name="Dandelion" type="RigidBody2D" groups=["tool_particles"]]
+collision_layer = 262144
+collision_mask = 262656
 mass = 0.001
 gravity_scale = 0.05
 script = ExtResource("1_yoe6j")
 particle_lifetime = 30.0
 delete_on_tickle_finished = true
 particle_air_limit = 500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t7i0l")
 
 [node name="WindSubscriber" type="Marker2D" parent="."]
 scale = Vector2(0.18, 0.18)

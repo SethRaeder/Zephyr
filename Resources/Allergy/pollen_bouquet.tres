@@ -1,10 +1,15 @@
-[gd_resource type="Resource" script_class="AllergyResource" load_steps=2 format=3 uid="uid://cg0wlkd00qgpj"]
+[gd_resource type="Resource" script_class="AllergyResource" load_steps=3 format=3 uid="uid://cg0wlkd00qgpj"]
 
 [ext_resource type="Script" path="res://Resources/Definitions/allergy_resource.gd" id="1_tlgei"]
+
+[sub_resource type="Curve" id="Curve_nvdb6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.503411, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.710758), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [resource]
 script = ExtResource("1_tlgei")
 allergy_name = "Pollen"
 max_count = 100.0
-tickle_amount_max = 10.0
-burn_amount_max = 10.0
+tickle_amount_max = 0.0
+burn_amount_max = 3.0
+burn_curve = SubResource("Curve_nvdb6")

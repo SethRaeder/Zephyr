@@ -24,7 +24,7 @@ point_count = 3
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kisr"]
 radius = 7.0
 
-[node name="SneezeTool" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite")]
+[node name="Brush" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
 angular_damp = 20.0
 script = ExtResource("1_8igve")

@@ -98,19 +98,33 @@ func timer_timeout():
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
 	#print("<Brain> IdleTickleBlend: ",idletickleblend)
 	var sneeze_percent = sneeze_trigger_count.get_percent()
+	var playback = animation_tree.get("parameters/SneezeMachine/playback")
 	if randf() < hitch_curve.sample(sneeze_percent):
 		if not lungs.is_full():
-			hitch = true
+			match playback.get_current_node():
+				"hitch":
+					pass
+				"hitch_interrupt":
+					if randf() <= 0.2:
+						hitch = true
+				_:
+					hitch = true
 		else:
 			sigh = true
 	if randf() < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
 		if not lungs.is_full():
-			buildup = true
+			match playback.get_current_node():
+				"buildup":
+					pass
+				"buildup_interrupt":
+					if randf() <= 0.2:
+						buildup = true
+				_:
+					buildup = true
 		else:
 			sigh = true
 	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
-		if lungs.is_full():
-			sneeze = true
+		sneeze = true
 	
 	animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
 	animation_tree.set("parameters/SneezeMachine/conditions/buildup",buildup)
@@ -127,7 +141,7 @@ func timer_timeout():
 func on_hitch():
 	print("Brain: On Hitch")
 	lungs.set_breath_state(lungs.BREATH_STATE.HITCH)
-	
+
 func on_sneeze():
 	var sneeze_size = 1.0
 	sneeze_trigger_count.add_value(-sneeze_trigger_expel * sneeze_size)

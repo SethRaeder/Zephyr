@@ -19,7 +19,7 @@ height = 32.0
 _data = [Vector2(0, 0.0480936), 0.0, 0.0, 0, 0, Vector2(1, 0.402946), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="ToolBody" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite")]
+[node name="ToolBody" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
 angular_damp = 20.0
 script = ExtResource("1_kmta7")
