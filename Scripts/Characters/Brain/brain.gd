@@ -81,6 +81,7 @@ func _ready() -> void:
 	voice.on_hitch.connect(on_hitch)
 	voice.on_buildup.connect(on_hitch)
 	voice.on_sneeze.connect(on_sneeze)
+	voice.sneeze_finished.connect(sneeze_finished)
 	voice.sneeze_finished.connect(breathe_out)
 	voice.hitch_finished.connect(hold_breath)
 
@@ -108,7 +109,8 @@ func timer_timeout():
 		else:
 			sigh = true
 	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
-		sneeze = true
+		if lungs.is_full():
+			sneeze = true
 	
 	animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
 	animation_tree.set("parameters/SneezeMachine/conditions/buildup",buildup)
@@ -134,6 +136,9 @@ func on_sneeze():
 	if randf() < fit_probability:
 		print("Fit started")
 		fit_timer.start(randf_range(fit_window_seconds.x, fit_window_seconds.y))
+
+func sneeze_finished():
+	lungs.set_breath_state(lungs.BREATH_STATE.IDLE)
 	
 func hold_breath():
 	lungs.set_breath_state(lungs.BREATH_STATE.HOLD)

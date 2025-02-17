@@ -15,7 +15,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	var new_wind = Vector2.ZERO
 	for wind_node : WindOrigin in wind_origins:
-		new_wind += wind_node.wind_strength * global_position.direction_to(wind_node.global_position) / global_position.distance_squared_to(wind_node.global_position)
+		new_wind += wind_node.get_strength(global_position)
 		#scale = Vector2.ONE * point_vector.length()
 		#rotation = point_vector.angle()
 	

@@ -46,6 +46,12 @@ var breath_state_current = BREATH_STATE.IDLE
 @export var OXY_SNEEZE_DECAY = -20.0
 @onready var low_oxy_timer: Timer = %LowOxyTimer
 
+@export_category("Sneeze Wind Audio Settings")
+@export var voice_box : VoiceBox
+@export var sneeze_wind_curve : Curve
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("lungs")
@@ -57,12 +63,18 @@ func _ready() -> void:
 			match breath_state_current:
 				BREATH_STATE.HITCH:
 					set_breath_state(BREATH_STATE.HOLD)
+				BREATH_STATE.SNEEZE:
+					pass
 				_:
 					set_breath_state(BREATH_STATE.OUT)
 	)
 	lungs.hit_min.connect(
 		func():
-			set_breath_state(BREATH_STATE.IDLE)
+			match breath_state_current:
+				BREATH_STATE.SNEEZE:
+					pass
+				_:
+					set_breath_state(BREATH_STATE.IDLE)
 	)
 	oxygen.hit_min.connect(must_breathe.emit)
 	pass # Replace with function body.
@@ -87,8 +99,15 @@ func _physics_process(delta: float) -> void:
 			breathe(HITCH_RATE, HITCH_WIND_BONUS, delta)
 			
 		BREATH_STATE.SNEEZE:
-			breathe(SNEEZE_RATE * lungs.get_percent(), SNEEZE_WIND_BONUS, delta)
-			oxygen.add_value(OXY_SNEEZE_DECAY * lungs.get_percent() * delta)
+			if voice_box.Sneeze.playing and sneeze_wind_curve:
+				var progress = voice_box.Sneeze.get_playback_position()
+				var sample = sneeze_wind_curve.sample_baked(clampf(progress,0,1))
+			
+				breathe(SNEEZE_RATE * sample, SNEEZE_WIND_BONUS, delta)
+				oxygen.add_value(OXY_SNEEZE_DECAY * sample * delta)
+			#else:
+				#breathe(SNEEZE_RATE * lungs.get_percent(), SNEEZE_WIND_BONUS, delta)
+				#oxygen.add_value(OXY_SNEEZE_DECAY * lungs.get_percent() * delta)
 		
 		BREATH_STATE.SIGH:
 			breathe(SNEEZE_RATE * lungs.get_percent(), SIGH_WIND_BONUS, delta)
@@ -108,9 +127,9 @@ func set_breath_state(new_state):
 			breathe_done.emit()
 
 func is_full():
-	return lungs.get_percent() >= .95
+	return lungs.get_percent() >= .85
 
-func breathe(rate,bonus,delta):
+func breathe(rate, bonus, delta):
 	breathe_rate.emit(rate * bonus * delta)
 	lungs.add_value(rate * delta)
 	#print("Lungs: Current value: ", lungs.current_value)

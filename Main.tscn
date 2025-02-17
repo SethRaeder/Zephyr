@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://vvppa027u41q" path="res://images/Background/Cave/dergsnzbg-kel-1.png" id="8_ysigt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xl3dr"]
+distance = -42.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bxoe6"]
 normal = Vector2(0, 1)
@@ -24,6 +25,7 @@ normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iwv5l"]
 normal = Vector2(-1, 0)
+distance = -352.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxsi8"]
 size = Vector2(66, 63.5)

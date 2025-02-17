@@ -43,8 +43,8 @@ particle_spawn_lifetime_limit = 500
 
 [node name="EmitOnBreathe" type="Marker2D" parent="Particles" node_paths=PackedStringArray("wind_subscriber")]
 script = ExtResource("8_pfxgb")
-local_wind_strength_threshold = 50.0
-local_wind_strength_max = 500.0
+local_wind_strength_threshold = 20.0
+local_wind_strength_max = 250.0
 wind_spawn_curve = SubResource("Curve_ehxyo")
 wind_subscriber = NodePath("WindSubscriber")
 

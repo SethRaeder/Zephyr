@@ -5,5 +5,6 @@
 [resource]
 script = ExtResource("1_vps1u")
 allergy_name = "Dust"
-tickle_amount = 0.02
-burn_amount = 0.05
+max_count = 100.0
+tickle_amount_max = 10.0
+burn_amount_max = 10.0

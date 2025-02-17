@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=128 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -3217,6 +3217,11 @@ bounce = 0.09
 radius = 126.306
 height = 679.068
 
+[sub_resource type="Curve" id="Curve_q3w4i"]
+min_value = -1.0
+_data = [Vector2(0, 0.00386989), 0.0, 0.0, 0, 0, Vector2(0.0388655, -0.452885), 0.0, 0.0, 0, 0, Vector2(0.0598739, 0.116874), 0.0, 0.0, 0, 0, Vector2(0.0892857, -0.149014), 0.0, 0.0, 0, 0, Vector2(0.248266, 1), 0.0, 0.0, 0, 0, Vector2(1, -0.00440097), 0.0, 0.0, 0, 0]
+point_count = 6
+
 [node name="Kel_Rig" type="Node2D"]
 position = Vector2(846, 490)
 scale = Vector2(0.2, 0.2)
@@ -3429,27 +3434,27 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.99988, 0.99988)
+scale = Vector2(0.999879, 0.999879)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999837, 0.999837)
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-scale = Vector2(0.999839, 0.999839)
+scale = Vector2(0.999834, 0.999834)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 auto_calculate_length_and_angle = false
 length = 66.4833
@@ -3610,9 +3615,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2830.8, -588.239)
-rotation = -0.324577
-scale = Vector2(0.999228, 0.999228)
+position = Vector2(-2866.91, -558.801)
+rotation = -0.299997
+scale = Vector2(0.99922, 0.99922)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3665,9 +3670,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2842.18, -749.546)
-rotation = -0.0697588
-scale = Vector2(0.999228, 0.999228)
+position = Vector2(-2874.32, -720.337)
+rotation = -0.0451787
+scale = Vector2(0.99922, 0.99922)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3712,7 +3717,7 @@ position = Vector2(-600.111, 652.054)
 rotation = 0.628319
 gizmo_extents = 99.0
 
-[node name="BreathWindOrigin" type="Marker2D" parent="NoseRemote" node_paths=PackedStringArray("lungs") groups=["wind"]]
+[node name="BreathWindOrigin" type="Marker2D" parent="NoseRemote" node_paths=PackedStringArray("lungs", "radial_wind_origin", "linear_wind_origin", "linear_wind_direction") groups=["wind"]]
 unique_name_in_owner = true
 position = Vector2(61.7464, -25.8973)
 rotation = -3.57453
@@ -3720,11 +3725,23 @@ scale = Vector2(1.00005, 1.00005)
 gizmo_extents = 558.0
 script = ExtResource("85_ascq3")
 lungs = NodePath("../../Lungs")
+radial_wind_origin = NodePath("Radial Origin")
+linear_wind_origin = NodePath("Linear Origin")
+linear_wind_direction = NodePath("Linear Origin/Linear Direction")
+
+[node name="Radial Origin" type="Marker2D" parent="NoseRemote/BreathWindOrigin"]
+position = Vector2(169.385, 46.1788)
+
+[node name="Linear Origin" type="Marker2D" parent="NoseRemote/BreathWindOrigin"]
+position = Vector2(366.379, 81.4704)
+
+[node name="Linear Direction" type="Marker2D" parent="NoseRemote/BreathWindOrigin/Linear Origin"]
+position = Vector2(135.804, -67.3726)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2219.43, -1091.21)
-rotation = -0.0697588
-scale = Vector2(0.999228, 0.999228)
+position = Vector2(-2243.37, -1046.59)
+rotation = -0.0451787
+scale = Vector2(0.99922, 0.99922)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
@@ -3824,8 +3841,14 @@ position = Vector2(-3103.19, -1403.99)
 gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
-[node name="Lungs" parent="." instance=ExtResource("70_xplix")]
+[node name="Lungs" parent="." node_paths=PackedStringArray("voice_box") instance=ExtResource("70_xplix")]
 unique_name_in_owner = true
+IN_WIND_BONUS = 20.0
+OUT_WIND_BONUS = 40.0
+HITCH_WIND_BONUS = 35.0
+SNEEZE_WIND_BONUS = 20000.0
+voice_box = NodePath("../MouthRemote/Voice Box")
+sneeze_wind_curve = SubResource("Curve_q3w4i")
 
 [node name="Brain" parent="." node_paths=PackedStringArray("lungs", "voice") instance=ExtResource("97_8vqa2")]
 unique_name_in_owner = true
