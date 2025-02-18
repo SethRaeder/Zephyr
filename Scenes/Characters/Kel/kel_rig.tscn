@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=145 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -705,6 +705,54 @@ tracks/37/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../Skeleton2D/IK Targets/TongueRemote/Tongue:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend:position")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../Skeleton2D/Soup Rig:enabled")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("..:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_jsavj"]
@@ -1981,6 +2029,394 @@ tracks/7/keys = {
 "values": [Vector2(-2857, -1313), Vector2(-2922, -1214)]
 }
 
+[sub_resource type="Animation" id="Animation_aryf1"]
+resource_name = "rig_demo"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Skeleton2D/IK Targets/Neck Mid:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 2.7, 3.6, 4.26667, 6.76667, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1292, -255), Vector2(-1292, -255), Vector2(-1292, -255), Vector2(-801, -864), Vector2(-759, -1107), Vector2(-553, -1003), Vector2(-749, -1096)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Skeleton2D/IK Targets/Neck End:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 2.5, 3, 4.16667, 6.1, 6.9, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-2571, -165), Vector2(-2571, -165), Vector2(-2571, -165), Vector2(-2441, -290), Vector2(-2017, -1377), Vector2(-1838, -1224), Vector2(-1778, -1425), Vector2(-1913, -1400)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Skeleton2D/IK Targets/Head Point:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.36667, 3.43333, 4.5, 5, 5.83333, 7.13333, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-2946, -205), Vector2(-2946, -205), Vector2(-2950, -220), Vector2(-2784, -355), Vector2(-3131, -1553), Vector2(-3117, -2153), Vector2(-2885, -1112), Vector2(-2961, -1273), Vector2(-2912, -1575)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 2, 3.96667, 4.3, 5.53333, 5.83333, 8, 8.1, 8.23333, 9.06667, 9.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-19.1266, -13.9961), Vector2(-19.1266, -13.9961), Vector2(-36.0161, -44.4367), Vector2(-36.0161, -44.4367), Vector2(-34.0706, -42.1346), Vector2(-34.0706, -42.1346), Vector2(-34.4954, -72.8205), Vector2(-34.4954, -72.8205), Vector2(-15.355, -21.0081), Vector2(-34.4954, -72.8205), Vector2(-34.4954, -72.8205), Vector2(-25.6767, -53.6652)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.13333, 3.96667, 4.3, 5.53333, 5.83333, 8, 8.1, 8.23333, 9.06667, 9.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-4.52135, 26.0336), Vector2(-4.52135, 26.0336), Vector2(5.92142, 38.3345), Vector2(5.92142, 38.3345), Vector2(-8.64681, 4.96995), Vector2(-8.64681, 4.96995), Vector2(35.5422, 65.121), Vector2(35.5422, 65.121), Vector2(5.87118, 13.7601), Vector2(35.5422, 65.121), Vector2(35.5422, 65.121), Vector2(-1.11055, -10.2829)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("%Wing:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.5, 3.96667, 4.86667, 5.96667, 8.93333, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1507, -234), Vector2(1571, -489), Vector2(1571, -489), Vector2(1540.84, -264.535), Vector2(1540.84, -264.535), Vector2(1418, -438)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("%Wing:rotation")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.5, 3.96667, 4.86667, 5.96667, 8.93333, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.502579, 0.345662, 0.345662, 0.0621513, 0.0621513, 0.241431]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("%Shoulder:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.5, 3.96667, 4.86667, 5.96667, 8.93333, 9.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(752, 180), Vector2(577, 341), Vector2(577, 341), Vector2(778.874, 109.819), Vector2(778.874, 109.819), Vector2(766, 42)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("%Shoulder:rotation")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.5, 3.96667, 4.86667, 5.96667, 8.93333, 9.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.69053, 0.346778, 0.346778, 0.0951927, 0.0951927, 0.282843]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(4.5, 4.93333, 5.4, 5.6, 9, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 0, -2, 1),
+"update": 0,
+"values": [-0.00942021, -0.691182, -0.792545, -0.0266808, -0.0266808, -0.152343]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(4.33333, 4.73333, 5.4, 6.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.4, 1.4), Vector2(1.50345, 1.50345), Vector2(1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:rotation")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(5.53333, 5.7, 5.83333, 6.3, 8.96667, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.536651, -0.390595, 0.0798883, 0.0798882, -0.550517]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-55.0004, 119), Vector2(67.6147, 75.7419), Vector2(-253.561, 227.679)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner:rotation")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.119336]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U:position")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(4.63333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-189.001, 129)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U:rotation")
+tracks/15/interp = 2
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(4.63333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront:position")
+tracks/16/interp = 2
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-685.001, 266), Vector2(-686.577, 240.75), Vector2(-667.435, 266.516)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront:rotation")
+tracks/17/interp = 2
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle:position")
+tracks/18/interp = 2
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-487.001, 207), Vector2(-486.788, 157.702), Vector2(-445.655, 250.564)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle:rotation")
+tracks/19/interp = 2
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack:position")
+tracks/20/interp = 2
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-261.001, 176), Vector2(-147.971, 196.856), Vector2(-228.67, 184.645)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack:rotation")
+tracks/21/interp = 2
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront:position")
+tracks/22/interp = 2
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-643.336, 244.951), Vector2(-643.667, 222.111), Vector2(-623.624, 240.213)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront:rotation")
+tracks/23/interp = 2
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle:position")
+tracks/24/interp = 2
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-450.817, 190.762), Vector2(-422.978, 240.676), Vector2(-429.573, 218.203)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle:rotation")
+tracks/25/interp = 2
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.0608384]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack:position")
+tracks/26/interp = 2
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(4.63333, 5.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-226.573, 165.873), Vector2(-429.806, 253.896)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack:rotation")
+tracks/27/interp = 2
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(4.63333, 5.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../Skeleton2D/IK Targets/TongueRemote/Tongue:position")
+tracks/28/interp = 2
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(4.53333, 5.03333, 5.53333, 8.66667, 9.5),
+"transitions": PackedFloat32Array(1, 1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-24.9339, -384.295), Vector2(0, 0), Vector2(0, 0), Vector2(-641.402, -164.327)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(9, 9.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-178.918, 59.2814)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../Skeleton2D/Soup Rig:enabled")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("..:modulate")
+tracks/31/interp = 2
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0.366667, 0.566667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_32ely"]
 _data = {
 "RESET": SubResource("Animation_r76hh"),
@@ -1990,6 +2426,7 @@ _data = {
 "hitch": SubResource("Animation_jpsb3"),
 "idle": SubResource("Animation_rcbqc"),
 "nose_flare": SubResource("Animation_etkk2"),
+"rig_demo": SubResource("Animation_aryf1"),
 "sneeze": SubResource("Animation_62yp1"),
 "tickle": SubResource("Animation_p4nc5")
 }
@@ -2057,11 +2494,11 @@ animation = &"buildup"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wp6ak"]
 animation = &"hitch"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eiixe"]
+animation = &"rig_demo"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1nxn2"]
 animation = &"sneeze"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7ksb4"]
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kg6hv"]
 xfade_time = 1.0
@@ -2121,22 +2558,33 @@ priority = 10
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f55j0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_enas5"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_a35pc")
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_dmuwf"]
 states/End/position = Vector2(976, 350)
 states/IdleTickle/node = SubResource("AnimationNodeBlendSpace1D_fwvsg")
 states/IdleTickle/position = Vector2(210, -17)
-states/Start/position = Vector2(-63, -17)
+states/Start/position = Vector2(-350, -22)
 states/buildup/node = SubResource("AnimationNodeAnimation_odiv2")
 states/buildup/position = Vector2(383, -144)
 states/hitch/node = SubResource("AnimationNodeAnimation_wp6ak")
 states/hitch/position = Vector2(383, 118)
+states/rig_demo/node = SubResource("AnimationNodeAnimation_eiixe")
+states/rig_demo/position = Vector2(-90, -98)
 states/sneeze/node = SubResource("AnimationNodeAnimation_1nxn2")
 states/sneeze/position = Vector2(685, -17)
-transitions = ["Start", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_7ksb4"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_kg6hv"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_gwl3x"), "buildup", "sneeze", SubResource("AnimationNodeStateMachineTransition_eytdj"), "sneeze", "buildup", SubResource("AnimationNodeStateMachineTransition_kpw78"), "sneeze", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_m3qaj"), "sneeze", "hitch", SubResource("AnimationNodeStateMachineTransition_ipa2m"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_pjhmq"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_1lm6o"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_c4tnu")]
-graph_offset = Vector2(-134, -215)
+transitions = ["IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_kg6hv"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_gwl3x"), "buildup", "sneeze", SubResource("AnimationNodeStateMachineTransition_eytdj"), "sneeze", "buildup", SubResource("AnimationNodeStateMachineTransition_kpw78"), "sneeze", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_m3qaj"), "sneeze", "hitch", SubResource("AnimationNodeStateMachineTransition_ipa2m"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_pjhmq"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_1lm6o"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_c4tnu"), "Start", "rig_demo", SubResource("AnimationNodeStateMachineTransition_f55j0"), "rig_demo", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_enas5")]
+graph_offset = Vector2(-561, -156)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8i024"]
-graph_offset = Vector2(-21.0634, -106.143)
+graph_offset = Vector2(8.10626, -81.7122)
 nodes/Blink/node = SubResource("AnimationNodeAnimation_uyewt")
 nodes/Blink/position = Vector2(1180, 200)
 "nodes/Blink Shot/node" = SubResource("AnimationNodeOneShot_n5m61")
@@ -2403,12 +2851,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.632113
-scale = Vector2(0.999858, 0.999858)
+rotation = 0.608933
+scale = Vector2(0.999865, 0.999865)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.632114
+target_rotation = 0.608933
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -2417,12 +2865,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.40398
-scale = Vector2(0.999846, 0.999846)
+rotation = 0.327364
+scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.403978
+target_rotation = 0.327364
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -2431,12 +2879,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = 0.33616
-scale = Vector2(0.999847, 0.999847)
+rotation = -0.479653
+scale = Vector2(0.999848, 0.999848)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.336163
+target_rotation = -0.479654
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -2445,12 +2893,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.599845
-scale = Vector2(0.999873, 0.999873)
+rotation = -0.477011
+scale = Vector2(0.999859, 0.999859)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.599842
+target_rotation = -0.477011
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -2459,8 +2907,8 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.192696
-scale = Vector2(0.999837, 0.999837)
+rotation = 0.0214595
+scale = Vector2(0.999871, 0.999871)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -2468,157 +2916,14 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(28.548, -157.654)
 remote_path = NodePath("../../../../../../../Remote Transforms/HeadRemote")
 
-[node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
-position = Vector2(-24.0005, 62)
-rotation = -0.00942021
-scale = Vector2(0.999847, 0.999847)
-rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
-editor_settings/show_bone_gizmo = false
-
-[node name="Innermouth L" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
-position = Vector2(-140.708, 180.683)
-rest = Transform2D(1, 0, 0, 1, -140.708, 180.683)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="LLipFront" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
-position = Vector2(-643.336, 244.951)
-rest = Transform2D(1, 0, 0, 1, -643.336, 244.951)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
-position = Vector2(-450.817, 190.762)
-scale = Vector2(0.999946, 0.999946)
-rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="LLipBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
-position = Vector2(-226.573, 165.873)
-scale = Vector2(0.999939, 0.999939)
-rest = Transform2D(1, 0, 0, 1, -226.573, 165.873)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="TongueExtend" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
-rest = Transform2D(1, 0, 0, 1, 0, 0)
-
-[node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
-position = Vector2(26.4717, 56.252)
-rotation = 0.0496158
-scale = Vector2(0.999848, 0.999848)
-rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
-script = ExtResource("34_sbkqv")
-transform_mode = 0
-target_rotation = 0.098388
-target_position = Vector2(26.4717, 56.252)
-ease_rotation = true
-rotation_easing_params = SubResource("Resource_hp2yj")
-limit_rotation = true
-constraint_data = SubResource("Resource_iplph")
-
-[node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
-position = Vector2(-144.681, 71.6403)
-rotation = -0.0233466
-scale = Vector2(0.999887, 0.999887)
-rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
-script = ExtResource("34_sbkqv")
-transform_mode = 0
-target_rotation = -0.0736906
-target_position = Vector2(-144.681, 71.6403)
-ease_rotation = true
-rotation_easing_params = SubResource("Resource_hp2yj")
-limit_rotation = true
-constraint_data = SubResource("Resource_43o6b")
-
-[node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
-position = Vector2(-148.182, 18.605)
-rotation = -0.0788119
-scale = Vector2(0.999836, 0.999836)
-rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
-script = ExtResource("34_sbkqv")
-transform_mode = 0
-target_rotation = -0.181923
-target_position = Vector2(-148.182, 18.605)
-ease_rotation = true
-rotation_easing_params = SubResource("Resource_hp2yj")
-limit_rotation = true
-constraint_data = SubResource("Resource_6q68s")
-
-[node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
-position = Vector2(-146.994, -1.38475)
-rotation = -0.282232
-scale = Vector2(0.999835, 0.999835)
-rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
-auto_calculate_length_and_angle = false
-length = 130.878
-bone_angle = 171.246
-script = ExtResource("34_sbkqv")
-transform_mode = 0
-target_rotation = -0.297322
-target_position = Vector2(-146.994, -1.38475)
-ease_rotation = true
-rotation_easing_params = SubResource("Resource_hp2yj")
-limit_rotation = true
-constraint_data = SubResource("Resource_a2m1f")
-
-[node name="TongueRemoteRoot" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
-position = Vector2(-556.394, 233.056)
-remote_path = NodePath("../../../../../../../IK Targets/TongueRemote")
-
-[node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
-position = Vector2(124, -56)
-scale = Vector2(0.999989, 0.999989)
-rest = Transform2D(1, 0, 0, 1, 124, -56)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="Nostril" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
-position = Vector2(-612.52, 143.775)
-rest = Transform2D(1, 0, 0, 1, -617.001, 140)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="NoseRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril"]
-remote_path = NodePath("../../../../../../../../Remote Transforms/NoseRemote")
-
-[node name="Eye" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
-position = Vector2(-161.001, -32)
-rest = Transform2D(1, 0, 0, 1, -161.001, -32)
-editor_settings/show_bone_gizmo = false
-
-[node name="EyelidU" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
-position = Vector2(-40.0287, -65.0048)
-rest = Transform2D(1, 0, 0, 1, -14, -15)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="EyelidL" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
-position = Vector2(24.9748, 60.0021)
-rest = Transform2D(1, 0, 0, 1, 11, 21)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-
-[node name="Pupil" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
-position = Vector2(-24.2185, 8.61108)
-rest = Transform2D(1, 0, 0, 1, -61.504, 17.9955)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-script = ExtResource("68_cjxlc")
+[node name="MouthRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+position = Vector2(-542.388, 271.793)
+rotation = -0.254818
+remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
 [node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-55.0004, 119)
-scale = Vector2(0.999979, 0.999979)
+scale = Vector2(0.999951, 0.999951)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -2626,6 +2931,7 @@ bone_angle = 0.0
 
 [node name="Innermouth U" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-189.001, 129)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -189.001, 129)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -2655,31 +2961,166 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
+[node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+position = Vector2(-24.0005, 62)
+rotation = -0.00942021
+scale = Vector2(0.999838, 0.999838)
+rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
+editor_settings/show_bone_gizmo = false
+
+[node name="Innermouth L" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+position = Vector2(-140.708, 180.683)
+rest = Transform2D(1, 0, 0, 1, -140.708, 180.683)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="LLipFront" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+position = Vector2(-643.336, 244.951)
+rest = Transform2D(1, 0, 0, 1, -643.336, 244.951)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+position = Vector2(-450.817, 190.762)
+scale = Vector2(0.999925, 0.999925)
+rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="LLipBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+position = Vector2(-226.573, 165.873)
+scale = Vector2(0.999939, 0.999939)
+rest = Transform2D(1, 0, 0, 1, -226.573, 165.873)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="TongueExtend" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
+position = Vector2(26.4717, 56.252)
+rotation = 0.0496168
+scale = Vector2(0.999879, 0.999879)
+rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
+script = ExtResource("34_sbkqv")
+transform_mode = 0
+target_rotation = 0.126043
+target_position = Vector2(26.4717, 56.252)
+ease_rotation = true
+rotation_easing_params = SubResource("Resource_hp2yj")
+limit_rotation = true
+constraint_data = SubResource("Resource_iplph")
+
+[node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
+position = Vector2(-144.681, 71.6403)
+rotation = -0.0234514
+scale = Vector2(0.999891, 0.999891)
+rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
+script = ExtResource("34_sbkqv")
+transform_mode = 0
+target_rotation = -0.106531
+target_position = Vector2(-144.681, 71.6403)
+ease_rotation = true
+rotation_easing_params = SubResource("Resource_hp2yj")
+limit_rotation = true
+constraint_data = SubResource("Resource_43o6b")
+
+[node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
+position = Vector2(-148.182, 18.605)
+rotation = -0.0792342
+scale = Vector2(0.999838, 0.999838)
+rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
+script = ExtResource("34_sbkqv")
+transform_mode = 0
+target_rotation = -0.233562
+target_position = Vector2(-148.182, 18.605)
+ease_rotation = true
+rotation_easing_params = SubResource("Resource_hp2yj")
+limit_rotation = true
+constraint_data = SubResource("Resource_6q68s")
+
+[node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
+position = Vector2(-146.994, -1.38475)
+rotation = -0.248796
+scale = Vector2(0.999831, 0.999831)
+rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
+auto_calculate_length_and_angle = false
+length = 130.878
+bone_angle = 171.246
+script = ExtResource("34_sbkqv")
+transform_mode = 0
+target_rotation = -0.248795
+target_position = Vector2(-146.994, -1.38475)
+ease_rotation = true
+rotation_easing_params = SubResource("Resource_hp2yj")
+limit_rotation = true
+constraint_data = SubResource("Resource_a2m1f")
+
+[node name="TongueRemoteRoot" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+position = Vector2(-556.394, 233.056)
+remote_path = NodePath("../../../../../../../IK Targets/TongueRemote")
+
+[node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+position = Vector2(124, -56)
+scale = Vector2(0.999934, 0.999934)
+rest = Transform2D(1, 0, 0, 1, 124, -56)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="Nostril" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+position = Vector2(-612.52, 143.775)
+rest = Transform2D(1, 0, 0, 1, -617.001, 140)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="NoseRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril"]
+remote_path = NodePath("../../../../../../../../Remote Transforms/NoseRemote")
+
 [node name="Eyebrow" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-231.033, -107.006)
 scale = Vector2(0.999941, 0.999941)
 rest = Transform2D(1, 0, 0, 1, -222, -143)
 auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
+length = 107.223
+bone_angle = 146.752
 
-[node name="MouthRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
-position = Vector2(-616.895, 301.832)
-rotation = -0.254818
-remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
+[node name="Eye" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+position = Vector2(-161.001, -32)
+rest = Transform2D(1, 0, 0, 1, -161.001, -32)
+editor_settings/show_bone_gizmo = false
+
+[node name="EyelidU" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
+position = Vector2(-40.0287, -65.0048)
+rest = Transform2D(1, 0, 0, 1, -14, -15)
+auto_calculate_length_and_angle = false
+length = 50.0
+bone_angle = -119.236
+
+[node name="EyelidL" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
+position = Vector2(24.9748, 60.0021)
+rest = Transform2D(1, 0, 0, 1, 11, 21)
+auto_calculate_length_and_angle = false
+length = 50.0
+bone_angle = 59.618
+
+[node name="Pupil" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
+rest = Transform2D(1, 0, 0, 1, -61.504, 17.9955)
+auto_calculate_length_and_angle = false
+length = 68.127
+bone_angle = -90.0
+script = ExtResource("68_cjxlc")
 
 [node name="Soup Rig" type="Node" parent="Skeleton2D"]
 script = ExtResource("37_buh3l")
 
 [node name="Neck IK" type="Node" parent="Skeleton2D/Soup Rig"]
 script = ExtResource("37_buh3l")
-
-[node name="Neck IK" type="Node" parent="Skeleton2D/Soup Rig/Neck IK" node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
-script = ExtResource("38_6oa1n")
-target_node = NodePath("../../../IK Targets/Neck End")
-chain_root = NodePath("../../../Neck 1")
-chain_tip = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4")
-iterations = 7
 
 [node name="SoupTwoBoneIK" type="Node" parent="Skeleton2D/Soup Rig/Neck IK" node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
 script = ExtResource("38_c5jl5")
@@ -2714,6 +3155,7 @@ target_node = NodePath("../../../IK Targets/TongueRemote/Tongue")
 enabled = true
 chain_root = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1")
 chain_tip = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4")
+iterations = 2
 
 [node name="IK Targets" type="Node2D" parent="Skeleton2D"]
 
@@ -2730,9 +3172,9 @@ position = Vector2(-2906, -977)
 gizmo_extents = 209.5
 
 [node name="TongueRemote" type="Node2D" parent="Skeleton2D/IK Targets"]
-position = Vector2(-1879.48, -1833.68)
-rotation = 0.192068
-scale = Vector2(0.999107, 0.999107)
+position = Vector2(-2489.7, -848.604)
+rotation = -0.00832764
+scale = Vector2(0.999127, 0.999127)
 
 [node name="Tongue" type="Marker2D" parent="Skeleton2D/IK Targets/TongueRemote"]
 rotation = -0.112874
@@ -2805,9 +3247,9 @@ grow_vertical = 1
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-1916.3, -2080.17)
-rotation = 0.324895
-scale = Vector2(0.999261, 0.999261)
+position = Vector2(-2454, -877)
+rotation = -0.253726
+scale = Vector2(0.99929, 0.99929)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -2860,9 +3302,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-1826.12, -2209.91)
-rotation = 0.579713
-scale = Vector2(0.999261, 0.999261)
+position = Vector2(-2523.94, -1005)
+rotation = 0.00109257
+scale = Vector2(0.99929, 0.99929)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -2912,12 +3354,6 @@ time_to_max_progress = 40.0
 decay_time_seconds = 20.0
 particle_decay_seconds = 80.0
 
-[node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/NoseRemote"]
-unique_name_in_owner = true
-position = Vector2(-600.111, 652.054)
-rotation = 0.628319
-gizmo_extents = 99.0
-
 [node name="BreathWindOrigin" type="Marker2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("lungs", "radial_wind_origin", "linear_wind_origin", "linear_wind_direction") groups=["wind"]]
 unique_name_in_owner = true
 position = Vector2(61.7464, -25.8973)
@@ -2940,9 +3376,16 @@ position = Vector2(366.379, 81.4704)
 position = Vector2(135.804, -67.3726)
 
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-1125.19, -2111)
-rotation = 0.579713
-scale = Vector2(0.999261, 0.999261)
+position = Vector2(-1883, -1305.52)
+rotation = 0.00109257
+scale = Vector2(0.99929, 0.99929)
+
+[node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
+unique_name_in_owner = true
+position = Vector2(-1241.18, 953.483)
+rotation = 0.628319
+scale = Vector2(1, 1)
+gizmo_extents = 99.0
 
 [node name="LookRollBackTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
 unique_name_in_owner = true

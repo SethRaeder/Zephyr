@@ -6,8 +6,6 @@ var look_vector = Vector2.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	#Switch based on current eye tracking target.
-	
 	look_vector = eye_target.global_position-eye.global_position
-	
 	position = (look_vector / 3.0).limit_length(60);
+	

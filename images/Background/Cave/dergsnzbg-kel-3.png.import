@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5l35j13ruljk"
-path="res://.godot/imported/dergsnzbg-kel-3.png-9bfc5628e982c9691133d08510c4eeda.ctex"
+path.s3tc="res://.godot/imported/dergsnzbg-kel-3.png-9bfc5628e982c9691133d08510c4eeda.s3tc.ctex"
+path.etc2="res://.godot/imported/dergsnzbg-kel-3.png-9bfc5628e982c9691133d08510c4eeda.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://images/Background/Cave/dergsnzbg-kel-3.png"
-dest_files=["res://.godot/imported/dergsnzbg-kel-3.png-9bfc5628e982c9691133d08510c4eeda.ctex"]
+dest_files=["res://.godot/imported/dergsnzbg-kel-3.png-9bfc5628e982c9691133d08510c4eeda.s3tc.ctex", "res://.godot/imported/dergsnzbg-kel-3.png-9bfc5628e982c9691133d08510c4eeda.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
