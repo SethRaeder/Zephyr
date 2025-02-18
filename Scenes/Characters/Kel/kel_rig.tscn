@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=148 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://dfg4lg7a7nsw8" path="res://images/Kel/Normal/Jaw_n.png" id="29_6h30p"]
 [ext_resource type="Texture2D" uid="uid://bw7yxnanyamgo" path="res://addons/kenney_particle_pack/light_01_small.png" id="33_svpwe"]
 [ext_resource type="Script" path="res://addons/soupik/utility/soup_bone.gd" id="34_sbkqv"]
+[ext_resource type="Script" path="res://addons/soupik/resources/zm_constraint_data.gd" id="35_8nmy7"]
 [ext_resource type="Script" path="res://addons/soupik/resources/zm_easing_params.gd" id="35_ntfem"]
 [ext_resource type="Script" path="res://addons/soupik/resources/zm_easing_rotational_params.gd" id="36_p8xfc"]
 [ext_resource type="Script" path="res://addons/soupik/modifications/soup_group.gd" id="37_buh3l"]
@@ -488,19 +489,19 @@ tracks/35/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-2241, -1228)]
+"values": [Vector2(-3158, -305)]
 }
 tracks/36/type = "value"
 tracks/36/imported = false
 tracks/36/enabled = true
-tracks/36/path = NodePath("../Skeleton2D/IK Targets/Neck Mid:position")
+tracks/36/path = NodePath("../Skeleton2D/IK Targets/Neck End/Neck Mid:position")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-829, -1016)]
+"values": [Vector2(1633, 37)]
 }
 tracks/37/type = "value"
 tracks/37/imported = false
@@ -512,7 +513,7 @@ tracks/37/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-4026, -570)]
+"values": [Vector2(-5604, -541)]
 }
 
 [sub_resource type="Animation" id="Animation_jsavj"]
@@ -2660,39 +2661,63 @@ modifications/0 = SubResource("SkeletonModification2DFABRIK_p8qcc")
 
 [sub_resource type="Resource" id="Resource_j3xx4"]
 script = ExtResource("35_ntfem")
-frequency = 0.201
+frequency = 1.001
 damping = 1.0
 reaction = 1.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, -5)
 
 [sub_resource type="Resource" id="Resource_1wv2b"]
 script = ExtResource("36_p8xfc")
-velocity_effect = 8.0
+velocity_effect = 1.0
 params = SubResource("Resource_j3xx4")
+
+[sub_resource type="Resource" id="Resource_fnsbc"]
+script = ExtResource("35_8nmy7")
+rotation_direction_degrees = -180.0
+rotation_half_arc_degrees = 84.5
+area_offset = Vector2(0, 0)
+area_rotation_degrees = 0.0
+proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_we02m"]
 script = ExtResource("35_ntfem")
-frequency = 0.501
+frequency = 1.001
 damping = 1.0
 reaction = 1.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 10)
 
 [sub_resource type="Resource" id="Resource_8lj5r"]
 script = ExtResource("36_p8xfc")
-velocity_effect = 5.0
+velocity_effect = 1.0
 params = SubResource("Resource_we02m")
+
+[sub_resource type="Resource" id="Resource_on25f"]
+script = ExtResource("35_8nmy7")
+rotation_direction_degrees = -180.0
+rotation_half_arc_degrees = 45.0
+area_offset = Vector2(0, 0)
+area_rotation_degrees = 0.0
+proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_yqloq"]
 script = ExtResource("35_ntfem")
-frequency = 0.501
+frequency = 1.001
 damping = 1.0
 reaction = 1.0
-gravity = Vector2(0, 0)
+gravity = Vector2(-10, 10)
 
 [sub_resource type="Resource" id="Resource_ewen2"]
 script = ExtResource("36_p8xfc")
-velocity_effect = 4.0
+velocity_effect = 2.0
 params = SubResource("Resource_yqloq")
+
+[sub_resource type="Resource" id="Resource_ta0ym"]
+script = ExtResource("35_8nmy7")
+rotation_direction_degrees = -180.0
+rotation_half_arc_degrees = 45.0
+area_offset = Vector2(0, 0)
+area_rotation_degrees = 0.0
+proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_23nb1"]
 script = ExtResource("35_ntfem")
@@ -2703,8 +2728,16 @@ gravity = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_623or"]
 script = ExtResource("36_p8xfc")
-velocity_effect = 5.0
+velocity_effect = 2.0
 params = SubResource("Resource_23nb1")
+
+[sub_resource type="Resource" id="Resource_k6bb4"]
+script = ExtResource("35_8nmy7")
+rotation_direction_degrees = -180.0
+rotation_half_arc_degrees = 45.0
+area_offset = Vector2(0, 0)
+area_rotation_degrees = 0.0
+proportions = Vector2(1, 1)
 
 [sub_resource type="Curve" id="Curve_4tqut"]
 _data = [Vector2(0, 0.315789), 0.0, 0.0, 0, 0, Vector2(0.157706, 1), 0.0867695, 0.0867695, 0, 0, Vector2(0.526882, 0.221711), 2.13052, 2.13052, 0, 0, Vector2(1, 0), -0.10321, 0.0, 0, 0]
@@ -2984,56 +3017,64 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.497555
-scale = Vector2(0.999854, 0.999854)
+rotation = -0.0319193
+scale = Vector2(0.999826, 0.999826)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.497555
+target_rotation = 0.102305
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
+limit_rotation = true
+constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.462926
-scale = Vector2(0.999856, 0.999856)
+rotation = 0.401417
+scale = Vector2(0.999852, 0.999852)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.462925
+target_rotation = 0.205902
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
+limit_rotation = true
+constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.478065
-scale = Vector2(0.999854, 0.999854)
+rotation = 0.149143
+scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.478064
+target_rotation = -0.288373
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
+limit_rotation = true
+constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.371491
-scale = Vector2(0.999855, 0.999855)
+rotation = -0.402565
+scale = Vector2(0.999853, 0.999853)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.371495
+target_rotation = -0.402556
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
+limit_rotation = true
+constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.232685
-scale = Vector2(0.999849, 0.999849)
+rotation = 0.0148334
+scale = Vector2(0.999773, 0.999773)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -3193,13 +3234,13 @@ remote_path = NodePath("../../../../../../../MouthRemote")
 [node name="IK Targets" type="Node2D" parent="Skeleton2D"]
 
 [node name="Neck End" type="Marker2D" parent="Skeleton2D/IK Targets"]
-position = Vector2(-2241, -1228)
+position = Vector2(-3158, -305)
 
-[node name="Neck Mid" type="Marker2D" parent="Skeleton2D/IK Targets"]
-position = Vector2(-829, -1016)
+[node name="Neck Mid" type="Marker2D" parent="Skeleton2D/IK Targets/Neck End"]
+position = Vector2(1633, 37)
 
 [node name="Head Point" type="Marker2D" parent="Skeleton2D/IK Targets"]
-position = Vector2(-4026, -570)
+position = Vector2(-5604, -541)
 
 [node name="Soup Rig" type="Node" parent="Skeleton2D"]
 script = ExtResource("37_buh3l")
@@ -3207,23 +3248,13 @@ script = ExtResource("37_buh3l")
 [node name="Head Neck IK" type="Node" parent="Skeleton2D/Soup Rig"]
 script = ExtResource("37_buh3l")
 
-[node name="SoupFABRIK" type="Node" parent="Skeleton2D/Soup Rig/Head Neck IK" node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
-script = ExtResource("38_6oa1n")
-target_node = NodePath("../../../IK Targets/Neck Mid")
-enabled = true
-chain_root = NodePath("../../../Neck 1")
-chain_tip = NodePath("../../../Neck 1/Neck 2")
-determenistic = true
-bias_offset_degrees = -180.0
-
-[node name="SoupFABRIK2" type="Node" parent="Skeleton2D/Soup Rig/Head Neck IK" node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
+[node name="Neck IK" type="Node" parent="Skeleton2D/Soup Rig/Head Neck IK" node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
 script = ExtResource("38_6oa1n")
 target_node = NodePath("../../../IK Targets/Neck End")
 enabled = true
-chain_root = NodePath("../../../Neck 1/Neck 2/Neck 3")
+chain_root = NodePath("../../../Neck 1")
 chain_tip = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4")
-determenistic = true
-bias_offset_degrees = -83.607
+iterations = 8
 
 [node name="SoupLookAt" type="Node" parent="Skeleton2D/Soup Rig/Head Neck IK" node_paths=PackedStringArray("target_node", "bone_node")]
 script = ExtResource("39_41d0e")
@@ -3232,10 +3263,16 @@ enabled = true
 angle_offset_degrees = -59.017
 bone_node = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head")
 
+[node name="Neck Mid Look" type="Node" parent="Skeleton2D/Soup Rig/Head Neck IK" node_paths=PackedStringArray("target_node", "bone_node")]
+script = ExtResource("39_41d0e")
+target_node = NodePath("../../../IK Targets/Neck End/Neck Mid")
+enabled = true
+bone_node = NodePath("../../../Neck 1/Neck 2")
+
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2768.8, -565.838)
-rotation = -0.376578
-scale = Vector2(0.999268, 0.999268)
+position = Vector2(-3136.47, -193.099)
+rotation = -0.123909
+scale = Vector2(0.999143, 0.999143)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3288,9 +3325,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2788.54, -726.341)
-rotation = -0.12176
-scale = Vector2(0.999268, 0.999268)
+position = Vector2(-3115.47, -353.422)
+rotation = 0.130909
+scale = Vector2(0.999143, 0.999143)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3368,9 +3405,9 @@ position = Vector2(366.379, 81.4704)
 position = Vector2(135.804, -67.3726)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2184.37, -1099.93)
-rotation = -0.12176
-scale = Vector2(0.999268, 0.999268)
+position = Vector2(-2437.17, -564.082)
+rotation = 0.130909
+scale = Vector2(0.999143, 0.999143)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
