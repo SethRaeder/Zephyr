@@ -81,8 +81,6 @@ position = Vector2(1170, 402)
 scale = Vector2(0.4, 0.4)
 
 [node name="Kel_Rig" parent="Background/Layer3/Character" instance=ExtResource("4_l8tuh")]
-position = Vector2(0, 0)
-scale = Vector2(1, 1)
 
 [node name="PointLight2D" type="DirectionalLight2D" parent="Background/Layer3/Character"]
 visible = false

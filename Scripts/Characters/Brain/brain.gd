@@ -41,10 +41,16 @@ class_name Brain
 @onready var sneeze_decay_rate : float = -sneeze_trigger_target / sneeze_trigger_decay_seconds
 var idletickleblend := 0.0
 
-var hitch := false
-var buildup := false
-var sneeze := false
-var sigh := false
+var anim_parameters = {
+	"hitch": false,
+	"hitch_interrupt": false,
+	"buildup": false,
+	"buildup_interrupt": false,
+	"sneeze": false,
+	"sneeze_interrupt": false,
+	"sigh": false,
+	"sigh_interrupt": false,
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -79,11 +85,11 @@ func _ready() -> void:
 	update_timer.timeout.connect(timer_timeout)
 	
 	voice.on_hitch.connect(on_hitch)
-	voice.on_buildup.connect(on_hitch)
+	voice.on_buildup.connect(on_buildup)
 	voice.on_sneeze.connect(on_sneeze)
 	voice.sneeze_finished.connect(sneeze_finished)
-	voice.sneeze_finished.connect(breathe_out)
-	voice.hitch_finished.connect(hold_breath)
+	voice.buildup_finished.connect(buildup_finished)
+	voice.hitch_finished.connect(hitch_finished)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -94,6 +100,11 @@ func _process(delta: float) -> void:
 	animation_tree.set("parameters/SneezeMachine/IdleTickle/blend_position", idletickleblend)
 
 func timer_timeout():
+	anim_parameters["hitch"] = false
+	anim_parameters["buildup"] = false
+	anim_parameters["sneeze"] = false
+	anim_parameters["sigh"] = false
+	
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
 	#print("<Brain> IdleTickleBlend: ",idletickleblend)
@@ -103,46 +114,46 @@ func timer_timeout():
 		if not lungs.is_full():
 			match playback.get_current_node():
 				"hitch":
-					pass
-				"hitch_interrupt":
 					if randf() <= 0.2:
-						hitch = true
+						anim_parameters["hitch"] = true
 				_:
-					hitch = true
+					anim_parameters["hitch"] = true
 		else:
-			sigh = true
+			anim_parameters["sigh"] = true
 	if randf() < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
 		if not lungs.is_full():
 			match playback.get_current_node():
 				"buildup":
-					pass
-				"buildup_interrupt":
 					if randf() <= 0.2:
-						buildup = true
+						anim_parameters["buildup"] = true
 				_:
-					buildup = true
+					anim_parameters["buildup"] = true
 		else:
-			sigh = true
+			anim_parameters["sigh"] = true
 	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
-		sneeze = true
+		anim_parameters["sneeze"] = true
 	
-	animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
-	animation_tree.set("parameters/SneezeMachine/conditions/buildup",buildup)
-	animation_tree.set("parameters/SneezeMachine/conditions/hitch",hitch)
-	
-	if sigh and (not hitch and not buildup and not sneeze):
-		breathe_out()
-
-	hitch = false
-	buildup = false
-	sneeze = false
-	sigh = false
+	#animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
+	#animation_tree.set("parameters/SneezeMachine/conditions/buildup",buildup)
+	#animation_tree.set("parameters/SneezeMachine/conditions/hitch",hitch)
+	#animation_tree.set("parameters/SneezeMachine/conditions/sigh",sigh)
 
 func on_hitch():
-	print("Brain: On Hitch")
+	anim_parameters["hitch_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
+	anim_parameters["buildup_interrupt"] = false
 	lungs.set_breath_state(lungs.BREATH_STATE.HITCH)
-
+	
+func on_buildup():
+	anim_parameters["hitch_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
+	anim_parameters["buildup_interrupt"] = false
+	lungs.set_breath_state(lungs.BREATH_STATE.BUILDUP)
+	
 func on_sneeze():
+	anim_parameters["hitch_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
+	anim_parameters["buildup_interrupt"] = false
 	var sneeze_size = 1.0
 	sneeze_trigger_count.add_value(-sneeze_trigger_expel * sneeze_size)
 	lungs.set_breath_state(lungs.BREATH_STATE.SNEEZE)
@@ -152,14 +163,14 @@ func on_sneeze():
 		fit_timer.start(randf_range(fit_window_seconds.x, fit_window_seconds.y))
 
 func sneeze_finished():
-	lungs.set_breath_state(lungs.BREATH_STATE.IDLE)
-	
-func hold_breath():
-	lungs.set_breath_state(lungs.BREATH_STATE.HOLD)
+	anim_parameters["sneeze_interrupt"] = true
 
-func breathe_out():
-	lungs.set_breath_state(lungs.BREATH_STATE.OUT)
-	
+func hitch_finished():
+	anim_parameters["hitch_interrupt"] = true
+
+func buildup_finished():
+	anim_parameters["buildup_interrupt"] = true
+
 func sneeze_trigger(value):
 	sneeze_trigger_count.add_value(value)
 	

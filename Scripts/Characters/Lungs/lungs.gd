@@ -28,18 +28,20 @@ signal want_breathe
 signal must_breathe
 signal breathe_rate(rate : float)
 
-enum BREATH_STATE {IDLE, IN, OUT, HOLD, HITCH, SNEEZE, SIGH}
+enum BREATH_STATE {IDLE, IN, OUT, HOLD, HITCH, BUILDUP, SNEEZE, SIGH}
 var breath_state_current = BREATH_STATE.IDLE
 @export var IDLE_RATE = 0.0
 @export var IN_RATE = 50.0
 @export var OUT_RATE = -70.0
 @export var HITCH_RATE = 15.0
+@export var BUILD_RATE = 25.0
 @export var SNEEZE_RATE = -40.0
 @export var SIGH_RATE = -30.0
 
 @export var IN_WIND_BONUS = 1.0
 @export var OUT_WIND_BONUS = 1.0
 @export var HITCH_WIND_BONUS = 1.0
+@export var BUILD_WIND_BONUS = 1.0
 @export var SNEEZE_WIND_BONUS = 20.0
 @export var SIGH_WIND_BONUS = 5.75
 
@@ -97,6 +99,9 @@ func _physics_process(delta: float) -> void:
 		
 		BREATH_STATE.HITCH:
 			breathe(HITCH_RATE, HITCH_WIND_BONUS, delta)
+		
+		BREATH_STATE.BUILDUP:
+			breathe(BUILD_RATE, BUILD_WIND_BONUS, delta)
 			
 		BREATH_STATE.SNEEZE:
 			if voice_box.Sneeze.playing and sneeze_wind_curve:

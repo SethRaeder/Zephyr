@@ -19,7 +19,7 @@ func _ready() -> void:
 		var files_list = get_all_files(load_audio_directory)
 		
 		for file : String in files_list:
-			print("File : ",file)
+			#print("File : ",file)
 			if file.ends_with(".wav.import"):
 				file = file.split(".import")[0]
 				#var new_stream : AudioStreamWAV = loader.loadfile(file)
