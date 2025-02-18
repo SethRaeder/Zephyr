@@ -3435,17 +3435,17 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-scale = Vector2(0.999879, 0.999879)
+scale = Vector2(0.99988, 0.99988)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-scale = Vector2(0.999832, 0.999832)
+scale = Vector2(0.999834, 0.999834)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-scale = Vector2(0.99984, 0.99984)
+scale = Vector2(0.999838, 0.999838)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
@@ -3623,9 +3623,9 @@ rotation = -0.254818
 remote_path = NodePath("../../../../../../../MouthRemote")
 
 [node name="MouthRemote" type="Node2D" parent="."]
-position = Vector2(-2705.05, -678.218)
-rotation = -0.403164
-scale = Vector2(0.999222, 0.999222)
+position = Vector2(-2877.86, -549.512)
+rotation = -0.292338
+scale = Vector2(0.999225, 0.999225)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3678,9 +3678,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="."]
-position = Vector2(-2729.05, -838.132)
-rotation = -0.148346
-scale = Vector2(0.999222, 0.999222)
+position = Vector2(-2884.03, -711.101)
+rotation = -0.0375199
+scale = Vector2(0.999225, 0.999225)
 
 [node name="NoseOuter" parent="NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -3758,9 +3758,9 @@ position = Vector2(366.379, 81.4704)
 position = Vector2(135.804, -67.3726)
 
 [node name="HeadRemote" type="Node2D" parent="."]
-position = Vector2(-2135.05, -1227.63)
-rotation = -0.148346
-scale = Vector2(0.999222, 0.999222)
+position = Vector2(-2250.59, -1032.51)
+rotation = -0.0375199
+scale = Vector2(0.999225, 0.999225)
 
 [node name="LookRollBackTarget" type="Marker2D" parent="HeadRemote"]
 unique_name_in_owner = true
