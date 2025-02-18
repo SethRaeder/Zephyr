@@ -28,6 +28,10 @@ window/stretch/mode="canvas_items"
 
 movie_writer/movie_file="E:/Godot/Projects/Missile Command/Render.avi"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/soupik/plugin.cfg")
+
 [global_group]
 
 wind=""
