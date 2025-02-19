@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Resources/Definitions/allergy_resource.gd" id="1_37xgq"]
 
 [sub_resource type="Curve" id="Curve_0voxx"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.152797, 0.0655257), 0.674423, 0.674423, 0, 0, Vector2(0.270123, 1), 0.0, 0.0, 0, 0, Vector2(0.452933, 0.16088), -0.483013, -0.483013, 0, 0, Vector2(1, 0.103667), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0969072, 0.045734), 0.674423, 0.674423, 0, 0, Vector2(0.197938, 1), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.15565), 0.0521007, 0.0521007, 0, 0, Vector2(0.997938, 0.130669), 0.0, 0.0, 0, 0]
 point_count = 5
 
 [resource]

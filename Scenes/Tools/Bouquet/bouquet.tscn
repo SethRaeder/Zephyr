@@ -76,11 +76,12 @@ script = ExtResource("3_dvufp")
 
 [node name="TickleComponent" type="Area2D" parent="."]
 position = Vector2(1, -42)
+collision_layer = 0
+collision_mask = 8
 script = ExtResource("4_qoxqd")
 tickle_type = 2
 allergy_type = ExtResource("5_oy7qk")
-intensity = 5.0
-tickle_damage_curve = null
+intensity = 30.0
 use_velocity = true
 velocity_curve = SubResource("Curve_56uft")
 

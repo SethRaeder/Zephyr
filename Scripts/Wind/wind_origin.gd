@@ -23,7 +23,7 @@ func _ready() -> void:
 	if lungs:
 		lungs.breathe_rate.connect(func(rate : float):
 			#print("Origin: Rate: %.2f" % rate)
-			wind_strength_radial = rate * 10000
+			wind_strength_radial = rate * 15000
 			wind_strength_linear = rate * 100
 		)
 

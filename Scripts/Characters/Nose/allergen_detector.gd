@@ -23,7 +23,7 @@ var debug_timer : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	debug_timer = Timer.new()
-	debug_timer.wait_time = 1.0
+	debug_timer.wait_time = 2.0
 	debug_timer.timeout.connect(debug)
 	#debug_timer.autostart = true
 	add_child(debug_timer)
