@@ -47,9 +47,10 @@ script = ExtResource("1_bp4m2")
 [node name="ParticleEmitter" parent="." instance=ExtResource("2_ewvqs")]
 position = Vector2(0, -94)
 particle_scene = ExtResource("3_eciq1")
-release_on_jerk = true
 jerk_accelerate = true
-release_on_speed = false
+jerk_decelerate = false
+jerk_threshold = 15000.0
+jerk_particle_variance = Vector2(1, 5)
 particle_spawn_max_speed = 500.0
 
 [node name="DusterCollision" type="CollisionShape2D" parent="."]
@@ -115,17 +116,19 @@ offset_top = 40.0
 offset_right = 30.78
 offset_bottom = 71.655
 
-[node name="DustyBurn2" type="Area2D" parent="."]
+[node name="Dust Allergy" type="Area2D" parent="."]
 position = Vector2(0, -84)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("7_6newg")
+tickle_type = 2
 allergy_type = ExtResource("11_shvuq")
+intensity = 20.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DustyBurn2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dust Allergy"]
 shape = SubResource("CircleShape2D_epfxd")
 
-[node name="TickleDebugSuite" parent="DustyBurn2" instance=ExtResource("8_pevtq")]
+[node name="TickleDebugSuite" parent="Dust Allergy" instance=ExtResource("8_pevtq")]
 offset_left = 17.0
 offset_top = 40.0
 offset_right = 30.78

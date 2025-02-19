@@ -35,8 +35,7 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_25yxm")
 tickle_type = 1
-intensity = 40.0
-tickle_damage_limit = 0.1
+tickle_damage_limit = 0.5
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="Burn"]
 process_mode = 3
@@ -50,8 +49,7 @@ shape = SubResource("CircleShape2D_34lcl")
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_25yxm")
-intensity = 40.0
-tickle_damage_limit = 0.25
+tickle_damage_limit = 1.0
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
 process_mode = 3
@@ -67,7 +65,8 @@ collision_mask = 8
 script = ExtResource("3_25yxm")
 tickle_type = 2
 allergy_type = ExtResource("5_rkbtu")
-tickle_damage_limit = 1.0
+intensity = 5.0
+tickle_damage_limit = 5.0
 
 [node name="EnableOnBreatheComponent" type="Node2D" parent="DustDamage"]
 process_mode = 3
