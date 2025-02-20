@@ -26,6 +26,14 @@ class_name Brain
 ##Variance in the update timer, from 0 seconds to value seconds
 @export var update_timer_max_variance := 1.0
 
+@export_category("Animation Modifiers")
+##Modifier to chance to play a hitch while waiting in the hitch interrupt state
+@export var hitch_repeat_modifier : CustomBoundedValue
+##Modifier to chance to play a buildup while waiting in the buildup interrupt state
+@export var buildup_repeat_modifier : CustomBoundedValue
+##Modifier to chance to play a sneeze while waiting in the sneeze interrupt state
+@export var sneeze_repeat_modifier : CustomBoundedValue
+
 @export_category("Fits")
 ##How likely to have a fit? Max 1.0
 @export var fit_probability : float = 0.3
@@ -37,10 +45,12 @@ class_name Brain
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var update_timer: Timer = $UpdateTimer
 @onready var fit_timer: Timer = $FitTimer
-@onready var sneeze_trigger_count := CustomBoundedValue.new("Sneeze Trigger Count",0.0,sneeze_trigger_target,0.0)
+
+var sneeze_trigger_count := CustomBoundedValue.new()
+
 @onready var sneeze_decay_rate : float = -sneeze_trigger_target / sneeze_trigger_decay_seconds
 var idletickleblend := 0.0
-
+var sneeze_size : float = 1.0
 var anim_parameters = {
 	"hitch": false,
 	"hitch_interrupt": false,
@@ -54,10 +64,12 @@ var anim_parameters = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	sneeze_trigger_count.name = "Sneeze Trigger Count"
+	sneeze_trigger_count.max_value = sneeze_trigger_target
+	
 	animation_tree.set("parameters/Blink Shot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	animation_tree.set("parameters/Earflick Shot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	
-	animation_tree.get("parameters/SneezeMachine/playback").get_current_node()
 	
 	lungs.breathe_out.connect(
 		func():
@@ -97,7 +109,7 @@ func _process(delta: float) -> void:
 	idletickleblend = lerpf(idletickleblend, clamp(float(sneeze_trigger_count.current_value * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) / tickle_max), 0.0, 1.0), delta)
 	
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
-	animation_tree.set("parameters/SneezeMachine/IdleTickle/blend_position", idletickleblend)
+	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
 
 func timer_timeout():
 	anim_parameters["hitch"] = false
@@ -109,28 +121,32 @@ func timer_timeout():
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
 	#print("<Brain> IdleTickleBlend: ",idletickleblend)
 	var sneeze_percent = sneeze_trigger_count.get_percent()
-	var playback = animation_tree.get("parameters/SneezeMachine/playback")
-	if randf() < hitch_curve.sample(sneeze_percent):
+	var playback = animation_tree.get("parameters/Parameter Animation/playback")
+	
+	var is_hitching = false
+	var is_building = false
+	var is_sneezing = false
+	match playback.get_current_node():
+		"hitch", "hitch 2":
+			is_hitching = true
+		"buildup", "buildup 2":
+			is_building = true
+		"sneeze", "sneeze 2":
+			is_sneezing = true
+	
+	if randf() * (hitch_repeat_modifier.current_value if is_hitching else 1.0) < hitch_curve.sample(sneeze_percent):
 		if not lungs.is_full():
-			match playback.get_current_node():
-				"hitch":
-					if randf() <= 0.2:
-						anim_parameters["hitch"] = true
-				_:
-					anim_parameters["hitch"] = true
+			anim_parameters["hitch"] = true
 		else:
 			anim_parameters["sigh"] = true
-	if randf() < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
+	
+	if randf() * (buildup_repeat_modifier.current_value if is_building else 1.0) < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
 		if not lungs.is_full():
-			match playback.get_current_node():
-				"buildup":
-					if randf() <= 0.2:
-						anim_parameters["buildup"] = true
-				_:
-					anim_parameters["buildup"] = true
+			anim_parameters["buildup"] = true
 		else:
 			anim_parameters["sigh"] = true
-	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
+			
+	if randf() * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0) < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
 		anim_parameters["sneeze"] = true
 	
 	#animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
@@ -138,23 +154,29 @@ func timer_timeout():
 	#animation_tree.set("parameters/SneezeMachine/conditions/hitch",hitch)
 	#animation_tree.set("parameters/SneezeMachine/conditions/sigh",sigh)
 
-func on_hitch():
+func on_hitch_anim():
 	anim_parameters["hitch_interrupt"] = false
-	anim_parameters["sneeze_interrupt"] = false
 	anim_parameters["buildup_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
+
+func on_buildup_anim():
+	anim_parameters["hitch_interrupt"] = false
+	anim_parameters["buildup_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
+
+func on_sneeze_anim():
+	anim_parameters["hitch_interrupt"] = false
+	anim_parameters["buildup_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
+	sneeze_size = 1.0
+	
+func on_hitch():
 	lungs.set_breath_state(lungs.BREATH_STATE.HITCH)
 	
 func on_buildup():
-	anim_parameters["hitch_interrupt"] = false
-	anim_parameters["sneeze_interrupt"] = false
-	anim_parameters["buildup_interrupt"] = false
 	lungs.set_breath_state(lungs.BREATH_STATE.BUILDUP)
 	
 func on_sneeze():
-	anim_parameters["hitch_interrupt"] = false
-	anim_parameters["sneeze_interrupt"] = false
-	anim_parameters["buildup_interrupt"] = false
-	var sneeze_size = 1.0
 	sneeze_trigger_count.add_value(-sneeze_trigger_expel * sneeze_size)
 	lungs.set_breath_state(lungs.BREATH_STATE.SNEEZE)
 	
@@ -186,3 +208,6 @@ func must_breathe():
 func send_sliders(container : SliderBarContainer):
 	container.add_new_header(name + " Settings")
 	container.add_new_slider(sneeze_trigger_count)
+	container.add_new_slider(hitch_repeat_modifier)
+	container.add_new_slider(buildup_repeat_modifier)
+	container.add_new_slider(sneeze_repeat_modifier)

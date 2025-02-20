@@ -5,9 +5,10 @@ class_name NoseTriggerZone
 @export var connected_nose : NoseTriggerZone
 @export var nose_share : float = 0.5
 @export var sneeze_trigger_amount : float = 1.0
-@export var tickle_max : float = 50.0
-@export var burn_max : float = 30.0
-@export var sensitivity_max : float = 5.0
+#Bounded values for the three main parameters in the nose
+@export var tickle : CustomBoundedValue
+@export var burn : CustomBoundedValue
+@export var sensitivity : CustomBoundedValue
 
 @export_category("Sensitivity")
 ##General idle sensitivity of the nose
@@ -40,11 +41,6 @@ class_name NoseTriggerZone
 @onready var sneeze_trigger_timer: Timer = %SneezeTriggerTimer
 @onready var tickle_decay_timer: Timer = %TickleDecayTimer
 @onready var burn_decay_timer: Timer = %BurnDecayTimer
-
-#Bounded values for the three main parameters in the nose
-@onready var tickle := CustomBoundedValue.new("Tickle",0.0, tickle_max, 0.0)
-@onready var burn := CustomBoundedValue.new("Burn",0.0, burn_max, 0.0)
-@onready var sensitivity := CustomBoundedValue.new("Sensitivity",0.0, sensitivity_max, 1.0)
 
 @onready var tickle_decay = tickle.max_value / tickle_decay_seconds
 @onready var burn_decay = burn.max_value / burn_decay_seconds

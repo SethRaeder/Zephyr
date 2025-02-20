@@ -15,11 +15,11 @@ class_name Lungs
   #send "desire oxygen" signal
   #send "oxygen empty" signal
 
-var lungs := CustomBoundedValue.new("Lungs",0.0,100.0,0.0)
-var oxygen := CustomBoundedValue.new("Oxygen",-300.0,100.0,0.0)
+@export var lungs : CustomBoundedValue
+@export var oxygen : CustomBoundedValue
 
 var oxygen_per_lungs = 2.0
-var oxygen_decay_rate = oxygen.max_value / 6.0
+@onready var oxygen_decay_rate = oxygen.max_value / 6.0
 
 signal breathe_in
 signal breathe_out

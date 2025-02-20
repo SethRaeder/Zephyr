@@ -1,9 +1,9 @@
 extends Node
 class_name Cold
 
-@export var tickle_strength : CustomBoundedValue = CustomBoundedValue.new("Tickle Strength", 0, 5, 0)
-@export var burn_strength : CustomBoundedValue = CustomBoundedValue.new("Burn Strength", 0, 5, 0)
-@export var sensitivity_strength : CustomBoundedValue = CustomBoundedValue.new("Sensitivity Strength", 0, 1, 0)
+@export var tickle_strength : CustomBoundedValue
+@export var burn_strength : CustomBoundedValue
+@export var sensitivity_strength : CustomBoundedValue
 
 var nose_parent : NoseTriggerZone
 

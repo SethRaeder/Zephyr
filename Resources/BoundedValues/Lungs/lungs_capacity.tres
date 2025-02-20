@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://clt10mw8xata"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_ap3pl"]
+
+[resource]
+script = ExtResource("1_ap3pl")
+name = &"Lungs"
+min_value = 0.0
+max_value = 100.0
+current_value = 0.0

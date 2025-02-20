@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://bxkjrsat7xi25"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_d0hki"]
+
+[resource]
+script = ExtResource("1_d0hki")
+name = &"Tickle Strength"
+min_value = 0.0
+max_value = 5.0
+current_value = 0.0

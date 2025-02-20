@@ -30,6 +30,20 @@ shape = SubResource("CircleShape2D_3i2k4")
 scale = Vector2(0.18, 0.18)
 script = ExtResource("2_srpe6")
 
+[node name="Tickle" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_25yxm")
+tickle_damage_limit = 1.0
+
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
+process_mode = 3
+scale = Vector2(0.18, 0.18)
+script = ExtResource("4_yj65s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+shape = SubResource("CircleShape2D_34lcl")
+
 [node name="Burn" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
@@ -45,25 +59,11 @@ script = ExtResource("4_yj65s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Burn"]
 shape = SubResource("CircleShape2D_34lcl")
 
-[node name="Tickle" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("3_25yxm")
-tickle_damage_limit = 1.0
-
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
-process_mode = 3
-scale = Vector2(0.18, 0.18)
-script = ExtResource("4_yj65s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
-shape = SubResource("CircleShape2D_34lcl")
-
 [node name="DustDamage" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_25yxm")
-tickle_type = 2
+tickle_type = 3
 allergy_type = ExtResource("5_rkbtu")
 intensity = 5.0
 tickle_damage_limit = 5.0

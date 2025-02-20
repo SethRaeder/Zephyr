@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://cv6wu16d2pvxw"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_0que3"]
+
+[resource]
+script = ExtResource("1_0que3")
+name = &"Buildup Repeat"
+min_value = 0.0
+max_value = 3.0
+current_value = 0.75

@@ -15,13 +15,15 @@ class_name AllergenDetector
 
 @onready var progress_decay_rate = -time_to_max_progress / decay_time_seconds
 @onready var particle_decay_rate = -allergen.max_count / particle_decay_seconds 
-@onready var allergen_time := CustomBoundedValue.new("Allergy Time", 0.0, time_to_max_progress, 0.0)
-@onready var allergen_particles := CustomBoundedValue.new("Allergy Particles", 0.0, allergen.max_count, 0.0)
+var allergen_time := CustomBoundedValue.new()
+var allergen_particles := CustomBoundedValue.new()
 
 var nose : NoseTriggerZone
 var debug_timer : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("has_sliders")
+	
 	debug_timer = Timer.new()
 	debug_timer.wait_time = 2.0
 	debug_timer.timeout.connect(debug)
@@ -30,7 +32,12 @@ func _ready() -> void:
 	
 	nose = get_parent()
 	nose.on_allergy_damage.connect(on_allergy_damage)
+		
+	allergen_time.name = allergen.allergy_name + " Progress"
+	allergen_time.max_value = time_to_max_progress
 	
+	allergen_particles.name = allergen.allergy_name + " Particles"
+	allergen_particles.max_value = allergen.max_count
 
 func on_allergy_damage(damage_amount : float, allergy_type : AllergyResource):
 	if allergy_type.allergy_name == allergen.allergy_name:
@@ -61,3 +68,9 @@ func debug() -> void:
 	print("DETECTOR %s %s" % [allergen.allergy_name, allergen_particles.to_string()])
 	print("Burn Damage: ",get_burn_damage())
 	print("Tickle Damage: ",get_tickle_damage())
+
+func send_sliders(container : SliderBarContainer):
+	print("Allergen Detector sending sliders...")
+	container.add_new_slider(allergen_particles)
+	container.add_new_slider(allergen_time)
+	

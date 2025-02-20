@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/Characters/Brain/brain.gd" id="1_15ufg"]
 
 [sub_resource type="Curve" id="Curve_uegr1"]
-_data = [Vector2(0.101415, 0), 0.0, 0.0, 0, 0, Vector2(0.249653, 0.357946), 0.00210132, 0.00210132, 0, 0, Vector2(0.499307, 0.141809), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0.101415, 0), 0.0, 0.0, 0, 0, Vector2(0.249653, 0.357946), 0.00210132, 0.00210132, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve" id="Curve_mqb0w"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.504157), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.695234), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_adlbt"]

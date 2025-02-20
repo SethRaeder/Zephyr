@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://cgkpr8ry7vobu"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_2jlbl"]
+
+[resource]
+script = ExtResource("1_2jlbl")
+name = &"Sensitivity"
+min_value = 0.0
+max_value = 5.0
+current_value = 1.0

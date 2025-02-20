@@ -84,8 +84,8 @@ func spawn_particle():
 	particle_count += 1
 	
 	if particle_count >= particle_max_count:
-		var to_delete = particle_array.pop_front()
-		if is_instance_valid(to_delete):
+		if is_instance_valid(particle_array[0]):
+			var to_delete = particle_array.pop_front()
 			to_delete.queue_free()
 		
 	var new_particle : ToolParticle = particle_scene.instantiate()

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://p7lhvkv4k2n7"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_qgt0g"]
+
+[resource]
+script = ExtResource("1_qgt0g")
+name = &"Hitch Repeat"
+min_value = 0.0
+max_value = 3.0
+current_value = 0.75

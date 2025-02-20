@@ -24,7 +24,7 @@ var total_tickle_damage : float = 0
 @export var max_speed : float = 500
 @export var velocity_curve : Curve
 
-var targeted_area : NoseTriggerZone
+var targeted_areas = []
 
 #signal tickle_damage_percent(percent : float)
 
@@ -33,13 +33,13 @@ func _ready() -> void:
 	area_exited.connect(_on_area_exited)
 	
 func _physics_process(delta: float) -> void:
-	if targeted_area:
+	for area : NoseTriggerZone in targeted_areas:
 		var tickle_amount = get_tickle() * delta
 			
 		#Add tickle to targeted area
 		if tickle_amount > 0:
 			total_tickle_damage += tickle_amount
-			targeted_area.add_tickle(tickle_amount, tickle_type, allergy_type)
+			area.add_tickle(tickle_amount, tickle_type, allergy_type)
 			#tickle_damage_percent.emit(total_tickle_damage / tickle_damage_limit)
 
 func get_tickle():
@@ -66,11 +66,9 @@ func get_durability_sample() -> float:
 
 func _on_area_entered(area: Area2D) -> void:
 	#print("TickleComponent: Area Entered")
-	if area.has_method("add_tickle"):
-		#print("Targeting area...")
-		targeted_area = area
+	if area is NoseTriggerZone and area.has_method("add_tickle"):
+		print("Targeting area...")
+		targeted_areas.append(area)
 
 func _on_area_exited(area: Area2D) -> void:
-	if area == targeted_area:
-		#print("Leaving targeted area")
-		targeted_area = null
+	targeted_areas.erase(area)

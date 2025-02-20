@@ -32,10 +32,9 @@ script = ExtResource("3_eyw80")
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("4_p6mro")
-tickle_type = 2
+tickle_type = 3
 allergy_type = ExtResource("5_naktk")
 intensity = 5.0
-tickle_damage_curve = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
 shape = SubResource("CircleShape2D_ncgkj")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://wwlqpolj5hkp"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_ihuno"]
+
+[resource]
+script = ExtResource("1_ihuno")
+name = &"Tickle"
+min_value = 0.0
+max_value = 50.0
+current_value = 0.0

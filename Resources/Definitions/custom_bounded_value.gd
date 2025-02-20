@@ -5,12 +5,12 @@ class_name CustomBoundedValue
 @export var min_value : float
 @export var max_value : float
 @export var current_value : float
-
-func _init(_name, _min, _max, _current) -> void:
-	name = _name
-	min_value = _min
-	max_value = _max
-	current_value = _current
+#
+#func _init(_name, _min, _max, _current) -> void:
+	#name = _name
+	#min_value = _min
+	#max_value = _max
+	#current_value = _current
 
 signal hit_max()
 signal hit_min()

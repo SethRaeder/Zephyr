@@ -1,4 +1,4 @@
-[gd_scene load_steps=181 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=169 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -43,8 +43,10 @@
 [ext_resource type="Resource" uid="uid://clt10mw8xata" path="res://Resources/BoundedValues/Lungs/lungs_capacity.tres" id="45_ufyo5"]
 [ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="46_5853s"]
 [ext_resource type="Resource" uid="uid://oqe736kqr37q" path="res://Resources/BoundedValues/Lungs/oxygen.tres" id="46_qsxht"]
+[ext_resource type="Resource" uid="uid://wwlqpolj5hkp" path="res://Resources/BoundedValues/Nose/tickle.tres" id="53_hprwp"]
+[ext_resource type="Resource" uid="uid://dmkmrt44rwlci" path="res://Resources/BoundedValues/Nose/burn.tres" id="54_07v1p"]
+[ext_resource type="Resource" uid="uid://cgkpr8ry7vobu" path="res://Resources/BoundedValues/Nose/sensitivity.tres" id="55_od4wk"]
 [ext_resource type="Script" path="res://Scripts/Characters/Nose/cold.gd" id="56_hg8um"]
-[ext_resource type="Script" path="res://Scripts/Characters/Nose/nose_redness.gd" id="65_pa7eh"]
 [ext_resource type="Script" path="res://Scripts/Characters/Eyes/pupil.gd" id="68_cjxlc"]
 [ext_resource type="Script" path="res://Scripts/Characters/Eyes/eye_target.gd" id="69_e8orq"]
 [ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/Nose/nose.tscn" id="69_ekg2v"]
@@ -2799,21 +2801,21 @@ point_count = 4
 script = ExtResource("46_5853s")
 name = &"Hitch Repeat"
 min_value = 0.0
-max_value = 3.0
+max_value = 10.0
 current_value = 0.75
 
 [sub_resource type="Resource" id="Resource_0lban"]
 script = ExtResource("46_5853s")
 name = &"Buildup Repeat"
 min_value = 0.0
-max_value = 3.0
+max_value = 10.0
 current_value = 0.75
 
 [sub_resource type="Resource" id="Resource_l3cks"]
 script = ExtResource("46_5853s")
 name = &"Sneeze Repeat"
 min_value = 0.0
-max_value = 3.0
+max_value = 10.0
 current_value = 2.0
 
 [sub_resource type="Curve" id="Curve_4tqut"]
@@ -2857,61 +2859,9 @@ alpha_curve = SubResource("CurveTexture_sjgqv")
 turbulence_influence_min = 0.017
 turbulence_influence_max = 0.035
 
-[sub_resource type="Resource" id="Resource_iaikh"]
-script = ExtResource("46_5853s")
-name = &"Tickle"
-min_value = 0.0
-max_value = 50.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_465k4"]
-script = ExtResource("46_5853s")
-name = &"Burn"
-min_value = 0.0
-max_value = 30.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_eifgo"]
-script = ExtResource("46_5853s")
-name = &"Sensitivity"
-min_value = 0.0
-max_value = 5.0
-current_value = 1.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6po3j"]
 radius = 101.293
 height = 241.4
-
-[sub_resource type="Resource" id="Resource_brd67"]
-script = ExtResource("46_5853s")
-name = &"Tickle Strength"
-min_value = 0.0
-max_value = 5.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_nnnw8"]
-script = ExtResource("46_5853s")
-name = &"Burn Strength"
-min_value = 0.0
-max_value = 5.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_dw1mu"]
-script = ExtResource("46_5853s")
-name = &"Sensitivity"
-min_value = 0.0
-max_value = 5.0
-current_value = 0.0
-
-[sub_resource type="Gradient" id="Gradient_6sn64"]
-offsets = PackedFloat32Array(0, 0.340961, 1)
-colors = PackedColorArray(1, 0, 0, 0.356863, 1, 0, 0, 0.290196, 1, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_doowj"]
-gradient = SubResource("Gradient_6sn64")
-fill = 1
-fill_from = Vector2(0.517094, 0.491453)
-fill_to = Vector2(0.491453, 0)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wkx0m"]
 radius = 85.7515
@@ -2922,55 +2872,12 @@ friction = 0.5
 bounce = 0.2
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h47km"]
-friction = 0.88
-rough = true
-bounce = 0.04
-
-[sub_resource type="Resource" id="Resource_0jelg"]
-script = ExtResource("46_5853s")
-name = &"Tickle"
-min_value = 0.0
-max_value = 50.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_od1fg"]
-script = ExtResource("46_5853s")
-name = &"Burn"
-min_value = 0.0
-max_value = 30.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_d4a8b"]
-script = ExtResource("46_5853s")
-name = &"Sensitivity"
-min_value = 0.0
-max_value = 5.0
-current_value = 1.0
+friction = 0.42
+bounce = 0.09
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7cjx"]
 radius = 126.306
 height = 679.068
-
-[sub_resource type="Resource" id="Resource_br64e"]
-script = ExtResource("46_5853s")
-name = &"Tickle Strength"
-min_value = 0.0
-max_value = 5.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_qo8hi"]
-script = ExtResource("46_5853s")
-name = &"Burn Strength"
-min_value = 0.0
-max_value = 5.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_g1lt0"]
-script = ExtResource("46_5853s")
-name = &"Sensitivity"
-min_value = 0.0
-max_value = 5.0
-current_value = 0.0
 
 [node name="Kel_Rig" type="Node2D"]
 
@@ -3151,12 +3058,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.449152
+rotation = 0.558344
 scale = Vector2(0.999869, 0.999869)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.45004
+target_rotation = 0.556148
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -3165,12 +3072,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.538676
-scale = Vector2(0.999853, 0.999853)
+rotation = 0.389374
+scale = Vector2(0.999851, 0.999851)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.537858
+target_rotation = 0.393443
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -3179,12 +3086,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.386051
-scale = Vector2(0.999851, 0.999851)
+rotation = -0.442643
+scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.388161
+target_rotation = -0.43677
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -3193,12 +3100,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.527252
-scale = Vector2(0.999856, 0.999856)
+rotation = -0.495216
+scale = Vector2(0.999859, 0.999859)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.529579
+target_rotation = -0.495459
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -3207,8 +3114,8 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.135069
-scale = Vector2(0.999834, 0.999834)
+rotation = -0.0719827
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -3223,7 +3130,7 @@ remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
 [node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-55.0004, 119)
-scale = Vector2(0.999844, 0.999844)
+scale = Vector2(0.999845, 0.999845)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 89.071
@@ -3263,7 +3170,7 @@ bone_angle = -96.429
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-24.0005, 62)
 rotation = -0.00942021
-scale = Vector2(0.999828, 0.999828)
+scale = Vector2(0.999826, 0.999826)
 rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
 editor_settings/show_bone_gizmo = false
 
@@ -3283,7 +3190,7 @@ bone_angle = 51.429
 
 [node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
 position = Vector2(-450.817, 190.762)
-scale = Vector2(0.999841, 0.999841)
+scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3302,12 +3209,12 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(26.4717, 56.252)
-rotation = 0.03442
-scale = Vector2(0.999878, 0.999878)
+rotation = 0.0496163
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.0815774
+target_rotation = 0.113351
 target_position = Vector2(26.4717, 56.252)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3316,12 +3223,12 @@ constraint_data = SubResource("Resource_iplph")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-144.681, 71.6403)
-rotation = -0.0234518
-scale = Vector2(0.999889, 0.999889)
+rotation = 0.0206944
+scale = Vector2(0.999883, 0.999883)
 rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.0698186
+target_rotation = -0.0461098
 target_position = Vector2(-144.681, 71.6403)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3330,12 +3237,12 @@ constraint_data = SubResource("Resource_43o6b")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-148.182, 18.605)
-rotation = -0.0790857
-scale = Vector2(0.999829, 0.999829)
+rotation = -0.0344531
+scale = Vector2(0.999833, 0.999833)
 rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.168454
+target_rotation = -0.202356
 target_position = Vector2(-148.182, 18.605)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3344,15 +3251,15 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-146.994, -1.38475)
-rotation = -0.258709
-scale = Vector2(0.999834, 0.999834)
+rotation = -0.233848
+scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.252519
+target_rotation = -0.44547
 target_position = Vector2(-146.994, -1.38475)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3365,7 +3272,7 @@ remote_path = NodePath("../../../../../../../IK Targets/TongueRemote")
 
 [node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(124, -56)
-scale = Vector2(0.999855, 0.999855)
+scale = Vector2(0.999858, 0.999858)
 rest = Transform2D(1, 0, 0, 1, 124, -56)
 auto_calculate_length_and_angle = false
 length = 276.317
@@ -3456,7 +3363,6 @@ chain_root = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExten
 chain_tip = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4")
 
 [node name="IK Targets" type="Node2D" parent="Skeleton2D"]
-visible = false
 
 [node name="Neck Mid" type="Marker2D" parent="Skeleton2D/IK Targets"]
 position = Vector2(-797, -1014)
@@ -3471,9 +3377,9 @@ position = Vector2(-2906, -977)
 gizmo_extents = 209.5
 
 [node name="TongueRemote" type="Node2D" parent="Skeleton2D/IK Targets"]
-position = Vector2(-2428.1, -910.411)
-rotation = -0.0699645
-scale = Vector2(0.999092, 0.999092)
+position = Vector2(-2461.47, -844.469)
+rotation = -0.0715437
+scale = Vector2(0.999085, 0.999085)
 
 [node name="Tongue" type="Marker2D" parent="Skeleton2D/IK Targets/TongueRemote"]
 rotation = -0.112874
@@ -3541,9 +3447,9 @@ fit_sneeze_bonus = 3.0
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-2394.22, -940.949)
-rotation = -0.315362
-scale = Vector2(0.999264, 0.999264)
+position = Vector2(-2427.64, -875.059)
+rotation = -0.316941
+scale = Vector2(0.999259, 0.999259)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
 position = Vector2(1.66046, 37.7143)
@@ -3596,21 +3502,20 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-2471.91, -1064.4)
-rotation = -0.0605443
-scale = Vector2(0.999264, 0.999264)
+position = Vector2(-2505.53, -998.385)
+rotation = -0.0621235
+scale = Vector2(0.999259, 0.999259)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-15.8502, 11.9606)
 rotation = 0.830374
 scale = Vector2(1.00064, 0.99947)
 skew = 8.57115e-05
 priority = 25
-tickle = SubResource("Resource_iaikh")
-burn = SubResource("Resource_465k4")
-sensitivity = SubResource("Resource_eifgo")
+tickle = ExtResource("53_hprwp")
+burn = ExtResource("54_07v1p")
+sensitivity = ExtResource("55_od4wk")
 sensitivity_multiplier_on_sneeze = 0.5
 sensitivity_decay_seconds = 25.0
 tickle_wait_seconds = 5.0
@@ -3645,13 +3550,9 @@ particle_decay_seconds = 80.0
 
 [node name="NoseOuterCold" type="Node" parent="Remote Transforms/NoseRemote/NoseOuter"]
 script = ExtResource("56_hg8um")
-tickle_strength = SubResource("Resource_brd67")
-burn_strength = SubResource("Resource_nnnw8")
-sensitivity_strength = SubResource("Resource_dw1mu")
 
 [node name="BreathWindOrigin" type="Marker2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("lungs", "radial_wind_origin", "linear_wind_origin", "linear_wind_direction") groups=["wind"]]
 unique_name_in_owner = true
-visible = false
 position = Vector2(61.7464, -25.8973)
 rotation = -3.57453
 scale = Vector2(1.00005, 1.00005)
@@ -3671,28 +3572,10 @@ position = Vector2(366.379, 81.4704)
 [node name="Linear Direction" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin/Linear Origin"]
 position = Vector2(135.804, -67.3726)
 
-[node name="Nose Redness" type="Sprite2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("tracked_nose")]
-position = Vector2(-1.83577, 8.39037)
-rotation = 0.618289
-scale = Vector2(2.33816, 3.40603)
-texture = SubResource("GradientTexture2D_doowj")
-script = ExtResource("65_pa7eh")
-tracked_nose = NodePath("../NoseOuter")
-tickle_factor = 0.1
-
-[node name="Nose Redness2" type="Sprite2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("tracked_nose")]
-position = Vector2(-1.83577, 8.39037)
-rotation = 0.618289
-scale = Vector2(2.33816, 3.40603)
-texture = SubResource("GradientTexture2D_doowj")
-script = ExtResource("65_pa7eh")
-tracked_nose = NodePath("../../HeadRemote/NoseInner")
-tickle_factor = 0.1
-
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-1850.72, -1403.81)
-rotation = -0.0605443
-scale = Vector2(0.999264, 0.999264)
+position = Vector2(-1884.87, -1338.78)
+rotation = -0.0621235
+scale = Vector2(0.999259, 0.999259)
 
 [node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
 unique_name_in_owner = true
@@ -3710,12 +3593,12 @@ gizmo_extents = 119.6
 position = Vector2(-645.549, 297.654)
 
 [node name="NoseInsertDetector" type="Area2D" parent="Remote Transforms/HeadRemote/Nose Insertion" node_paths=PackedStringArray("insert_mask")]
-visible = false
 script = ExtResource("84_n5npt")
 insert_mask = NodePath("InsertMask")
 
 [node name="InsertMask" type="Polygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseInsertDetector"]
 unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
 show_behind_parent = true
 clip_children = 1
 position = Vector2(-25.0977, 7.01343)
@@ -3727,7 +3610,6 @@ rotation = 1.26522
 shape = SubResource("CapsuleShape2D_wkx0m")
 
 [node name="NoseCollision" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote/Nose Insertion"]
-visible = false
 position = Vector2(645.549, -297.654)
 collision_layer = 2
 collision_mask = 0
@@ -3763,7 +3645,6 @@ one_way_collision = true
 
 [node name="NoseInner" parent="Remote Transforms/HeadRemote" node_paths=PackedStringArray("connected_nose") instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-352.868, 230.416)
 rotation = 0.830374
 skew = 8.57115e-05
@@ -3771,9 +3652,9 @@ collision_layer = 128
 collision_mask = 128
 priority = 25
 connected_nose = NodePath("../../NoseRemote/NoseOuter")
-tickle = SubResource("Resource_0jelg")
-burn = SubResource("Resource_od1fg")
-sensitivity = SubResource("Resource_d4a8b")
+tickle = ExtResource("53_hprwp")
+burn = ExtResource("54_07v1p")
+sensitivity = ExtResource("55_od4wk")
 sensitivity_multiplier_on_sneeze = 0.9
 sensitivity_decay_seconds = 360.0
 tickle_decay_seconds = 30.0
@@ -3807,6 +3688,3 @@ particle_decay_seconds = 80.0
 
 [node name="NoseInnerCold" type="Node" parent="Remote Transforms/HeadRemote/NoseInner"]
 script = ExtResource("56_hg8um")
-tickle_strength = SubResource("Resource_br64e")
-burn_strength = SubResource("Resource_qo8hi")
-sensitivity_strength = SubResource("Resource_g1lt0")

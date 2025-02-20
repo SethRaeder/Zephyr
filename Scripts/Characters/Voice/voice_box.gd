@@ -32,53 +32,53 @@ func _ready():
 	
 func Play_Buildup():
 	if Buildup: #If sound samples exist, play them.
-		Buildup.stop();
-		Buildup.play();
-		on_buildup.emit()
+		if not Buildup.playing:
+			Buildup.play();
+			on_buildup.emit()
 	else: #Can't play sound samples, skip the playback and go to the finished event.
 		buildup_finished.emit()
 
 
 func Play_Hitch():
 	if Hitch:
-		Hitch.stop();
-		Hitch.play();
-		on_hitch.emit()
+		if not Hitch.playing:
+			Hitch.play();
+			on_hitch.emit()
 	else:
 		hitch_finished.emit()
 
 
 func Play_Sigh():
 	if Sigh:
-		Sigh.stop();
-		Sigh.play();
-		on_sigh.emit()
+		if not Sigh.playing:
+			Sigh.play();
+			on_sigh.emit()
 	else:
 		sigh_finished.emit()
 
 
 func Play_Sneeze():
 	if Sneeze:
-		Sneeze.stop();
-		Sneeze.play();
-		on_sneeze.emit()
+		if not Sneeze.playing:
+			Sneeze.play();
+			on_sneeze.emit()
 	else:
 		sneeze_finished.emit()
 	
 
 func Play_Sniff():
 	if Sniff:
-		Sniff.stop();
-		Sniff.play();
-		on_sniff.emit()
+		if not Sniff.playing:
+			Sniff.play();
+			on_sniff.emit()
 	else:
 		sniff_finished.emit()
 
 
 func Play_Spray():
 	if Spray:
-		Spray.stop();
-		Spray.play();
-		on_spray.emit()
+		if not Spray.playing:
+			Spray.play();
+			on_spray.emit()
 	else:
 		spray_finished.emit()

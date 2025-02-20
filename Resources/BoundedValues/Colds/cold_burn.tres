@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://d3w0h8tk087v8"]
+
+[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_cuudc"]
+
+[resource]
+script = ExtResource("1_cuudc")
+name = &"Burn Strength"
+min_value = 0.0
+max_value = 5.0
+current_value = 0.0
