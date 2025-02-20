@@ -37,7 +37,7 @@ class_name Brain
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var update_timer: Timer = $UpdateTimer
 @onready var fit_timer: Timer = $FitTimer
-@onready var sneeze_trigger_count := CustomBoundedValue.new("sneeze_trigger_count",0.0,sneeze_trigger_target,0.0)
+@onready var sneeze_trigger_count := CustomBoundedValue.new("Sneeze Trigger Count",0.0,sneeze_trigger_target,0.0)
 @onready var sneeze_decay_rate : float = -sneeze_trigger_target / sneeze_trigger_decay_seconds
 var idletickleblend := 0.0
 
@@ -182,3 +182,7 @@ func want_breathe(weight : float):
 func must_breathe():
 	print("Must Breathe Started")
 	lungs.set_breath_state(lungs.BREATH_STATE.IN)
+
+func send_sliders(container : SliderBarContainer):
+	container.add_new_header(name + " Settings")
+	container.add_new_slider(sneeze_trigger_count)

@@ -32,6 +32,8 @@ func set_value(new_value) -> void:
 		hit_min.emit()
 		#print(name," Hit Min")
 		current_value = min_value
+	
+	emit_changed()
 
 func _to_string() -> String:
 	return "%s: %.2f %.2f" % [name, current_value, get_percent()]

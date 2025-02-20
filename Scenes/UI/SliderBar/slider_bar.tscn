@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://damlct1gqun6c"]
+
+[node name="SliderBar" type="HSlider"]

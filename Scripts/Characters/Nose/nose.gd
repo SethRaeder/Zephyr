@@ -113,6 +113,16 @@ func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPE
 			burn_decay_timer.start(burn_wait_seconds)
 			
 			burn.add_value(tickle_amount)
+		
+		TickleComponent.DAMAGE_TYPES.SENSITIVITY:
+			sensitivity.add_value(tickle_amount)
+			
 		TickleComponent.DAMAGE_TYPES.ALLERGY:
 			#print("Sending allergy damage. ", tickle_amount, ", ", allergy_type)
 			on_allergy_damage.emit(tickle_amount, allergy_type)
+
+func send_sliders(container : SliderBarContainer):
+	container.add_new_header(self.name + " Settings")
+	container.add_new_slider(tickle)
+	container.add_new_slider(burn)
+	container.add_new_slider(sensitivity)

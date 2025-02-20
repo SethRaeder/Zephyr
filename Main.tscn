@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bo6gnqhjsl6w5"]
+[gd_scene load_steps=22 format=3 uid="uid://bo6gnqhjsl6w5"]
 
 [ext_resource type="Script" path="res://center_background.gd" id="1_s7jfl"]
 [ext_resource type="Texture2D" uid="uid://c3iehehdye5rj" path="res://images/Background/Cave/dergsnzbg-kel-7.png" id="1_t6vys"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://vvppa027u41q" path="res://images/Background/Cave/dergsnzbg-kel-1.png" id="8_ysigt"]
 [ext_resource type="Texture2D" uid="uid://gv2wl5uuxdcx" path="res://images/can.png" id="13_th40t"]
 [ext_resource type="Script" path="res://Scripts/UI/ClearToolsButton.gd" id="14_kynwu"]
+[ext_resource type="Script" path="res://Scripts/UI/SliderBar/slider_bar_container.gd" id="16_wg6ei"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xl3dr"]
 distance = -42.0
@@ -170,8 +171,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 800.0
-offset_bottom = 600.0
+offset_right = 1152.0
+offset_bottom = 647.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -210,5 +211,16 @@ offset_right = 44.0
 offset_bottom = 24.0
 text = "Debug"
 script = ExtResource("6_qhpe8")
+
+[node name="SliderBarContainer" type="GridContainer" parent="UI Root" groups=["character_debug"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -319.0
+offset_bottom = 610.0
+grow_horizontal = 0
+columns = 2
+script = ExtResource("16_wg6ei")
 
 [connection signal="toggled" from="UI Root/DebugToggle" to="UI Root/DebugToggle" method="_on_toggled"]

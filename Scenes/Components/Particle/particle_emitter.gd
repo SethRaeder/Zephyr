@@ -44,6 +44,8 @@ func _ready() -> void:
 			particle_array.append(node)
 			
 	var parent : SneezeTool = get_parent()
+	
+	particle_max_count = int(float(particle_max_count) * ZephyrGlobals.particle_tool_max_multiplier)
 	parent.move.connect(on_move)
 
 func on_move(velocity : Vector2, delta : float):
@@ -90,8 +92,7 @@ func spawn_particle():
 	get_tree().root.add_child(new_particle)
 	
 	particle_array.append(new_particle)
-
-	
+	ZephyrGlobals.add_particle(new_particle)
 
 	new_particle.particle_die.connect(on_particle_die)
 	new_particle.sprite.scale *= randf_range(particle_size_var_range.x, particle_size_var_range.y)

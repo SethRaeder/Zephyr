@@ -3,7 +3,7 @@ class_name TickleComponent
 
 @export_category("Tickle Type")
 #enum DAMAGE_TYPES {RUB, FLUFF, POKE, POLLEN, DUST, CHHINKNI, }
-enum DAMAGE_TYPES {TICKLE, BURN, ALLERGY}
+enum DAMAGE_TYPES {TICKLE, BURN, SENSITIVITY, ALLERGY}
 
 ## Tickle decays faster than burn
 @export var tickle_type : DAMAGE_TYPES = DAMAGE_TYPES.TICKLE
@@ -24,7 +24,7 @@ var total_tickle_damage : float = 0
 @export var max_speed : float = 500
 @export var velocity_curve : Curve
 
-var targeted_area : Area2D
+var targeted_area : NoseTriggerZone
 
 #signal tickle_damage_percent(percent : float)
 

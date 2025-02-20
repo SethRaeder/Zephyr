@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Zephyr"
-config/version="0.8.3"
+config/version="0.8.4"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3")
 boot_splash/bg_color=Color(0.298039, 0.298039, 0.298039, 1)
@@ -20,6 +20,10 @@ boot_splash/image="res://images/Loading.png"
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=150
+
+[autoload]
+
+ZephyrGlobals="*res://Scripts/zephyr_globals.gd"
 
 [display]
 
@@ -42,6 +46,7 @@ tool_particles=""
 character_debug=""
 tool_debug=""
 tools=""
+has_sliders=""
 
 [input]
 

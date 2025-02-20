@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Characters/Lungs/lungs.gd" id="1_6ocnn"]
 
-[node name="Lungs" type="Node"]
+[node name="Lungs" type="Node" groups=["has_sliders", "lungs"]]
 script = ExtResource("1_6ocnn")
 
 [node name="LowOxyTimer" type="Timer" parent="."]
