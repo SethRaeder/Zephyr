@@ -134,19 +134,19 @@ func timer_timeout():
 		"sneeze", "sneeze 2":
 			is_sneezing = true
 	
-	if randf() * (hitch_repeat_modifier.current_value if is_hitching else 1.0) < hitch_curve.sample(sneeze_percent):
+	if randf() < hitch_curve.sample(sneeze_percent) * (hitch_repeat_modifier.current_value if is_hitching else 1.0):
 		if not lungs.is_full():
 			anim_parameters["hitch"] = true
 		else:
 			anim_parameters["sigh"] = true
 	
-	if randf() * (buildup_repeat_modifier.current_value if is_building else 1.0) < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
+	if randf() < buildup_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) * (buildup_repeat_modifier.current_value if is_building else 1.0):
 		if not lungs.is_full():
 			anim_parameters["buildup"] = true
 		else:
 			anim_parameters["sigh"] = true
 			
-	if randf() * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0) < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus):
+	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)  * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0):
 		anim_parameters["sneeze"] = true
 	
 	#animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)

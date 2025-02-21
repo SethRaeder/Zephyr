@@ -184,6 +184,7 @@ layout_mode = 1
 tool_spawn_node = NodePath("../../Tools")
 
 [node name="Button" type="Button" parent="UI Root/Toolbox"]
+layout_mode = 0
 offset_top = -175.665
 offset_right = 138.0
 offset_bottom = -121.665
