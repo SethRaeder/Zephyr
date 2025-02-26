@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bo6gnqhjsl6w5"]
+[gd_scene load_steps=23 format=3 uid="uid://bo6gnqhjsl6w5"]
 
 [ext_resource type="Script" path="res://center_background.gd" id="1_s7jfl"]
 [ext_resource type="Texture2D" uid="uid://c3iehehdye5rj" path="res://images/Background/Cave/dergsnzbg-kel-7.png" id="1_t6vys"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://gv2wl5uuxdcx" path="res://images/can.png" id="13_th40t"]
 [ext_resource type="Script" path="res://Scripts/UI/ClearToolsButton.gd" id="14_kynwu"]
 [ext_resource type="Script" path="res://Scripts/UI/SliderBar/slider_bar_container.gd" id="16_wg6ei"]
+[ext_resource type="PackedScene" uid="uid://c0052co50relo" path="res://Scenes/hand.tscn" id="17_2ycv8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xl3dr"]
 distance = -42.0
@@ -183,11 +184,12 @@ mouse_filter = 1
 layout_mode = 1
 tool_spawn_node = NodePath("../../Tools")
 
-[node name="Button" type="Button" parent="UI Root/Toolbox"]
+[node name="Clear Tools Button" type="Button" parent="UI Root/Toolbox"]
 layout_mode = 0
 offset_top = -175.665
 offset_right = 138.0
 offset_bottom = -121.665
+scale = Vector2(0.715, 0.715)
 text = "Clear All Tools/Particles"
 autowrap_mode = 2
 script = ExtResource("14_kynwu")
@@ -229,5 +231,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 script = ExtResource("16_wg6ei")
+
+[node name="Hand" parent="." instance=ExtResource("17_2ycv8")]
+z_index = 11
+position = Vector2(325, 388)
 
 [connection signal="toggled" from="UI Root/DebugToggle" to="UI Root/DebugToggle" method="_on_toggled"]

@@ -1,21 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://xwggdnmhs7mt"]
+[gd_scene load_steps=11 format=3 uid="uid://xwggdnmhs7mt"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_fi5oo"]
 [ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://images/inducing tools/Revised/Pepper Shaker.PNG" id="2_4c60o"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_2pw2t"]
+[ext_resource type="Texture2D" uid="uid://dss6ykenrvo7f" path="res://addons/kenney_particle_pack/smoke_08.png" id="3_rmnnm"]
 [ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="4_nd7ux"]
+[ext_resource type="Texture2D" uid="uid://bbn0ir5fbtiug" path="res://addons/kenney_particle_pack/smoke_07.png" id="4_o2yfo"]
 [ext_resource type="PackedScene" uid="uid://bt4fb5bk0bgkf" path="res://Scenes/Tools/Particles/pepper_particle.tscn" id="5_eacuv"]
+[ext_resource type="Script" path="res://Scripts/Components/hide_on_particle_exhaust.gd" id="5_v713m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1qc4"]
 radius = 12.0
 height = 66.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agtqg"]
+radius = 42.0
+height = 118.0
+
 [node name="Pepper" type="RigidBody2D" groups=["tools"]]
 input_pickable = true
-angular_damp = 30.0
+mass = 0.2
+angular_damp = 80.0
 script = ExtResource("1_fi5oo")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_g1qc4")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -23,19 +32,45 @@ z_index = -1
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("2_4c60o")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0, -13)
+[node name="Pepper Internal" type="Polygon2D" parent="."]
+clip_children = 1
+scale = Vector2(0.167, 0.167)
+polygon = PackedVector2Array(24, -97, 48, -93, 57, -88, 62, -64, 63, -36, 67, 35, 71, 145, 70, 170, 60, 178, 35, 186, 0, 189, -38, 184, -64, 176, -70, 166, -71, 139, -66, 35, -63, -39, -62, -67, -58, -86, -51, -90, -41, -96, -25, -98, 1, -99)
+
+[node name="Smoke08" type="Sprite2D" parent="Pepper Internal"]
+modulate = Color(0.21, 0.196035, 0.1953, 1)
+position = Vector2(1.48648, -66.881)
+texture = ExtResource("3_rmnnm")
+
+[node name="Smoke07" type="Sprite2D" parent="Pepper Internal"]
+modulate = Color(0.21, 0.196035, 0.1953, 1)
+position = Vector2(11.976, 53.8922)
+texture = ExtResource("4_o2yfo")
+
+[node name="HideOnParticleExhaust" type="Node" parent="Pepper Internal" node_paths=PackedStringArray("particle_emitter")]
+script = ExtResource("5_v713m")
+particle_emitter = NodePath("../../ParticleEmitter")
+
+[node name="GrabArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+visible = false
+shape = SubResource("CapsuleShape2D_agtqg")
+
+[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+position = Vector2(0, 21)
 gizmo_extents = 105.2
 script = ExtResource("3_2pw2t")
-snap_factor_p = 200.0
+snap_factor_d = -5.0
+grab_area = NodePath("../GrabArea")
 
 [node name="ParticleEmitter" type="Node2D" parent="."]
 script = ExtResource("4_nd7ux")
 particle_scene = ExtResource("5_eacuv")
 release_on_jerk = true
-jerk_threshold = 200.0
-jerk_particle_amount = 5
-jerk_particle_variance = Vector2(1, 2)
+jerk_threshold = 2000.0
+jerk_particle_variance = Vector2(1, 5)
 release_on_speed = false
+particle_spawn_lifetime_limit = 200
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

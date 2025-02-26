@@ -23,7 +23,7 @@ radius = 11.0454
 
 [node name="Powder" type="RigidBody2D" groups=["tools"]]
 input_pickable = true
-angular_damp = 20.0
+angular_damp = 30.0
 script = ExtResource("1_olvin")
 collides_with_head_held = true
 

@@ -3,6 +3,10 @@ extends Node
 var particle_tool_max_multiplier = 1.0
 var particle_global_max = 100
 var particle_array = []
+var grabbed_tool_ref : SneezeTool = null
+
+signal tool_grabbed()
+signal tool_dropped()
 
 func add_particle(particle : ToolParticle):
 	particle_array.append(particle)

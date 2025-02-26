@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://07jfi4b7gu6h"]
+[gd_scene load_steps=11 format=3 uid="uid://07jfi4b7gu6h"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_i2186"]
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="2_bqowe"]
@@ -9,6 +9,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_51j0j"]
 radius = 6.0
 height = 94.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppwpq"]
+radius = 54.037
 
 [sub_resource type="Curve" id="Curve_4p4vg"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
@@ -31,10 +34,16 @@ InsertSprite = NodePath("Sprite")
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_51j0j")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0, 9)
+[node name="GrabArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+shape = SubResource("CircleShape2D_ppwpq")
+
+[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+position = Vector2(0, 19)
 gizmo_extents = 105.2
 script = ExtResource("2_bqowe")
+grab_area = NodePath("../GrabArea")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.18, 0.18)

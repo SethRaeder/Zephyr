@@ -8,4 +8,8 @@ func _ready() -> void:
 
 func destroy_tool(body):
 	if body is SneezeTool:
+		if ZephyrGlobals.grabbed_tool_ref == body:
+			ZephyrGlobals.grabbed_tool_ref = null
+			ZephyrGlobals.tool_dropped.emit()
 		body.queue_free()
+		

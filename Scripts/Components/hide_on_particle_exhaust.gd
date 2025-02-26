@@ -1,9 +1,10 @@
-extends Sprite2D
+extends Node
+class_name HideOnParticleExhaust
 
-@onready var particle_emitter: ParticleEmitter = %ParticleEmitter
+@export var particle_emitter: ParticleEmitter
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	particle_emitter.particles_exhausted.connect(func():
-		hide()
+		get_parent().hide()
 	)

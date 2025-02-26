@@ -75,7 +75,7 @@ position = Vector2(0, -326)
 texture = ExtResource("5_pc1n5")
 
 [node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0, -24)
+position = Vector2(0, 30)
 gizmo_extents = 73.5
 script = ExtResource("6_btf2x")
 snap_factor_d = -10.0

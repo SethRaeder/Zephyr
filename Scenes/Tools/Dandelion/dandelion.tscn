@@ -6,9 +6,9 @@
 [ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_ae6g4"]
 [ext_resource type="PackedScene" uid="uid://imkp062d5m14" path="res://Scenes/Tools/Particles/dandelion_particle.tscn" id="3_pwjqy"]
 [ext_resource type="Texture2D" uid="uid://dbyby2dl5ysts" path="res://images/inducing tools/Revised/Dandelion Fluff.PNG" id="3_pxgbm"]
-[ext_resource type="Script" path="res://Scenes/Tools/Dandelion/head_hide_on_exhaust.gd" id="6_u8nj1"]
 [ext_resource type="PackedScene" uid="uid://w765tarsr8k1" path="res://Scenes/Components/Tools/tickle_component.tscn" id="7_fmhua"]
 [ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="8_fbqid"]
+[ext_resource type="Script" path="res://Scripts/Components/hide_on_particle_exhaust.gd" id="8_pbbke"]
 [ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="10_3w63j"]
 [ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="11_3sci2"]
 
@@ -26,11 +26,12 @@ radius = 23.0
 input_pickable = true
 mass = 0.1
 linear_damp = 10.0
+angular_damp = 30.0
 script = ExtResource("1_rf6xs")
 
 [node name="ParticleEmitter" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-1.8, -96.4554)
+position = Vector2(-1.6, -79.4554)
 script = ExtResource("2_pmk8i")
 particle_scene = ExtResource("3_pwjqy")
 particle_spawn_max_speed = 500.0
@@ -48,32 +49,36 @@ wind_subscriber = NodePath("WindSubscriber")
 script = ExtResource("11_3sci2")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0.199997, -35.4554)
+position = Vector2(0.399994, -18.4554)
 shape = SubResource("CapsuleShape2D_jfm3w")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(3.2, -41.4554)
+position = Vector2(3.4, -24.4554)
 rotation = -0.244346
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_ofm23")
 
 [node name="Sprite2" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-1.8, -96.4554)
+position = Vector2(-1.6, -79.4554)
 rotation = -0.244346
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_pxgbm")
-script = ExtResource("6_u8nj1")
+
+[node name="HideOnParticleExhaust" type="Node" parent="Sprite2" node_paths=PackedStringArray("particle_emitter")]
+script = ExtResource("8_pbbke")
+particle_emitter = NodePath("../../ParticleEmitter")
 
 [node name="GrabTransform" type="Marker2D" parent="."]
+position = Vector2(0.199997, 9)
 gizmo_extents = 105.2
 script = ExtResource("3_ae6g4")
 snap_factor_p = 10.0
 snap_factor_d = -1.0
 
 [node name="TickleComponent" parent="." instance=ExtResource("7_fmhua")]
-position = Vector2(-1.8, -95.4554)
+position = Vector2(-1.6, -78.4554)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
 shape = SubResource("CircleShape2D_x6gdm")

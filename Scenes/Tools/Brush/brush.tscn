@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8ks3is4b2pu8"]
+[gd_scene load_steps=12 format=3 uid="uid://c8ks3is4b2pu8"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_8igve"]
 [ext_resource type="Texture2D" uid="uid://daxey8d7easdx" path="res://images/inducing tools/Revised/Paintbrush.PNG" id="2_1lx45"]
@@ -9,6 +9,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3t8d"]
 radius = 5.0
 height = 92.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkbay"]
+radius = 21.0
+height = 140.0
 
 [sub_resource type="Curve" id="Curve_dugmu"]
 _data = [Vector2(0, 0.207317), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -26,6 +30,7 @@ radius = 7.0
 
 [node name="Brush" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
+mass = 0.1
 angular_damp = 20.0
 script = ExtResource("1_8igve")
 InsertSprite = NodePath("Sprite")
@@ -38,10 +43,18 @@ texture = ExtResource("2_1lx45")
 position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_u3t8d")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0, -4)
+[node name="GrabArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+shape = SubResource("CapsuleShape2D_nkbay")
+
+[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+position = Vector2(0, 23)
 gizmo_extents = 105.2
 script = ExtResource("3_ipqyd")
+snap_factor_p = 10.0
+snap_factor_d = -1.0
+grab_area = NodePath("../GrabArea")
 
 [node name="HeadTickle" type="Area2D" parent="."]
 position = Vector2(0, -47)

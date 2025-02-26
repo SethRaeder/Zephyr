@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="4_mbxtd"]
 [ext_resource type="Script" path="res://Scripts/pepper_internals.gd" id="5_bc8sw"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlha5"]
 radius = 100.0
 

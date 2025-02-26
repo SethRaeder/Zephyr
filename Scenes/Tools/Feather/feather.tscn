@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwr4vtymp7lac"]
+[gd_scene load_steps=14 format=3 uid="uid://cwr4vtymp7lac"]
 
 [ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_ktd27"]
 [ext_resource type="Texture2D" uid="uid://dxyfqrhjw8t5y" path="res://images/inducing tools/Revised/Feather.PNG" id="2_f78ht"]
@@ -9,6 +9,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g3jdd"]
 radius = 6.11623
 height = 96.9079
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10dhj"]
+radius = 69.0507
 
 [sub_resource type="Curve" id="Curve_qccrw"]
 _data = [Vector2(0, 0.135143), 0.0, 0.0, 0, 0, Vector2(0.17217, 1), 0.0, 0.0, 0, 0, Vector2(0.382075, 0.127907), 0.0, 0.0, 0, 0]
@@ -48,10 +51,16 @@ texture = ExtResource("2_f78ht")
 position = Vector2(0.44545, 0)
 shape = SubResource("CapsuleShape2D_g3jdd")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0, 27.164)
+[node name="GrabArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+shape = SubResource("CircleShape2D_10dhj")
+
+[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+position = Vector2(-7, 47)
 gizmo_extents = 105.2
 script = ExtResource("3_emat5")
+grab_area = NodePath("../GrabArea")
 
 [node name="TipTickle" type="Area2D" parent="."]
 position = Vector2(-0.890892, -58.3539)
