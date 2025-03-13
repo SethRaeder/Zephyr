@@ -4,6 +4,6 @@
 resource_name = "HighPassFilter"
 
 [resource]
-bus/0/volume_db = -10.0741
+bus/0/volume_db = 0.0672607
 bus/0/effect/0/effect = SubResource("AudioEffectHighPassFilter_j3pel")
 bus/0/effect/0/enabled = false

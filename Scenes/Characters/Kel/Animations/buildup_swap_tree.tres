@@ -24,11 +24,11 @@ input_1/break_loop_at_end = false
 input_1/reset = true
 
 [resource]
-graph_offset = Vector2(-422.513, -36.4103)
+graph_offset = Vector2(-450.597, 42.2963)
 nodes/Buffer0/node = SubResource("AnimationNodeAnimation_3ylv6")
 nodes/Buffer0/position = Vector2(-20, 80)
 nodes/Buffer1/node = SubResource("AnimationNodeAnimation_hpbox")
-nodes/Buffer1/position = Vector2(-20, 220)
+nodes/Buffer1/position = Vector2(-20, 240)
 nodes/Transition/node = SubResource("AnimationNodeTransition_c8vd0")
 nodes/Transition/position = Vector2(140, 80)
 nodes/output/position = Vector2(280, 80)

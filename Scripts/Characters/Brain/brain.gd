@@ -159,14 +159,40 @@ func timer_timeout():
 		
 	handle_animation_state_transition()
 
+func can_sneeze() -> bool:
+	if not (is_sneezing or is_building):
+		return false
+	if is_building and not anim_parameters["buildup_interrupt"]:
+		return false
+	if is_sneezing and not anim_parameters["sneeze_interrupt"]:
+		return false
+	return true
+
+func can_build() -> bool:
+	if is_hitching and not anim_parameters["hitch_interrupt"]:
+		return false
+	if is_building and not anim_parameters["buildup_interrupt"]:
+		return false
+	if is_sneezing and not anim_parameters["sneeze_interrupt"]:
+		return false
+	return true
+
+func can_hitch() -> bool:
+	if is_hitching and not anim_parameters["hitch_interrupt"]:
+		return false
+	if is_building:
+		return false
+	if is_sneezing:
+		return false
+	return true
+
 func handle_animation_state_transition():
-	if anim_parameters["sneeze"] and (anim_parameters["buildup_interrupt"] or anim_parameters["sneeze_interrupt"]):
+	if anim_parameters["sneeze"] and can_sneeze():
 		if is_sneezing:
-			if anim_parameters["sneeze_interrupt"]:
-				swap_animation_buffers("SneezeSwapTree")
+			swap_animation_buffers("SneezeSwapTree")
 		else:
 			set_animation_transition("Sneeze")
-	elif not (is_sneezing and not anim_parameters["sneeze_interrupt"]) and anim_parameters["buildup"]:
+	elif anim_parameters["buildup"] and can_build():
 		if is_building:
 			if anim_parameters["buildup_interrupt"]:
 				swap_animation_buffers("BuildupSwapTree")
@@ -176,7 +202,7 @@ func handle_animation_state_transition():
 		#set_animation_transition("Sigh")
 	#elif anim_parameters["sniff"]:
 		#set_animation_transition("Sniff")
-	elif not (is_building or is_sneezing) and anim_parameters["hitch"] and not (anim_parameters["buildup_interrupt"] or anim_parameters["sneeze_interrupt"]):
+	elif anim_parameters["hitch"] and can_hitch():
 		if is_hitching:
 			if anim_parameters["hitch_interrupt"]:
 				swap_animation_buffers("HitchSwapTree")
@@ -197,13 +223,15 @@ func set_animation_transition(transition_name : String):
 	anim_parameters["sneeze_interrupt"] = false
 
 func _on_animation_finished(animation_name : StringName):
+	print("On anim finished... ",animation_name)
 	match animation_name:
 		"hitch", "sneeze", "buildup":
+			print("Params : Sneeze %s Build %s Hitch %s "%[anim_parameters["sneeze"], anim_parameters["buildup"], anim_parameters["hitch"]])
 			if not (anim_parameters["hitch"] or anim_parameters["buildup"] or anim_parameters["sneeze"]):
 				print("Animation Finished: %s. Transitioning to Idle." %animation_name)
 				set_animation_transition("Idle")
-			else:
-				handle_animation_state_transition()
+			#else:
+				#handle_animation_state_transition()
 
 func swap_animation_buffers(animation_buffer_name, new_animation = null):
 	var current_buffer : String = animation_tree.get("parameters/%s/Transition/current_state" % animation_buffer_name)
@@ -261,12 +289,15 @@ func on_sneeze():
 		sneeze_trigger_count.add_value(-sneeze_trigger_expel * fit_trigger_count_mult * sneeze_size)
 
 func sneeze_finished():
+	print("Sneeze Interrupt")
 	anim_parameters["sneeze_interrupt"] = true
 
 func hitch_finished():
+	print("Hitch Interrupt")
 	anim_parameters["hitch_interrupt"] = true
 
 func buildup_finished():
+	print("Buildup Interrupt")
 	anim_parameters["buildup_interrupt"] = true
 
 func sneeze_trigger(value):

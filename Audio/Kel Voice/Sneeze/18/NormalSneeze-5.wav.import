@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cnamghlcxc474"
+path="res://.godot/imported/NormalSneeze-5.wav-bdfdd35b1ed90770d58983f92165bc07.sample"
+
+[deps]
+
+source_file="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-5.wav"
+dest_files=["res://.godot/imported/NormalSneeze-5.wav-bdfdd35b1ed90770d58983f92165bc07.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

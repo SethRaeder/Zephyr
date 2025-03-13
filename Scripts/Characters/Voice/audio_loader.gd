@@ -1,10 +1,18 @@
+@tool
 extends AudioStreamPlayer2D
 class_name AudioDirectoryRandomizer
 
 @export_dir var load_audio_directory : String
+@export var do_filter : bool = false
+@export var file_filter : String = ""
+@export_tool_button("Load Directory") var load_func = do_load
 
 func _ready() -> void:
 	print("AudioLoader Initialized.")
+	do_load()
+
+func do_load():
+	stream = null
 	if DirAccess.dir_exists_absolute(load_audio_directory):
 		print("Loading audio from ",load_audio_directory)
 		
@@ -21,11 +29,18 @@ func _ready() -> void:
 		for file : String in files_list:
 			#print("File : ",file)
 			if file.ends_with(".wav.import"):
+				print("Checking file ",file)
+				if do_filter:
+					if not file.contains(file_filter):
+						print("File ",file," did not contain ",file_filter)
+						continue
+				
 				file = file.split(".import")[0]
 				#var new_stream : AudioStreamWAV = loader.loadfile(file)
 				var new_stream = load(file)
 				new_stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
 				stream.add_stream(-1, new_stream, 1.0)
+					
 
 func get_all_files(path: String, file_ext := "", files := []):
 	var dir = DirAccess.open(path)
