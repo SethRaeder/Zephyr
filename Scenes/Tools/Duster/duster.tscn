@@ -45,7 +45,7 @@ angular_damp = 10.0
 script = ExtResource("1_bp4m2")
 
 [node name="ParticleEmitter" parent="." instance=ExtResource("2_ewvqs")]
-position = Vector2(0, -94)
+position = Vector2(0.5, -79)
 particle_scene = ExtResource("3_eciq1")
 jerk_accelerate = true
 jerk_decelerate = false
@@ -54,9 +54,11 @@ jerk_particle_variance = Vector2(1, 5)
 particle_spawn_max_speed = 500.0
 
 [node name="DusterCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 15)
 shape = SubResource("CapsuleShape2D_ley4e")
 
 [node name="DusterHandle" type="Sprite2D" parent="."]
+position = Vector2(0.5, 15)
 scale = Vector2(0.124, 0.124)
 texture = ExtResource("2_e2fon")
 script = ExtResource("3_qsmvp")
@@ -75,13 +77,13 @@ position = Vector2(0, -326)
 texture = ExtResource("5_pc1n5")
 
 [node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0, 30)
+position = Vector2(0.5, 26)
 gizmo_extents = 73.5
 script = ExtResource("6_btf2x")
 snap_factor_d = -10.0
 
 [node name="TickleComponent" type="Area2D" parent="."]
-position = Vector2(0, -107)
+position = Vector2(0.5, -92)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("7_6newg")
@@ -96,9 +98,10 @@ offset_left = -32.0
 offset_top = 63.0
 offset_right = -18.22
 offset_bottom = 94.655
+metadata/_edit_use_anchors_ = true
 
 [node name="DustyBurn" type="Area2D" parent="."]
-position = Vector2(0, -84)
+position = Vector2(0.5, -69)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("7_6newg")
@@ -115,9 +118,10 @@ offset_left = 17.0
 offset_top = 40.0
 offset_right = 30.78
 offset_bottom = 71.655
+metadata/_edit_use_anchors_ = true
 
 [node name="Dust Allergy" type="Area2D" parent="."]
-position = Vector2(0, -84)
+position = Vector2(0.5, -69)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("7_6newg")
@@ -133,3 +137,4 @@ offset_left = 17.0
 offset_top = 40.0
 offset_right = 30.78
 offset_bottom = 71.655
+metadata/_edit_use_anchors_ = true

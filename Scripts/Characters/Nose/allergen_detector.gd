@@ -31,7 +31,7 @@ func _ready() -> void:
 	add_child(debug_timer)
 	
 	nose = get_parent()
-	nose.on_allergy_damage.connect(on_allergy_damage)
+	nose.on_tickle_damage.connect(_on_tickle_damage)
 		
 	allergen_time.name = allergen.allergy_name + " Progress"
 	allergen_time.max_value = time_to_max_progress
@@ -39,8 +39,8 @@ func _ready() -> void:
 	allergen_particles.name = allergen.allergy_name + " Particles"
 	allergen_particles.max_value = allergen.max_count
 
-func on_allergy_damage(damage_amount : float, allergy_type : AllergyResource):
-	if allergy_type.allergy_name == allergen.allergy_name:
+func _on_tickle_damage(damage_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_resource : AllergyResource):
+	if damage_type == TickleComponent.DAMAGE_TYPES.ALLERGY and allergy_resource.allergy_name == allergen.allergy_name:
 		#print("Detecting allergy damage")
 		allergen_particles.add_value(damage_amount)
 

@@ -60,7 +60,7 @@ position = Vector2(6, -17)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("5_mktyr")
-intensity = -10.0
+intensity = -8.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AntiTickle"]
 shape = SubResource("CircleShape2D_g8doh")
@@ -78,7 +78,7 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("5_mktyr")
 tickle_type = 1
-intensity = -10.0
+intensity = -2.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AntiBurn"]
 shape = SubResource("CircleShape2D_g8doh")

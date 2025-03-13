@@ -2,7 +2,9 @@ extends Area2D
 class_name NoseTriggerZone
 
 @export_category("General Stats")
+##Hitbox that this nose should share tickle damage from.
 @export var connected_nose : NoseTriggerZone
+##Percent shared to this hitbox.
 @export var nose_share : float = 0.5
 @export var sneeze_trigger_amount : float = 1.0
 #Bounded values for the three main parameters in the nose
@@ -47,14 +49,12 @@ class_name NoseTriggerZone
 @onready var sensitivity_decay = sensitivity.max_value / sensitivity_decay_seconds
 
 signal sneeze_trigger(amount : float)
-signal on_allergy_damage(damage_amount, allergy_type)
+signal on_tickle_damage(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if connected_nose:
-		connected_nose.on_allergy_damage.connect(func(amount, type):
-			add_tickle(amount, TickleComponent.DAMAGE_TYPES.ALLERGY, type)
-		)
+		connected_nose.on_tickle_damage.connect(_on_connected_tickle)
 	sneeze_trigger_timer.timeout.connect(timer_timeout)
 
 func _process(delta: float) -> void:
@@ -97,7 +97,11 @@ func on_sneeze():
 	burn.add_value(-burn_decay * tickle_decay_on_sneeze_seconds)
 	sensitivity.current_value = sensitivity.current_value * sensitivity_multiplier_on_sneeze
 
-func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource):
+func _on_connected_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_resource : AllergyResource):
+	add_tickle(tickle_amount * nose_share, damage_type, allergy_resource)
+	
+func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_resource : AllergyResource):
+	on_tickle_damage.emit(tickle_amount, damage_type, allergy_resource)
 	match(damage_type):
 		TickleComponent.DAMAGE_TYPES.TICKLE:
 			tickle_decay_timer.stop()
@@ -113,9 +117,6 @@ func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPE
 		TickleComponent.DAMAGE_TYPES.SENSITIVITY:
 			sensitivity.add_value(tickle_amount)
 			
-		TickleComponent.DAMAGE_TYPES.ALLERGY:
-			#print("Sending allergy damage. ", tickle_amount, ", ", allergy_type)
-			on_allergy_damage.emit(tickle_amount, allergy_type)
 
 func send_sliders(container : SliderBarContainer):
 	container.add_new_header(self.name + " Settings")

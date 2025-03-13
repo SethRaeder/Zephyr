@@ -7,7 +7,7 @@ var stiffness : float
 func _ready() -> void:
 	default_rotation = rotation
 	handle.move.connect(move)
-	stiffness = randf_range(0.01,0.03)
+	stiffness = randf_range(0.005,0.015)
 	
 func move(movement:Vector2, _delta):
 	#var dot = lerp(-1,1,movement.normalized().dot(Vector2.RIGHT.rotated(rotation))) * (movement.length()/50.0)

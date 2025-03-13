@@ -10,6 +10,7 @@ var grab_target : GrabTransform = null
 @export var anti_burn: TickleComponent
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	ZephyrGlobals.tool_grabbed.connect(_on_tool_grabbed)
 	ZephyrGlobals.tool_dropped.connect(_on_tool_released)
 	

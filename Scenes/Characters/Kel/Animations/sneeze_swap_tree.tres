@@ -1,0 +1,35 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=5 format=3 uid="uid://dmwurjh0u68wp"]
+
+[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_daf5l"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ylv6"]
+resource_local_to_scene = true
+animation = &"sneeze"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hpbox"]
+resource_local_to_scene = true
+animation = &"sneeze"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_c8vd0"]
+resource_local_to_scene = true
+xfade_time = 0.6
+xfade_curve = ExtResource("1_daf5l")
+input_0/name = "state_0"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "state_1"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[resource]
+graph_offset = Vector2(-422.513, -36.4103)
+nodes/Buffer0/node = SubResource("AnimationNodeAnimation_3ylv6")
+nodes/Buffer0/position = Vector2(-20, 80)
+nodes/Buffer1/node = SubResource("AnimationNodeAnimation_hpbox")
+nodes/Buffer1/position = Vector2(-20, 220)
+nodes/Transition/node = SubResource("AnimationNodeTransition_c8vd0")
+nodes/Transition/position = Vector2(140, 80)
+nodes/output/position = Vector2(280, 80)
+node_connections = [&"Transition", 0, &"Buffer0", &"Transition", 1, &"Buffer1", &"output", 0, &"Transition"]
