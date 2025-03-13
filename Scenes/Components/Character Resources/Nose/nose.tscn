@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c33t2nvl25e1u"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Nose/nose.gd" id="1_onyl2"]
+[ext_resource type="Script" uid="uid://exewpwy2qcrr" path="res://Scripts/Characters/Nose/nose.gd" id="1_onyl2"]
 
 [node name="Nose" type="Area2D" groups=["has_sliders", "nose"]]
 collision_layer = 8

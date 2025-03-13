@@ -41,6 +41,8 @@ class_name Brain
 @export var fit_window_seconds : Vector2 = Vector2(5.0, 20.0)
 ##How much to boost sneeze level while in a fit?
 @export var fit_sneeze_bonus : float = 2.0
+##How much to modify sneeze trigger removal while in a fit?
+@export var fit_trigger_count_mult : float = 0.25
 
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var update_timer: Timer = $UpdateTimer
@@ -106,6 +108,8 @@ func _ready() -> void:
 	voice.sneeze_finished.connect(sneeze_finished)
 	voice.buildup_finished.connect(buildup_finished)
 	voice.hitch_finished.connect(hitch_finished)
+	
+	set_animation_transition("RigDemo")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -217,6 +221,9 @@ func swap_animation_buffers(animation_buffer_name, new_animation = null):
 	animation_tree.set("parameters/%s/Transition/transition_request" % animation_buffer_name, current_buffer)
 	
 	print("Swapping Animation Buffers: %s" %animation_buffer_name)
+	anim_parameters["hitch_interrupt"] = false
+	anim_parameters["buildup_interrupt"] = false
+	anim_parameters["sneeze_interrupt"] = false
 	
 		
 #func on_hitch_anim():
@@ -242,12 +249,16 @@ func on_buildup():
 	lungs.set_breath_state(lungs.BREATH_STATE.BUILDUP)
 	
 func on_sneeze():
-	sneeze_trigger_count.add_value(-sneeze_trigger_expel * sneeze_size)
 	lungs.set_breath_state(lungs.BREATH_STATE.SNEEZE)
 	
 	if randf() < fit_probability:
 		print("Fit started")
 		fit_timer.start(randf_range(fit_window_seconds.x, fit_window_seconds.y))
+	
+	if fit_timer.is_stopped():
+		sneeze_trigger_count.add_value(-sneeze_trigger_expel * sneeze_size)
+	else:
+		sneeze_trigger_count.add_value(-sneeze_trigger_expel * fit_trigger_count_mult * sneeze_size)
 
 func sneeze_finished():
 	anim_parameters["sneeze_interrupt"] = true

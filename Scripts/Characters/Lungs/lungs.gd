@@ -18,8 +18,9 @@ class_name Lungs
 @export var lungs : CustomBoundedValue
 @export var oxygen : CustomBoundedValue
 
-var oxygen_per_lungs = 2.0
-@onready var oxygen_decay_rate = oxygen.max_value / 6.0
+@export var oxygen_multiplier : float = 1.0
+@export var oxygen_decay_seconds : float = 4.0
+@onready var oxygen_decay_rate = oxygen.max_value / oxygen_decay_seconds
 
 signal breathe_in
 signal breathe_out
@@ -139,5 +140,5 @@ func breathe(rate, bonus, delta):
 	lungs.add_value(rate * delta)
 	#print("Lungs: Current value: ", lungs.current_value)
 	if rate > 0:
-		oxygen.add_value(rate * oxygen_per_lungs * delta)
+		oxygen.add_value(rate * oxygen_multiplier * delta)
 	

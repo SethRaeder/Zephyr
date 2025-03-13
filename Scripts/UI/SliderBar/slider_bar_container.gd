@@ -36,3 +36,5 @@ func add_new_slider(boundedValue : CustomBoundedValue):
 	if current_hider:
 		current_hider.nodes_to_hide.append(label)
 		current_hider.nodes_to_hide.append(slider)
+		label.hide()
+		slider.hide()

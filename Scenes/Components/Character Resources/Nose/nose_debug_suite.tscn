@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dwsrf2vatxr32"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Nose/nose_debug_suite.gd" id="1_12sob"]
+[ext_resource type="Script" uid="uid://cqf2q63wees5g" path="res://Scripts/Characters/Nose/nose_debug_suite.gd" id="1_12sob"]
 
 [node name="NoseDebugSuite" type="Control" groups=["character_debug"]]
 layout_mode = 3

@@ -1,14 +1,14 @@
 [gd_scene load_steps=19 format=3 uid="uid://qjiu4fb7fbty"]
 
-[ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_bp4m2"]
+[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://Scenes/Tools/tool_body.gd" id="1_bp4m2"]
 [ext_resource type="Texture2D" uid="uid://cwbbu2ebn62aa" path="res://images/inducing tools/Revised/Duster Handle.PNG" id="2_e2fon"]
 [ext_resource type="PackedScene" uid="uid://ccdnshw4dvj87" path="res://Scenes/Components/Particle/particle_emitter.tscn" id="2_ewvqs"]
 [ext_resource type="PackedScene" uid="uid://b7j4oys1em0c1" path="res://Scenes/Tools/Particles/dust_particle.tscn" id="3_eciq1"]
-[ext_resource type="Script" path="res://Scenes/Tools/Duster/duster_handle.gd" id="3_qsmvp"]
-[ext_resource type="Script" path="res://Scenes/Tools/Duster/duster_feather_root.gd" id="4_6a3d2"]
+[ext_resource type="Script" uid="uid://ddbxewukeiwxj" path="res://Scenes/Tools/Duster/duster_handle.gd" id="3_qsmvp"]
+[ext_resource type="Script" uid="uid://dvmm6lq5yt72y" path="res://Scenes/Tools/Duster/duster_feather_root.gd" id="4_6a3d2"]
 [ext_resource type="Texture2D" uid="uid://bbtxmp124swer" path="res://images/inducing tools/Revised/Duster Feather.PNG" id="5_pc1n5"]
-[ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="6_btf2x"]
-[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="7_6newg"]
+[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://Scenes/Components/Tools/GrabTransform.gd" id="6_btf2x"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://Scenes/Components/Tools/tickle_component.gd" id="7_6newg"]
 [ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="8_pevtq"]
 [ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="11_shvuq"]
 
@@ -52,6 +52,7 @@ jerk_decelerate = false
 jerk_threshold = 15000.0
 jerk_particle_variance = Vector2(1, 5)
 particle_spawn_max_speed = 500.0
+particle_spawn_radius = 50.0
 
 [node name="DusterCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 15)
@@ -77,7 +78,7 @@ position = Vector2(0, -326)
 texture = ExtResource("5_pc1n5")
 
 [node name="GrabTransform" type="Marker2D" parent="."]
-position = Vector2(0.5, 26)
+position = Vector2(0, 3)
 gizmo_extents = 73.5
 script = ExtResource("6_btf2x")
 snap_factor_d = -10.0

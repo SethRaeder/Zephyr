@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=3 uid="uid://djy1pt0g6gk4y"]
 
-[ext_resource type="Script" path="res://Scripts/pepper_test.gd" id="1_hv1su"]
+[ext_resource type="Script" uid="uid://dg2sqmfe03d6b" path="res://Scripts/pepper_test.gd" id="1_hv1su"]
 [ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://images/inducing tools/Revised/Pepper Shaker.PNG" id="1_kfyeg"]
 [ext_resource type="Texture2D" uid="uid://bpas26tvkd3sv" path="res://addons/kenney_particle_pack/window_01.png" id="2_inpko"]
 [ext_resource type="Texture2D" uid="uid://dss6ykenrvo7f" path="res://addons/kenney_particle_pack/smoke_08.png" id="2_v2dxl"]
 [ext_resource type="Texture2D" uid="uid://bbn0ir5fbtiug" path="res://addons/kenney_particle_pack/smoke_07.png" id="3_7j3ce"]
 [ext_resource type="PhysicsMaterial" uid="uid://fo4t7ytftg21" path="res://Resources/Physics Materials/glass_physics_material.tres" id="4_kcaro"]
 [ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="4_mbxtd"]
-[ext_resource type="Script" path="res://Scripts/pepper_internals.gd" id="5_bc8sw"]
+[ext_resource type="Script" uid="uid://b4ae4os7a5l4l" path="res://Scripts/pepper_internals.gd" id="5_bc8sw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlha5"]
 radius = 100.0

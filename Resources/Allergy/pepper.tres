@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AllergyResource" load_steps=3 format=3 uid="uid://d3vctd86sic6"]
+
+[ext_resource type="Script" uid="uid://ddgdp2hieuh8r" path="res://Resources/Definitions/allergy_resource.gd" id="1_gda8h"]
+
+[sub_resource type="Curve" id="Curve_0voxx"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+script = ExtResource("1_gda8h")
+allergy_name = "Pepper"
+max_count = 100.0
+tickle_amount_max = 2.0
+burn_amount_max = 10.0
+burn_curve = SubResource("Curve_0voxx")

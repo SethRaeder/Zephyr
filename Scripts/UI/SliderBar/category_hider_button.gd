@@ -6,7 +6,7 @@ var nodes_to_hide = []
 func _ready() -> void:
 	size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
-	button_pressed = true
+	button_pressed = false
 	
 	toggled.connect(func(is_on):
 		for node in nodes_to_hide:

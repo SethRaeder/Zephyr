@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://03yub1gspvk7"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Brain/brain_debug_suite.gd" id="1_qhhk0"]
+[ext_resource type="Script" uid="uid://ck63ne8jfw526" path="res://Scripts/Characters/Brain/brain_debug_suite.gd" id="1_qhhk0"]
 
 [node name="BrainDebugSuite" type="Control" groups=["character_debug"]]
 layout_mode = 3

@@ -18,7 +18,7 @@ class_name AllergenDetector
 var allergen_time := CustomBoundedValue.new()
 var allergen_particles := CustomBoundedValue.new()
 
-var nose : NoseTriggerZone
+var nose_dict : Dictionary[NoseTriggerZone, float]
 var debug_timer : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,8 +30,11 @@ func _ready() -> void:
 	#debug_timer.autostart = true
 	add_child(debug_timer)
 	
-	nose = get_parent()
-	nose.on_tickle_damage.connect(_on_tickle_damage)
+	var all_noses = get_tree().get_nodes_in_group("nose")
+	for nose in all_noses:
+		if nose is NoseTriggerZone:
+			nose_dict[nose as NoseTriggerZone] = 0.0
+			nose.on_tickle_damage.connect(_on_tickle_damage)
 		
 	allergen_time.name = allergen.allergy_name + " Progress"
 	allergen_time.max_value = time_to_max_progress
@@ -44,18 +47,19 @@ func _on_tickle_damage(damage_amount : float, damage_type : TickleComponent.DAMA
 		#print("Detecting allergy damage")
 		allergen_particles.add_value(damage_amount)
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	allergen_particles.add_value(delta * particle_decay_rate)
 	
 	if allergen_particles.get_percent() == 0.0:
 		allergen_time.add_value(delta * progress_decay_rate)
 	else:
 		allergen_time.add_value(delta * particle_count_time_effect.sample(allergen_particles.get_percent()))
-		
-	if allergen.does_tickle():
-		nose.add_tickle(delta * get_tickle_damage(), TickleComponent.DAMAGE_TYPES.TICKLE, null)
-	if allergen.does_burn():
-		nose.add_tickle(delta * get_burn_damage(), TickleComponent.DAMAGE_TYPES.BURN, null)
+	
+	for nose in nose_dict:
+		if allergen.does_tickle():
+			nose.add_tickle(delta * get_tickle_damage(), TickleComponent.DAMAGE_TYPES.TICKLE, null)
+		if allergen.does_burn():
+			nose.add_tickle(delta * get_burn_damage(), TickleComponent.DAMAGE_TYPES.BURN, null)
 
 func get_tickle_damage() -> float:
 	return allergen.sample_tickle(allergen_time.get_percent(), allergen_particles.get_percent())
@@ -71,6 +75,7 @@ func debug() -> void:
 
 func send_sliders(container : SliderBarContainer):
 	print("Allergen Detector sending sliders...")
+	container.add_new_header(allergen.allergy_name)
 	container.add_new_slider(allergen_particles)
 	container.add_new_slider(allergen_time)
 	

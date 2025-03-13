@@ -3,7 +3,7 @@ class_name TickleComponent
 
 @export_category("Tickle Type")
 #enum DAMAGE_TYPES {RUB, FLUFF, POKE, POLLEN, DUST, CHHINKNI, }
-enum DAMAGE_TYPES {TICKLE, BURN, SENSITIVITY, ALLERGY}
+enum DAMAGE_TYPES {TICKLE, BURN, SENSITIVITY, ALLERGY, SNEEZECOUNT}
 
 ## Tickle decays faster than burn
 @export var tickle_type : DAMAGE_TYPES = DAMAGE_TYPES.TICKLE

@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://c0052co50relo"]
 
-[ext_resource type="Script" path="res://Scripts/hand.gd" id="1_gyiu4"]
+[ext_resource type="Script" uid="uid://dhhkfnsw01y2y" path="res://Scripts/hand.gd" id="1_gyiu4"]
 [ext_resource type="Texture2D" uid="uid://dv0p2waynabuq" path="res://images/inducing tools/Revised/Hand Normal.PNG" id="1_s11jp"]
 [ext_resource type="Texture2D" uid="uid://bd4cgkxdnyxck" path="res://images/inducing tools/Revised/Hand Grab.PNG" id="2_pd8rk"]
 [ext_resource type="Texture2D" uid="uid://ct0ybg2db5leu" path="res://images/inducing tools/Revised/Hand Finger.PNG" id="3_1fp7v"]
-[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="5_mktyr"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://Scenes/Components/Tools/tickle_component.gd" id="5_mktyr"]
 [ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="6_iwhfu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8a4xm"]
@@ -42,6 +42,7 @@ unique_name_in_owner = true
 position = Vector2(-33, 14)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8a4xm")
+frame_progress = 0.267026
 
 [node name="NoseDetector" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -70,6 +71,7 @@ offset_left = -56.0
 offset_top = -16.0
 offset_right = -42.22
 offset_bottom = 15.655
+metadata/_edit_use_anchors_ = true
 
 [node name="AntiBurn" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -88,3 +90,4 @@ offset_left = 9.0
 offset_top = 39.0
 offset_right = 22.78
 offset_bottom = 70.655
+metadata/_edit_use_anchors_ = true

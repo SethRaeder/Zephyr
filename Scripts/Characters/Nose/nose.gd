@@ -116,7 +116,6 @@ func add_tickle(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPE
 		
 		TickleComponent.DAMAGE_TYPES.SENSITIVITY:
 			sensitivity.add_value(tickle_amount)
-			
 
 func send_sliders(container : SliderBarContainer):
 	container.add_new_header(self.name + " Settings")

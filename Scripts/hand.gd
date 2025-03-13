@@ -8,6 +8,7 @@ var grab_target : GrabTransform = null
 @export var nose_detector: Area2D
 @export var anti_tickle: TickleComponent  
 @export var anti_burn: TickleComponent
+@export var anti_sneeze : TickleComponent
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
@@ -32,10 +33,8 @@ func _process(delta: float) -> void:
 
 func toggle_nose_rub(enabled : bool):
 	if anti_burn:
-		anti_burn.monitorable = enabled
 		anti_burn.monitoring = enabled
 	if anti_tickle:
-		anti_tickle.monitorable = enabled
 		anti_tickle.monitoring = enabled
 		
 func _on_tool_released():

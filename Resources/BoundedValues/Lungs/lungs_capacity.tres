@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://clt10mw8xata"]
 
-[ext_resource type="Script" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_ap3pl"]
+[ext_resource type="Script" uid="uid://dffk5kwe1wvi" path="res://Resources/Definitions/custom_bounded_value.gd" id="1_ap3pl"]
 
 [resource]
 script = ExtResource("1_ap3pl")

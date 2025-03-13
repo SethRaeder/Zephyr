@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://t0tr1cifnv7m"]
 
-[ext_resource type="Script" path="res://Scenes/UI/toolbox.gd" id="1_r0kad"]
-[ext_resource type="Script" path="res://Scenes/UI/spawner_button.gd" id="2_mhdu0"]
+[ext_resource type="Script" uid="uid://dgtpbv0nrarpt" path="res://Scenes/UI/toolbox.gd" id="1_r0kad"]
+[ext_resource type="Script" uid="uid://vuqbpt11sv47" path="res://Scenes/UI/spawner_button.gd" id="2_mhdu0"]
 [ext_resource type="PackedScene" uid="uid://qjiu4fb7fbty" path="res://Scenes/Tools/Duster/duster.tscn" id="3_g2dwu"]
 [ext_resource type="PackedScene" uid="uid://cwr4vtymp7lac" path="res://Scenes/Tools/Feather/feather.tscn" id="3_yjca8"]
 [ext_resource type="PackedScene" uid="uid://07jfi4b7gu6h" path="res://Scenes/Tools/QTip/q_tip.tscn" id="4_3qw4e"]
