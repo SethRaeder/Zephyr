@@ -110,7 +110,7 @@ func _ready() -> void:
 	voice.hitch_finished.connect(hitch_finished)
 	
 	set_animation_transition("RigDemo")
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -188,9 +188,16 @@ func can_hitch() -> bool:
 
 func handle_animation_state_transition():
 	if anim_parameters["sneeze"] and can_sneeze():
-		if is_sneezing:
-			swap_animation_buffers("SneezeSwapTree")
-		else:
+		var sneeze_size = randf_range(0,1)
+		var sneeze_anim = "sneeze"
+		if sneeze_size > 0.7:
+			sneeze_anim = "sneeze_big"
+		elif sneeze_size < 0.3:
+			sneeze_anim = "sneeze_small"
+		print("Sneeze Size : %.1f %s"%[sneeze_size,sneeze_anim])
+		swap_animation_buffers("SneezeSwapTree", sneeze_anim)
+			
+		if not is_sneezing:
 			set_animation_transition("Sneeze")
 	elif anim_parameters["buildup"] and can_build():
 		if is_building:
@@ -243,8 +250,9 @@ func swap_animation_buffers(animation_buffer_name, new_animation = null):
 	
 	var buffer_int : int = 1 if current_buffer.ends_with("1") else 0
 	
-	if new_animation:
-		animation_tree.get_node("%s/Buffer%d" %[animation_buffer_name, buffer_int]).animation = new_animation
+	if new_animation != null:
+		print("Setting %s/Buffer%d animation to %s" %[animation_buffer_name, buffer_int, new_animation])
+		animation_tree.tree_root.get_node(animation_buffer_name).get_node("Buffer%d"%buffer_int).animation = new_animation
 		
 	animation_tree.set("parameters/%s/Transition/transition_request" % animation_buffer_name, current_buffer)
 	

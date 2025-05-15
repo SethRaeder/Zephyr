@@ -1,0 +1,362 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=55 format=3 uid="uid://5iijlex14xr4"]
+
+[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_n2kky"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://ba8pjigkih8ei" path="res://Scenes/Characters/Kel/Animations/buildup_swap_tree.tres" id="2_6hqlm"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://cuisaekt7igfi" path="res://Scenes/Characters/Kel/Animations/hitch_swap_tree.tres" id="3_r37fa"]
+[ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://Scenes/Characters/Kel/Animations/idle_tickle_blend.tres" id="4_h2d15"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://dkd6mmmpcnitw" path="res://Scenes/Characters/Kel/Animations/sigh_swap_tree.tres" id="5_uo1fm"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://dmwurjh0u68wp" path="res://Scenes/Characters/Kel/Animations/sneeze_swap_tree.tres" id="6_67pw0"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://bm70lsk3faesa" path="res://Scenes/Characters/Kel/Animations/sniff_swap_tree.tres" id="7_gghkd"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_r5j13"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rqwnb"]
+animation = &"sneeze"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p10oy"]
+animation = &"sneeze"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pe4go"]
+animation = &"rig_demo"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_fr252"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+allow_transition_to_self = true
+input_0/name = "RigDemo"
+input_0/auto_advance = true
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "Idle"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "Hitch"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+input_3/name = "Buildup"
+input_3/auto_advance = false
+input_3/break_loop_at_end = false
+input_3/reset = true
+input_4/name = "Sneeze"
+input_4/auto_advance = false
+input_4/break_loop_at_end = false
+input_4/reset = true
+input_5/name = "Sigh"
+input_5/auto_advance = false
+input_5/break_loop_at_end = false
+input_5/reset = true
+input_6/name = "Sniff"
+input_6/auto_advance = false
+input_6/break_loop_at_end = false
+input_6/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_drv36"]
+animation = &"neck_sway_add"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_n5m61"]
+filter_enabled = true
+filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position"]
+fadein_time = 0.1
+fadeout_time = 0.3
+autorestart = true
+autorestart_delay = 0.0
+autorestart_random_delay = 10.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uyewt"]
+animation = &"blink"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fm44d"]
+animation = &"ear_flick"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_6caxu"]
+filter_enabled = true
+filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:rotation"]
+fadein_time = 0.2
+fadeout_time = 0.5
+autorestart = true
+autorestart_delay = 0.0
+autorestart_random_delay = 30.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lu2l1"]
+animation = &"nose_flare"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_8ldcw"]
+filter_enabled = true
+filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_ofdw2"]
+xfade_time = 0.25
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "flare"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1i0jf"]
+animation = &"buildup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fhgdn"]
+animation = &"buildup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_krkje"]
+animation = &"hitch"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_emfnt"]
+animation = &"hitch"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eiixe"]
+animation = &"rig_demo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tolip"]
+animation = &"sneeze"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hkgpo"]
+animation = &"sneeze"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f55j0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_enas5"]
+xfade_time = 2.0
+xfade_curve = ExtResource("1_n2kky")
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4uwxn"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"hitch\"] and anim_parameters[\"hitch_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b01yv"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"hitch\"] and anim_parameters[\"hitch_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3y0bf"]
+xfade_time = 1.0
+xfade_curve = ExtResource("1_n2kky")
+priority = 10
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bg3bg"]
+xfade_time = 1.0
+xfade_curve = ExtResource("1_n2kky")
+priority = 10
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e8s6d"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"hitch\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_130sc"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"] and anim_parameters[\"buildup_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lhdl4"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"] and anim_parameters[\"buildup_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_52bcx"]
+xfade_time = 1.0
+xfade_curve = ExtResource("1_n2kky")
+priority = 10
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i0b25"]
+xfade_time = 1.0
+xfade_curve = ExtResource("1_n2kky")
+priority = 10
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tqcdg"]
+xfade_time = 0.5
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"sneeze\"] and anim_parameters[\"sneeze_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7fud0"]
+xfade_time = 0.5
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"sneeze\"] and anim_parameters[\"sneeze_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h863x"]
+xfade_time = 1.0
+xfade_curve = ExtResource("1_n2kky")
+priority = 10
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6gvqy"]
+xfade_time = 1.0
+xfade_curve = ExtResource("1_n2kky")
+priority = 10
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l7ab5"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"] and anim_parameters[\"hitch_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cpfdd"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"] and anim_parameters[\"hitch_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2tpn0"]
+xfade_time = 0.5
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"sneeze\"] and anim_parameters[\"buildup_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nl5jc"]
+xfade_time = 0.5
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"sneeze\"] and anim_parameters[\"buildup_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2y33v"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"] and anim_parameters[\"sneeze_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s5vhf"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 2
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"] and anim_parameters[\"sneeze_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bvihb"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+advance_mode = 2
+advance_expression = "anim_parameters[\"buildup\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l71dt"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 3
+advance_mode = 2
+advance_expression = "anim_parameters[\"hitch\"] and anim_parameters[\"sneeze_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_44k5h"]
+xfade_time = 0.75
+xfade_curve = ExtResource("1_n2kky")
+priority = 3
+advance_mode = 2
+advance_expression = "anim_parameters[\"hitch\"] and anim_parameters[\"sneeze_interrupt\"]"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_dmuwf"]
+states/End/position = Vector2(976, 350)
+states/IdleTickle/node = ExtResource("4_h2d15")
+states/IdleTickle/position = Vector2(316, -98)
+states/Start/position = Vector2(-24, -98)
+states/buildup/node = SubResource("AnimationNodeAnimation_fhgdn")
+states/buildup/position = Vector2(250, -329)
+"states/buildup 2/node" = SubResource("AnimationNodeAnimation_1i0jf")
+"states/buildup 2/position" = Vector2(76, -406)
+states/hitch/node = SubResource("AnimationNodeAnimation_emfnt")
+states/hitch/position = Vector2(822, -285)
+"states/hitch 2/node" = SubResource("AnimationNodeAnimation_krkje")
+"states/hitch 2/position" = Vector2(822, -103)
+states/rig_demo/node = SubResource("AnimationNodeAnimation_eiixe")
+states/rig_demo/position = Vector2(141, -98)
+states/sneeze/node = SubResource("AnimationNodeAnimation_hkgpo")
+states/sneeze/position = Vector2(462, -461)
+"states/sneeze 2/node" = SubResource("AnimationNodeAnimation_tolip")
+"states/sneeze 2/position" = Vector2(795, -461)
+transitions = ["Start", "rig_demo", SubResource("AnimationNodeStateMachineTransition_f55j0"), "rig_demo", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_enas5"), "hitch", "hitch 2", SubResource("AnimationNodeStateMachineTransition_4uwxn"), "hitch 2", "hitch", SubResource("AnimationNodeStateMachineTransition_b01yv"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_3y0bf"), "hitch 2", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_bg3bg"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_e8s6d"), "buildup", "buildup 2", SubResource("AnimationNodeStateMachineTransition_130sc"), "buildup 2", "buildup", SubResource("AnimationNodeStateMachineTransition_lhdl4"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_52bcx"), "buildup 2", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_i0b25"), "sneeze", "sneeze 2", SubResource("AnimationNodeStateMachineTransition_tqcdg"), "sneeze 2", "sneeze", SubResource("AnimationNodeStateMachineTransition_7fud0"), "sneeze 2", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_h863x"), "sneeze", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_6gvqy"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_l7ab5"), "hitch 2", "buildup", SubResource("AnimationNodeStateMachineTransition_cpfdd"), "buildup 2", "sneeze", SubResource("AnimationNodeStateMachineTransition_2tpn0"), "buildup", "sneeze", SubResource("AnimationNodeStateMachineTransition_nl5jc"), "sneeze", "buildup", SubResource("AnimationNodeStateMachineTransition_2y33v"), "sneeze 2", "buildup", SubResource("AnimationNodeStateMachineTransition_s5vhf"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_bvihb"), "sneeze", "hitch", SubResource("AnimationNodeStateMachineTransition_l71dt"), "sneeze 2", "hitch", SubResource("AnimationNodeStateMachineTransition_44k5h")]
+graph_offset = Vector2(-172, -583)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0f6sr"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_460ov"]
+xfade_time = 0.5
+xfade_curve = ExtResource("1_n2kky")
+allow_transition_to_self = true
+input_0/name = "state_0"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "state_1"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[resource]
+graph_offset = Vector2(-354.741, -301.393)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
+nodes/Add2/position = Vector2(980, -120)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
+nodes/Animation/position = Vector2(740, 0)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_rqwnb")
+"nodes/Animation 2/position" = Vector2(-500, -180)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_p10oy")
+"nodes/Animation 3/position" = Vector2(-500, -40)
+"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_pe4go")
+"nodes/Animation 4/position" = Vector2(-80, -440)
+"nodes/Animation Transition/node" = SubResource("AnimationNodeTransition_fr252")
+"nodes/Animation Transition/position" = Vector2(480, -100)
+nodes/Blink/node = SubResource("AnimationNodeAnimation_uyewt")
+nodes/Blink/position = Vector2(1480, -260)
+"nodes/Blink Shot/node" = SubResource("AnimationNodeOneShot_n5m61")
+"nodes/Blink Shot/position" = Vector2(1480, -120)
+nodes/BuildupSwapTree/node = ExtResource("2_6hqlm")
+nodes/BuildupSwapTree/position = Vector2(-80, 100)
+"nodes/Ear Flick/node" = SubResource("AnimationNodeAnimation_fm44d")
+"nodes/Ear Flick/position" = Vector2(1240, -260)
+"nodes/Earflick Shot/node" = SubResource("AnimationNodeOneShot_6caxu")
+"nodes/Earflick Shot/position" = Vector2(1240, -120)
+nodes/HitchSwapTree/node = ExtResource("3_r37fa")
+nodes/HitchSwapTree/position = Vector2(-80, -60)
+nodes/IdleTickleBlend/node = ExtResource("4_h2d15")
+nodes/IdleTickleBlend/position = Vector2(-80, -260)
+nodes/NoseFlare/node = SubResource("AnimationNodeAnimation_lu2l1")
+nodes/NoseFlare/position = Vector2(1640, 240)
+nodes/NoseFlareStrength/node = SubResource("AnimationNodeBlend2_8ldcw")
+nodes/NoseFlareStrength/position = Vector2(2020, -140)
+nodes/NoseFlareTransition/node = SubResource("AnimationNodeTransition_ofdw2")
+nodes/NoseFlareTransition/position = Vector2(1820, 40)
+"nodes/Parameter Animation/node" = SubResource("AnimationNodeStateMachine_dmuwf")
+"nodes/Parameter Animation/position" = Vector2(480, -380)
+nodes/RESET/node = SubResource("AnimationNodeAnimation_0f6sr")
+nodes/RESET/position = Vector2(1640, 100)
+nodes/SighSwapTree/node = ExtResource("5_uo1fm")
+nodes/SighSwapTree/position = Vector2(-80, 420)
+nodes/SneezeSwapTree/node = ExtResource("6_67pw0")
+nodes/SneezeSwapTree/position = Vector2(-80, 260)
+nodes/SniffSwapTree/node = ExtResource("7_gghkd")
+nodes/SniffSwapTree/position = Vector2(-80, 580)
+nodes/Transition/node = SubResource("AnimationNodeTransition_460ov")
+nodes/Transition/position = Vector2(-360, -180)
+nodes/output/position = Vector2(2220, -140)
+node_connections = [&"Add2", 0, &"Animation Transition", &"Add2", 1, &"Animation", &"Animation Transition", 0, &"Animation 4", &"Animation Transition", 1, &"IdleTickleBlend", &"Animation Transition", 2, &"HitchSwapTree", &"Animation Transition", 3, &"BuildupSwapTree", &"Animation Transition", 4, &"SneezeSwapTree", &"Animation Transition", 5, &"SighSwapTree", &"Animation Transition", 6, &"SniffSwapTree", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"Transition", 0, &"Animation 2", &"Transition", 1, &"Animation 3", &"output", 0, &"NoseFlareStrength"]
