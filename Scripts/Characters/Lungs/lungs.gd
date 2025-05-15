@@ -105,8 +105,16 @@ func _physics_process(delta: float) -> void:
 			breathe(BUILD_RATE, BUILD_WIND_BONUS, delta)
 			
 		BREATH_STATE.SNEEZE:
-			if voice_box.Sneeze.playing and sneeze_wind_curve:
-				var progress = voice_box.Sneeze.get_playback_position()
+			var sneezePlayer = null
+			if voice_box.SneezeNormal.playing:
+				sneezePlayer = voice_box.SneezeNormal
+			elif voice_box.SneezeBig.playing:
+				sneezePlayer = voice_box.SneezeBig
+			elif voice_box.SneezeStifle.playing:
+				sneezePlayer = voice_box.SneezeStifle
+	
+			if sneezePlayer != null and sneeze_wind_curve:
+				var progress = sneezePlayer.get_playback_position()
 				var sample = sneeze_wind_curve.sample_baked(clampf(progress,0,1))
 			
 				breathe(SNEEZE_RATE * sample, SNEEZE_WIND_BONUS, delta)

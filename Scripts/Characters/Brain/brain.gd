@@ -47,6 +47,7 @@ class_name Brain
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var update_timer: Timer = $UpdateTimer
 @onready var fit_timer: Timer = $FitTimer
+@onready var anim_timeout_timer: Timer = %AnimTimeoutTimer
 
 var sneeze_trigger_count := CustomBoundedValue.new()
 
@@ -62,11 +63,15 @@ var anim_parameters = {
 	"sneeze_interrupt": false,
 	"sigh": false,
 	"sigh_interrupt": false,
+	"sniff": false,
+	"sniff_interrupt": false,
 }
 
-var is_hitching = false
-var is_building = false
-var is_sneezing = false
+var is_hitching : bool = false
+var is_building : bool = false
+var is_sneezing : bool = false
+var is_sighing : bool = false
+var is_sniffing : bool = false
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -105,42 +110,52 @@ func _ready() -> void:
 	voice.on_hitch.connect(on_hitch)
 	voice.on_buildup.connect(on_buildup)
 	voice.on_sneeze.connect(on_sneeze)
-	voice.sneeze_finished.connect(sneeze_finished)
-	voice.buildup_finished.connect(buildup_finished)
-	voice.hitch_finished.connect(hitch_finished)
 	
-	set_animation_transition("RigDemo")
-
+	voice.sneeze_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		sneeze_finished()
+	)
+	voice.buildup_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		buildup_finished()
+	)
+	voice.hitch_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		hitch_finished()
+	)
+	voice.sigh_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		sigh_finished()
+	)
+	voice.sniff_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		sniff_finished()
+	)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	idletickleblend = lerpf(idletickleblend, clamp(float(sneeze_trigger_count.current_value * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) / tickle_max), 0.0, 1.0), delta)
 	
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
-	animation_tree.set("parameters/IdleTickleBlend/blend_position", idletickleblend)
+	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
 
 func timer_timeout():
 	anim_parameters["hitch"] = false
 	anim_parameters["buildup"] = false
 	anim_parameters["sneeze"] = false
 	anim_parameters["sigh"] = false
+	anim_parameters["sniff"] = false
 	
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
 	#print("<Brain> IdleTickleBlend: ",idletickleblend)
 	var sneeze_percent = sneeze_trigger_count.get_percent()
-	var playback = animation_tree.get("parameters/Animation Transition/current_state")
-	
-	is_hitching = false
-	is_building = false
-	is_sneezing = false
-	match playback:
-		"Hitch":
-			is_hitching = true
-		"Buildup":
-			is_building = true
-		"Sneeze":
-			is_sneezing = true
 	
 	if randf() < hitch_curve.sample(sneeze_percent) * (hitch_repeat_modifier.current_value if is_hitching else 1.0):
 		if not lungs.is_full():
@@ -154,121 +169,54 @@ func timer_timeout():
 		else:
 			anim_parameters["sigh"] = true
 			
-	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)  * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0):
+	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0):
 		anim_parameters["sneeze"] = true
 		
-	handle_animation_state_transition()
+	if randf() < 0.1 : 
+		anim_parameters["sigh"] = true
+	
+	if randf() < 0.2 and sneeze_percent > 0.5: 
+		anim_parameters["sniff"] = true
 
-func can_sneeze() -> bool:
-	if not (is_sneezing or is_building):
-		return false
-	if is_building and not anim_parameters["buildup_interrupt"]:
-		return false
-	if is_sneezing and not anim_parameters["sneeze_interrupt"]:
-		return false
-	return true
-
-func can_build() -> bool:
-	if is_hitching and not anim_parameters["hitch_interrupt"]:
-		return false
-	if is_building and not anim_parameters["buildup_interrupt"]:
-		return false
-	if is_sneezing and not anim_parameters["sneeze_interrupt"]:
-		return false
-	return true
-
-func can_hitch() -> bool:
-	if is_hitching and not anim_parameters["hitch_interrupt"]:
-		return false
-	if is_building:
-		return false
-	if is_sneezing:
-		return false
-	return true
-
-func handle_animation_state_transition():
-	if anim_parameters["sneeze"] and can_sneeze():
-		if is_sneezing:
-			swap_animation_buffers("SneezeSwapTree")
-		else:
-			set_animation_transition("Sneeze")
-	elif anim_parameters["buildup"] and can_build():
-		if is_building:
-			if anim_parameters["buildup_interrupt"]:
-				swap_animation_buffers("BuildupSwapTree")
-		else:
-			set_animation_transition("Buildup")
-	#elif anim_parameters["sigh"]:
-		#set_animation_transition("Sigh")
-	#elif anim_parameters["sniff"]:
-		#set_animation_transition("Sniff")
-	elif anim_parameters["hitch"] and can_hitch():
-		if is_hitching:
-			if anim_parameters["hitch_interrupt"]:
-				swap_animation_buffers("HitchSwapTree")
-		else:
-			set_animation_transition("Hitch")
-	else:
-		print("No applicable transition states!!!")
-	#animation_tree.set("parameters/SneezeMachine/conditions/sneeze",sneeze)
-	#animation_tree.set("parameters/SneezeMachine/conditions/buildup",buildup)
-	#animation_tree.set("parameters/SneezeMachine/conditions/hitch",hitch)
-	#animation_tree.set("parameters/SneezeMachine/conditions/sigh",sigh)
-
-func set_animation_transition(transition_name : String):
-	animation_tree.set("parameters/Animation Transition/transition_request",transition_name)
-	print("Transitioning to %s" %transition_name)
+func reset_tracker_params():
+	is_hitching = false
+	is_building = false
+	is_sneezing = false
+	is_sighing = false
+	is_sniffing = false
 	anim_parameters["hitch_interrupt"] = false
 	anim_parameters["buildup_interrupt"] = false
 	anim_parameters["sneeze_interrupt"] = false
+	anim_parameters["sigh_interrupt"] = false
+	anim_parameters["sniff_interrupt"] = false
 
 func _on_animation_finished(animation_name : StringName):
 	print("On anim finished... ",animation_name)
 	match animation_name:
 		"hitch", "sneeze", "buildup":
-			print("Params : Sneeze %s Build %s Hitch %s "%[anim_parameters["sneeze"], anim_parameters["buildup"], anim_parameters["hitch"]])
-			if not (anim_parameters["hitch"] or anim_parameters["buildup"] or anim_parameters["sneeze"]):
-				print("Animation Finished: %s. Transitioning to Idle." %animation_name)
-				set_animation_transition("Idle")
-			#else:
-				#handle_animation_state_transition()
+			reset_tracker_params()
 
-func swap_animation_buffers(animation_buffer_name, new_animation = null):
-	var current_buffer : String = animation_tree.get("parameters/%s/Transition/current_state" % animation_buffer_name)
-	match current_buffer:
-		"state_0":
-			current_buffer = "state_1"
-		"state_1":
-			current_buffer = "state_0"
-	
-	var buffer_int : int = 1 if current_buffer.ends_with("1") else 0
-	
-	if new_animation:
-		animation_tree.get_node("%s/Buffer%d" %[animation_buffer_name, buffer_int]).animation = new_animation
-		
-	animation_tree.set("parameters/%s/Transition/transition_request" % animation_buffer_name, current_buffer)
-	
-	print("Swapping Animation Buffers: %s" %animation_buffer_name)
-	anim_parameters["hitch_interrupt"] = false
-	anim_parameters["buildup_interrupt"] = false
-	anim_parameters["sneeze_interrupt"] = false
-	
-		
-#func on_hitch_anim():
-	#anim_parameters["hitch_interrupt"] = false
-	#anim_parameters["buildup_interrupt"] = false
-	#anim_parameters["sneeze_interrupt"] = false
-#
-#func on_buildup_anim():
-	#anim_parameters["hitch_interrupt"] = false
-	#anim_parameters["buildup_interrupt"] = false
-	#anim_parameters["sneeze_interrupt"] = false
-#
-#func on_sneeze_anim():
-	#anim_parameters["hitch_interrupt"] = false
-	#anim_parameters["buildup_interrupt"] = false
-	#anim_parameters["sneeze_interrupt"] = false
-	#sneeze_size = 1.0
+func on_hitch_anim():
+	reset_tracker_params()
+	is_hitching = true
+
+func on_buildup_anim():
+	reset_tracker_params()
+	is_building = true
+
+func on_sneeze_anim():
+	reset_tracker_params()
+	is_sneezing = true
+	sneeze_size = 1.0
+
+func on_sigh_anim():
+	reset_tracker_params()
+	is_sighing = true
+
+func on_sniff_anim():
+	reset_tracker_params()
+	is_sniffing = true
+	#TODO: Reduce "mess" after mess implemented
 	
 func on_hitch():
 	lungs.set_breath_state(lungs.BREATH_STATE.HITCH)
@@ -300,6 +248,14 @@ func buildup_finished():
 	print("Buildup Interrupt")
 	anim_parameters["buildup_interrupt"] = true
 
+func sigh_finished():
+	print("Sigh Interrupt")
+	anim_parameters["sigh_interrupt"] = true
+
+func sniff_finished():
+	print("Sniff Interrupt")
+	anim_parameters["sniff_interrupt"] = true
+	
 func sneeze_trigger(value):
 	sneeze_trigger_count.add_value(value)
 	

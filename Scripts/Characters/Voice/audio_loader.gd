@@ -22,8 +22,6 @@ func do_load():
 		
 		print("Adding new streams....")
 		
-		#var loader := AudioLoader.new()
-		
 		var files_list = get_all_files(load_audio_directory)
 		
 		for file : String in files_list:
@@ -36,7 +34,6 @@ func do_load():
 						continue
 				
 				file = file.split(".import")[0]
-				#var new_stream : AudioStreamWAV = loader.loadfile(file)
 				var new_stream = load(file)
 				new_stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
 				stream.add_stream(-1, new_stream, 1.0)
