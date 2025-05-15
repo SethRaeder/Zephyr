@@ -47,6 +47,7 @@ class_name Brain
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var update_timer: Timer = $UpdateTimer
 @onready var fit_timer: Timer = $FitTimer
+@onready var anim_timeout_timer: Timer = %AnimTimeoutTimer
 
 var sneeze_trigger_count := CustomBoundedValue.new()
 
@@ -66,9 +67,11 @@ var anim_parameters = {
 	"sniff_interrupt": false,
 }
 
-var is_hitching = false
-var is_building = false
-var is_sneezing = false
+var is_hitching : bool = false
+var is_building : bool = false
+var is_sneezing : bool = false
+var is_sighing : bool = false
+var is_sniffing : bool = false
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -107,9 +110,32 @@ func _ready() -> void:
 	voice.on_hitch.connect(on_hitch)
 	voice.on_buildup.connect(on_buildup)
 	voice.on_sneeze.connect(on_sneeze)
-	voice.sneeze_finished.connect(sneeze_finished)
-	voice.buildup_finished.connect(buildup_finished)
-	voice.hitch_finished.connect(hitch_finished)
+	
+	voice.sneeze_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		sneeze_finished()
+	)
+	voice.buildup_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		buildup_finished()
+	)
+	voice.hitch_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		hitch_finished()
+	)
+	voice.sigh_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		sigh_finished()
+	)
+	voice.sniff_finished.connect(func():
+		anim_timeout_timer.start()
+		await anim_timeout_timer.timeout
+		sniff_finished()
+	)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -124,6 +150,7 @@ func timer_timeout():
 	anim_parameters["buildup"] = false
 	anim_parameters["sneeze"] = false
 	anim_parameters["sigh"] = false
+	anim_parameters["sniff"] = false
 	
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
@@ -144,14 +171,24 @@ func timer_timeout():
 			
 	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0):
 		anim_parameters["sneeze"] = true
+		
+	if randf() < 0.1 : 
+		anim_parameters["sigh"] = true
+	
+	if randf() < 0.2 and sneeze_percent > 0.5: 
+		anim_parameters["sniff"] = true
 
 func reset_tracker_params():
 	is_hitching = false
 	is_building = false
 	is_sneezing = false
+	is_sighing = false
+	is_sniffing = false
 	anim_parameters["hitch_interrupt"] = false
 	anim_parameters["buildup_interrupt"] = false
 	anim_parameters["sneeze_interrupt"] = false
+	anim_parameters["sigh_interrupt"] = false
+	anim_parameters["sniff_interrupt"] = false
 
 func _on_animation_finished(animation_name : StringName):
 	print("On anim finished... ",animation_name)
@@ -171,6 +208,15 @@ func on_sneeze_anim():
 	reset_tracker_params()
 	is_sneezing = true
 	sneeze_size = 1.0
+
+func on_sigh_anim():
+	reset_tracker_params()
+	is_sighing = true
+
+func on_sniff_anim():
+	reset_tracker_params()
+	is_sniffing = true
+	#TODO: Reduce "mess" after mess implemented
 	
 func on_hitch():
 	lungs.set_breath_state(lungs.BREATH_STATE.HITCH)
@@ -202,6 +248,14 @@ func buildup_finished():
 	print("Buildup Interrupt")
 	anim_parameters["buildup_interrupt"] = true
 
+func sigh_finished():
+	print("Sigh Interrupt")
+	anim_parameters["sigh_interrupt"] = true
+
+func sniff_finished():
+	print("Sniff Interrupt")
+	anim_parameters["sniff_interrupt"] = true
+	
 func sneeze_trigger(value):
 	sneeze_trigger_count.add_value(value)
 	
