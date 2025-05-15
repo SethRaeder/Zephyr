@@ -1,4 +1,4 @@
-[gd_scene load_steps=303 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=293 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
@@ -39,15 +39,10 @@
 [ext_resource type="Script" uid="uid://iscrohmgg73r" path="res://addons/soupik/modifications/soup_two_bone_ik.gd" id="38_c5jl5"]
 [ext_resource type="Script" uid="uid://cu2rfhmwork2f" path="res://addons/soupik/modifications/soup_look_at.gd" id="39_41d0e"]
 [ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="43_bb46j"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://cuisaekt7igfi" path="res://Scenes/Characters/Kel/Animations/hitch_swap_tree.tres" id="43_n5cdh"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://ba8pjigkih8ei" path="res://Scenes/Characters/Kel/Animations/buildup_swap_tree.tres" id="43_vmiva"]
 [ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://Scenes/Characters/Kel/Animations/idle_tickle_blend.tres" id="43_y7ufs"]
 [ext_resource type="Resource" uid="uid://clt10mw8xata" path="res://Resources/BoundedValues/Lungs/lungs_capacity.tres" id="45_ufyo5"]
 [ext_resource type="Script" uid="uid://dffk5kwe1wvi" path="res://Resources/Definitions/custom_bounded_value.gd" id="46_5853s"]
 [ext_resource type="Resource" uid="uid://oqe736kqr37q" path="res://Resources/BoundedValues/Lungs/oxygen.tres" id="46_qsxht"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://dkd6mmmpcnitw" path="res://Scenes/Characters/Kel/Animations/sigh_swap_tree.tres" id="47_eo7jb"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://dmwurjh0u68wp" path="res://Scenes/Characters/Kel/Animations/sneeze_swap_tree.tres" id="48_j3mj1"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://bm70lsk3faesa" path="res://Scenes/Characters/Kel/Animations/sniff_swap_tree.tres" id="49_my1ha"]
 [ext_resource type="Script" uid="uid://prq72h3pjnv0" path="res://Scenes/Components/Character Resources/StateMachine/state_machine.gd" id="50_c5uyw"]
 [ext_resource type="Texture2D" uid="uid://c5uiym3tsrd5v" path="res://addons/kenney_particle_pack/flame_02.png" id="50_kwx24"]
 [ext_resource type="Script" uid="uid://1dqwiv1pmjhq" path="res://Scenes/Characters/Kel/States/idle.gd" id="51_1exov"]
@@ -3473,48 +3468,6 @@ _data = {
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_r5j13"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rqwnb"]
-animation = &"sneeze"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p10oy"]
-animation = &"sneeze"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pe4go"]
-animation = &"rig_demo"
-
-[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_fr252"]
-xfade_time = 0.75
-xfade_curve = ExtResource("1_a35pc")
-allow_transition_to_self = true
-input_0/name = "RigDemo"
-input_0/auto_advance = true
-input_0/break_loop_at_end = false
-input_0/reset = true
-input_1/name = "Idle"
-input_1/auto_advance = false
-input_1/break_loop_at_end = false
-input_1/reset = true
-input_2/name = "Hitch"
-input_2/auto_advance = false
-input_2/break_loop_at_end = false
-input_2/reset = true
-input_3/name = "Buildup"
-input_3/auto_advance = false
-input_3/break_loop_at_end = false
-input_3/reset = true
-input_4/name = "Sneeze"
-input_4/auto_advance = false
-input_4/break_loop_at_end = false
-input_4/reset = true
-input_5/name = "Sigh"
-input_5/auto_advance = false
-input_5/break_loop_at_end = false
-input_5/reset = true
-input_6/name = "Sniff"
-input_6/auto_advance = false
-input_6/break_loop_at_end = false
-input_6/reset = true
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_drv36"]
 animation = &"neck_sway_add"
 
@@ -3706,52 +3659,25 @@ states/sneeze/position = Vector2(720, -320)
 "states/sneeze 2/node" = SubResource("AnimationNodeAnimation_7tebk")
 "states/sneeze 2/position" = Vector2(720, -419)
 transitions = ["Start", "rig_demo", SubResource("AnimationNodeStateMachineTransition_f55j0"), "rig_demo", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_enas5"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_3y0bf"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_e8s6d"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_52bcx"), "sneeze", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_6gvqy"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_l7ab5"), "buildup", "sneeze", SubResource("AnimationNodeStateMachineTransition_nl5jc"), "sneeze", "buildup", SubResource("AnimationNodeStateMachineTransition_2y33v"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_bvihb"), "sneeze", "hitch", SubResource("AnimationNodeStateMachineTransition_l71dt"), "buildup", "buildup2", SubResource("AnimationNodeStateMachineTransition_sngg2"), "buildup2", "buildup", SubResource("AnimationNodeStateMachineTransition_wjj2l"), "sneeze", "sneeze 2", SubResource("AnimationNodeStateMachineTransition_osgew"), "hitch", "hitch 2", SubResource("AnimationNodeStateMachineTransition_eeniq"), "sneeze 2", "sneeze", SubResource("AnimationNodeStateMachineTransition_b2drk"), "hitch 2", "hitch", SubResource("AnimationNodeStateMachineTransition_ye4e8")]
-graph_offset = Vector2(109, -488)
+graph_offset = Vector2(39, -407)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0f6sr"]
 animation = &"RESET"
 
-[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_460ov"]
-xfade_time = 0.5
-xfade_curve = ExtResource("1_a35pc")
-allow_transition_to_self = true
-input_0/name = "state_0"
-input_0/auto_advance = false
-input_0/break_loop_at_end = false
-input_0/reset = true
-input_1/name = "state_1"
-input_1/auto_advance = false
-input_1/break_loop_at_end = false
-input_1/reset = true
-
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vtvym"]
-graph_offset = Vector2(-496.7, -197.479)
+graph_offset = Vector2(-154.43, -325.261)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
 nodes/Animation/position = Vector2(740, 0)
-"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_rqwnb")
-"nodes/Animation 2/position" = Vector2(-500, -180)
-"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_p10oy")
-"nodes/Animation 3/position" = Vector2(-500, -40)
-"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_pe4go")
-"nodes/Animation 4/position" = Vector2(-80, -440)
-"nodes/Animation Transition/node" = SubResource("AnimationNodeTransition_fr252")
-"nodes/Animation Transition/position" = Vector2(480, -100)
 nodes/Blink/node = SubResource("AnimationNodeAnimation_uyewt")
 nodes/Blink/position = Vector2(1480, -260)
 "nodes/Blink Shot/node" = SubResource("AnimationNodeOneShot_n5m61")
 "nodes/Blink Shot/position" = Vector2(1480, -120)
-nodes/BuildupSwapTree/node = ExtResource("43_vmiva")
-nodes/BuildupSwapTree/position = Vector2(-80, 100)
 "nodes/Ear Flick/node" = SubResource("AnimationNodeAnimation_fm44d")
 "nodes/Ear Flick/position" = Vector2(1240, -260)
 "nodes/Earflick Shot/node" = SubResource("AnimationNodeOneShot_6caxu")
 "nodes/Earflick Shot/position" = Vector2(1240, -120)
-nodes/HitchSwapTree/node = ExtResource("43_n5cdh")
-nodes/HitchSwapTree/position = Vector2(-80, -60)
-nodes/IdleTickleBlend/node = ExtResource("43_y7ufs")
-nodes/IdleTickleBlend/position = Vector2(-80, -260)
 nodes/NoseFlare/node = SubResource("AnimationNodeAnimation_lu2l1")
 nodes/NoseFlare/position = Vector2(1640, 240)
 nodes/NoseFlareStrength/node = SubResource("AnimationNodeBlend2_8ldcw")
@@ -3762,16 +3688,8 @@ nodes/NoseFlareTransition/position = Vector2(1820, 40)
 "nodes/Parameter Animation/position" = Vector2(480, -380)
 nodes/RESET/node = SubResource("AnimationNodeAnimation_0f6sr")
 nodes/RESET/position = Vector2(1640, 100)
-nodes/SighSwapTree/node = ExtResource("47_eo7jb")
-nodes/SighSwapTree/position = Vector2(-80, 420)
-nodes/SneezeSwapTree/node = ExtResource("48_j3mj1")
-nodes/SneezeSwapTree/position = Vector2(-80, 260)
-nodes/SniffSwapTree/node = ExtResource("49_my1ha")
-nodes/SniffSwapTree/position = Vector2(-80, 580)
-nodes/Transition/node = SubResource("AnimationNodeTransition_460ov")
-nodes/Transition/position = Vector2(-360, -180)
 nodes/output/position = Vector2(2220, -140)
-node_connections = [&"Add2", 0, &"Parameter Animation", &"Add2", 1, &"Animation", &"Animation Transition", 0, &"Animation 4", &"Animation Transition", 1, &"IdleTickleBlend", &"Animation Transition", 2, &"HitchSwapTree", &"Animation Transition", 3, &"BuildupSwapTree", &"Animation Transition", 4, &"SneezeSwapTree", &"Animation Transition", 5, &"SighSwapTree", &"Animation Transition", 6, &"SniffSwapTree", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"Transition", 0, &"Animation 2", &"Transition", 1, &"Animation 3", &"output", 0, &"NoseFlareStrength"]
+node_connections = [&"Add2", 0, &"Parameter Animation", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"output", 0, &"NoseFlareStrength"]
 
 [sub_resource type="Curve" id="Curve_4tqut"]
 _data = [Vector2(0, 0.784325), 0.0, 0.0, 0, 0, Vector2(0.576812, 0.122426), -0.610902, -0.610902, 0, 0, Vector2(1, 0), -0.10321, 0.0, 0, 0]
@@ -4253,12 +4171,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 visible = false
 position = Vector2(76, -81)
-rotation = 0.412544
-scale = Vector2(0.999849, 0.999849)
+rotation = 0.412285
+scale = Vector2(0.999845, 0.999845)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.412472
+target_rotation = 0.412285
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -4267,12 +4185,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.608402
+rotation = 0.605757
 scale = Vector2(0.99988, 0.99988)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.607263
+target_rotation = 0.605759
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -4281,12 +4199,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.438559
-scale = Vector2(0.999848, 0.999848)
+rotation = -0.43614
+scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.438209
+target_rotation = -0.436138
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -4295,12 +4213,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.639694
+rotation = -0.639528
 scale = Vector2(0.999889, 0.999889)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.639432
+target_rotation = -0.639534
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -4309,8 +4227,8 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = 0.00256876
-scale = Vector2(0.999829, 0.999829)
+rotation = 0.00332862
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -4404,12 +4322,12 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(26.4717, 56.252)
-rotation = 0.0414554
-scale = Vector2(0.999872, 0.999872)
+rotation = 0.0496167
+scale = Vector2(0.999879, 0.999879)
 rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.6445
+target_rotation = 0.720602
 target_position = Vector2(26.4717, 56.252)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4419,11 +4337,11 @@ constraint_data = SubResource("Resource_iplph")
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-144.681, 71.6403)
 rotation = -0.0234518
-scale = Vector2(0.999828, 0.999828)
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -1.87305
+target_rotation = -1.85967
 target_position = Vector2(-144.681, 71.6403)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4432,12 +4350,12 @@ constraint_data = SubResource("Resource_43o6b")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-148.182, 18.605)
-rotation = 0.0536531
-scale = Vector2(0.99984, 0.99984)
+rotation = 0.0603896
+scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 1.32273
+target_rotation = 1.28462
 target_position = Vector2(-148.182, 18.605)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4454,7 +4372,7 @@ length = 130.878
 bone_angle = 171.246
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.739371
+target_rotation = -0.821531
 target_position = Vector2(-146.994, -1.38475)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4597,9 +4515,9 @@ gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
 [node name="TongueRemote" type="Node2D" parent="IK Targets"]
-position = Vector2(-2420.83, -821.425)
-rotation = -0.0641575
-scale = Vector2(0.999138, 0.999138)
+position = Vector2(-2422.92, -820.049)
+rotation = -0.0637176
+scale = Vector2(0.999135, 0.999135)
 
 [node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote"]
 unique_name_in_owner = true
@@ -4622,39 +4540,17 @@ tree_root = SubResource("AnimationNodeBlendTree_vtvym")
 advance_expression_base_node = NodePath("../../Data/Brain")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Add2/add_amount = 0.2
-"parameters/Animation Transition/current_state" = "Idle"
-"parameters/Animation Transition/transition_request" = ""
-"parameters/Animation Transition/current_index" = 1
 "parameters/Blink Shot/active" = false
 "parameters/Blink Shot/internal_active" = false
 "parameters/Blink Shot/request" = 0
-parameters/BuildupSwapTree/Transition/current_state = ""
-parameters/BuildupSwapTree/Transition/transition_request = ""
-parameters/BuildupSwapTree/Transition/current_index = -1
 "parameters/Earflick Shot/active" = false
 "parameters/Earflick Shot/internal_active" = false
 "parameters/Earflick Shot/request" = 0
-parameters/HitchSwapTree/Transition/current_state = ""
-parameters/HitchSwapTree/Transition/transition_request = ""
-parameters/HitchSwapTree/Transition/current_index = -1
-parameters/IdleTickleBlend/blend_position = 0.0
 parameters/NoseFlareStrength/blend_amount = 0.75
 parameters/NoseFlareTransition/current_state = "idle"
 parameters/NoseFlareTransition/transition_request = ""
 parameters/NoseFlareTransition/current_index = 0
 "parameters/Parameter Animation/IdleTickle/blend_position" = 0
-parameters/SighSwapTree/Transition/current_state = ""
-parameters/SighSwapTree/Transition/transition_request = ""
-parameters/SighSwapTree/Transition/current_index = -1
-parameters/SneezeSwapTree/Transition/current_state = ""
-parameters/SneezeSwapTree/Transition/transition_request = ""
-parameters/SneezeSwapTree/Transition/current_index = -1
-parameters/SniffSwapTree/Transition/current_state = ""
-parameters/SniffSwapTree/Transition/transition_request = ""
-parameters/SniffSwapTree/Transition/current_index = -1
-parameters/Transition/current_state = "pass"
-parameters/Transition/transition_request = ""
-parameters/Transition/current_index = 0
 
 [node name="StateMachine" type="Node" parent="Animation Data"]
 script = ExtResource("50_c5uyw")
@@ -4668,9 +4564,9 @@ nose_refs = [NodePath("../../../Remote Transforms/NoseRemote/NoseOuter"), NodePa
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-954.706, -340.708)
-rotation = -0.309555
-scale = Vector2(0.399718, 0.399718)
+position = Vector2(-955.535, -340.152)
+rotation = -0.309115
+scale = Vector2(0.399717, 0.399717)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
 z_index = -12
@@ -4756,9 +4652,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://Audio/Kel Voice/Sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-985.496, -390.269)
-rotation = -0.0547373
-scale = Vector2(0.399718, 0.399718)
+position = Vector2(-986.304, -389.726)
+rotation = -0.0542974
+scale = Vector2(0.399717, 0.399717)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -4824,9 +4720,9 @@ tracked_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_factor = 0.1
 
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-736.226, -524.594)
-rotation = -0.0547373
-scale = Vector2(0.399718, 0.399718)
+position = Vector2(-736.975, -523.941)
+rotation = -0.0542974
+scale = Vector2(0.399717, 0.399717)
 
 [node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
 unique_name_in_owner = true

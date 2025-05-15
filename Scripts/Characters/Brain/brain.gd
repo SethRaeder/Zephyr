@@ -117,7 +117,7 @@ func _process(delta: float) -> void:
 	idletickleblend = lerpf(idletickleblend, clamp(float(sneeze_trigger_count.current_value * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) / tickle_max), 0.0, 1.0), delta)
 	
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
-	animation_tree.set("parameters/IdleTickleBlend/blend_position", idletickleblend)
+	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
 
 func timer_timeout():
 	anim_parameters["hitch"] = false
