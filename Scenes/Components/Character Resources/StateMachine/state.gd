@@ -6,7 +6,7 @@ class_name State
 @export var nose_refs : Array[NoseTriggerZone] = []
 
 func on_enter(transition_name : String) -> void:
-	animation_tree.
+	pass
 
 func on_exit() -> void:
 	pass
