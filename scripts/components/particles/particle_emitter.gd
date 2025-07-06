@@ -15,7 +15,7 @@ class_name ParticleEmitter
 @export_category("Use Velocity Release")
 @export var release_on_speed : bool = true
 @export var particle_spawn_max_speed : float= 2000.0
-@export var particle_spawn_velocity_curve : Curve = preload("res://Resources/Curves/default_particle_spawn_curve.tres")
+@export var particle_spawn_velocity_curve : Curve = preload("res://resources/curves/default_particle_spawn_curve.tres")
 
 @export_category("Particle Spawn Settings")
 @export var particle_spawn_radius : float = 10

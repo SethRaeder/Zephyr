@@ -4,7 +4,7 @@ class_name AllergenDetector
 @export var allergen : AllergyResource
 
 ##From 0 to max particles, add delta * this sample to the progress each tick
-@export var particle_count_time_effect : Curve = preload("res://Resources/Curves/default_particle_count_time_effect.tres")
+@export var particle_count_time_effect : Curve = preload("res://resources/curves/default_particle_count_time_effect.tres")
 ##How many seconds does it take to reach the end of the allergen effect curve, from 0?
 @export var time_to_max_progress : float = 60.0
 ##How many seconds does it take to reach the beginning of the allergen effect curve, from 100?
