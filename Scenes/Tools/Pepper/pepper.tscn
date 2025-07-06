@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://xwggdnmhs7mt"]
 
-[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://Scenes/Tools/tool_body.gd" id="1_fi5oo"]
-[ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://images/inducing tools/Revised/Pepper Shaker.PNG" id="2_4c60o"]
-[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_2pw2t"]
+[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_fi5oo"]
+[ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://assets/images/inducing_tools/revised/Pepper Shaker.PNG" id="2_4c60o"]
+[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://scripts/components/tools/grab_transform.gd" id="3_2pw2t"]
 [ext_resource type="Texture2D" uid="uid://dss6ykenrvo7f" path="res://addons/kenney_particle_pack/smoke_08.png" id="3_rmnnm"]
-[ext_resource type="Script" uid="uid://cv8ubux5m3uu4" path="res://Scenes/Components/Particle/particle_emitter.gd" id="4_nd7ux"]
+[ext_resource type="Script" uid="uid://cv8ubux5m3uu4" path="res://scripts/components/particles/particle_emitter.gd" id="4_nd7ux"]
 [ext_resource type="Texture2D" uid="uid://bbn0ir5fbtiug" path="res://addons/kenney_particle_pack/smoke_07.png" id="4_o2yfo"]
-[ext_resource type="PackedScene" uid="uid://bt4fb5bk0bgkf" path="res://Scenes/Tools/Particles/pepper_particle.tscn" id="5_eacuv"]
-[ext_resource type="Script" uid="uid://4qpji6o5sv6g" path="res://Scripts/Components/hide_on_particle_exhaust.gd" id="5_v713m"]
+[ext_resource type="PackedScene" uid="uid://bt4fb5bk0bgkf" path="res://scenes/tools/Particles/pepper_particle.tscn" id="5_eacuv"]
+[ext_resource type="Script" uid="uid://4qpji6o5sv6g" path="res://scripts/components/tools/hide_on_particle_exhaust.gd" id="5_v713m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1qc4"]
 radius = 12.0

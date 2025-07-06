@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddpy7pj53lr7p"]
 
-[ext_resource type="PackedScene" uid="uid://boufv7sb4j0ec" path="res://Scenes/Characters/Kel/kel_rig.tscn" id="1_5744v"]
+[ext_resource type="PackedScene" uid="uid://boufv7sb4j0ec" path="res://scenes/characters/Kel/kel_rig.tscn" id="1_5744v"]
 
 [node name="Kel_Character" type="Node2D"]
 

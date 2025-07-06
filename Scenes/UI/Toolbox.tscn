@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://t0tr1cifnv7m"]
 
-[ext_resource type="Script" uid="uid://dgtpbv0nrarpt" path="res://Scenes/UI/toolbox.gd" id="1_r0kad"]
-[ext_resource type="Script" uid="uid://vuqbpt11sv47" path="res://Scenes/UI/spawner_button.gd" id="2_mhdu0"]
-[ext_resource type="PackedScene" uid="uid://qjiu4fb7fbty" path="res://Scenes/Tools/Duster/duster.tscn" id="3_g2dwu"]
-[ext_resource type="PackedScene" uid="uid://cwr4vtymp7lac" path="res://Scenes/Tools/Feather/feather.tscn" id="3_yjca8"]
-[ext_resource type="PackedScene" uid="uid://07jfi4b7gu6h" path="res://Scenes/Tools/QTip/q_tip.tscn" id="4_3qw4e"]
-[ext_resource type="PackedScene" uid="uid://c8ks3is4b2pu8" path="res://Scenes/Tools/Brush/brush.tscn" id="5_imdf7"]
-[ext_resource type="PackedScene" uid="uid://bqkavmqdgvd6f" path="res://Scenes/Tools/Powder/powder.tscn" id="7_qrli1"]
-[ext_resource type="PackedScene" uid="uid://xwggdnmhs7mt" path="res://Scenes/Tools/Pepper/pepper.tscn" id="8_y7q6e"]
-[ext_resource type="PackedScene" uid="uid://bsbnykkg8lb1t" path="res://Scenes/Tools/Dandelion/dandelion.tscn" id="9_y101i"]
-[ext_resource type="PackedScene" uid="uid://etaprmvcorrg" path="res://Scenes/Tools/Bouquet/bouquet.tscn" id="10_gf666"]
-[ext_resource type="PackedScene" uid="uid://bwlmonrs1rnj3" path="res://Scenes/Tools/Chhinkni/chhinkni.tscn" id="11_yf6ej"]
-[ext_resource type="PackedScene" uid="uid://dryxxbob8grcl" path="res://Scenes/Tools/tool_template.tscn" id="12_yxvb5"]
+[ext_resource type="Script" uid="uid://dgtpbv0nrarpt" path="res://scripts/ui/toolbox.gd" id="1_bfec0"]
+[ext_resource type="Script" uid="uid://vuqbpt11sv47" path="res://scripts/ui/spawner_button.gd" id="2_fj2np"]
+[ext_resource type="PackedScene" uid="uid://cwr4vtymp7lac" path="res://scenes/tools/Feather/feather.tscn" id="3_yfu5t"]
+[ext_resource type="PackedScene" uid="uid://07jfi4b7gu6h" path="res://scenes/tools/QTip/q_tip.tscn" id="4_0ivgu"]
+[ext_resource type="PackedScene" uid="uid://c8ks3is4b2pu8" path="res://scenes/tools/Brush/brush.tscn" id="5_qg0y5"]
+[ext_resource type="PackedScene" uid="uid://qjiu4fb7fbty" path="res://scenes/tools/Duster/duster.tscn" id="6_kfpqk"]
+[ext_resource type="PackedScene" uid="uid://bsbnykkg8lb1t" path="res://scenes/tools/Dandelion/dandelion.tscn" id="7_ntuf8"]
+[ext_resource type="PackedScene" uid="uid://etaprmvcorrg" path="res://scenes/tools/Bouquet/bouquet.tscn" id="8_v8646"]
+[ext_resource type="PackedScene" uid="uid://bqkavmqdgvd6f" path="res://scenes/tools/Powder/powder.tscn" id="9_hs4x0"]
+[ext_resource type="PackedScene" uid="uid://xwggdnmhs7mt" path="res://scenes/tools/Pepper/pepper.tscn" id="10_eopiw"]
+[ext_resource type="PackedScene" uid="uid://bwlmonrs1rnj3" path="res://scenes/tools/Chhinkni/chhinkni.tscn" id="11_o7q3c"]
+[ext_resource type="PackedScene" uid="uid://dryxxbob8grcl" path="res://scenes/tools/tool_template.tscn" id="12_fafss"]
 
 [node name="Toolbox" type="Control"]
 layout_mode = 3
@@ -22,7 +22,7 @@ offset_right = 100.0
 offset_bottom = -5.33496
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("1_r0kad")
+script = ExtResource("1_bfec0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -55,72 +55,72 @@ layout_mode = 2
 focus_mode = 0
 text = "Feather"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("3_yjca8")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("3_yfu5t")
 
 [node name="QTipSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Q-Tip"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("4_3qw4e")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("4_0ivgu")
 
 [node name="BrushSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Paintbrush"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("5_imdf7")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("5_qg0y5")
 
 [node name="DusterSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Duster"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("3_g2dwu")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("6_kfpqk")
 
 [node name="DandelionSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Dandelion"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("9_y101i")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("7_ntuf8")
 
 [node name="BouquetSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Bouquet"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("10_gf666")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("8_v8646")
 
 [node name="PowderSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Powder"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("7_qrli1")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("9_hs4x0")
 
 [node name="PepperSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Pepper"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("8_y7q6e")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("10_eopiw")
 
 [node name="ChhinkniSpawner" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "Chhinkni"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("11_yf6ej")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("11_o7q3c")
 
 [node name="DebugSpawner" type="Button" parent="VBoxContainer"]
 visible = false
@@ -128,7 +128,7 @@ layout_mode = 2
 focus_mode = 0
 text = "Debug"
 alignment = 0
-script = ExtResource("2_mhdu0")
-Tool = ExtResource("12_yxvb5")
+script = ExtResource("2_fj2np")
+Tool = ExtResource("12_fafss")
 
 [connection signal="toggled" from="HBoxContainer/Toggle" to="." method="_on_toggle_toggled"]

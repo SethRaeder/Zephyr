@@ -1,6 +1,6 @@
 [gd_resource type="AnimationNodeBlendTree" load_steps=5 format=3 uid="uid://dkd6mmmpcnitw"]
 
-[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_shib1"]
+[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_shib1"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ylv6"]
 resource_local_to_scene = true

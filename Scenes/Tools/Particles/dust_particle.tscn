@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://b7j4oys1em0c1"]
 
-[ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://Scenes/Components/Particle/particle.gd" id="1_7cdy6"]
-[ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://Scripts/Wind/wind_subscriber.gd" id="2_srpe6"]
-[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_25yxm"]
-[ext_resource type="Script" uid="uid://dfj6if5q4u7b3" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_yj65s"]
+[ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_7cdy6"]
+[ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://scripts/components/wind/wind_subscriber.gd" id="2_srpe6"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://scripts/components/tools/tickle_component.gd" id="3_25yxm"]
+[ext_resource type="Script" uid="uid://dfj6if5q4u7b3" path="res://scripts/components/particles/enable_on_breathe_component.gd" id="4_yj65s"]
 [ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="5_nhs6v"]
-[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="5_rkbtu"]
-[ext_resource type="Script" uid="uid://bnwm6si172jtx" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="7_uiivb"]
+[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://resources/allergy_resource/dust.tres" id="5_rkbtu"]
+[ext_resource type="Script" uid="uid://bnwm6si172jtx" path="res://scenes/tools/Particles/FadeParticleSprite.gd" id="7_uiivb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3i2k4"]
 radius = 6.08276

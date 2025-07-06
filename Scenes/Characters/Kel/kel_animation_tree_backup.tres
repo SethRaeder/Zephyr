@@ -1,12 +1,13 @@
 [gd_resource type="AnimationNodeBlendTree" load_steps=55 format=3 uid="uid://5iijlex14xr4"]
 
-[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_n2kky"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://ba8pjigkih8ei" path="res://Scenes/Characters/Kel/Animations/buildup_swap_tree.tres" id="2_6hqlm"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://cuisaekt7igfi" path="res://Scenes/Characters/Kel/Animations/hitch_swap_tree.tres" id="3_r37fa"]
-[ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://Scenes/Characters/Kel/Animations/idle_tickle_blend.tres" id="4_h2d15"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://dkd6mmmpcnitw" path="res://Scenes/Characters/Kel/Animations/sigh_swap_tree.tres" id="5_uo1fm"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://dmwurjh0u68wp" path="res://Scenes/Characters/Kel/Animations/sneeze_swap_tree.tres" id="6_67pw0"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://bm70lsk3faesa" path="res://Scenes/Characters/Kel/Animations/sniff_swap_tree.tres" id="7_gghkd"]
+[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_n2kky"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://ba8pjigkih8ei" path="res://scenes/characters/Kel/animations/buildup_swap_tree.tres" id="2_6hqlm"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://cuisaekt7igfi" path="res://scenes/characters/Kel/animations/hitch_swap_tree.tres" id="3_r37fa"]
+[ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://scenes/characters/Kel/animations/idle_tickle_blend.tres" id="4_h2d15"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://dkd6mmmpcnitw" path="res://scenes/characters/Kel/animations/sigh_swap_tree.tres" id="5_uo1fm"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://dmwurjh0u68wp" path="res://scenes/characters/Kel/animations/sneeze_swap_tree.tres" id="6_67pw0"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://bm70lsk3faesa" path="res://scenes/characters/Kel/animations/sniff_swap_tree.tres" id="7_gghkd"]
+
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_r5j13"]
 

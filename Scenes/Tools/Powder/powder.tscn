@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://bqkavmqdgvd6f"]
 
-[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://Scenes/Tools/tool_body.gd" id="1_olvin"]
-[ext_resource type="Script" uid="uid://cv8ubux5m3uu4" path="res://Scenes/Components/Particle/particle_emitter.gd" id="2_aebjf"]
-[ext_resource type="Texture2D" uid="uid://dlwlb4knxvwa2" path="res://images/inducing tools/Revised/Makeup Brush.PNG" id="2_r0q5s"]
-[ext_resource type="PackedScene" uid="uid://h531dq30bvtk" path="res://Scenes/Tools/Particles/powder_particle.tscn" id="3_n0h4f"]
-[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://Scenes/Components/Tools/GrabTransform.gd" id="3_rqoxr"]
-[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_fufh5"]
-[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="5_ag1u2"]
+[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_olvin"]
+[ext_resource type="Script" uid="uid://cv8ubux5m3uu4" path="res://scripts/components/particles/particle_emitter.gd" id="2_aebjf"]
+[ext_resource type="Texture2D" uid="uid://dlwlb4knxvwa2" path="res://assets/images/inducing_tools/revised/Makeup Brush.PNG" id="2_r0q5s"]
+[ext_resource type="PackedScene" uid="uid://h531dq30bvtk" path="res://scenes/tools/Particles/powder_particle.tscn" id="3_n0h4f"]
+[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://scripts/components/tools/grab_transform.gd" id="3_rqoxr"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://scripts/components/tools/tickle_component.gd" id="4_fufh5"]
+[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://scenes/components/tools/tickle_debug_suite.tscn" id="5_ag1u2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtftb"]
 height = 76.0

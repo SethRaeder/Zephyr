@@ -4,6 +4,7 @@ class_name Brain
 @export_category("Node References")
 @export var lungs: Lungs
 @export var voice: VoiceBox
+@export var animation_tree: AnimationTree
 
 @export_category("Curves")
 ##Define the chances of hitch animation playing depending on sneeze level
@@ -44,9 +45,9 @@ class_name Brain
 ##How much to modify sneeze trigger removal while in a fit?
 @export var fit_trigger_count_mult : float = 0.25
 
-@onready var animation_tree: AnimationTree = %AnimationTree
-@onready var update_timer: Timer = $UpdateTimer
-@onready var fit_timer: Timer = $FitTimer
+#Local node references
+@onready var update_timer: Timer = %UpdateTimer
+@onready var fit_timer: Timer = %FitTimer
 @onready var anim_timeout_timer: Timer = %AnimTimeoutTimer
 
 var sneeze_trigger_count := CustomBoundedValue.new()
@@ -191,7 +192,7 @@ func reset_tracker_params():
 	anim_parameters["sniff_interrupt"] = false
 
 func _on_animation_finished(animation_name : StringName):
-	print("On anim finished... ",animation_name)
+	#print("On anim finished... ",animation_name)
 	match animation_name:
 		"hitch", "sneeze", "buildup":
 			reset_tracker_params()

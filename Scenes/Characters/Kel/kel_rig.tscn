@@ -1,35 +1,35 @@
-[gd_scene load_steps=307 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=192 format=3 uid="uid://boufv7sb4j0ec"]
 
-[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_a35pc"]
-[ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://images/Kel/CLEAN/Neck.PNG" id="1_j7t74"]
-[ext_resource type="Script" uid="uid://k68sr13hul1s" path="res://Scripts/Characters/Voice/voice_box.gd" id="2_80oa4"]
-[ext_resource type="Texture2D" uid="uid://cid0cin82k66g" path="res://images/Kel/CLEAN/Top Teeth.PNG" id="2_ll3jk"]
-[ext_resource type="Texture2D" uid="uid://b8dgwt2l82amq" path="res://images/Kel/Normal/Neck_n.png" id="3_6khqb"]
-[ext_resource type="Texture2D" uid="uid://s23i2jc2ffvg" path="res://images/Kel/CLEAN/Head.PNG" id="3_x7nfl"]
-[ext_resource type="Texture2D" uid="uid://crn0dnvkj0l3h" path="res://images/Kel/CLEAN/Eyebrow.PNG" id="4_lqvg7"]
-[ext_resource type="Texture2D" uid="uid://bbpwg8rthq6am" path="res://images/Kel/Normal/Top Teeth_n.png" id="5_08lfd"]
-[ext_resource type="Texture2D" uid="uid://cbkqppjvkp0a" path="res://images/Kel/CLEAN/Eye (Lineart.PNG" id="5_u6w8b"]
-[ext_resource type="Texture2D" uid="uid://d0xuup5sovrbk" path="res://images/Kel/Normal/Head_n.png" id="6_07le2"]
-[ext_resource type="Texture2D" uid="uid://drft8m4sif8fj" path="res://images/Kel/CLEAN/Eye (Color).PNG" id="6_8twv8"]
-[ext_resource type="Texture2D" uid="uid://bblkygd1cxvxc" path="res://images/Kel/CLEAN/Pupil.PNG" id="7_0ordp"]
-[ext_resource type="Texture2D" uid="uid://de7k5bddtxwls" path="res://images/Kel/CLEAN/Bottom Eyelid.PNG" id="8_jw6jp"]
-[ext_resource type="Texture2D" uid="uid://c48qmfmh44oky" path="res://images/Kel/Normal/Eyebrow_n.png" id="8_slh5c"]
-[ext_resource type="Texture2D" uid="uid://b2dapbr43o2vx" path="res://images/Kel/CLEAN/Top Eyelid.PNG" id="9_h8fug"]
-[ext_resource type="Texture2D" uid="uid://cld5pmfi2rnhv" path="res://images/Kel/CLEAN/Ear.PNG" id="10_b6f2n"]
-[ext_resource type="Texture2D" uid="uid://cs8qn1dj6t4r" path="res://images/Kel/Normal/Eye (Color)_n.png" id="10_cqf01"]
-[ext_resource type="Texture2D" uid="uid://bsmmdtl6kemss" path="res://images/Kel/Normal/Eye (Lineart_n.png" id="11_832ox"]
-[ext_resource type="Texture2D" uid="uid://c5ocm44tk44f1" path="res://images/Kel/CLEAN/Nostril.PNG" id="11_x0tbx"]
-[ext_resource type="Texture2D" uid="uid://yp1grt86q6tf" path="res://images/Kel/Normal/Bottom Eyelid_n.png" id="12_8v681"]
-[ext_resource type="Texture2D" uid="uid://bc7nfvelisig7" path="res://images/Kel/CLEAN/Tongue.PNG" id="12_bp7c3"]
-[ext_resource type="Texture2D" uid="uid://b6pv7x0vx2rf0" path="res://images/Kel/CLEAN/Bottom Teeth.PNG" id="13_h0gu5"]
-[ext_resource type="Texture2D" uid="uid://i2j2kxpti7we" path="res://images/Kel/Normal/Top Eyelid_n.png" id="13_h1j60"]
-[ext_resource type="Texture2D" uid="uid://doqiipr36brqx" path="res://images/Kel/CLEAN/Inner Mouth.PNG" id="14_eb8uc"]
-[ext_resource type="Texture2D" uid="uid://cf0ai6pnecgrf" path="res://images/Kel/CLEAN/Jaw.PNG" id="15_bkugb"]
-[ext_resource type="Texture2D" uid="uid://dh2ms63fotuoj" path="res://images/Kel/Normal/Ear_n.png" id="19_rq1ac"]
-[ext_resource type="Texture2D" uid="uid://dua78t626w0j5" path="res://images/Kel/Normal/Nostril_n.png" id="21_i8c20"]
-[ext_resource type="Texture2D" uid="uid://dtar1ti8p3dut" path="res://images/Kel/Normal/Tongue_n.png" id="23_ubpxp"]
-[ext_resource type="Texture2D" uid="uid://cx7adggonscin" path="res://images/Kel/Normal/Bottom Teeth_n.png" id="25_hmdnr"]
-[ext_resource type="Texture2D" uid="uid://dfg4lg7a7nsw8" path="res://images/Kel/Normal/Jaw_n.png" id="29_6h30p"]
+[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_a35pc"]
+[ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://assets/images/Kel/clean/texture_color/Neck.PNG" id="1_j7t74"]
+[ext_resource type="Script" uid="uid://k68sr13hul1s" path="res://scripts/characters/voice/voice_box.gd" id="2_80oa4"]
+[ext_resource type="Texture2D" uid="uid://cid0cin82k66g" path="res://assets/images/Kel/clean/texture_color/Top Teeth.PNG" id="2_ll3jk"]
+[ext_resource type="Texture2D" uid="uid://b8dgwt2l82amq" path="res://assets/images/Kel/clean/texture_normals/Neck_n.png" id="3_6khqb"]
+[ext_resource type="Texture2D" uid="uid://s23i2jc2ffvg" path="res://assets/images/Kel/clean/texture_color/Head.PNG" id="3_x7nfl"]
+[ext_resource type="Texture2D" uid="uid://crn0dnvkj0l3h" path="res://assets/images/Kel/clean/texture_color/Eyebrow.PNG" id="4_lqvg7"]
+[ext_resource type="Texture2D" uid="uid://bbpwg8rthq6am" path="res://assets/images/Kel/clean/texture_normals/Top Teeth_n.png" id="5_08lfd"]
+[ext_resource type="Texture2D" uid="uid://cbkqppjvkp0a" path="res://assets/images/Kel/clean/texture_color/Eye (Lineart.PNG" id="5_u6w8b"]
+[ext_resource type="Texture2D" uid="uid://d0xuup5sovrbk" path="res://assets/images/Kel/clean/texture_normals/Head_n.png" id="6_07le2"]
+[ext_resource type="Texture2D" uid="uid://drft8m4sif8fj" path="res://assets/images/Kel/clean/texture_color/Eye (Color).PNG" id="6_8twv8"]
+[ext_resource type="Texture2D" uid="uid://bblkygd1cxvxc" path="res://assets/images/Kel/clean/texture_color/Pupil.PNG" id="7_0ordp"]
+[ext_resource type="Texture2D" uid="uid://de7k5bddtxwls" path="res://assets/images/Kel/clean/texture_color/Bottom Eyelid.PNG" id="8_jw6jp"]
+[ext_resource type="Texture2D" uid="uid://c48qmfmh44oky" path="res://assets/images/Kel/clean/texture_normals/Eyebrow_n.png" id="8_slh5c"]
+[ext_resource type="Texture2D" uid="uid://b2dapbr43o2vx" path="res://assets/images/Kel/clean/texture_color/Top Eyelid.PNG" id="9_h8fug"]
+[ext_resource type="Texture2D" uid="uid://cld5pmfi2rnhv" path="res://assets/images/Kel/clean/texture_color/Ear.PNG" id="10_b6f2n"]
+[ext_resource type="Texture2D" uid="uid://cs8qn1dj6t4r" path="res://assets/images/Kel/clean/texture_normals/Eye (Color)_n.png" id="10_cqf01"]
+[ext_resource type="Texture2D" uid="uid://bsmmdtl6kemss" path="res://assets/images/Kel/clean/texture_normals/Eye (Lineart_n.png" id="11_832ox"]
+[ext_resource type="Texture2D" uid="uid://c5ocm44tk44f1" path="res://assets/images/Kel/clean/texture_color/Nostril.PNG" id="11_x0tbx"]
+[ext_resource type="Texture2D" uid="uid://yp1grt86q6tf" path="res://assets/images/Kel/clean/texture_normals/Bottom Eyelid_n.png" id="12_8v681"]
+[ext_resource type="Texture2D" uid="uid://bc7nfvelisig7" path="res://assets/images/Kel/clean/texture_color/Tongue.PNG" id="12_bp7c3"]
+[ext_resource type="Texture2D" uid="uid://b6pv7x0vx2rf0" path="res://assets/images/Kel/clean/texture_color/Bottom Teeth.PNG" id="13_h0gu5"]
+[ext_resource type="Texture2D" uid="uid://i2j2kxpti7we" path="res://assets/images/Kel/clean/texture_normals/Top Eyelid_n.png" id="13_h1j60"]
+[ext_resource type="Texture2D" uid="uid://doqiipr36brqx" path="res://assets/images/Kel/clean/texture_color/Inner Mouth.PNG" id="14_eb8uc"]
+[ext_resource type="Texture2D" uid="uid://cf0ai6pnecgrf" path="res://assets/images/Kel/clean/texture_color/Jaw.PNG" id="15_bkugb"]
+[ext_resource type="Texture2D" uid="uid://dh2ms63fotuoj" path="res://assets/images/Kel/clean/texture_normals/Ear_n.png" id="19_rq1ac"]
+[ext_resource type="Texture2D" uid="uid://dua78t626w0j5" path="res://assets/images/Kel/clean/texture_normals/Nostril_n.png" id="21_i8c20"]
+[ext_resource type="Texture2D" uid="uid://dtar1ti8p3dut" path="res://assets/images/Kel/clean/texture_normals/Tongue_n.png" id="23_ubpxp"]
+[ext_resource type="Texture2D" uid="uid://cx7adggonscin" path="res://assets/images/Kel/clean/texture_normals/Bottom Teeth_n.png" id="25_hmdnr"]
+[ext_resource type="Texture2D" uid="uid://dfg4lg7a7nsw8" path="res://assets/images/Kel/clean/texture_normals/Jaw_n.png" id="29_6h30p"]
 [ext_resource type="Script" uid="uid://bv7fcu3p24jav" path="res://addons/soupik/utility/soup_bone.gd" id="34_sbkqv"]
 [ext_resource type="Script" uid="uid://cgngdoajx3egb" path="res://addons/soupik/resources/zm_constraint_data.gd" id="35_8nmy7"]
 [ext_resource type="Script" uid="uid://c5kq1nv3cwyc5" path="res://addons/soupik/resources/zm_easing_params.gd" id="35_ntfem"]
@@ -38,138 +38,30 @@
 [ext_resource type="Script" uid="uid://c0halov2bvjmy" path="res://addons/soupik/modifications/soup_fabrik.gd" id="38_6oa1n"]
 [ext_resource type="Script" uid="uid://iscrohmgg73r" path="res://addons/soupik/modifications/soup_two_bone_ik.gd" id="38_c5jl5"]
 [ext_resource type="Script" uid="uid://cu2rfhmwork2f" path="res://addons/soupik/modifications/soup_look_at.gd" id="39_41d0e"]
-[ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://Resources/Allergy/pollen_bouquet.tres" id="43_bb46j"]
-[ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://Scenes/Characters/Kel/Animations/idle_tickle_blend.tres" id="43_y7ufs"]
-[ext_resource type="Resource" uid="uid://clt10mw8xata" path="res://Resources/BoundedValues/Lungs/lungs_capacity.tres" id="45_ufyo5"]
-[ext_resource type="Script" uid="uid://dffk5kwe1wvi" path="res://Resources/Definitions/custom_bounded_value.gd" id="46_5853s"]
-[ext_resource type="Resource" uid="uid://oqe736kqr37q" path="res://Resources/BoundedValues/Lungs/oxygen.tres" id="46_qsxht"]
-[ext_resource type="Script" uid="uid://prq72h3pjnv0" path="res://Scenes/Components/Character Resources/StateMachine/state_machine.gd" id="50_c5uyw"]
+[ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://resources/allergy_resource/pollen_bouquet.tres" id="43_bb46j"]
+[ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://scenes/characters/Kel/animations/idle_tickle_blend.tres" id="43_y7ufs"]
+[ext_resource type="Resource" uid="uid://clt10mw8xata" path="res://resources/bounded_values/lungs/lungs_capacity.tres" id="45_ufyo5"]
+[ext_resource type="Script" uid="uid://dffk5kwe1wvi" path="res://resources/definitions/custom_bounded_value.gd" id="46_5853s"]
+[ext_resource type="Resource" uid="uid://oqe736kqr37q" path="res://resources/bounded_values/lungs/oxygen.tres" id="46_qsxht"]
 [ext_resource type="Texture2D" uid="uid://c5uiym3tsrd5v" path="res://addons/kenney_particle_pack/flame_02.png" id="50_kwx24"]
-[ext_resource type="Script" uid="uid://1dqwiv1pmjhq" path="res://Scenes/Characters/Kel/States/idle.gd" id="51_1exov"]
-[ext_resource type="AudioStream" uid="uid://ce85auomcijun" path="res://Audio/Kel Voice/Buildup/18/Buildup-2.wav" id="52_ao3bt"]
-[ext_resource type="AudioStream" uid="uid://drvefyryej46w" path="res://Audio/Kel Voice/Buildup/18/Buildup-3.wav" id="53_j5ldk"]
-[ext_resource type="AudioStream" uid="uid://qaccfixt4dbb" path="res://Audio/Kel Voice/Buildup/19/Buildup-3.wav" id="54_j2rar"]
-[ext_resource type="AudioStream" uid="uid://5aotkakqxbcb" path="res://Audio/Kel Voice/Buildup/19/Buildup-4.wav" id="55_uxnhk"]
-[ext_resource type="AudioStream" uid="uid://c7qh07rpktodk" path="res://Audio/Kel Voice/Buildup/19/Buildup-5.wav" id="56_eki8m"]
-[ext_resource type="Script" uid="uid://ci4624g354jc4" path="res://Scripts/Characters/Nose/cold.gd" id="56_hg8um"]
-[ext_resource type="AudioStream" uid="uid://b77gxegcqpxp2" path="res://Audio/Kel Voice/Buildup/19/Buildup-6.wav" id="57_t3v7g"]
-[ext_resource type="AudioStream" uid="uid://cubab5odom2qb" path="res://Audio/Kel Voice/Buildup/19/Buildup.wav" id="58_ysppn"]
-[ext_resource type="AudioStream" uid="uid://dimeag8w7y0ij" path="res://Audio/Kel Voice/Buildup/20/Buildup-2.wav" id="59_xddu4"]
-[ext_resource type="AudioStream" uid="uid://brvk2atl5bfoi" path="res://Audio/Kel Voice/Buildup/20/Buildup-3.wav" id="60_0o7re"]
-[ext_resource type="AudioStream" uid="uid://bgtyjiqfqumqu" path="res://Audio/Kel Voice/Buildup/20/Buildup-4.wav" id="61_dvs2n"]
-[ext_resource type="AudioStream" uid="uid://crw3qrk0ryook" path="res://Audio/Kel Voice/Buildup/20/Buildup-5.wav" id="62_qj8kq"]
-[ext_resource type="AudioStream" uid="uid://cr2n1m1mkq1ch" path="res://Audio/Kel Voice/Buildup/20/Buildup.wav" id="63_uogpu"]
-[ext_resource type="AudioStream" uid="uid://gj6gy7u2ks1x" path="res://Audio/Kel Voice/Buildup/18/Buildup-4.wav" id="64_bnmks"]
-[ext_resource type="AudioStream" uid="uid://c4osxxwapfrx2" path="res://Audio/Kel Voice/Buildup/18/Buildup-5.wav" id="65_ix2q1"]
-[ext_resource type="Script" uid="uid://524r6vanvbns" path="res://Scripts/Characters/Nose/nose_redness.gd" id="65_pa7eh"]
-[ext_resource type="AudioStream" uid="uid://d1pmxa28yxqxp" path="res://Audio/Kel Voice/Buildup/18/Buildup-6.wav" id="66_ax3xq"]
-[ext_resource type="Resource" uid="uid://d3vctd86sic6" path="res://Resources/Allergy/pepper.tres" id="66_kwx24"]
-[ext_resource type="AudioStream" uid="uid://d07ljoc0wgbw4" path="res://Audio/Kel Voice/Buildup/18/Buildup-7.wav" id="67_b3r0i"]
-[ext_resource type="Script" uid="uid://bx2ff6gla5rue" path="res://Scripts/Characters/Eyes/pupil.gd" id="68_cjxlc"]
-[ext_resource type="AudioStream" uid="uid://0ahdvdgb7clw" path="res://Audio/Kel Voice/Buildup/18/Buildup-8.wav" id="68_xoo48"]
-[ext_resource type="Script" uid="uid://et5lo3o7y05m" path="res://Scripts/Characters/Eyes/eye_target.gd" id="69_e8orq"]
-[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/Nose/nose.tscn" id="69_ekg2v"]
-[ext_resource type="AudioStream" uid="uid://bo8b73fugra5q" path="res://Audio/Kel Voice/Buildup/18/Buildup-9.wav" id="69_i13dl"]
-[ext_resource type="Texture2D" uid="uid://itnq7udoudsy" path="res://images/Kel/CLEAN/Shoulder.PNG" id="70_55okr"]
-[ext_resource type="AudioStream" uid="uid://bf2sjdkkr2lxf" path="res://Audio/Kel Voice/Buildup/18/Buildup.wav" id="70_ebpgv"]
-[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://Scenes/Components/Character Resources/Lungs/lungs.tscn" id="70_xplix"]
-[ext_resource type="AudioStream" uid="uid://btwte18pa1kan" path="res://Audio/Kel Voice/Buildup/19/Buildup-2.wav" id="71_7aljf"]
-[ext_resource type="Texture2D" uid="uid://d3nyneviu5xal" path="res://images/Kel/CLEAN/Wing.PNG" id="71_i2b8v"]
-[ext_resource type="AudioStream" uid="uid://c2tnd4dvas8j8" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-2.wav" id="73_l2hsy"]
-[ext_resource type="AudioStream" uid="uid://c0iigci66qkw" path="res://Audio/Kel Voice/Sigh/18/Sigh-10.wav" id="73_lul70"]
-[ext_resource type="AudioStream" uid="uid://cwy7gng8eot22" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-3.wav" id="74_c5uyw"]
-[ext_resource type="AudioStream" uid="uid://bsbqk0ec5t2b8" path="res://Audio/Kel Voice/Sigh/18/Sigh-2.wav" id="74_x1sgd"]
-[ext_resource type="AudioStream" uid="uid://b8it4aqeibabd" path="res://Audio/Kel Voice/Sneeze/20/NormalSneeze-2.wav" id="75_1exov"]
-[ext_resource type="AudioStream" uid="uid://4p07p8s0ruip" path="res://Audio/Kel Voice/Sigh/19/Sigh-2.wav" id="75_ejpbr"]
-[ext_resource type="AudioStream" uid="uid://dkhu2wwt4irke" path="res://Audio/Kel Voice/Sneeze/20/NormalSneeze.wav" id="76_2a4ye"]
-[ext_resource type="AudioStream" uid="uid://bjbmlwoilp7de" path="res://Audio/Kel Voice/Sigh/19/Sigh-3.wav" id="76_obv02"]
-[ext_resource type="AudioStream" uid="uid://b88j6u0rmwagr" path="res://Audio/Kel Voice/Sigh/19/Sigh-4.wav" id="77_l2hsy"]
-[ext_resource type="AudioStream" uid="uid://h6unqjqswms7" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-4.wav" id="77_qv3oh"]
-[ext_resource type="AudioStream" uid="uid://cnamghlcxc474" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-5.wav" id="78_7tebk"]
-[ext_resource type="AudioStream" uid="uid://b7ukapekbtb4" path="res://Audio/Kel Voice/Sigh/19/Sigh.wav" id="78_c5uyw"]
-[ext_resource type="AudioStream" uid="uid://d1hw8uud2sbaq" path="res://Audio/Kel Voice/Sigh/20/Sigh-2.wav" id="79_1exov"]
-[ext_resource type="AudioStream" uid="uid://bhl75vbj0cy73" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-6.wav" id="79_sngg2"]
-[ext_resource type="AudioStream" uid="uid://eq75sbfnd6fk" path="res://Audio/Kel Voice/Sigh/20/Sigh-3.wav" id="80_2a4ye"]
-[ext_resource type="AudioStream" uid="uid://bj56jd37c7gwo" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze-7.wav" id="80_wjj2l"]
-[ext_resource type="AudioStream" uid="uid://u013pw68g6op" path="res://Audio/Kel Voice/Sneeze/18/NormalSneeze.wav" id="81_osgew"]
-[ext_resource type="AudioStream" uid="uid://dn16pso6opp55" path="res://Audio/Kel Voice/Sigh/20/Sigh-4.wav" id="81_qv3oh"]
-[ext_resource type="AudioStream" uid="uid://h4372h2658md" path="res://Audio/Kel Voice/Sigh/20/Sigh.wav" id="82_7tebk"]
-[ext_resource type="AudioStream" uid="uid://jw3jjk0ya10b" path="res://Audio/Kel Voice/Sneeze/19/NormalSneeze-2.wav" id="82_eeniq"]
-[ext_resource type="AudioStream" uid="uid://kx8mtf3noeab" path="res://Audio/Kel Voice/Sneeze/19/NormalSneeze-3.wav" id="83_b2drk"]
-[ext_resource type="Script" uid="uid://c3va03kfy4cbm" path="res://Scripts/Characters/Voice/audio_loader.gd" id="83_ico0e"]
-[ext_resource type="AudioStream" uid="uid://4u602088qs5s" path="res://Audio/Kel Voice/Sigh/18/Sigh-3.wav" id="83_sngg2"]
-[ext_resource type="Script" uid="uid://5oyb4xcb3k4b" path="res://Scripts/Characters/Nose/nose_insert_detector.gd" id="84_n5npt"]
-[ext_resource type="AudioStream" uid="uid://gw27b1tashil" path="res://Audio/Kel Voice/Sigh/18/Sigh-4.wav" id="84_wjj2l"]
-[ext_resource type="AudioStream" uid="uid://c3a27c47r42qp" path="res://Audio/Kel Voice/Sneeze/19/NormalSneeze.wav" id="84_ye4e8"]
-[ext_resource type="Script" uid="uid://bmp1y6xemq5gk" path="res://Scripts/Wind/wind_origin.gd" id="85_ascq3"]
-[ext_resource type="AudioStream" uid="uid://banjg423iyel7" path="res://Audio/Kel Voice/Sigh/18/Sigh-5.wav" id="85_osgew"]
-[ext_resource type="AudioStream" uid="uid://d0sfjr5g0yg2v" path="res://Audio/Kel Voice/Sneeze/19/BigSneeze-2.wav" id="85_vtvym"]
-[ext_resource type="AudioStream" uid="uid://bx58ihbt7rm2p" path="res://Audio/Kel Voice/Sneeze/19/BigSneeze-3.wav" id="86_4wchv"]
-[ext_resource type="Texture2D" uid="uid://cch7e1588u3ep" path="res://images/Kel/Normal/Shoulder_n.png" id="86_34ury"]
-[ext_resource type="AudioStream" uid="uid://b4hcn80nunc0q" path="res://Audio/Kel Voice/Sigh/18/Sigh-6.wav" id="86_eeniq"]
-[ext_resource type="AudioStream" uid="uid://drq2xgiqgcmwb" path="res://Audio/Kel Voice/Sneeze/19/BigSneeze-4.wav" id="87_1ynb3"]
-[ext_resource type="AudioStream" uid="uid://dpnlvelbud1mi" path="res://Audio/Kel Voice/Sigh/18/Sigh-7.wav" id="87_b2drk"]
-[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://Resources/Allergy/dust.tres" id="87_xfbtc"]
-[ext_resource type="Texture2D" uid="uid://jmxo5cssey7a" path="res://images/Kel/Normal/Wing_n.png" id="88_a1q3i"]
-[ext_resource type="AudioStream" uid="uid://20b1ebkfto4s" path="res://Audio/Kel Voice/Sneeze/19/BigSneeze.wav" id="88_hps0n"]
-[ext_resource type="AudioStream" uid="uid://cx3ad4mu77ouu" path="res://Audio/Kel Voice/Sigh/18/Sigh-8.wav" id="88_ye4e8"]
-[ext_resource type="AudioStream" uid="uid://ql1ugicqrafx" path="res://Audio/Kel Voice/Sneeze/20/BigSneeze-2.wav" id="89_htpmp"]
-[ext_resource type="AudioStream" uid="uid://b034kpeenqn76" path="res://Audio/Kel Voice/Sigh/18/Sigh-9.wav" id="89_vtvym"]
-[ext_resource type="AudioStream" uid="uid://bbjhgr7g8m6nb" path="res://Audio/Kel Voice/Sigh/18/Sigh.wav" id="90_4wchv"]
-[ext_resource type="AudioStream" uid="uid://dfifh16yswqej" path="res://Audio/Kel Voice/Sneeze/20/BigSneeze-3.wav" id="90_lgh0i"]
-[ext_resource type="AudioStream" uid="uid://ghdh1u5xhvbk" path="res://Audio/Kel Voice/Sneeze/20/BigSneeze-4.wav" id="91_0lcsh"]
-[ext_resource type="AudioStream" uid="uid://d2082lgvwl1ue" path="res://Audio/Kel Voice/Hitch/18/Hitch-10.wav" id="91_1ynb3"]
-[ext_resource type="AudioStream" uid="uid://ne5rm7ui0vrt" path="res://Audio/Kel Voice/Hitch/18/Hitch-2.wav" id="92_hps0n"]
-[ext_resource type="AudioStream" uid="uid://ejya2l1j4bno" path="res://Audio/Kel Voice/Sneeze/20/BigSneeze.wav" id="92_jdpmn"]
-[ext_resource type="AudioStream" uid="uid://vgr73a88fmma" path="res://Audio/Kel Voice/Sneeze/18/Sneeze Stifle-2.wav" id="93_gfnyy"]
-[ext_resource type="AudioStream" uid="uid://jdidu304h8gt" path="res://Audio/Kel Voice/Hitch/19/Hitch-2.wav" id="93_htpmp"]
-[ext_resource type="AudioStream" uid="uid://40yx33vcg0px" path="res://Audio/Kel Voice/Sneeze/18/Sneeze Stifle.wav" id="94_81iyi"]
-[ext_resource type="AudioStream" uid="uid://b1vf78iyt7niq" path="res://Audio/Kel Voice/Hitch/19/Hitch.wav" id="94_lgh0i"]
-[ext_resource type="AudioStream" uid="uid://cjf5dcbur8o0c" path="res://Audio/Kel Voice/Hitch/20/Hitch-2.wav" id="95_0lcsh"]
-[ext_resource type="Script" uid="uid://7ristglnlteh" path="res://Scripts/Characters/Nose/allergen_detector.gd" id="95_aqq7c"]
-[ext_resource type="AudioStream" uid="uid://cjsrsr28dktp0" path="res://Audio/Kel Voice/Sneeze/19/StifleSneeze-2.wav" id="95_yxhys"]
-[ext_resource type="AudioStream" uid="uid://bl314l517ygpb" path="res://Audio/Kel Voice/Sneeze/19/StifleSneeze.wav" id="96_8naky"]
-[ext_resource type="AudioStream" uid="uid://c5om3nevblxt" path="res://Audio/Kel Voice/Hitch/20/Hitch-3.wav" id="96_jdpmn"]
-[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://Resources/Allergy/chhinkni.tres" id="96_q1kil"]
-[ext_resource type="PackedScene" uid="uid://34wgpjsyur8v" path="res://Scenes/Components/Character Resources/Brain/brain.tscn" id="97_8vqa2"]
-[ext_resource type="AudioStream" uid="uid://bl3g7qvyxiucq" path="res://Audio/Kel Voice/Hitch/20/Hitch.wav" id="97_gfnyy"]
-[ext_resource type="AudioStream" uid="uid://cc4s82yxfg6qi" path="res://Audio/Kel Voice/Hitch/18/Hitch-3.wav" id="98_81iyi"]
-[ext_resource type="AudioStream" uid="uid://co3qtmbxkhh5u" path="res://Audio/Kel Voice/Hitch/18/Hitch-4.wav" id="99_yxhys"]
-[ext_resource type="AudioStream" uid="uid://msv2bvxlq3yo" path="res://Audio/Kel Voice/Hitch/18/Hitch-5.wav" id="100_8naky"]
-[ext_resource type="AudioStream" uid="uid://bumv861pd6mhp" path="res://Audio/Kel Voice/Hitch/18/Hitch-6.wav" id="101_iglgd"]
-[ext_resource type="AudioStream" uid="uid://86m4rk6wap3j" path="res://Audio/Kel Voice/Hitch/18/Hitch-7.wav" id="102_vy4ej"]
-[ext_resource type="AudioStream" uid="uid://dytphimyfqg0d" path="res://Audio/Kel Voice/Hitch/18/Hitch-8.wav" id="103_4o2j2"]
-[ext_resource type="AudioStream" uid="uid://ct6kw63kcxew7" path="res://Audio/Kel Voice/Hitch/18/Hitch-9.wav" id="104_nh611"]
-[ext_resource type="AudioStream" uid="uid://copodhqemih8h" path="res://Audio/Kel Voice/Hitch/18/Hitch.wav" id="105_46mbj"]
-[ext_resource type="AudioStream" uid="uid://2obvgmsdd1vj" path="res://Audio/Kel Voice/Sniff/18/Sniff-10.wav" id="106_hmjdk"]
-[ext_resource type="AudioStream" uid="uid://dpwf4rsot1hhf" path="res://Audio/Kel Voice/Sniff/18/Sniff-11.wav" id="107_2at7r"]
-[ext_resource type="AudioStream" uid="uid://d2wtb5fycpxgg" path="res://Audio/Kel Voice/Sniff/18/Sniff-9.wav" id="108_rvlve"]
-[ext_resource type="AudioStream" uid="uid://cqd2dip5lyftg" path="res://Audio/Kel Voice/Sniff/18/Sniff.wav" id="109_ootrj"]
-[ext_resource type="AudioStream" uid="uid://01vufn4yyebb" path="res://Audio/Kel Voice/Sniff/19/Sniff-2.wav" id="110_0100h"]
-[ext_resource type="AudioStream" uid="uid://dje0uphg2habw" path="res://Audio/Kel Voice/Sniff/19/Sniff-3.wav" id="111_kmrj4"]
-[ext_resource type="AudioStream" uid="uid://5pa5atgb7xvq" path="res://Audio/Kel Voice/Sniff/19/Sniff-4.wav" id="112_sqiqu"]
-[ext_resource type="AudioStream" uid="uid://bq4rivtajcy3y" path="res://Audio/Kel Voice/Sniff/19/Sniff-5.wav" id="113_dpbif"]
-[ext_resource type="AudioStream" uid="uid://bukxttg14blso" path="res://Audio/Kel Voice/Sniff/19/Sniff-6.wav" id="114_4lryj"]
-[ext_resource type="AudioStream" uid="uid://c04onnsfdnape" path="res://Audio/Kel Voice/Sniff/19/Sniff-7.wav" id="115_lyfl6"]
-[ext_resource type="AudioStream" uid="uid://bbax35e7vye2e" path="res://Audio/Kel Voice/Sniff/19/Sniff-8.wav" id="116_i8hbx"]
-[ext_resource type="AudioStream" uid="uid://cjwm6p36fmk3c" path="res://Audio/Kel Voice/Sniff/19/Sniff.wav" id="117_7sp2k"]
-[ext_resource type="AudioStream" uid="uid://dpdu06565blg7" path="res://Audio/Kel Voice/Sniff/18/Sniff-12.wav" id="118_f3nt8"]
-[ext_resource type="AudioStream" uid="uid://cqxgs7mghdqfb" path="res://Audio/Kel Voice/Sniff/20/Sniff-2.wav" id="119_pyfqm"]
-[ext_resource type="AudioStream" uid="uid://cn0u5pdqaofg8" path="res://Audio/Kel Voice/Sniff/20/Sniff-3.wav" id="120_i031f"]
-[ext_resource type="AudioStream" uid="uid://bbuns5s7gqyx2" path="res://Audio/Kel Voice/Sniff/20/Sniff-4.wav" id="121_7krbl"]
-[ext_resource type="AudioStream" uid="uid://cndm70hsuufgg" path="res://Audio/Kel Voice/Sniff/20/Sniff-5.wav" id="122_6ppd8"]
-[ext_resource type="AudioStream" uid="uid://bxwmdreikqjgs" path="res://Audio/Kel Voice/Sniff/20/Sniff-6.wav" id="123_r0b2a"]
-[ext_resource type="AudioStream" uid="uid://oh8uvye61b8a" path="res://Audio/Kel Voice/Sniff/20/Sniff-7.wav" id="124_ebaov"]
-[ext_resource type="AudioStream" uid="uid://ctkfcp0wnh7u5" path="res://Audio/Kel Voice/Sniff/20/Sniff-8.wav" id="125_0mxeq"]
-[ext_resource type="AudioStream" uid="uid://bkqu2pod4jh5q" path="res://Audio/Kel Voice/Sniff/20/Sniff-9.wav" id="126_qxpga"]
-[ext_resource type="AudioStream" uid="uid://cafjydbfd1yj0" path="res://Audio/Kel Voice/Sniff/20/Sniff.wav" id="127_bov6s"]
-[ext_resource type="AudioStream" uid="uid://ch5mnb7vgtmt8" path="res://Audio/Kel Voice/Sniff/18/Sniff-2.wav" id="128_4y07r"]
-[ext_resource type="AudioStream" uid="uid://btqr6inyq8bua" path="res://Audio/Kel Voice/Sniff/18/Sniff-3.wav" id="129_e0lkt"]
-[ext_resource type="AudioStream" uid="uid://d1ajeweyh41jc" path="res://Audio/Kel Voice/Sniff/18/Sniff-4.wav" id="130_7eqnm"]
-[ext_resource type="AudioStream" uid="uid://mfuk3v0aody6" path="res://Audio/Kel Voice/Sniff/18/Sniff-5.wav" id="131_5p0u5"]
-[ext_resource type="AudioStream" uid="uid://doh60y3cbxaq3" path="res://Audio/Kel Voice/Sniff/18/Sniff-6.wav" id="132_dd5uc"]
-[ext_resource type="AudioStream" uid="uid://gif1lcqxalmu" path="res://Audio/Kel Voice/Sniff/18/Sniff-7.wav" id="133_vw17l"]
-[ext_resource type="AudioStream" uid="uid://bd5xmmyfcn2lj" path="res://Audio/Kel Voice/Sniff/18/Sniff-8.wav" id="134_73xl8"]
+[ext_resource type="Script" uid="uid://ci4624g354jc4" path="res://scripts/characters/nose/cold.gd" id="56_hg8um"]
+[ext_resource type="Script" uid="uid://524r6vanvbns" path="res://scripts/characters/nose/nose_redness.gd" id="65_pa7eh"]
+[ext_resource type="Resource" uid="uid://d3vctd86sic6" path="res://resources/allergy_resource/pepper.tres" id="66_kwx24"]
+[ext_resource type="Script" uid="uid://bx2ff6gla5rue" path="res://scripts/characters/eyes/pupil.gd" id="68_cjxlc"]
+[ext_resource type="Script" uid="uid://et5lo3o7y05m" path="res://scripts/characters/eyes/eye_target.gd" id="69_e8orq"]
+[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://scenes/components/characters/nose/nose.tscn" id="69_ekg2v"]
+[ext_resource type="Texture2D" uid="uid://itnq7udoudsy" path="res://assets/images/Kel/clean/texture_color/Shoulder.PNG" id="70_55okr"]
+[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://scenes/components/characters/lungs/lungs.tscn" id="70_xplix"]
+[ext_resource type="Texture2D" uid="uid://d3nyneviu5xal" path="res://assets/images/Kel/clean/texture_color/Wing.PNG" id="71_i2b8v"]
+[ext_resource type="Script" uid="uid://c3va03kfy4cbm" path="res://scripts/characters/voice/audio_loader.gd" id="83_ico0e"]
+[ext_resource type="Script" uid="uid://5oyb4xcb3k4b" path="res://scripts/characters/nose/nose_insert_detector.gd" id="84_n5npt"]
+[ext_resource type="Script" uid="uid://bmp1y6xemq5gk" path="res://scripts/components/wind/wind_origin.gd" id="85_ascq3"]
+[ext_resource type="Texture2D" uid="uid://cch7e1588u3ep" path="res://assets/images/Kel/clean/texture_normals/Shoulder_n.png" id="86_34ury"]
+[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://resources/allergy_resource/dust.tres" id="87_xfbtc"]
+[ext_resource type="Texture2D" uid="uid://jmxo5cssey7a" path="res://assets/images/Kel/clean/texture_normals/Wing_n.png" id="88_a1q3i"]
+[ext_resource type="Script" uid="uid://7ristglnlteh" path="res://scripts/characters/nose/allergen_detector.gd" id="95_aqq7c"]
+[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://resources/allergy_resource/chhinkni.tres" id="96_q1kil"]
+[ext_resource type="PackedScene" uid="uid://34wgpjsyur8v" path="res://scenes/components/characters/brain/brain.tscn" id="97_8vqa2"]
 
 [sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_p8qcc"]
 
@@ -3976,7 +3868,7 @@ graph_offset = Vector2(-203, -499)
 animation = &"RESET"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vtvym"]
-graph_offset = Vector2(147.682, -233.495)
+graph_offset = Vector2(362.709, -289.495)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
@@ -3988,7 +3880,7 @@ nodes/Blink/position = Vector2(1480, -260)
 "nodes/Ear Flick/node" = SubResource("AnimationNodeAnimation_fm44d")
 "nodes/Ear Flick/position" = Vector2(1240, -260)
 "nodes/Earflick Shot/node" = SubResource("AnimationNodeOneShot_6caxu")
-"nodes/Earflick Shot/position" = Vector2(1240, -120)
+"nodes/Earflick Shot/position" = Vector2(1240, -80)
 nodes/NoseFlare/node = SubResource("AnimationNodeAnimation_lu2l1")
 nodes/NoseFlare/position = Vector2(1640, 240)
 nodes/NoseFlareStrength/node = SubResource("AnimationNodeBlend2_8ldcw")
@@ -3998,7 +3890,7 @@ nodes/NoseFlareTransition/position = Vector2(1820, 40)
 "nodes/Parameter Animation/node" = SubResource("AnimationNodeStateMachine_dmuwf")
 "nodes/Parameter Animation/position" = Vector2(540, -300)
 nodes/RESET/node = SubResource("AnimationNodeAnimation_0f6sr")
-nodes/RESET/position = Vector2(1640, 100)
+nodes/RESET/position = Vector2(1640, 80)
 nodes/output/position = Vector2(2220, -140)
 node_connections = [&"Add2", 0, &"Parameter Animation", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"output", 0, &"NoseFlareStrength"]
 
@@ -4052,133 +3944,6 @@ turbulence_enabled = true
 turbulence_influence_min = 0.354
 turbulence_influence_max = 0.958
 turbulence_influence_over_life = SubResource("CurveTexture_yor1i")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_x1sgd"]
-streams_count = 20
-stream_0/stream = ExtResource("52_ao3bt")
-stream_1/stream = ExtResource("53_j5ldk")
-stream_2/stream = ExtResource("64_bnmks")
-stream_3/stream = ExtResource("65_ix2q1")
-stream_4/stream = ExtResource("66_ax3xq")
-stream_5/stream = ExtResource("67_b3r0i")
-stream_6/stream = ExtResource("68_xoo48")
-stream_7/stream = ExtResource("69_i13dl")
-stream_8/stream = ExtResource("70_ebpgv")
-stream_9/stream = ExtResource("71_7aljf")
-stream_10/stream = ExtResource("54_j2rar")
-stream_11/stream = ExtResource("55_uxnhk")
-stream_12/stream = ExtResource("56_eki8m")
-stream_13/stream = ExtResource("57_t3v7g")
-stream_14/stream = ExtResource("58_ysppn")
-stream_15/stream = ExtResource("59_xddu4")
-stream_16/stream = ExtResource("60_0o7re")
-stream_17/stream = ExtResource("61_dvs2n")
-stream_18/stream = ExtResource("62_qj8kq")
-stream_19/stream = ExtResource("63_uogpu")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ejpbr"]
-streams_count = 12
-stream_0/stream = ExtResource("73_l2hsy")
-stream_1/stream = ExtResource("74_c5uyw")
-stream_2/stream = ExtResource("77_qv3oh")
-stream_3/stream = ExtResource("78_7tebk")
-stream_4/stream = ExtResource("79_sngg2")
-stream_5/stream = ExtResource("80_wjj2l")
-stream_6/stream = ExtResource("81_osgew")
-stream_7/stream = ExtResource("82_eeniq")
-stream_8/stream = ExtResource("83_b2drk")
-stream_9/stream = ExtResource("84_ye4e8")
-stream_10/stream = ExtResource("75_1exov")
-stream_11/stream = ExtResource("76_2a4ye")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_obv02"]
-streams_count = 8
-stream_0/stream = ExtResource("85_vtvym")
-stream_1/stream = ExtResource("86_4wchv")
-stream_2/stream = ExtResource("87_1ynb3")
-stream_3/stream = ExtResource("88_hps0n")
-stream_4/stream = ExtResource("89_htpmp")
-stream_5/stream = ExtResource("90_lgh0i")
-stream_6/stream = ExtResource("91_0lcsh")
-stream_7/stream = ExtResource("92_jdpmn")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l2hsy"]
-streams_count = 4
-stream_0/stream = ExtResource("93_gfnyy")
-stream_1/stream = ExtResource("94_81iyi")
-stream_2/stream = ExtResource("95_yxhys")
-stream_3/stream = ExtResource("96_8naky")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_c5uyw"]
-streams_count = 18
-stream_0/stream = ExtResource("73_lul70")
-stream_1/stream = ExtResource("74_x1sgd")
-stream_2/stream = ExtResource("83_sngg2")
-stream_3/stream = ExtResource("84_wjj2l")
-stream_4/stream = ExtResource("85_osgew")
-stream_5/stream = ExtResource("86_eeniq")
-stream_6/stream = ExtResource("87_b2drk")
-stream_7/stream = ExtResource("88_ye4e8")
-stream_8/stream = ExtResource("89_vtvym")
-stream_9/stream = ExtResource("90_4wchv")
-stream_10/stream = ExtResource("75_ejpbr")
-stream_11/stream = ExtResource("76_obv02")
-stream_12/stream = ExtResource("77_l2hsy")
-stream_13/stream = ExtResource("78_c5uyw")
-stream_14/stream = ExtResource("79_1exov")
-stream_15/stream = ExtResource("80_2a4ye")
-stream_16/stream = ExtResource("81_qv3oh")
-stream_17/stream = ExtResource("82_7tebk")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1exov"]
-streams_count = 15
-stream_0/stream = ExtResource("91_1ynb3")
-stream_1/stream = ExtResource("92_hps0n")
-stream_2/stream = ExtResource("98_81iyi")
-stream_3/stream = ExtResource("99_yxhys")
-stream_4/stream = ExtResource("100_8naky")
-stream_5/stream = ExtResource("101_iglgd")
-stream_6/stream = ExtResource("102_vy4ej")
-stream_7/stream = ExtResource("103_4o2j2")
-stream_8/stream = ExtResource("104_nh611")
-stream_9/stream = ExtResource("105_46mbj")
-stream_10/stream = ExtResource("93_htpmp")
-stream_11/stream = ExtResource("94_lgh0i")
-stream_12/stream = ExtResource("95_0lcsh")
-stream_13/stream = ExtResource("96_jdpmn")
-stream_14/stream = ExtResource("97_gfnyy")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2a4ye"]
-streams_count = 29
-stream_0/stream = ExtResource("106_hmjdk")
-stream_1/stream = ExtResource("107_2at7r")
-stream_2/stream = ExtResource("118_f3nt8")
-stream_3/stream = ExtResource("128_4y07r")
-stream_4/stream = ExtResource("129_e0lkt")
-stream_5/stream = ExtResource("130_7eqnm")
-stream_6/stream = ExtResource("131_5p0u5")
-stream_7/stream = ExtResource("132_dd5uc")
-stream_8/stream = ExtResource("133_vw17l")
-stream_9/stream = ExtResource("134_73xl8")
-stream_10/stream = ExtResource("108_rvlve")
-stream_11/stream = ExtResource("109_ootrj")
-stream_12/stream = ExtResource("110_0100h")
-stream_13/stream = ExtResource("111_kmrj4")
-stream_14/stream = ExtResource("112_sqiqu")
-stream_15/stream = ExtResource("113_dpbif")
-stream_16/stream = ExtResource("114_4lryj")
-stream_17/stream = ExtResource("115_lyfl6")
-stream_18/stream = ExtResource("116_i8hbx")
-stream_19/stream = ExtResource("117_7sp2k")
-stream_20/stream = ExtResource("119_pyfqm")
-stream_21/stream = ExtResource("120_i031f")
-stream_22/stream = ExtResource("121_7krbl")
-stream_23/stream = ExtResource("122_6ppd8")
-stream_24/stream = ExtResource("123_r0b2a")
-stream_25/stream = ExtResource("124_ebaov")
-stream_26/stream = ExtResource("125_0mxeq")
-stream_27/stream = ExtResource("126_qxpga")
-stream_28/stream = ExtResource("127_bov6s")
 
 [sub_resource type="Resource" id="Resource_iaikh"]
 script = ExtResource("46_5853s")
@@ -4481,12 +4246,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.38136
+rotation = 0.440022
 scale = Vector2(0.999846, 0.999846)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.381817
+target_rotation = 0.441325
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -4495,12 +4260,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.614759
-scale = Vector2(0.999878, 0.999878)
+rotation = 0.616673
+scale = Vector2(0.999877, 0.999877)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.613597
+target_rotation = 0.616942
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -4509,12 +4274,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.415376
-scale = Vector2(0.999847, 0.999847)
+rotation = -0.416769
+scale = Vector2(0.999844, 0.999844)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.415418
+target_rotation = -0.4217
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -4523,12 +4288,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.619207
-scale = Vector2(0.999881, 0.999881)
+rotation = -0.628509
+scale = Vector2(0.999885, 0.999885)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.619085
+target_rotation = -0.630963
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -4537,7 +4302,7 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.00463305
+rotation = -0.134315
 scale = Vector2(0.9997, 0.9997)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
@@ -4553,7 +4318,7 @@ remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
 [node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-55.0004, 119)
-scale = Vector2(0.999829, 0.999829)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 89.071
@@ -4593,7 +4358,7 @@ bone_angle = -96.429
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-24.0005, 62)
 rotation = -0.00942021
-scale = Vector2(0.999839, 0.999839)
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
 editor_settings/show_bone_gizmo = false
 
@@ -4613,7 +4378,7 @@ bone_angle = 51.429
 
 [node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
 position = Vector2(-450.817, 190.762)
-scale = Vector2(0.999832, 0.999832)
+scale = Vector2(0.999831, 0.999831)
 rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4632,12 +4397,12 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(26.4717, 56.252)
-rotation = 0.0420187
-scale = Vector2(0.999826, 0.999826)
+rotation = 0.0399655
+scale = Vector2(0.999813, 0.999813)
 rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.648435
+target_rotation = 0.625681
 target_position = Vector2(26.4717, 56.252)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4651,7 +4416,7 @@ scale = Vector2(0.999889, 0.999889)
 rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -1.87209
+target_rotation = -1.87692
 target_position = Vector2(-144.681, 71.6403)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4660,12 +4425,12 @@ constraint_data = SubResource("Resource_43o6b")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-148.182, 18.605)
-rotation = 0.0538379
-scale = Vector2(0.999833, 0.999833)
+rotation = 0.0501948
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 1.32193
+target_rotation = 1.32975
 target_position = Vector2(-148.182, 18.605)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4675,14 +4440,14 @@ constraint_data = SubResource("Resource_6q68s")
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-146.994, -1.38475)
 rotation = -0.283546
-scale = Vector2(0.99984, 0.99984)
+scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.743546
+target_rotation = -0.717182
 target_position = Vector2(-146.994, -1.38475)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4695,7 +4460,7 @@ remote_path = NodePath("../../../../../../../../IK Targets/TongueRemote")
 
 [node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(124, -56)
-scale = Vector2(0.999855, 0.999855)
+scale = Vector2(0.999852, 0.999852)
 rest = Transform2D(1, 0, 0, 1, 124, -56)
 auto_calculate_length_and_angle = false
 length = 276.317
@@ -4825,8 +4590,8 @@ gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
 [node name="TongueRemote" type="Node2D" parent="IK Targets"]
-position = Vector2(-2446.15, -815.831)
-rotation = -0.0525172
+position = Vector2(-2351.45, -880.577)
+rotation = -0.132318
 scale = Vector2(0.998991, 0.998991)
 
 [node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote"]
@@ -4862,20 +4627,11 @@ parameters/NoseFlareTransition/transition_request = ""
 parameters/NoseFlareTransition/current_index = 0
 "parameters/Parameter Animation/IdleTickle/blend_position" = -0.000618458
 
-[node name="StateMachine" type="Node" parent="Animation Data"]
-script = ExtResource("50_c5uyw")
-
-[node name="Idle" type="Node" parent="Animation Data/StateMachine" node_paths=PackedStringArray("animation_tree", "brain_ref", "nose_refs")]
-script = ExtResource("51_1exov")
-animation_tree = NodePath("../../AnimationTree")
-brain_ref = NodePath("../../../Data/Brain")
-nose_refs = [NodePath("../../../Remote Transforms/NoseRemote/NoseOuter"), NodePath("../../../Remote Transforms/HeadRemote/NoseInner")]
-
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-964.697, -338.309)
-rotation = -0.297915
+position = Vector2(-927.816, -365.267)
+rotation = -0.377716
 scale = Vector2(0.399661, 0.399661)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
@@ -4907,63 +4663,56 @@ Sniff = NodePath("AudioLoaderSniff")
 pitch_range = Vector2(0.95, 1.05)
 
 [node name="AudioLoaderBuildup" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_x1sgd")
 pitch_scale = 0.994256
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Buildup"
+load_audio_directory = "res://assets/audio/Kel_voice/buildup"
 
 [node name="AudioLoaderSneeze" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_ejpbr")
 pitch_scale = 1.00224
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Sneeze"
+load_audio_directory = "res://assets/audio/Kel_voice/sneeze"
 do_filter = true
 file_filter = "Normal"
 
 [node name="AudioLoaderSneezeBig" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_obv02")
 pitch_scale = 1.00224
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Sneeze"
+load_audio_directory = "res://assets/audio/Kel_voice/sneeze"
 do_filter = true
 file_filter = "Big"
 
 [node name="AudioLoaderSneezeStifle" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_l2hsy")
 pitch_scale = 1.00224
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Sneeze"
+load_audio_directory = "res://assets/audio/Kel_voice/sneeze"
 do_filter = true
 file_filter = "Stifle"
 
 [node name="AudioLoaderSigh" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_c5uyw")
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Sigh"
+load_audio_directory = "res://assets/audio/Kel_voice/sigh"
 
 [node name="AudioLoaderHitch" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_1exov")
 volume_db = 5.0
 pitch_scale = 0.999183
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Hitch"
+load_audio_directory = "res://assets/audio/Kel_voice/hitch"
 
 [node name="AudioLoaderSniff" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_2a4ye")
 pitch_scale = 0.981055
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
-load_audio_directory = "res://Audio/Kel Voice/Sniff"
+load_audio_directory = "res://assets/audio/Kel_voice/sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-994.904, -388.218)
-rotation = -0.043097
+position = Vector2(-961.905, -412.608)
+rotation = -0.122898
 scale = Vector2(0.399661, 0.399661)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" instance=ExtResource("69_ekg2v")]
@@ -5030,8 +4779,8 @@ tracked_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_factor = 0.1
 
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-744.123, -519.614)
-rotation = -0.043097
+position = Vector2(-722.396, -563.578)
+rotation = -0.122898
 scale = Vector2(0.399661, 0.399661)
 
 [node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
@@ -5137,10 +4886,11 @@ SNEEZE_WIND_BONUS = 20000.0
 voice_box = NodePath("../../Remote Transforms/MouthRemote/Voice Box")
 sneeze_wind_curve = SubResource("Curve_q3w4i")
 
-[node name="Brain" parent="Data" node_paths=PackedStringArray("lungs", "voice") instance=ExtResource("97_8vqa2")]
+[node name="Brain" parent="Data" node_paths=PackedStringArray("lungs", "voice", "animation_tree") instance=ExtResource("97_8vqa2")]
 unique_name_in_owner = true
 lungs = NodePath("../Lungs")
 voice = NodePath("../../Remote Transforms/MouthRemote/Voice Box")
+animation_tree = NodePath("../../Animation Data/AnimationTree")
 sneeze_trigger_target = 100.0
 sneeze_trigger_decay_seconds = 60.0
 sneeze_trigger_expel = 80.0
@@ -5151,11 +4901,6 @@ sneeze_repeat_modifier = SubResource("Resource_l3cks")
 fit_window_seconds = Vector2(5, 15)
 fit_sneeze_bonus = 1.2
 fit_trigger_count_mult = 0.1
-
-[node name="AnimTimeoutTimer" type="Timer" parent="Data/Brain"]
-unique_name_in_owner = true
-wait_time = 0.5
-one_shot = true
 
 [node name="Chhinkni" type="Node" parent="Data"]
 script = ExtResource("95_aqq7c")

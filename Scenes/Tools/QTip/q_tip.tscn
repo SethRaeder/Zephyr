@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://07jfi4b7gu6h"]
 
-[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://Scenes/Tools/tool_body.gd" id="1_i2186"]
-[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://Scenes/Components/Tools/GrabTransform.gd" id="2_bqowe"]
-[ext_resource type="Texture2D" uid="uid://db2wnj3pqicfs" path="res://images/inducing tools/Revised/Q-tip.PNG" id="3_qcxg0"]
-[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://Scenes/Components/Tools/tickle_component.gd" id="4_6kho5"]
-[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://Scenes/Components/Tools/tickle_debug_suite.tscn" id="5_p3vox"]
+[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_i2186"]
+[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://scripts/components/tools/grab_transform.gd" id="2_bqowe"]
+[ext_resource type="Texture2D" uid="uid://db2wnj3pqicfs" path="res://assets/images/inducing_tools/revised/Q-tip.PNG" id="3_qcxg0"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://scripts/components/tools/tickle_component.gd" id="4_6kho5"]
+[ext_resource type="PackedScene" uid="uid://0j24tufqmgt2" path="res://scenes/components/tools/tickle_debug_suite.tscn" id="5_p3vox"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_51j0j"]
 radius = 6.0
