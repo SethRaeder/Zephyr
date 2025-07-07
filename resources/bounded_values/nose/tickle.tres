@@ -6,5 +6,5 @@
 script = ExtResource("1_ihuno")
 name = &"Tickle"
 min_value = 0.0
-max_value = 50.0
+max_value = 100.0
 current_value = 0.0

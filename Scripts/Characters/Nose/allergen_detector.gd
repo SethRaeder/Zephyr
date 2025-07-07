@@ -1,6 +1,7 @@
 extends Node
 class_name AllergenDetector
 
+##Allergen this detector should track
 @export var allergen : AllergyResource
 
 ##From 0 to max particles, add delta * this sample to the progress each tick
@@ -55,11 +56,17 @@ func _physics_process(delta: float) -> void:
 	else:
 		allergen_time.add_value(delta * particle_count_time_effect.sample(allergen_particles.get_percent()))
 	
-	for nose in nose_dict:
-		if allergen.does_tickle():
-			nose.add_tickle(delta * get_tickle_damage(), TickleComponent.DAMAGE_TYPES.TICKLE, null)
-		if allergen.does_burn():
-			nose.add_tickle(delta * get_burn_damage(), TickleComponent.DAMAGE_TYPES.BURN, null)
+	if allergen.does_tickle():
+		var tickle_damage : float = get_tickle_damage()
+		if tickle_damage > 0:
+			for nose in nose_dict:
+				nose.add_tickle(delta * tickle_damage, TickleComponent.DAMAGE_TYPES.TICKLE, null, false)
+		
+	if allergen.does_burn():
+		var burn_damage : float = get_burn_damage()
+		if burn_damage > 0:
+			for nose in nose_dict:
+				nose.add_tickle(delta * burn_damage, TickleComponent.DAMAGE_TYPES.BURN, null, false)
 
 func get_tickle_damage() -> float:
 	return allergen.sample_tickle(allergen_time.get_percent(), allergen_particles.get_percent())

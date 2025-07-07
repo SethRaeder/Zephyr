@@ -13,13 +13,13 @@ class_name Brain
 @export var buildup_curve : Curve
 ##Define the chances of sneeze animation playing depending on sneeze level
 @export var sneeze_curve : Curve
+##Define the transition blend to the "tickle" expression
+@export var tickle_curve : Curve
 
 ##How many sneeze triggers is needed to reach max sneeze level?
 @export var sneeze_trigger_target : float = 20.0
 ##How many seconds to decay sneeze trigger to zero?
 @export var sneeze_trigger_decay_seconds : float = 20.0
-##How many sneeze triggers is needed to reach max tickle level?
-@export var tickle_max := 8.0
 ##How many sneeze triggers to remove on sneeze
 @export var sneeze_trigger_expel : float = 5
 ##How often to check for animation transitions
@@ -141,10 +141,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	idletickleblend = lerpf(idletickleblend, clamp(float(sneeze_trigger_count.current_value * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) / tickle_max), 0.0, 1.0), delta)
+	idletickleblend = lerpf(idletickleblend, get_tickle_percent(), delta)
 	
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
 	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
+
+func get_tickle_percent() -> float:
+	return clampf(tickle_curve.sample_baked(sneeze_trigger_count.get_percent() * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)), 0.0, 1.0)
 
 func timer_timeout():
 	anim_parameters["hitch"] = false

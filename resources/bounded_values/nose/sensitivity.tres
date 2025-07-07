@@ -6,5 +6,5 @@
 script = ExtResource("1_2jlbl")
 name = &"Sensitivity"
 min_value = 0.0
-max_value = 5.0
-current_value = 1.0
+max_value = 100.0
+current_value = 50.0

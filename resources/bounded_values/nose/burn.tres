@@ -6,5 +6,5 @@
 script = ExtResource("1_w6jms")
 name = &"Burn"
 min_value = 0.0
-max_value = 30.0
+max_value = 100.0
 current_value = 0.0
