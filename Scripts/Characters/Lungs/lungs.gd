@@ -18,8 +18,9 @@ class_name Lungs
 @export var lungs : CustomBoundedValue
 @export var oxygen : CustomBoundedValue
 
-var oxygen_per_lungs = 2.0
-@onready var oxygen_decay_rate = oxygen.max_value / 6.0
+@export var oxygen_multiplier : float = 1.0
+@export var oxygen_decay_seconds : float = 4.0
+@onready var oxygen_decay_rate = oxygen.max_value / oxygen_decay_seconds
 
 signal breathe_in
 signal breathe_out
@@ -104,8 +105,16 @@ func _physics_process(delta: float) -> void:
 			breathe(BUILD_RATE, BUILD_WIND_BONUS, delta)
 			
 		BREATH_STATE.SNEEZE:
-			if voice_box.Sneeze.playing and sneeze_wind_curve:
-				var progress = voice_box.Sneeze.get_playback_position()
+			var sneezePlayer = null
+			if voice_box.SneezeNormal.playing:
+				sneezePlayer = voice_box.SneezeNormal
+			elif voice_box.SneezeBig.playing:
+				sneezePlayer = voice_box.SneezeBig
+			elif voice_box.SneezeStifle.playing:
+				sneezePlayer = voice_box.SneezeStifle
+	
+			if sneezePlayer != null and sneeze_wind_curve:
+				var progress = sneezePlayer.get_playback_position()
 				var sample = sneeze_wind_curve.sample_baked(clampf(progress,0,1))
 			
 				breathe(SNEEZE_RATE * sample, SNEEZE_WIND_BONUS, delta)
@@ -139,5 +148,5 @@ func breathe(rate, bonus, delta):
 	lungs.add_value(rate * delta)
 	#print("Lungs: Current value: ", lungs.current_value)
 	if rate > 0:
-		oxygen.add_value(rate * oxygen_per_lungs * delta)
+		oxygen.add_value(rate * oxygen_multiplier * delta)
 	

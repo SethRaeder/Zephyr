@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://ch0l0toylwvv6"]
 
-[ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_w3a1n"]
-[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="2_v6hoa"]
-[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_kmuw6"]
-[ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_v4n3a"]
-[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://Resources/Allergy/chhinkni.tres" id="5_lspgf"]
+[ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_w3a1n"]
+[ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://scripts/components/wind/wind_subscriber.gd" id="2_v6hoa"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://scripts/components/tools/tickle_component.gd" id="3_kmuw6"]
+[ext_resource type="Script" uid="uid://dfj6if5q4u7b3" path="res://scripts/components/particles/enable_on_breathe_component.gd" id="4_v4n3a"]
+[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://resources/allergy_resource/chhinkni.tres" id="5_lspgf"]
 [ext_resource type="Texture2D" uid="uid://chvrgso8ewj40" path="res://addons/kenney_particle_pack/smoke_03.png" id="6_67lxg"]
-[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="7_5kq1j"]
+[ext_resource type="Script" uid="uid://bnwm6si172jtx" path="res://scenes/tools/Particles/FadeParticleSprite.gd" id="7_5kq1j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5u3hl"]
 radius = 3.16228
@@ -20,7 +20,7 @@ radius = 10.0499
 
 [node name="Chhinkni" type="RigidBody2D" groups=["tool_particles"]]
 collision_layer = 524288
-collision_mask = 524800
+collision_mask = 525056
 mass = 0.01
 gravity_scale = 0.2
 script = ExtResource("1_w3a1n")

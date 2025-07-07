@@ -1,6 +1,7 @@
 [gd_resource type="AnimationNodeBlendTree" load_steps=5 format=3 uid="uid://cuisaekt7igfi"]
 
-[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://Scenes/Characters/Kel/Animations/kel_anim_transition_curve.tres" id="1_33exw"]
+[ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_33exw"]
+
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ylv6"]
 resource_local_to_scene = true
@@ -25,11 +26,11 @@ input_1/reset = true
 
 [resource]
 resource_name = "HitchSwapTree"
-graph_offset = Vector2(-233.467, -32.5019)
+graph_offset = Vector2(-237.517, -32.8993)
 nodes/Buffer0/node = SubResource("AnimationNodeAnimation_3ylv6")
 nodes/Buffer0/position = Vector2(-20, 80)
 nodes/Buffer1/node = SubResource("AnimationNodeAnimation_hpbox")
-nodes/Buffer1/position = Vector2(-20, 220)
+nodes/Buffer1/position = Vector2(-20, 260)
 nodes/Transition/node = SubResource("AnimationNodeTransition_c8vd0")
 nodes/Transition/position = Vector2(140, 80)
 nodes/output/position = Vector2(280, 80)

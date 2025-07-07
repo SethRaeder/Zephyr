@@ -1,50 +1,54 @@
 [gd_scene load_steps=116 format=3 uid="uid://dwy7tu3al2d47"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Zephyr/zephyr.gd" id="1_2dgtx"]
-[ext_resource type="Texture2D" uid="uid://b1btbq1vnfdtb" path="res://images/zephyr sprites/guide.JPG" id="1_g788o"]
-[ext_resource type="Texture2D" uid="uid://cuqhmtau14uh6" path="res://images/zephyr sprites/neck_combined.svg" id="1_ll3ot"]
-[ext_resource type="Script" path="res://Scenes/old_project/FarEarRoot.gd" id="2_a3ado"]
-[ext_resource type="Texture2D" uid="uid://dduh3xdqb2ed5" path="res://images/TestSprites/Zephyr test1.svg" id="2_unpf0"]
-[ext_resource type="Texture2D" uid="uid://om6dw7ty7ymw" path="res://images/zephyr sprites/far ear.svg" id="3_2fnut"]
-[ext_resource type="Texture2D" uid="uid://bpnxxj361foqk" path="res://images/zephyr sprites/far ear sneeze.svg" id="4_hgq25"]
-[ext_resource type="Script" path="res://Scenes/old_project/HeadRoot.gd" id="6_7mw2j"]
-[ext_resource type="Texture2D" uid="uid://dm2kvulo3657f" path="res://images/zephyr sprites/head sneeze.svg" id="7_l4bm0"]
-[ext_resource type="Texture2D" uid="uid://cydcfjlcran34" path="res://images/zephyr sprites/head hitch.svg" id="8_afypw"]
-[ext_resource type="Texture2D" uid="uid://c7bs2vsykesip" path="res://images/zephyr sprites/head tickle.svg" id="9_ng2ke"]
-[ext_resource type="Texture2D" uid="uid://cili17a2ecfk7" path="res://images/zephyr sprites/head idle.svg" id="10_bagse"]
-[ext_resource type="Script" path="res://Scenes/old_project/NostrilRoot.gd" id="11_sintl"]
-[ext_resource type="Texture2D" uid="uid://bdfge21jequgm" path="res://images/zephyr sprites/nostril idle.svg" id="12_igbm4"]
-[ext_resource type="Texture2D" uid="uid://d2fml5n7a4fse" path="res://images/zephyr sprites/nostril tickle.svg" id="13_qr1mu"]
-[ext_resource type="Texture2D" uid="uid://bfqarj3o5voao" path="res://images/zephyr sprites/snot tickle.svg" id="14_dkrig"]
-[ext_resource type="Texture2D" uid="uid://c077cqxj5kjhh" path="res://images/zephyr sprites/snot hitch.svg" id="15_o5sve"]
-[ext_resource type="Texture2D" uid="uid://1bqnghliq2rt" path="res://images/zephyr sprites/snot hitch 2.svg" id="16_sch63"]
-[ext_resource type="Texture2D" uid="uid://dgy23mrq1hprg" path="res://images/zephyr sprites/snot sneeze.svg" id="17_gttpn"]
-[ext_resource type="Script" path="res://Scenes/old_project/CloseEarRoot.gd" id="18_5p8wp"]
-[ext_resource type="Texture2D" uid="uid://cwj126x5hyj83" path="res://images/zephyr sprites/close ear.svg" id="19_ergag"]
-[ext_resource type="Texture2D" uid="uid://cjsf55ciktern" path="res://images/zephyr sprites/close ear sneeze.svg" id="20_c0tv3"]
-[ext_resource type="Texture2D" uid="uid://d0pi4u3v3pomt" path="res://images/Wing.svg" id="21_38qsd"]
-[ext_resource type="Script" path="res://Scenes/old_project/EyeScript.gd" id="22_1wfle"]
-[ext_resource type="Texture2D" uid="uid://wwfuty7diyix" path="res://images/zephyr sprites/blink.svg" id="23_cq0sx"]
-[ext_resource type="Texture2D" uid="uid://dht75gyh3k4qw" path="res://images/zephyr sprites/eye hitch.svg" id="24_2s0h1"]
-[ext_resource type="Texture2D" uid="uid://b7jfmtmrbvyuk" path="res://images/zephyr sprites/eye idle raw.svg" id="25_nngkc"]
-[ext_resource type="Texture2D" uid="uid://cbv7rndeo07w7" path="res://images/zephyr sprites/pupil idle.svg" id="26_tm8fh"]
-[ext_resource type="Texture2D" uid="uid://cdodetbrfqnnn" path="res://images/zephyr sprites/eye tickle.svg" id="27_briog"]
-[ext_resource type="Texture2D" uid="uid://brnt52c4wkob2" path="res://images/zephyr sprites/eye mask.svg" id="28_nidi1"]
-[ext_resource type="Script" path="res://Scenes/old_project/NoseHitbox.gd" id="29_3yldj"]
-[ext_resource type="Texture2D" path="res://Scenes/old_project/LightFalloff.tres" id="30_1l52w"]
-[ext_resource type="Script" path="res://Scenes/old_project/ParticleManager.gd" id="31_gssw4"]
+[ext_resource type="Script" uid="uid://dpmpkea31o47n" path="res://scenes/characters/Zephyr/zephyr.gd" id="1_2dgtx"]
+[ext_resource type="Texture2D" uid="uid://b1btbq1vnfdtb" path="res://assets/images/Zephyr/old_design/guide.JPG" id="1_g788o"]
+[ext_resource type="Texture2D" uid="uid://cuqhmtau14uh6" path="res://assets/images/Zephyr/old_design/neck_combined.svg" id="1_ll3ot"]
+[ext_resource type="Texture2D" uid="uid://dduh3xdqb2ed5" path="res://assets/images/Zephyr/test/Zephyr test1.svg" id="2_unpf0"]
+[ext_resource type="Texture2D" uid="uid://om6dw7ty7ymw" path="res://assets/images/Zephyr/old_design/far ear.svg" id="3_2fnut"]
+[ext_resource type="Texture2D" uid="uid://bpnxxj361foqk" path="res://assets/images/Zephyr/old_design/far ear sneeze.svg" id="4_hgq25"]
+[ext_resource type="Texture2D" uid="uid://dm2kvulo3657f" path="res://assets/images/Zephyr/old_design/head sneeze.svg" id="7_l4bm0"]
+[ext_resource type="Texture2D" uid="uid://cydcfjlcran34" path="res://assets/images/Zephyr/old_design/head hitch.svg" id="8_afypw"]
+[ext_resource type="Texture2D" uid="uid://c7bs2vsykesip" path="res://assets/images/Zephyr/old_design/head tickle.svg" id="9_ng2ke"]
+[ext_resource type="Texture2D" uid="uid://cili17a2ecfk7" path="res://assets/images/Zephyr/old_design/head idle.svg" id="10_bagse"]
+[ext_resource type="Texture2D" uid="uid://bdfge21jequgm" path="res://assets/images/Zephyr/old_design/nostril idle.svg" id="12_igbm4"]
+[ext_resource type="Texture2D" uid="uid://d2fml5n7a4fse" path="res://assets/images/Zephyr/old_design/nostril tickle.svg" id="13_qr1mu"]
+[ext_resource type="Texture2D" uid="uid://bfqarj3o5voao" path="res://assets/images/Zephyr/old_design/snot tickle.svg" id="14_dkrig"]
+[ext_resource type="Texture2D" uid="uid://c077cqxj5kjhh" path="res://assets/images/Zephyr/old_design/snot hitch.svg" id="15_o5sve"]
+[ext_resource type="Texture2D" uid="uid://1bqnghliq2rt" path="res://assets/images/Zephyr/old_design/snot hitch 2.svg" id="16_sch63"]
+[ext_resource type="Texture2D" uid="uid://dgy23mrq1hprg" path="res://assets/images/Zephyr/old_design/snot sneeze.svg" id="17_gttpn"]
+[ext_resource type="Texture2D" uid="uid://cwj126x5hyj83" path="res://assets/images/Zephyr/old_design/close ear.svg" id="19_ergag"]
+[ext_resource type="Texture2D" uid="uid://cjsf55ciktern" path="res://assets/images/Zephyr/old_design/close ear sneeze.svg" id="20_c0tv3"]
+[ext_resource type="Texture2D" uid="uid://d0pi4u3v3pomt" path="res://assets/images/Zephyr/old_design/Wing.svg" id="21_38qsd"]
+[ext_resource type="Texture2D" uid="uid://wwfuty7diyix" path="res://assets/images/Zephyr/old_design/blink.svg" id="23_cq0sx"]
+[ext_resource type="Texture2D" uid="uid://dht75gyh3k4qw" path="res://assets/images/Zephyr/old_design/eye hitch.svg" id="24_2s0h1"]
+[ext_resource type="Texture2D" uid="uid://b7jfmtmrbvyuk" path="res://assets/images/Zephyr/old_design/eye idle raw.svg" id="25_nngkc"]
+[ext_resource type="Texture2D" uid="uid://cbv7rndeo07w7" path="res://assets/images/Zephyr/old_design/pupil idle.svg" id="26_tm8fh"]
+[ext_resource type="Texture2D" uid="uid://cdodetbrfqnnn" path="res://assets/images/Zephyr/old_design/eye tickle.svg" id="27_briog"]
+[ext_resource type="Texture2D" uid="uid://brnt52c4wkob2" path="res://assets/images/Zephyr/old_design/eye mask.svg" id="28_nidi1"]
 [ext_resource type="Texture2D" uid="uid://bo46md3clcbjd" path="res://addons/kenney_particle_pack/trace_05.png" id="32_m7de5"]
 [ext_resource type="Texture2D" uid="uid://3fxy1s0xy1ks" path="res://addons/kenney_particle_pack/smoke_05.png" id="33_l4jvx"]
 [ext_resource type="Texture2D" uid="uid://c38114032snwp" path="res://addons/kenney_particle_pack/smoke_02.png" id="34_nsdsv"]
 [ext_resource type="Texture2D" uid="uid://bbduo8dc2p8pe" path="res://addons/kenney_particle_pack/smoke_04.png" id="35_gq0a0"]
 [ext_resource type="Texture2D" uid="uid://bvfmnu5stdfbt" path="res://addons/kenney_particle_pack/dirt_01.png" id="36_aj5dq"]
 [ext_resource type="Texture2D" uid="uid://bbn0ir5fbtiug" path="res://addons/kenney_particle_pack/smoke_07.png" id="37_rldi1"]
-[ext_resource type="Script" path="res://Scenes/old_project/EyeTracking.gd" id="38_3mhgl"]
-[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://Scenes/Components/Character Resources/Lungs/lungs.tscn" id="41_1vjbm"]
-[ext_resource type="PackedScene" path="res://Scenes/old_project/AudioEngine.tscn" id="41_dgbjy"]
-[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://Scenes/Components/Character Resources/Nose/nose.tscn" id="42_tvmmh"]
-[ext_resource type="Script" path="res://Scripts/Characters/Lungs/lungs.gd" id="42_xn2tb"]
+[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://scenes/components/characters/lungs/lungs.tscn" id="41_1vjbm"]
+[ext_resource type="PackedScene" uid="uid://c33t2nvl25e1u" path="res://scenes/components/characters/nose/nose.tscn" id="42_tvmmh"]
+[ext_resource type="Script" uid="uid://c72y7eaelmxjf" path="res://scripts/characters/lungs/lungs.gd" id="42_xn2tb"]
 
+[sub_resource type="Resource" id="Resource_ib0od"]
+metadata/__load_path__ = "res://Scenes/old_project/FarEarRoot.gd"
+
+[sub_resource type="Resource" id="Resource_1b6pj"]
+metadata/__load_path__ = "res://Scenes/old_project/HeadRoot.gd"
+
+[sub_resource type="Resource" id="Resource_5ns35"]
+metadata/__load_path__ = "res://Scenes/old_project/NostrilRoot.gd"
+
+[sub_resource type="Resource" id="Resource_gx1u3"]
+metadata/__load_path__ = "res://Scenes/old_project/CloseEarRoot.gd"
+
+[sub_resource type="Resource" id="Resource_assec"]
+metadata/__load_path__ = "res://Scenes/old_project/EyeScript.gd"
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_moy73"]
 size = Vector2(20, 20)
@@ -107,11 +111,20 @@ modifications/1 = SubResource("SkeletonModification2DCCDIK_xu5gv")
 modifications/2 = SubResource("SkeletonModification2DJiggle_4y3t8")
 modifications/3 = SubResource("SkeletonModification2DJiggle_g3vke")
 
+[sub_resource type="Resource" id="Resource_c014h"]
+metadata/__load_path__ = "res://Scenes/old_project/NoseHitbox.gd"
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8vkup"]
 blend_mode = 1
 
+[sub_resource type="Resource" id="Resource_ucnwg"]
+metadata/__load_path__ = "res://Scenes/old_project/LightFalloff.tres"
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahtno"]
 radius = 1024.0
+
+[sub_resource type="Resource" id="Resource_qdb83"]
+metadata/__load_path__ = "res://Scenes/old_project/ParticleManager.gd"
 
 [sub_resource type="Gradient" id="Gradient_p3u7i"]
 offsets = PackedFloat32Array(0, 0.193023, 1)
@@ -304,6 +317,9 @@ color_ramp = SubResource("GradientTexture1D_xm30k")
 turbulence_noise_strength = 0.2
 turbulence_influence_max = 0.2
 turbulence_influence_over_life = SubResource("CurveTexture_s51bb")
+
+[sub_resource type="Resource" id="Resource_i08vr"]
+metadata/__load_path__ = "res://Scenes/old_project/EyeTracking.gd"
 
 [sub_resource type="Animation" id="Animation_gpmhj"]
 length = 0.001
@@ -1025,19 +1041,19 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o6a0i"]
 _data = {
-"RESET": SubResource("Animation_gpmhj"),
-"expr_hitch": SubResource("Animation_6nv1h"),
-"expr_hitch_hold": SubResource("Animation_mknv8"),
-"expr_hitch_small": SubResource("Animation_in1wu"),
-"expr_idle": SubResource("Animation_kw8w6"),
-"expr_sneeze": SubResource("Animation_bmsh0"),
-"expr_tickle": SubResource("Animation_ns5uu"),
-"loop_idle": SubResource("Animation_1ycq5"),
-"loop_tickle": SubResource("Animation_jvn3y"),
-"shot_blink": SubResource("Animation_43ij7"),
-"shot_ear": SubResource("Animation_fbp8f"),
-"shot_sneeze_pullback": SubResource("Animation_u0a5d"),
-"shot_sneeze_release": SubResource("Animation_axwuc")
+&"RESET": SubResource("Animation_gpmhj"),
+&"expr_hitch": SubResource("Animation_6nv1h"),
+&"expr_hitch_hold": SubResource("Animation_mknv8"),
+&"expr_hitch_small": SubResource("Animation_in1wu"),
+&"expr_idle": SubResource("Animation_kw8w6"),
+&"expr_sneeze": SubResource("Animation_bmsh0"),
+&"expr_tickle": SubResource("Animation_ns5uu"),
+&"loop_idle": SubResource("Animation_1ycq5"),
+&"loop_tickle": SubResource("Animation_jvn3y"),
+&"shot_blink": SubResource("Animation_43ij7"),
+&"shot_ear": SubResource("Animation_fbp8f"),
+&"shot_sneeze_pullback": SubResource("Animation_u0a5d"),
+&"shot_sneeze_release": SubResource("Animation_axwuc")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_55rvq"]
@@ -1166,6 +1182,9 @@ nodes/idle_tickle_blend/position = Vector2(-400, 40)
 nodes/output/position = Vector2(1180, 120)
 node_connections = [&"blink_shot", 0, &"ear_shot", &"blink_shot", 1, &"blink_anim", &"body_transition", 0, &"expr_add", &"body_transition", 1, &"Animation 3", &"body_transition", 2, &"Animation 7", &"body_transition", 3, &"Animation 8", &"ear_shot", 0, &"body_transition", &"ear_shot", 1, &"ear_anim", &"expr_add", 0, &"idle_tickle_blend", &"expr_add", 1, &"expression_transition", &"expression_transition", 0, &"Animation", &"expression_transition", 1, &"Animation 2", &"expression_transition", 2, &"Animation 4", &"expression_transition", 3, &"Animation 5", &"expression_transition", 4, &"Animation 6", &"output", 0, &"blink_shot"]
 
+[sub_resource type="Resource" id="Resource_wjwwa"]
+metadata/__load_path__ = "res://Scenes/old_project/AudioEngine.tscn"
+
 [node name="Zephyr" type="Node2D"]
 script = ExtResource("1_2dgtx")
 
@@ -1199,7 +1218,7 @@ internal_vertex_count = 14
 [node name="FarEarRoot" type="Node2D" parent="."]
 z_index = -3
 position = Vector2(-741.186, -736.19)
-script = ExtResource("2_a3ado")
+script = SubResource("Resource_ib0od")
 
 [node name="FarEar" type="Polygon2D" parent="FarEarRoot"]
 position = Vector2(-1091.59, -320.26)
@@ -1225,7 +1244,7 @@ light_mask = 513
 z_index = -1
 z_as_relative = false
 position = Vector2(-662.186, -543.19)
-script = ExtResource("6_7mw2j")
+script = SubResource("Resource_1b6pj")
 
 [node name="HeadSneeze" type="Polygon2D" parent="HeadRoot"]
 visible = false
@@ -1290,7 +1309,7 @@ bones = ["LowerNeckRootBone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 
 [node name="NostrilRoot" type="Node2D" parent="."]
 position = Vector2(-1075.18, -493.19)
-script = ExtResource("11_sintl")
+script = SubResource("Resource_5ns35")
 
 [node name="Nostril" type="Polygon2D" parent="NostrilRoot"]
 light_mask = 513
@@ -1351,7 +1370,7 @@ texture = ExtResource("17_gttpn")
 
 [node name="CloseEarRoot" type="Node2D" parent="."]
 position = Vector2(-613.186, -671.19)
-script = ExtResource("18_5p8wp")
+script = SubResource("Resource_gx1u3")
 
 [node name="CloseEar" type="Polygon2D" parent="CloseEarRoot"]
 position = Vector2(-1212.84, -389.762)
@@ -1384,7 +1403,7 @@ texture = ExtResource("21_38qsd")
 position = Vector2(-789.93, -589.867)
 rotation = -0.0962903
 scale = Vector2(1.00167, 1.00167)
-script = ExtResource("22_1wfle")
+script = SubResource("Resource_assec")
 
 [node name="Blink" type="Polygon2D" parent="EyeRoot"]
 visible = false
@@ -1489,7 +1508,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="NoseHitbox" type="Area2D" parent="Skeleton2D/LowerNeckRootBone2D/UpperNeckRootBone2D/HeadRootBone2D"]
 position = Vector2(-407.346, 11.5773)
 rotation = -0.0324561
-script = ExtResource("29_3yldj")
+script = SubResource("Resource_c014h")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skeleton2D/LowerNeckRootBone2D/UpperNeckRootBone2D/HeadRootBone2D/NoseHitbox"]
 visible = false
@@ -1502,7 +1521,7 @@ material = SubResource("CanvasItemMaterial_8vkup")
 position = Vector2(2.18346, 2.7847)
 rotation = -0.405329
 scale = Vector2(3.32494, 2.32429)
-texture = ExtResource("30_1l52w")
+texture = SubResource("Resource_ucnwg")
 
 [node name="ParticleDetector" type="Area2D" parent="Skeleton2D/LowerNeckRootBone2D/UpperNeckRootBone2D/HeadRootBone2D"]
 position = Vector2(-394.777, 45.1428)
@@ -1517,7 +1536,7 @@ shape = SubResource("CircleShape2D_ahtno")
 [node name="ParticleManager" type="Node2D" parent="Skeleton2D/LowerNeckRootBone2D/UpperNeckRootBone2D/HeadRootBone2D"]
 position = Vector2(-432.593, 136.142)
 rotation = -0.246155
-script = ExtResource("31_gssw4")
+script = SubResource("Resource_qdb83")
 
 [node name="NostrilTrails" type="GPUParticles2D" parent="Skeleton2D/LowerNeckRootBone2D/UpperNeckRootBone2D/HeadRootBone2D/ParticleManager"]
 position = Vector2(59.1717, -137.412)
@@ -1634,7 +1653,7 @@ rest = Transform2D(9.98183, 0.60249, -0.60249, 9.98183, -122.545, -56.2478)
 auto_calculate_length_and_angle = false
 length = 1.0
 bone_angle = -268.546
-script = ExtResource("38_3mhgl")
+script = SubResource("Resource_i08vr")
 
 [node name="EyelidBone" type="Bone2D" parent="Skeleton2D/LowerNeckRootBone2D/UpperNeckRootBone2D/HeadRootBone2D"]
 position = Vector2(-105.464, -140.608)
@@ -1701,7 +1720,7 @@ parameters/expression_transition/transition_request = ""
 parameters/expression_transition/current_index = 0
 parameters/idle_tickle_blend/blend_position = -0.74184
 
-[node name="Voice" parent="." instance=ExtResource("41_dgbjy")]
+[node name="Voice" parent="."]
 position = Vector2(-1080.77, -494.022)
 rotation = -0.0832275
 scale = Vector2(1.00088, 1.00088)

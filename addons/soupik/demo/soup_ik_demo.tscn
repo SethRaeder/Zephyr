@@ -1,14 +1,14 @@
 [gd_scene load_steps=18 format=3 uid="uid://b3hj65q36wn2s"]
 
 [ext_resource type="Texture2D" uid="uid://xw3jo41h3y76" path="res://addons/soupik/demo/soup_ik_demo.png" id="1_m1lgk"]
-[ext_resource type="Script" path="res://addons/soupik/modifications/soup_group.gd" id="3_mc6wm"]
-[ext_resource type="Script" path="res://addons/soupik/modifications/soup_look_at.gd" id="4_yo3p8"]
-[ext_resource type="Script" path="res://addons/soupik/resources/zm_constraint_data.gd" id="5_7lmru"]
-[ext_resource type="Script" path="res://addons/soupik/utility/soup_bone.gd" id="6_f4u0y"]
-[ext_resource type="Script" path="res://addons/soupik/resources/zm_easing_params.gd" id="7_u4x2w"]
-[ext_resource type="Script" path="res://addons/soupik/resources/zm_easing_rotational_params.gd" id="8_7k177"]
-[ext_resource type="Script" path="res://addons/soupik/modifications/soup_fabrik.gd" id="8_35ngn"]
-[ext_resource type="Script" path="res://addons/soupik/modifications/soup_two_bone_ik.gd" id="8_vc02x"]
+[ext_resource type="Script" uid="uid://1vbc48b2e7ci" path="res://addons/soupik/modifications/soup_group.gd" id="3_mc6wm"]
+[ext_resource type="Script" uid="uid://cu2rfhmwork2f" path="res://addons/soupik/modifications/soup_look_at.gd" id="4_yo3p8"]
+[ext_resource type="Script" uid="uid://cgngdoajx3egb" path="res://addons/soupik/resources/zm_constraint_data.gd" id="5_7lmru"]
+[ext_resource type="Script" uid="uid://bv7fcu3p24jav" path="res://addons/soupik/utility/soup_bone.gd" id="6_f4u0y"]
+[ext_resource type="Script" uid="uid://c5kq1nv3cwyc5" path="res://addons/soupik/resources/zm_easing_params.gd" id="7_u4x2w"]
+[ext_resource type="Script" uid="uid://1dh2uyfu4stk" path="res://addons/soupik/resources/zm_easing_rotational_params.gd" id="8_7k177"]
+[ext_resource type="Script" uid="uid://c0halov2bvjmy" path="res://addons/soupik/modifications/soup_fabrik.gd" id="8_35ngn"]
+[ext_resource type="Script" uid="uid://iscrohmgg73r" path="res://addons/soupik/modifications/soup_two_bone_ik.gd" id="8_vc02x"]
 
 [sub_resource type="Resource" id="Resource_c88fb"]
 script = ExtResource("7_u4x2w")

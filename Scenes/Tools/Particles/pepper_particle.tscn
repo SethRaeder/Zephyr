@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt4fb5bk0bgkf"]
+[gd_scene load_steps=10 format=3 uid="uid://bt4fb5bk0bgkf"]
 
-[ext_resource type="Script" path="res://Scenes/Components/Particle/particle.gd" id="1_sgk6t"]
-[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="2_exnls"]
-[ext_resource type="Script" path="res://Scenes/Components/Tools/tickle_component.gd" id="3_s5p63"]
-[ext_resource type="Script" path="res://Scenes/Components/Util/enable_on_breathe_component.gd" id="4_xls0g"]
+[ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_sgk6t"]
+[ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://scripts/components/wind/wind_subscriber.gd" id="2_exnls"]
+[ext_resource type="Script" uid="uid://dxoep6jdkji4" path="res://scripts/components/tools/tickle_component.gd" id="3_s5p63"]
+[ext_resource type="Script" uid="uid://dfj6if5q4u7b3" path="res://scripts/components/particles/enable_on_breathe_component.gd" id="4_xls0g"]
+[ext_resource type="Resource" uid="uid://d3vctd86sic6" path="res://resources/allergy_resource/pepper.tres" id="5_6xee3"]
 [ext_resource type="Texture2D" uid="uid://dn7tdstuhkyq6" path="res://addons/kenney_particle_pack/smoke_01.png" id="5_tpf4n"]
-[ext_resource type="Script" path="res://Scenes/Tools/Particles/FadeParticleSprite.gd" id="6_e8rtq"]
+[ext_resource type="Script" uid="uid://bnwm6si172jtx" path="res://scenes/tools/Particles/FadeParticleSprite.gd" id="6_e8rtq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_omj74"]
 radius = 4.0
@@ -29,39 +30,27 @@ shape = SubResource("CircleShape2D_omj74")
 scale = Vector2(0.18, 0.18)
 script = ExtResource("2_exnls")
 
-[node name="Burn" type="Area2D" parent="."]
+[node name="PepperDamage" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_s5p63")
-tickle_type = 1
+tickle_type = 3
+allergy_type = ExtResource("5_6xee3")
+intensity = 10.0
 tickle_damage_limit = 1.0
 
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Burn"]
+[node name="EnableOnBreatheComponent" type="Node2D" parent="PepperDamage"]
 process_mode = 3
 scale = Vector2(0.18, 0.18)
 script = ExtResource("4_xls0g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Burn"]
-shape = SubResource("CircleShape2D_34lcl")
-
-[node name="Tickle" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("3_s5p63")
-tickle_damage_limit = 0.5
-
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
-process_mode = 3
-scale = Vector2(0.18, 0.18)
-script = ExtResource("4_xls0g")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PepperDamage"]
 shape = SubResource("CircleShape2D_34lcl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.352941)
 z_index = 10
-scale = Vector2(0.18, 0.18)
+scale = Vector2(0.07, 0.07)
 texture = ExtResource("5_tpf4n")
 
 [node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]

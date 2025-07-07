@@ -1,10 +1,11 @@
 extends Node
 class_name AllergenDetector
 
+##Allergen this detector should track
 @export var allergen : AllergyResource
 
 ##From 0 to max particles, add delta * this sample to the progress each tick
-@export var particle_count_time_effect : Curve = preload("res://Resources/Curves/default_particle_count_time_effect.tres")
+@export var particle_count_time_effect : Curve = preload("res://resources/curves/default_particle_count_time_effect.tres")
 ##How many seconds does it take to reach the end of the allergen effect curve, from 0?
 @export var time_to_max_progress : float = 60.0
 ##How many seconds does it take to reach the beginning of the allergen effect curve, from 100?
@@ -18,7 +19,7 @@ class_name AllergenDetector
 var allergen_time := CustomBoundedValue.new()
 var allergen_particles := CustomBoundedValue.new()
 
-var nose : NoseTriggerZone
+var nose_dict : Dictionary[NoseTriggerZone, float]
 var debug_timer : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,8 +31,11 @@ func _ready() -> void:
 	#debug_timer.autostart = true
 	add_child(debug_timer)
 	
-	nose = get_parent()
-	nose.on_tickle_damage.connect(_on_tickle_damage)
+	var all_noses = get_tree().get_nodes_in_group("nose")
+	for nose in all_noses:
+		if nose is NoseTriggerZone:
+			nose_dict[nose as NoseTriggerZone] = 0.0
+			nose.on_tickle_damage.connect(_on_tickle_damage)
 		
 	allergen_time.name = allergen.allergy_name + " Progress"
 	allergen_time.max_value = time_to_max_progress
@@ -44,18 +48,25 @@ func _on_tickle_damage(damage_amount : float, damage_type : TickleComponent.DAMA
 		#print("Detecting allergy damage")
 		allergen_particles.add_value(damage_amount)
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	allergen_particles.add_value(delta * particle_decay_rate)
 	
 	if allergen_particles.get_percent() == 0.0:
 		allergen_time.add_value(delta * progress_decay_rate)
 	else:
 		allergen_time.add_value(delta * particle_count_time_effect.sample(allergen_particles.get_percent()))
-		
+	
 	if allergen.does_tickle():
-		nose.add_tickle(delta * get_tickle_damage(), TickleComponent.DAMAGE_TYPES.TICKLE, null)
+		var tickle_damage : float = get_tickle_damage()
+		if tickle_damage > 0:
+			for nose in nose_dict:
+				nose.add_tickle(delta * tickle_damage, TickleComponent.DAMAGE_TYPES.TICKLE, null, false)
+		
 	if allergen.does_burn():
-		nose.add_tickle(delta * get_burn_damage(), TickleComponent.DAMAGE_TYPES.BURN, null)
+		var burn_damage : float = get_burn_damage()
+		if burn_damage > 0:
+			for nose in nose_dict:
+				nose.add_tickle(delta * burn_damage, TickleComponent.DAMAGE_TYPES.BURN, null, false)
 
 func get_tickle_damage() -> float:
 	return allergen.sample_tickle(allergen_time.get_percent(), allergen_particles.get_percent())
@@ -71,6 +82,7 @@ func debug() -> void:
 
 func send_sliders(container : SliderBarContainer):
 	print("Allergen Detector sending sliders...")
+	container.add_new_header(allergen.allergy_name)
 	container.add_new_slider(allergen_particles)
 	container.add_new_slider(allergen_time)
 	

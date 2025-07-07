@@ -4,34 +4,46 @@ class_name VoiceBox
 @export var Buildup : AudioStreamPlayer2D = null;
 @export var Hitch : AudioStreamPlayer2D = null;
 @export var Sigh : AudioStreamPlayer2D = null;
-@export var Sneeze : AudioStreamPlayer2D = null;
+@export var SneezeNormal : AudioStreamPlayer2D = null;
+@export var SneezeBig : AudioStreamPlayer2D = null;
+@export var SneezeStifle : AudioStreamPlayer2D = null;
 @export var Sniff : AudioStreamPlayer2D = null;
 @export var Spray : AudioStreamPlayer2D = null;
 
-signal buildup_finished
-signal hitch_finished
-signal sigh_finished
-signal sneeze_finished
-signal sniff_finished
-signal spray_finished
+signal buildup_finished()
+signal hitch_finished()
+signal sigh_finished()
+signal sneeze_finished()
+signal sniff_finished()
+signal spray_finished()
 
-signal on_sneeze
-signal on_hitch
-signal on_buildup
-signal on_sigh
-signal on_sniff
-signal on_spray
+signal on_sneeze()
+signal on_hitch()
+signal on_buildup()
+signal on_sigh()
+signal on_sniff()
+signal on_spray()
 
 @export_category("Audio Settings")
 @export var pitch_range : Vector2 = Vector2(1,1)
 
 func _ready():
-	if Buildup: Buildup.finished.connect(buildup_finished.emit);
-	if Hitch: Hitch.finished.connect(hitch_finished.emit);
-	if Sigh: Sigh.finished.connect(sigh_finished.emit);
-	if Sneeze: Sneeze.finished.connect(sneeze_finished.emit);
-	if Sniff: Sniff.finished.connect(sniff_finished.emit);
-	if Spray: Spray.finished.connect(spray_finished.emit);
+	if Buildup != null:
+		Buildup.finished.connect(buildup_finished.emit);
+	if Hitch != null: 
+		Hitch.finished.connect(hitch_finished.emit);
+	if Sigh != null: 
+		Sigh.finished.connect(sigh_finished.emit);
+	if SneezeNormal != null: 
+		SneezeNormal.finished.connect(sneeze_finished.emit);
+	if SneezeBig != null: 
+		SneezeBig.finished.connect(sneeze_finished.emit);
+	if SneezeStifle != null: 
+		SneezeStifle.finished.connect(sneeze_finished.emit);
+	if Sniff != null: 
+		Sniff.finished.connect(sniff_finished.emit);
+	if Spray != null:
+		Spray.finished.connect(spray_finished.emit);
 
 ##Randomizes pitch based on the Pitch Range variable.
 func randomize_pitch(player : AudioStreamPlayer2D):
@@ -66,15 +78,34 @@ func Play_Sigh():
 	else:
 		sigh_finished.emit()
 
-
-func Play_Sneeze():
-	if Sneeze:
-		if not Sneeze.playing:
-			randomize_pitch(Sneeze)
-			Sneeze.play();
-			on_sneeze.emit()
-	else:
-		sneeze_finished.emit()
+enum SNEEZE_SIZE{STIFLE=0, NORMAL=1, BIG=2}
+func Play_Sneeze(size : SNEEZE_SIZE):
+	match size:
+		SNEEZE_SIZE.STIFLE:
+			if SneezeStifle:
+				if not SneezeStifle.playing:
+					randomize_pitch(SneezeStifle)
+					SneezeStifle.play();
+					on_sneeze.emit()
+					return
+					
+		SNEEZE_SIZE.NORMAL:
+			if SneezeNormal:
+				if not SneezeNormal.playing:
+					randomize_pitch(SneezeNormal)
+					SneezeNormal.play();
+					on_sneeze.emit()
+					return
+		
+		SNEEZE_SIZE.BIG:
+			if SneezeBig:
+				if not SneezeBig.playing:
+					randomize_pitch(SneezeBig)
+					SneezeBig.play();
+					on_sneeze.emit()
+					return
+	
+	sneeze_finished.emit()
 	
 
 func Play_Sniff():

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://34wgpjsyur8v"]
+
+[ext_resource type="Script" uid="uid://dtwud66ee8ep0" path="res://scripts/characters/brain/brain.gd" id="1_15ufg"]
+
+[node name="Brain" type="Node" groups=["has_sliders"]]
+script = ExtResource("1_15ufg")
+sneeze_trigger_target = 50.0
+sneeze_trigger_expel = 30.0
+
+[node name="UpdateTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+autostart = true
+
+[node name="FitTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="AnimTimeoutTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true

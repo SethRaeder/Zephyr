@@ -13,17 +13,17 @@ config_version=5
 config/name="Zephyr"
 config/version="0.8.4"
 run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0.298039, 0.298039, 0.298039, 1)
 boot_splash/show_image=false
-boot_splash/image="res://images/Loading.png"
 boot_splash/use_filter=false
+boot_splash/image="res://assets/images/background/Loading.png"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=150
 
 [autoload]
 
-ZephyrGlobals="*res://Scripts/zephyr_globals.gd"
+ZephyrGlobals="*res://scripts/globals/zephyr_globals.gd"
 
 [display]
 
@@ -36,6 +36,16 @@ movie_writer/movie_file="E:/Godot/Projects/Missile Command/Render.avi"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/soupik/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "purple",
+"res://assets/": "red",
+"res://resources/": "green",
+"res://scenes/": "blue",
+"res://scripts/": "orange"
+}
 
 [global_group]
 

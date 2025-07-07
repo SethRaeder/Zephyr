@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://bwlmonrs1rnj3"]
 
-[ext_resource type="Script" path="res://Scenes/Tools/tool_body.gd" id="1_kmta7"]
-[ext_resource type="Texture2D" uid="uid://dkc6rqecennaq" path="res://images/inducing tools/Revised/Chhinkni Bottle.PNG" id="2_c6cfs"]
-[ext_resource type="Texture2D" uid="uid://dm333bjkc7kvc" path="res://images/inducing tools/Revised/Chhinkni Cap.PNG" id="3_o18g1"]
-[ext_resource type="Script" path="res://Scenes/Components/Tools/GrabTransform.gd" id="4_ee42l"]
-[ext_resource type="Script" path="res://Scenes/Tools/Chhinkni/hide_cap_script.gd" id="4_l8ggx"]
-[ext_resource type="Script" path="res://Scenes/Components/Particle/particle_emitter.gd" id="5_jc6ru"]
-[ext_resource type="PackedScene" uid="uid://ch0l0toylwvv6" path="res://Scenes/Tools/Particles/chhinkni_particle.tscn" id="7_dd1vu"]
-[ext_resource type="PackedScene" uid="uid://cgxtaj4vrici" path="res://Scenes/Tools/Chhinkni/chhinkni_cap.tscn" id="7_h4o4n"]
-[ext_resource type="Script" path="res://Scenes/Components/Util/emit_on_breathe_component.gd" id="8_pfxgb"]
-[ext_resource type="Script" path="res://Scripts/Wind/wind_subscriber.gd" id="9_cm045"]
+[ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_kmta7"]
+[ext_resource type="Texture2D" uid="uid://dkc6rqecennaq" path="res://assets/images/inducing_tools/revised/Chhinkni Bottle.PNG" id="2_c6cfs"]
+[ext_resource type="Texture2D" uid="uid://dm333bjkc7kvc" path="res://assets/images/inducing_tools/revised/Chhinkni Cap.PNG" id="3_o18g1"]
+[ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://scripts/components/tools/grab_transform.gd" id="4_ee42l"]
+[ext_resource type="Script" uid="uid://eyf4ggq8nc72" path="res://scenes/tools/Chhinkni/hide_cap_script.gd" id="4_l8ggx"]
+[ext_resource type="Script" uid="uid://cv8ubux5m3uu4" path="res://scripts/components/particles/particle_emitter.gd" id="5_jc6ru"]
+[ext_resource type="PackedScene" uid="uid://ch0l0toylwvv6" path="res://scenes/tools/Particles/chhinkni_particle.tscn" id="7_dd1vu"]
+[ext_resource type="PackedScene" uid="uid://cgxtaj4vrici" path="res://scenes/tools/Chhinkni/chhinkni_cap.tscn" id="7_h4o4n"]
+[ext_resource type="Script" uid="uid://clbr5rgtci6u6" path="res://scripts/characters/nose/emit_on_breathe_component.gd" id="8_pfxgb"]
+[ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://scripts/components/wind/wind_subscriber.gd" id="9_cm045"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h45xq"]
 radius = 6.0
@@ -24,17 +24,19 @@ radius = 33.1361
 
 [node name="ToolBody" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
-angular_damp = 20.0
+mass = 0.2
+angular_damp = 80.0
 script = ExtResource("1_kmta7")
 InsertSprite = NodePath("Sprite")
 metadata/_edit_horizontal_guides_ = [-28.0]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.2)
 shape = SubResource("CapsuleShape2D_h45xq")
 
 [node name="Particles" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -19)
+position = Vector2(0, -17.8)
 script = ExtResource("5_jc6ru")
 particle_scene = ExtResource("7_dd1vu")
 release_on_jerk = true
@@ -55,6 +57,7 @@ wind_subscriber = NodePath("WindSubscriber")
 script = ExtResource("9_cm045")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1.2)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_c6cfs")
 
@@ -65,11 +68,12 @@ script = ExtResource("4_l8ggx")
 
 [node name="CapParticle" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -22)
+position = Vector2(0, -20.8)
 script = ExtResource("5_jc6ru")
 particle_scene = ExtResource("7_h4o4n")
 release_on_jerk = true
-jerk_threshold = 3000.0
+jerk_threshold = 2000.0
+jerk_speed_max = 10000.0
 release_on_speed = false
 particle_spawn_rotation_max = 0.0
 particle_size_var_range = Vector2(1, 1)
@@ -77,14 +81,17 @@ particle_max_count = 20
 particle_spawn_lifetime_limit = 1
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 1.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ci8ln")
 
 [node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
-position = Vector2(0, 10)
+position = Vector2(0, -0.800003)
 gizmo_extents = 105.2
 script = ExtResource("4_ee42l")
+snap_factor_p = 50.0
+snap_factor_d = -5.0
 grab_area = NodePath("../Area2D")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
