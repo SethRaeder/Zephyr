@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dndpq8io2l6o2" path="res://scripts/ui/tool_trash.gd" id="3_bh12i"]
 [ext_resource type="PackedScene" uid="uid://boufv7sb4j0ec" path="res://scenes/characters/Kel/kel_rig.tscn" id="4_l8tuh"]
 [ext_resource type="Texture2D" uid="uid://ca7ptvmgjqn1n" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-4.png" id="4_w3mxs"]
-[ext_resource type="PackedScene" uid="uid://t0tr1cifnv7m" path="res://scenes/ui/toolbox.tscn" id="5_5jvun"]
+[ext_resource type="PackedScene" uid="uid://t0tr1cifnv7m" path="res://scenes/ui/Toolbox.tscn" id="5_5jvun"]
 [ext_resource type="Texture2D" uid="uid://b5l35j13ruljk" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-3.png" id="5_gi44c"]
 [ext_resource type="Script" uid="uid://dkqqqb8bjfev3" path="res://scripts/ui/debug_toggle.gd" id="6_qhpe8"]
 [ext_resource type="Script" uid="uid://bpjtugwutdsiw" path="res://scripts/components/util/parallax_component.gd" id="6_w6b3a"]
