@@ -11,14 +11,13 @@ var grab_target : GrabTransform = null
 @export var anti_sneeze : TickleComponent
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	ZephyrGlobals.tool_grabbed.connect(_on_tool_grabbed)
 	ZephyrGlobals.tool_dropped.connect(_on_tool_released)
 	
 	if nose_detector:
 		nose_detector.area_entered.connect(_on_nose_hover)
 		nose_detector.area_exited.connect(_on_nose_unhover)
-	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

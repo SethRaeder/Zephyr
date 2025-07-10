@@ -1,15 +1,7 @@
-[gd_resource type="Resource" script_class="AllergyResource" load_steps=3 format=3 uid="uid://eiweg5js1h4j"]
+[gd_resource type="Resource" script_class="AllergyResource" load_steps=2 format=3 uid="uid://eiweg5js1h4j"]
 
 [ext_resource type="Script" uid="uid://ddgdp2hieuh8r" path="res://resources/definitions/allergy_resource.gd" id="1_t3vb5"]
-
-[sub_resource type="Curve" id="Curve_0voxx"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0969072, 0.045734), 0.674423, 0.674423, 0, 0, Vector2(0.197938, 1), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.15565), 0.0521007, 0.0521007, 0, 0, Vector2(0.997938, 0.130669), 0.0, 0.0, 0, 0]
-point_count = 5
 
 [resource]
 script = ExtResource("1_t3vb5")
 allergy_name = "Chhinkni"
-max_count = 100.0
-tickle_amount_max = 1.0
-burn_amount_max = 15.0
-burn_curve = SubResource("Curve_0voxx")

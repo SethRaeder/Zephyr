@@ -10,12 +10,12 @@ class_name VoiceBox
 @export var Sniff : AudioStreamPlayer2D = null;
 @export var Spray : AudioStreamPlayer2D = null;
 
-signal buildup_finished()
-signal hitch_finished()
-signal sigh_finished()
-signal sneeze_finished()
-signal sniff_finished()
-signal spray_finished()
+signal on_buildup_finished()
+signal on_hitch_finished()
+signal on_sigh_finished()
+signal on_sneeze_finished()
+signal on_sniff_finished()
+signal on_spray_finished()
 
 signal on_sneeze()
 signal on_hitch()
@@ -29,21 +29,21 @@ signal on_spray()
 
 func _ready():
 	if Buildup != null:
-		Buildup.finished.connect(buildup_finished.emit);
+		Buildup.finished.connect(on_buildup_finished.emit);
 	if Hitch != null: 
-		Hitch.finished.connect(hitch_finished.emit);
+		Hitch.finished.connect(on_hitch_finished.emit);
 	if Sigh != null: 
-		Sigh.finished.connect(sigh_finished.emit);
+		Sigh.finished.connect(on_sigh_finished.emit);
 	if SneezeNormal != null: 
-		SneezeNormal.finished.connect(sneeze_finished.emit);
+		SneezeNormal.finished.connect(on_sneeze_finished.emit);
 	if SneezeBig != null: 
-		SneezeBig.finished.connect(sneeze_finished.emit);
+		SneezeBig.finished.connect(on_sneeze_finished.emit);
 	if SneezeStifle != null: 
-		SneezeStifle.finished.connect(sneeze_finished.emit);
+		SneezeStifle.finished.connect(on_sneeze_finished.emit);
 	if Sniff != null: 
-		Sniff.finished.connect(sniff_finished.emit);
+		Sniff.finished.connect(on_sniff_finished.emit);
 	if Spray != null:
-		Spray.finished.connect(spray_finished.emit);
+		Spray.finished.connect(on_spray_finished.emit);
 
 ##Randomizes pitch based on the Pitch Range variable.
 func randomize_pitch(player : AudioStreamPlayer2D):
@@ -56,7 +56,7 @@ func Play_Buildup():
 			Buildup.play();
 			on_buildup.emit()
 	else: #Can't play sound samples, skip the playback and go to the finished event.
-		buildup_finished.emit()
+		on_buildup_finished.emit()
 
 
 func Play_Hitch():
@@ -66,7 +66,7 @@ func Play_Hitch():
 			Hitch.play();
 			on_hitch.emit()
 	else:
-		hitch_finished.emit()
+		on_hitch_finished.emit()
 
 
 func Play_Sigh():
@@ -76,7 +76,7 @@ func Play_Sigh():
 			Sigh.play();
 			on_sigh.emit()
 	else:
-		sigh_finished.emit()
+		on_sigh_finished.emit()
 
 enum SNEEZE_SIZE{STIFLE=0, NORMAL=1, BIG=2}
 func Play_Sneeze(size : SNEEZE_SIZE):
@@ -105,7 +105,7 @@ func Play_Sneeze(size : SNEEZE_SIZE):
 					on_sneeze.emit()
 					return
 	
-	sneeze_finished.emit()
+	on_sneeze_finished.emit()
 	
 
 func Play_Sniff():
@@ -115,7 +115,7 @@ func Play_Sniff():
 			Sniff.play();
 			on_sniff.emit()
 	else:
-		sniff_finished.emit()
+		on_sniff_finished.emit()
 
 
 func Play_Spray():
@@ -125,4 +125,4 @@ func Play_Spray():
 			Spray.play();
 			on_spray.emit()
 	else:
-		spray_finished.emit()
+		on_spray_finished.emit()

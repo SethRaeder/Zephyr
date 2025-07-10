@@ -73,7 +73,13 @@ var is_building : bool = false
 var is_sneezing : bool = false
 var is_sighing : bool = false
 var is_sniffing : bool = false
-	
+
+signal on_hitch()
+signal on_build()
+signal on_sneeze()
+signal on_sigh()
+signal on_sniff()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sneeze_trigger_count.name = "Sneeze Trigger Count"
@@ -96,8 +102,8 @@ func _ready() -> void:
 			animation_tree.set("parameters/NoseFlareTransition/transition_request","idle")
 	)
 	
-	lungs.want_breathe.connect(want_breathe)
-	lungs.must_breathe.connect(must_breathe)
+	lungs.want_breathe.connect(do_want_breathe)
+	lungs.must_breathe.connect(do_must_breathe)
 	
 	#Attach all nose hitbox zones to the brain control
 	for node in get_tree().get_nodes_in_group("nose"):
@@ -108,31 +114,31 @@ func _ready() -> void:
 	
 	update_timer.timeout.connect(timer_timeout)
 	
-	voice.on_hitch.connect(on_hitch)
-	voice.on_buildup.connect(on_buildup)
-	voice.on_sneeze.connect(on_sneeze)
+	voice.on_hitch.connect(do_hitch)
+	voice.on_buildup.connect(do_buildup)
+	voice.on_sneeze.connect(do_sneeze)
 	
-	voice.sneeze_finished.connect(func():
+	voice.on_sneeze_finished.connect(func():
 		anim_timeout_timer.start()
 		await anim_timeout_timer.timeout
 		sneeze_finished()
 	)
-	voice.buildup_finished.connect(func():
+	voice.on_buildup_finished.connect(func():
 		anim_timeout_timer.start()
 		await anim_timeout_timer.timeout
 		buildup_finished()
 	)
-	voice.hitch_finished.connect(func():
+	voice.on_hitch_finished.connect(func():
 		anim_timeout_timer.start()
 		await anim_timeout_timer.timeout
 		hitch_finished()
 	)
-	voice.sigh_finished.connect(func():
+	voice.on_sigh_finished.connect(func():
 		anim_timeout_timer.start()
 		await anim_timeout_timer.timeout
 		sigh_finished()
 	)
-	voice.sniff_finished.connect(func():
+	voice.on_sniff_finished.connect(func():
 		anim_timeout_timer.start()
 		await anim_timeout_timer.timeout
 		sniff_finished()
@@ -222,13 +228,14 @@ func on_sniff_anim():
 	is_sniffing = true
 	#TODO: Reduce "mess" after mess implemented
 	
-func on_hitch():
+func do_hitch():
 	lungs.set_breath_state(lungs.BREATH_STATE.HITCH)
 	
-func on_buildup():
+func do_buildup():
 	lungs.set_breath_state(lungs.BREATH_STATE.BUILDUP)
 	
-func on_sneeze():
+func do_sneeze():
+	on_sneeze.emit()
 	lungs.set_breath_state(lungs.BREATH_STATE.SNEEZE)
 	
 	if randf() < fit_probability:
@@ -263,12 +270,12 @@ func sniff_finished():
 func sneeze_trigger(value):
 	sneeze_trigger_count.add_value(value)
 	
-func want_breathe(weight : float):
+func do_want_breathe(weight : float):
 	if randf() < weight:
 		print("Want Breathe Started")
 		lungs.set_breath_state(lungs.BREATH_STATE.IN)
 		
-func must_breathe():
+func do_must_breathe():
 	print("Must Breathe Started")
 	lungs.set_breath_state(lungs.BREATH_STATE.IN)
 

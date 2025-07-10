@@ -1,4 +1,4 @@
-[gd_scene load_steps=307 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene load_steps=319 format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://assets/images/Kel/clean/texture_color/Neck.PNG" id="1_j7t74"]
@@ -1610,7 +1610,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [0]
 }
 tracks/1/type = "value"
@@ -3974,7 +3974,6 @@ graph_offset = Vector2(-203, -499)
 animation = &"RESET"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vtvym"]
-graph_offset = Vector2(362.709, -289.495)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
@@ -4178,31 +4177,6 @@ stream_26/stream = ExtResource("144_e7qu4")
 stream_27/stream = ExtResource("145_huqgt")
 stream_28/stream = ExtResource("146_dp7xv")
 
-[sub_resource type="Resource" id="Resource_a4kdl"]
-script = ExtResource("46_5853s")
-name = &"Tickle"
-min_value = 0.0
-max_value = 200.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_qu5h2"]
-script = ExtResource("46_5853s")
-name = &"Burn"
-min_value = 0.0
-max_value = 200.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_oxnq4"]
-script = ExtResource("46_5853s")
-name = &"Sensitivity"
-min_value = 0.0
-max_value = 100.0
-current_value = 50.0
-
-[sub_resource type="Curve" id="Curve_oxnq4"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6po3j"]
 radius = 79.1067
 height = 213.776
@@ -4224,27 +4198,6 @@ height = 737.328
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m1w2i"]
 friction = 0.5
 bounce = 0.2
-
-[sub_resource type="Resource" id="Resource_c6mjl"]
-script = ExtResource("46_5853s")
-name = &"Tickle"
-min_value = 0.0
-max_value = 200.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_o2tv5"]
-script = ExtResource("46_5853s")
-name = &"Burn"
-min_value = 0.0
-max_value = 200.0
-current_value = 0.0
-
-[sub_resource type="Resource" id="Resource_8lt0t"]
-script = ExtResource("46_5853s")
-name = &"Sensitivity"
-min_value = 0.0
-max_value = 100.0
-current_value = 50.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7cjx"]
 radius = 81.2554
@@ -4273,7 +4226,7 @@ _data = [Vector2(0.200855, 0), 0.0, 0.0, 0, 0, Vector2(0.498576, 0.505398), 2.58
 point_count = 3
 
 [sub_resource type="Curve" id="Curve_a4kdl"]
-_data = [Vector2(0.102102, 0), 0.0, 0.0, 0, 0, Vector2(0.501501, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.0488722, 0), 0.0, 0.0, 0, 0, Vector2(0.253759, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Resource" id="Resource_drxmn"]
@@ -4296,6 +4249,103 @@ name = &"Sneeze Repeat"
 min_value = 0.0
 max_value = 3.0
 current_value = 2.0
+
+[sub_resource type="Curve" id="Curve_4ox5n"]
+_limits = [0.0, 1.0, 0.0, 60.0]
+_data = [Vector2(0, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(24, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(60, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_f8u13"]
+_limits = [0.0, 3.0, 0.0, 300.0]
+_data = [Vector2(0, 0.2), 0.0, 0.00766212, 0, 0, Vector2(70.4887, 0.998301), 0.0, 0.0, 0, 0, Vector2(240, 1), 0.0, 0.0, 0, 0, Vector2(300, 3), 0.0757473, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_8lt0t"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_447sm"]
+_limits = [0.0, 1.0, 0.0, 30.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(30, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_6xysc"]
+_limits = [0.0, 15.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 21.0, 0, 0, Vector2(0.12406, 15), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_urgnq"]
+_limits = [0.0, 1.0, 0.0, 180.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(30.4511, 1), 0.0, 0.0, 0, 0, Vector2(56.8421, 1), 0.0, 0.0, 0, 0, Vector2(90, 0.497213), -0.010824, -0.010824, 0, 0, Vector2(180, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="Curve" id="Curve_kiepg"]
+_limits = [-1.0, 1.0, 0.0, 60.0]
+_data = [Vector2(18, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(60, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_n6k6u"]
+_limits = [0.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 5), 7.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_rfmvs"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 2.8, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_fo1c0"]
+_limits = [0.0, 5.0, 0.0, 60.0]
+_data = [Vector2(12.0677, 0), 0.0, 0.0, 0, 0, Vector2(60, 4.97791), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_8hncw"]
+_limits = [0.0, 1.0, 0.0, 120.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(120, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_cxwp0"]
+_limits = [-1.0, 1.0, 0.0, 60.0]
+_data = [Vector2(30, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(60, -0.4), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_a5tvm"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 2.8, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_0qu7n"]
+_limits = [0.0, 1.0, 0.0, 60.0]
+_data = [Vector2(30.2256, 1), 0.0, 0.0, 0, 0, Vector2(60, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_pybbq"]
+_limits = [0.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 7.0, 0, 0, Vector2(1, 5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_w4n22"]
+_limits = [0.0, 1.0, 0.0, 60.0]
+_data = [Vector2(29.2105, 1), 0.0, 0.0, 0, 0, Vector2(60, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_qu5h2"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 4.2, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_c6mjl"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 3), 4.2, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_o2tv5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Kel_Rig" type="Node2D"]
 
@@ -4478,12 +4528,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.453596
-scale = Vector2(0.999842, 0.999842)
+rotation = 0.384973
+scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.45219
+target_rotation = 0.384463
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -4492,12 +4542,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.63598
+rotation = 0.588085
 scale = Vector2(0.999878, 0.999878)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.641979
+target_rotation = 0.587944
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -4506,12 +4556,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.463851
-scale = Vector2(0.999843, 0.999843)
+rotation = -0.400682
+scale = Vector2(0.999849, 0.999849)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.46314
+target_rotation = -0.398756
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -4520,12 +4570,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.634161
-scale = Vector2(0.999881, 0.999881)
+rotation = -0.605029
+scale = Vector2(0.999883, 0.999883)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.636926
+target_rotation = -0.603776
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -4534,8 +4584,8 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.113461
-scale = Vector2(0.999701, 0.999701)
+rotation = -0.00912435
+scale = Vector2(0.999702, 0.999702)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -4550,7 +4600,7 @@ remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
 [node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-55.0004, 119)
-scale = Vector2(0.999827, 0.999827)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 89.071
@@ -4590,7 +4640,7 @@ bone_angle = -96.429
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-24.0005, 62)
 rotation = -0.00942021
-scale = Vector2(0.999835, 0.999835)
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
 editor_settings/show_bone_gizmo = false
 
@@ -4610,7 +4660,7 @@ bone_angle = 51.429
 
 [node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
 position = Vector2(-450.817, 190.762)
-scale = Vector2(0.999826, 0.999826)
+scale = Vector2(0.999823, 0.999823)
 rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4629,12 +4679,12 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(26.4717, 56.252)
-rotation = 0.0496161
-scale = Vector2(0.99983, 0.99983)
+rotation = 0.0496163
+scale = Vector2(0.999817, 0.999817)
 rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.986666
+target_rotation = 0.742215
 target_position = Vector2(26.4717, 56.252)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4643,12 +4693,12 @@ constraint_data = SubResource("Resource_iplph")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-144.681, 71.6403)
-rotation = 0.0417906
-scale = Vector2(0.999818, 0.999818)
+rotation = -0.018921
+scale = Vector2(0.999887, 0.999887)
 rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -1.77247
+target_rotation = -1.85351
 target_position = Vector2(-144.681, 71.6403)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4657,12 +4707,12 @@ constraint_data = SubResource("Resource_43o6b")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-148.182, 18.605)
-rotation = 0.0603929
-scale = Vector2(0.999834, 0.999834)
+rotation = 0.0603921
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 1.02709
+target_rotation = 1.26991
 target_position = Vector2(-148.182, 18.605)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4671,15 +4721,15 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-146.994, -1.38475)
-rotation = -0.186668
-scale = Vector2(0.999841, 0.999841)
+rotation = -0.277641
+scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -1.10219
+target_rotation = -0.844645
 target_position = Vector2(-146.994, -1.38475)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4692,7 +4742,7 @@ remote_path = NodePath("../../../../../../../../IK Targets/TongueRemote")
 
 [node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(124, -56)
-scale = Vector2(0.99985, 0.99985)
+scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(1, 0, 0, 1, 124, -56)
 auto_calculate_length_and_angle = false
 length = 276.317
@@ -4822,9 +4872,9 @@ gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
 [node name="TongueRemote" type="Node2D" parent="IK Targets"]
-position = Vector2(-2333.84, -878.055)
-rotation = -0.131317
-scale = Vector2(0.99898, 0.99898)
+position = Vector2(-2462.91, -808.055)
+rotation = -0.0511971
+scale = Vector2(0.998992, 0.998992)
 
 [node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote"]
 unique_name_in_owner = true
@@ -4862,9 +4912,9 @@ parameters/NoseFlareTransition/current_index = 0
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-920.761, -364.244)
-rotation = -0.376715
-scale = Vector2(0.399658, 0.399658)
+position = Vector2(-971.387, -335.18)
+rotation = -0.296595
+scale = Vector2(0.399664, 0.399664)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
 z_index = -12
@@ -4950,9 +5000,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Kel_voice/sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-954.803, -411.62)
-rotation = -0.121897
-scale = Vector2(0.399658, 0.399658)
+position = Vector2(-1001.53, -385.129)
+rotation = -0.0417769
+scale = Vector2(0.399664, 0.399664)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("connected_nose") instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -4962,16 +5012,12 @@ scale = Vector2(1.00064, 0.99947)
 skew = 8.57115e-05
 priority = 25
 sneeze_trigger_amount = 20.0
-tickle = SubResource("Resource_a4kdl")
-burn = SubResource("Resource_qu5h2")
-sensitivity = SubResource("Resource_oxnq4")
 connected_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_wait_seconds = 5.0
 burn_wait_seconds = 15.0
 burn_decay_seconds = 30.0
 burn_decay_on_sneeze_seconds = 20.0
-sensitivity_curve = SubResource("Curve_oxnq4")
-sensitivity_multiplier_on_sneeze = 0.5
+sensitivity_multiplier_on_sneeze = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/NoseRemote/NoseOuter"]
 position = Vector2(-3.1773, -16.5613)
@@ -5020,9 +5066,9 @@ tracked_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_factor = 0.1
 
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-715.145, -562.348)
-rotation = -0.121897
-scale = Vector2(0.399658, 0.399658)
+position = Vector2(-750.571, -516.195)
+rotation = -0.0417769
+scale = Vector2(0.399664, 0.399664)
 
 [node name="Nose Insertion" type="Node2D" parent="Remote Transforms/HeadRemote"]
 position = Vector2(-645.549, 297.654)
@@ -5067,14 +5113,11 @@ collision_layer = 128
 collision_mask = 128
 priority = 25
 sneeze_trigger_amount = 30.0
-tickle = SubResource("Resource_c6mjl")
-burn = SubResource("Resource_o2tv5")
-sensitivity = SubResource("Resource_8lt0t")
 tickle_decay_seconds = 30.0
 burn_decay_seconds = 80.0
 burn_decay_on_sneeze_seconds = 25.0
-sensitivity_multiplier_on_sneeze = 0.5
-sensitivity_decay_seconds = 360.0
+sensitivity_multiplier_on_sneeze = 0.9
+sensitivity_decay_seconds = 120.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/HeadRemote/NoseInner"]
 position = Vector2(72.2946, -103.137)
@@ -5146,32 +5189,51 @@ fit_window_seconds = Vector2(5, 15)
 fit_sneeze_bonus = 1.2
 fit_trigger_count_mult = 0.1
 
-[node name="Chhinkni" type="Node" parent="Data"]
+[node name="Chhinkni" type="Node" parent="Data" node_paths=PackedStringArray("brain")]
 script = ExtResource("95_aqq7c")
+brain = NodePath("../Brain")
 allergen = ExtResource("96_q1kil")
-time_to_max_progress = 180.0
-decay_time_seconds = 20.0
-particle_decay_seconds = 220.0
+progress_sensitivity_curve = SubResource("Curve_4ox5n")
+allergen_time_decay_seconds = 120.0
+particle_count_time_effect = SubResource("Curve_f8u13")
+particle_decay_seconds = 200.0
+particle_decay_sneeze_seconds = 1.0
+particle_tickle_curve = SubResource("Curve_8lt0t")
+particle_tickle_mod_curve = SubResource("Curve_447sm")
+particle_burn_curve = SubResource("Curve_6xysc")
+particle_burn_mod_curve = SubResource("Curve_urgnq")
 
-[node name="Dust" type="Node" parent="Data"]
+[node name="Dust" type="Node" parent="Data" node_paths=PackedStringArray("brain")]
 script = ExtResource("95_aqq7c")
+brain = NodePath("../Brain")
 allergen = ExtResource("87_xfbtc")
-time_to_max_progress = 80.0
-decay_time_seconds = 30.0
+progress_sensitivity_curve = SubResource("Curve_kiepg")
+allergen_time_decay_seconds = 120.0
+particle_tickle_curve = SubResource("Curve_n6k6u")
+particle_burn_curve = SubResource("Curve_rfmvs")
 
-[node name="Pollen" type="Node" parent="Data"]
+[node name="Pollen" type="Node" parent="Data" node_paths=PackedStringArray("brain")]
 script = ExtResource("95_aqq7c")
+brain = NodePath("../Brain")
 allergen = ExtResource("43_bb46j")
-time_to_max_progress = 40.0
-decay_time_seconds = 20.0
+progress_burn_curve = SubResource("Curve_fo1c0")
+progress_sensitivity_curve = SubResource("Curve_8hncw")
 particle_decay_seconds = 80.0
 
-[node name="Pepper" type="Node" parent="Data"]
+[node name="Pepper" type="Node" parent="Data" node_paths=PackedStringArray("brain")]
 script = ExtResource("95_aqq7c")
+brain = NodePath("../Brain")
 allergen = ExtResource("66_kwx24")
-time_to_max_progress = 15.0
-decay_time_seconds = 40.0
+progress_sensitivity_curve = SubResource("Curve_cxwp0")
+allergen_time_decay_seconds = 30.0
 particle_decay_seconds = 40.0
+particle_tickle_curve = SubResource("Curve_a5tvm")
+particle_tickle_mod_curve = SubResource("Curve_0qu7n")
+particle_burn_curve = SubResource("Curve_pybbq")
+particle_burn_mod_curve = SubResource("Curve_w4n22")
 
 [node name="Cold" type="Node" parent="Data"]
 script = ExtResource("56_hg8um")
+tickle_curve = SubResource("Curve_qu5h2")
+burn_curve = SubResource("Curve_c6mjl")
+sensitivity_curve = SubResource("Curve_o2tv5")

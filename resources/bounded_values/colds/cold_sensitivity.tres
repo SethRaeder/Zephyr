@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_axvv1")
-name = &"Sensitivity"
+name = &"Cold Sensitivity"
 min_value = 0.0
 max_value = 5.0
 current_value = 0.0

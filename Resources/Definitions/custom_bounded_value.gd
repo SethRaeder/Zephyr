@@ -2,9 +2,9 @@ extends Resource
 class_name CustomBoundedValue
 
 @export var name: StringName
-@export var min_value : float
-@export var max_value : float
-@export var current_value : float
+@export var min_value : float = 0.0
+@export var max_value : float = 1.0
+@export var current_value : float = 0.0
 #
 #func _init(_name, _min, _max, _current) -> void:
 	#name = _name
