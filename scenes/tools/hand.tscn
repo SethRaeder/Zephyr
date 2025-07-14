@@ -71,10 +71,10 @@ position = Vector2(-21, 1)
 shape = SubResource("CircleShape2D_g8doh")
 
 [node name="TickleDebugSuite" parent="AntiTickle" instance=ExtResource("6_iwhfu")]
-offset_left = -51.0
-offset_top = 17.0
-offset_right = -37.22
-offset_bottom = 48.655
+offset_left = -85.0
+offset_top = 62.0
+offset_right = -71.22
+offset_bottom = 93.655
 metadata/_edit_use_anchors_ = true
 
 [node name="Tickle" type="Area2D" parent="."]
@@ -90,10 +90,10 @@ position = Vector2(19, -14)
 shape = SubResource("CircleShape2D_b5gxl")
 
 [node name="TickleDebugSuite" parent="Tickle" instance=ExtResource("6_iwhfu")]
-offset_left = 26.0
-offset_top = -19.0
-offset_right = 39.78
-offset_bottom = 12.655
+offset_left = 2.0
+offset_top = 37.0
+offset_right = 15.78
+offset_bottom = 68.655
 metadata/_edit_use_anchors_ = true
 
 [node name="AntiBurn" type="Area2D" parent="."]
@@ -110,10 +110,10 @@ position = Vector2(-21, 1)
 shape = SubResource("CircleShape2D_g8doh")
 
 [node name="TickleDebugSuite" parent="AntiBurn" instance=ExtResource("6_iwhfu")]
-offset_left = -33.0
-offset_top = 17.0
-offset_right = -19.22
-offset_bottom = 48.655
+offset_left = -67.0
+offset_top = 62.0
+offset_right = -53.22
+offset_bottom = 93.655
 metadata/_edit_use_anchors_ = true
 
 [node name="AntiSneeze" type="Area2D" parent="."]
@@ -130,8 +130,8 @@ position = Vector2(-17, 3)
 shape = SubResource("CircleShape2D_g8doh")
 
 [node name="TickleDebugSuite" parent="AntiSneeze" instance=ExtResource("6_iwhfu")]
-offset_left = -10.0
-offset_top = 18.0
-offset_right = 3.78
-offset_bottom = 49.655
+offset_left = -44.0
+offset_top = 63.0
+offset_right = -30.22
+offset_bottom = 94.655
 metadata/_edit_use_anchors_ = true

@@ -153,6 +153,8 @@ func _process(delta: float) -> void:
 	
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
 	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
+	
+	print("Hitch amount: ",hitch_curve.sample_baked(sneeze_trigger_count.get_percent()))
 
 func get_tickle_percent() -> float:
 	return clampf(tickle_curve.sample_baked(sneeze_trigger_count.get_percent() * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)), 0.0, 1.0)
@@ -281,9 +283,16 @@ func do_must_breathe():
 	print("Must Breathe Started")
 	lungs.set_breath_state(lungs.BREATH_STATE.IN)
 
-func send_sliders(container : SliderBarContainer):
-	container.add_new_header(name + " Settings")
-	container.add_new_slider(sneeze_trigger_count)
-	container.add_new_slider(hitch_repeat_modifier)
-	container.add_new_slider(buildup_repeat_modifier)
-	container.add_new_slider(sneeze_repeat_modifier)
+func send_sliders(container : DebugUIContainer):
+	container.add_new_header(name + " Settings", "Settings for various brain functions")
+	container.add_new_slider(sneeze_trigger_count, "Determines chance of hitch/buildup/sneeze")
+	container.add_new_slider(hitch_repeat_modifier, "Modifies chance of hitching again after hitch")
+	container.add_new_slider(buildup_repeat_modifier, "Modifies chance of buildup again after buildup")
+	container.add_new_slider(sneeze_repeat_modifier, "Modifies chance of sneeze again after sneeze")
+
+func send_curves(container : DebugUIContainer):
+	container.add_new_header(name + " Curves", "Curve thresholds for various brain functions")
+	container.add_new_curve("Hitch Curve",hitch_curve)
+	container.add_new_curve("Buildup Curve",buildup_curve)
+	container.add_new_curve("Sneeze Curve",sneeze_curve)
+	container.add_new_curve("Tickle Curve",tickle_curve)

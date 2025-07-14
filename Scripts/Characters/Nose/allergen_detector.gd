@@ -50,7 +50,7 @@ var nose_dict : Dictionary[NoseTriggerZone, float]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("has_sliders")
-	
+	add_to_group("has_curves")
 	var all_noses = get_tree().get_nodes_in_group("nose")
 	for nose in all_noses:
 		if nose is NoseTriggerZone:
@@ -163,10 +163,34 @@ func _physics_process(delta: float) -> void:
 		#sample_burn(),
 		#sample_sensitivity()])
 
-func send_sliders(container : SliderBarContainer):
+func send_sliders(container : DebugUIContainer):
 	print("Allergen Detector sending sliders...")
-	container.add_new_header(allergen.allergy_name)
-	container.add_new_slider(allergen_particles)
+	container.add_new_header(allergen.allergy_name, "Settings and data for allergen node")
+	container.add_new_slider(allergen_particles, "Number of particles of this allergen inhaled")
 	if allergen_time != null:
-		container.add_new_slider(allergen_time)
+		container.add_new_slider(allergen_time, "Time since first particle was inhaled")
 	
+func send_curves(container : DebugUIContainer):
+	container.add_new_header(name + " Curves", "Curves for various allergen values")
+	
+	if progress_tickle_curve:
+		container.add_new_curve("Progress Tickle Curve",progress_tickle_curve)
+	if progress_burn_curve:
+		container.add_new_curve("Progress Tickle Curve",progress_burn_curve)
+	if progress_sensitivity_curve:
+		container.add_new_curve("Progress Sensitivity Curve",progress_sensitivity_curve)
+	
+	if particle_count_time_effect:
+		container.add_new_curve("Particle Time Effect",particle_count_time_effect)
+	if particle_tickle_curve:
+		container.add_new_curve("Particle Tickle Curve",particle_tickle_curve)
+	if particle_tickle_mod_curve:
+		container.add_new_curve("Particle Tickle Mod Curve",particle_tickle_mod_curve)
+	if particle_burn_curve:
+		container.add_new_curve("Particle Burn Curve",particle_burn_curve)
+	if particle_burn_mod_curve:
+		container.add_new_curve("Particle Burn ModCurve",particle_burn_mod_curve)
+	if particle_sensitivity_curve:
+		container.add_new_curve("Particle Sensitivity Curve",particle_sensitivity_curve)
+	if particle_sensitivity_mod_curve:
+		container.add_new_curve("Particle Sensitivity Mod Curve",particle_sensitivity_mod_curve)

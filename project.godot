@@ -57,6 +57,11 @@ character_debug=""
 tool_debug=""
 tools=""
 has_sliders=""
+has_curves=""
+
+[gui]
+
+theme/custom="uid://b51auv1e3oh5g"
 
 [input]
 

@@ -33,6 +33,6 @@ func _process(delta: float) -> void:
 		if sensitivity_strength > 0:
 			nose.add_tickle(sensitivity_strength * delta, TickleComponent.DAMAGE_TYPES.SENSITIVITY, null)
 
-func send_sliders(container : SliderBarContainer):
-	container.add_new_header(name + " Settings")
-	container.add_new_slider(_progression)
+func send_sliders(container : DebugUIContainer):
+	container.add_new_header(name + " Settings", "Settings and data for cold")
+	container.add_new_slider(_progression, "Strength of cold for this character.")

@@ -8,6 +8,7 @@ func _ready() -> void:
 	
 	button_pressed = false
 	
+	mouse_filter = Control.MOUSE_FILTER_PASS
 	toggled.connect(func(is_on):
 		for node in nodes_to_hide:
 			print("Set visible: ",is_on)

@@ -13,6 +13,7 @@ offset_right = -794.203
 offset_bottom = -583.683
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_qhhk0")
 
 [node name="Panel" type="Panel" parent="."]
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="SneezeProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
@@ -31,6 +33,7 @@ offset_left = 3.32977
 offset_top = 2.49462
 offset_right = 7.32977
 offset_bottom = 29.4946
+mouse_filter = 2
 max_value = 1.0
 value = 0.25
 fill_mode = 3

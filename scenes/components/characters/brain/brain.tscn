@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtwud66ee8ep0" path="res://scripts/characters/brain/brain.gd" id="1_15ufg"]
 
-[node name="Brain" type="Node" groups=["has_sliders"]]
+[node name="Brain" type="Node" groups=["has_curves", "has_sliders"]]
 script = ExtResource("1_15ufg")
 sneeze_trigger_target = 50.0
 sneeze_trigger_expel = 30.0

@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://vvppa027u41q" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-1.png" id="8_ysigt"]
 [ext_resource type="Texture2D" uid="uid://gv2wl5uuxdcx" path="res://assets/images/ui/can.png" id="13_th40t"]
 [ext_resource type="Script" uid="uid://mnfes3g8lybk" path="res://scripts/ui/clear_tools_button.gd" id="14_kynwu"]
-[ext_resource type="Script" uid="uid://c4815ddvq4puo" path="res://scripts/ui/slider_bar/slider_bar_container.gd" id="16_wg6ei"]
+[ext_resource type="Script" uid="uid://c4815ddvq4puo" path="res://scripts/ui/slider_bar/debug_ui_container.gd" id="16_wg6ei"]
 [ext_resource type="PackedScene" uid="uid://c0052co50relo" path="res://scenes/tools/hand.tscn" id="17_2ycv8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xl3dr"]
@@ -214,22 +214,47 @@ offset_bottom = 24.0
 text = "Debug"
 script = ExtResource("6_qhpe8")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI Root"]
+[node name="MarginContainer" type="MarginContainer" parent="UI Root"]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -360.0
-offset_bottom = 609.0
+anchor_bottom = 1.0
+offset_left = -402.0
 grow_horizontal = 0
-horizontal_scroll_mode = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="SliderBarContainer" type="GridContainer" parent="UI Root/ScrollContainer" groups=["character_debug"]]
+[node name="Panel" type="Panel" parent="UI Root/MarginContainer" groups=["character_debug"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-columns = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI Root/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI Root/MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="DebugUIContainer" type="VBoxContainer" parent="UI Root/MarginContainer/Panel/MarginContainer/ScrollContainer" groups=["character_debug"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
 script = ExtResource("16_wg6ei")
+metadata/_custom_type_script = "uid://c4815ddvq4puo"
 
 [node name="Hand" parent="." instance=ExtResource("17_2ycv8")]
 z_index = 11

@@ -139,8 +139,15 @@ func damage(amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_
 		TickleComponent.DAMAGE_TYPES.SNEEZECOUNT:
 			sneeze_trigger.emit(amount)
 
-func send_sliders(container : SliderBarContainer):
-	container.add_new_header(self.name + " Settings")
-	container.add_new_slider(tickle)
-	container.add_new_slider(burn)
-	container.add_new_slider(sensitivity)
+func send_sliders(container : DebugUIContainer):
+	container.add_new_header(self.name + " Settings", "Settings and data in nose")
+	container.add_new_slider(tickle, "Tickle amount increases chance to add sneeze count to brain")
+	container.add_new_slider(burn, "Burn amount increases chance to add sneeze count to brain")
+	container.add_new_slider(sensitivity, "Sensitivity modifies chance to add sneeze count to brain")
+
+func send_curves(container : DebugUIContainer):
+	container.add_new_header(name + " Curves", "Curve thresholds for various nose functions")
+	container.add_new_curve("Tickle Curve",tickle_curve)
+	container.add_new_curve("Burn Curve",burn_curve)
+	container.add_new_curve("Sensitivity Curve",sensitivity_curve)
+	
