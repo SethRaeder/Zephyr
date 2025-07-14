@@ -41,9 +41,9 @@ class_name Brain
 ##How many seconds should a fit last? From X to Y seconds
 @export var fit_window_seconds : Vector2 = Vector2(5.0, 20.0)
 ##How much to boost sneeze level while in a fit?
-@export var fit_sneeze_bonus : float = 2.0
+@export var fit_sneeze_bonus : float = 1.5
 ##How much to modify sneeze trigger removal while in a fit?
-@export var fit_trigger_count_mult : float = 0.25
+@export var fit_trigger_count_mult : float = 1
 
 #Local node references
 @onready var update_timer: Timer = %UpdateTimer
@@ -154,7 +154,7 @@ func _process(delta: float) -> void:
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
 	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
 	
-	print("Hitch amount: ",hitch_curve.sample_baked(sneeze_trigger_count.get_percent()))
+	#print("Hitch amount: ",hitch_curve.sample_baked(sneeze_trigger_count.get_percent()))
 
 func get_tickle_percent() -> float:
 	return clampf(tickle_curve.sample_baked(sneeze_trigger_count.get_percent() * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)), 0.0, 1.0)

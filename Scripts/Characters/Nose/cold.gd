@@ -27,11 +27,11 @@ func _process(delta: float) -> void:
 	var sensitivity_strength = sensitivity_curve.sample_baked(_progression.get_percent())
 	for nose in _nose_array:
 		if tickle_strength > 0:
-			nose.add_tickle(tickle_strength * delta, TickleComponent.DAMAGE_TYPES.TICKLE, null)
+			nose.damage(tickle_strength * delta, TickleComponent.DAMAGE_TYPES.TICKLE, null)
 		if burn_strength > 0:
-			nose.add_tickle(burn_strength * delta, TickleComponent.DAMAGE_TYPES.BURN, null)
+			nose.damage(burn_strength * delta, TickleComponent.DAMAGE_TYPES.BURN, null)
 		if sensitivity_strength > 0:
-			nose.add_tickle(sensitivity_strength * delta, TickleComponent.DAMAGE_TYPES.SENSITIVITY, null)
+			nose.damage(sensitivity_strength * delta, TickleComponent.DAMAGE_TYPES.SENSITIVITY, null)
 
 func send_sliders(container : DebugUIContainer):
 	container.add_new_header(name + " Settings", "Settings and data for cold")
