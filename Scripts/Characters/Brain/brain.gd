@@ -80,6 +80,8 @@ signal on_sneeze()
 signal on_sigh()
 signal on_sniff()
 
+var _sneeze_queued = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sneeze_trigger_count.name = "Sneeze Trigger Count"
@@ -154,6 +156,9 @@ func _process(delta: float) -> void:
 	sneeze_trigger_count.add_value(delta * sneeze_decay_rate)
 	animation_tree.set("parameters/Parameter Animation/IdleTickle/blend_position", idletickleblend)
 	
+	set_sneeze_size_blend(delta)
+	
+	_sneeze_queued = false
 	#print("Hitch amount: ",hitch_curve.sample_baked(sneeze_trigger_count.get_percent()))
 
 func get_tickle_percent() -> float:
@@ -185,6 +190,9 @@ func timer_timeout():
 			
 	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0):
 		anim_parameters["sneeze"] = true
+		if not is_sneezing or anim_parameters["sneeze_interrupt"]:
+			sneeze_size = randf()
+			print("Sneeze Size now ",sneeze_size)
 		
 	if randf() < 0.1 : 
 		anim_parameters["sigh"] = true
@@ -219,9 +227,12 @@ func on_buildup_anim():
 	is_building = true
 
 func on_sneeze_anim():
+	if _sneeze_queued:
+		return
+	_sneeze_queued = true
 	reset_tracker_params()
+	animation_tree.set("parameters/SneezeOneShot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	is_sneezing = true
-	sneeze_size = 1.0
 
 func on_sigh_anim():
 	reset_tracker_params()
@@ -282,6 +293,14 @@ func do_want_breathe(weight : float):
 func do_must_breathe():
 	print("Must Breathe Started")
 	lungs.set_breath_state(lungs.BREATH_STATE.IN)
+
+##Set the animation blend positions to the correct value.
+func set_sneeze_size_blend(delta : float):
+	var target : float = lerpf(-1,1,sneeze_size)
+	var from : float = animation_tree.get("parameters/Parameter Animation/SneezeBlend/blend_position")
+	var blend : float = lerpf(from,target,delta)
+	animation_tree.set("parameters/Parameter Animation/SneezeBlend/blend_position",blend)
+	animation_tree.set("parameters/Parameter Animation/SneezeBlend2/blend_position",blend)
 
 func send_sliders(container : DebugUIContainer):
 	container.add_new_header(name + " Settings", "Settings for various brain functions")

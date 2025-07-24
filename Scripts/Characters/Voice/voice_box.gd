@@ -1,6 +1,8 @@
 extends Node2D
 class_name VoiceBox
 
+@export var brain : Brain
+
 @export var Buildup : AudioStreamPlayer2D = null;
 @export var Hitch : AudioStreamPlayer2D = null;
 @export var Sigh : AudioStreamPlayer2D = null;
@@ -78,35 +80,31 @@ func Play_Sigh():
 	else:
 		on_sigh_finished.emit()
 
-enum SNEEZE_SIZE{STIFLE=0, NORMAL=1, BIG=2}
-func Play_Sneeze(size : SNEEZE_SIZE):
-	match size:
-		SNEEZE_SIZE.STIFLE:
-			if SneezeStifle:
-				if not SneezeStifle.playing:
-					randomize_pitch(SneezeStifle)
-					SneezeStifle.play();
-					on_sneeze.emit()
-					return
-					
-		SNEEZE_SIZE.NORMAL:
-			if SneezeNormal:
-				if not SneezeNormal.playing:
-					randomize_pitch(SneezeNormal)
-					SneezeNormal.play();
-					on_sneeze.emit()
-					return
-		
-		SNEEZE_SIZE.BIG:
-			if SneezeBig:
-				if not SneezeBig.playing:
-					randomize_pitch(SneezeBig)
-					SneezeBig.play();
-					on_sneeze.emit()
-					return
+func Play_Sneeze():
+	if brain.sneeze_size >= 0.8:
+		if SneezeBig:
+			if not SneezeBig.playing:
+				randomize_pitch(SneezeBig)
+				SneezeBig.play();
+				on_sneeze.emit()
+				return
+	elif brain.sneeze_size >= 0.3:
+		if SneezeNormal:
+			if not SneezeNormal.playing:
+				randomize_pitch(SneezeNormal)
+				SneezeNormal.play();
+				on_sneeze.emit()
+				return
+	else:
+		if SneezeStifle:
+			if not SneezeStifle.playing:
+				randomize_pitch(SneezeStifle)
+				SneezeStifle.play();
+				on_sneeze.emit()
+				return
 	
 	on_sneeze_finished.emit()
-	
+
 
 func Play_Sniff():
 	if Sniff:
