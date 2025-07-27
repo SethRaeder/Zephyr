@@ -5,7 +5,7 @@ class_name CustomBoundedValue
 @export var min_value : float = 0.0
 @export var max_value : float = 1.0
 @export var current_value : float = 0.0
-#
+
 #func _init(_name, _min, _max, _current) -> void:
 	#name = _name
 	#min_value = _min
@@ -14,6 +14,7 @@ class_name CustomBoundedValue
 
 signal hit_max()
 signal hit_min()
+signal value_changed(new_value : float)
 
 func get_percent() -> float:
 	return (current_value-min_value)/(max_value-min_value)
@@ -33,7 +34,7 @@ func set_value(new_value) -> void:
 		#print(name," Hit Min")
 		current_value = min_value
 	
-	emit_changed()
+	value_changed.emit(current_value)
 
 func _to_string() -> String:
 	return "%s: %.2f %.2f" % [name, current_value, get_percent()]

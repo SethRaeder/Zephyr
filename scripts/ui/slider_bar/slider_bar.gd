@@ -11,13 +11,13 @@ func set_bounded_value(bounded_value):
 	value = bounded_value.current_value
 	step = (max_value - min_value) / 100.0
 	
-	bounded_reference.changed.connect(_on_reference_changed)
+	bounded_reference.value_changed.connect(_on_reference_changed)
 	value_changed.connect(_on_value_changed)
 	
 	drag_started.connect(_on_drag_started)
 	drag_ended.connect(_on_drag_ended)
 	
-func _on_reference_changed():
+func _on_reference_changed(_new_value : float):
 	if not dragging:
 		set_value_no_signal(bounded_reference.current_value)
 	#else:
