@@ -61,6 +61,9 @@ var tickle_decay : float
 var burn_decay : float
 var sensitivity_decay : float
 
+#Holds min, max, current nose wetness, used for spray amount.
+var nose_wetness : CustomBoundedValue
+
 signal sneeze_trigger(amount : float)
 signal on_nose_damage(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource)
 
@@ -79,6 +82,9 @@ func _ready() -> void:
 	sensitivity = setup_bound.call("Sensitivity Amount", sensitivity_curve)
 	
 	sensitivity.current_value = sensitivity.max_value / 2
+	
+	nose_wetness = CustomBoundedValue.new()
+	nose_wetness.name = "Wetness"
 	
 	tickle_decay = tickle.max_value / tickle_decay_seconds
 	burn_decay = burn.max_value / burn_decay_seconds
@@ -104,6 +110,9 @@ func _process(delta: float) -> void:
 		sensitivity.add_value(delta * -sensitivity_decay)
 	if sensitivity.get_percent() < 0.5:
 		sensitivity.add_value(delta * sensitivity_decay)
+	
+	nose_wetness.add_value(delta * tickle.get_percent() * 0.1)
+	nose_wetness.add_value(delta * burn.get_percent() * 0.2)
 
 func do_sneeze_trigger():
 	var trigger_chance : float = 0.0
@@ -113,11 +122,15 @@ func do_sneeze_trigger():
 	if randf() < trigger_chance:
 		sneeze_trigger.emit(sneeze_trigger_amount)
 
-func on_sneeze():
+func on_sneeze(sneeze_size : float = 1.0):
 	print("<NOSE> On Sneeze")
-	tickle.add_value(-tickle_decay * tickle_decay_on_sneeze_seconds)
-	burn.add_value(-burn_decay * tickle_decay_on_sneeze_seconds)
-	sensitivity.current_value = sensitivity.current_value * sensitivity_multiplier_on_sneeze
+	#Remove tickle/burn/sensitivity
+	tickle.add_value(-tickle_decay * tickle_decay_on_sneeze_seconds * sneeze_size)
+	burn.add_value(-burn_decay * tickle_decay_on_sneeze_seconds * sneeze_size)
+	sensitivity.current_value = sensitivity.current_value * sensitivity_multiplier_on_sneeze * sneeze_size
+	
+	#Remove some amount of wetness
+	nose_wetness.current_value = nose_wetness.current_value * 0.3 * sneeze_size
 
 func damage(amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_resource : AllergyResource = null, share : bool = true):
 	if share and connected_nose != null:
@@ -144,6 +157,7 @@ func send_sliders(container : DebugUIContainer):
 	container.add_new_slider(tickle, "Tickle amount increases chance to add sneeze count to brain")
 	container.add_new_slider(burn, "Burn amount increases chance to add sneeze count to brain")
 	container.add_new_slider(sensitivity, "Sensitivity modifies chance to add sneeze count to brain")
+	container.add_new_slider(nose_wetness, "Amount of moisture in nose, affects spray")
 
 func send_curves(container : DebugUIContainer):
 	container.add_new_header(name + " Curves", "Curve thresholds for various nose functions")

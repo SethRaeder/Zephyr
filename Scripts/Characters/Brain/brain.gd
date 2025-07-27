@@ -108,11 +108,13 @@ func _ready() -> void:
 	lungs.must_breathe.connect(do_must_breathe)
 	
 	#Attach all nose hitbox zones to the brain control
-	for node in get_tree().get_nodes_in_group("nose"):
-		if node is NoseTriggerZone:
-			print("<BRAIN> Added Nose Trigger Zone ",node)
-			node.sneeze_trigger.connect(sneeze_trigger)
-			voice.on_sneeze.connect(node.on_sneeze)
+	for nose in get_tree().get_nodes_in_group("nose"):
+		if nose is NoseTriggerZone:
+			print("<BRAIN> Added Nose Trigger Zone ",nose)
+			nose.sneeze_trigger.connect(sneeze_trigger)
+			voice.on_sneeze.connect(func():
+				nose.on_sneeze(sneeze_size)
+			)
 	
 	update_timer.timeout.connect(timer_timeout)
 	
@@ -226,12 +228,17 @@ func on_buildup_anim():
 	reset_tracker_params()
 	is_building = true
 
+var current_sneeze_buffer : int = 0
 func on_sneeze_anim():
 	if _sneeze_queued:
 		return
 	_sneeze_queued = true
 	reset_tracker_params()
-	animation_tree.set("parameters/SneezeOneShot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	
+	current_sneeze_buffer = (current_sneeze_buffer + 1)%2
+	animation_tree.set("parameters/SneezeBuffer/transition_request", "buffer_%d"%current_sneeze_buffer)
+	if not animation_tree.get("parameters/SneezeOneShot/active"):
+		animation_tree.set("parameters/SneezeOneShot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	is_sneezing = true
 
 func on_sigh_anim():
@@ -241,6 +248,7 @@ func on_sigh_anim():
 func on_sniff_anim():
 	reset_tracker_params()
 	is_sniffing = true
+	do_must_breathe()
 	#TODO: Reduce "mess" after mess implemented
 	
 func do_hitch():

@@ -58,6 +58,7 @@ tool_debug=""
 tools=""
 has_sliders=""
 has_curves=""
+brain=""
 
 [gui]
 
