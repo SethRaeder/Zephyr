@@ -4015,8 +4015,8 @@ position = Vector2(-627, -147)
 position = Vector2(-1754, -374)
 texture = SubResource("CanvasTexture_hd1mn")
 skeleton = NodePath("../..")
-polygon = PackedVector2Array(0.987152, 309.402, -47.4865, 415.438, -65.6641, 513.9, -67.1789, 594.184, -53.5457, 674.469, 26.7388, 754.753, 160.041, 795.653, 346.362, 804.742, 623.882, 808.174, 817.465, 815.345, 1100.44, 829.835, 1353.71, 853.163, 1665.31, 874.825, 1918.58, 901.486, 2195.19, 924.813, 2395.14, 938.144, 2633.42, 958.139, 2650.08, 883.156, 2650.37, 786.564, 2641.28, 692.646, 2639.77, 557.829, 2644.31, 345.757, 2647.34, 83.6966, 2471.63, 107.933, 2526.16, -17.7951, 2305, -20.8247, 2188.36, 126.111, 2112.62, 130.655, 1976.29, 141.259, 1844.5, 151.863, 1859.65, 7.95654, 1662.72, 15.5305, 1524.88, 173.07, 1430.96, 179.129, 1293.11, 189.733, 1149.21, 204.881, 1240.09, 53.4005, 976.519, 64.0042, 835.642, 229.117, 743.239, 236.691, 611.452, 242.751, 544.801, 244.265, 637.203, 83.6966, 381.202, 118.537, 275.166, 256.384, 173.674, 257.899, 140.661, 491.58, 122.332, 669.872, 280.628, 486.582, 295.625, 683.203, 520.573, 501.578, 565.562, 686.535, 758.851, 501.578, 793.843, 704.864, 1010.46, 508.243, 1042.12, 724.86, 1248.74, 503.244, 1273.73, 729.859, 1552, 504.911, 1565.33, 743.189, 1751.95, 508.243, 1785.28, 756.519, 2000.23, 529.905, 2040.22, 764.85, 2285.16, 523.24, 2308.49, 789.845, 275.165, 382.11, 520.563, 386.655, 1014.39, 365.448, 1558.2, 345.755, 1762.7, 341.211, 1249.18, 368.477, 764.446, 368.477, 2017.19, 341.211, 2268.64, 335.152, 2481.79, 511.576, 2521.78, 768.183, 2488.29, 333.637)
-uv = PackedVector2Array(0.987152, 309.402, -47.4865, 415.438, -65.6641, 513.9, -67.1789, 594.184, -53.5457, 674.469, 26.7388, 754.753, 160.041, 795.653, 346.362, 804.742, 623.882, 808.174, 817.465, 815.345, 1100.44, 829.835, 1353.71, 853.163, 1665.31, 874.825, 1918.58, 901.486, 2195.19, 924.813, 2395.14, 938.144, 2633.42, 958.139, 2650.08, 883.156, 2650.37, 786.564, 2641.28, 692.646, 2639.77, 557.829, 2644.31, 345.757, 2647.34, 83.6966, 2471.63, 107.933, 2526.16, -17.7951, 2305, -20.8247, 2188.36, 126.111, 2112.62, 130.655, 1976.29, 141.259, 1844.5, 151.863, 1859.65, 7.95654, 1662.72, 15.5305, 1524.88, 173.07, 1430.96, 179.129, 1293.11, 189.733, 1149.21, 204.881, 1240.09, 53.4005, 976.519, 64.0042, 835.642, 229.117, 743.239, 236.691, 611.452, 242.751, 544.801, 244.265, 637.203, 83.6966, 381.202, 118.537, 275.166, 256.384, 173.674, 257.899, 140.661, 491.58, 122.332, 669.872, 280.628, 486.582, 295.625, 683.203, 520.573, 501.578, 565.562, 686.535, 758.851, 501.578, 793.843, 704.864, 1010.46, 508.243, 1042.12, 724.86, 1248.74, 503.244, 1273.73, 729.859, 1552, 504.911, 1565.33, 743.189, 1751.95, 508.243, 1785.28, 756.519, 2000.23, 529.905, 2040.22, 764.85, 2285.16, 523.24, 2308.49, 789.845, 275.165, 382.11, 520.563, 386.655, 1014.39, 365.448, 1558.2, 345.755, 1762.7, 341.211, 1249.18, 368.477, 764.446, 368.477, 2017.19, 341.211, 2268.64, 335.152, 2481.79, 511.576, 2521.78, 768.183, 2488.29, 333.637)
+polygon = PackedVector2Array(0.987152, 309.402, -47.4865, 415.438, -65.6641, 513.9, -67.1789, 594.184, -53.5457, 674.469, 26.7388, 754.753, 160.041, 795.653, 346.362, 804.742, 621.386, 817.043, 800, 832, 1097.62, 843.963, 1353.71, 853.163, 1665.31, 874.825, 1918.58, 901.486, 2195.19, 924.813, 2395.14, 938.144, 2633.42, 958.139, 2650.08, 883.156, 2650.37, 786.564, 2641.28, 692.646, 2639.77, 557.829, 2644.31, 345.757, 2647.34, 83.6966, 2471.63, 107.933, 2526.16, -17.7951, 2305, -20.8247, 2188.36, 126.111, 2112.62, 130.655, 1976.29, 141.259, 1844.5, 151.863, 1882.35, 18.8108, 1662.72, 15.5305, 1524.88, 173.07, 1430.96, 179.129, 1293.11, 189.733, 1149.21, 204.881, 1240.09, 53.4005, 976.519, 64.0042, 835.642, 229.117, 743.239, 236.691, 611.452, 242.751, 556.186, 245.311, 636.355, 106.677, 381.202, 118.537, 275.166, 256.384, 173.674, 257.899, 140.661, 491.58, 122.332, 669.872, 280.628, 486.582, 295.625, 683.203, 520.573, 501.578, 565.562, 686.535, 758.851, 501.578, 793.843, 704.864, 1010.46, 508.243, 1042.12, 724.86, 1248.74, 503.244, 1273.73, 729.859, 1552, 504.911, 1565.33, 743.189, 1751.95, 508.243, 1785.28, 756.519, 2000.23, 529.905, 2040.22, 764.85, 2285.16, 523.24, 2308.49, 789.845, 275.165, 382.11, 520.563, 386.655, 1014.39, 365.448, 1558.2, 345.755, 1762.7, 341.211, 1249.18, 368.477, 764.446, 368.477, 2017.19, 341.211, 2268.64, 335.152, 2481.79, 511.576, 2521.78, 768.183, 2488.29, 333.637)
+uv = PackedVector2Array(0.987152, 309.402, -47.4865, 415.438, -65.6641, 513.9, -67.1789, 594.184, -53.5457, 674.469, 26.7388, 754.753, 160.041, 795.653, 346.362, 804.742, 621.386, 817.043, 800, 832, 1097.62, 843.963, 1353.71, 853.163, 1665.31, 874.825, 1918.58, 901.486, 2195.19, 924.813, 2395.14, 938.144, 2633.42, 958.139, 2650.08, 883.156, 2650.37, 786.564, 2641.28, 692.646, 2639.77, 557.829, 2644.31, 345.757, 2647.34, 83.6966, 2471.63, 107.933, 2526.16, -17.7951, 2305, -20.8247, 2188.36, 126.111, 2112.62, 130.655, 1976.29, 141.259, 1844.5, 151.863, 1882.35, 18.8108, 1662.72, 15.5305, 1524.88, 173.07, 1430.96, 179.129, 1293.11, 189.733, 1149.21, 204.881, 1240.09, 53.4005, 976.519, 64.0042, 835.642, 229.117, 743.239, 236.691, 611.452, 242.751, 556.186, 245.311, 636.355, 106.677, 381.202, 118.537, 275.166, 256.384, 173.674, 257.899, 140.661, 491.58, 122.332, 669.872, 280.628, 486.582, 295.625, 683.203, 520.573, 501.578, 565.562, 686.535, 758.851, 501.578, 793.843, 704.864, 1010.46, 508.243, 1042.12, 724.86, 1248.74, 503.244, 1273.73, 729.859, 1552, 504.911, 1565.33, 743.189, 1751.95, 508.243, 1785.28, 756.519, 2000.23, 529.905, 2040.22, 764.85, 2285.16, 523.24, 2308.49, 789.845, 275.165, 382.11, 520.563, 386.655, 1014.39, 365.448, 1558.2, 345.755, 1762.7, 341.211, 1249.18, 368.477, 764.446, 368.477, 2017.19, 341.211, 2268.64, 335.152, 2481.79, 511.576, 2521.78, 768.183, 2488.29, 333.637)
 polygons = [PackedInt32Array(66, 67, 41, 42, 43, 44), PackedInt32Array(67, 72, 38, 39, 40, 41), PackedInt32Array(72, 68, 35, 36, 37, 38), PackedInt32Array(68, 71, 69, 32, 33, 34, 35), PackedInt32Array(69, 70, 29, 30, 31, 32), PackedInt32Array(70, 29, 28, 27, 26, 74, 73), PackedInt32Array(74, 77, 23, 24, 25, 26), PackedInt32Array(77, 21, 22, 23), PackedInt32Array(66, 1, 0, 45, 44), PackedInt32Array(2, 46, 47, 3), PackedInt32Array(46, 48, 49, 47), PackedInt32Array(48, 49, 51, 50), PackedInt32Array(51, 53, 52, 50), PackedInt32Array(52, 54, 55, 53), PackedInt32Array(54, 56, 57, 55), PackedInt32Array(56, 58, 59, 57), PackedInt32Array(58, 60, 61, 59), PackedInt32Array(60, 62, 63, 61), PackedInt32Array(62, 64, 65, 63), PackedInt32Array(64, 75, 76, 65), PackedInt32Array(75, 20, 19, 76), PackedInt32Array(3, 47, 6, 5, 4), PackedInt32Array(47, 49, 7, 6), PackedInt32Array(8, 51, 49, 7), PackedInt32Array(8, 9, 53, 51), PackedInt32Array(9, 10, 55, 53), PackedInt32Array(55, 57, 11, 10), PackedInt32Array(57, 59, 12, 11), PackedInt32Array(59, 61, 13, 12), PackedInt32Array(61, 63, 14, 13), PackedInt32Array(63, 65, 15, 14), PackedInt32Array(65, 76, 16, 15), PackedInt32Array(76, 19, 18, 17, 16), PackedInt32Array(1, 66, 48, 46, 2), PackedInt32Array(66, 67, 72, 52, 50, 48), PackedInt32Array(72, 68, 71, 56, 54, 52), PackedInt32Array(71, 69, 70, 60, 58, 56), PackedInt32Array(70, 73, 74, 64, 62, 60), PackedInt32Array(74, 77, 21, 20, 75, 64)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.6, 0.55, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0.1, 0.1, 0.1, 0.15, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.25, 0.4, 0.25, 0.6, 1, 1, 1, 1, 0, 0, 0, 0.15, 0.15, 0, 0, 1, 1, 1, 1, 1), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.45, 1, 1, 1, 0.2, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0.4, 0.65, 0.45, 0.45, 0.35, 0.25, 0, 0, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.5, 0.45, 1, 1, 1, 1, 1, 1, 0.05, 0.2, 0, 0.1, 0, 0, 0.55, 1, 1, 1, 0.2, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0.05, 0.2, 0.65, 0.75, 1, 1, 0.15, 0.25, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0.3, 0.4, 0.3, 0.4, 0.4, 0.1, 0.15, 0.15, 0.6, 0.55, 1, 0.8, 1, 1, 1, 1, 0.2, 0.15, 0.2, 0.4, 0.2, 0.15, 0, 0, 0, 0, 0.45, 0.5, 1, 0.2, 0.1, 0.2, 1, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0.4, 0.4, 0.5, 0.75, 0.8, 0.75, 0.6, 1, 1, 0.15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0.2, 0.6, 0.7, 1, 1, 1, 1, 0.55, 0.6, 0.15, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0.15, 0, 0, 0, 0.3, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 0.7, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.45058e-09, 1, 1, 1, 0.5, 0.4, 0.05, 7.45058e-09, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.35, 0.15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 32
@@ -4183,12 +4183,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.333841
+rotation = 0.435066
 scale = Vector2(0.999845, 0.999845)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.333841
+target_rotation = 0.435951
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -4197,12 +4197,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.625255
-scale = Vector2(0.999874, 0.999874)
+rotation = 0.646673
+scale = Vector2(0.999876, 0.999876)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.625255
+target_rotation = 0.646886
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -4211,12 +4211,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.332844
-scale = Vector2(0.999847, 0.999847)
+rotation = -0.429527
+scale = Vector2(0.999846, 0.999846)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.332844
+target_rotation = -0.435024
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -4225,12 +4225,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.613576
+rotation = -0.633759
 scale = Vector2(0.999885, 0.999885)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.613576
+target_rotation = -0.636202
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -4239,8 +4239,8 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.0591955
-scale = Vector2(0.999703, 0.999703)
+rotation = -0.156066
+scale = Vector2(0.999701, 0.999701)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -4255,7 +4255,7 @@ remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
 [node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-55.0004, 119)
-scale = Vector2(0.999829, 0.999829)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 89.071
@@ -4295,7 +4295,7 @@ bone_angle = -96.429
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-24.0005, 62)
 rotation = -0.00942021
-scale = Vector2(0.999844, 0.999844)
+scale = Vector2(0.999843, 0.999843)
 rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
 editor_settings/show_bone_gizmo = false
 
@@ -4315,7 +4315,7 @@ bone_angle = 51.429
 
 [node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
 position = Vector2(-450.817, 190.762)
-scale = Vector2(0.999831, 0.999831)
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4334,12 +4334,12 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(26.4717, 56.252)
-rotation = 0.0496161
-scale = Vector2(0.99983, 0.99983)
+rotation = 0.0405353
+scale = Vector2(0.999825, 0.999825)
 rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.0496161
+target_rotation = 0.631738
 target_position = Vector2(26.4717, 56.252)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4348,12 +4348,12 @@ constraint_data = SubResource("Resource_iplph")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-144.681, 71.6403)
-rotation = -2.18639e-05
-scale = Vector2(0.999884, 0.999884)
+rotation = -0.0234515
+scale = Vector2(0.999889, 0.999889)
 rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -2.18639e-05
+target_rotation = -1.87614
 target_position = Vector2(-144.681, 71.6403)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4362,12 +4362,12 @@ constraint_data = SubResource("Resource_43o6b")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-148.182, 18.605)
-rotation = 0.0603929
+rotation = 0.0509819
 scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.0603929
+target_rotation = 1.32684
 target_position = Vector2(-148.182, 18.605)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4376,15 +4376,15 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-146.994, -1.38475)
-rotation = -0.261009
-scale = Vector2(0.999839, 0.999839)
+rotation = -0.283546
+scale = Vector2(0.999841, 0.999841)
 rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.261009
+target_rotation = -0.724015
 target_position = Vector2(-146.994, -1.38475)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4527,9 +4527,9 @@ gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
 [node name="TongueRemote" type="Node2D" parent="IK Targets"]
-position = Vector2(-2458.59, -834.643)
-rotation = -0.0559402
-scale = Vector2(0.998997, 0.998997)
+position = Vector2(-2326.59, -889.697)
+rotation = -0.147032
+scale = Vector2(0.998996, 0.998996)
 
 [node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote"]
 unique_name_in_owner = true
@@ -4575,9 +4575,9 @@ parameters/SneezeOneShot/request = 0
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-969.712, -345.882)
-rotation = -0.301338
-scale = Vector2(0.399662, 0.399662)
+position = Vector2(-918.064, -369.101)
+rotation = -0.39243
+scale = Vector2(0.399661, 0.399661)
 
 [node name="GlitterParticles" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
 unique_name_in_owner = true
@@ -4683,9 +4683,9 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Kel_voice/sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-1000.09, -395.687)
-rotation = -0.04652
-scale = Vector2(0.399662, 0.399662)
+position = Vector2(-952.847, -415.937)
+rotation = -0.137612
+scale = Vector2(0.399661, 0.399661)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("connected_nose") instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -4748,9 +4748,9 @@ tracked_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_factor = 0.1
 
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-749.759, -527.94)
-rotation = -0.04652
-scale = Vector2(0.399662, 0.399662)
+position = Vector2(-715.585, -570.414)
+rotation = -0.137612
+scale = Vector2(0.399661, 0.399661)
 
 [node name="Nose Insertion" type="Node2D" parent="Remote Transforms/HeadRemote"]
 position = Vector2(-645.549, 297.654)
