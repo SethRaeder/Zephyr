@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b5xb3hmgqonby"]
+[gd_scene load_steps=123 format=3 uid="uid://b5xb3hmgqonby"]
 
 [ext_resource type="Texture2D" uid="uid://bvl3247wesrin" path="res://assets/images/characters/Zephyr/rework/Neck.PNG" id="1_6njjo"]
 [ext_resource type="Texture2D" uid="uid://b6h0qfxu8b664" path="res://assets/images/characters/Zephyr/rework/Extra Feathers.PNG" id="1_06r5b"]
@@ -20,13 +20,84 @@
 [ext_resource type="Texture2D" uid="uid://cx2sp8oqb0l23" path="res://assets/images/characters/Zephyr/rework/Wing.PNG" id="18_02dub"]
 [ext_resource type="Texture2D" uid="uid://1ehiiu6xctss" path="res://assets/images/characters/Zephyr/rework/Shoulder.PNG" id="19_8gyr3"]
 [ext_resource type="Script" uid="uid://c0halov2bvjmy" path="res://addons/soupik/modifications/soup_fabrik.gd" id="27_ibk7j"]
+[ext_resource type="Script" uid="uid://k68sr13hul1s" path="res://scripts/characters/voice/voice_box.gd" id="28_1gufe"]
+[ext_resource type="AudioStream" uid="uid://cxoda2hkkb58x" path="res://assets/audio/Zen_voice/SneezeNormal-2.wav" id="29_w4lde"]
+[ext_resource type="AudioStream" uid="uid://cy41lmgp88r8u" path="res://assets/audio/Zen_voice/SneezeNormal-3.wav" id="30_nr25a"]
+[ext_resource type="AudioStream" uid="uid://b2nug5nv0ar3j" path="res://assets/audio/Zen_voice/SneezeNormal-4.wav" id="31_hqk5e"]
+[ext_resource type="AudioStream" uid="uid://cdtqrgejgulhv" path="res://assets/audio/Zen_voice/SneezeNormal-5.wav" id="32_ngv2t"]
 [ext_resource type="Script" uid="uid://bv7fcu3p24jav" path="res://addons/soupik/utility/soup_bone.gd" id="33_m2g6a"]
+[ext_resource type="AudioStream" uid="uid://5cekttrlv5cc" path="res://assets/audio/Zen_voice/SneezeNormal-6.wav" id="33_y5a0i"]
 [ext_resource type="Script" uid="uid://c5kq1nv3cwyc5" path="res://addons/soupik/resources/zm_easing_params.gd" id="34_lcun4"]
+[ext_resource type="AudioStream" uid="uid://bmrfqy4ke6iat" path="res://assets/audio/Zen_voice/SneezeNormal.wav" id="34_lcvjm"]
 [ext_resource type="Script" uid="uid://1dh2uyfu4stk" path="res://addons/soupik/resources/zm_easing_rotational_params.gd" id="35_daww5"]
+[ext_resource type="AudioStream" uid="uid://cnlrrsfa3sp7g" path="res://assets/audio/Zen_voice/StifleSneeze-2.wav" id="36_io4ct"]
 [ext_resource type="Script" uid="uid://cgngdoajx3egb" path="res://addons/soupik/resources/zm_constraint_data.gd" id="36_o3vno"]
+[ext_resource type="AudioStream" uid="uid://bu704h8bpq72q" path="res://assets/audio/Zen_voice/StifleSneeze-3.wav" id="37_oms2t"]
+[ext_resource type="AudioStream" uid="uid://dun8i3icworje" path="res://assets/audio/Zen_voice/StifleSneeze-4.wav" id="38_mkish"]
 [ext_resource type="Script" uid="uid://1vbc48b2e7ci" path="res://addons/soupik/modifications/soup_group.gd" id="38_sbag2"]
 [ext_resource type="Script" uid="uid://iscrohmgg73r" path="res://addons/soupik/modifications/soup_two_bone_ik.gd" id="39_6wdjw"]
+[ext_resource type="AudioStream" uid="uid://cvihv2133ph02" path="res://assets/audio/Zen_voice/StifleSneeze-5.wav" id="39_7bxn7"]
+[ext_resource type="AudioStream" uid="uid://cmsxxryivg1jf" path="res://assets/audio/Zen_voice/StifleSneeze-6.wav" id="40_r45k7"]
+[ext_resource type="AudioStream" uid="uid://dh0dc0uveyid4" path="res://assets/audio/Zen_voice/StifleSneeze-7.wav" id="41_6njjo"]
 [ext_resource type="Script" uid="uid://cu2rfhmwork2f" path="res://addons/soupik/modifications/soup_look_at.gd" id="41_p84i6"]
+[ext_resource type="AudioStream" uid="uid://dv44dfv0s0b0s" path="res://assets/audio/Zen_voice/StifleSneeze-8.wav" id="42_yrirj"]
+[ext_resource type="AudioStream" uid="uid://dxmqo2v3utljw" path="res://assets/audio/Zen_voice/StifleSneeze-9.wav" id="43_mstl5"]
+[ext_resource type="AudioStream" uid="uid://c1hb8piswqyvh" path="res://assets/audio/Zen_voice/StifleSneeze.wav" id="44_tkrne"]
+[ext_resource type="AudioStream" uid="uid://b68fj3nutw40v" path="res://assets/audio/Zen_voice/BigSneeze-2.wav" id="45_5sn8t"]
+[ext_resource type="AudioStream" uid="uid://c530cnxua0mh4" path="res://assets/audio/Zen_voice/BigSneeze-3.wav" id="46_spv5i"]
+[ext_resource type="AudioStream" uid="uid://brwyqnn0jtm2s" path="res://assets/audio/Zen_voice/BigSneeze-4.wav" id="47_8hwej"]
+[ext_resource type="AudioStream" uid="uid://b1yis0q14xj6s" path="res://assets/audio/Zen_voice/BigSneeze-5.wav" id="48_xb3ba"]
+[ext_resource type="AudioStream" uid="uid://d38a6b3weuub2" path="res://assets/audio/Zen_voice/BigSneeze-6.wav" id="49_07gm8"]
+[ext_resource type="AudioStream" uid="uid://bxysp5i5b4x33" path="res://assets/audio/Zen_voice/BigSneeze.wav" id="50_wm4ky"]
+[ext_resource type="Script" uid="uid://c3va03kfy4cbm" path="res://scripts/characters/voice/audio_loader.gd" id="105_c6r5m"]
+[ext_resource type="AudioStream" uid="uid://cul03sax48bfx" path="res://assets/audio/Zen_voice/Buildup-10.wav" id="106_di88m"]
+[ext_resource type="AudioStream" uid="uid://bj70pml1rkjwm" path="res://assets/audio/Zen_voice/Buildup-11.wav" id="107_xcyen"]
+[ext_resource type="AudioStream" uid="uid://d03cu8nefi55j" path="res://assets/audio/Zen_voice/Buildup-4.wav" id="108_gdgjf"]
+[ext_resource type="AudioStream" uid="uid://bcxbgeplk4hv4" path="res://assets/audio/Zen_voice/Buildup-5.wav" id="109_xp1r4"]
+[ext_resource type="AudioStream" uid="uid://ciy8ux5at653q" path="res://assets/audio/Zen_voice/Buildup-6.wav" id="110_ys6rv"]
+[ext_resource type="AudioStream" uid="uid://bthk1wq31yu8q" path="res://assets/audio/Zen_voice/Buildup-7.wav" id="111_2f822"]
+[ext_resource type="AudioStream" uid="uid://cecu7ieialdnl" path="res://assets/audio/Zen_voice/Buildup-8.wav" id="112_6lp5h"]
+[ext_resource type="AudioStream" uid="uid://b4ib0tmrgnrpk" path="res://assets/audio/Zen_voice/Buildup-9.wav" id="113_2srb5"]
+[ext_resource type="AudioStream" uid="uid://ckxrxolir5ddl" path="res://assets/audio/Zen_voice/Buildup.wav" id="114_60k62"]
+[ext_resource type="AudioStream" uid="uid://3uk4b1grokry" path="res://assets/audio/Zen_voice/Buildup-12.wav" id="115_ef5q0"]
+[ext_resource type="AudioStream" uid="uid://bv3wrvca8e4xv" path="res://assets/audio/Zen_voice/Buildup-13.wav" id="116_xhm4j"]
+[ext_resource type="AudioStream" uid="uid://o61vbhtgbjyb" path="res://assets/audio/Zen_voice/Buildup-14.wav" id="117_b51wv"]
+[ext_resource type="AudioStream" uid="uid://bwwvuyxnil1y" path="res://assets/audio/Zen_voice/Buildup-15.wav" id="118_214dk"]
+[ext_resource type="AudioStream" uid="uid://dxfyxpji13xa7" path="res://assets/audio/Zen_voice/Buildup-16.wav" id="119_8t6sk"]
+[ext_resource type="AudioStream" uid="uid://b8j0d8bsd2c0e" path="res://assets/audio/Zen_voice/Buildup-17.wav" id="120_wwpho"]
+[ext_resource type="AudioStream" uid="uid://t0qshbwplora" path="res://assets/audio/Zen_voice/Hitch-10.wav" id="121_0rylb"]
+[ext_resource type="AudioStream" uid="uid://bw836klckkayd" path="res://assets/audio/Zen_voice/Buildup-2.wav" id="121_guwi0"]
+[ext_resource type="AudioStream" uid="uid://dfw3yhaqjf1pt" path="res://assets/audio/Zen_voice/Hitch-11.wav" id="122_7vh0g"]
+[ext_resource type="AudioStream" uid="uid://ckrbs45y5d2e6" path="res://assets/audio/Zen_voice/Buildup-3.wav" id="122_jd4ej"]
+[ext_resource type="AudioStream" uid="uid://dse1s5lxm2tql" path="res://assets/audio/Zen_voice/Hitch-7.wav" id="123_rsqtk"]
+[ext_resource type="AudioStream" uid="uid://rrt8ywgnmmay" path="res://assets/audio/Zen_voice/Sigh-2.wav" id="123_w44w3"]
+[ext_resource type="AudioStream" uid="uid://bisafoin8k7eo" path="res://assets/audio/Zen_voice/Sigh-3.wav" id="124_7amfb"]
+[ext_resource type="AudioStream" uid="uid://dkwrjr740r30a" path="res://assets/audio/Zen_voice/Hitch-8.wav" id="124_vb7fu"]
+[ext_resource type="AudioStream" uid="uid://b8eovr6nbufb4" path="res://assets/audio/Zen_voice/Hitch-9.wav" id="125_6oxe4"]
+[ext_resource type="AudioStream" uid="uid://56c4njxbjgwr" path="res://assets/audio/Zen_voice/Sigh-4.wav" id="125_rqtfc"]
+[ext_resource type="AudioStream" uid="uid://dxxh2fe3khdnm" path="res://assets/audio/Zen_voice/Hitch.wav" id="126_k0l2t"]
+[ext_resource type="AudioStream" uid="uid://dh8v0j5p6sfmg" path="res://assets/audio/Zen_voice/Sigh-5.wav" id="126_v35w4"]
+[ext_resource type="AudioStream" uid="uid://dt5qp2fkb4o0e" path="res://assets/audio/Zen_voice/Hitch-12.wav" id="127_6lose"]
+[ext_resource type="AudioStream" uid="uid://cdwru58t1xt4n" path="res://assets/audio/Zen_voice/Sigh-6.wav" id="127_xym86"]
+[ext_resource type="AudioStream" uid="uid://tr5ob3oqxvne" path="res://assets/audio/Zen_voice/Sigh-7.wav" id="128_3pfbs"]
+[ext_resource type="AudioStream" uid="uid://b6bv1gnmicqpc" path="res://assets/audio/Zen_voice/Hitch-13.wav" id="128_loer5"]
+[ext_resource type="AudioStream" uid="uid://ci33an7mmesel" path="res://assets/audio/Zen_voice/Sigh-8.wav" id="129_8qrff"]
+[ext_resource type="AudioStream" uid="uid://dpa2iqyi88qw7" path="res://assets/audio/Zen_voice/Hitch-14.wav" id="129_c6r5m"]
+[ext_resource type="AudioStream" uid="uid://c6yius86mgy5k" path="res://assets/audio/Zen_voice/Sigh-9.wav" id="130_03wt5"]
+[ext_resource type="AudioStream" uid="uid://bc4iganbwb7vh" path="res://assets/audio/Zen_voice/Hitch-2.wav" id="130_4vkaa"]
+[ext_resource type="AudioStream" uid="uid://dl2bcdcf7jvoq" path="res://assets/audio/Zen_voice/Hitch-3.wav" id="131_4nnpu"]
+[ext_resource type="AudioStream" uid="uid://b6g4kf4laaof4" path="res://assets/audio/Zen_voice/Sigh.wav" id="131_cyf1r"]
+[ext_resource type="AudioStream" uid="uid://cqmmqg1dg256i" path="res://assets/audio/Zen_voice/Hitch-4.wav" id="132_64qnu"]
+[ext_resource type="AudioStream" uid="uid://bafvllkbekvvl" path="res://assets/audio/Zen_voice/Hitch-5.wav" id="133_cuch5"]
+[ext_resource type="AudioStream" uid="uid://b5ixqjah4bt1q" path="res://assets/audio/Zen_voice/Hitch-6.wav" id="134_dwq7j"]
+[ext_resource type="AudioStream" uid="uid://c2e2mlb1spjbx" path="res://assets/audio/Zen_voice/Sniff-2.wav" id="152_iyiba"]
+[ext_resource type="AudioStream" uid="uid://gs8nwbt2wpyb" path="res://assets/audio/Zen_voice/Sniff-3.wav" id="153_8prgj"]
+[ext_resource type="AudioStream" uid="uid://fu786ofqqys8" path="res://assets/audio/Zen_voice/Sniff-4.wav" id="154_5o4nf"]
+[ext_resource type="AudioStream" uid="uid://ux551xlyfjss" path="res://assets/audio/Zen_voice/Sniff-5.wav" id="155_c35re"]
+[ext_resource type="AudioStream" uid="uid://ngge1u06ffmw" path="res://assets/audio/Zen_voice/Sniff-6.wav" id="156_ux3pd"]
+[ext_resource type="AudioStream" uid="uid://dejook83m8rdn" path="res://assets/audio/Zen_voice/Sniff-7.wav" id="157_t35wa"]
+[ext_resource type="AudioStream" uid="uid://dlp1ias03680y" path="res://assets/audio/Zen_voice/Sniff-8.wav" id="158_iod7y"]
+[ext_resource type="AudioStream" uid="uid://c4luk1e1gby7q" path="res://assets/audio/Zen_voice/Sniff.wav" id="159_g35pt"]
 
 [sub_resource type="SkeletonModification2DJiggle" id="SkeletonModification2DJiggle_grfx1"]
 target_nodepath = NodePath("../NeckIK/EarIK")
@@ -148,6 +219,96 @@ rotation_half_arc_degrees = 26.0
 area_offset = Vector2(0, 0)
 area_rotation_degrees = 0.0
 proportions = Vector2(1, 1)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w4lde"]
+streams_count = 6
+stream_0/stream = ExtResource("29_w4lde")
+stream_1/stream = ExtResource("30_nr25a")
+stream_2/stream = ExtResource("31_hqk5e")
+stream_3/stream = ExtResource("32_ngv2t")
+stream_4/stream = ExtResource("33_y5a0i")
+stream_5/stream = ExtResource("34_lcvjm")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qux4u"]
+streams_count = 9
+stream_0/stream = ExtResource("36_io4ct")
+stream_1/stream = ExtResource("37_oms2t")
+stream_2/stream = ExtResource("38_mkish")
+stream_3/stream = ExtResource("39_7bxn7")
+stream_4/stream = ExtResource("40_r45k7")
+stream_5/stream = ExtResource("41_6njjo")
+stream_6/stream = ExtResource("42_yrirj")
+stream_7/stream = ExtResource("43_mstl5")
+stream_8/stream = ExtResource("44_tkrne")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1gufe"]
+streams_count = 6
+stream_0/stream = ExtResource("45_5sn8t")
+stream_1/stream = ExtResource("46_spv5i")
+stream_2/stream = ExtResource("47_8hwej")
+stream_3/stream = ExtResource("48_xb3ba")
+stream_4/stream = ExtResource("49_07gm8")
+stream_5/stream = ExtResource("50_wm4ky")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_47t2j"]
+streams_count = 14
+stream_0/stream = ExtResource("121_0rylb")
+stream_1/stream = ExtResource("122_7vh0g")
+stream_2/stream = ExtResource("127_6lose")
+stream_3/stream = ExtResource("128_loer5")
+stream_4/stream = ExtResource("129_c6r5m")
+stream_5/stream = ExtResource("130_4vkaa")
+stream_6/stream = ExtResource("131_4nnpu")
+stream_7/stream = ExtResource("132_64qnu")
+stream_8/stream = ExtResource("133_cuch5")
+stream_9/stream = ExtResource("134_dwq7j")
+stream_10/stream = ExtResource("123_rsqtk")
+stream_11/stream = ExtResource("124_vb7fu")
+stream_12/stream = ExtResource("125_6oxe4")
+stream_13/stream = ExtResource("126_k0l2t")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8qgri"]
+streams_count = 17
+stream_0/stream = ExtResource("106_di88m")
+stream_1/stream = ExtResource("107_xcyen")
+stream_2/stream = ExtResource("115_ef5q0")
+stream_3/stream = ExtResource("116_xhm4j")
+stream_4/stream = ExtResource("117_b51wv")
+stream_5/stream = ExtResource("118_214dk")
+stream_6/stream = ExtResource("119_8t6sk")
+stream_7/stream = ExtResource("120_wwpho")
+stream_8/stream = ExtResource("121_guwi0")
+stream_9/stream = ExtResource("122_jd4ej")
+stream_10/stream = ExtResource("108_gdgjf")
+stream_11/stream = ExtResource("109_xp1r4")
+stream_12/stream = ExtResource("110_ys6rv")
+stream_13/stream = ExtResource("111_2f822")
+stream_14/stream = ExtResource("112_6lp5h")
+stream_15/stream = ExtResource("113_2srb5")
+stream_16/stream = ExtResource("114_60k62")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0nq5q"]
+streams_count = 9
+stream_0/stream = ExtResource("123_w44w3")
+stream_1/stream = ExtResource("124_7amfb")
+stream_2/stream = ExtResource("125_rqtfc")
+stream_3/stream = ExtResource("126_v35w4")
+stream_4/stream = ExtResource("127_xym86")
+stream_5/stream = ExtResource("128_3pfbs")
+stream_6/stream = ExtResource("129_8qrff")
+stream_7/stream = ExtResource("130_03wt5")
+stream_8/stream = ExtResource("131_cyf1r")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3af3p"]
+streams_count = 8
+stream_0/stream = ExtResource("152_iyiba")
+stream_1/stream = ExtResource("153_8prgj")
+stream_2/stream = ExtResource("154_5o4nf")
+stream_3/stream = ExtResource("155_c35re")
+stream_4/stream = ExtResource("156_ux3pd")
+stream_5/stream = ExtResource("157_t35wa")
+stream_6/stream = ExtResource("158_iod7y")
+stream_7/stream = ExtResource("159_g35pt")
 
 [node name="Zephyr_Rig" type="Node2D"]
 
@@ -329,6 +490,7 @@ polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/InnerCheek U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/InnerCheek L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/EarBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/HeadBrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Wing", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Shoulder", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+visible = false
 position = Vector2(0, -6)
 modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
@@ -339,7 +501,7 @@ scale = Vector2(0.999847, 0.999847)
 rest = Transform2D(0.997798, 0.0639737, -0.0639737, 0.997798, 76, -81)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 0.26733
+target_rotation = 0.267329
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ibk7j")
@@ -440,7 +602,7 @@ bone_angle = -96.429
 
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-8.94384, 38.7167)
-rotation = -0.00942021
+rotation = -0.0094202
 scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(0.999798, -0.00941858, 0.00941858, 0.999798, -8.94384, 38.7167)
 editor_settings/show_bone_gizmo = false
@@ -617,6 +779,7 @@ rest = Transform2D(1, 0, 0, 1, 1160, -93)
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="NeckIK" type="Marker2D" parent="."]
+visible = false
 position = Vector2(-1745, -1566)
 rotation = 0.0740388
 gizmo_extents = 122.4
@@ -681,3 +844,77 @@ chain_tip = NodePath("../../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Tong
 bias_offset_degrees = -67.778
 iterations = 5
 metadata/_custom_type_script = "uid://c0halov2bvjmy"
+
+[node name="VoiceBox" type="Node2D" parent="." node_paths=PackedStringArray("Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
+script = ExtResource("28_1gufe")
+Buildup = NodePath("Buildup")
+Hitch = NodePath("Hitch")
+Sigh = NodePath("Sigh")
+SneezeNormal = NodePath("SneezeNormal")
+SneezeBig = NodePath("SneezeBig")
+SneezeStifle = NodePath("SneezeStifle")
+Sniff = NodePath("Sniff")
+metadata/_custom_type_script = "uid://k68sr13hul1s"
+
+[node name="SneezeNormal" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_w4lde")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Normal"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
+
+[node name="SneezeStifle" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_qux4u")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Stifle"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
+
+[node name="SneezeBig" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_1gufe")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Big"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
+
+[node name="Hitch" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_47t2j")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Hitch"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
+
+[node name="Buildup" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_8qgri")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Buildup"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
+
+[node name="Sigh" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_0nq5q")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Sigh"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
+
+[node name="Sniff" type="AudioStreamPlayer2D" parent="VoiceBox"]
+stream = SubResource("AudioStreamRandomizer_3af3p")
+volume_db = 24.0
+script = ExtResource("105_c6r5m")
+load_audio_directory = "res://assets/audio/Zen_voice"
+do_filter = true
+file_filter = "Sniff"
+metadata/_custom_type_script = "uid://c3va03kfy4cbm"
