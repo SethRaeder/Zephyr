@@ -500,7 +500,7 @@ constraint_data = SubResource("Resource_iplph")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-180.228, 79.7825)
-rotation = -0.0234512
+rotation = -0.0234511
 scale = Vector2(0.999889, 0.999889)
 rest = Transform2D(0.999614, -0.0234462, 0.0234462, 0.999614, -180.228, 79.7825)
 script = ExtResource("33_m2g6a")
@@ -514,7 +514,7 @@ constraint_data = SubResource("Resource_43o6b")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-173.777, 24.6081)
-rotation = 0.0603927
+rotation = 0.0603925
 scale = Vector2(0.99982, 0.99982)
 rest = Transform2D(0.997997, 0.0603448, -0.0603448, 0.997997, -173.777, 24.6081)
 script = ExtResource("33_m2g6a")
@@ -528,7 +528,7 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-175.562, 27.9839)
-rotation = -0.283543
+rotation = -0.283545
 scale = Vector2(0.999844, 0.999844)
 rest = Transform2D(0.95992, -0.279716, 0.279716, 0.95992, -175.562, 27.9839)
 auto_calculate_length_and_angle = false
