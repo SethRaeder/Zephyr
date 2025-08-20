@@ -1,4 +1,4 @@
-[gd_scene load_steps=233 format=3 uid="uid://b5xb3hmgqonby"]
+[gd_scene load_steps=231 format=3 uid="uid://b5xb3hmgqonby"]
 
 [ext_resource type="Texture2D" uid="uid://bvl3247wesrin" path="res://assets/images/characters/Zephyr/rework/Neck.PNG" id="1_6njjo"]
 [ext_resource type="Texture2D" uid="uid://b6h0qfxu8b664" path="res://assets/images/characters/Zephyr/rework/Extra Feathers.PNG" id="1_06r5b"]
@@ -239,7 +239,7 @@ area_offset = Vector2(0, 0)
 area_rotation_degrees = 0.0
 proportions = Vector2(1, 1)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_r2qeg"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_olsh8"]
 streams_count = 6
 stream_0/stream = ExtResource("29_w4lde")
 stream_1/stream = ExtResource("30_nr25a")
@@ -248,7 +248,7 @@ stream_3/stream = ExtResource("32_ngv2t")
 stream_4/stream = ExtResource("33_y5a0i")
 stream_5/stream = ExtResource("34_lcvjm")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4kmbo"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_r2qeg"]
 streams_count = 9
 stream_0/stream = ExtResource("36_io4ct")
 stream_1/stream = ExtResource("37_oms2t")
@@ -260,7 +260,7 @@ stream_6/stream = ExtResource("42_yrirj")
 stream_7/stream = ExtResource("43_mstl5")
 stream_8/stream = ExtResource("44_tkrne")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_t8n4d"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4kmbo"]
 streams_count = 6
 stream_0/stream = ExtResource("45_5sn8t")
 stream_1/stream = ExtResource("46_spv5i")
@@ -269,7 +269,7 @@ stream_3/stream = ExtResource("48_xb3ba")
 stream_4/stream = ExtResource("49_07gm8")
 stream_5/stream = ExtResource("50_wm4ky")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lylt7"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_t8n4d"]
 streams_count = 14
 stream_0/stream = ExtResource("121_0rylb")
 stream_1/stream = ExtResource("122_7vh0g")
@@ -286,7 +286,7 @@ stream_11/stream = ExtResource("124_vb7fu")
 stream_12/stream = ExtResource("125_6oxe4")
 stream_13/stream = ExtResource("126_k0l2t")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6f7jf"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lylt7"]
 streams_count = 17
 stream_0/stream = ExtResource("106_di88m")
 stream_1/stream = ExtResource("107_xcyen")
@@ -306,7 +306,7 @@ stream_14/stream = ExtResource("112_6lp5h")
 stream_15/stream = ExtResource("113_2srb5")
 stream_16/stream = ExtResource("114_60k62")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ri0yk"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6f7jf"]
 streams_count = 9
 stream_0/stream = ExtResource("123_w44w3")
 stream_1/stream = ExtResource("124_7amfb")
@@ -318,7 +318,7 @@ stream_6/stream = ExtResource("129_8qrff")
 stream_7/stream = ExtResource("130_03wt5")
 stream_8/stream = ExtResource("131_cyf1r")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_22ifo"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ri0yk"]
 streams_count = 8
 stream_0/stream = ExtResource("152_iyiba")
 stream_1/stream = ExtResource("153_8prgj")
@@ -335,7 +335,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -347,7 +347,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
-tracks/1/interp = 1
+tracks/1/interp = 4
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -359,7 +359,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
@@ -371,7 +371,7 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
-tracks/3/interp = 1
+tracks/3/interp = 4
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
@@ -478,187 +478,187 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Skeleton2D/Neck 1:position")
-tracks/12/interp = 1
+tracks/12/path = NodePath("Skeleton2D/Neck 1:rotation")
+tracks/12/interp = 4
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(76, -81)]
+"values": [0.0640272]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Skeleton2D/Neck 1/Neck 2:position")
-tracks/13/interp = 1
+tracks/13/path = NodePath("Skeleton2D/Neck 1/Neck 2:rotation")
+tracks/13/interp = 4
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-456, 15)]
+"values": [-0.146211]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3:position")
-tracks/14/interp = 1
+tracks/14/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3:rotation")
+tracks/14/interp = 4
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-703, -9)]
+"values": [0.0652054]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4:position")
-tracks/15/interp = 1
+tracks/15/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4:rotation")
+tracks/15/interp = 4
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-668, 8)]
+"values": [0.0292092]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head:position")
-tracks/16/interp = 1
+tracks/16/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head:rotation")
+tracks/16/interp = 4
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-513.374, 68.4644)]
+"values": [0.0546154]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("Skeleton2D/Neck 1:rotation")
-tracks/17/interp = 1
+tracks/17/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1:rotation")
+tracks/17/interp = 4
 tracks/17/loop_wrap = true
 tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0640272]
+"values": [0.0496161]
 }
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("Skeleton2D/Neck 1/Neck 2:rotation")
-tracks/18/interp = 1
+tracks/18/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2:rotation")
+tracks/18/interp = 4
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.146211]
+"values": [-0.0234509]
 }
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3:rotation")
-tracks/19/interp = 1
+tracks/19/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3:rotation")
+tracks/19/interp = 4
 tracks/19/loop_wrap = true
 tracks/19/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0652054]
+"values": [0.0603926]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4:rotation")
-tracks/20/interp = 1
+tracks/20/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4:rotation")
+tracks/20/interp = 4
 tracks/20/loop_wrap = true
 tracks/20/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0292092]
+"values": [-0.283545]
 }
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head:rotation")
-tracks/21/interp = 1
+tracks/21/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend:position")
+tracks/21/interp = 2
 tracks/21/loop_wrap = true
 tracks/21/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0546154]
+"values": [Vector2(112.962, 11.5537)]
 }
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1:rotation")
-tracks/22/interp = 1
+tracks/22/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend:rotation")
+tracks/22/interp = 4
 tracks/22/loop_wrap = true
 tracks/22/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0496161]
+"values": [0.0]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2:rotation")
-tracks/23/interp = 1
+tracks/23/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:position")
+tracks/23/interp = 2
 tracks/23/loop_wrap = true
 tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.0234509]
+"values": [Vector2(0, 0)]
 }
 tracks/24/type = "value"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3:rotation")
-tracks/24/interp = 1
+tracks/24/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:scale")
+tracks/24/interp = 2
 tracks/24/loop_wrap = true
 tracks/24/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0603926]
+"values": [Vector2(1, 1)]
 }
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4:rotation")
-tracks/25/interp = 1
+tracks/25/path = NodePath("Skeleton2D/Shoulder:position")
+tracks/25/interp = 2
 tracks/25/loop_wrap = true
 tracks/25/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.283545]
+"values": [Vector2(0, 0)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend:position")
+tracks/26/path = NodePath("Skeleton2D/Wing:position")
 tracks/26/interp = 2
 tracks/26/loop_wrap = true
 tracks/26/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(112.962, 11.5537)]
+"values": [Vector2(1160, -93)]
 }
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend:rotation")
+tracks/27/path = NodePath("Skeleton2D/Shoulder:rotation")
 tracks/27/interp = 4
 tracks/27/loop_wrap = true
 tracks/27/keys = {
@@ -670,210 +670,211 @@ tracks/27/keys = {
 tracks/28/type = "value"
 tracks/28/imported = false
 tracks/28/enabled = true
-tracks/28/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:position")
-tracks/28/interp = 2
+tracks/28/path = NodePath("Skeleton2D/Wing:rotation")
+tracks/28/interp = 4
 tracks/28/loop_wrap = true
 tracks/28/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [0.0]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
 tracks/29/enabled = true
-tracks/29/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:scale")
-tracks/29/interp = 2
+tracks/29/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head:transform_mode")
+tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+"update": 1,
+"values": [1]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
 tracks/30/enabled = true
-tracks/30/path = NodePath("Skeleton2D/Shoulder:position")
-tracks/30/interp = 2
+tracks/30/path = NodePath("Skeleton2D:modification_stack:enabled")
+tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/31/type = "value"
-tracks/31/imported = false
-tracks/31/enabled = true
-tracks/31/path = NodePath("Skeleton2D/Wing:position")
-tracks/31/interp = 2
-tracks/31/loop_wrap = true
-tracks/31/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1160, -93)]
-}
-tracks/32/type = "value"
-tracks/32/imported = false
-tracks/32/enabled = true
-tracks/32/path = NodePath("Skeleton2D/Shoulder:rotation")
-tracks/32/interp = 4
-tracks/32/loop_wrap = true
-tracks/32/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/33/type = "value"
-tracks/33/imported = false
-tracks/33/enabled = true
-tracks/33/path = NodePath("Skeleton2D/Wing:rotation")
-tracks/33/interp = 4
-tracks/33/loop_wrap = true
-tracks/33/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/34/type = "value"
-tracks/34/imported = false
-tracks/34/enabled = true
-tracks/34/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head:transform_mode")
-tracks/34/interp = 1
-tracks/34/loop_wrap = true
-tracks/34/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/35/type = "value"
-tracks/35/imported = false
-tracks/35/enabled = true
-tracks/35/path = NodePath("Skeleton2D:modification_stack:enabled")
-tracks/35/interp = 1
-tracks/35/loop_wrap = true
-tracks/35/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
-tracks/36/type = "value"
-tracks/36/imported = false
-tracks/36/enabled = true
-tracks/36/path = NodePath("NeckIK:rotation")
-tracks/36/interp = 4
-tracks/36/loop_wrap = true
-tracks/36/keys = {
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("NeckIK:rotation")
+tracks/31/interp = 4
+tracks/31/loop_wrap = true
+tracks/31/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
 }
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("NeckIK:position")
+tracks/32/interp = 2
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2595, 86)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("NeckIK/EarIK:position")
+tracks/33/interp = 2
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(938, -362)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("NeckIK/EarBackIK:position")
+tracks/34/interp = 2
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(829, -478)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("NeckIK/HeadIK:position")
+tracks/35/interp = 2
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-535, 51)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("NeckIK/HeadIK/TongueIK:position")
+tracks/36/interp = 2
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(56, 221)]
+}
 tracks/37/type = "value"
 tracks/37/imported = false
 tracks/37/enabled = true
-tracks/37/path = NodePath("NeckIK:position")
+tracks/37/path = NodePath("NeckIK/NeckMidIK:position")
 tracks/37/interp = 2
 tracks/37/loop_wrap = true
 tracks/37/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-2595, 86)]
+"values": [Vector2(1221, 116)]
 }
 tracks/38/type = "value"
 tracks/38/imported = false
 tracks/38/enabled = true
-tracks/38/path = NodePath("NeckIK/EarIK:position")
-tracks/38/interp = 2
+tracks/38/path = NodePath("EyeTracking:mode")
+tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(938, -362)]
+"update": 1,
+"values": [3]
 }
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("NeckIK/EarBackIK:position")
+tracks/39/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
 tracks/39/interp = 2
 tracks/39/loop_wrap = true
 tracks/39/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(829, -478)]
+"values": [Vector2(-129.026, -129.287)]
 }
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("NeckIK/HeadIK:position")
-tracks/40/interp = 2
+tracks/40/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/40/interp = 4
 tracks/40/loop_wrap = true
 tracks/40/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-535, 51)]
+"values": [0.0]
 }
 tracks/41/type = "value"
 tracks/41/imported = false
 tracks/41/enabled = true
-tracks/41/path = NodePath("NeckIK/HeadIK/TongueIK:position")
+tracks/41/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position")
 tracks/41/interp = 2
 tracks/41/loop_wrap = true
 tracks/41/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(56, 221)]
+"values": [Vector2(-588.138, 204.883)]
 }
 tracks/42/type = "value"
 tracks/42/imported = false
 tracks/42/enabled = true
-tracks/42/path = NodePath("NeckIK/NeckMidIK:position")
-tracks/42/interp = 2
+tracks/42/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation")
+tracks/42/interp = 4
 tracks/42/loop_wrap = true
 tracks/42/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1221, 116)]
+"values": [0.0]
 }
 tracks/43/type = "value"
 tracks/43/imported = false
 tracks/43/enabled = true
-tracks/43/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:rotation")
-tracks/43/interp = 1
+tracks/43/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale")
+tracks/43/interp = 2
 tracks/43/loop_wrap = true
 tracks/43/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(0.8, 0.8)]
 }
 tracks/44/type = "value"
 tracks/44/imported = false
 tracks/44/enabled = true
-tracks/44/path = NodePath("EyeTracking:mode")
-tracks/44/interp = 1
+tracks/44/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/44/interp = 4
 tracks/44/loop_wrap = true
 tracks/44/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_xb3ba"]
 resource_name = "blink"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -925,12 +926,334 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_07gm8"]
 resource_name = "buildup"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NeckIK:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.766667, 1.86667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1418, -1399), Vector2(-979, -1771), Vector2(-897, -1935), Vector2(-1142, -1596)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NeckIK:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.766667, 1.86667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.033725, 0.479569, 0.482986, 0.189138]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NeckIK/NeckMidIK:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.766667, 3.36667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1221, 116), Vector2(1083.25, -86.575), Vector2(1170.15, 343.066), Vector2(1190.88, 210.86)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NeckIK/HeadIK:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.766667, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-535, 51), Vector2(-587.974, 39.7765), Vector2(-477.072, 273.574)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Data/Brain")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_buildup_anim"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VoiceBox")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Play_Buildup"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.498434, -28.3048), Vector2(-3.79213, -37.4703), Vector2(-12.2049, -51.3523)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
+tracks/7/interp = 4
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.23607]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(27.2882, 44.947), Vector2(25.4832, 53.6955), Vector2(22.0146, 59.4847)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
+tracks/9/interp = 4
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.276051, 0.122487]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-135.821, -117.124), Vector2(-130.945, -86.0272), Vector2(-129.312, -68.484)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/11/interp = 4
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0195515, -0.130779]
+}
 
 [sub_resource type="Animation" id="Animation_wm4ky"]
 resource_name = "ear_flick"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NeckIK/EarIK:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1054, -512), Vector2(1086.03, -338.573), Vector2(1054, -512)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NeckIK/EarBackIK:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.166667, 0.266667, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(761, -568), Vector2(866.407, -383.004), Vector2(761, -568)]
+}
 
 [sub_resource type="Animation" id="Animation_47t2j"]
 resource_name = "hitch"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Data/Brain")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_hitch_anim"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VoiceBox")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Play_Hitch"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NeckIK:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1567, -1324), Vector2(-1508, -1418), Vector2(-1558, -1372)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NeckIK:rotation")
+tracks/3/interp = 4
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.225153, 0.315422, 0.206386]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-26.9302, -58.9288), Vector2(-18.9297, -43.0461), Vector2(-24.4537, -55.7161)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.192811]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10.9633, 58.1891), Vector2(10.6097, 46.277), Vector2(14.6705, 58.077)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
+tracks/7/interp = 4
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.250066]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-180.665, -77.6758), Vector2(-192.763, -95.6829), Vector2(-173.193, -88.2275)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/9/interp = 4
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.333903]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/10/interp = 4
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0486577, -0.163296, -0.0203532]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("EyeTracking:mode")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
 [sub_resource type="Animation" id="Animation_8qgri"]
 resource_name = "idle"
@@ -1006,7 +1329,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-34.8587, -100.61)]
+"values": [Vector2(-34.8319, -57.408)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -1075,10 +1398,10 @@ tracks/11/path = NodePath("EyeTracking:mode")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 0, 0, 0, 0, 0]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
@@ -1200,12 +1523,84 @@ tracks/21/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-163.568, -92.8653)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.346471]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/24/interp = 4
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_0nq5q"]
 resource_name = "neck_sway_add"
 
 [sub_resource type="Animation" id="Animation_3af3p"]
 resource_name = "nose_flare"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-579.739, 192.059)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0342029]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 1.1)]
+}
 
 [sub_resource type="Animation" id="Animation_1gufe"]
 resource_name = "rig_demo"
@@ -1477,24 +1872,911 @@ tracks/21/keys = {
 
 [sub_resource type="Animation" id="Animation_bnwsj"]
 resource_name = "sigh"
+length = 3.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoiceBox")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Play_Sigh"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Data/Brain")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_sigh_anim"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.1001, -60.0215), Vector2(-17.3569, -35.3139), Vector2(-12.6587, -32.2173)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
+tracks/3/interp = 4
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.192811, 0.118192]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(16.7206, 67.0383), Vector2(13.004, 79.7915)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.250066, 0.174319]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-181.977, -93.4921), Vector2(-151.459, -86.5522), Vector2(-145.453, -81.5915)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/7/interp = 4
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.333903, -0.153401, -0.273884]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/8/interp = 4
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.56667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0261939, -0.121847, -0.0024552]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("NeckIK:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1511, -1371), Vector2(-1586, -1239), Vector2(-1589, -1305)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("NeckIK:rotation")
+tracks/10/interp = 4
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.267273, 0.0107083, -0.0723467]
+}
 
 [sub_resource type="Animation" id="Animation_aa2cq"]
 resource_name = "sneeze"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NeckIK:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-979, -1771), Vector2(-722, -2027), Vector2(-1511, -1485), Vector2(-1453, -1051), Vector2(-1545, -881), Vector2(-1634, -1142)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NeckIK:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.479569, 0.658406, -0.0947116, 6.06567, 6.36612]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NeckIK/HeadIK:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-587.974, 39.7765), Vector2(-552.401, -22.7692), Vector2(-499.657, -248.441), Vector2(-548.055, 179.3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NeckIK/NeckMidIK:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1083.25, -86.575), Vector2(1245.52, 132.651), Vector2(1180.39, 252.762), Vector2(1239.45, 66.2986)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Data/Brain")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_sneeze_anim"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_p5700"]
 resource_name = "sneeze_big"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NeckIK:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-979, -1771), Vector2(-722, -2027), Vector2(-1511, -1485), Vector2(-1453, -1051), Vector2(-1545, -881), Vector2(-1634, -1142)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NeckIK:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.479569, 0.658406, -0.0947116, 6.06567, 6.36612]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NeckIK/HeadIK:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-587.974, 39.7765), Vector2(-552.401, -22.7692), Vector2(-499.657, -248.441), Vector2(-548.055, 179.3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NeckIK/NeckMidIK:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1083.25, -86.575), Vector2(1245.52, 132.651), Vector2(1180.39, 252.762), Vector2(1239.45, 66.2986)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Data/Brain")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_sneeze_anim"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_olsh8"]
 resource_name = "sneeze_control"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.466667, 0.633333, 0.8, 1.2, 1.8, 1.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-30.2502, -50.9476), Vector2(-87.7585, 23.8678), Vector2(-87.7585, 23.8678), Vector2(-54.2254, 13.2626), Vector2(-36.9158, -6.5374), Vector2(-24.0829, -24.4341)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.466667, 0.633333, 0.8, 1.2, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.454328, -0.454328, -0.162691, 0.109091]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.466667, 0.633333, 0.8, 1.8, 1.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(12.8854, 35.0984), Vector2(-29.4929, 28.1037), Vector2(-29.4929, 28.1037), Vector2(-7.16727, 48.5971), Vector2(8.93435, 64.5568)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
+tracks/3/interp = 4
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.466667, 0.633333, 0.8, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.311546, -0.311546, 0.0447063]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.466667, 0.633333, 0.866667, 1.2, 1.8, 2.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-183.802, -115.927), Vector2(-217.624, -6.19898), Vector2(-217.624, -6.19898), Vector2(-226.613, -26.7946), Vector2(-191.51, -53.3228), Vector2(-157.92, -60.5825)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.466667, 0.633333, 0.866667, 1.2, 1.8, 2.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.334214, -1.14727, -1.14727, -0.996757, -0.679147, -0.438865]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("EyeTracking:mode")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.133333, 1, 2.46667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/7/interp = 4
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.466667, 0.666667, 0.8, 0.933333, 1.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.414167, -0.0418879, -0.0894426, -0.152158, -0.00953422]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NeckIK/EarIK:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.466667, 0.8, 1.8, 2.63333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1129, -356), Vector2(1255, 175), Vector2(1280, -1), Vector2(1271, -252)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("NeckIK/EarBackIK:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.466667, 0.8, 1.8, 2.63333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(523, -675), Vector2(794, -344), Vector2(816, -501), Vector2(734, -595)]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VoiceBox")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Play_Sneeze"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_r2qeg"]
 resource_name = "sneeze_small"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NeckIK:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-979, -1771), Vector2(-722, -2027), Vector2(-1511, -1485), Vector2(-1453, -1051), Vector2(-1545, -881), Vector2(-1634, -1142)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NeckIK:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.479569, 0.658406, -0.0947116, 6.06567, 6.36612]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NeckIK/HeadIK:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-587.974, 39.7765), Vector2(-552.401, -22.7692), Vector2(-499.657, -248.441), Vector2(-548.055, 179.3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NeckIK/NeckMidIK:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.766667, 0.933333, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1083.25, -86.575), Vector2(1245.52, 132.651), Vector2(1180.39, 252.762), Vector2(1239.45, 66.2986)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Data/Brain")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_sneeze_anim"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_4kmbo"]
 resource_name = "sniff"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Data/Brain")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_sniff_anim"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VoiceBox")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Play_Sniff"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/2/interp = 4
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0261939, 0.0146925]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.1001, -60.0215), Vector2(-21.7371, -48.825), Vector2(-29.2237, -55.4539)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
+tracks/4/interp = 4
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.192811]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(16.7206, 67.0383), Vector2(9.38465, 52.99), Vector2(16.2941, 61.779)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
+tracks/6/interp = 4
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.250066]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NeckIK:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.266667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2045.66, -819.422), Vector2(-1942, -908), Vector2(-1885, -885)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NeckIK:rotation")
+tracks/8/interp = 4
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.23657, 6.28767]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("NeckIK/HeadIK:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.266667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-601.649, -143.303), Vector2(-539.663, 76.4211)]
+}
 
 [sub_resource type="Animation" id="Animation_t8n4d"]
 resource_name = "tickle"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NeckIK:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1699, -1175), Vector2(-1569, -1257)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NeckIK:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.173123, 6.30012]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NeckIK/HeadIK:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-535, 51), Vector2(-555.742, -18.7414)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NeckIK/EarIK:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1131.19, -50.6149), Vector2(1037.29, -168.586)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NeckIK/EarBackIK:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(802.33, -386.994), Vector2(877.189, -586.935)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-29.1001, -60.0215)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.192811]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16.7206, 67.0383)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.250066]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.54019, 11.2946)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("EyeTracking:mode")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0, 0, 0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton2D/Neck 1:transform_mode")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton2D/Neck 1/Neck 2:transform_mode")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3:transform_mode")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4:transform_mode")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1:transform_mode")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2:transform_mode")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3:transform_mode")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4:transform_mode")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head:transform_mode")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D:modification_stack:enabled")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-153.266, -107.087)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.333903]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation")
+tracks/24/interp = 4
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.026194]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47t2j"]
 _data = {
@@ -1523,9 +2805,9 @@ animation = &"neck_sway_add"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_n5m61"]
 filter_enabled = true
-filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position"]
+filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation"]
 fadein_time = 0.1
-fadeout_time = 0.3
+fadeout_time = 0.25
 autorestart = true
 autorestart_delay = 0.0
 autorestart_random_delay = 10.0
@@ -1538,7 +2820,7 @@ animation = &"ear_flick"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_6caxu"]
 filter_enabled = true
-filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:rotation"]
+filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear:rotation", "NeckIK/EarBackIK:position", "NeckIK/EarIK:position"]
 fadein_time = 0.2
 fadeout_time = 0.5
 autorestart = true
@@ -1550,18 +2832,7 @@ animation = &"nose_flare"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_8ldcw"]
 filter_enabled = true
-filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale"]
-
-[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_ofdw2"]
-xfade_time = 0.25
-input_0/name = "idle"
-input_0/auto_advance = false
-input_0/break_loop_at_end = false
-input_0/reset = true
-input_1/name = "flare"
-input_1/auto_advance = false
-input_1/break_loop_at_end = false
-input_1/reset = true
+filters = ["../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation", "../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fhgdn"]
 animation = &"buildup"
@@ -1771,7 +3042,7 @@ anim_parameters[\"sneeze_interrupt\"]"
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_dmuwf"]
 states/End/position = Vector2(976, 350)
 states/IdleTickle/node = ExtResource("99_xb3ba")
-states/IdleTickle/position = Vector2(384, -98)
+states/IdleTickle/position = Vector2(383, -98)
 states/SneezeBlend/node = ExtResource("100_07gm8")
 states/SneezeBlend/position = Vector2(860, -320)
 states/SneezeBlend2/node = ExtResource("100_07gm8")
@@ -1794,10 +3065,7 @@ states/sniff/position = Vector2(860, 1)
 "states/sniff 2/node" = SubResource("AnimationNodeAnimation_ejpbr")
 "states/sniff 2/position" = Vector2(860, 100)
 transitions = ["Start", "rig_demo", SubResource("AnimationNodeStateMachineTransition_f55j0"), "rig_demo", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_enas5"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_3y0bf"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_e8s6d"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_52bcx"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_l7ab5"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_bvihb"), "buildup", "buildup2", SubResource("AnimationNodeStateMachineTransition_sngg2"), "buildup2", "buildup", SubResource("AnimationNodeStateMachineTransition_wjj2l"), "hitch", "hitch 2", SubResource("AnimationNodeStateMachineTransition_eeniq"), "hitch 2", "hitch", SubResource("AnimationNodeStateMachineTransition_ye4e8"), "buildup", "sigh", SubResource("AnimationNodeStateMachineTransition_obv02"), "sigh", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_l2hsy"), "sniff", "sniff 2", SubResource("AnimationNodeStateMachineTransition_c5uyw"), "sniff 2", "sniff", SubResource("AnimationNodeStateMachineTransition_1exov"), "IdleTickle", "sniff", SubResource("AnimationNodeStateMachineTransition_2a4ye"), "sniff", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_7tebk"), "sniff", "sigh", SubResource("AnimationNodeStateMachineTransition_vtvym"), "SneezeBlend2", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_oxnq4"), "SneezeBlend", "SneezeBlend2", SubResource("AnimationNodeStateMachineTransition_c6mjl"), "buildup", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_o2tv5"), "SneezeBlend", "buildup", SubResource("AnimationNodeStateMachineTransition_8lt0t"), "SneezeBlend", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_6xysc"), "SneezeBlend", "hitch", SubResource("AnimationNodeStateMachineTransition_n5cre"), "SneezeBlend", "sigh", SubResource("AnimationNodeStateMachineTransition_6c0ht"), "sigh", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_trcj5"), "SneezeBlend", "sniff", SubResource("AnimationNodeStateMachineTransition_n6k6u")]
-graph_offset = Vector2(-146, -495)
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0f6sr"]
-animation = &"RESET"
+graph_offset = Vector2(153, -497)
 
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_o2tv5"]
 xfade_time = 0.25
@@ -1818,13 +3086,14 @@ animation = &"sneeze_control"
 animation = &"sneeze_control"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_oxnq4"]
-mix_mode = 1
+filter_enabled = true
+filters = ["Data/Brain", "EyeTracking:mode", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:position", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:rotation", "Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril:scale", "VoiceBox"]
 fadein_time = 0.25
 fadein_curve = ExtResource("101_wm4ky")
 fadeout_time = 0.25
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8qgri"]
-graph_offset = Vector2(-7.2955, -345.102)
+graph_offset = Vector2(-120.693, -279.827)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
@@ -1838,15 +3107,11 @@ nodes/Blink/position = Vector2(1480, -300)
 "nodes/Earflick Shot/node" = SubResource("AnimationNodeOneShot_6caxu")
 "nodes/Earflick Shot/position" = Vector2(1240, -80)
 nodes/NoseFlare/node = SubResource("AnimationNodeAnimation_lu2l1")
-nodes/NoseFlare/position = Vector2(1640, 240)
+nodes/NoseFlare/position = Vector2(1820, 0)
 nodes/NoseFlareStrength/node = SubResource("AnimationNodeBlend2_8ldcw")
 nodes/NoseFlareStrength/position = Vector2(2020, -140)
-nodes/NoseFlareTransition/node = SubResource("AnimationNodeTransition_ofdw2")
-nodes/NoseFlareTransition/position = Vector2(1820, 40)
 "nodes/Parameter Animation/node" = SubResource("AnimationNodeStateMachine_dmuwf")
 "nodes/Parameter Animation/position" = Vector2(360, -400)
-nodes/RESET/node = SubResource("AnimationNodeAnimation_0f6sr")
-nodes/RESET/position = Vector2(1640, 80)
 nodes/SneezeBuffer/node = SubResource("AnimationNodeTransition_o2tv5")
 nodes/SneezeBuffer/position = Vector2(380, -180)
 nodes/SneezeExpression/node = SubResource("AnimationNodeAnimation_qu5h2")
@@ -1856,7 +3121,7 @@ nodes/SneezeExpression2/position = Vector2(160, 0)
 nodes/SneezeOneShot/node = SubResource("AnimationNodeOneShot_oxnq4")
 nodes/SneezeOneShot/position = Vector2(640, -400)
 nodes/output/position = Vector2(2220, -140)
-node_connections = [&"Add2", 0, &"SneezeOneShot", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"SneezeBuffer", 0, &"SneezeExpression", &"SneezeBuffer", 1, &"SneezeExpression2", &"SneezeOneShot", 0, &"Parameter Animation", &"SneezeOneShot", 1, &"SneezeBuffer", &"output", 0, &"NoseFlareStrength"]
+node_connections = [&"Add2", 0, &"SneezeOneShot", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlare", &"SneezeBuffer", 0, &"SneezeExpression", &"SneezeBuffer", 1, &"SneezeExpression2", &"SneezeOneShot", 0, &"Parameter Animation", &"SneezeOneShot", 1, &"SneezeBuffer", &"output", 0, &"NoseFlareStrength"]
 
 [sub_resource type="Curve" id="Curve_d7p01"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -2183,23 +3448,23 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
 rotation = 0.0640272
-scale = Vector2(0.99984, 0.99984)
+scale = Vector2(0.999838, 0.999838)
 rest = Transform2D(0.997798, 0.0639737, -0.0639737, 0.997798, 76, -81)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 0.368207
+target_rotation = 1.03822
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ibk7j")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = -0.146211
-scale = Vector2(0.999848, 0.999848)
+rotation = 6.13697
+scale = Vector2(0.999878, 0.999878)
 rest = Transform2D(0.989206, -0.145672, 0.145672, 0.989206, -456, 15)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 0.69781
+target_rotation = 1.64503
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_auy12")
@@ -2207,11 +3472,11 @@ rotation_easing_params = SubResource("Resource_auy12")
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
 rotation = 0.0652054
-scale = Vector2(0.99986, 0.99986)
+scale = Vector2(0.999876, 0.999876)
 rest = Transform2D(0.997723, 0.0651493, -0.0651493, 0.997723, -703, -9)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = -0.615167
+target_rotation = 1.60769
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_esjxn")
@@ -2219,11 +3484,11 @@ rotation_easing_params = SubResource("Resource_esjxn")
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
 rotation = 0.0292092
-scale = Vector2(0.999851, 0.999851)
+scale = Vector2(0.999859, 0.999859)
 rest = Transform2D(0.999461, 0.0292018, -0.0292018, 0.999461, -668, 8)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = -0.443545
+target_rotation = 1.95784
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hei4a")
@@ -2231,12 +3496,12 @@ rotation_easing_params = SubResource("Resource_hei4a")
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-513.374, 68.4644)
 rotation = 0.0546154
-scale = Vector2(1.0006, 1.0006)
+scale = Vector2(0.999695, 0.999695)
 rest = Transform2D(0.998204, 0.0545716, -0.0545716, 0.998204, -513.374, 68.4644)
 editor_settings/show_bone_gizmo = false
 script = ExtResource("33_m2g6a")
-transform_mode = 0
-target_rotation = 0.0578888
+transform_mode = 1
+target_rotation = 0.0546154
 target_position = Vector2(-513.374, 68.4644)
 metadata/_custom_type_script = "uid://bv7fcu3p24jav"
 
@@ -2288,7 +3553,6 @@ bone_angle = -96.429
 
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-8.94384, 38.7167)
-rotation = -0.0094202
 scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(0.999798, -0.00941858, 0.00941858, 0.999798, -8.94384, 38.7167)
 editor_settings/show_bone_gizmo = false
@@ -2337,11 +3601,11 @@ rest = Transform2D(1, 0, 0, 1, 112.962, 11.5537)
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(-3.1862, 75.3827)
 rotation = 0.0496161
-scale = Vector2(0.999835, 0.999835)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.998601, 0.0495874, -0.0495874, 0.998601, -3.1862, 75.3827)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 0.123738
+target_rotation = 2.18559
 target_position = Vector2(-3.1862, 75.3827)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -2350,12 +3614,12 @@ constraint_data = SubResource("Resource_iplph")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-180.228, 79.7825)
-rotation = -0.0234509
-scale = Vector2(0.999841, 0.999841)
+rotation = 6.25973
+scale = Vector2(0.999829, 0.999829)
 rest = Transform2D(0.999614, -0.0234461, 0.0234461, 0.999614, -180.228, 79.7825)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = -0.141665
+target_rotation = 1.85992
 target_position = Vector2(-180.228, 79.7825)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -2365,11 +3629,11 @@ constraint_data = SubResource("Resource_43o6b")
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-173.777, 24.6081)
 rotation = 0.0603926
-scale = Vector2(0.999823, 0.999823)
+scale = Vector2(0.99982, 0.99982)
 rest = Transform2D(0.997997, 0.060345, -0.060345, 0.997997, -173.777, 24.6081)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = -0.105483
+target_rotation = 1.90081
 target_position = Vector2(-173.777, 24.6081)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -2378,15 +3642,15 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-175.562, 27.9839)
-rotation = -0.283545
-scale = Vector2(0.999829, 0.999829)
+rotation = 5.99964
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(0.95992, -0.279717, 0.279717, 0.95992, -175.562, 27.9839)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = -0.00155152
+target_rotation = 1.83518
 target_position = Vector2(-175.562, 27.9839)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -2400,7 +3664,6 @@ rest = Transform2D(0.999854, 0, 0, 0.999854, 114.652, -85.415)
 auto_calculate_length_and_angle = false
 length = 276.317
 bone_angle = -25.714
-metadata/_local_pose_override_enabled_ = true
 
 [node name="EarBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(61.379, -132.003)
@@ -2409,10 +3672,10 @@ rest = Transform2D(0.999854, 0, 0, 0.999854, 61.379, -132.003)
 auto_calculate_length_and_angle = false
 length = 276.317
 bone_angle = -43.567
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Nostril" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-588.138, 204.883)
+scale = Vector2(0.8, 0.8)
 rest = Transform2D(1, 0, 0, 1, -588.138, 204.883)
 auto_calculate_length_and_angle = false
 length = 84.504
@@ -2428,7 +3691,7 @@ bone_angle = 228.975
 
 [node name="Eyebrow" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-129.026, -129.287)
-scale = Vector2(0.999839, 0.999839)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.999839, 0, 0, 0.999839, -129.026, -129.287)
 auto_calculate_length_and_angle = false
 length = 107.223
@@ -2441,6 +3704,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="EyelidU" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
 position = Vector2(-0.628508, 13.0829)
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(1, 0, 0, 1, 8.82671, 19.4709)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -2448,6 +3712,7 @@ bone_angle = -119.236
 
 [node name="EyelidL" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
 position = Vector2(28.6423, 53.2525)
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(1, 0, 0, 1, 28.6423, 53.2525)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -2488,10 +3753,10 @@ gizmo_extents = 122.4
 
 [node name="NeckMidIK" type="Marker2D" parent="NeckIK"]
 position = Vector2(1221, 116)
+rotation = -0.0840908
 gizmo_extents = 122.4
 
 [node name="EyeTarget" type="Marker2D" parent="."]
-position = Vector2(-3124, -158)
 
 [node name="SoupGroup" type="Node" parent="."]
 script = ExtResource("38_sbag2")
@@ -2500,7 +3765,6 @@ metadata/_custom_type_script = "uid://1vbc48b2e7ci"
 [node name="SoupLookAt" type="Node" parent="SoupGroup" node_paths=PackedStringArray("target_node", "bone_node")]
 script = ExtResource("41_p84i6")
 target_node = NodePath("../../NeckIK/HeadIK")
-enabled = true
 angle_offset_degrees = -50.769
 bone_node = NodePath("../../Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head")
 metadata/_custom_type_script = "uid://cu2rfhmwork2f"
@@ -2534,8 +3798,9 @@ bias_offset_degrees = -67.778
 iterations = 5
 metadata/_custom_type_script = "uid://c0halov2bvjmy"
 
-[node name="VoiceBox" type="Node2D" parent="." node_paths=PackedStringArray("Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
+[node name="VoiceBox" type="Node2D" parent="." node_paths=PackedStringArray("brain", "Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
 script = ExtResource("28_1gufe")
+brain = NodePath("../Data/Brain")
 Buildup = NodePath("Buildup")
 Hitch = NodePath("Hitch")
 Sigh = NodePath("Sigh")
@@ -2546,8 +3811,9 @@ Sniff = NodePath("Sniff")
 metadata/_custom_type_script = "uid://k68sr13hul1s"
 
 [node name="SneezeNormal" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_r2qeg")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_olsh8")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2555,8 +3821,9 @@ file_filter = "Normal"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="SneezeStifle" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_4kmbo")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_r2qeg")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2564,8 +3831,9 @@ file_filter = "Stifle"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="SneezeBig" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_t8n4d")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_4kmbo")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2573,8 +3841,9 @@ file_filter = "Big"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Hitch" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_lylt7")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_t8n4d")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2582,8 +3851,9 @@ file_filter = "Hitch"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Buildup" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_6f7jf")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_lylt7")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2591,8 +3861,9 @@ file_filter = "Buildup"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Sigh" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_ri0yk")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_6f7jf")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2600,8 +3871,9 @@ file_filter = "Sigh"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Sniff" type="AudioStreamPlayer2D" parent="VoiceBox"]
-stream = SubResource("AudioStreamRandomizer_22ifo")
-volume_db = 24.0
+stream = SubResource("AudioStreamRandomizer_ri0yk")
+volume_db = 12.0
+pitch_scale = 0.9
 script = ExtResource("105_c6r5m")
 load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
@@ -2628,12 +3900,9 @@ parameters/Add2/add_amount = 0.25
 "parameters/Earflick Shot/active" = false
 "parameters/Earflick Shot/internal_active" = false
 "parameters/Earflick Shot/request" = 0
-parameters/NoseFlareStrength/blend_amount = 0.75
-parameters/NoseFlareTransition/current_state = "idle"
-parameters/NoseFlareTransition/transition_request = ""
-parameters/NoseFlareTransition/current_index = 0
-"parameters/Parameter Animation/IdleTickle/blend_position" = -0.000618458
-"parameters/Parameter Animation/SneezeBlend/blend_position" = -0.000685394
+parameters/NoseFlareStrength/blend_amount = 0.0
+"parameters/Parameter Animation/IdleTickle/blend_position" = 0.0
+"parameters/Parameter Animation/SneezeBlend/blend_position" = true
 "parameters/Parameter Animation/SneezeBlend2/blend_position" = 0
 parameters/SneezeBuffer/current_state = "buffer_0"
 parameters/SneezeBuffer/transition_request = ""
@@ -2652,7 +3921,7 @@ look_at_nose_target = NodePath("../HeadTransform/NoseLookTarget")
 
 [node name="Data" type="Node" parent="."]
 
-[node name="Lungs" parent="Data" instance=ExtResource("102_p5700")]
+[node name="Lungs" parent="Data" node_paths=PackedStringArray("voice_box") instance=ExtResource("102_p5700")]
 unique_name_in_owner = true
 lungs = ExtResource("103_olsh8")
 oxygen = ExtResource("104_r2qeg")
@@ -2660,6 +3929,7 @@ IN_WIND_BONUS = 20.0
 OUT_WIND_BONUS = 40.0
 HITCH_WIND_BONUS = 35.0
 SNEEZE_WIND_BONUS = 20000.0
+voice_box = NodePath("../../VoiceBox")
 sneeze_wind_curve = SubResource("Curve_d7p01")
 
 [node name="Brain" parent="Data" node_paths=PackedStringArray("lungs", "voice", "animation_tree") instance=ExtResource("105_4kmbo")]

@@ -59,6 +59,7 @@ tools=""
 has_sliders=""
 has_curves=""
 brain=""
+character_root="spawnpoint for character scene"
 
 [gui]
 

@@ -93,15 +93,21 @@ func _ready() -> void:
 	animation_tree.connect("animation_finished",_on_animation_finished)
 	lungs.breathe_out.connect(
 		func():
-			animation_tree.set("parameters/NoseFlareTransition/transition_request","idle")
+			var flare_tween : Tween = create_tween()
+			flare_tween.set_trans(Tween.TRANS_QUAD)
+			flare_tween.tween_property(animation_tree, "parameters/NoseFlareStrength/blend_amount",0.0,0.5)
 	)
 	lungs.breathe_in.connect(
 		func():
-			animation_tree.set("parameters/NoseFlareTransition/transition_request","flare")
+			var flare_tween : Tween = create_tween()
+			flare_tween.set_trans(Tween.TRANS_QUAD)
+			flare_tween.tween_property(animation_tree, "parameters/NoseFlareStrength/blend_amount",randf_range(.25,.5),0.5)
 	)
 	lungs.breathe_done.connect(
 		func():
-			animation_tree.set("parameters/NoseFlareTransition/transition_request","idle")
+			var flare_tween : Tween = create_tween()
+			flare_tween.set_trans(Tween.TRANS_QUAD)
+			flare_tween.tween_property(animation_tree, "parameters/NoseFlareStrength/blend_amount",0.0,0.5)
 	)
 	
 	lungs.want_breathe.connect(do_want_breathe)
@@ -194,7 +200,7 @@ func timer_timeout():
 		anim_parameters["sneeze"] = true
 		if not is_sneezing or anim_parameters["sneeze_interrupt"]:
 			sneeze_size = randf()
-			print("Sneeze Size now ",sneeze_size)
+			#print("Sneeze Size now ",sneeze_size)
 		
 	if randf() < 0.1 : 
 		anim_parameters["sigh"] = true
