@@ -198,6 +198,7 @@ func timer_timeout():
 			
 	if randf() < sneeze_curve.sample(sneeze_percent) * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus) * (sneeze_repeat_modifier.current_value if is_sneezing else 1.0):
 		anim_parameters["sneeze"] = true
+		print("AnimParams Sneeze True")
 		if not is_sneezing or anim_parameters["sneeze_interrupt"]:
 			sneeze_size = randf()
 			#print("Sneeze Size now ",sneeze_size)
@@ -209,6 +210,7 @@ func timer_timeout():
 		anim_parameters["sniff"] = true
 
 func reset_tracker_params():
+	print("Reset parameters!")
 	is_hitching = false
 	is_building = false
 	is_sneezing = false
@@ -221,16 +223,18 @@ func reset_tracker_params():
 	anim_parameters["sniff_interrupt"] = false
 
 func _on_animation_finished(animation_name : StringName):
-	#print("On anim finished... ",animation_name)
+	print("On anim finished... ",animation_name)
 	match animation_name:
-		"hitch", "sneeze", "buildup":
+		"hitch", "sneeze_control", "buildup":
 			reset_tracker_params()
 
 func on_hitch_anim():
+	print("Hitch Anim")
 	reset_tracker_params()
 	is_hitching = true
 
 func on_buildup_anim():
+	print("Buildup Anim")
 	reset_tracker_params()
 	is_building = true
 
@@ -238,6 +242,7 @@ var current_sneeze_buffer : int = 0
 func on_sneeze_anim():
 	if _sneeze_queued:
 		return
+	print("Sneeze Anim")
 	_sneeze_queued = true
 	reset_tracker_params()
 	
@@ -248,10 +253,12 @@ func on_sneeze_anim():
 	is_sneezing = true
 
 func on_sigh_anim():
+	print("Sigh Anim")
 	reset_tracker_params()
 	is_sighing = true
 
 func on_sniff_anim():
+	print("Sniff Anim")
 	reset_tracker_params()
 	is_sniffing = true
 	do_must_breathe()

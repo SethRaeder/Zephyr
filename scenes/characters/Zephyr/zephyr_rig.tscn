@@ -239,96 +239,6 @@ area_offset = Vector2(0, 0)
 area_rotation_degrees = 0.0
 proportions = Vector2(1, 1)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_olsh8"]
-streams_count = 6
-stream_0/stream = ExtResource("29_w4lde")
-stream_1/stream = ExtResource("30_nr25a")
-stream_2/stream = ExtResource("31_hqk5e")
-stream_3/stream = ExtResource("32_ngv2t")
-stream_4/stream = ExtResource("33_y5a0i")
-stream_5/stream = ExtResource("34_lcvjm")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_r2qeg"]
-streams_count = 9
-stream_0/stream = ExtResource("36_io4ct")
-stream_1/stream = ExtResource("37_oms2t")
-stream_2/stream = ExtResource("38_mkish")
-stream_3/stream = ExtResource("39_7bxn7")
-stream_4/stream = ExtResource("40_r45k7")
-stream_5/stream = ExtResource("41_6njjo")
-stream_6/stream = ExtResource("42_yrirj")
-stream_7/stream = ExtResource("43_mstl5")
-stream_8/stream = ExtResource("44_tkrne")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4kmbo"]
-streams_count = 6
-stream_0/stream = ExtResource("45_5sn8t")
-stream_1/stream = ExtResource("46_spv5i")
-stream_2/stream = ExtResource("47_8hwej")
-stream_3/stream = ExtResource("48_xb3ba")
-stream_4/stream = ExtResource("49_07gm8")
-stream_5/stream = ExtResource("50_wm4ky")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_t8n4d"]
-streams_count = 14
-stream_0/stream = ExtResource("121_0rylb")
-stream_1/stream = ExtResource("122_7vh0g")
-stream_2/stream = ExtResource("127_6lose")
-stream_3/stream = ExtResource("128_loer5")
-stream_4/stream = ExtResource("129_c6r5m")
-stream_5/stream = ExtResource("130_4vkaa")
-stream_6/stream = ExtResource("131_4nnpu")
-stream_7/stream = ExtResource("132_64qnu")
-stream_8/stream = ExtResource("133_cuch5")
-stream_9/stream = ExtResource("134_dwq7j")
-stream_10/stream = ExtResource("123_rsqtk")
-stream_11/stream = ExtResource("124_vb7fu")
-stream_12/stream = ExtResource("125_6oxe4")
-stream_13/stream = ExtResource("126_k0l2t")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lylt7"]
-streams_count = 17
-stream_0/stream = ExtResource("106_di88m")
-stream_1/stream = ExtResource("107_xcyen")
-stream_2/stream = ExtResource("115_ef5q0")
-stream_3/stream = ExtResource("116_xhm4j")
-stream_4/stream = ExtResource("117_b51wv")
-stream_5/stream = ExtResource("118_214dk")
-stream_6/stream = ExtResource("119_8t6sk")
-stream_7/stream = ExtResource("120_wwpho")
-stream_8/stream = ExtResource("121_guwi0")
-stream_9/stream = ExtResource("122_jd4ej")
-stream_10/stream = ExtResource("108_gdgjf")
-stream_11/stream = ExtResource("109_xp1r4")
-stream_12/stream = ExtResource("110_ys6rv")
-stream_13/stream = ExtResource("111_2f822")
-stream_14/stream = ExtResource("112_6lp5h")
-stream_15/stream = ExtResource("113_2srb5")
-stream_16/stream = ExtResource("114_60k62")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6f7jf"]
-streams_count = 9
-stream_0/stream = ExtResource("123_w44w3")
-stream_1/stream = ExtResource("124_7amfb")
-stream_2/stream = ExtResource("125_rqtfc")
-stream_3/stream = ExtResource("126_v35w4")
-stream_4/stream = ExtResource("127_xym86")
-stream_5/stream = ExtResource("128_3pfbs")
-stream_6/stream = ExtResource("129_8qrff")
-stream_7/stream = ExtResource("130_03wt5")
-stream_8/stream = ExtResource("131_cyf1r")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ri0yk"]
-streams_count = 8
-stream_0/stream = ExtResource("152_iyiba")
-stream_1/stream = ExtResource("153_8prgj")
-stream_2/stream = ExtResource("154_5o4nf")
-stream_3/stream = ExtResource("155_c35re")
-stream_4/stream = ExtResource("156_ux3pd")
-stream_5/stream = ExtResource("157_t35wa")
-stream_6/stream = ExtResource("158_iod7y")
-stream_7/stream = ExtResource("159_g35pt")
-
 [sub_resource type="Animation" id="Animation_qux4u"]
 resource_name = "RESET"
 tracks/0/type = "value"
@@ -3065,7 +2975,7 @@ states/sniff/position = Vector2(860, 1)
 "states/sniff 2/node" = SubResource("AnimationNodeAnimation_ejpbr")
 "states/sniff 2/position" = Vector2(860, 100)
 transitions = ["Start", "rig_demo", SubResource("AnimationNodeStateMachineTransition_f55j0"), "rig_demo", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_enas5"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_3y0bf"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_e8s6d"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_52bcx"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_l7ab5"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_bvihb"), "buildup", "buildup2", SubResource("AnimationNodeStateMachineTransition_sngg2"), "buildup2", "buildup", SubResource("AnimationNodeStateMachineTransition_wjj2l"), "hitch", "hitch 2", SubResource("AnimationNodeStateMachineTransition_eeniq"), "hitch 2", "hitch", SubResource("AnimationNodeStateMachineTransition_ye4e8"), "buildup", "sigh", SubResource("AnimationNodeStateMachineTransition_obv02"), "sigh", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_l2hsy"), "sniff", "sniff 2", SubResource("AnimationNodeStateMachineTransition_c5uyw"), "sniff 2", "sniff", SubResource("AnimationNodeStateMachineTransition_1exov"), "IdleTickle", "sniff", SubResource("AnimationNodeStateMachineTransition_2a4ye"), "sniff", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_7tebk"), "sniff", "sigh", SubResource("AnimationNodeStateMachineTransition_vtvym"), "SneezeBlend2", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_oxnq4"), "SneezeBlend", "SneezeBlend2", SubResource("AnimationNodeStateMachineTransition_c6mjl"), "buildup", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_o2tv5"), "SneezeBlend", "buildup", SubResource("AnimationNodeStateMachineTransition_8lt0t"), "SneezeBlend", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_6xysc"), "SneezeBlend", "hitch", SubResource("AnimationNodeStateMachineTransition_n5cre"), "SneezeBlend", "sigh", SubResource("AnimationNodeStateMachineTransition_6c0ht"), "sigh", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_trcj5"), "SneezeBlend", "sniff", SubResource("AnimationNodeStateMachineTransition_n6k6u")]
-graph_offset = Vector2(153, -497)
+graph_offset = Vector2(249, -505)
 
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_o2tv5"]
 xfade_time = 0.25
@@ -3093,7 +3003,7 @@ fadein_curve = ExtResource("101_wm4ky")
 fadeout_time = 0.25
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8qgri"]
-graph_offset = Vector2(-120.693, -279.827)
+graph_offset = Vector2(100.656, -365.127)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
@@ -3122,6 +3032,96 @@ nodes/SneezeOneShot/node = SubResource("AnimationNodeOneShot_oxnq4")
 nodes/SneezeOneShot/position = Vector2(640, -400)
 nodes/output/position = Vector2(2220, -140)
 node_connections = [&"Add2", 0, &"SneezeOneShot", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlare", &"SneezeBuffer", 0, &"SneezeExpression", &"SneezeBuffer", 1, &"SneezeExpression2", &"SneezeOneShot", 0, &"Parameter Animation", &"SneezeOneShot", 1, &"SneezeBuffer", &"output", 0, &"NoseFlareStrength"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_olsh8"]
+streams_count = 6
+stream_0/stream = ExtResource("29_w4lde")
+stream_1/stream = ExtResource("30_nr25a")
+stream_2/stream = ExtResource("31_hqk5e")
+stream_3/stream = ExtResource("32_ngv2t")
+stream_4/stream = ExtResource("33_y5a0i")
+stream_5/stream = ExtResource("34_lcvjm")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_r2qeg"]
+streams_count = 9
+stream_0/stream = ExtResource("36_io4ct")
+stream_1/stream = ExtResource("37_oms2t")
+stream_2/stream = ExtResource("38_mkish")
+stream_3/stream = ExtResource("39_7bxn7")
+stream_4/stream = ExtResource("40_r45k7")
+stream_5/stream = ExtResource("41_6njjo")
+stream_6/stream = ExtResource("42_yrirj")
+stream_7/stream = ExtResource("43_mstl5")
+stream_8/stream = ExtResource("44_tkrne")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4kmbo"]
+streams_count = 6
+stream_0/stream = ExtResource("45_5sn8t")
+stream_1/stream = ExtResource("46_spv5i")
+stream_2/stream = ExtResource("47_8hwej")
+stream_3/stream = ExtResource("48_xb3ba")
+stream_4/stream = ExtResource("49_07gm8")
+stream_5/stream = ExtResource("50_wm4ky")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_t8n4d"]
+streams_count = 14
+stream_0/stream = ExtResource("121_0rylb")
+stream_1/stream = ExtResource("122_7vh0g")
+stream_2/stream = ExtResource("127_6lose")
+stream_3/stream = ExtResource("128_loer5")
+stream_4/stream = ExtResource("129_c6r5m")
+stream_5/stream = ExtResource("130_4vkaa")
+stream_6/stream = ExtResource("131_4nnpu")
+stream_7/stream = ExtResource("132_64qnu")
+stream_8/stream = ExtResource("133_cuch5")
+stream_9/stream = ExtResource("134_dwq7j")
+stream_10/stream = ExtResource("123_rsqtk")
+stream_11/stream = ExtResource("124_vb7fu")
+stream_12/stream = ExtResource("125_6oxe4")
+stream_13/stream = ExtResource("126_k0l2t")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lylt7"]
+streams_count = 17
+stream_0/stream = ExtResource("106_di88m")
+stream_1/stream = ExtResource("107_xcyen")
+stream_2/stream = ExtResource("115_ef5q0")
+stream_3/stream = ExtResource("116_xhm4j")
+stream_4/stream = ExtResource("117_b51wv")
+stream_5/stream = ExtResource("118_214dk")
+stream_6/stream = ExtResource("119_8t6sk")
+stream_7/stream = ExtResource("120_wwpho")
+stream_8/stream = ExtResource("121_guwi0")
+stream_9/stream = ExtResource("122_jd4ej")
+stream_10/stream = ExtResource("108_gdgjf")
+stream_11/stream = ExtResource("109_xp1r4")
+stream_12/stream = ExtResource("110_ys6rv")
+stream_13/stream = ExtResource("111_2f822")
+stream_14/stream = ExtResource("112_6lp5h")
+stream_15/stream = ExtResource("113_2srb5")
+stream_16/stream = ExtResource("114_60k62")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6f7jf"]
+streams_count = 9
+stream_0/stream = ExtResource("123_w44w3")
+stream_1/stream = ExtResource("124_7amfb")
+stream_2/stream = ExtResource("125_rqtfc")
+stream_3/stream = ExtResource("126_v35w4")
+stream_4/stream = ExtResource("127_xym86")
+stream_5/stream = ExtResource("128_3pfbs")
+stream_6/stream = ExtResource("129_8qrff")
+stream_7/stream = ExtResource("130_03wt5")
+stream_8/stream = ExtResource("131_cyf1r")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ri0yk"]
+streams_count = 8
+stream_0/stream = ExtResource("152_iyiba")
+stream_1/stream = ExtResource("153_8prgj")
+stream_2/stream = ExtResource("154_5o4nf")
+stream_3/stream = ExtResource("155_c35re")
+stream_4/stream = ExtResource("156_ux3pd")
+stream_5/stream = ExtResource("157_t35wa")
+stream_6/stream = ExtResource("158_iod7y")
+stream_7/stream = ExtResource("159_g35pt")
 
 [sub_resource type="Curve" id="Curve_d7p01"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -3448,11 +3448,11 @@ modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
 rotation = 0.0640272
-scale = Vector2(0.999838, 0.999838)
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.997798, 0.0639737, -0.0639737, 0.997798, 76, -81)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.03822
+target_rotation = 0.368182
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ibk7j")
@@ -3460,11 +3460,11 @@ rotation_easing_params = SubResource("Resource_ibk7j")
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
 rotation = 6.13697
-scale = Vector2(0.999878, 0.999878)
+scale = Vector2(0.999876, 0.999876)
 rest = Transform2D(0.989206, -0.145672, 0.145672, 0.989206, -456, 15)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.64503
+target_rotation = 0.697844
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_auy12")
@@ -3472,11 +3472,11 @@ rotation_easing_params = SubResource("Resource_auy12")
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
 rotation = 0.0652054
-scale = Vector2(0.999876, 0.999876)
+scale = Vector2(0.999874, 0.999874)
 rest = Transform2D(0.997723, 0.0651493, -0.0651493, 0.997723, -703, -9)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.60769
+target_rotation = -0.61513
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_esjxn")
@@ -3484,11 +3484,11 @@ rotation_easing_params = SubResource("Resource_esjxn")
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
 rotation = 0.0292092
-scale = Vector2(0.999859, 0.999859)
+scale = Vector2(0.999855, 0.999855)
 rest = Transform2D(0.999461, 0.0292018, -0.0292018, 0.999461, -668, 8)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.95784
+target_rotation = -0.44366
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hei4a")
@@ -3553,7 +3553,7 @@ bone_angle = -96.429
 
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-8.94384, 38.7167)
-scale = Vector2(0.999842, 0.999842)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.999798, -0.00941858, 0.00941858, 0.999798, -8.94384, 38.7167)
 editor_settings/show_bone_gizmo = false
 
@@ -3601,11 +3601,11 @@ rest = Transform2D(1, 0, 0, 1, 112.962, 11.5537)
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
 position = Vector2(-3.1862, 75.3827)
 rotation = 0.0496161
-scale = Vector2(0.999836, 0.999836)
+scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(0.998601, 0.0495874, -0.0495874, 0.998601, -3.1862, 75.3827)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 2.18559
+target_rotation = 0.120459
 target_position = Vector2(-3.1862, 75.3827)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3615,11 +3615,11 @@ constraint_data = SubResource("Resource_iplph")
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-180.228, 79.7825)
 rotation = 6.25973
-scale = Vector2(0.999829, 0.999829)
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(0.999614, -0.0234461, 0.0234461, 0.999614, -180.228, 79.7825)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.85992
+target_rotation = -0.145959
 target_position = Vector2(-180.228, 79.7825)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3629,11 +3629,11 @@ constraint_data = SubResource("Resource_43o6b")
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-173.777, 24.6081)
 rotation = 0.0603926
-scale = Vector2(0.99982, 0.99982)
+scale = Vector2(0.999833, 0.999833)
 rest = Transform2D(0.997997, 0.060345, -0.060345, 0.997997, -173.777, 24.6081)
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.90081
+target_rotation = -0.111905
 target_position = Vector2(-173.777, 24.6081)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3643,14 +3643,14 @@ constraint_data = SubResource("Resource_6q68s")
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-175.562, 27.9839)
 rotation = 5.99964
-scale = Vector2(0.99983, 0.99983)
+scale = Vector2(0.999833, 0.999833)
 rest = Transform2D(0.95992, -0.279717, 0.279717, 0.95992, -175.562, 27.9839)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("33_m2g6a")
 transform_mode = 1
-target_rotation = 1.83518
+target_rotation = -0.00321173
 target_position = Vector2(-175.562, 27.9839)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -3664,6 +3664,7 @@ rest = Transform2D(0.999854, 0, 0, 0.999854, 114.652, -85.415)
 auto_calculate_length_and_angle = false
 length = 276.317
 bone_angle = -25.714
+metadata/_local_pose_override_enabled_ = true
 
 [node name="EarBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(61.379, -132.003)
@@ -3672,6 +3673,7 @@ rest = Transform2D(0.999854, 0, 0, 0.999854, 61.379, -132.003)
 auto_calculate_length_and_angle = false
 length = 276.317
 bone_angle = -43.567
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Nostril" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-588.138, 204.883)
@@ -3704,7 +3706,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="EyelidU" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
 position = Vector2(-0.628508, 13.0829)
-scale = Vector2(0.999997, 0.999997)
+scale = Vector2(0.999985, 0.999985)
 rest = Transform2D(1, 0, 0, 1, 8.82671, 19.4709)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -3712,7 +3714,7 @@ bone_angle = -119.236
 
 [node name="EyelidL" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
 position = Vector2(28.6423, 53.2525)
-scale = Vector2(0.999997, 0.999997)
+scale = Vector2(0.999984, 0.999984)
 rest = Transform2D(1, 0, 0, 1, 28.6423, 53.2525)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -3798,6 +3800,37 @@ bias_offset_degrees = -67.778
 iterations = 5
 metadata/_custom_type_script = "uid://c0halov2bvjmy"
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_47t2j")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 1
+tree_root = SubResource("AnimationNodeBlendTree_8qgri")
+advance_expression_base_node = NodePath("../Data/Brain")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Add2/add_amount = 0.25
+"parameters/Blink Shot/active" = false
+"parameters/Blink Shot/internal_active" = false
+"parameters/Blink Shot/request" = 0
+"parameters/Earflick Shot/active" = false
+"parameters/Earflick Shot/internal_active" = false
+"parameters/Earflick Shot/request" = 0
+parameters/NoseFlareStrength/blend_amount = 0.0
+"parameters/Parameter Animation/IdleTickle/blend_position" = 0.0
+"parameters/Parameter Animation/SneezeBlend/blend_position" = true
+"parameters/Parameter Animation/SneezeBlend2/blend_position" = 0
+parameters/SneezeBuffer/current_state = "buffer_0"
+parameters/SneezeBuffer/transition_request = ""
+parameters/SneezeBuffer/current_index = 0
+parameters/SneezeOneShot/active = false
+parameters/SneezeOneShot/internal_active = false
+parameters/SneezeOneShot/request = 0
+
 [node name="VoiceBox" type="Node2D" parent="." node_paths=PackedStringArray("brain", "Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
 script = ExtResource("28_1gufe")
 brain = NodePath("../Data/Brain")
@@ -3879,37 +3912,6 @@ load_audio_directory = "res://assets/audio/Zen_voice"
 do_filter = true
 file_filter = "Sniff"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_47t2j")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-unique_name_in_owner = true
-root_node = NodePath("%AnimationTree/..")
-callback_mode_discrete = 1
-tree_root = SubResource("AnimationNodeBlendTree_8qgri")
-advance_expression_base_node = NodePath("../Data/Brain")
-anim_player = NodePath("../AnimationPlayer")
-parameters/Add2/add_amount = 0.25
-"parameters/Blink Shot/active" = false
-"parameters/Blink Shot/internal_active" = false
-"parameters/Blink Shot/request" = 0
-"parameters/Earflick Shot/active" = false
-"parameters/Earflick Shot/internal_active" = false
-"parameters/Earflick Shot/request" = 0
-parameters/NoseFlareStrength/blend_amount = 0.0
-"parameters/Parameter Animation/IdleTickle/blend_position" = 0.0
-"parameters/Parameter Animation/SneezeBlend/blend_position" = true
-"parameters/Parameter Animation/SneezeBlend2/blend_position" = 0
-parameters/SneezeBuffer/current_state = "buffer_0"
-parameters/SneezeBuffer/transition_request = ""
-parameters/SneezeBuffer/current_index = 0
-parameters/SneezeOneShot/active = false
-parameters/SneezeOneShot/internal_active = false
-parameters/SneezeOneShot/request = 0
 
 [node name="EyeTracking" type="Node" parent="." node_paths=PackedStringArray("eye_target", "pupil_bone", "look_roll_back_target", "look_at_nose_target")]
 script = ExtResource("102_olsh8")

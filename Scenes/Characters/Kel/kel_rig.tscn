@@ -3702,7 +3702,7 @@ turbulence_influence_min = 0.354
 turbulence_influence_max = 0.958
 turbulence_influence_over_life = SubResource("CurveTexture_6mrml")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dp7xv"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_o2tv5"]
 streams_count = 20
 stream_0/stream = ExtResource("51_o2tv5")
 stream_1/stream = ExtResource("52_8lt0t")
@@ -3725,7 +3725,7 @@ stream_17/stream = ExtResource("60_fo1c0")
 stream_18/stream = ExtResource("61_8hncw")
 stream_19/stream = ExtResource("62_urgnq")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1k1h1"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8lt0t"]
 streams_count = 12
 stream_0/stream = ExtResource("68_447sm")
 stream_1/stream = ExtResource("69_f8u13")
@@ -3740,7 +3740,7 @@ stream_9/stream = ExtResource("79_0oof5")
 stream_10/stream = ExtResource("70_0qu7n")
 stream_11/stream = ExtResource("71_w4n22")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0u0ij"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6xysc"]
 streams_count = 8
 stream_0/stream = ExtResource("84_6c1ss")
 stream_1/stream = ExtResource("85_4h4xb")
@@ -3751,14 +3751,14 @@ stream_5/stream = ExtResource("89_6mrml")
 stream_6/stream = ExtResource("90_aosch")
 stream_7/stream = ExtResource("91_0oof5")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_04uu4"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_n5cre"]
 streams_count = 4
 stream_0/stream = ExtResource("92_5n61s")
 stream_1/stream = ExtResource("93_mgq8m")
 stream_2/stream = ExtResource("94_64jpf")
 stream_3/stream = ExtResource("95_6b02s")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hynv0"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6c0ht"]
 streams_count = 18
 stream_0/stream = ExtResource("96_vjj1a")
 stream_1/stream = ExtResource("97_bf2fh")
@@ -3779,7 +3779,7 @@ stream_15/stream = ExtResource("103_y0n1i")
 stream_16/stream = ExtResource("104_ufyms")
 stream_17/stream = ExtResource("105_h6osx")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0uty3"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_trcj5"]
 streams_count = 15
 stream_0/stream = ExtResource("114_r3x4s")
 stream_1/stream = ExtResource("115_3pb12")
@@ -3797,7 +3797,7 @@ stream_12/stream = ExtResource("118_mj0l0")
 stream_13/stream = ExtResource("119_xhmt7")
 stream_14/stream = ExtResource("120_h0so4")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8wypw"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_n6k6u"]
 streams_count = 29
 stream_0/stream = ExtResource("129_1ytdb")
 stream_1/stream = ExtResource("130_105bu")
@@ -4184,12 +4184,12 @@ texture = SubResource("CanvasTexture_yt8hw")
 
 [node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(76, -81)
-rotation = 0.516533
+rotation = 0.4353
 scale = Vector2(0.999849, 0.999849)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.516533
+target_rotation = 0.434009
 target_position = Vector2(76, -81)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_1wv2b")
@@ -4198,12 +4198,12 @@ constraint_data = SubResource("Resource_fnsbc")
 
 [node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
 position = Vector2(-456, 15)
-rotation = 0.464523
+rotation = 0.69062
 scale = Vector2(0.999865, 0.999865)
 rest = Transform2D(1, 0, 0, 1, -456, 15)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.464523
+target_rotation = 0.692021
 target_position = Vector2(-456, 15)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_8lj5r")
@@ -4212,12 +4212,12 @@ constraint_data = SubResource("Resource_on25f")
 
 [node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
 position = Vector2(-703, -9)
-rotation = -0.451428
-scale = Vector2(0.999852, 0.999852)
+rotation = -0.481601
+scale = Vector2(0.999843, 0.999843)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.451429
+target_rotation = -0.480252
 target_position = Vector2(-703, -9)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_ewen2")
@@ -4226,12 +4226,12 @@ constraint_data = SubResource("Resource_ta0ym")
 
 [node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
 position = Vector2(-668, 8)
-rotation = -0.579965
-scale = Vector2(0.999884, 0.999884)
+rotation = -0.639024
+scale = Vector2(0.999882, 0.999882)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.579967
+target_rotation = -0.638954
 target_position = Vector2(-668, 8)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_623or")
@@ -4240,8 +4240,8 @@ constraint_data = SubResource("Resource_k6bb4")
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
 position = Vector2(-594, 28)
-rotation = -0.0139724
-scale = Vector2(0.999695, 0.999695)
+rotation = -0.135157
+scale = Vector2(0.999696, 0.999696)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
@@ -4256,7 +4256,7 @@ remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
 [node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-55.0004, 119)
-scale = Vector2(0.999829, 0.999829)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 89.071
@@ -4296,7 +4296,7 @@ bone_angle = -96.429
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(-24.0005, 62)
 rotation = -0.00942021
-scale = Vector2(0.999851, 0.999851)
+scale = Vector2(0.99985, 0.99985)
 rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
 editor_settings/show_bone_gizmo = false
 
@@ -4316,7 +4316,7 @@ bone_angle = 51.429
 
 [node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
 position = Vector2(-450.817, 190.762)
-scale = Vector2(0.99983, 0.99983)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4340,7 +4340,7 @@ scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, 26.4717, 56.252)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 0.720399
+target_rotation = 0.751988
 target_position = Vector2(26.4717, 56.252)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4349,12 +4349,12 @@ constraint_data = SubResource("Resource_iplph")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
 position = Vector2(-144.681, 71.6403)
-rotation = -0.0234517
-scale = Vector2(0.999889, 0.999889)
+rotation = -0.0168515
+scale = Vector2(0.999884, 0.999884)
 rest = Transform2D(1, 0, 0, 1, -144.681, 71.6403)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -1.85969
+target_rotation = -1.85072
 target_position = Vector2(-144.681, 71.6403)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4364,11 +4364,11 @@ constraint_data = SubResource("Resource_43o6b")
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
 position = Vector2(-148.182, 18.605)
 rotation = 0.0603929
-scale = Vector2(0.99982, 0.99982)
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(1, 0, 0, 1, -148.182, 18.605)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = 1.28505
+target_rotation = 1.2627
 target_position = Vector2(-148.182, 18.605)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4377,15 +4377,15 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-146.994, -1.38475)
-rotation = -0.283546
-scale = Vector2(0.999844, 0.999844)
+rotation = -0.276108
+scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.246
 script = ExtResource("34_sbkqv")
 transform_mode = 0
-target_rotation = -0.821311
+target_rotation = -0.855037
 target_position = Vector2(-146.994, -1.38475)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_hp2yj")
@@ -4398,7 +4398,7 @@ remote_path = NodePath("../../../../../../../../IK Targets/TongueRemote")
 
 [node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
 position = Vector2(124, -56)
-scale = Vector2(0.99985, 0.99985)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, 124, -56)
 auto_calculate_length_and_angle = false
 length = 276.317
@@ -4528,9 +4528,9 @@ gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
 [node name="TongueRemote" type="Node2D" parent="IK Targets"]
-position = Vector2(-2440.15, -818.342)
-rotation = -0.0737284
-scale = Vector2(0.998997, 0.998997)
+position = Vector2(-2304.39, -895.485)
+rotation = -0.139283
+scale = Vector2(0.998986, 0.998986)
 
 [node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote"]
 unique_name_in_owner = true
@@ -4563,7 +4563,7 @@ parameters/NoseFlareStrength/blend_amount = 0.0
 parameters/NoseFlareTransition/current_state = "idle"
 parameters/NoseFlareTransition/transition_request = ""
 parameters/NoseFlareTransition/current_index = 0
-"parameters/Parameter Animation/IdleTickle/blend_position" = -0.000618458
+"parameters/Parameter Animation/IdleTickle/blend_position" = 0.00694444
 "parameters/Parameter Animation/SneezeBlend/blend_position" = 0.0
 "parameters/Parameter Animation/SneezeBlend2/blend_position" = 0
 parameters/SneezeBuffer/current_state = "buffer_0"
@@ -4576,9 +4576,9 @@ parameters/SneezeOneShot/request = 0
 [node name="Remote Transforms" type="Node" parent="."]
 
 [node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-962.549, -339.604)
-rotation = -0.319126
-scale = Vector2(0.399658, 0.399658)
+position = Vector2(-909.079, -371.32)
+rotation = -0.38468
+scale = Vector2(0.399654, 0.399654)
 
 [node name="GlitterParticles" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
 unique_name_in_owner = true
@@ -4629,14 +4629,14 @@ Sniff = NodePath("AudioLoaderSniff")
 pitch_range = Vector2(0.95, 1.05)
 
 [node name="AudioLoaderBuildup" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_dp7xv")
+stream = SubResource("AudioStreamRandomizer_o2tv5")
 pitch_scale = 0.994256
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/buildup"
 
 [node name="AudioLoaderSneeze" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_1k1h1")
+stream = SubResource("AudioStreamRandomizer_8lt0t")
 pitch_scale = 1.00224
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
@@ -4645,7 +4645,7 @@ do_filter = true
 file_filter = "Normal"
 
 [node name="AudioLoaderSneezeBig" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_0u0ij")
+stream = SubResource("AudioStreamRandomizer_6xysc")
 pitch_scale = 1.00224
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
@@ -4654,7 +4654,7 @@ do_filter = true
 file_filter = "Big"
 
 [node name="AudioLoaderSneezeStifle" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_04uu4")
+stream = SubResource("AudioStreamRandomizer_n5cre")
 pitch_scale = 1.00224
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
@@ -4663,13 +4663,13 @@ do_filter = true
 file_filter = "Stifle"
 
 [node name="AudioLoaderSigh" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_hynv0")
+stream = SubResource("AudioStreamRandomizer_6c0ht")
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/sigh"
 
 [node name="AudioLoaderHitch" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_0uty3")
+stream = SubResource("AudioStreamRandomizer_trcj5")
 volume_db = 5.0
 pitch_scale = 0.999183
 max_distance = 10000.0
@@ -4677,16 +4677,16 @@ script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/hitch"
 
 [node name="AudioLoaderSniff" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
-stream = SubResource("AudioStreamRandomizer_8wypw")
+stream = SubResource("AudioStreamRandomizer_n6k6u")
 pitch_scale = 0.981055
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/sniff"
 
 [node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-993.808, -388.86)
-rotation = -0.0643082
-scale = Vector2(0.399658, 0.399658)
+position = Vector2(-943.497, -418.422)
+rotation = -0.129862
+scale = Vector2(0.399654, 0.399654)
 
 [node name="NoseOuter" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("connected_nose") instance=ExtResource("69_ekg2v")]
 unique_name_in_owner = true
@@ -4749,9 +4749,9 @@ tracked_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_factor = 0.1
 
 [node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-745.872, -525.545)
-rotation = -0.0643082
-scale = Vector2(0.399658, 0.399658)
+position = Vector2(-705.049, -571.053)
+rotation = -0.129862
+scale = Vector2(0.399654, 0.399654)
 
 [node name="Nose Insertion" type="Node2D" parent="Remote Transforms/HeadRemote"]
 position = Vector2(-645.549, 297.654)
