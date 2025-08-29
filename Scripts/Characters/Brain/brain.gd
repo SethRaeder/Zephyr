@@ -173,11 +173,7 @@ func get_tickle_percent() -> float:
 	return clampf(tickle_curve.sample_baked(sneeze_trigger_count.get_percent() * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)), 0.0, 1.0)
 
 func timer_timeout():
-	anim_parameters["hitch"] = false
-	anim_parameters["buildup"] = false
-	anim_parameters["sneeze"] = false
-	anim_parameters["sigh"] = false
-	anim_parameters["sniff"] = false
+	reset_state_parameters()
 	
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
@@ -210,7 +206,7 @@ func timer_timeout():
 		anim_parameters["sniff"] = true
 
 func reset_tracker_params():
-	print("Reset parameters!")
+	print_rich("[color=green]Reset parameters!")
 	is_hitching = false
 	is_building = false
 	is_sneezing = false
@@ -222,44 +218,57 @@ func reset_tracker_params():
 	anim_parameters["sigh_interrupt"] = false
 	anim_parameters["sniff_interrupt"] = false
 
+func reset_state_parameters():
+	anim_parameters["hitch"] = false
+	anim_parameters["buildup"] = false
+	anim_parameters["sneeze"] = false
+	anim_parameters["sigh"] = false
+	anim_parameters["sniff"] = false
+
 func _on_animation_finished(animation_name : StringName):
 	print("On anim finished... ",animation_name)
 	match animation_name:
-		"hitch", "sneeze_control", "buildup":
+		"hitch", "sneeze_small", "sneeze", "sneeze_big", "buildup":
 			reset_tracker_params()
 
 func on_hitch_anim():
 	print("Hitch Anim")
 	reset_tracker_params()
+	reset_state_parameters()
 	is_hitching = true
 
 func on_buildup_anim():
 	print("Buildup Anim")
 	reset_tracker_params()
+	reset_state_parameters()
 	is_building = true
 
 var current_sneeze_buffer : int = 0
 func on_sneeze_anim():
+	print_rich("[color=orange]Sneeze Anim")
 	if _sneeze_queued:
 		return
-	print("Sneeze Anim")
 	_sneeze_queued = true
 	reset_tracker_params()
+	reset_state_parameters()
+	is_sneezing = true
 	
 	current_sneeze_buffer = (current_sneeze_buffer + 1)%2
 	animation_tree.set("parameters/SneezeBuffer/transition_request", "buffer_%d"%current_sneeze_buffer)
 	if not animation_tree.get("parameters/SneezeOneShot/active"):
 		animation_tree.set("parameters/SneezeOneShot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	is_sneezing = true
+	
 
 func on_sigh_anim():
 	print("Sigh Anim")
 	reset_tracker_params()
+	reset_state_parameters()
 	is_sighing = true
 
 func on_sniff_anim():
 	print("Sniff Anim")
 	reset_tracker_params()
+	reset_state_parameters()
 	is_sniffing = true
 	do_must_breathe()
 	#TODO: Reduce "mess" after mess implemented
@@ -284,7 +293,7 @@ func do_sneeze():
 		sneeze_trigger_count.add_value(-sneeze_trigger_expel * fit_trigger_count_mult * sneeze_size)
 
 func sneeze_finished():
-	print("Sneeze Interrupt")
+	print_rich("[color=blue]Sneeze Interrupt: True!")
 	anim_parameters["sneeze_interrupt"] = true
 
 func hitch_finished():
