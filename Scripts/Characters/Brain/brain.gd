@@ -122,7 +122,7 @@ func _ready() -> void:
 				nose.on_sneeze(sneeze_size)
 			)
 	
-	update_timer.timeout.connect(timer_timeout)
+	update_timer.timeout.connect(_on_update_timeout)
 	
 	voice.on_hitch.connect(do_hitch)
 	voice.on_buildup.connect(do_buildup)
@@ -130,32 +130,56 @@ func _ready() -> void:
 	
 	voice.on_sneeze_finished.connect(func():
 		anim_timeout_timer.start()
+		print("%s finished : %s"%["sneeze voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
+		print("%s finished : %s"%["sneeze timer",Time.get_ticks_msec()])
 		sneeze_finished()
 	)
 	voice.on_buildup_finished.connect(func():
 		anim_timeout_timer.start()
+		print("%s finished : %s"%["buildup voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
+		print("%s finished : %s"%["buildup timer",Time.get_ticks_msec()])
 		buildup_finished()
 	)
 	voice.on_hitch_finished.connect(func():
 		anim_timeout_timer.start()
+		print("%s finished : %s"%["hitch voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
+		print("%s finished : %s"%["hitch timer",Time.get_ticks_msec()])
 		hitch_finished()
 	)
 	voice.on_sigh_finished.connect(func():
 		anim_timeout_timer.start()
+		print("%s finished : %s"%["sigh voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
+		print("%s finished : %s"%["sigh timer",Time.get_ticks_msec()])
 		sigh_finished()
 	)
 	voice.on_sniff_finished.connect(func():
 		anim_timeout_timer.start()
+		print("%s finished : %s"%["sniff voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
+		print("%s finished : %s"%["sniff timer",Time.get_ticks_msec()])
 		sniff_finished()
 	)
 	
 	animation_tree.active = true
 	
+	animation_tree.animation_started.connect(func(anim_name : StringName):
+		print_rich("[color=yellow]Animation Started: %s"%anim_name)
+		match(anim_name):
+			"sneeze","sneeze_small","sneeze_big":
+				on_sneeze_anim()
+			"sigh":
+				on_sigh_anim()
+			"buildup":
+				on_buildup_anim()
+			"hitch":
+				on_hitch_anim()
+			"sniff":
+				on_sniff_anim()
+	)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -172,7 +196,7 @@ func _process(delta: float) -> void:
 func get_tickle_percent() -> float:
 	return clampf(tickle_curve.sample_baked(sneeze_trigger_count.get_percent() * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)), 0.0, 1.0)
 
-func timer_timeout():
+func _on_update_timeout():
 	reset_state_parameters()
 	
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
@@ -228,45 +252,43 @@ func reset_state_parameters():
 func _on_animation_finished(animation_name : StringName):
 	print("On anim finished... ",animation_name)
 	match animation_name:
-		"hitch", "sneeze_small", "sneeze", "sneeze_big", "buildup":
+		"hitch", "sneeze_control", "buildup":
 			reset_tracker_params()
 
 func on_hitch_anim():
 	print("Hitch Anim")
+	voice.Play_Hitch()
 	reset_tracker_params()
-	reset_state_parameters()
+	#reset_state_parameters()
 	is_hitching = true
 
 func on_buildup_anim():
 	print("Buildup Anim")
+	voice.Play_Buildup()
 	reset_tracker_params()
-	reset_state_parameters()
+	#reset_state_parameters()
 	is_building = true
 
-var current_sneeze_buffer : int = 0
 func on_sneeze_anim():
-	print_rich("[color=orange]Sneeze Anim")
 	if _sneeze_queued:
 		return
+	print_rich("Sneeze Anim")
+	voice.Play_Sneeze(0.333)
 	_sneeze_queued = true
 	reset_tracker_params()
-	reset_state_parameters()
+	#reset_state_parameters()
 	is_sneezing = true
-	
-	current_sneeze_buffer = (current_sneeze_buffer + 1)%2
-	animation_tree.set("parameters/SneezeBuffer/transition_request", "buffer_%d"%current_sneeze_buffer)
-	if not animation_tree.get("parameters/SneezeOneShot/active"):
-		animation_tree.set("parameters/SneezeOneShot/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	
 
 func on_sigh_anim():
 	print("Sigh Anim")
+	voice.Play_Sigh()
 	reset_tracker_params()
 	reset_state_parameters()
 	is_sighing = true
 
 func on_sniff_anim():
 	print("Sniff Anim")
+	voice.Play_Sniff()
 	reset_tracker_params()
 	reset_state_parameters()
 	is_sniffing = true
@@ -293,7 +315,7 @@ func do_sneeze():
 		sneeze_trigger_count.add_value(-sneeze_trigger_expel * fit_trigger_count_mult * sneeze_size)
 
 func sneeze_finished():
-	print_rich("[color=blue]Sneeze Interrupt: True!")
+	print_rich("[color=lightskyblue]Sneeze Interrupt: True!")
 	anim_parameters["sneeze_interrupt"] = true
 
 func hitch_finished():

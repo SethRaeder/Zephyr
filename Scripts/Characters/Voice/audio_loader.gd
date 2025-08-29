@@ -27,13 +27,14 @@ func do_load():
 		for file : String in files_list:
 			#print("File : ",file)
 			if file.ends_with(".wav.import"):
-				print("Checking file ",file)
+				#print("Checking file ",file)
 				if do_filter:
 					if not file.contains(file_filter):
-						print("File ",file," did not contain ",file_filter)
+						#print("File ",file," did not contain ",file_filter)
 						continue
 				
 				file = file.split(".import")[0]
+				print("Importing file %s"%file)
 				var new_stream = load(file)
 				new_stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
 				stream.add_stream(-1, new_stream, 1.0)
