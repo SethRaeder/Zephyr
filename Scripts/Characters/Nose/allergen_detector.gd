@@ -3,7 +3,7 @@ class_name AllergenDetector
 
 @export_category("Node References")
 ##Connect here to hook into sneeze signals to expel particles.
-@export var brain : Brain
+var brain : Brain
 
 @export_category("Allergen Settings")
 ##Allergy Resource this detector should track
@@ -52,6 +52,10 @@ func _ready() -> void:
 	add_to_group("has_sliders")
 	add_to_group("has_curves")
 	var all_noses = get_tree().get_nodes_in_group("nose")
+	
+	brain = get_tree().get_first_node_in_group("brain")
+	assert(brain)
+	
 	for nose in all_noses:
 		if nose is NoseTriggerZone:
 			nose_dict[nose as NoseTriggerZone] = 0.0

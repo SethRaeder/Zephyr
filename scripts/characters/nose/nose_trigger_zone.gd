@@ -4,6 +4,8 @@ class_name NoseTriggerZone
 @export_category("General Stats")
 ##Amount of trigger to send to brain if dice roll is successful
 @export var sneeze_trigger_amount : float = 10
+@export var update_frequency : float = 0.5
+@export_flags_2d_physics var collision_layers : int = 8
 
 @export_category("Tickle Damage Share")
 ##Hitbox that this nose should share tickle damage to.
@@ -39,9 +41,9 @@ class_name NoseTriggerZone
 ##How many seconds does it take to decay the sensitivity value from full back to the middle point of the graph.
 @export var sensitivity_decay_seconds : float = 60
 
-@onready var sneeze_trigger_timer: Timer = %SneezeTriggerTimer
-@onready var tickle_decay_timer: Timer = %TickleDecayTimer
-@onready var burn_decay_timer: Timer = %BurnDecayTimer
+var sneeze_trigger_timer: Timer
+var tickle_decay_timer: Timer
+var burn_decay_timer: Timer
 
 #Holds min, max and current value for tickle amount
 var tickle : CustomBoundedValue
@@ -69,6 +71,10 @@ signal on_nose_damage(tickle_amount : float, damage_type : TickleComponent.DAMAG
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("has_sliders")
+	add_to_group("nose")
+	
+	collision_layer = collision_layers
 	var setup_bound = func(name : String, curve : Curve) -> CustomBoundedValue:
 		var bound = CustomBoundedValue.new()
 		bound.name = name
@@ -90,7 +96,19 @@ func _ready() -> void:
 	burn_decay = burn.max_value / burn_decay_seconds
 	sensitivity_decay = sensitivity.max_value / 2 / sensitivity_decay_seconds
 
+
+	burn_decay_timer = Timer.new()
+	burn_decay_timer.one_shot = true
+	tickle_decay_timer = Timer.new()
+	tickle_decay_timer.one_shot = true
+	sneeze_trigger_timer = Timer.new()
+	
+	add_child(burn_decay_timer)
+	add_child(tickle_decay_timer)
+	add_child(sneeze_trigger_timer)
+	
 	sneeze_trigger_timer.timeout.connect(do_sneeze_trigger)
+	sneeze_trigger_timer.start(update_frequency)
 	
 	#Tickle/Burn move to the low end of the bounded value.
 	_tickle_target = tickle.min_value

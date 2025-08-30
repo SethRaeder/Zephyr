@@ -2,8 +2,8 @@ extends Marker2D
 class_name WindOrigin
 
 @export var lungs : Lungs
-@export var wind_strength_radial : float = 0.0
-@export var wind_strength_linear : float = 0.0
+var wind_strength_radial : float = 0.0
+var wind_strength_linear : float = 0.0
 
 ##A Marker2D representing the origin of radial suction/blowing from this wind origin. Should be child of this node.
 @export var radial_wind_origin : Marker2D
@@ -20,6 +20,7 @@ class_name WindOrigin
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("wind")
 	if lungs:
 		lungs.breathe_rate.connect(func(rate : float):
 			#print("Origin: Rate: %.2f" % rate)

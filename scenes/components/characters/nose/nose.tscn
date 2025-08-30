@@ -1,22 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://c33t2nvl25e1u"]
 
-[ext_resource type="Script" uid="uid://exewpwy2qcrr" path="res://scripts/characters/nose/nose.gd" id="1_onyl2"]
+[ext_resource type="Script" uid="uid://exewpwy2qcrr" path="res://scripts/characters/nose/nose_trigger_zone.gd" id="1_onyl2"]
 
-[node name="Nose" type="Area2D" groups=["has_sliders", "nose"]]
+[node name="Nose" type="Area2D"]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_onyl2")
-
-[node name="SneezeTriggerTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-autostart = true
-
-[node name="TickleDecayTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-one_shot = true
-autostart = true
-
-[node name="BurnDecayTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-one_shot = true
-autostart = true

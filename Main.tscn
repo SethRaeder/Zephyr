@@ -1,5 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bo6gnqhjsl6w5"]
 
+[ext_resource type="Script" uid="uid://bloe0evkg345u" path="res://character_spawner.gd" id="1_kjvhd"]
 [ext_resource type="Script" uid="uid://btlrqsssxx0wa" path="res://scripts/levels/center_background.gd" id="1_s7jfl"]
 [ext_resource type="Texture2D" uid="uid://c3iehehdye5rj" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-7.png" id="1_t6vys"]
 [ext_resource type="Texture2D" uid="uid://blawpu7xr15j0" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-6.png" id="2_cx2mc"]
@@ -10,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b5l35j13ruljk" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-3.png" id="5_gi44c"]
 [ext_resource type="Script" uid="uid://dkqqqb8bjfev3" path="res://scripts/ui/debug_toggle.gd" id="6_qhpe8"]
 [ext_resource type="Script" uid="uid://bpjtugwutdsiw" path="res://scripts/components/util/parallax_component.gd" id="6_w6b3a"]
-[ext_resource type="PackedScene" uid="uid://b5xb3hmgqonby" path="res://scenes/characters/Zephyr/zephyr_rig.tscn" id="7_sc1dx"]
 [ext_resource type="Texture2D" uid="uid://dn16xu422guo3" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-2.png" id="7_v421o"]
 [ext_resource type="Texture2D" uid="uid://vvppa027u41q" path="res://assets/images/background/crystal_cave/dergsnzbg-kel-1.png" id="8_ysigt"]
 [ext_resource type="Texture2D" uid="uid://gv2wl5uuxdcx" path="res://assets/images/ui/can.png" id="13_th40t"]
@@ -36,10 +36,8 @@ size = Vector2(66, 63.5)
 
 [node name="Main" type="Node2D"]
 
-[node name="Zephyr_Rig" parent="." instance=ExtResource("7_sc1dx")]
-z_index = -10
-position = Vector2(1046, 522)
-scale = Vector2(0.25, 0.25)
+[node name="CharacterSpawner" type="Node2D" parent="."]
+script = ExtResource("1_kjvhd")
 
 [node name="Background" type="Node2D" parent="."]
 z_index = -10
