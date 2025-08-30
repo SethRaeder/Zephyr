@@ -27,6 +27,7 @@ func on_body_entered(body):
 			
 			#Transfer ownership to the Clip Mask
 			body.InsertSprite.reparent(insert_mask)
+			print_rich("[color=orange]Reparented %s to %s"%[body,insert_mask])
 			
 func on_body_exited(body):
 	if body is SneezeTool:

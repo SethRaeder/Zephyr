@@ -16,7 +16,6 @@ collision_mask = 512
 mass = 0.01
 gravity_scale = 0.01
 script = ExtResource("1_eg4o2")
-particle_lifetime = 30.0
 delete_on_tickle_finished = true
 
 [node name="WindSubscriber" type="Marker2D" parent="."]

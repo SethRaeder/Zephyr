@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyy7t4xm52dq1"]
+
+[ext_resource type="PackedScene" uid="uid://b5xb3hmgqonby" path="res://scenes/characters/Zephyr/zephyr_rig.tscn" id="1_5y6b7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Zephyr_Rig" parent="." instance=ExtResource("1_5y6b7")]
+position = Vector2(1121, 627)
+scale = Vector2(0.31, 0.31)

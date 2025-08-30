@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vgr73a88fmma"
+path="res://.godot/imported/Sneeze Stifle-2.wav-fd5eb49d74d136588004f3edd6d8ee9b.sample"
+
+[deps]
+
+source_file="res://assets/audio/Star_voice/sneeze/18/Sneeze Stifle-2.wav"
+dest_files=["res://.godot/imported/Sneeze Stifle-2.wav-fd5eb49d74d136588004f3edd6d8ee9b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

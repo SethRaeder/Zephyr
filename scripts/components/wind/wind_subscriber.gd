@@ -6,7 +6,7 @@ var wind_origins = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.add_to_group("wind");
+	add_to_group("wind");
 	
 	for wind_node in get_tree().get_nodes_in_group("wind"):
 		if wind_node is WindOrigin:

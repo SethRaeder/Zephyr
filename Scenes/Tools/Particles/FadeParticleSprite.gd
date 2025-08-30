@@ -7,6 +7,9 @@ var tickle_components : Array[TickleComponent] = []
 var max_value : float= 0
 var parent_modulate : Color
 var parent_scale : Vector2
+
+@export var fade_curve : Curve = preload("res://resources/curves/default_particle_fade_curve.tres")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	parent_modulate = get_parent().modulate
@@ -28,5 +31,6 @@ func _process(_delta: float) -> void:
 	#print(" Fade Sprite : ",current_value / max_value)
 	var lifetime_factor : float = root_node.lifetime / root_node.particle_lifetime
 	
-	get_parent().modulate = parent_modulate.lerp(Color.TRANSPARENT, max(lifetime_factor, damage_factor))
-	get_parent().scale = parent_scale.lerp(parent_scale * 0.1, max(lifetime_factor, damage_factor))
+	var lerp_factor : float = fade_curve.sample_baked(max(lifetime_factor, damage_factor))
+	get_parent().modulate = parent_modulate.lerp(Color.TRANSPARENT, lerp_factor)
+	get_parent().scale = parent_scale.lerp(parent_scale * 0.1, lerp_factor)
