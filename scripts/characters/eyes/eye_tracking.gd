@@ -14,6 +14,7 @@ var _update_timer : Timer
 @export var look_roll_back_target: Marker2D
 @export var look_at_nose_target: Marker2D
 @export var look_center_target: Marker2D
+@export var limit_length : float = 60.0
 
 func _ready():
 	assert(look_at_nose_target)
@@ -33,7 +34,7 @@ func _process(_delta: float) -> void:
 	#print("Pupil Position: %s"%pupil_bone.position)
 	eye_target.global_position = lerp(eye_target.global_position, target_position, 0.1)
 	look_vector = eye_target.global_position - pupil_bone.global_position
-	pupil_bone.position = (look_vector / 3.0).limit_length(60);
+	pupil_bone.position = (look_vector / 3.0).limit_length(limit_length);
 	
 
 func _update_target_position():

@@ -130,37 +130,37 @@ func _ready() -> void:
 	
 	voice.on_sneeze_finished.connect(func():
 		anim_timeout_timer.start()
-		print("%s finished : %s"%["sneeze voice",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["sneeze voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
-		print("%s finished : %s"%["sneeze timer",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["sneeze timer",Time.get_ticks_msec()])
 		sneeze_finished()
 	)
 	voice.on_buildup_finished.connect(func():
 		anim_timeout_timer.start()
-		print("%s finished : %s"%["buildup voice",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["buildup voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
-		print("%s finished : %s"%["buildup timer",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["buildup timer",Time.get_ticks_msec()])
 		buildup_finished()
 	)
 	voice.on_hitch_finished.connect(func():
 		anim_timeout_timer.start()
-		print("%s finished : %s"%["hitch voice",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["hitch voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
-		print("%s finished : %s"%["hitch timer",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["hitch timer",Time.get_ticks_msec()])
 		hitch_finished()
 	)
 	voice.on_sigh_finished.connect(func():
 		anim_timeout_timer.start()
-		print("%s finished : %s"%["sigh voice",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["sigh voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
-		print("%s finished : %s"%["sigh timer",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["sigh timer",Time.get_ticks_msec()])
 		sigh_finished()
 	)
 	voice.on_sniff_finished.connect(func():
 		anim_timeout_timer.start()
-		print("%s finished : %s"%["sniff voice",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["sniff voice",Time.get_ticks_msec()])
 		await anim_timeout_timer.timeout
-		print("%s finished : %s"%["sniff timer",Time.get_ticks_msec()])
+		#print("%s finished : %s"%["sniff timer",Time.get_ticks_msec()])
 		sniff_finished()
 	)
 	
@@ -197,7 +197,7 @@ func get_tickle_percent() -> float:
 	return clampf(tickle_curve.sample_baked(sneeze_trigger_count.get_percent() * (1.0 if fit_timer.is_stopped() else fit_sneeze_bonus)), 0.0, 1.0)
 
 func _on_update_timeout():
-	reset_state_parameters()
+	#reset_state_parameters()
 	
 	update_timer.wait_time = update_timer_base_time + randf_range(0.0,update_timer_max_variance)
 	#print("<Brain> Sneeze trigger: ",sneeze_trigger_count)
@@ -230,7 +230,7 @@ func _on_update_timeout():
 		anim_parameters["sniff"] = true
 
 func reset_tracker_params():
-	print_rich("[color=green]Reset parameters!")
+	print_rich("[color=green]Reset tracker parameters!")
 	is_hitching = false
 	is_building = false
 	is_sneezing = false
@@ -243,6 +243,7 @@ func reset_tracker_params():
 	anim_parameters["sniff_interrupt"] = false
 
 func reset_state_parameters():
+	print_rich("[color=darkgreen]Reset state parameters")
 	anim_parameters["hitch"] = false
 	anim_parameters["buildup"] = false
 	anim_parameters["sneeze"] = false
@@ -252,21 +253,22 @@ func reset_state_parameters():
 func _on_animation_finished(animation_name : StringName):
 	print("On anim finished... ",animation_name)
 	match animation_name:
-		"hitch", "sneeze_control", "buildup":
+		"hitch", "sneeze", "sneeze_small", "sneeze_big", "buildup":
 			reset_tracker_params()
+			reset_state_parameters()
 
 func on_hitch_anim():
 	print("Hitch Anim")
 	voice.Play_Hitch()
 	reset_tracker_params()
-	#reset_state_parameters()
+	reset_state_parameters()
 	is_hitching = true
 
 func on_buildup_anim():
 	print("Buildup Anim")
 	voice.Play_Buildup()
 	reset_tracker_params()
-	#reset_state_parameters()
+	reset_state_parameters()
 	is_building = true
 
 func on_sneeze_anim():
@@ -276,7 +278,7 @@ func on_sneeze_anim():
 	voice.Play_Sneeze(0.333)
 	_sneeze_queued = true
 	reset_tracker_params()
-	#reset_state_parameters()
+	reset_state_parameters()
 	is_sneezing = true
 
 func on_sigh_anim():

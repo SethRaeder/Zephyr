@@ -1,7 +1,7 @@
 extends RigidBody2D
 class_name ToolParticle
 
-@export var particle_lifetime : float = 10.0
+@export var particle_lifetime : float = 30
 @export var particle_lifetime_variance : Vector2 = Vector2(0.5,1.0)
 
 @export var delete_on_tickle_finished : bool = false
@@ -13,12 +13,16 @@ var sprite : Sprite2D
 var wind_subscriber : WindSubscriber
 
 signal particle_die()
-@export var particle_air_limit : float = 200.0
+@export var particle_air_limit : float = 50.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("tool_particles")
 	particle_lifetime *= randf_range(particle_lifetime_variance.x, particle_lifetime_variance.y)
+	
+	mass *= randf_range(0.9,1.1)
+	gravity_scale *= randf_range(0.9,1.1)
+	scale *= randf_range(0.8,1.2)
 	
 	for child in get_children(true):
 		if child is TickleComponent:

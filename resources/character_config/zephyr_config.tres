@@ -8,5 +8,5 @@ name = &"Zephyr"
 scene_path = "uid://b5xb3hmgqonby"
 position = Vector2(1046, 522)
 scale = Vector2(0.25, 0.25)
-z_index = -10
+z_index = 0
 metadata/_custom_type_script = "uid://de0j84lrtq3ff"

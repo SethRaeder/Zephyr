@@ -2,6 +2,11 @@
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bkxyc"]
 animation = &"idle"
+use_custom_timeline = true
+timeline_length = 10.0
+stretch_time_scale = true
+start_offset = 0.0
+loop_mode = 2
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mwwe4"]
 animation = &"tickle"

@@ -75,6 +75,8 @@ func _ready() -> void:
 	add_to_group("nose")
 	
 	collision_layer = collision_layers
+	collision_mask = 0
+	
 	var setup_bound = func(name : String, curve : Curve) -> CustomBoundedValue:
 		var bound = CustomBoundedValue.new()
 		bound.name = name
