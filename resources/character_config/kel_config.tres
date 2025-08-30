@@ -6,7 +6,7 @@
 script = ExtResource("1_57787")
 name = &"Kel"
 scene_path = "uid://boufv7sb4j0ec"
-position = Vector2(1034, 640)
-scale = Vector2(0.7, 0.7)
+position = Vector2(1080, 630)
+scale = Vector2(0.65, 0.65)
 z_index = 0
 metadata/_custom_type_script = "uid://de0j84lrtq3ff"

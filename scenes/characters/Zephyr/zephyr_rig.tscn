@@ -3785,7 +3785,7 @@ constraint_data = SubResource("Resource_6q68s")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
 position = Vector2(-175.562, 27.9839)
-rotation = -0.00275626
+rotation = -0.00275613
 scale = Vector2(0.999831, 0.999831)
 rest = Transform2D(0.999827, -0.00527886, 0.00527886, 0.999827, -175.562, 27.9839)
 auto_calculate_length_and_angle = false
