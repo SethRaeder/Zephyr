@@ -96,7 +96,7 @@ func Play_Sneeze(delay : float = 0.0):
 	print_rich("[color=magenta]Voice: Play Sneeze!")
 	
 	#Record snz size before timer
-	var sneeze_size = brain.sneeze_size
+	var sneeze_size = brain.sneeze_size.get_percent()
 	
 	_sneeze_delay_timer.start(delay)
 	await _sneeze_delay_timer.timeout

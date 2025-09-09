@@ -17,7 +17,7 @@ func _ready() -> void:
 	var brain = get_tree().get_first_node_in_group("brain")
 	if brain is Brain:
 		brain.on_sneeze.connect(func():
-			amount_ratio = wet_ratio * brain.sneeze_size
+			amount_ratio = wet_ratio * brain.sneeze_size.get_percent()
 		)
 	
 	#Get all nose triggers in tree

@@ -149,4 +149,9 @@ func breathe(rate, bonus, delta):
 	#print("Lungs: Current value: ", lungs.current_value)
 	if rate > 0:
 		oxygen.add_value(rate * oxygen_multiplier * delta)
+
+func send_sliders(container : DebugUIContainer):
+	container.add_new_header(name + " Settings", "Lung information")
+	container.add_new_slider(oxygen, "Determines need to breathe")
+	container.add_new_slider(lungs,"Current air in lungs")
 	

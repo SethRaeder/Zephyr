@@ -4,8 +4,15 @@ class_name NoseTriggerZone
 @export_category("General Stats")
 ##Amount of trigger to send to brain if dice roll is successful
 @export var sneeze_trigger_amount : float = 10
+@export var sniff_trigger_amount : float = 0.01
 @export var update_frequency : float = 0.5
 @export_flags_2d_physics var collision_layers : int = 8
+
+@export_category("Wetness")
+@export var tickle_wetness_mod : float = 0.05
+@export var burn_wetness_mod : float = 0.1
+@export var sneeze_wetness_mod : float = -0.75
+@export var sniff_wetness_mod : float = -0.2
 
 @export_category("Tickle Damage Share")
 ##Hitbox that this nose should share tickle damage to.
@@ -67,6 +74,7 @@ var sensitivity_decay : float
 var nose_wetness : CustomBoundedValue
 
 signal sneeze_trigger(amount : float)
+signal sniff_trigger(amount : float)
 signal on_nose_damage(tickle_amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_type : AllergyResource)
 
 # Called when the node enters the scene tree for the first time.
@@ -131,8 +139,8 @@ func _process(delta: float) -> void:
 	if sensitivity.get_percent() < 0.5:
 		sensitivity.add_value(delta * sensitivity_decay)
 	
-	nose_wetness.add_value(delta * tickle.get_percent() * 0.1)
-	nose_wetness.add_value(delta * burn.get_percent() * 0.2)
+	nose_wetness.add_value(delta * tickle.get_percent() * tickle_wetness_mod)
+	nose_wetness.add_value(delta * burn.get_percent() * burn_wetness_mod)
 
 func do_sneeze_trigger():
 	var trigger_chance : float = 0.0
@@ -141,6 +149,8 @@ func do_sneeze_trigger():
 	
 	if randf() < trigger_chance:
 		sneeze_trigger.emit(sneeze_trigger_amount)
+	
+	sniff_trigger.emit(nose_wetness.get_percent() * sniff_trigger_amount)
 
 func on_sneeze(sneeze_size : float = 1.0):
 	print("<NOSE> On Sneeze")
@@ -150,7 +160,12 @@ func on_sneeze(sneeze_size : float = 1.0):
 	sensitivity.current_value = sensitivity.current_value * sensitivity_multiplier_on_sneeze * sneeze_size
 	
 	#Remove some amount of wetness
-	nose_wetness.current_value = nose_wetness.current_value * 0.3 * sneeze_size
+	nose_wetness.add_value(nose_wetness.max_value * sneeze_wetness_mod * sneeze_size)
+
+func on_sniff():
+	print("<NOSE> On Sniff")
+	#Remove some amount of wetness
+	nose_wetness.add_value(nose_wetness.max_value * sniff_wetness_mod)
 
 func damage(amount : float, damage_type : TickleComponent.DAMAGE_TYPES, allergy_resource : AllergyResource = null, share : bool = true):
 	if share and connected_nose != null:
