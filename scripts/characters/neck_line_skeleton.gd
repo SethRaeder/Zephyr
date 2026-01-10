@@ -14,6 +14,7 @@ func init_line():
 		add_point(new_pos)
 		
 func _ready() -> void:
+	assert(path)
 	init_line()
 
 func _process(_delta: float) -> void:

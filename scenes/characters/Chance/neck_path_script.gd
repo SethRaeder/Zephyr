@@ -3,12 +3,17 @@ extends Path2D
 
 @export var tracked_bones : Array[Node2D]
 @export var smoothing : float = 1000
+@export var track : bool = true
+
 func _ready() -> void:
 	curve.clear_points()
 	for bone in tracked_bones:
 		curve.add_point(bone.global_position)
 
 func _process(_delta: float) -> void:
+	if not track:
+		return
+	
 	for i in range(tracked_bones.size()):
 		curve.set_point_position(i,tracked_bones[i].global_position)
 		var tangent_start = tracked_bones[i].global_position
