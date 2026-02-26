@@ -2,7 +2,7 @@
 extends Path2D
 
 @export var tracked_bones : Array[Node2D]
-@export var smoothing : float = 1000
+@export var smoothing_curve : Curve
 @export var track : bool = true
 
 func _ready() -> void:
@@ -15,6 +15,7 @@ func _process(_delta: float) -> void:
 		return
 	
 	for i in range(tracked_bones.size()):
+		var smoothing : float = smoothing_curve.sample_baked(float(i) / float(tracked_bones.size()))
 		curve.set_point_position(i,tracked_bones[i].global_position)
 		var tangent_start = tracked_bones[i].global_position
 		var tangent_end = tracked_bones[i].global_position
