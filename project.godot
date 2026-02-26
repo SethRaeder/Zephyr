@@ -40,7 +40,7 @@ movie_writer/movie_file="E:/Godot/Projects/Missile Command/Render.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/minimize_html_build/plugin.cfg", "res://addons/soupik/plugin.cfg")
+enabled=PackedStringArray("res://addons/soupik/plugin.cfg")
 
 [file_customization]
 
