@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwlmonrs1rnj3"]
+[gd_scene format=3 uid="uid://bwlmonrs1rnj3"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_kmta7"]
 [ext_resource type="Texture2D" uid="uid://dkc6rqecennaq" path="res://assets/images/inducing_tools/revised/Chhinkni Bottle.PNG" id="2_c6cfs"]
@@ -22,7 +22,7 @@ point_count = 2
 [sub_resource type="CircleShape2D" id="CircleShape2D_ci8ln"]
 radius = 33.1361
 
-[node name="ToolBody" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
+[node name="ToolBody" type="RigidBody2D" unique_id=1146372430 node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
 mass = 0.2
 angular_damp = 80.0
@@ -30,11 +30,11 @@ script = ExtResource("1_kmta7")
 InsertSprite = NodePath("Sprite")
 metadata/_edit_horizontal_guides_ = [-28.0]
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1808998702]
 position = Vector2(0, 1.2)
 shape = SubResource("CapsuleShape2D_h45xq")
 
-[node name="Particles" type="Node2D" parent="."]
+[node name="Particles" type="Node2D" parent="." unique_id=2126283214]
 unique_name_in_owner = true
 position = Vector2(0, -17.8)
 script = ExtResource("5_jc6ru")
@@ -46,27 +46,27 @@ jerk_particle_variance = Vector2(1, 2)
 particle_spawn_max_speed = 1000.0
 particle_spawn_lifetime_limit = 500
 
-[node name="EmitOnBreathe" type="Marker2D" parent="Particles" node_paths=PackedStringArray("wind_subscriber")]
+[node name="EmitOnBreathe" type="Marker2D" parent="Particles" unique_id=832288616 node_paths=PackedStringArray("wind_subscriber")]
 script = ExtResource("8_pfxgb")
 local_wind_strength_threshold = 20.0
 local_wind_strength_max = 250.0
 wind_spawn_curve = SubResource("Curve_ehxyo")
 wind_subscriber = NodePath("WindSubscriber")
 
-[node name="WindSubscriber" type="Marker2D" parent="Particles/EmitOnBreathe"]
+[node name="WindSubscriber" type="Marker2D" parent="Particles/EmitOnBreathe" unique_id=1892059872]
 script = ExtResource("9_cm045")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=627804001]
 position = Vector2(0, 1.2)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_c6cfs")
 
-[node name="Cap" type="Sprite2D" parent="Sprite"]
+[node name="Cap" type="Sprite2D" parent="Sprite" unique_id=1629758698]
 position = Vector2(0, -170)
 texture = ExtResource("3_o18g1")
 script = ExtResource("4_l8ggx")
 
-[node name="CapParticle" type="Node2D" parent="."]
+[node name="CapParticle" type="Node2D" parent="." unique_id=278319161]
 unique_name_in_owner = true
 position = Vector2(0, -20.8)
 script = ExtResource("5_jc6ru")
@@ -80,13 +80,13 @@ particle_size_var_range = Vector2(1, 1)
 particle_max_count = 20
 particle_spawn_lifetime_limit = 1
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1977580132]
 position = Vector2(0, 1.2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1621196400]
 shape = SubResource("CircleShape2D_ci8ln")
 
-[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=1138805933 node_paths=PackedStringArray("grab_area")]
 position = Vector2(0, -0.800003)
 gizmo_extents = 105.2
 script = ExtResource("4_ee42l")

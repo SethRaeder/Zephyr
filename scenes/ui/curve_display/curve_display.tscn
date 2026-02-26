@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://olg8qfo6undf"]
+[gd_scene format=3 uid="uid://olg8qfo6undf"]
 
 [ext_resource type="Script" uid="uid://d0qxqafjqpye6" path="res://addons/godot_curve_editor-main/curve_editor.gd" id="1_kwhk0"]
 [ext_resource type="Script" uid="uid://11ckp08spbj7" path="res://scripts/ui/curve_display/curve_display.gd" id="1_xlrli"]
@@ -6,7 +6,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwhk0"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="CurveDisplay" type="VBoxContainer"]
+[node name="CurveDisplay" type="VBoxContainer" unique_id=2106418347]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,18 +14,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xlrli")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1751087022]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Default Curve Editor Text"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=65453841]
 custom_minimum_size = Vector2(0, 180)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_kwhk0")
 
-[node name="CurveEditor" type="Control" parent="Panel"]
+[node name="CurveEditor" type="Control" parent="Panel" unique_id=1483351361]
 unique_name_in_owner = true
 clip_contents = true
 layout_mode = 1

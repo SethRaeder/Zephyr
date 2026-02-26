@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeBlendTree" load_steps=5 format=3 uid="uid://bj6fxxaw4geb2"]
+[gd_resource type="AnimationNodeBlendTree" format=3 uid="uid://bj6fxxaw4geb2"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_l1kub"]
 
@@ -24,11 +24,11 @@ input_1/reset = true
 
 [resource]
 graph_offset = Vector2(-422.513, -36.4103)
+nodes/output/position = Vector2(280, 80)
 nodes/Buffer1/node = SubResource("AnimationNodeAnimation_3ylv6")
 nodes/Buffer1/position = Vector2(-20, 80)
 nodes/Buffer2/node = SubResource("AnimationNodeAnimation_hpbox")
 nodes/Buffer2/position = Vector2(-20, 220)
 nodes/Transition/node = SubResource("AnimationNodeTransition_c8vd0")
 nodes/Transition/position = Vector2(140, 80)
-nodes/output/position = Vector2(280, 80)
-node_connections = [&"Transition", 0, &"Buffer1", &"Transition", 1, &"Buffer2", &"output", 0, &"Transition"]
+node_connections = [&"output", 0, &"Transition", &"Transition", 0, &"Buffer1", &"Transition", 1, &"Buffer2"]

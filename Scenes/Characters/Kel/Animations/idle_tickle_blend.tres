@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeBlendSpace1D" load_steps=3 format=3 uid="uid://daj6fnre4gj43"]
+[gd_resource type="AnimationNodeBlendSpace1D" format=3 uid="uid://daj6fnre4gj43"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bkxyc"]
 animation = &"idle"

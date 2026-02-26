@@ -5,7 +5,7 @@ class_name SneezeSizeDrivenParticles
 @export var emit_on_breathe : bool = false
 var timer : Timer
 
-@export var control_curve : Curve
+@export var control_curve : Curve = preload("res://resources/curves/default_sneeze_size_particles_control.tres")
 
 func _ready() -> void:
 	#Wait for nodes to initialize

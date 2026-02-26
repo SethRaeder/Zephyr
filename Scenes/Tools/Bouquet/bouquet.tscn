@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://etaprmvcorrg"]
+[gd_scene format=3 uid="uid://etaprmvcorrg"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_cakw4"]
 [ext_resource type="Texture2D" uid="uid://cqgbif32f010a" path="res://assets/images/inducing_tools/revised/Bouquet.PNG" id="2_dj4rn"]
@@ -34,12 +34,12 @@ point_count = 2
 [sub_resource type="CircleShape2D" id="CircleShape2D_3y2hv"]
 radius = 212.021
 
-[node name="RigidBody2D" type="RigidBody2D" groups=["tools"]]
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1328189707 groups=["tools"]]
 input_pickable = true
 angular_damp = 15.0
 script = ExtResource("1_cakw4")
 
-[node name="ParticleEmitter" type="Node2D" parent="."]
+[node name="ParticleEmitter" type="Node2D" parent="." unique_id=608054215]
 position = Vector2(1, -42)
 script = ExtResource("2_w3qsr")
 particle_scene = ExtResource("3_2k08a")
@@ -47,34 +47,34 @@ particle_spawn_velocity_curve = SubResource("Curve_e06c2")
 particle_spawn_radius = 30.0
 particle_max_count = 250
 
-[node name="EmitOnBreatheComponent" type="Node2D" parent="ParticleEmitter" node_paths=PackedStringArray("wind_subscriber")]
+[node name="EmitOnBreatheComponent" type="Node2D" parent="ParticleEmitter" unique_id=1586094655 node_paths=PackedStringArray("wind_subscriber")]
 script = ExtResource("4_dpvgk")
 enabled_on_breath_type = 1
 local_wind_strength_max = 1000.0
 wind_spawn_curve = SubResource("Curve_gr6fv")
 wind_subscriber = NodePath("WindSubscriber")
 
-[node name="WindSubscriber" type="Marker2D" parent="ParticleEmitter/EmitOnBreatheComponent"]
+[node name="WindSubscriber" type="Marker2D" parent="ParticleEmitter/EmitOnBreatheComponent" unique_id=1849276241]
 script = ExtResource("5_0q2dq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=794451626]
 position = Vector2(-1.99999, 1.00001)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("2_dj4rn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1469640704]
 position = Vector2(0, 18)
 shape = SubResource("CapsuleShape2D_1e3jo")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1285014219]
 position = Vector2(2, -42)
 shape = SubResource("CircleShape2D_fiu0g")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=236692255]
 position = Vector2(0, 59)
 script = ExtResource("3_dvufp")
 
-[node name="TickleComponent" type="Area2D" parent="."]
+[node name="TickleComponent" type="Area2D" parent="." unique_id=825319824]
 position = Vector2(1, -42)
 collision_layer = 0
 collision_mask = 8
@@ -85,13 +85,13 @@ intensity = 30.0
 use_velocity = true
 velocity_curve = SubResource("Curve_56uft")
 
-[node name="EnableOnBreatheComponent" type="Node2D" parent="TickleComponent"]
+[node name="EnableOnBreatheComponent" type="Node2D" parent="TickleComponent" unique_id=846792187]
 script = ExtResource("10_kwp2p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent" unique_id=1208564607]
 shape = SubResource("CircleShape2D_3y2hv")
 
-[node name="TickleDebugSuite" parent="TickleComponent" instance=ExtResource("11_bwowq")]
+[node name="TickleDebugSuite" parent="TickleComponent" unique_id=373524775 instance=ExtResource("11_bwowq")]
 offset_left = -53.0
 offset_top = 69.0
 offset_right = -39.22

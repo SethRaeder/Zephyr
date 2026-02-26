@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bo6gnqhjsl6w5"]
+[gd_scene format=3 uid="uid://bo6gnqhjsl6w5"]
 
 [ext_resource type="Script" uid="uid://bloe0evkg345u" path="res://character_spawner.gd" id="1_kjvhd"]
 [ext_resource type="Script" uid="uid://btlrqsssxx0wa" path="res://scripts/levels/center_background.gd" id="1_s7jfl"]
@@ -35,131 +35,131 @@ distance = -352.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxsi8"]
 size = Vector2(66, 63.5)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=261427868]
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="." unique_id=1920524811]
 z_index = -10
 position = Vector2(591, 320)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_s7jfl")
 
-[node name="Layer6" type="Parallax2D" parent="Background"]
+[node name="Layer6" type="Parallax2D" parent="Background" unique_id=1888192132]
 z_index = -10
 scroll_scale = Vector2(15, 15)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("6_w6b3a")
 
-[node name="Dergsnzbg-kel-7" type="Sprite2D" parent="Background/Layer6"]
+[node name="Dergsnzbg-kel-7" type="Sprite2D" parent="Background/Layer6" unique_id=473658778]
 z_index = -20
 position = Vector2(14.3586, -97.2295)
 texture = ExtResource("1_t6vys")
 
-[node name="Layer5" type="Parallax2D" parent="Background"]
+[node name="Layer5" type="Parallax2D" parent="Background" unique_id=1481293654]
 z_index = -10
 scroll_scale = Vector2(20, 20)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("6_w6b3a")
 
-[node name="Dergsnzbg-kel-6" type="Sprite2D" parent="Background/Layer5"]
+[node name="Dergsnzbg-kel-6" type="Sprite2D" parent="Background/Layer5" unique_id=1107301132]
 z_index = -20
 position = Vector2(14.3586, -97.2295)
 texture = ExtResource("2_cx2mc")
 
-[node name="Layer4" type="Parallax2D" parent="Background"]
+[node name="Layer4" type="Parallax2D" parent="Background" unique_id=954356326]
 z_index = -10
 scroll_scale = Vector2(30, 30)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("6_w6b3a")
 
-[node name="Dergsnzbg-kel-5" type="Sprite2D" parent="Background/Layer4"]
+[node name="Dergsnzbg-kel-5" type="Sprite2D" parent="Background/Layer4" unique_id=1637003316]
 z_index = -20
 position = Vector2(14.3586, -97.2295)
 texture = ExtResource("3_7lk0x")
 
-[node name="Layer3" type="Parallax2D" parent="Background"]
+[node name="Layer3" type="Parallax2D" parent="Background" unique_id=376131521]
 scroll_scale = Vector2(50, 50)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("6_w6b3a")
 
-[node name="Dergsnzbg-kel-4" type="Sprite2D" parent="Background/Layer3"]
+[node name="Dergsnzbg-kel-4" type="Sprite2D" parent="Background/Layer3" unique_id=1746981127]
 z_index = -20
 position = Vector2(14.3586, -97.2295)
 texture = ExtResource("4_w3mxs")
 
-[node name="CharacterSpawner" type="Node2D" parent="Background/Layer3" groups=["character_root"]]
+[node name="CharacterSpawner" type="Node2D" parent="Background/Layer3" unique_id=1866176813 groups=["character_root"]]
 position = Vector2(-1182, -640)
 scale = Vector2(2, 2)
 script = ExtResource("1_kjvhd")
 
-[node name="Layer2" type="Parallax2D" parent="Background"]
+[node name="Layer2" type="Parallax2D" parent="Background" unique_id=1540674420]
 scroll_scale = Vector2(75, 75)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("6_w6b3a")
 
-[node name="Dergsnzbg-kel-3" type="Sprite2D" parent="Background/Layer2"]
+[node name="Dergsnzbg-kel-3" type="Sprite2D" parent="Background/Layer2" unique_id=1015641429]
 position = Vector2(14.3586, -97.2295)
 texture = ExtResource("5_gi44c")
 flip_h = true
 
-[node name="Layer1" type="Parallax2D" parent="Background"]
+[node name="Layer1" type="Parallax2D" parent="Background" unique_id=1792971938]
 scroll_scale = Vector2(150, 150)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("6_w6b3a")
 
-[node name="Dergsnzbg-kel-3" type="Sprite2D" parent="Background/Layer1"]
+[node name="Dergsnzbg-kel-3" type="Sprite2D" parent="Background/Layer1" unique_id=967373828]
 position = Vector2(14.3586, -97.2295)
 texture = ExtResource("7_v421o")
 flip_h = true
 flip_v = true
 
-[node name="Dergsnzbg-kel-2" type="Sprite2D" parent="Background/Layer1"]
+[node name="Dergsnzbg-kel-2" type="Sprite2D" parent="Background/Layer1" unique_id=1570675874]
 position = Vector2(-80.7633, -19.1807)
 scale = Vector2(0.93675, 1.09074)
 texture = ExtResource("7_v421o")
 
-[node name="Dergsnzbg-kel-4" type="Sprite2D" parent="Background/Layer1"]
+[node name="Dergsnzbg-kel-4" type="Sprite2D" parent="Background/Layer1" unique_id=623483107]
 position = Vector2(236.31, 558.869)
 rotation = -1.55138
 scale = Vector2(1.23962, 1.10819)
 texture = ExtResource("8_ysigt")
 flip_h = true
 
-[node name="Dergsnzbg-kel-1" type="Sprite2D" parent="Background/Layer1"]
+[node name="Dergsnzbg-kel-1" type="Sprite2D" parent="Background/Layer1" unique_id=1210042594]
 position = Vector2(-51.4951, -199.668)
 rotation = -0.102962
 texture = ExtResource("8_ysigt")
 
-[node name="World Bounds" type="StaticBody2D" parent="."]
+[node name="World Bounds" type="StaticBody2D" parent="." unique_id=631601398]
 collision_layer = 769
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World Bounds"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Bounds" unique_id=291958771]
 position = Vector2(404, 594)
 shape = SubResource("WorldBoundaryShape2D_xl3dr")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Bounds"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Bounds" unique_id=1741600788]
 position = Vector2(393, -105)
 shape = SubResource("WorldBoundaryShape2D_bxoe6")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Bounds"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Bounds" unique_id=1350223595]
 position = Vector2(6, 288)
 shape = SubResource("WorldBoundaryShape2D_7hekf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Bounds"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Bounds" unique_id=227416714]
 position = Vector2(795, 263)
 shape = SubResource("WorldBoundaryShape2D_iwv5l")
 
-[node name="Tools" type="Node2D" parent="."]
+[node name="Tools" type="Node2D" parent="." unique_id=355956848]
 z_index = 10
 position = Vector2(219, 557)
 
-[node name="UI Root" type="Control" parent="."]
+[node name="UI Root" type="Control" parent="." unique_id=12763929]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -173,11 +173,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 
-[node name="Toolbox" parent="UI Root" node_paths=PackedStringArray("tool_spawn_node") instance=ExtResource("5_5jvun")]
+[node name="Toolbox" parent="UI Root" unique_id=1113413544 node_paths=PackedStringArray("tool_spawn_node") instance=ExtResource("5_5jvun")]
 layout_mode = 1
 tool_spawn_node = NodePath("../../Tools")
 
-[node name="Clear Tools Button" type="Button" parent="UI Root/Toolbox"]
+[node name="Clear Tools Button" type="Button" parent="UI Root/Toolbox" unique_id=7498358]
 layout_mode = 0
 offset_top = -175.665
 offset_right = 138.0
@@ -187,21 +187,21 @@ text = "Clear All Tools/Particles"
 autowrap_mode = 2
 script = ExtResource("14_kynwu")
 
-[node name="Tool Trash" type="Area2D" parent="UI Root/Toolbox"]
+[node name="Tool Trash" type="Area2D" parent="UI Root/Toolbox" unique_id=1447945614]
 position = Vector2(44, -76.665)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_bh12i")
 
-[node name="Sprite2D" type="Sprite2D" parent="UI Root/Toolbox/Tool Trash"]
+[node name="Sprite2D" type="Sprite2D" parent="UI Root/Toolbox/Tool Trash" unique_id=407101030]
 position = Vector2(-1, 0)
 scale = Vector2(0.11, 0.11)
 texture = ExtResource("13_th40t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UI Root/Toolbox/Tool Trash"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI Root/Toolbox/Tool Trash" unique_id=303740191]
 position = Vector2(4, 2)
 shape = SubResource("RectangleShape2D_sxsi8")
 
-[node name="DebugToggle" type="CheckButton" parent="UI Root"]
+[node name="DebugToggle" type="CheckButton" parent="UI Root" unique_id=1889322840]
 layout_mode = 0
 offset_left = 100.0
 offset_right = 198.0
@@ -209,7 +209,7 @@ offset_bottom = 31.0
 text = "Debug"
 script = ExtResource("6_qhpe8")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI Root"]
+[node name="MarginContainer" type="MarginContainer" parent="UI Root" unique_id=68087296]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -222,12 +222,12 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Panel" type="Panel" parent="UI Root/MarginContainer" groups=["character_debug"]]
+[node name="Panel" type="Panel" parent="UI Root/MarginContainer" unique_id=1298690757 groups=["character_debug"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="UI Root/MarginContainer/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="UI Root/MarginContainer/Panel" unique_id=734811605]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -239,11 +239,11 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI Root/MarginContainer/Panel/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="UI Root/MarginContainer/Panel/MarginContainer" unique_id=1111524861]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="DebugUIContainer" type="VBoxContainer" parent="UI Root/MarginContainer/Panel/MarginContainer/ScrollContainer" groups=["character_debug"]]
+[node name="DebugUIContainer" type="VBoxContainer" parent="UI Root/MarginContainer/Panel/MarginContainer/ScrollContainer" unique_id=249573887 groups=["character_debug"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -251,14 +251,14 @@ theme_override_constants/separation = 10
 script = ExtResource("16_wg6ei")
 metadata/_custom_type_script = "uid://c4815ddvq4puo"
 
-[node name="MainMenu" type="Button" parent="UI Root"]
+[node name="MainMenu" type="Button" parent="UI Root" unique_id=418322355]
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 31.0
 text = "Main Menu"
 script = ExtResource("17_gnv7r")
 
-[node name="Hand" parent="." instance=ExtResource("17_2ycv8")]
+[node name="Hand" parent="." unique_id=1778123859 instance=ExtResource("17_2ycv8")]
 z_index = 11
 position = Vector2(325, 388)
 

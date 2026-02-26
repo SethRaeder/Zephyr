@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://0j24tufqmgt2"]
+[gd_scene format=3 uid="uid://0j24tufqmgt2"]
 
 [ext_resource type="Script" uid="uid://br8qw421g562r" path="res://scripts/components/tools/tickle_debug_suite.gd" id="1_rk5jx"]
 
-[node name="TickleDebugSuite" type="Control" groups=["tool_debug"]]
+[node name="TickleDebugSuite" type="Control" unique_id=1763357882 groups=["tool_debug"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -6.0
@@ -12,7 +12,7 @@ offset_bottom = 16.655
 mouse_filter = 2
 script = ExtResource("1_rk5jx")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=975670791]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TickleIntensityBar" type="ProgressBar" parent="."]
+[node name="TickleIntensityBar" type="ProgressBar" parent="." unique_id=542403512]
 unique_name_in_owner = true
 modulate = Color(1, 0.168627, 0, 1)
 layout_mode = 0
@@ -35,7 +35,7 @@ value = 1.0
 fill_mode = 3
 show_percentage = false
 
-[node name="TickleDurabilityBar" type="ProgressBar" parent="."]
+[node name="TickleDurabilityBar" type="ProgressBar" parent="." unique_id=1106943272]
 unique_name_in_owner = true
 modulate = Color(0, 1, 0.560784, 1)
 layout_mode = 0

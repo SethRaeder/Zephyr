@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cwr4vtymp7lac"]
+[gd_scene format=3 uid="uid://cwr4vtymp7lac"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_ktd27"]
 [ext_resource type="Texture2D" uid="uid://dxyfqrhjw8t5y" path="res://assets/images/inducing_tools/revised/Feather.PNG" id="2_f78ht"]
@@ -36,33 +36,33 @@ point_count = 2
 radius = 16.8954
 height = 40.355
 
-[node name="Feather" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
+[node name="Feather" type="RigidBody2D" unique_id=1297296855 node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
 angular_damp = 20.0
 script = ExtResource("1_ktd27")
 InsertSprite = NodePath("Feather")
 
-[node name="Feather" type="Sprite2D" parent="."]
+[node name="Feather" type="Sprite2D" parent="." unique_id=1582565708]
 position = Vector2(-2.59912, -4.90548)
 scale = Vector2(0.112615, 0.15)
 texture = ExtResource("2_f78ht")
 
-[node name="FeatherCollision" type="CollisionShape2D" parent="."]
+[node name="FeatherCollision" type="CollisionShape2D" parent="." unique_id=1702237069]
 position = Vector2(0.44545, 0)
 shape = SubResource("CapsuleShape2D_g3jdd")
 
-[node name="GrabArea" type="Area2D" parent="."]
+[node name="GrabArea" type="Area2D" parent="." unique_id=1722839078]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea" unique_id=1329080158]
 shape = SubResource("CircleShape2D_10dhj")
 
-[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=1316681839 node_paths=PackedStringArray("grab_area")]
 position = Vector2(-7, 47)
 gizmo_extents = 105.2
 script = ExtResource("3_emat5")
 grab_area = NodePath("../GrabArea")
 
-[node name="TipTickle" type="Area2D" parent="."]
+[node name="TipTickle" type="Area2D" parent="." unique_id=797207264]
 position = Vector2(-0.890892, -58.3539)
 collision_layer = 8
 collision_mask = 8
@@ -71,16 +71,16 @@ intensity = 10.0
 use_velocity = true
 velocity_curve = SubResource("Curve_qccrw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TipTickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TipTickle" unique_id=7473989]
 shape = SubResource("CircleShape2D_nuxor")
 
-[node name="TickleDebugSuite" parent="TipTickle" instance=ExtResource("5_vi0aa")]
+[node name="TickleDebugSuite" parent="TipTickle" unique_id=157740240 instance=ExtResource("5_vi0aa")]
 offset_left = -33.1091
 offset_top = -4.6461
 offset_right = 6.89089
 offset_bottom = 35.3539
 
-[node name="BodyTickle" type="Area2D" parent="."]
+[node name="BodyTickle" type="Area2D" parent="." unique_id=367000416]
 position = Vector2(-2.44996, -9.35443)
 collision_layer = 8
 collision_mask = 8
@@ -88,16 +88,16 @@ script = ExtResource("4_la1so")
 use_velocity = true
 velocity_curve = SubResource("Curve_4gt55")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyTickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyTickle" unique_id=1977953992]
 shape = SubResource("CapsuleShape2D_o6iy3")
 
-[node name="TickleDebugSuite" parent="BodyTickle" instance=ExtResource("5_vi0aa")]
+[node name="TickleDebugSuite" parent="BodyTickle" unique_id=318543549 instance=ExtResource("5_vi0aa")]
 offset_left = 25.45
 offset_top = -7.64557
 offset_right = 65.45
 offset_bottom = 32.3544
 
-[node name="Irritation" type="Area2D" parent="."]
+[node name="Irritation" type="Area2D" parent="." unique_id=1942104295]
 position = Vector2(-3, 25)
 collision_layer = 8
 collision_mask = 8
@@ -107,10 +107,10 @@ intensity = 0.5
 use_velocity = true
 velocity_curve = SubResource("Curve_xw75s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Irritation"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Irritation" unique_id=2045182385]
 shape = SubResource("CapsuleShape2D_lie8q")
 
-[node name="TickleDebugSuite" parent="Irritation" instance=ExtResource("5_vi0aa")]
+[node name="TickleDebugSuite" parent="Irritation" unique_id=1610609434 instance=ExtResource("5_vi0aa")]
 offset_left = -32.0
 offset_top = -10.0
 offset_right = 8.0

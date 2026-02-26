@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5y4n3xtllde1"]
+[gd_scene format=3 uid="uid://b5y4n3xtllde1"]
 
 [ext_resource type="Texture2D" uid="uid://dg2likmstw620" path="res://icon.svg" id="1_wlbcw"]
 
@@ -8,18 +8,18 @@ size = Vector2(123, 125)
 [sub_resource type="CircleShape2D" id="CircleShape2D_aut2e"]
 radius = 98.1234
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="RigidBody2D" type="RigidBody2D" unique_id=894953933]
 position = Vector2(149, 105)
 rotation = 0.383975
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=797964821]
 texture = ExtResource("1_wlbcw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=180660626]
 position = Vector2(0.5, -3.5)
 shape = SubResource("RectangleShape2D_pr7p3")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=944864893]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1965199409]
 shape = SubResource("CircleShape2D_aut2e")

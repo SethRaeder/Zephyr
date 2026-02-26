@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://domk2ggce6klf"]
+[gd_scene format=3 uid="uid://domk2ggce6klf"]
 
 [ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_7d5q0"]
 [ext_resource type="Texture2D" uid="uid://dn7tdstuhkyq6" path="res://addons/kenney_particle_pack/smoke_01.png" id="2_yotna"]
@@ -12,7 +12,7 @@ absorbent = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_r4n3n"]
 radius = 4.12311
 
-[node name="ToolParticle" type="RigidBody2D"]
+[node name="ToolParticle" type="RigidBody2D" unique_id=1322803561]
 collision_layer = 256
 collision_mask = 256
 mass = 0.001
@@ -21,13 +21,13 @@ gravity_scale = 0.15
 linear_damp = 10.0
 script = ExtResource("1_7d5q0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1322172847]
 modulate = Color(1, 1, 1, 0.301961)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_yotna")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156006497]
 shape = SubResource("CircleShape2D_r4n3n")
 
-[node name="WindSubscriber" type="Marker2D" parent="."]
+[node name="WindSubscriber" type="Marker2D" parent="." unique_id=1182765171]
 script = ExtResource("3_j0hhf")

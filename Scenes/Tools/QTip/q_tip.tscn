@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://07jfi4b7gu6h"]
+[gd_scene format=3 uid="uid://07jfi4b7gu6h"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_i2186"]
 [ext_resource type="Script" uid="uid://dlm70loe0ei68" path="res://scripts/components/tools/grab_transform.gd" id="2_bqowe"]
@@ -25,31 +25,31 @@ point_count = 3
 radius = 7.0
 height = 24.0
 
-[node name="QTip" type="RigidBody2D" node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
+[node name="QTip" type="RigidBody2D" unique_id=1086004789 node_paths=PackedStringArray("InsertSprite") groups=["tools"]]
 input_pickable = true
 angular_damp = 15.0
 script = ExtResource("1_i2186")
 InsertSprite = NodePath("Sprite")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1868125888]
 shape = SubResource("CapsuleShape2D_51j0j")
 
-[node name="GrabArea" type="Area2D" parent="."]
+[node name="GrabArea" type="Area2D" parent="." unique_id=199663440]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea" unique_id=2138013318]
 shape = SubResource("CircleShape2D_ppwpq")
 
-[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=2129877416 node_paths=PackedStringArray("grab_area")]
 position = Vector2(0, 19)
 gizmo_extents = 105.2
 script = ExtResource("2_bqowe")
 grab_area = NodePath("../GrabArea")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1167826909]
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("3_qcxg0")
 
-[node name="EndTickle" type="Area2D" parent="."]
+[node name="EndTickle" type="Area2D" parent="." unique_id=1604209280]
 position = Vector2(0, -35)
 collision_layer = 8
 collision_mask = 8
@@ -60,15 +60,15 @@ tickle_damage_curve = SubResource("Curve_4p4vg")
 use_velocity = true
 velocity_curve = SubResource("Curve_bvx7d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndTickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndTickle" unique_id=684924007]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_vh345")
 
-[node name="TickleDebugSuite" parent="EndTickle" instance=ExtResource("5_p3vox")]
+[node name="TickleDebugSuite" parent="EndTickle" unique_id=1542438703 instance=ExtResource("5_p3vox")]
 offset_left = -20.0
 offset_right = -6.22
 
-[node name="EndTickle2" type="Area2D" parent="."]
+[node name="EndTickle2" type="Area2D" parent="." unique_id=1972429436]
 position = Vector2(0, 36)
 collision_layer = 8
 collision_mask = 8
@@ -79,14 +79,14 @@ tickle_damage_curve = SubResource("Curve_4p4vg")
 use_velocity = true
 velocity_curve = SubResource("Curve_bvx7d")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndTickle2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndTickle2" unique_id=1806337413]
 shape = SubResource("CapsuleShape2D_vh345")
 
-[node name="TickleDebugSuite" parent="EndTickle2" instance=ExtResource("5_p3vox")]
+[node name="TickleDebugSuite" parent="EndTickle2" unique_id=311725674 instance=ExtResource("5_p3vox")]
 offset_left = -20.0
 offset_right = -6.22
 
-[node name="EndBurn" type="Area2D" parent="."]
+[node name="EndBurn" type="Area2D" parent="." unique_id=1491721766]
 position = Vector2(0, 36)
 collision_layer = 8
 collision_mask = 8
@@ -95,14 +95,14 @@ tickle_type = 1
 intensity = 3.0
 tickle_damage_limit = 20.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndBurn"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndBurn" unique_id=551902148]
 shape = SubResource("CapsuleShape2D_vh345")
 
-[node name="TickleDebugSuite" parent="EndBurn" instance=ExtResource("5_p3vox")]
+[node name="TickleDebugSuite" parent="EndBurn" unique_id=474877155 instance=ExtResource("5_p3vox")]
 offset_left = 6.0
 offset_right = 19.78
 
-[node name="EndBurn2" type="Area2D" parent="."]
+[node name="EndBurn2" type="Area2D" parent="." unique_id=1762398359]
 position = Vector2(0, -35)
 collision_layer = 8
 collision_mask = 8
@@ -111,11 +111,11 @@ tickle_type = 1
 intensity = 3.0
 tickle_damage_limit = 20.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndBurn2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndBurn2" unique_id=1094933811]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_vh345")
 
-[node name="TickleDebugSuite" parent="EndBurn2" instance=ExtResource("5_p3vox")]
+[node name="TickleDebugSuite" parent="EndBurn2" unique_id=948986942 instance=ExtResource("5_p3vox")]
 offset_left = 6.0
 offset_right = 19.78
 

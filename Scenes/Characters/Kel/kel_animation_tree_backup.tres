@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeBlendTree" load_steps=55 format=3 uid="uid://5iijlex14xr4"]
+[gd_resource type="AnimationNodeBlendTree" format=3 uid="uid://5iijlex14xr4"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_n2kky"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://ba8pjigkih8ei" path="res://scenes/characters/Kel/animations/buildup_swap_tree.tres" id="2_6hqlm"]
@@ -7,7 +7,6 @@
 [ext_resource type="AnimationNodeBlendTree" uid="uid://dkd6mmmpcnitw" path="res://scenes/characters/Kel/animations/sigh_swap_tree.tres" id="5_uo1fm"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://dmwurjh0u68wp" path="res://scenes/characters/Kel/animations/sneeze_swap_tree.tres" id="6_67pw0"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://bm70lsk3faesa" path="res://scenes/characters/Kel/animations/sniff_swap_tree.tres" id="7_gghkd"]
-
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_r5j13"]
 
@@ -315,6 +314,7 @@ input_1/reset = true
 
 [resource]
 graph_offset = Vector2(-354.741, -301.393)
+nodes/output/position = Vector2(2220, -140)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
@@ -359,5 +359,4 @@ nodes/SniffSwapTree/node = ExtResource("7_gghkd")
 nodes/SniffSwapTree/position = Vector2(-80, 580)
 nodes/Transition/node = SubResource("AnimationNodeTransition_460ov")
 nodes/Transition/position = Vector2(-360, -180)
-nodes/output/position = Vector2(2220, -140)
-node_connections = [&"Add2", 0, &"Animation Transition", &"Add2", 1, &"Animation", &"Animation Transition", 0, &"Animation 4", &"Animation Transition", 1, &"IdleTickleBlend", &"Animation Transition", 2, &"HitchSwapTree", &"Animation Transition", 3, &"BuildupSwapTree", &"Animation Transition", 4, &"SneezeSwapTree", &"Animation Transition", 5, &"SighSwapTree", &"Animation Transition", 6, &"SniffSwapTree", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"Transition", 0, &"Animation 2", &"Transition", 1, &"Animation 3", &"output", 0, &"NoseFlareStrength"]
+node_connections = [&"output", 0, &"NoseFlareStrength", &"Add2", 0, &"Animation Transition", &"Add2", 1, &"Animation", &"Animation Transition", 0, &"Animation 4", &"Animation Transition", 1, &"IdleTickleBlend", &"Animation Transition", 2, &"HitchSwapTree", &"Animation Transition", 3, &"BuildupSwapTree", &"Animation Transition", 4, &"SneezeSwapTree", &"Animation Transition", 5, &"SighSwapTree", &"Animation Transition", 6, &"SniffSwapTree", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlareTransition", &"NoseFlareTransition", 0, &"RESET", &"NoseFlareTransition", 1, &"NoseFlare", &"Transition", 0, &"Animation 2", &"Transition", 1, &"Animation 3"]

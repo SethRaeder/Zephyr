@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7j4oys1em0c1"]
+[gd_scene format=3 uid="uid://b7j4oys1em0c1"]
 
 [ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_7cdy6"]
 [ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://scripts/components/wind/wind_subscriber.gd" id="2_srpe6"]
@@ -14,7 +14,7 @@ radius = 6.08276
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 26.0192
 
-[node name="Dust" type="RigidBody2D" groups=["tool_particles"]]
+[node name="Dust" type="RigidBody2D" unique_id=1735512814 groups=["tool_particles"]]
 collision_layer = 16777216
 collision_mask = 16777728
 mass = 0.01
@@ -22,43 +22,43 @@ gravity_scale = 0.01
 script = ExtResource("1_7cdy6")
 delete_on_tickle_finished = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1253413626]
 shape = SubResource("CircleShape2D_3i2k4")
 
-[node name="WindSubscriber" type="Marker2D" parent="."]
+[node name="WindSubscriber" type="Marker2D" parent="." unique_id=131592835]
 scale = Vector2(0.18, 0.18)
 script = ExtResource("2_srpe6")
 
-[node name="Tickle" type="Area2D" parent="."]
+[node name="Tickle" type="Area2D" parent="." unique_id=1444083643]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_25yxm")
 tickle_damage_limit = 1.0
 
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle" unique_id=351789675]
 process_mode = 3
 scale = Vector2(0.18, 0.18)
 script = ExtResource("4_yj65s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle" unique_id=585491028]
 shape = SubResource("CircleShape2D_34lcl")
 
-[node name="Burn" type="Area2D" parent="."]
+[node name="Burn" type="Area2D" parent="." unique_id=1910925426]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_25yxm")
 tickle_type = 1
 tickle_damage_limit = 0.5
 
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Burn"]
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Burn" unique_id=256881827]
 process_mode = 3
 scale = Vector2(0.18, 0.18)
 script = ExtResource("4_yj65s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Burn"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burn" unique_id=314000271]
 shape = SubResource("CircleShape2D_34lcl")
 
-[node name="Allergy" type="Area2D" parent="."]
+[node name="Allergy" type="Area2D" parent="." unique_id=434661879]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_25yxm")
@@ -67,20 +67,20 @@ allergy_type = ExtResource("5_rkbtu")
 intensity = 5.0
 tickle_damage_limit = 5.0
 
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Allergy"]
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Allergy" unique_id=692930947]
 process_mode = 3
 scale = Vector2(0.18, 0.18)
 script = ExtResource("4_yj65s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Allergy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Allergy" unique_id=1412205157]
 shape = SubResource("CircleShape2D_34lcl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078949375]
 modulate = Color(0.51, 0.481695, 0.4641, 0.890196)
 z_index = 10
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_nhs6v")
 
-[node name="FadeSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
+[node name="FadeSprite" type="Node" parent="Sprite2D" unique_id=843092282 node_paths=PackedStringArray("root_node")]
 script = ExtResource("7_uiivb")
 root_node = NodePath("../..")

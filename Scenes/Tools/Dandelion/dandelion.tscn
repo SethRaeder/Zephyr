@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bsbnykkg8lb1t"]
+[gd_scene format=3 uid="uid://bsbnykkg8lb1t"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_rf6xs"]
 [ext_resource type="Texture2D" uid="uid://nksmalh3kf6v" path="res://assets/images/inducing_tools/revised/Dandelion Stem.PNG" id="2_ofm23"]
@@ -22,14 +22,14 @@ height = 110.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_x6gdm"]
 radius = 23.0
 
-[node name="ToolBody" type="RigidBody2D" groups=["tools"]]
+[node name="ToolBody" type="RigidBody2D" unique_id=346077228 groups=["tools"]]
 input_pickable = true
 mass = 0.1
 linear_damp = 10.0
 angular_damp = 30.0
 script = ExtResource("1_rf6xs")
 
-[node name="ParticleEmitter" type="Node2D" parent="."]
+[node name="ParticleEmitter" type="Node2D" parent="." unique_id=67453178]
 unique_name_in_owner = true
 position = Vector2(-1.6, -79.4554)
 script = ExtResource("2_pmk8i")
@@ -37,7 +37,7 @@ particle_scene = ExtResource("3_pwjqy")
 particle_spawn_max_speed = 500.0
 particle_spawn_lifetime_limit = 50
 
-[node name="EmitOnBreatheComponent" type="Node2D" parent="ParticleEmitter" node_paths=PackedStringArray("wind_subscriber")]
+[node name="EmitOnBreatheComponent" type="Node2D" parent="ParticleEmitter" unique_id=122153341 node_paths=PackedStringArray("wind_subscriber")]
 position = Vector2(0, 1)
 script = ExtResource("10_3w63j")
 enabled_on_breath_type = 2
@@ -45,49 +45,49 @@ local_wind_strength_max = 500.0
 wind_spawn_curve = SubResource("Curve_yfunc")
 wind_subscriber = NodePath("WindSubscriber")
 
-[node name="WindSubscriber" type="Marker2D" parent="ParticleEmitter/EmitOnBreatheComponent"]
+[node name="WindSubscriber" type="Marker2D" parent="ParticleEmitter/EmitOnBreatheComponent" unique_id=1607875285]
 script = ExtResource("11_3sci2")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1102232622]
 position = Vector2(0.399994, -18.4554)
 shape = SubResource("CapsuleShape2D_jfm3w")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=78780243]
 z_index = -1
 position = Vector2(3.4, -24.4554)
 rotation = -0.244346
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_ofm23")
 
-[node name="Sprite2" type="Sprite2D" parent="."]
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=66755966]
 z_index = -1
 position = Vector2(-1.6, -79.4554)
 rotation = -0.244346
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_pxgbm")
 
-[node name="HideOnParticleExhaust" type="Node" parent="Sprite2" node_paths=PackedStringArray("particle_emitter")]
+[node name="HideOnParticleExhaust" type="Node" parent="Sprite2" unique_id=951127686 node_paths=PackedStringArray("particle_emitter")]
 script = ExtResource("8_pbbke")
 particle_emitter = NodePath("../../ParticleEmitter")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=779551817]
 position = Vector2(0.199997, 9)
 gizmo_extents = 105.2
 script = ExtResource("3_ae6g4")
 snap_factor_p = 10.0
 snap_factor_d = -1.0
 
-[node name="TickleComponent" type="Area2D" parent="."]
+[node name="TickleComponent" type="Area2D" parent="." unique_id=660086794]
 position = Vector2(-1.6, -78.4554)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("10_ovg7q")
 metadata/_custom_type_script = "uid://dxoep6jdkji4"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent" unique_id=177174542]
 shape = SubResource("CircleShape2D_x6gdm")
 
-[node name="TickleDebugSuite" parent="TickleComponent" instance=ExtResource("8_fbqid")]
+[node name="TickleDebugSuite" parent="TickleComponent" unique_id=650547002 instance=ExtResource("8_fbqid")]
 offset_left = -46.0
 offset_top = -12.0
 offset_right = -32.22

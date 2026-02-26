@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0052co50relo"]
+[gd_scene format=3 uid="uid://c0052co50relo"]
 
 [ext_resource type="Script" uid="uid://dhhkfnsw01y2y" path="res://scripts/components/tools/hand.gd" id="1_gyiu4"]
 [ext_resource type="Texture2D" uid="uid://dv0p2waynabuq" path="res://assets/images/inducing_tools/revised/Hand Normal.PNG" id="1_s11jp"]
@@ -33,21 +33,21 @@ radius = 28.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_b5gxl"]
 radius = 7.07107
 
-[node name="Hand" type="Node2D" node_paths=PackedStringArray("hand_sprite", "nose_detector", "anti_tickle", "anti_burn")]
+[node name="Hand" type="Node2D" unique_id=952231872 node_paths=PackedStringArray("hand_sprite", "nose_detector", "anti_tickle", "anti_burn")]
 script = ExtResource("1_gyiu4")
 hand_sprite = NodePath("HandSprite")
 nose_detector = NodePath("NoseDetector")
 anti_tickle = NodePath("AntiTickle")
 anti_burn = NodePath("AntiBurn")
 
-[node name="HandSprite" type="AnimatedSprite2D" parent="."]
+[node name="HandSprite" type="AnimatedSprite2D" parent="." unique_id=368937952]
 unique_name_in_owner = true
 position = Vector2(-33, 14)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8a4xm")
 frame_progress = 0.0981456
 
-[node name="NoseDetector" type="Area2D" parent="."]
+[node name="NoseDetector" type="Area2D" parent="." unique_id=420809191]
 unique_name_in_owner = true
 position = Vector2(6, -17)
 collision_layer = 8
@@ -55,10 +55,10 @@ collision_mask = 8
 input_pickable = false
 priority = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoseDetector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoseDetector" unique_id=1712033554]
 shape = SubResource("CircleShape2D_uqjd1")
 
-[node name="AntiTickle" type="Area2D" parent="."]
+[node name="AntiTickle" type="Area2D" parent="." unique_id=1204351277]
 unique_name_in_owner = true
 position = Vector2(6, -17)
 collision_layer = 8
@@ -66,18 +66,18 @@ collision_mask = 8
 script = ExtResource("5_mktyr")
 intensity = -8.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiTickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiTickle" unique_id=900347316]
 position = Vector2(-21, 1)
 shape = SubResource("CircleShape2D_g8doh")
 
-[node name="TickleDebugSuite" parent="AntiTickle" instance=ExtResource("6_iwhfu")]
+[node name="TickleDebugSuite" parent="AntiTickle" unique_id=433711337 instance=ExtResource("6_iwhfu")]
 offset_left = -85.0
 offset_top = 62.0
 offset_right = -71.22
 offset_bottom = 93.655
 metadata/_edit_use_anchors_ = true
 
-[node name="Tickle" type="Area2D" parent="."]
+[node name="Tickle" type="Area2D" parent="." unique_id=1355498877]
 unique_name_in_owner = true
 position = Vector2(6, -17)
 collision_layer = 8
@@ -85,18 +85,18 @@ collision_mask = 8
 script = ExtResource("5_mktyr")
 intensity = 8.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle" unique_id=1083718867]
 position = Vector2(19, -14)
 shape = SubResource("CircleShape2D_b5gxl")
 
-[node name="TickleDebugSuite" parent="Tickle" instance=ExtResource("6_iwhfu")]
+[node name="TickleDebugSuite" parent="Tickle" unique_id=155711646 instance=ExtResource("6_iwhfu")]
 offset_left = 2.0
 offset_top = 37.0
 offset_right = 15.78
 offset_bottom = 68.655
 metadata/_edit_use_anchors_ = true
 
-[node name="AntiBurn" type="Area2D" parent="."]
+[node name="AntiBurn" type="Area2D" parent="." unique_id=782705537]
 unique_name_in_owner = true
 position = Vector2(6, -17)
 collision_layer = 8
@@ -105,18 +105,18 @@ script = ExtResource("5_mktyr")
 tickle_type = 1
 intensity = -2.5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiBurn"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiBurn" unique_id=1033915686]
 position = Vector2(-21, 1)
 shape = SubResource("CircleShape2D_g8doh")
 
-[node name="TickleDebugSuite" parent="AntiBurn" instance=ExtResource("6_iwhfu")]
+[node name="TickleDebugSuite" parent="AntiBurn" unique_id=242038198 instance=ExtResource("6_iwhfu")]
 offset_left = -67.0
 offset_top = 62.0
 offset_right = -53.22
 offset_bottom = 93.655
 metadata/_edit_use_anchors_ = true
 
-[node name="AntiSneeze" type="Area2D" parent="."]
+[node name="AntiSneeze" type="Area2D" parent="." unique_id=1839376464]
 unique_name_in_owner = true
 position = Vector2(2, -19)
 collision_layer = 8
@@ -125,11 +125,11 @@ script = ExtResource("5_mktyr")
 tickle_type = 4
 intensity = -4.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiSneeze"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiSneeze" unique_id=1399527147]
 position = Vector2(-17, 3)
 shape = SubResource("CircleShape2D_g8doh")
 
-[node name="TickleDebugSuite" parent="AntiSneeze" instance=ExtResource("6_iwhfu")]
+[node name="TickleDebugSuite" parent="AntiSneeze" unique_id=238806710 instance=ExtResource("6_iwhfu")]
 offset_left = -44.0
 offset_top = 63.0
 offset_right = -30.22
