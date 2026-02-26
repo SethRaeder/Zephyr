@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctfrtt4rdyngr"
-path="res://.godot/imported/Neck.PNG-d81f0dd57dcc3889adfe523f6fd4288b.ctex"
+uid="uid://h8p7fayo2hj0"
+path="res://.godot/imported/Hair.PNG-652ada74f612e51bfe96179d6507071e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/Chance/Neck.PNG"
-dest_files=["res://.godot/imported/Neck.PNG-d81f0dd57dcc3889adfe523f6fd4288b.ctex"]
+source_file="res://assets/images/characters/Drgsnz drgns(2)/Chance/Hair.PNG"
+dest_files=["res://.godot/imported/Hair.PNG-652ada74f612e51bfe96179d6507071e.ctex"]
 
 [params]
 

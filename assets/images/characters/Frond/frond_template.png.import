@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctfrtt4rdyngr"
-path="res://.godot/imported/Neck.PNG-d81f0dd57dcc3889adfe523f6fd4288b.ctex"
+uid="uid://b3r0r42dnck88"
+path="res://.godot/imported/frond_template.png-5bd6d866cfc895e34220e3feec832fb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/Chance/Neck.PNG"
-dest_files=["res://.godot/imported/Neck.PNG-d81f0dd57dcc3889adfe523f6fd4288b.ctex"]
+source_file="res://assets/images/characters/Frond/frond_template.png"
+dest_files=["res://.godot/imported/frond_template.png-5bd6d866cfc895e34220e3feec832fb1.ctex"]
 
 [params]
 

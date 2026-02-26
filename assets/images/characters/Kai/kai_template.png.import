@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctfrtt4rdyngr"
-path="res://.godot/imported/Neck.PNG-d81f0dd57dcc3889adfe523f6fd4288b.ctex"
+uid="uid://ds8deqbksi8w0"
+path="res://.godot/imported/kai_template.png-8782e6082d02b7f9dafda720008f9c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/Chance/Neck.PNG"
-dest_files=["res://.godot/imported/Neck.PNG-d81f0dd57dcc3889adfe523f6fd4288b.ctex"]
+source_file="res://assets/images/characters/Kai/kai_template.png"
+dest_files=["res://.godot/imported/kai_template.png-8782e6082d02b7f9dafda720008f9c29.ctex"]
 
 [params]
 
