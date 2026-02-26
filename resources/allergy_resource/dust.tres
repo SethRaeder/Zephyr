@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="AllergyResource" load_steps=2 format=3 uid="uid://4vp5va5ekxii"]
+[gd_resource type="Resource" script_class="AllergyResource" format=3 uid="uid://4vp5va5ekxii"]
 
 [ext_resource type="Script" uid="uid://ddgdp2hieuh8r" path="res://resources/definitions/allergy_resource.gd" id="1_hi58f"]
 

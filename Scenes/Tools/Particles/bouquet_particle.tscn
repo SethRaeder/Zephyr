@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3306adyeknxy"]
+[gd_scene format=3 uid="uid://c3306adyeknxy"]
 
 [ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_43hvu"]
 [ext_resource type="Texture2D" uid="uid://bjo5qdfls40l1" path="res://assets/images/inducing_tools/revised/Bouquet Petal.PNG" id="2_l8rt2"]
@@ -14,7 +14,7 @@ height = 10.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ncgkj"]
 radius = 20.025
 
-[node name="BouquetParticle" type="RigidBody2D" groups=["tool_particles"]]
+[node name="BouquetParticle" type="RigidBody2D" unique_id=1882626078 groups=["tool_particles"]]
 collision_layer = 65536
 collision_mask = 66304
 mass = 0.005
@@ -22,13 +22,13 @@ gravity_scale = 0.1
 script = ExtResource("1_43hvu")
 particle_lifetime = 45.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113085275]
 shape = SubResource("CapsuleShape2D_7rnao")
 
-[node name="WindSubscriber" type="Marker2D" parent="."]
+[node name="WindSubscriber" type="Marker2D" parent="." unique_id=1707986331]
 script = ExtResource("3_eyw80")
 
-[node name="TickleComponent" type="Area2D" parent="."]
+[node name="TickleComponent" type="Area2D" parent="." unique_id=1017592511]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("4_p6mro")
@@ -36,13 +36,13 @@ tickle_type = 3
 allergy_type = ExtResource("5_naktk")
 intensity = 5.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent" unique_id=692524322]
 shape = SubResource("CircleShape2D_ncgkj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=20621691]
 scale = Vector2(0.185, 0.185)
 texture = ExtResource("2_l8rt2")
 
-[node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D" unique_id=270062842 node_paths=PackedStringArray("root_node")]
 script = ExtResource("6_ka1wf")
 root_node = NodePath("../..")

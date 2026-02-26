@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cu7aklpnd2dc1"]
+[gd_scene format=3 uid="uid://cu7aklpnd2dc1"]
 
 [ext_resource type="Script" uid="uid://28fbrbif0dbw" path="res://scripts/ui/menu_character_buttons.gd" id="1_sl1te"]
 [ext_resource type="Script" uid="uid://dcl0qnkvcagxr" path="res://scripts/ui/menu_start_game.gd" id="2_fe2o3"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1746877268]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1291360160]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,11 +23,11 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Panel" type="Panel" parent="MarginContainer"]
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=451251679]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/Panel"]
-layout_mode = 2
+[node name="Title" type="Label" parent="MarginContainer/Panel" unique_id=1530929950]
+layout_mode = 0
 offset_right = 1132.0
 offset_bottom = 39.0
 theme_type_variation = &"HeaderLarge"
@@ -35,8 +35,8 @@ theme_override_font_sizes/font_size = 60
 text = "DRGSNZ"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=59576238]
+layout_mode = 0
 offset_top = 169.0
 offset_right = 1132.0
 offset_bottom = 628.0
@@ -45,29 +45,29 @@ theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer" unique_id=678678738]
 layout_mode = 2
 
-[node name="CharacterSelect" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="CharacterSelect" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=954805263]
 layout_mode = 2
 theme_type_variation = &"HeaderMedium"
 text = "Character Selection"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1006965289]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1096832416]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=950537708]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_sl1te")
 
-[node name="Button" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1151388926]
 layout_mode = 2
 text = "Start Game"
 script = ExtResource("2_fe2o3")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=331 format=3 uid="uid://boufv7sb4j0ec"]
+[gd_scene format=3 uid="uid://boufv7sb4j0ec"]
 
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="1_a35pc"]
 [ext_resource type="Texture2D" uid="uid://bn0hqc4si7yx7" path="res://assets/images/characters/Kel/clean/texture_color/Neck.PNG" id="1_j7t74"]
@@ -242,30 +242,21 @@ normal_texture = ExtResource("86_34ury")
 
 [sub_resource type="Resource" id="Resource_0es6h"]
 script = ExtResource("35_ntfem")
-frequency = 1.0
-damping = 1.0
 reaction = 1.5
-gravity = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_1wv2b"]
 script = ExtResource("36_p8xfc")
-velocity_effect = 10.0
 params = SubResource("Resource_0es6h")
 
 [sub_resource type="Resource" id="Resource_fnsbc"]
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = -159.0
 rotation_half_arc_degrees = 84.5
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_we02m"]
 script = ExtResource("35_ntfem")
 frequency = 1.001
-damping = 1.0
 reaction = 1.5
-gravity = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_8lj5r"]
 script = ExtResource("36_p8xfc")
@@ -276,16 +267,11 @@ params = SubResource("Resource_we02m")
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = -147.5
 rotation_half_arc_degrees = 42.0
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_yqloq"]
 script = ExtResource("35_ntfem")
 frequency = 1.001
-damping = 1.0
 reaction = 1.5
-gravity = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_ewen2"]
 script = ExtResource("36_p8xfc")
@@ -296,16 +282,12 @@ params = SubResource("Resource_yqloq")
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = 173.5
 rotation_half_arc_degrees = 47.0
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_23nb1"]
 script = ExtResource("35_ntfem")
 frequency = 1.001
 damping = 2.0
 reaction = 1.5
-gravity = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_623or"]
 script = ExtResource("36_p8xfc")
@@ -316,53 +298,34 @@ params = SubResource("Resource_23nb1")
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = -180.0
 rotation_half_arc_degrees = 56.5
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_hgmj3"]
 script = ExtResource("35_ntfem")
 frequency = 1.001
-damping = 1.0
-reaction = 1.0
-gravity = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_hp2yj"]
 script = ExtResource("36_p8xfc")
-velocity_effect = 10.0
 params = SubResource("Resource_hgmj3")
 
 [sub_resource type="Resource" id="Resource_iplph"]
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = 154.0
 rotation_half_arc_degrees = 2.5
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_43o6b"]
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = 174.5
 rotation_half_arc_degrees = 3.0
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_6q68s"]
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = -180.0
 rotation_half_arc_degrees = 4.0
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_a2m1f"]
 script = ExtResource("35_8nmy7")
 rotation_direction_degrees = -179.0
 rotation_half_arc_degrees = 26.0
-area_offset = Vector2(0, 0)
-area_rotation_degrees = 0.0
-proportions = Vector2(1, 1)
 
 [sub_resource type="Animation" id="Animation_r76hh"]
 length = 0.001
@@ -1310,7 +1273,7 @@ tracks/27/keys = {
 "times": PackedFloat32Array(0.666667, 2, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.165971, -0.0964601, -0.0823459]
+"values": [0.165971, -0.09646009999999999, -0.0823459]
 }
 tracks/28/type = "method"
 tracks/28/imported = false
@@ -4045,6 +4008,7 @@ graph_offset = Vector2(207, -440)
 animation = &"RESET"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vtvym"]
+nodes/output/position = Vector2(2220, -140)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_drv36")
@@ -4067,8 +4031,7 @@ nodes/NoseFlareTransition/position = Vector2(1740, -20)
 "nodes/Parameter Animation/position" = Vector2(360, -400)
 nodes/RESET/node = SubResource("AnimationNodeAnimation_0f6sr")
 nodes/RESET/position = Vector2(1640, 80)
-nodes/output/position = Vector2(2220, -140)
-node_connections = [&"Add2", 0, &"Parameter Animation", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlare", &"NoseFlareTransition", 0, &"RESET", &"output", 0, &"NoseFlareStrength"]
+node_connections = [&"output", 0, &"NoseFlareStrength", &"Add2", 0, &"Parameter Animation", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlare", &"NoseFlareTransition", 0, &"RESET"]
 
 [sub_resource type="Curve" id="Curve_4tqut"]
 _data = [Vector2(0, 0.784325), 0.0, 0.0, 0, 0, Vector2(0.576812, 0.122426), -0.610902, -0.610902, 0, 0, Vector2(1, 0), -0.10321, 0.0, 0, 0]
@@ -4352,21 +4315,18 @@ point_count = 2
 [sub_resource type="Resource" id="Resource_drxmn"]
 script = ExtResource("46_5853s")
 name = &"Hitch Repeat"
-min_value = 0.0
 max_value = 3.0
 current_value = 0.75
 
 [sub_resource type="Resource" id="Resource_0lban"]
 script = ExtResource("46_5853s")
 name = &"Buildup Repeat"
-min_value = 0.0
 max_value = 3.0
 current_value = 0.75
 
 [sub_resource type="Resource" id="Resource_l3cks"]
 script = ExtResource("46_5853s")
 name = &"Sneeze Repeat"
-min_value = 0.0
 max_value = 3.0
 current_value = 2.0
 
@@ -4470,16 +4430,16 @@ point_count = 2
 [sub_resource type="LabelSettings" id="LabelSettings_a4kdl"]
 font_size = 60
 
-[node name="Kel_Rig" type="Node2D"]
+[node name="Kel_Rig" type="Node2D" unique_id=1554325514]
 
-[node name="Skeleton2D" type="Skeleton2D" parent="."]
+[node name="Skeleton2D" type="Skeleton2D" parent="." unique_id=570394901]
 scale = Vector2(0.4, 0.4)
 modification_stack = SubResource("SkeletonModificationStack2D_if0c2")
 
-[node name="Sprites" type="Node2D" parent="Skeleton2D"]
+[node name="Sprites" type="Node2D" parent="Skeleton2D" unique_id=1609676413]
 position = Vector2(-627, -147)
 
-[node name="Neck" type="Polygon2D" parent="Skeleton2D/Sprites"]
+[node name="Neck" type="Polygon2D" parent="Skeleton2D/Sprites" unique_id=1951051518]
 position = Vector2(-1754, -374)
 texture = SubResource("CanvasTexture_hd1mn")
 skeleton = NodePath("../..")
@@ -4489,12 +4449,12 @@ polygons = [PackedInt32Array(66, 67, 41, 42, 43, 44), PackedInt32Array(67, 72, 3
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.6, 0.55, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0.1, 0.1, 0.1, 0.15, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.25, 0.4, 0.25, 0.6, 1, 1, 1, 1, 0, 0, 0, 0.15, 0.15, 0, 0, 1, 1, 1, 1, 1), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.45, 1, 1, 1, 0.2, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0.4, 0.65, 0.45, 0.45, 0.35, 0.25, 0, 0, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.5, 0.45, 1, 1, 1, 1, 1, 1, 0.05, 0.2, 0, 0.1, 0, 0, 0.55, 1, 1, 1, 0.2, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0.05, 0.2, 0.65, 0.75, 1, 1, 0.15, 0.25, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0.3, 0.4, 0.3, 0.4, 0.4, 0.1, 0.15, 0.15, 0.6, 0.55, 1, 0.8, 1, 1, 1, 1, 0.2, 0.15, 0.2, 0.4, 0.2, 0.15, 0, 0, 0, 0, 0.45, 0.5, 1, 0.2, 0.1, 0.2, 1, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0.4, 0.4, 0.5, 0.75, 0.8, 0.75, 0.6, 1, 1, 0.15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0.2, 0.6, 0.7, 1, 1, 1, 1, 0.55, 0.6, 0.15, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0.15, 0, 0, 0, 0.3, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 0.7, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.45058e-09, 1, 1, 1, 0.5, 0.4, 0.05, 7.45058e-09, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.35, 0.15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 32
 
-[node name="Head Root" type="Node2D" parent="Skeleton2D/Sprites"]
+[node name="Head Root" type="Node2D" parent="Skeleton2D/Sprites" unique_id=1292076637]
 position = Vector2(-1723.6, 103.927)
 
-[node name="Upper Head" type="Node2D" parent="Skeleton2D/Sprites/Head Root"]
+[node name="Upper Head" type="Node2D" parent="Skeleton2D/Sprites/Head Root" unique_id=24890954]
 
-[node name="TopTeeth" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="TopTeeth" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=242242540]
 z_index = -1
 position = Vector2(-676.4, 110.073)
 texture = SubResource("CanvasTexture_n86si")
@@ -4504,7 +4464,7 @@ uv = PackedVector2Array(582.1, 0, 548.6, 0, 463.621, 25.7991, 432.225, 39.3394, 
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="Head" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="Head" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=956047745]
 position = Vector2(-707.4, -543.927)
 texture = SubResource("CanvasTexture_tydsb")
 skeleton = NodePath("../../../..")
@@ -4514,7 +4474,7 @@ polygons = [PackedInt32Array(52, 61, 59, 57, 56, 55, 54, 53), PackedInt32Array(6
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0.3, 0.28, 0.28, 0.42, 0.44, 0.44, 0.44, 0.56, 0.28, 0.14, 0.14, 0.14, 0, 0, 0, 0, 0, 0, 7.45058e-09, 0.05, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.04, 0.19, 0.52, 0.78, 1, 0.78, 0.91, 0.1, 0, 0.9, 0, 1, 0.78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0.05, 0.25, 0.25, 0.25, 0.1, 0.1, 0.1, 0.05, 0.1, 0.35, 0.8, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0.14, 0.05, 0.6, 1, 1, 1, 1, 0.47, 0.47, 0.14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(1, 1, 1, 1, 1, 1, 0.89, 0.35, 0.15, 0.15, 0.15, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0.16, 0.3, 0.5, 1, 0.9, 0.8, 0.8, 0.66, 1, 0.85, 0.85, 0.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 14
 
-[node name="Eyebrow" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head/Head"]
+[node name="Eyebrow" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head/Head" unique_id=4153570]
 position = Vector2(336.25, 359.75)
 texture = SubResource("CanvasTexture_unwj3")
 skeleton = NodePath("../../../../..")
@@ -4523,7 +4483,7 @@ uv = PackedVector2Array(232, 1.2, 232, 0, 158, 0, 152.8, 1, 147.8, 1, 139.9, 4, 
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront/TongueFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0.7, 0.7, 1, 1, 1, 0.98, 0.98, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.84, 0.7, 0.7, 0.7, 0.7, 0.56, 0.56, 0.56, 0.56, 0.56, 0.56, 0.56, 0.56, 0.28, 0.14, 0.14, 0.14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.14, 0.28, 0.28)]
 
-[node name="EyeCorners" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="EyeCorners" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=449032094]
 position = Vector2(-281.585, -110.701)
 texture = SubResource("CanvasTexture_wyw7b")
 skeleton = NodePath("../../../..")
@@ -4532,7 +4492,7 @@ uv = PackedVector2Array(157, 0.1, 154.9, 0, 108.1, 0, 98.6, 2, 94.5, 2, 78.5, 10
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="Eye" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="Eye" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=1814376063]
 clip_children = 2
 position = Vector2(-236.4, -100.927)
 texture = SubResource("CanvasTexture_43y6t")
@@ -4541,7 +4501,7 @@ polygon = PackedVector2Array(67.7066, -7.66043, 6.09926, 32.6391, -7.33393, 98.8
 uv = PackedVector2Array(67.7066, -7.66043, 6.09926, 32.6391, -7.33393, 98.8787, 30.6496, 148.906, 86.2352, 154.464, 149.695, 125.745, 164.981, 61.3584, 134.409, 4.84634)
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront/TongueFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="Pupil" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head/Eye"]
+[node name="Pupil" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head/Eye" unique_id=432734723]
 position = Vector2(-3, 45)
 texture = ExtResource("7_0ordp")
 skeleton = NodePath("../../../../..")
@@ -4550,7 +4510,7 @@ uv = PackedVector2Array(28, 0, 12, 0, 6.2, 6, 4.6, 6, 0, 18.8, 0, 77.7, 12.5682,
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
 
-[node name="BottomLid" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="BottomLid" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=1835416695]
 position = Vector2(-288.4, -109.927)
 texture = SubResource("CanvasTexture_g2da2")
 skeleton = NodePath("../../../..")
@@ -4560,7 +4520,7 @@ polygons = [PackedInt32Array(12, 21, 10, 11), PackedInt32Array(13, 22, 21, 12), 
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 0.17, 0.17, 0.34, 0.67, 1, 1, 1, 0.34, 0.34, 0.34, 1, 1, 0.68, 0.17, 0.17, 0.17, 0.34, 0.85, 1, 1, 1, 0.34, 0.17, 0.17, 0.17, 0.34, 0.85, 1, 1, 0.17, 0.17), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.17, 0.34, 0.51, 1, 1, 0.68, 0.34, 0.17, 0, 0.17, 0.34, 0.51, 0.85, 1, 0.68, 0.34, 0.17, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 12
 
-[node name="TopLid" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="TopLid" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=541430646]
 position = Vector2(-305.4, -154.927)
 texture = SubResource("CanvasTexture_e4gd5")
 skeleton = NodePath("../../../..")
@@ -4570,7 +4530,7 @@ polygons = [PackedInt32Array(17, 23, 21, 20, 19, 18), PackedInt32Array(17, 16, 2
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.3, 0.07, 0, 0.14, 0.65, 0.75, 1, 1, 1, 1, 1, 1, 1, 0.77, 0.79, 0.21, 0, 0, 0.3, 0.58, 1, 1, 0.46, 0.46, 0.46), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront/TongueFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28, 1, 1, 1, 1, 1, 0.18, 0, 0, 0, 0, 0, 0, 0, 0.18, 1, 1, 1, 1, 1, 0.28, 0, 0, 0.34, 0.51, 0.68), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.34, 0, 0)]
 internal_vertex_count = 13
 
-[node name="Ear" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="Ear" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=1578511891]
 z_index = 1
 position = Vector2(269, -110)
 texture = SubResource("CanvasTexture_r77ij")
@@ -4580,7 +4540,7 @@ uv = PackedVector2Array(409.8, 0, 292.7, 0, 256.7, 6, 253.4, 6, 126, 81.9, 126, 
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0.26, 0.26, 1, 1, 1, 0.87, 0.87, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(1, 1, 1, 1, 1, 1, 0.91, 0.13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="Nostril(flared)" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head"]
+[node name="Nostril(flared)" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Upper Head" unique_id=1552825882]
 position = Vector2(-609.4, 155.073)
 scale = Vector2(0.7, 0.7)
 texture = SubResource("CanvasTexture_dp7u7")
@@ -4590,9 +4550,9 @@ uv = PackedVector2Array(98.2, 0, 61.9, 0, 40.9, 5, 38.1, 5, 22.1, 24, 20.6, 24, 
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="Lower Head" type="Node2D" parent="Skeleton2D/Sprites/Head Root"]
+[node name="Lower Head" type="Node2D" parent="Skeleton2D/Sprites/Head Root" unique_id=429338408]
 
-[node name="Tongue" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head"]
+[node name="Tongue" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head" unique_id=148427765]
 z_index = -2
 position = Vector2(-660.4, 102.073)
 texture = SubResource("CanvasTexture_yna8d")
@@ -4603,7 +4563,7 @@ polygons = [PackedInt32Array(24, 25, 26, 37, 21, 22, 23), PackedInt32Array(26, 2
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 13
 
-[node name="BottomTeeth" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head"]
+[node name="BottomTeeth" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head" unique_id=1801707921]
 z_index = -2
 position = Vector2(-646.4, 138.073)
 texture = SubResource("CanvasTexture_vkq83")
@@ -4613,7 +4573,7 @@ uv = PackedVector2Array(554.774, -1.59552, 547.774, -1.59552, 506.374, 17.2045, 
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108)]
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Smile", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="InnerMouth" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head"]
+[node name="InnerMouth" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head" unique_id=126922020]
 z_index = -1
 position = Vector2(-270.4, 60.073)
 rotation = 0.220922
@@ -4625,7 +4585,7 @@ polygons = [PackedInt32Array(2, 17, 15, 16, 0, 1), PackedInt32Array(15, 14, 18, 
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0.17, 0, 0, 0, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.34, 0.51, 0.51, 0.68, 0.85, 0.68, 0.51, 0.51, 0.17, 0.17, 0.17, 0.51, 0.34, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Smile", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0.17, 0.17, 0.17, 0.17, 0.17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.17, 0.17, 0.17, 0, 0, 0.17)]
 internal_vertex_count = 4
 
-[node name="Jaw" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head"]
+[node name="Jaw" type="Polygon2D" parent="Skeleton2D/Sprites/Head Root/Lower Head" unique_id=772046651]
 position = Vector2(-693.4, 47.073)
 rotation = -0.0383173
 texture = SubResource("CanvasTexture_7nyfo")
@@ -4636,23 +4596,23 @@ polygons = [PackedInt32Array(63, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 65,
 bones = ["Neck 1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.1, 0.1, 0.1, 0.05, 0, 0, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.1, 0.05, 0.1, 0.1, 1, 1, 1, 1, 1, 1), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipFront", PackedFloat32Array(1, 1, 0.9, 0.55, 0.5, 0.55, 0.55, 0.5, 0.55, 0.3, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0.8, 0.55, 0.55, 0.6, 0.5, 0.5, 0.55, 0.3, 0.2, 0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0.15, 0.35, 0.4, 0.5, 0.75, 1, 1, 1, 0.8, 0.65, 0.75, 0.45, 0.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.2, 0.4, 0.45, 0.45, 0.75, 1, 1, 1, 0.8, 0.5, 0.75, 0.5, 0.4, 0.05, 0, 0, 0.2, 0, 0.05, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.05, 0.25, 0.3, 0.35, 0.6, 0.7, 1, 0.65, 0.55, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.25, 0.35, 0.3, 0.55, 0.6, 1, 0.65, 0.55, 0.15, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueBack/TongueMidBack/TongueMid/TongueMidFront/TongueFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0.05, 0.05, 0.05, 0.1, 0.1, 0.07, 0.21, 0.21, 0.93, 0.9, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.05, 0.05, 0.1, 0.1, 0.07, 0.14, 0.28, 0.44, 0.58, 0.79, 1, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck 1/Neck 2/Neck 3/Neck 4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 22
 
-[node name="Wing" type="Sprite2D" parent="Skeleton2D/Sprites"]
+[node name="Wing" type="Sprite2D" parent="Skeleton2D/Sprites" unique_id=926868948]
 unique_name_in_owner = true
 position = Vector2(1449.5, -640.5)
 rotation = 0.0244549
 texture = SubResource("CanvasTexture_j1ojh")
 offset = Vector2(-960, -712)
 
-[node name="Shoulder" type="Sprite2D" parent="Skeleton2D/Sprites"]
+[node name="Shoulder" type="Sprite2D" parent="Skeleton2D/Sprites" unique_id=285451496]
 unique_name_in_owner = true
 position = Vector2(791, 141)
 scale = Vector2(0.805667, 0.805667)
 texture = SubResource("CanvasTexture_yt8hw")
 
-[node name="Neck 1" type="Bone2D" parent="Skeleton2D"]
+[node name="Neck 1" type="Bone2D" parent="Skeleton2D" unique_id=857032148]
 position = Vector2(76, -81)
-rotation = 0.321844
-scale = Vector2(0.999845, 0.999845)
+rotation = 0.32184398
+scale = Vector2(0.9998451, 0.9998451)
 rest = Transform2D(1, 0, 0, 1, 76, -81)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
@@ -4663,7 +4623,7 @@ rotation_easing_params = SubResource("Resource_1wv2b")
 limit_rotation = true
 constraint_data = SubResource("Resource_fnsbc")
 
-[node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1"]
+[node name="Neck 2" type="Bone2D" parent="Skeleton2D/Neck 1" unique_id=43773019]
 position = Vector2(-456, 15)
 rotation = 0.845011
 scale = Vector2(0.999878, 0.999878)
@@ -4677,10 +4637,10 @@ rotation_easing_params = SubResource("Resource_8lj5r")
 limit_rotation = true
 constraint_data = SubResource("Resource_on25f")
 
-[node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2"]
+[node name="Neck 3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2" unique_id=1645279933]
 position = Vector2(-703, -9)
-rotation = -0.431875
-scale = Vector2(0.999842, 0.999842)
+rotation = -0.43187502
+scale = Vector2(0.9998419, 0.9998419)
 rest = Transform2D(1, 0, 0, 1, -703, -9)
 script = ExtResource("34_sbkqv")
 transform_mode = 0
@@ -4691,9 +4651,9 @@ rotation_easing_params = SubResource("Resource_ewen2")
 limit_rotation = true
 constraint_data = SubResource("Resource_ta0ym")
 
-[node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3"]
+[node name="Neck 4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3" unique_id=1921649498]
 position = Vector2(-668, 8)
-rotation = -0.642494
+rotation = -0.6424941
 scale = Vector2(0.999883, 0.999883)
 rest = Transform2D(1, 0, 0, 1, -668, 8)
 script = ExtResource("34_sbkqv")
@@ -4705,46 +4665,46 @@ rotation_easing_params = SubResource("Resource_623or")
 limit_rotation = true
 constraint_data = SubResource("Resource_k6bb4")
 
-[node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4"]
+[node name="Head" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4" unique_id=1300255705]
 position = Vector2(-594, 28)
-rotation = -0.203578
+rotation = -0.7284241
 scale = Vector2(0.999701, 0.999701)
 rest = Transform2D(0.999999, 0, 0, 0.999999, -594, 28)
 editor_settings/show_bone_gizmo = false
 
-[node name="HeadRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="HeadRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=412874282]
 position = Vector2(28.548, -157.654)
 remote_path = NodePath("../../../../../../../Remote Transforms/HeadRemote")
 
-[node name="MouthRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="MouthRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=929881684]
 position = Vector2(-542.388, 271.793)
 rotation = -0.254818
 remote_path = NodePath("../../../../../../../Remote Transforms/MouthRemote")
 
-[node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="LipsCorner" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=1031669546]
 position = Vector2(-55.0004, 119)
 scale = Vector2(0.999827, 0.999827)
 rest = Transform2D(1, 0, 0, 1, -55.0004, 119)
 auto_calculate_length_and_angle = false
 length = 89.071
-bone_angle = -43.886
+bone_angle = -43.885998
 
-[node name="Innermouth U" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="Innermouth U" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=749920092]
 position = Vector2(-189.001, 129)
 rest = Transform2D(1, 0, 0, 1, -189.001, 129)
 auto_calculate_length_and_angle = false
 length = 47.969
 bone_angle = -302.143
 
-[node name="ULipFront" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="ULipFront" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=493855305]
 position = Vector2(-685.001, 266)
 scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, -685.001, 266)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = -106.071
+bone_angle = -106.07099
 
-[node name="ULipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="ULipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=544316653]
 position = Vector2(-487.001, 207)
 scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, -487.001, 207)
@@ -4752,55 +4712,55 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = -99.643
 
-[node name="ULipBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="ULipBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=1256594619]
 position = Vector2(-261.001, 176)
 scale = Vector2(0.999873, 0.999873)
 rest = Transform2D(1, 0, 0, 1, -261.001, 176)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = -96.429
+bone_angle = -96.42899
 
-[node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=1263924092]
 position = Vector2(-24.0005, 62)
 rotation = -0.00942021
 scale = Vector2(0.999849, 0.999849)
 rest = Transform2D(0.999956, -0.00942007, 0.00942007, 0.999956, -24.0005, 62)
 editor_settings/show_bone_gizmo = false
 
-[node name="Innermouth L" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+[node name="Innermouth L" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw" unique_id=1225050157]
 position = Vector2(-140.708, 180.683)
 rest = Transform2D(1, 0, 0, 1, -140.708, 180.683)
 auto_calculate_length_and_angle = false
 length = 47.968
-bone_angle = -86.786
+bone_angle = -86.785995
 
-[node name="LLipFront" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+[node name="LLipFront" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw" unique_id=19830594]
 position = Vector2(-643.336, 244.951)
 rest = Transform2D(1, 0, 0, 1, -643.336, 244.951)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = 51.429
+bone_angle = 51.428997
 
-[node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+[node name="LLipMiddle" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw" unique_id=1556471916]
 position = Vector2(-450.817, 190.762)
 scale = Vector2(0.999827, 0.999827)
 rest = Transform2D(1, 0, 0, 1, -450.817, 190.762)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = 77.143
+bone_angle = 77.14299
 
-[node name="LLipBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+[node name="LLipBack" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw" unique_id=1349000665]
 position = Vector2(-226.573, 165.873)
 scale = Vector2(0.999857, 0.999857)
 rest = Transform2D(1, 0, 0, 1, -226.573, 165.873)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = 70.714
+bone_angle = 70.71399
 
-[node name="TongueExtend" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+[node name="TongueExtend" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw" unique_id=274996863]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
-[node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend"]
+[node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend" unique_id=2144365203]
 position = Vector2(26.4717, 56.252)
 rotation = 0.0419914
 scale = Vector2(0.999834, 0.999834)
@@ -4814,7 +4774,7 @@ rotation_easing_params = SubResource("Resource_hp2yj")
 limit_rotation = true
 constraint_data = SubResource("Resource_iplph")
 
-[node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1"]
+[node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1" unique_id=1167586495]
 position = Vector2(-144.681, 71.6403)
 rotation = -0.0234508
 scale = Vector2(0.999833, 0.999833)
@@ -4828,7 +4788,7 @@ rotation_easing_params = SubResource("Resource_hp2yj")
 limit_rotation = true
 constraint_data = SubResource("Resource_43o6b")
 
-[node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2"]
+[node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2" unique_id=1007398333]
 position = Vector2(-148.182, 18.605)
 rotation = 0.05401
 scale = Vector2(0.99982, 0.99982)
@@ -4842,14 +4802,14 @@ rotation_easing_params = SubResource("Resource_hp2yj")
 limit_rotation = true
 constraint_data = SubResource("Resource_6q68s")
 
-[node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3"]
+[node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3" unique_id=701385997]
 position = Vector2(-146.994, -1.38475)
-rotation = -0.283546
-scale = Vector2(0.999844, 0.999844)
+rotation = -0.28354603
+scale = Vector2(0.99984396, 0.99984396)
 rest = Transform2D(1, 0, 0, 1, -146.994, -1.38475)
 auto_calculate_length_and_angle = false
 length = 130.878
-bone_angle = 171.246
+bone_angle = 171.24599
 script = ExtResource("34_sbkqv")
 transform_mode = 0
 target_rotation = -0.74423
@@ -4859,69 +4819,69 @@ rotation_easing_params = SubResource("Resource_hp2yj")
 limit_rotation = true
 constraint_data = SubResource("Resource_a2m1f")
 
-[node name="TongueRemoteRoot" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw"]
+[node name="TongueRemoteRoot" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw" unique_id=1284234387]
 position = Vector2(-556.394, 233.056)
 remote_path = NodePath("../../../../../../../../IK Targets/TongueRemote")
 
-[node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="Ear" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=1413370731]
 position = Vector2(124, -56)
 scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(1, 0, 0, 1, 124, -56)
 auto_calculate_length_and_angle = false
 length = 276.317
-bone_angle = -25.714
+bone_angle = -25.713999
 
-[node name="Nostril" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="Nostril" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=293340043]
 position = Vector2(-612.52, 143.775)
 rest = Transform2D(1, 0, 0, 1, -617.001, 140)
 auto_calculate_length_and_angle = false
 length = 84.504
-bone_angle = 225.0
+bone_angle = 224.99998
 
-[node name="NoseRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril"]
+[node name="NoseRemoteTransform" type="RemoteTransform2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Nostril" unique_id=56668976]
 remote_path = NodePath("../../../../../../../../Remote Transforms/NoseRemote")
 
-[node name="Eyebrow" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="Eyebrow" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=1442712888]
 position = Vector2(-231.033, -107.006)
 scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(1, 0, 0, 1, -222, -143)
 auto_calculate_length_and_angle = false
 length = 107.223
-bone_angle = 146.752
+bone_angle = 146.75198
 
-[node name="Eye" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head"]
+[node name="Eye" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head" unique_id=1012608925]
 position = Vector2(-161.001, -32)
 rest = Transform2D(1, 0, 0, 1, -161.001, -32)
 editor_settings/show_bone_gizmo = false
 
-[node name="EyelidU" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
+[node name="EyelidU" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye" unique_id=2087536094]
 position = Vector2(-40.0287, -65.0048)
 rest = Transform2D(1, 0, 0, 1, -14, -15)
 auto_calculate_length_and_angle = false
 length = 50.0
 bone_angle = -119.236
 
-[node name="EyelidL" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
+[node name="EyelidL" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye" unique_id=1374500120]
 position = Vector2(24.9748, 60.0021)
 rest = Transform2D(1, 0, 0, 1, 11, 21)
 auto_calculate_length_and_angle = false
 length = 50.0
 bone_angle = 59.618
 
-[node name="Pupil" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye"]
+[node name="Pupil" type="Bone2D" parent="Skeleton2D/Neck 1/Neck 2/Neck 3/Neck 4/Head/Eye" unique_id=540902981]
 rest = Transform2D(1, 0, 0, 1, -61.504, 17.9955)
 auto_calculate_length_and_angle = false
 length = 68.127
 bone_angle = -90.0
 script = ExtResource("68_cjxlc")
 
-[node name="Soup Rig" type="Node" parent="Skeleton2D"]
+[node name="Soup Rig" type="Node" parent="Skeleton2D" unique_id=564523923]
 script = ExtResource("37_buh3l")
 
-[node name="Neck IK A" type="Node" parent="Skeleton2D/Soup Rig"]
+[node name="Neck IK A" type="Node" parent="Skeleton2D/Soup Rig" unique_id=753231889]
 script = ExtResource("37_buh3l")
 
-[node name="SoupTwoBoneIK" type="Node" parent="Skeleton2D/Soup Rig/Neck IK A" node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
+[node name="SoupTwoBoneIK" type="Node" parent="Skeleton2D/Soup Rig/Neck IK A" unique_id=2035471411 node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
 script = ExtResource("38_c5jl5")
 target_node = NodePath("../../../../IK Targets/Neck Mid")
 enabled = true
@@ -4930,7 +4890,7 @@ softness = 0.4
 joint_one_bone_node = NodePath("../../../Neck 1")
 joint_two_bone_node = NodePath("../../../Neck 1/Neck 2")
 
-[node name="SoupTwoBoneIK2" type="Node" parent="Skeleton2D/Soup Rig/Neck IK A" node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
+[node name="SoupTwoBoneIK2" type="Node" parent="Skeleton2D/Soup Rig/Neck IK A" unique_id=613149667 node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
 script = ExtResource("38_c5jl5")
 target_node = NodePath("../../../../IK Targets/Neck End")
 enabled = true
@@ -4938,11 +4898,11 @@ softness = 0.4
 joint_one_bone_node = NodePath("../../../Neck 1/Neck 2/Neck 3")
 joint_two_bone_node = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4")
 
-[node name="Neck IK B" type="Node" parent="Skeleton2D/Soup Rig"]
+[node name="Neck IK B" type="Node" parent="Skeleton2D/Soup Rig" unique_id=1752158582]
 script = ExtResource("37_buh3l")
 enabled = false
 
-[node name="SoupFABRIK" type="Node" parent="Skeleton2D/Soup Rig/Neck IK B" node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
+[node name="SoupFABRIK" type="Node" parent="Skeleton2D/Soup Rig/Neck IK B" unique_id=662633678 node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
 script = ExtResource("38_6oa1n")
 target_node = NodePath("../../../../IK Targets/Neck End")
 enabled = true
@@ -4952,67 +4912,65 @@ determenistic = true
 bias_offset_degrees = -122.823
 iterations = 5
 
-[node name="Head Look" type="Node" parent="Skeleton2D/Soup Rig" node_paths=PackedStringArray("target_node", "bone_node")]
+[node name="Head Look" type="Node" parent="Skeleton2D/Soup Rig" unique_id=1219111089 node_paths=PackedStringArray("target_node", "bone_node")]
 script = ExtResource("39_41d0e")
 target_node = NodePath("../../../IK Targets/Head Point")
 enabled = true
 angle_offset_degrees = -59.017
 bone_node = NodePath("../../Neck 1/Neck 2/Neck 3/Neck 4/Head")
 
-[node name="Tongue" type="Node" parent="Skeleton2D/Soup Rig"]
+[node name="Tongue" type="Node" parent="Skeleton2D/Soup Rig" unique_id=745132654]
 script = ExtResource("37_buh3l")
 
-[node name="Tongue IK" type="Node" parent="Skeleton2D/Soup Rig/Tongue" node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
+[node name="Tongue IK" type="Node" parent="Skeleton2D/Soup Rig/Tongue" unique_id=648925482 node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
 script = ExtResource("38_6oa1n")
 target_node = NodePath("../../../../IK Targets/TongueRemote/Tongue")
 enabled = true
 chain_root = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1")
 chain_tip = NodePath("../../../Neck 1/Neck 2/Neck 3/Neck 4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4")
 
-[node name="IK Targets" type="Node2D" parent="."]
+[node name="IK Targets" type="Node2D" parent="." unique_id=1122627758]
 scale = Vector2(0.4, 0.4)
 
-[node name="Neck Mid" type="Marker2D" parent="IK Targets"]
+[node name="Neck Mid" type="Marker2D" parent="IK Targets" unique_id=1649782329]
 unique_name_in_owner = true
 position = Vector2(-797, -1014)
 gizmo_extents = 306.0
 
-[node name="Neck End" type="Marker2D" parent="IK Targets"]
+[node name="Neck End" type="Marker2D" parent="IK Targets" unique_id=1206262051]
 unique_name_in_owner = true
 position = Vector2(-2045, -1139)
 gizmo_extents = 362.5
 
-[node name="Head Point" type="Marker2D" parent="IK Targets"]
+[node name="Head Point" type="Marker2D" parent="IK Targets" unique_id=1735794204]
 unique_name_in_owner = true
 position = Vector2(-2906, -977)
 gizmo_extents = 209.5
 
-[node name="Eye Target" type="Marker2D" parent="IK Targets"]
+[node name="Eye Target" type="Marker2D" parent="IK Targets" unique_id=855271670]
 unique_name_in_owner = true
 position = Vector2(-7757.97, -3509.97)
 scale = Vector2(2.5, 2.5)
 gizmo_extents = 116.0
 script = ExtResource("69_e8orq")
 
-[node name="TongueRemote" type="Node2D" parent="IK Targets"]
-position = Vector2(-2264.42, -967.366)
-rotation = -0.120513
-scale = Vector2(0.998998, 0.998998)
+[node name="TongueRemote" type="Node2D" parent="IK Targets" unique_id=1606693876]
+position = Vector2(-2010.1521, -745.1423)
+rotation = -0.6453584
+scale = Vector2(0.9989984, 0.9989984)
 
-[node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote"]
+[node name="Tongue" type="Marker2D" parent="IK Targets/TongueRemote" unique_id=925593344]
 unique_name_in_owner = true
 rotation = -0.112874
 gizmo_extents = 296.9
 
-[node name="Animation Data" type="Node" parent="."]
+[node name="Animation Data" type="Node" parent="." unique_id=705002306]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation Data"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation Data" unique_id=1967585629]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_32ely")
-}
+libraries/ = SubResource("AnimationLibrary_32ely")
 
-[node name="AnimationTree" type="AnimationTree" parent="Animation Data"]
+[node name="AnimationTree" type="AnimationTree" parent="Animation Data" unique_id=411197974]
 unique_name_in_owner = true
 root_node = NodePath("%AnimationTree/..")
 callback_mode_discrete = 1
@@ -5032,16 +4990,16 @@ parameters/NoseFlareTransition/transition_request = ""
 parameters/NoseFlareTransition/current_index = 0
 "parameters/Parameter Animation/IdleTickle/blend_position" = 0.00694444
 "parameters/Parameter Animation/SneezeBlend/blend_position" = 0.0
-"parameters/Parameter Animation/SneezeBlend2/blend_position" = 0
+"parameters/Parameter Animation/SneezeBlend2/blend_position" = 0.0
 
-[node name="Remote Transforms" type="Node" parent="."]
+[node name="Remote Transforms" type="Node" parent="." unique_id=1060953653]
 
-[node name="MouthRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-892.849, -399.832)
-rotation = -0.365911
-scale = Vector2(0.39966, 0.39966)
+[node name="MouthRemote" type="Node2D" parent="Remote Transforms" unique_id=962475553]
+position = Vector2(-799.3364, -315.6819)
+rotation = -0.8907562
+scale = Vector2(0.39965972, 0.39965972)
 
-[node name="GlitterParticles" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
+[node name="GlitterParticles" type="GPUParticles2D" parent="Remote Transforms/MouthRemote" unique_id=621932435]
 unique_name_in_owner = true
 z_index = -12
 position = Vector2(60.6016, -28.6865)
@@ -5057,7 +5015,7 @@ trail_lifetime = 1.0
 process_material = SubResource("ParticleProcessMaterial_h5by6")
 script = ExtResource("47_o2tv5")
 
-[node name="SprayParticles" type="GPUParticles2D" parent="Remote Transforms/MouthRemote"]
+[node name="SprayParticles" type="GPUParticles2D" parent="Remote Transforms/MouthRemote" unique_id=1876961072]
 unique_name_in_owner = true
 z_index = -12
 position = Vector2(60.6016, -28.6865)
@@ -5074,7 +5032,7 @@ trail_lifetime = 1.0
 process_material = SubResource("ParticleProcessMaterial_aosch")
 script = ExtResource("48_c6mjl")
 
-[node name="Voice Box" type="Node2D" parent="Remote Transforms/MouthRemote" node_paths=PackedStringArray("brain", "Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
+[node name="Voice Box" type="Node2D" parent="Remote Transforms/MouthRemote" unique_id=1555678296 node_paths=PackedStringArray("brain", "Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
 unique_name_in_owner = true
 rotation = 0.336093
 script = ExtResource("2_80oa4")
@@ -5088,14 +5046,14 @@ SneezeStifle = NodePath("AudioLoaderSneezeStifle")
 Sniff = NodePath("AudioLoaderSniff")
 pitch_range = Vector2(0.95, 1.05)
 
-[node name="AudioLoaderBuildup" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderBuildup" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=303698622]
 stream = SubResource("AudioStreamRandomizer_8lt0t")
 pitch_scale = 0.994256
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/buildup"
 
-[node name="AudioLoaderSneeze" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderSneeze" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=53885097]
 stream = SubResource("AudioStreamRandomizer_6xysc")
 pitch_scale = 1.00224
 max_distance = 10000.0
@@ -5104,7 +5062,7 @@ load_audio_directory = "res://assets/audio/Star_voice/sneeze"
 do_filter = true
 file_filter = "Normal"
 
-[node name="AudioLoaderSneezeBig" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderSneezeBig" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=1302532092]
 stream = SubResource("AudioStreamRandomizer_n5cre")
 pitch_scale = 1.00224
 max_distance = 10000.0
@@ -5113,7 +5071,7 @@ load_audio_directory = "res://assets/audio/Star_voice/sneeze"
 do_filter = true
 file_filter = "Big"
 
-[node name="AudioLoaderSneezeStifle" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderSneezeStifle" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=33000595]
 stream = SubResource("AudioStreamRandomizer_6c0ht")
 pitch_scale = 1.00224
 max_distance = 10000.0
@@ -5122,13 +5080,13 @@ load_audio_directory = "res://assets/audio/Star_voice/sneeze"
 do_filter = true
 file_filter = "Stifle"
 
-[node name="AudioLoaderSigh" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderSigh" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=1339144613]
 stream = SubResource("AudioStreamRandomizer_trcj5")
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/sigh"
 
-[node name="AudioLoaderHitch" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderHitch" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=1149899941]
 stream = SubResource("AudioStreamRandomizer_n6k6u")
 volume_db = 5.0
 pitch_scale = 0.999183
@@ -5136,19 +5094,19 @@ max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/hitch"
 
-[node name="AudioLoaderSniff" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box"]
+[node name="AudioLoaderSniff" type="AudioStreamPlayer2D" parent="Remote Transforms/MouthRemote/Voice Box" unique_id=175766053]
 stream = SubResource("AudioStreamRandomizer_rfmvs")
 pitch_scale = 0.981055
 max_distance = 10000.0
 script = ExtResource("83_ico0e")
 load_audio_directory = "res://assets/audio/Star_voice/sniff"
 
-[node name="NoseRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-926.377, -447.572)
-rotation = -0.111093
-scale = Vector2(0.39966, 0.39966)
+[node name="NoseRemote" type="Node2D" parent="Remote Transforms" unique_id=283618116]
+position = Vector2(-852.27386, -340.19647)
+rotation = -0.6359382
+scale = Vector2(0.39965972, 0.39965972)
 
-[node name="NoseOuter" type="Area2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("connected_nose")]
+[node name="NoseOuter" type="Area2D" parent="Remote Transforms/NoseRemote" unique_id=1606131297 node_paths=PackedStringArray("connected_nose")]
 unique_name_in_owner = true
 position = Vector2(-15.8503, 11.9606)
 rotation = 0.830374
@@ -5165,12 +5123,12 @@ burn_wait_seconds = 15.0
 burn_decay_seconds = 30.0
 burn_decay_on_sneeze_seconds = 20.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/NoseRemote/NoseOuter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/NoseRemote/NoseOuter" unique_id=283226451]
 position = Vector2(-3.1773, -16.5613)
 rotation = -0.144537
 shape = SubResource("CapsuleShape2D_6po3j")
 
-[node name="BreathWindOrigin" type="Marker2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("lungs", "radial_wind_origin", "linear_wind_origin", "linear_wind_direction")]
+[node name="BreathWindOrigin" type="Marker2D" parent="Remote Transforms/NoseRemote" unique_id=1057594264 node_paths=PackedStringArray("lungs", "radial_wind_origin", "linear_wind_origin", "linear_wind_direction")]
 unique_name_in_owner = true
 position = Vector2(61.7464, -25.8973)
 rotation = -3.57453
@@ -5182,16 +5140,16 @@ radial_wind_origin = NodePath("Radial Origin")
 linear_wind_origin = NodePath("Linear Origin")
 linear_wind_direction = NodePath("Linear Origin/Linear Direction")
 
-[node name="Radial Origin" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin"]
+[node name="Radial Origin" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin" unique_id=893606575]
 position = Vector2(169.385, 46.1788)
 
-[node name="Linear Origin" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin"]
+[node name="Linear Origin" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin" unique_id=150866051]
 position = Vector2(366.379, 81.4704)
 
-[node name="Linear Direction" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin/Linear Origin"]
+[node name="Linear Direction" type="Marker2D" parent="Remote Transforms/NoseRemote/BreathWindOrigin/Linear Origin" unique_id=21566346]
 position = Vector2(135.804, -67.3726)
 
-[node name="Nose Redness" type="Sprite2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("tracked_nose")]
+[node name="Nose Redness" type="Sprite2D" parent="Remote Transforms/NoseRemote" unique_id=910458454 node_paths=PackedStringArray("tracked_nose")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-28.8869, 14.7256)
 rotation = 0.618289
@@ -5201,7 +5159,7 @@ script = ExtResource("65_pa7eh")
 tracked_nose = NodePath("../NoseOuter")
 tickle_factor = 0.1
 
-[node name="Nose Redness2" type="Sprite2D" parent="Remote Transforms/NoseRemote" node_paths=PackedStringArray("tracked_nose")]
+[node name="Nose Redness2" type="Sprite2D" parent="Remote Transforms/NoseRemote" unique_id=123036418 node_paths=PackedStringArray("tracked_nose")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(22.4176, -10.8748)
 rotation = 0.618289
@@ -5211,45 +5169,45 @@ script = ExtResource("65_pa7eh")
 tracked_nose = NodePath("../../HeadRemote/NoseInner")
 tickle_factor = 0.1
 
-[node name="HeadRemote" type="Node2D" parent="Remote Transforms"]
-position = Vector2(-685.103, -595.703)
-rotation = -0.111093
-scale = Vector2(0.39966, 0.39966)
+[node name="HeadRemote" type="Node2D" parent="Remote Transforms" unique_id=645378277]
+position = Vector2(-717.7003, -589.2865)
+rotation = -0.6359382
+scale = Vector2(0.39965972, 0.39965972)
 
-[node name="Nose Insertion" type="Node2D" parent="Remote Transforms/HeadRemote"]
+[node name="Nose Insertion" type="Node2D" parent="Remote Transforms/HeadRemote" unique_id=907491695]
 position = Vector2(-645.549, 297.654)
 
-[node name="NoseInsertDetector" type="Area2D" parent="Remote Transforms/HeadRemote/Nose Insertion" node_paths=PackedStringArray("insert_mask")]
+[node name="NoseInsertDetector" type="Area2D" parent="Remote Transforms/HeadRemote/Nose Insertion" unique_id=1917978352 node_paths=PackedStringArray("insert_mask")]
 script = ExtResource("84_n5npt")
 insert_mask = NodePath("InsertMask")
 
-[node name="InsertMask" type="Polygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseInsertDetector"]
+[node name="InsertMask" type="Polygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseInsertDetector" unique_id=461378439]
 unique_name_in_owner = true
 show_behind_parent = true
 clip_children = 1
 position = Vector2(-16.0304, 11.2657)
 polygon = PackedVector2Array(30.5437, -38.3885, 39.9248, -40.252, 53.0732, -38.4215, 63.4453, -33.6736, 67.676, -29.6969, 68.0112, -26.7708, 66.8406, -16.5967, 64.926, -10.6819, 56.0903, -4.18591, 36.8638, 5.88379, 19.4915, 14.5307, 7.66162, 26.5029, -2.35382, 44.6189, 39.6998, 207.768, 145.957, 609.342, -572.075, 657.102, -786.141, 671.341, -797.244, -492.512, 181.038, -476.059, 39.1503, -192.503, 10.0142, -44.1392)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseInsertDetector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseInsertDetector" unique_id=1337671531]
 position = Vector2(308.881, -63.0285)
 rotation = 1.26522
 shape = SubResource("CapsuleShape2D_wkx0m")
 
-[node name="NoseCollision" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote/Nose Insertion"]
+[node name="NoseCollision" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote/Nose Insertion" unique_id=1671473724]
 position = Vector2(645.549, -297.654)
 collision_layer = 2
 collision_mask = 0
 physics_material_override = ExtResource("162_8lt0t")
 sync_to_physics = false
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseCollision"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseCollision" unique_id=994064863]
 position = Vector2(-1.05129, -2.10228)
 polygon = PackedVector2Array(-485.181, 287.728, -328.372, 257.392, -169.684, 220.999, -3.98425, 241.221, -20.8102, 13.2195, 206.214, 96.4484, 111.178, 373.949, -359.818, 426.629, -600.561, 475.272, -711.256, 444.805, -625.911, 324.072)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseCollision"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/Nose Insertion/NoseCollision" unique_id=1532266369]
 polygon = PackedVector2Array(-703.753, 228.186, -626.41, 251.422, -341.364, 184.982, -205.294, 138.328, -83.2129, 104.93, 50.4851, 247.695, 187.862, 177.741, 150.335, -12.207, -47.6813, -38.5548, -260.296, -11.8307, -443.376, 157.105)
 
-[node name="NoseInner" type="Area2D" parent="Remote Transforms/HeadRemote"]
+[node name="NoseInner" type="Area2D" parent="Remote Transforms/HeadRemote" unique_id=1969183209]
 unique_name_in_owner = true
 position = Vector2(-352.868, 230.416)
 rotation = 0.830374
@@ -5266,46 +5224,46 @@ burn_decay_on_sneeze_seconds = 25.0
 sensitivity_multiplier_on_sneeze = 0.8
 sensitivity_decay_seconds = 120.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/HeadRemote/NoseInner"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Remote Transforms/HeadRemote/NoseInner" unique_id=1077420785]
 position = Vector2(72.2946, -103.137)
 rotation = 0.503096
 shape = SubResource("CapsuleShape2D_f7cjx")
 
-[node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
+[node name="LookAtNoseTarget" type="Marker2D" parent="Remote Transforms/HeadRemote" unique_id=451836037]
 unique_name_in_owner = true
 position = Vector2(-1241.18, 953.483)
 rotation = 0.628319
 gizmo_extents = 99.0
 
-[node name="LookRollBackTarget" type="Marker2D" parent="Remote Transforms/HeadRemote"]
+[node name="LookRollBackTarget" type="Marker2D" parent="Remote Transforms/HeadRemote" unique_id=1346382956]
 unique_name_in_owner = true
 position = Vector2(-621.47, -752.561)
 rotation = -0.987856
 gizmo_extents = 119.6
 
-[node name="HeadCollisionTools" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote"]
+[node name="HeadCollisionTools" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote" unique_id=2104551042]
 visible = false
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_h47km")
 sync_to_physics = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/HeadCollisionTools"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/HeadCollisionTools" unique_id=272597371]
 polygon = PackedVector2Array(-79.5876, -22.4598, 35.3489, 54.9686, 104.99, 187.291, 3.19019, 312.518, -116.745, 417.955, -409.374, 457.734, -619.396, 508.727, -725.056, 435.933, -739.34, 363.23, -713.523, 245.597, -564.453, 196.696, -369.447, 155.262, -270.618, 3.22095)
 
-[node name="HeadCollisionParticles" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote"]
+[node name="HeadCollisionParticles" type="AnimatableBody2D" parent="Remote Transforms/HeadRemote" unique_id=972820449]
 visible = false
 collision_layer = 256
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_h47km")
 sync_to_physics = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/HeadCollisionParticles"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Remote Transforms/HeadRemote/HeadCollisionParticles" unique_id=1284461225]
 polygon = PackedVector2Array(-79.5876, -22.4598, 35.3489, 54.9686, 104.99, 187.291, 3.19019, 312.518, -116.745, 417.955, -409.374, 457.734, -619.396, 508.727, -725.056, 435.933, -739.34, 363.23, -713.523, 245.597, -564.453, 196.696, -369.447, 155.262, -270.618, 3.22095)
 one_way_collision = true
 
-[node name="Data" type="Node" parent="."]
+[node name="Data" type="Node" parent="." unique_id=599908479]
 
-[node name="Lungs" parent="Data" node_paths=PackedStringArray("voice_box") instance=ExtResource("70_xplix")]
+[node name="Lungs" parent="Data" unique_id=714211190 node_paths=PackedStringArray("voice_box") instance=ExtResource("70_xplix")]
 unique_name_in_owner = true
 lungs = ExtResource("45_ufyo5")
 oxygen = ExtResource("46_qsxht")
@@ -5316,7 +5274,7 @@ SNEEZE_WIND_BONUS = 20000.0
 voice_box = NodePath("../../Remote Transforms/MouthRemote/Voice Box")
 sneeze_wind_curve = SubResource("Curve_q3w4i")
 
-[node name="Brain" parent="Data" node_paths=PackedStringArray("lungs", "voice", "animation_tree") instance=ExtResource("97_8vqa2")]
+[node name="Brain" parent="Data" unique_id=612692211 node_paths=PackedStringArray("lungs", "voice", "animation_tree") instance=ExtResource("97_8vqa2")]
 unique_name_in_owner = true
 lungs = NodePath("../Lungs")
 voice = NodePath("../../Remote Transforms/MouthRemote/Voice Box")
@@ -5339,7 +5297,7 @@ hitch_repeat_modifier = SubResource("Resource_drxmn")
 buildup_repeat_modifier = SubResource("Resource_0lban")
 sneeze_repeat_modifier = SubResource("Resource_l3cks")
 
-[node name="Chhinkni" type="Node" parent="Data"]
+[node name="Chhinkni" type="Node" parent="Data" unique_id=1981857244]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("96_q1kil")
 progress_sensitivity_curve = SubResource("Curve_4ox5n")
@@ -5352,7 +5310,7 @@ particle_tickle_mod_curve = SubResource("Curve_447sm")
 particle_burn_curve = SubResource("Curve_6xysc")
 particle_burn_mod_curve = SubResource("Curve_urgnq")
 
-[node name="Dust" type="Node" parent="Data"]
+[node name="Dust" type="Node" parent="Data" unique_id=1469187313]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("87_xfbtc")
 progress_sensitivity_curve = SubResource("Curve_kiepg")
@@ -5360,14 +5318,14 @@ allergen_time_decay_seconds = 120.0
 particle_tickle_curve = SubResource("Curve_n6k6u")
 particle_burn_curve = SubResource("Curve_rfmvs")
 
-[node name="Pollen" type="Node" parent="Data"]
+[node name="Pollen" type="Node" parent="Data" unique_id=205237817]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("43_bb46j")
 progress_burn_curve = SubResource("Curve_fo1c0")
 progress_sensitivity_curve = SubResource("Curve_8hncw")
 particle_decay_seconds = 80.0
 
-[node name="Pepper" type="Node" parent="Data"]
+[node name="Pepper" type="Node" parent="Data" unique_id=957978334]
 script = ExtResource("95_aqq7c")
 allergen = ExtResource("66_kwx24")
 progress_sensitivity_curve = SubResource("Curve_cxwp0")
@@ -5378,13 +5336,13 @@ particle_tickle_mod_curve = SubResource("Curve_0qu7n")
 particle_burn_curve = SubResource("Curve_pybbq")
 particle_burn_mod_curve = SubResource("Curve_w4n22")
 
-[node name="Cold" type="Node" parent="Data"]
+[node name="Cold" type="Node" parent="Data" unique_id=1131193204]
 script = ExtResource("56_hg8um")
 tickle_curve = SubResource("Curve_qu5h2")
 burn_curve = SubResource("Curve_c6mjl")
 sensitivity_curve = SubResource("Curve_o2tv5")
 
-[node name="ShaderTextPanel" type="Panel" parent="."]
+[node name="ShaderTextPanel" type="Panel" parent="." unique_id=1965952054]
 unique_name_in_owner = true
 visible = false
 top_level = true
@@ -5394,7 +5352,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ShaderProcessingLabel" type="Label" parent="ShaderTextPanel"]
+[node name="ShaderProcessingLabel" type="Label" parent="ShaderTextPanel" unique_id=691250328]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 8

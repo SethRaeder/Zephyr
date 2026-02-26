@@ -13,13 +13,17 @@ config_version=5
 config/name="Zephyr"
 config/version="0.8.4"
 run/main_scene="uid://cu7aklpnd2dc1"
-config/features=PackedStringArray("4.5")
+config/features=PackedStringArray("4.6")
 boot_splash/bg_color=Color(0.298039, 0.298039, 0.298039, 1)
 boot_splash/show_image=false
 boot_splash/use_filter=false
 boot_splash/image="res://assets/images/background/Loading.png"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=150
+
+[audio]
+
+buses/default_bus_layout="uid://cx6f7mekqyvw6"
 
 [autoload]
 

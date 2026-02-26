@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgxtaj4vrici"]
+[gd_scene format=3 uid="uid://cgxtaj4vrici"]
 
 [ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_8on80"]
 [ext_resource type="Texture2D" uid="uid://dm333bjkc7kvc" path="res://assets/images/inducing_tools/revised/Chhinkni Cap.PNG" id="1_gnbye"]
@@ -7,18 +7,18 @@
 radius = 30.0
 height = 100.0
 
-[node name="ChhinkniCap" type="RigidBody2D" groups=["tool_particles"]]
+[node name="ChhinkniCap" type="RigidBody2D" unique_id=937209590 groups=["tool_particles"]]
 mass = 0.01
 script = ExtResource("1_8on80")
 particle_lifetime = 60.0
 particle_lifetime_variance = Vector2(0.2, 1)
 
-[node name="Sprite2" type="Sprite2D" parent="."]
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=622982237]
 z_index = -1
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_gnbye")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1377995862]
 position = Vector2(-4.76837e-06, 0)
 rotation = 1.5708
 scale = Vector2(0.11, 0.11)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://xwggdnmhs7mt"]
+[gd_scene format=3 uid="uid://xwggdnmhs7mt"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_fi5oo"]
 [ext_resource type="Texture2D" uid="uid://cc7nxxfhq72yg" path="res://assets/images/inducing_tools/revised/Pepper Shaker.PNG" id="2_4c60o"]
@@ -17,57 +17,57 @@ height = 66.0
 radius = 42.0
 height = 118.0
 
-[node name="Pepper" type="RigidBody2D" groups=["tools"]]
+[node name="Pepper" type="RigidBody2D" unique_id=926775162 groups=["tools"]]
 input_pickable = true
 mass = 0.2
 angular_damp = 80.0
 script = ExtResource("1_fi5oo")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1171474881]
 visible = false
 shape = SubResource("CapsuleShape2D_g1qc4")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1581787052]
 z_index = -1
 position = Vector2(0, -15.8)
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("2_4c60o")
 
-[node name="Pepper Internal" type="Polygon2D" parent="."]
+[node name="Pepper Internal" type="Polygon2D" parent="." unique_id=982934875]
 clip_children = 1
 position = Vector2(0, -15.8)
 scale = Vector2(0.167, 0.167)
 polygon = PackedVector2Array(24, -97, 48, -93, 57, -88, 62, -64, 63, -36, 67, 35, 71, 145, 70, 170, 60, 178, 35, 186, 0, 189, -38, 184, -64, 176, -70, 166, -71, 139, -66, 35, -63, -39, -62, -67, -58, -86, -51, -90, -41, -96, -25, -98, 1, -99)
 
-[node name="Smoke08" type="Sprite2D" parent="Pepper Internal"]
+[node name="Smoke08" type="Sprite2D" parent="Pepper Internal" unique_id=268756066]
 modulate = Color(0.21, 0.196035, 0.1953, 1)
 position = Vector2(1.48648, -66.881)
 texture = ExtResource("3_rmnnm")
 
-[node name="Smoke07" type="Sprite2D" parent="Pepper Internal"]
+[node name="Smoke07" type="Sprite2D" parent="Pepper Internal" unique_id=344226676]
 modulate = Color(0.21, 0.196035, 0.1953, 1)
 position = Vector2(11.976, 53.8922)
 texture = ExtResource("4_o2yfo")
 
-[node name="HideOnParticleExhaust" type="Node" parent="Pepper Internal" node_paths=PackedStringArray("particle_emitter")]
+[node name="HideOnParticleExhaust" type="Node" parent="Pepper Internal" unique_id=1146952814 node_paths=PackedStringArray("particle_emitter")]
 script = ExtResource("5_v713m")
 particle_emitter = NodePath("../../ParticleEmitter")
 
-[node name="GrabArea" type="Area2D" parent="."]
+[node name="GrabArea" type="Area2D" parent="." unique_id=2024846528]
 position = Vector2(0, -15.8)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea" unique_id=1961132592]
 visible = false
 shape = SubResource("CapsuleShape2D_agtqg")
 
-[node name="GrabTransform" type="Marker2D" parent="." node_paths=PackedStringArray("grab_area")]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=571287517 node_paths=PackedStringArray("grab_area")]
 position = Vector2(0, -7)
 gizmo_extents = 105.2
 script = ExtResource("3_2pw2t")
 snap_factor_d = -5.0
 grab_area = NodePath("../GrabArea")
 
-[node name="ParticleEmitter" type="Node2D" parent="."]
+[node name="ParticleEmitter" type="Node2D" parent="." unique_id=52480868]
 position = Vector2(0, -15.8)
 script = ExtResource("4_nd7ux")
 particle_scene = ExtResource("5_eacuv")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://qjiu4fb7fbty"]
+[gd_scene format=3 uid="uid://qjiu4fb7fbty"]
 
 [ext_resource type="Script" uid="uid://byyfdun5a2o4q" path="res://scenes/tools/tool_body.gd" id="1_bp4m2"]
 [ext_resource type="Texture2D" uid="uid://cwbbu2ebn62aa" path="res://assets/images/inducing_tools/revised/Duster Handle.PNG" id="2_e2fon"]
@@ -38,13 +38,13 @@ point_count = 2
 [sub_resource type="CircleShape2D" id="CircleShape2D_epfxd"]
 radius = 43.0465
 
-[node name="Duster" type="RigidBody2D" groups=["tools"]]
+[node name="Duster" type="RigidBody2D" unique_id=209723908 groups=["tools"]]
 input_pickable = true
 mass = 0.25
 angular_damp = 10.0
 script = ExtResource("1_bp4m2")
 
-[node name="ParticleEmitter" parent="." instance=ExtResource("2_ewvqs")]
+[node name="ParticleEmitter" parent="." unique_id=2110467589 instance=ExtResource("2_ewvqs")]
 position = Vector2(0.5, -79)
 particle_scene = ExtResource("3_eciq1")
 jerk_accelerate = true
@@ -54,11 +54,11 @@ jerk_particle_variance = Vector2(1, 5)
 particle_spawn_max_speed = 500.0
 particle_spawn_radius = 50.0
 
-[node name="DusterCollision" type="CollisionShape2D" parent="."]
+[node name="DusterCollision" type="CollisionShape2D" parent="." unique_id=1888966981]
 position = Vector2(0.5, 15)
 shape = SubResource("CapsuleShape2D_ley4e")
 
-[node name="DusterHandle" type="Sprite2D" parent="."]
+[node name="DusterHandle" type="Sprite2D" parent="." unique_id=1816456390]
 position = Vector2(0.5, 15)
 scale = Vector2(0.124, 0.124)
 texture = ExtResource("2_e2fon")
@@ -66,24 +66,24 @@ script = ExtResource("3_qsmvp")
 spawn_graph = SubResource("Curve_avk7b")
 spawn_scale_graph = SubResource("Curve_txbus")
 
-[node name="FeatherRoot" type="Node2D" parent="DusterHandle"]
+[node name="FeatherRoot" type="Node2D" parent="DusterHandle" unique_id=703853440]
 position = Vector2(3.02557, -382.392)
 rotation = 0.114869
 scale = Vector2(1.10268, 1.39441)
 script = ExtResource("4_6a3d2")
 
-[node name="DusterFeather" type="Sprite2D" parent="DusterHandle/FeatherRoot"]
+[node name="DusterFeather" type="Sprite2D" parent="DusterHandle/FeatherRoot" unique_id=1619696785]
 z_index = -1
 position = Vector2(0, -326)
 texture = ExtResource("5_pc1n5")
 
-[node name="GrabTransform" type="Marker2D" parent="."]
+[node name="GrabTransform" type="Marker2D" parent="." unique_id=205565236]
 position = Vector2(0, 3)
 gizmo_extents = 73.5
 script = ExtResource("6_btf2x")
 snap_factor_d = -10.0
 
-[node name="TickleComponent" type="Area2D" parent="."]
+[node name="TickleComponent" type="Area2D" parent="." unique_id=1072906371]
 position = Vector2(0.5, -92)
 collision_layer = 8
 collision_mask = 8
@@ -91,17 +91,17 @@ script = ExtResource("7_6newg")
 use_velocity = true
 velocity_curve = SubResource("Curve_0j4h7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TickleComponent" unique_id=732417227]
 shape = SubResource("CircleShape2D_8it7v")
 
-[node name="TickleDebugSuite" parent="TickleComponent" instance=ExtResource("8_pevtq")]
+[node name="TickleDebugSuite" parent="TickleComponent" unique_id=1813476868 instance=ExtResource("8_pevtq")]
 offset_left = -32.0
 offset_top = 63.0
 offset_right = -18.22
 offset_bottom = 94.655
 metadata/_edit_use_anchors_ = true
 
-[node name="DustyBurn" type="Area2D" parent="."]
+[node name="DustyBurn" type="Area2D" parent="." unique_id=985333683]
 position = Vector2(0.5, -69)
 collision_layer = 8
 collision_mask = 8
@@ -111,17 +111,17 @@ tickle_damage_limit = 100.0
 use_velocity = true
 velocity_curve = SubResource("Curve_kq5du")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DustyBurn"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustyBurn" unique_id=993348507]
 shape = SubResource("CircleShape2D_epfxd")
 
-[node name="TickleDebugSuite" parent="DustyBurn" instance=ExtResource("8_pevtq")]
+[node name="TickleDebugSuite" parent="DustyBurn" unique_id=199380143 instance=ExtResource("8_pevtq")]
 offset_left = 17.0
 offset_top = 40.0
 offset_right = 30.78
 offset_bottom = 71.655
 metadata/_edit_use_anchors_ = true
 
-[node name="Dust Allergy" type="Area2D" parent="."]
+[node name="Dust Allergy" type="Area2D" parent="." unique_id=1460171585]
 position = Vector2(0.5, -69)
 collision_layer = 8
 collision_mask = 8
@@ -130,10 +130,10 @@ tickle_type = 3
 allergy_type = ExtResource("11_shvuq")
 intensity = 20.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dust Allergy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dust Allergy" unique_id=1065727246]
 shape = SubResource("CircleShape2D_epfxd")
 
-[node name="TickleDebugSuite" parent="Dust Allergy" instance=ExtResource("8_pevtq")]
+[node name="TickleDebugSuite" parent="Dust Allergy" unique_id=842186492 instance=ExtResource("8_pevtq")]
 offset_left = 17.0
 offset_top = 40.0
 offset_right = 30.78

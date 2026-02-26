@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccdnshw4dvj87"]
+[gd_scene format=3 uid="uid://ccdnshw4dvj87"]
 
 [ext_resource type="Script" uid="uid://cv8ubux5m3uu4" path="res://scripts/components/particles/particle_emitter.gd" id="1_0xqks"]
 
-[node name="ParticleEmitter" type="Node2D"]
+[node name="ParticleEmitter" type="Node2D" unique_id=570413760]
 script = ExtResource("1_0xqks")

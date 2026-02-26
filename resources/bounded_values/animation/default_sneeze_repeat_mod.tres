@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="CustomBoundedValue" load_steps=2 format=3 uid="uid://u1gubwfhlkkp"]
+[gd_resource type="Resource" script_class="CustomBoundedValue" format=3 uid="uid://u1gubwfhlkkp"]
 
 [ext_resource type="Script" uid="uid://dffk5kwe1wvi" path="res://resources/definitions/custom_bounded_value.gd" id="1_srpbt"]
 
 [resource]
 script = ExtResource("1_srpbt")
 name = &"Sneeze Repeat"
-min_value = 0.0
 max_value = 3.0
 current_value = 2.0

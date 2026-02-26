@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://imkp062d5m14"]
+[gd_scene format=3 uid="uid://imkp062d5m14"]
 
 [ext_resource type="Script" uid="uid://bcyecs8ff1vr5" path="res://scripts/components/particles/particle.gd" id="1_yoe6j"]
 [ext_resource type="Script" uid="uid://b47tnccpxj0ua" path="res://scripts/components/wind/wind_subscriber.gd" id="2_ubu1b"]
@@ -13,7 +13,7 @@ radius = 3.16228
 [sub_resource type="CircleShape2D" id="CircleShape2D_34lcl"]
 radius = 8.0
 
-[node name="Dandelion" type="RigidBody2D" groups=["tool_particles"]]
+[node name="Dandelion" type="RigidBody2D" unique_id=760882014 groups=["tool_particles"]]
 collision_layer = 262144
 collision_mask = 262656
 mass = 0.001
@@ -22,34 +22,34 @@ script = ExtResource("1_yoe6j")
 delete_on_tickle_finished = true
 particle_air_limit = 500.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850725422]
 shape = SubResource("CircleShape2D_t7i0l")
 
-[node name="WindSubscriber" type="Marker2D" parent="."]
+[node name="WindSubscriber" type="Marker2D" parent="." unique_id=1151572174]
 scale = Vector2(0.18, 0.18)
 script = ExtResource("2_ubu1b")
 
-[node name="Tickle" type="Area2D" parent="."]
+[node name="Tickle" type="Area2D" parent="." unique_id=191936666]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_ksixu")
 intensity = 5.0
 tickle_damage_limit = 1.0
 
-[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle"]
+[node name="EnableOnBreatheComponent" type="Node2D" parent="Tickle" unique_id=1158564065]
 process_mode = 3
 scale = Vector2(0.18, 0.18)
 script = ExtResource("4_hc7fo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tickle" unique_id=752957797]
 shape = SubResource("CircleShape2D_34lcl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=78828927]
 modulate = Color(1, 1, 1, 0.8)
 z_index = 10
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_3v203")
 
-[node name="FadeParticleSprite" type="Node" parent="Sprite2D" node_paths=PackedStringArray("root_node")]
+[node name="FadeParticleSprite" type="Node" parent="Sprite2D" unique_id=872749012 node_paths=PackedStringArray("root_node")]
 script = ExtResource("6_g046x")
 root_node = NodePath("../..")
