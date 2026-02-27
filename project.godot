@@ -29,6 +29,7 @@ buses/default_bus_layout="uid://cx6f7mekqyvw6"
 
 ZephyrGlobals="*res://scripts/globals/zephyr_globals.gd"
 GameManager="*res://scripts/globals/game_manager.gd"
+ECS="*uid://dfqwl5njvdnmq"
 
 [display]
 
@@ -40,7 +41,7 @@ movie_writer/movie_file="E:/Godot/Projects/Missile Command/Render.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/soupik/plugin.cfg")
+enabled=PackedStringArray("res://addons/gecs/plugin.cfg", "res://addons/soupik/plugin.cfg")
 
 [file_customization]
 

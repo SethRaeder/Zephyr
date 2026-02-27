@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://qjn2u2s0r6df"]
+
+[ext_resource type="Script" uid="uid://cpoki4cg3rhox" path="res://scripts/gecs/systems/s_lifetime.gd" id="1_e7dkt"]
+[ext_resource type="Script" uid="uid://b1ad4r6bhift1" path="res://scripts/gecs/systems/s_breath.gd" id="2_nl4b0"]
+[ext_resource type="Script" uid="uid://bgc5onw5dmc47" path="res://scripts/gecs/systems/s_wind.gd" id="3_qesv2"]
+[ext_resource type="Script" uid="uid://bdbi6mvre43b0" path="res://scripts/gecs/systems/s_char_body_2d.gd" id="4_fng5e"]
+[ext_resource type="Script" uid="uid://dypgum4n1mswm" path="res://scripts/gecs/systems/s_movement.gd" id="5_bqppy"]
+
+[node name="DefaultSystems" type="Node" unique_id=1512960639]
+
+[node name="S_Breath" type="Node" parent="." unique_id=970017138]
+script = ExtResource("2_nl4b0")
+metadata/_custom_type_script = "uid://b1ad4r6bhift1"
+
+[node name="S_Lifetime" type="Node" parent="." unique_id=1850655975]
+script = ExtResource("1_e7dkt")
+metadata/_custom_type_script = "uid://cpoki4cg3rhox"
+
+[node name="S_Wind" type="Node" parent="." unique_id=1404875425]
+script = ExtResource("3_qesv2")
+metadata/_custom_type_script = "uid://bgc5onw5dmc47"
+
+[node name="S_CharacterBody2D" type="Node" parent="." unique_id=1362162145]
+script = ExtResource("4_fng5e")
+metadata/_custom_type_script = "uid://bdbi6mvre43b0"
+
+[node name="S_Movement" type="Node" parent="." unique_id=1477312196]
+script = ExtResource("5_bqppy")
+metadata/_custom_type_script = "uid://dypgum4n1mswm"

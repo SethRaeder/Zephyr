@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dwdsr5rumitgu"]
+
+[ext_resource type="Script" uid="uid://brsfqfetagway" path="res://scripts/gecs/entities/e_character.gd" id="1_wsqxo"]
+[ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="2_rcdlg"]
+[ext_resource type="Script" uid="uid://bsj6dlomskjtb" path="res://scripts/gecs/components/c_lungs.gd" id="3_wx1fs"]
+[ext_resource type="Script" uid="uid://k0h8qwjov00b" path="res://scripts/gecs/components/c_nose.gd" id="4_rcdlg"]
+[ext_resource type="Curve" uid="uid://6hg5h6yc0rb7" path="res://resources/curves/default_wind_falloff_curve.tres" id="5_fucxh"]
+[ext_resource type="Script" uid="uid://c8yecp2lpcblw" path="res://scripts/gecs/components/c_wind_emitter.gd" id="5_wx1fs"]
+[ext_resource type="Curve" uid="uid://bcnn5ac1ounkb" path="res://resources/curves/default_wind_lerp_curve.tres" id="6_yfjbr"]
+[ext_resource type="Texture2D" uid="uid://bw4u57p47agwa" path="res://addons/kenney_particle_pack/magic_03.png" id="7_faoqb"]
+
+[sub_resource type="Resource" id="Resource_fpuoc"]
+script = ExtResource("4_rcdlg")
+metadata/_custom_type_script = "uid://k0h8qwjov00b"
+
+[sub_resource type="Resource" id="Resource_hm8gb"]
+script = ExtResource("5_wx1fs")
+wind_origin_marker = NodePath("Marker2D")
+metadata/_custom_type_script = "uid://c8yecp2lpcblw"
+
+[sub_resource type="Resource" id="Resource_uh2sy"]
+script = ExtResource("3_wx1fs")
+exhale_power = 2.0
+metadata/_custom_type_script = "uid://bsj6dlomskjtb"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfjbr"]
+radius = 20.61551
+
+[node name="ECSCharacterTest" type="Node2D" unique_id=1106594321]
+script = ExtResource("1_wsqxo")
+component_resources = Array[ExtResource("2_rcdlg")]([SubResource("Resource_fpuoc"), SubResource("Resource_hm8gb"), SubResource("Resource_uh2sy")])
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=407397989]
+gizmo_extents = 120.5
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=1378886830]
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("7_faoqb")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Marker2D" unique_id=1726603452]
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/AnimatableBody2D" unique_id=1269405288]
+shape = SubResource("CircleShape2D_yfjbr")

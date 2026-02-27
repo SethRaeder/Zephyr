@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dqwox1s5gwlb8"]
+
+[ext_resource type="Script" uid="uid://ee865if4aer8" path="res://scripts/gecs/entities/e_particle.gd" id="1_e1ymi"]
+[ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="2_4fcfi"]
+[ext_resource type="Script" uid="uid://c5luokmq32h2n" path="res://scripts/gecs/components/c_can_be_blown.gd" id="3_87rji"]
+[ext_resource type="Script" uid="uid://b0i0jlelfljko" path="res://scripts/gecs/components/c_transform.gd" id="4_gs4br"]
+[ext_resource type="Script" uid="uid://1hoau27ayqoh" path="res://scripts/gecs/components/c_velocity.gd" id="5_7r1id"]
+[ext_resource type="Script" uid="uid://c3kg7ohomefgg" path="res://scripts/gecs/components/c_mass.gd" id="6_xgooc"]
+[ext_resource type="Script" uid="uid://bwvja706qdgwl" path="res://scripts/gecs/components/c_lifetime.gd" id="7_5janv"]
+[ext_resource type="Script" uid="uid://weughps147bm" path="res://scripts/gecs/components/c_char_body_2d.gd" id="8_tgstv"]
+[ext_resource type="Texture2D" uid="uid://bbduo8dc2p8pe" path="res://addons/kenney_particle_pack/smoke_04.png" id="9_gmgq7"]
+[ext_resource type="Script" uid="uid://1it6dwm2byyx" path="res://scripts/gecs/test_lifetime_transparency.gd" id="10_ut348"]
+
+[sub_resource type="Resource" id="Resource_0kh7n"]
+script = ExtResource("3_87rji")
+metadata/_custom_type_script = "uid://c5luokmq32h2n"
+
+[sub_resource type="Resource" id="Resource_exi6k"]
+script = ExtResource("4_gs4br")
+metadata/_custom_type_script = "uid://b0i0jlelfljko"
+
+[sub_resource type="Resource" id="Resource_f2bx5"]
+script = ExtResource("5_7r1id")
+metadata/_custom_type_script = "uid://1hoau27ayqoh"
+
+[sub_resource type="Resource" id="Resource_dvj12"]
+script = ExtResource("6_xgooc")
+mass_grams = 1.0
+metadata/_custom_type_script = "uid://c3kg7ohomefgg"
+
+[sub_resource type="Resource" id="Resource_vm552"]
+script = ExtResource("7_5janv")
+time = 5.0
+metadata/_custom_type_script = "uid://bwvja706qdgwl"
+
+[sub_resource type="Resource" id="Resource_xwsed"]
+script = ExtResource("8_tgstv")
+metadata/_custom_type_script = "uid://weughps147bm"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dvj12"]
+radius = 6.0
+
+[node name="ToolParticle" type="CharacterBody2D" unique_id=796191879]
+collision_mask = 256
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_e1ymi")
+component_resources = Array[ExtResource("2_4fcfi")]([SubResource("Resource_0kh7n"), SubResource("Resource_exi6k"), SubResource("Resource_f2bx5"), SubResource("Resource_dvj12"), SubResource("Resource_vm552"), SubResource("Resource_xwsed")])
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1589654774]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("9_gmgq7")
+script = ExtResource("10_ut348")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=719876862]
+shape = SubResource("CircleShape2D_dvj12")

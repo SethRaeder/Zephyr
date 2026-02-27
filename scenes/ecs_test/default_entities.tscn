@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://byecam8xkeip3"]
+
+[ext_resource type="PackedScene" uid="uid://dwdsr5rumitgu" path="res://scenes/ecs_test/ecs_character_test.tscn" id="1_00xvb"]
+[ext_resource type="Script" uid="uid://cl6glf45pcrns" path="res://addons/gecs/ecs/entity.gd" id="2_grutj"]
+[ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="3_2eshr"]
+[ext_resource type="Script" uid="uid://c8yecp2lpcblw" path="res://scripts/gecs/components/c_wind_emitter.gd" id="6_85wa1"]
+
+[sub_resource type="Curve" id="Curve_ib0pb"]
+_limits = [0.0, 1.0, -1.0, 1.0]
+_data = [Vector2(-1, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_wgndk"]
+_limits = [0.0, 1.0, -1.0, 1.0]
+_data = [Vector2(-1, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Resource" id="Resource_1nvum"]
+script = ExtResource("6_85wa1")
+wind_origin_marker = NodePath("../FanMarker")
+wind_power = 500.0
+linear_radial_lerp_curve = SubResource("Curve_wgndk")
+falloff_curve = SubResource("Curve_ib0pb")
+distance_falloff_exp = 0.1
+metadata/_custom_type_script = "uid://c8yecp2lpcblw"
+
+[node name="DefaultEntities" type="Node2D" unique_id=1524074373]
+
+[node name="ECSCharacterTest" parent="." unique_id=1576743287 instance=ExtResource("1_00xvb")]
+position = Vector2(713, 333)
+rotation = -3.6163223
+
+[node name="FanEntity" type="Node" parent="." unique_id=992937926]
+script = ExtResource("2_grutj")
+component_resources = Array[ExtResource("3_2eshr")]([SubResource("Resource_1nvum")])
+metadata/_custom_type_script = "uid://cl6glf45pcrns"
+
+[node name="FanMarker" type="Marker2D" parent="." unique_id=1272574488]
+position = Vector2(84, 234)
