@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dwdqb08h1cpe0" path="res://scenes/characters/Chance/remote_offset.gd" id="1_c4xyi"]
 [ext_resource type="Texture2D" uid="uid://cqsne5i7ric5m" path="res://assets/images/characters/Chance/template.png" id="1_np5xu"]
-[ext_resource type="Texture2D" uid="uid://ctfrtt4rdyngr" path="res://assets/images/characters/Chance/Neck.PNG" id="2_n0jjw"]
 [ext_resource type="Script" uid="uid://bg45lwdmxtpjq" path="res://scripts/characters/neck_line_skeleton.gd" id="3_brs5d"]
 [ext_resource type="Texture2D" uid="uid://bmjermp66r0q7" path="res://assets/images/characters/Chance/Shoulder.PNG" id="3_t2dwc"]
 [ext_resource type="Script" uid="uid://c1tmta6m318vo" path="res://scenes/characters/Chance/neck_path_script.gd" id="4_civpo"]
@@ -10,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://kaqjtfslm8hf" path="res://assets/images/characters/Chance/Hair.PNG" id="5_53yu8"]
 [ext_resource type="Texture2D" uid="uid://rhi2f3mnc7tj" path="res://assets/images/characters/Chance/Lower Teeth.PNG" id="6_myd32"]
 [ext_resource type="Script" uid="uid://hjwjb3kiuku7" path="res://scenes/characters/Chance/pin_to_line.gd" id="6_pt4mt"]
+[ext_resource type="Script" uid="uid://cu2fevht0eqa4" path="res://scenes/characters/Chance/line_copy_offset.gd" id="7_cirhw"]
 [ext_resource type="Texture2D" uid="uid://bkahdovjdvvg7" path="res://assets/images/characters/Chance/Upper Teeth.PNG" id="7_e3eg7"]
+[ext_resource type="Texture2D" uid="uid://rrwyrvdi6lt5" path="res://assets/images/characters/Roxie/NeckScales.png" id="7_v7rdv"]
 [ext_resource type="Texture2D" uid="uid://cryf72ygotu5h" path="res://assets/images/characters/Chance/Inner Cheek.PNG" id="8_xgfsu"]
 [ext_resource type="Texture2D" uid="uid://l2prt0ntf7r4" path="res://assets/images/characters/Chance/Back Hair.PNG" id="9_vj0q6"]
 [ext_resource type="Texture2D" uid="uid://bm2dwhgvjhnwl" path="res://assets/images/characters/Chance/Head.PNG" id="10_u2dns"]
@@ -30,11 +31,7 @@
 [ext_resource type="Script" uid="uid://c5kq1nv3cwyc5" path="res://addons/soupik/resources/zm_easing_params.gd" id="23_u2dns"]
 [ext_resource type="Script" uid="uid://1dh2uyfu4stk" path="res://addons/soupik/resources/zm_easing_rotational_params.gd" id="24_74xhh"]
 [ext_resource type="Script" uid="uid://cgngdoajx3egb" path="res://addons/soupik/resources/zm_constraint_data.gd" id="25_jgx11"]
-[ext_resource type="Script" uid="uid://1vbc48b2e7ci" path="res://addons/soupik/modifications/soup_group.gd" id="26_aktjc"]
 [ext_resource type="Texture2D" uid="uid://8k3iqdqpliji" path="res://assets/images/characters/Chance/Collar.PNG" id="26_pt4mt"]
-[ext_resource type="Script" uid="uid://cu2rfhmwork2f" path="res://addons/soupik/modifications/soup_look_at.gd" id="27_xi1gq"]
-[ext_resource type="Script" uid="uid://iscrohmgg73r" path="res://addons/soupik/modifications/soup_two_bone_ik.gd" id="28_cy2um"]
-[ext_resource type="Script" uid="uid://c0halov2bvjmy" path="res://addons/soupik/modifications/soup_fabrik.gd" id="29_xfsvd"]
 [ext_resource type="AnimationNodeBlendSpace1D" uid="uid://daj6fnre4gj43" path="res://scenes/characters/Kel/animations/idle_tickle_blend.tres" id="30_jgx11"]
 [ext_resource type="AnimationNodeBlendSpace1D" uid="uid://brb6ltrd3c6ai" path="res://resources/animations/sneeze_size_blend.tres" id="31_aktjc"]
 [ext_resource type="Curve" uid="uid://c5smld84u8su" path="res://scenes/characters/Kel/animations/kel_anim_transition_curve.tres" id="32_xi1gq"]
@@ -119,48 +116,62 @@
 [ext_resource type="Texture2D" uid="uid://bvfmnu5stdfbt" path="res://addons/kenney_particle_pack/dirt_01.png" id="111_hm1om"]
 [ext_resource type="Script" uid="uid://cb4ai4ex73d5x" path="res://scripts/characters/particles/wetness_particles.gd" id="112_sh7w3"]
 [ext_resource type="Texture2D" uid="uid://bfblnxarr58w8" path="res://addons/kenney_particle_pack/smoke_06.png" id="113_2vlby"]
-[ext_resource type="Script" uid="uid://cuavik740gftj" path="res://scripts/characters/eyes/eye_tracking.gd" id="114_j3emi"]
-[ext_resource type="PackedScene" uid="uid://dn3sl6le4t216" path="res://scenes/components/characters/lungs/lungs.tscn" id="115_brs5d"]
-[ext_resource type="Resource" uid="uid://clt10mw8xata" path="res://resources/bounded_values/lungs/lungs_capacity.tres" id="116_civpo"]
-[ext_resource type="Resource" uid="uid://oqe736kqr37q" path="res://resources/bounded_values/lungs/oxygen.tres" id="117_ddjok"]
-[ext_resource type="PackedScene" uid="uid://34wgpjsyur8v" path="res://scenes/components/characters/brain/brain.tscn" id="118_53yu8"]
-[ext_resource type="Script" uid="uid://dffk5kwe1wvi" path="res://resources/definitions/custom_bounded_value.gd" id="119_pt4mt"]
-[ext_resource type="Script" uid="uid://7ristglnlteh" path="res://scripts/characters/nose/allergen_detector.gd" id="120_c4xyi"]
-[ext_resource type="Resource" uid="uid://eiweg5js1h4j" path="res://resources/allergy_resource/chhinkni.tres" id="121_cirhw"]
-[ext_resource type="Resource" uid="uid://4vp5va5ekxii" path="res://resources/allergy_resource/dust.tres" id="122_jme2s"]
-[ext_resource type="Resource" uid="uid://cg0wlkd00qgpj" path="res://resources/allergy_resource/pollen_bouquet.tres" id="123_62x2f"]
-[ext_resource type="Resource" uid="uid://d3vctd86sic6" path="res://resources/allergy_resource/pepper.tres" id="124_hucby"]
-[ext_resource type="Script" uid="uid://ci4624g354jc4" path="res://scripts/characters/nose/cold.gd" id="125_uk606"]
+[ext_resource type="Script" uid="uid://dmdkk6s24amap" path="res://scenes/characters/Chance/path_curler.gd" id="117_v7rdv"]
 
-[sub_resource type="Curve2D" id="Curve2D_brs5d"]
+[sub_resource type="Curve2D" id="Curve2D_v7rdv"]
 _data = {
-"points": PackedVector2Array(-21.160994, 6.229337, 21.160994, -6.229337, -2666.6025, 96.56414, -38.912117, 3.200715, 38.912117, -3.200715, -2528.1978, 55.820778, -141.97887, 3.3095655, 141.97887, -3.3095655, -2030.1204, 44.21032, -168.16716, 4.092917, 168.16716, -4.092917, -1509.2085, 32.067863, -168.94356, 4.2613864, 168.94356, -4.2613864, -904.1936, 16.80708, -36.995953, 0.014939325, 36.995953, -0.014939325, 0, -6, -8.680716, -0.29075804, 8.680716, 0.29075804, 662.03357, 16.174622)
+"points": PackedVector2Array(0, 0, 0, 0, -880.7703, -1657.946, 0, 0, 0, 0, -1023.5823, -1564.8076, 0, 0, 0, 0, -1118.4138, -1504.9734, 60.645947, -25.191393, -60.645947, 25.191393, -1258.9679, -1462.6378, 13.995218, -3.265551, -13.995218, 3.265551, -1376.9429, -1408.4484, 60.459343, 6.251198, -60.459343, -6.251198, -1531.7821, -1412.0366, 0, 0, 0, 0, -1660.3088, -1438.9299, 0, 0, 0, 0, -1706.5957, -1546.1799, 0, 0, 0, 0, -1733.0746, -1663.1733, -43.86156, 5.617738, 43.86156, -5.617738, -1604.4476, -1696.4349, -11.196175, -6.0645947, 11.196175, 6.0645947, -1447.0947, -1709.5139, -62.04547, 18.193783, 62.04547, -18.193783, -1340.124, -1671.4307, -11.196175, 20.059813, 11.196175, -20.059813, -1276.8467, -1740.9188, -96.1005, 4.1985655, 96.1005, -4.1985655, -1078.4996, -1813.6461, 0, 0, 0, 0, -926.43353, -1783.0676, 0, 0, 0, 0, -877.04584, -1753.3046)
 }
-point_count = 7
+point_count = 16
 
-[sub_resource type="Curve" id="Curve_c4xyi"]
-_limits = [0.0, 500.0, 0.0, 1.0]
-_data = [Vector2(0, 22.058838), 0.0, 0.0, 0, 0, Vector2(0.104795724, 19.306274), 0.0, 0.0, 0, 0, Vector2(0.25399643, 140.54318), 0.0, 0.0, 0, 0, Vector2(0.5328597, 180.95547), 0.0, 0.0, 0, 0, Vector2(0.7708703, 12.925415), 0.0, 0.0, 0, 0, Vector2(0.8543517, 8.671448), 0.0, 0.0, 0, 0, Vector2(0.9857904, 10.798401), 0.0, 0.0, 0, 0]
-point_count = 7
-
-[sub_resource type="Curve" id="Curve_62x2f"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve2D" id="Curve2D_cirhw"]
+[sub_resource type="Curve2D" id="Curve2D_27br7"]
 _data = {
-"points": PackedVector2Array(-149.90224, -5.414827, 149.90224, 5.414827, -2602.7478, -267.69424, -149.99886, -0.5850966, 149.99886, 0.5850966, -1980.7272, -245.22537, -149.5061, -12.162376, 149.5061, 12.162376, -1561.3392, -263.63205, -148.52707, -20.96928, 148.52707, 20.96928, -683.4686, -139.69292)
+"points": PackedVector2Array(0, 0, 0, 0, -877.9479, -1660.204, 0, 0, 0, 0, -866.0939, -1677.1382, 0, 0, 0, 0, -855.3689, -1719.4738, 0, 0, 0, 0, -872.3031, -1752.7777)
 }
 point_count = 4
 
-[sub_resource type="Curve" id="Curve_jme2s"]
-_limits = [0.0, 150.0, 0.0, 1.0]
-_data = [Vector2(0, 150), 0.0, 0.0, 0, 0]
-point_count = 1
+[sub_resource type="Curve2D" id="Curve2D_qjhqk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -120.10601, -4.2900286, 0, 0, 0, 0, -239.20168, -20.417065, 0, 0, 0, 0, -354.54874, -54.16489, 0, 0, 0, 0, -461.4932, -108.99864, 0, 0, 0, 0, -554.18353, -185.49933, 0, 0, 0, 0, -626.8728, -281.2079, 0, 0, 0, 0, -675.362, -391.1745, 0, 0, 0, 0, -698.0709, -509.19214, 0, 0, 0, 0, -696.38574, -629.3629, 0, 0, 0, 0, -674.27625, -747.4943, 0, 0, 0, 0, -637.51544, -861.9168, 0, 0, 0, 0, -592.9935, -973.5486, 0, 0, 0, 0, -548.4716, -1085.1804, 0, 0, 0, 0, -511.71082, -1199.6029, 0, 0, 0, 0, -489.60132, -1317.7343, 0, 0, 0, 0, -487.9161, -1437.905, 0, 0, 0, 0, -510.62503, -1555.9226, 0, 0, 0, 0, -559.11426, -1665.8892, 0, 0, 0, 0, -631.8035, -1761.5978, 0, 0, 0, 0, -724.4939, -1838.0984, 0, 0, 0, 0, -831.43835, -1892.9321, 0, 0, 0, 0, -946.7854, -1926.6799, 0, 0, 0, 0, -1065.8811, -1942.807, 0, 0, 0, 0, -1185.987, -1947.097)
+}
+point_count = 25
+
+[sub_resource type="Curve" id="Curve_v7rdv"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1.96), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_62x2f"]
+_data = [Vector2(0, 0.57859683), 0.0, 0.3195441, 0, 0, Vector2(1, 1), 0.84721154, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_hucby"]
+_limits = [-1000.0, 1000.0, 0.0, 1.0]
+_data = [Vector2(0.47319344, 284.19183), 0.0, 0.0, 0, 0, Vector2(1, 249.55597), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_uk606"]
+_limits = [-1000.0, 1000.0, 0.0, 1.0]
+_data = [Vector2(0, -33.707764), 0.0, 0.0, 0, 0, Vector2(1, 30.195435), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_m47n5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_qjhqk"]
+_limits = [-500.0, 500.0, 0.0, 1.0]
+_data = [Vector2(0, -250.44403), 0.0, 0.0, 0, 0, Vector2(1, -273.5346), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_27br7"]
+_limits = [-500.0, 500.0, 0.0, 1.0]
+_data = [Vector2(0.039627034, -88.80994), 0.0, 0.0, 0, 0, Vector2(0.99533784, -2.2202148), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_c4xyi"]
 _data = {
-"points": PackedVector2Array(-0.99848175, 0.055083334, 0.99848175, -0.055083334, -3069.7505, 150.4964, -0.9998366, -0.018074747, 0.9998366, 0.018074747, -2892.4546, 140.7155, -0.99470794, 0.10274324, 0.99470794, -0.10274324, -2717.8674, 156.85764, -0.96203935, 0.27291068, 0.96203935, -0.27291068, -2528.415, 103.11391)
+"points": PackedVector2Array(-0.99846166, 0.055445816, 0.99846166, -0.055445816, -1527.9879, -1514.3091, -0.99984324, -0.017708851, 0.99984324, 0.017708851, -1350.5997, -1524.1597, -0.99442124, 0.10548141, 0.99442124, -0.10548141, -1175.9119, -1508.0732, -0.9606996, 0.27758995, 0.9606996, -0.27758995, -986.6208, -1562.7681)
 }
 point_count = 4
 
@@ -222,60 +233,21 @@ joint_data/0/bone_index = 25
 joint_data/0/bone2d_node = NodePath("Neck/Neck2/Neck3/Neck4/Head/EarBack")
 joint_data/0/override_defaults = false
 
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_qjhqk"]
+bone_index = 6
+bone2d_node = NodePath("Neck/Neck2/Neck3/Neck4/Head")
+target_nodepath = NodePath("../NeckEndIK/HeadTarget")
+enable_constraint = true
+constraint_angle_min = 0.0
+constraint_angle_max = 360.0
+constraint_angle_invert = false
+constraint_in_localspace = true
+
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_ew2pu"]
-modification_count = 2
+modification_count = 3
 modifications/0 = SubResource("SkeletonModification2DJiggle_8x0om")
 modifications/1 = SubResource("SkeletonModification2DJiggle_ydi2g")
-
-[sub_resource type="Resource" id="Resource_53yu8"]
-script = ExtResource("23_u2dns")
-gravity = Vector2(32.25, -43.475)
-metadata/_custom_type_script = "uid://c5kq1nv3cwyc5"
-
-[sub_resource type="Resource" id="Resource_pt4mt"]
-script = ExtResource("24_74xhh")
-velocity_effect = 1.0
-params = SubResource("Resource_53yu8")
-metadata/_custom_type_script = "uid://1dh2uyfu4stk"
-
-[sub_resource type="Resource" id="Resource_fdvg0"]
-script = ExtResource("25_jgx11")
-rotation_direction_degrees = -180.0
-rotation_half_arc_degrees = 120.0
-metadata/_custom_type_script = "uid://cgngdoajx3egb"
-
-[sub_resource type="Resource" id="Resource_c4xyi"]
-script = ExtResource("23_u2dns")
-gravity = Vector2(-43.105, -4.695)
-metadata/_custom_type_script = "uid://c5kq1nv3cwyc5"
-
-[sub_resource type="Resource" id="Resource_cirhw"]
-script = ExtResource("24_74xhh")
-velocity_effect = 0.1
-params = SubResource("Resource_c4xyi")
-metadata/_custom_type_script = "uid://1dh2uyfu4stk"
-
-[sub_resource type="Resource" id="Resource_jme2s"]
-script = ExtResource("23_u2dns")
-gravity = Vector2(-13.455, 0)
-metadata/_custom_type_script = "uid://c5kq1nv3cwyc5"
-
-[sub_resource type="Resource" id="Resource_62x2f"]
-script = ExtResource("24_74xhh")
-velocity_effect = 1.0
-params = SubResource("Resource_jme2s")
-metadata/_custom_type_script = "uid://1dh2uyfu4stk"
-
-[sub_resource type="Resource" id="Resource_hucby"]
-script = ExtResource("23_u2dns")
-gravity = Vector2(1.935, -6.845)
-metadata/_custom_type_script = "uid://c5kq1nv3cwyc5"
-
-[sub_resource type="Resource" id="Resource_uk606"]
-script = ExtResource("24_74xhh")
-velocity_effect = 0.5
-params = SubResource("Resource_hucby")
-metadata/_custom_type_script = "uid://1dh2uyfu4stk"
+modifications/2 = SubResource("SkeletonModification2DLookAt_qjhqk")
 
 [sub_resource type="Resource" id="Resource_hgmj3"]
 script = ExtResource("23_u2dns")
@@ -308,6 +280,7 @@ rotation_half_arc_degrees = 26.0
 
 [sub_resource type="Animation" id="Animation_qux4u"]
 resource_name = "RESET"
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -503,115 +476,115 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Data/EyeTracking:mode")
-tracks/16/interp = 1
+tracks/16/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eyebrow:position")
+tracks/16/interp = 2
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eyebrow:position")
-tracks/17/interp = 2
-tracks/17/loop_wrap = true
-tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-123.37548, -177.28558)]
 }
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eyebrow:rotation")
+tracks/17/interp = 4
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eyebrow:rotation")
-tracks/18/interp = 4
+tracks/18/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Nostril:position")
+tracks/18/interp = 2
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(-543.3658, -124.38993)]
 }
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Nostril:position")
-tracks/19/interp = 2
+tracks/19/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Nostril:rotation")
+tracks/19/interp = 4
 tracks/19/loop_wrap = true
 tracks/19/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-543.3658, -124.38993)]
+"values": [0.0]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Nostril:rotation")
-tracks/20/interp = 4
+tracks/20/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Nostril:scale")
+tracks/20/interp = 2
 tracks/20/loop_wrap = true
 tracks/20/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(0.8, 0.8)]
 }
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Nostril:scale")
-tracks/21/interp = 2
+tracks/21/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw:rotation")
+tracks/21/interp = 4
 tracks/21/loop_wrap = true
 tracks/21/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.8, 0.8)]
+"values": [0.013383687]
 }
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw:rotation")
-tracks/22/interp = 4
+tracks/22/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil:position")
+tracks/22/interp = 2
 tracks/22/loop_wrap = true
 tracks/22/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.013383687]
-}
-tracks/23/type = "value"
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil:position")
-tracks/23/interp = 2
-tracks/23/loop_wrap = true
-tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [Vector2(11.0002365, 4.307916)]
 }
-tracks/24/type = "value"
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil:rotation")
-tracks/24/interp = 4
-tracks/24/loop_wrap = true
-tracks/24/keys = {
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil:rotation")
+tracks/23/interp = 4
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0.0]
 }
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("HeadRemote/FireParticles:emitting")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("HeadRemote/FireParticles:emitting")
+tracks/25/path = NodePath("HeadRemote/SprayParticles:emitting")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -623,19 +596,19 @@ tracks/25/keys = {
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("HeadRemote/SprayParticles:emitting")
+tracks/26/path = NodePath("HeadRemote/FireParticles:modulate")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("HeadRemote/FireParticles:modulate")
+tracks/27/path = NodePath("HeadRemote/SprayParticles:modulate")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
@@ -647,92 +620,92 @@ tracks/27/keys = {
 tracks/28/type = "value"
 tracks/28/imported = false
 tracks/28/enabled = true
-tracks/28/path = NodePath("HeadRemote/SprayParticles:modulate")
+tracks/28/path = NodePath("ShaderTextPanel:visible")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [true]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
 tracks/29/enabled = true
-tracks/29/path = NodePath("ShaderTextPanel:visible")
+tracks/29/path = NodePath("HeadRemote/SmokeBreathParticles:emitting")
 tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
 tracks/30/enabled = true
-tracks/30/path = NodePath("HeadRemote/SmokeBreathParticles:emitting")
+tracks/30/path = NodePath("HeadRemote/SmokeBreathParticles:modulate")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/31/type = "value"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("HeadRemote/SmokeBreathParticles:modulate")
+tracks/31/path = NodePath("HeadRemote/SmokeParticles2:emitting")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/32/type = "value"
 tracks/32/imported = false
 tracks/32/enabled = true
-tracks/32/path = NodePath("HeadRemote/SmokeParticles2:emitting")
+tracks/32/path = NodePath("HeadRemote/SmokeParticles2:modulate")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
 tracks/33/enabled = true
-tracks/33/path = NodePath("HeadRemote/SmokeParticles2:modulate")
-tracks/33/interp = 1
+tracks/33/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head:position")
+tracks/33/interp = 2
 tracks/33/loop_wrap = true
 tracks/33/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(-473.13022, -156.74255)]
 }
 tracks/34/type = "value"
 tracks/34/imported = false
 tracks/34/enabled = true
-tracks/34/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head:position")
-tracks/34/interp = 2
+tracks/34/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head:rotation")
+tracks/34/interp = 4
 tracks/34/loop_wrap = true
 tracks/34/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-473.13022, -156.74255)]
+"values": [0.0]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
 tracks/35/enabled = true
-tracks/35/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head:rotation")
-tracks/35/interp = 4
+tracks/35/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/EarBackIK:rotation")
+tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
 "times": PackedFloat32Array(0),
@@ -743,32 +716,32 @@ tracks/35/keys = {
 tracks/36/type = "value"
 tracks/36/imported = false
 tracks/36/enabled = true
-tracks/36/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/EarBackIK:rotation")
-tracks/36/interp = 1
+tracks/36/path = NodePath("NeckRootMarker:position")
+tracks/36/interp = 2
 tracks/36/loop_wrap = true
 tracks/36/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(662.03357, 16.174622)]
 }
 tracks/37/type = "value"
 tracks/37/imported = false
 tracks/37/enabled = true
-tracks/37/path = NodePath("NeckRootMarker:position")
-tracks/37/interp = 2
+tracks/37/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/TongueIK:rotation")
+tracks/37/interp = 4
 tracks/37/loop_wrap = true
 tracks/37/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(662.03357, 16.174622)]
+"values": [0.0]
 }
 tracks/38/type = "value"
 tracks/38/imported = false
 tracks/38/enabled = true
-tracks/38/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/TongueIK:rotation")
-tracks/38/interp = 4
+tracks/38/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/EarIK:rotation")
+tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
 "times": PackedFloat32Array(0),
@@ -776,22 +749,16 @@ tracks/38/keys = {
 "update": 0,
 "values": [0.0]
 }
-tracks/39/type = "value"
-tracks/39/imported = false
-tracks/39/enabled = true
-tracks/39/path = NodePath("Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/EarIK:rotation")
-tracks/39/interp = 1
-tracks/39/loop_wrap = true
-tracks/39/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
+
+[sub_resource type="Animation" id="Animation_cirhw"]
+resource_name = "TEST_NECKY"
+length = 2.0
+loop_mode = 2
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47t2j"]
 _data = {
-&"RESET": SubResource("Animation_qux4u")
+&"RESET": SubResource("Animation_qux4u"),
+&"TEST_NECKY": SubResource("Animation_cirhw")
 }
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_r5j13"]
@@ -1065,7 +1032,7 @@ transitions = ["Start", "rig_demo", SubResource("AnimationNodeStateMachineTransi
 graph_offset = Vector2(-185, -359)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_cy2um"]
-graph_offset = Vector2(110.04651, -450.8064)
+graph_offset = Vector2(-65.05823, -369.48004)
 nodes/output/position = Vector2(2220, -140)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
@@ -1087,7 +1054,7 @@ nodes/NoseFlareStrength/position = Vector2(2020, -140)
 "nodes/Parameter Animation/position" = Vector2(360, -400)
 node_connections = [&"output", 0, &"NoseFlareStrength", &"Add2", 0, &"Parameter Animation", &"Add2", 1, &"Animation", &"Blink Shot", 0, &"Earflick Shot", &"Blink Shot", 1, &"Blink", &"Earflick Shot", 0, &"Add2", &"Earflick Shot", 1, &"Ear Flick", &"NoseFlareStrength", 0, &"Blink Shot", &"NoseFlareStrength", 1, &"NoseFlare"]
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_c4xyi"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v7rdv"]
 streams_count = 6
 stream_0/stream = ExtResource("34_2qqjp")
 stream_1/stream = ExtResource("35_t54yn")
@@ -1096,7 +1063,7 @@ stream_3/stream = ExtResource("37_v7rdv")
 stream_4/stream = ExtResource("38_27br7")
 stream_5/stream = ExtResource("39_m47n5")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cirhw"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_27br7"]
 streams_count = 9
 stream_0/stream = ExtResource("41_fsf3d")
 stream_1/stream = ExtResource("42_o3k1t")
@@ -1108,7 +1075,7 @@ stream_6/stream = ExtResource("47_civpo")
 stream_7/stream = ExtResource("48_ddjok")
 stream_8/stream = ExtResource("49_53yu8")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jme2s"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m47n5"]
 streams_count = 6
 stream_0/stream = ExtResource("50_pt4mt")
 stream_1/stream = ExtResource("51_c4xyi")
@@ -1117,7 +1084,7 @@ stream_3/stream = ExtResource("53_jme2s")
 stream_4/stream = ExtResource("54_62x2f")
 stream_5/stream = ExtResource("55_hucby")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_62x2f"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_otx0c"]
 streams_count = 14
 stream_0/stream = ExtResource("56_uk606")
 stream_1/stream = ExtResource("57_fdvg0")
@@ -1134,7 +1101,7 @@ stream_11/stream = ExtResource("59_5vmwn")
 stream_12/stream = ExtResource("60_a46c3")
 stream_13/stream = ExtResource("61_nioki")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hucby"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fsf3d"]
 streams_count = 17
 stream_0/stream = ExtResource("70_r8y7q")
 stream_1/stream = ExtResource("71_470rv")
@@ -1154,7 +1121,7 @@ stream_14/stream = ExtResource("76_aypym")
 stream_15/stream = ExtResource("77_l2kt4")
 stream_16/stream = ExtResource("78_7q10i")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_uk606"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_o3k1t"]
 streams_count = 9
 stream_0/stream = ExtResource("87_3tftd")
 stream_1/stream = ExtResource("88_nt3tg")
@@ -1166,7 +1133,7 @@ stream_6/stream = ExtResource("93_2jifs")
 stream_7/stream = ExtResource("94_56l8f")
 stream_8/stream = ExtResource("95_safla")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fdvg0"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cgx4l"]
 streams_count = 8
 stream_0/stream = ExtResource("96_hs6da")
 stream_1/stream = ExtResource("97_6mjyu")
@@ -1375,197 +1342,75 @@ turbulence_influence_over_life = SubResource("CurveTexture_6mrml")
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.496183, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="Curve" id="Curve_fdvg0"]
-_limits = [-1.0, 1.0, 0.0, 1.0]
-_data = [Vector2(0, 0.00386989), 0.0, 0.0, 0, 0, Vector2(0.133192, -0.139124), 1.85678, 1.85678, 0, 0, Vector2(0.147992, 1), 0.0, 0.0, 0, 0, Vector2(1, -0.00440097), 0.0, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="Curve" id="Curve_08xpl"]
-_data = [Vector2(0, 0.152374), 0.0, 3.43797, 0, 0, Vector2(0.2, 0.5), 0.0, 0.0, 0, 0, Vector2(0.8, 0.5), 0.0, 0.0, 0, 0, Vector2(0.99999, 1), 3.69688, 3.69688, 0, 0, Vector2(1, 1), 2.19932, 0.0, 0, 0]
-point_count = 5
-metadata/_snap_enabled = true
-
-[sub_resource type="Curve" id="Curve_5vmwn"]
-_data = [Vector2(0, 1), 0.0, -0.995039, 0, 1, Vector2(0.5, 0.502481), 0.0, 0.0, 0, 0, Vector2(1, 0.5), -0.00496101, 0.0, 1, 0]
-point_count = 3
-
-[sub_resource type="Curve" id="Curve_a46c3"]
-_data = [Vector2(0.0830325, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 0.3), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_nioki"]
-_data = [Vector2(0.4, 0), 0.0, -0.0452609, 0, 0, Vector2(0.689531, 0.562625), 1.27009, 1.27009, 0, 0, Vector2(0.998195, 0.701199), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Curve" id="Curve_gd0xo"]
-_data = [Vector2(0.245487, 0), 0.0, 0.0, 0, 0, Vector2(0.649819, 0.158426), 0.970399, 0.970399, 0, 0, Vector2(1, 0.954822), 3.62218, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Curve" id="Curve_3crph"]
-_data = [Vector2(0.0488722, 0), 0.0, 0.0, 0, 0, Vector2(0.398917, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Resource" id="Resource_7avui"]
-script = ExtResource("119_pt4mt")
-name = &"Hitch Repeat"
-max_value = 3.0
-current_value = 3.0
-
-[sub_resource type="Resource" id="Resource_5omty"]
-script = ExtResource("119_pt4mt")
-name = &"Buildup Repeat"
-max_value = 3.0
-current_value = 1.5
-
-[sub_resource type="Resource" id="Resource_7p24c"]
-script = ExtResource("119_pt4mt")
-name = &"Sneeze Repeat"
-max_value = 3.0
-current_value = 0.75
-
-[sub_resource type="Curve" id="Curve_y3t7u"]
-_limits = [0.0, 1.0, 0.0, 60.0]
-_data = [Vector2(0, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(24, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(60, 1), 0.0, 0.0, 0, 0]
-point_count = 3
-metadata/_snap_enabled = true
-
-[sub_resource type="Curve" id="Curve_x6lb1"]
-_limits = [0.0, 3.0, 0.0, 300.0]
-_data = [Vector2(0, 0.2), 0.0, 0.00766212, 0, 0, Vector2(70.4887, 0.998301), 0.0, 0.0, 0, 0, Vector2(240, 1), 0.0, 0.0, 0, 0, Vector2(300, 3), 0.0757473, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="Curve" id="Curve_03s3g"]
-_limits = [0.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_r8y7q"]
-_limits = [0.0, 1.0, 0.0, 30.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(30, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_470rv"]
-_limits = [0.0, 15.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 21.0, 0, 0, Vector2(0.12406, 15), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_hxsvf"]
-_limits = [0.0, 1.0, 0.0, 180.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(30.4511, 1), 0.0, 0.0, 0, 0, Vector2(56.8421, 1), 0.0, 0.0, 0, 0, Vector2(90, 0.497213), -0.010824, -0.010824, 0, 0, Vector2(180, 0), 0.0, 0.0, 0, 0]
-point_count = 5
-
-[sub_resource type="Curve" id="Curve_qwbdj"]
-_limits = [0.0, 5.0, 0.0, 45.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(45, 5), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_p6nv1"]
-_limits = [0.0, 2.0, 0.0, 60.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(60, 2), 0.0466667, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_tln7c"]
-_limits = [-1.0, 1.0, 0.0, 60.0]
-_data = [Vector2(18, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(60, -0.25), 0.0, 0.0, 0, 0]
-point_count = 2
-metadata/_snap_enabled = true
-
-[sub_resource type="Curve" id="Curve_aypym"]
-_limits = [0.0, 5.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 5), 7.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_l2kt4"]
-_limits = [0.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 2.8, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_7q10i"]
-_limits = [0.0, 15.0, 0.0, 20.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(20, 15), 0.0, 0.0, 0, 0]
-point_count = 2
-metadata/_snap_enabled = true
-
-[sub_resource type="Curve" id="Curve_darqs"]
-_limits = [0.0, 1.0, 0.0, 45.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(45, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-metadata/_snap_enabled = true
-metadata/_snap_count = 40
-
-[sub_resource type="Curve" id="Curve_oukup"]
-_limits = [-1.0, 1.0, 0.0, 60.0]
-_data = [Vector2(30, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(60, -0.4), 0.0, 0.0, 0, 0]
-point_count = 2
-metadata/_snap_enabled = true
-
-[sub_resource type="Curve" id="Curve_cprny"]
-_limits = [0.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 2.8, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_cjd2j"]
-_limits = [0.0, 1.0, 0.0, 60.0]
-_data = [Vector2(30.2256, 1), 0.0, 0.0, 0, 0, Vector2(60, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_1bsbe"]
-_limits = [0.0, 5.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 7.0, 0, 0, Vector2(1, 5), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_5wyuy"]
-_limits = [0.0, 1.0, 0.0, 60.0]
-_data = [Vector2(29.2105, 1), 0.0, 0.0, 0, 0, Vector2(60, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_wxlc2"]
-_limits = [0.0, 3.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 4.2, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_jemny"]
-_limits = [0.0, 3.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 3), 4.2, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_3tftd"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [sub_resource type="LabelSettings" id="LabelSettings_gc2wc"]
 font_size = 60
 
 [node name="Node2D" type="Node2D" unique_id=888226211]
 
-[node name="HairMarker2" type="Marker2D" parent="." unique_id=1848020772 node_paths=PackedStringArray("target")]
-position = Vector2(-683.4686, -139.69292)
+[node name="HeadUpperPath" type="Path2D" parent="." unique_id=365945386]
+z_index = 1
+curve = SubResource("Curve2D_v7rdv")
+
+[node name="HeadLowerPath" type="Path2D" parent="." unique_id=1168407447]
+z_index = 1
+curve = SubResource("Curve2D_27br7")
+
+[node name="HeadUpper" type="Line2D" parent="." unique_id=1653885508 node_paths=PackedStringArray("path")]
+points = PackedVector2Array(-877.04584, -1753.3046, -885.71735, -1758.5304, -894.3891, -1763.7563, -903.0608, -1768.9823, -911.7324, -1774.2081, -920.40405, -1779.434, -929.11127, -1784.5989, -938.16595, -1789.125, -947.45856, -1793.1409, -956.92, -1796.7427, -966.51935, -1799.9592, -976.23315, -1802.8116, -986.04175, -1805.3192, -995.9297, -1807.4926, -1005.88367, -1809.3411, -1015.89136, -1810.8711, -1025.9417, -1812.0913, -1036.0244, -1813.0066, -1046.13, -1813.6173, -1056.2491, -1813.9414, -1066.3732, -1813.9718, -1076.4943, -1813.7217, -1086.6039, -1813.1827, -1096.6921, -1812.3312, -1106.7496, -1811.171, -1116.7703, -1809.7277, -1126.7483, -1808.0132, -1136.6763, -1806.029, -1146.5496, -1803.7894, -1156.3651, -1801.3082, -1166.1149, -1798.58, -1175.7965, -1795.6194, -1185.4036, -1792.4244, -1194.9308, -1788.9993, -1204.3694, -1785.3367, -1213.7129, -1781.4385, -1222.949, -1777.2921, -1232.0614, -1772.8802, -1241.027, -1768.1779, -1249.8131, -1763.1482, -1258.3531, -1757.7128, -1266.5156, -1751.7279, -1273.9398, -1744.8611, -1279.0334, -1736.1836, -1282.0886, -1726.5374, -1284.8466, -1716.7969, -1288.4781, -1707.3578, -1293.7151, -1698.7125, -1300.555, -1691.2701, -1308.5828, -1685.1168, -1317.383, -1680.1241, -1326.6312, -1676.0127, -1336.1763, -1672.6423, -1345.9216, -1669.9082, -1355.8865, -1668.1449, -1365.9835, -1667.4912, -1376.0856, -1668.0597, -1386.0431, -1669.8523, -1395.696, -1672.8843, -1404.9443, -1676.9891, -1413.7087, -1682.0476, -1421.9851, -1687.8737, -1429.7983, -1694.3103, -1437.2694, -1701.1426, -1444.7839, -1707.9242, -1454.26, -1710.8507, -1464.3799, -1710.9977, -1474.4965, -1710.6102, -1484.6, -1709.9591, -1494.6918, -1709.1465, -1504.7743, -1708.2245, -1514.8488, -1707.2179, -1524.9167, -1706.1477, -1534.9788, -1705.0256, -1545.0361, -1703.8602, -1555.0891, -1702.6592, -1565.1387, -1701.4286, -1575.1852, -1700.1737, -1585.2291, -1698.8998, -1595.2717, -1697.6132, -1605.3126, -1696.3143, -1615.3143, -1694.7474, -1625.2589, -1692.8485, -1635.1545, -1690.7085, -1645.0111, -1688.3939, -1654.835, -1685.9448, -1664.6306, -1683.3859, -1674.4015, -1680.7327, -1684.1497, -1677.9988, -1693.8776, -1675.1923, -1703.5867, -1672.3219, -1713.2767, -1669.3882, -1722.9484, -1666.3936, -1732.5972, -1663.3268, -1730.9503, -1653.7875, -1728.7153, -1643.9127, -1726.4805, -1634.038, -1724.2454, -1624.1631, -1722.0105, -1614.2882, -1719.7755, -1604.4135, -1717.5405, -1594.5386, -1715.3057, -1584.6638, -1713.0708, -1574.789, -1710.8359, -1564.9142, -1708.601, -1555.0394, -1706.1832, -1545.2241, -1702.1713, -1535.9283, -1698.1595, -1526.6326, -1694.1477, -1517.3368, -1690.1357, -1508.0411, -1686.1239, -1498.7452, -1682.112, -1489.4495, -1678.1, -1480.1537, -1674.0883, -1470.8579, -1670.0764, -1461.5621, -1666.0646, -1452.2664, -1662.0529, -1442.9706, -1654.8147, -1437.3252, -1645.064, -1434.6001, -1635.2815, -1431.9908, -1625.4708, -1429.4893, -1615.6346, -1427.0903, -1605.7736, -1424.7964, -1595.8866, -1422.6165, -1585.9738, -1420.5562, -1576.035, -1418.6261, -1566.0701, -1416.8357, -1556.0778, -1415.2057, -1546.0587, -1413.749, -1536.0118, -1412.498, -1525.9412, -1411.456, -1515.8569, -1410.5542, -1505.7634, -1409.7615, -1495.6628, -1409.0677, -1485.5563, -1408.4633, -1475.4452, -1407.9412, -1465.3302, -1407.4988, -1455.2123, -1407.134, -1445.0919, -1406.8464, -1434.9695, -1406.6409, -1424.8456, -1406.5231, -1414.7211, -1406.5076, -1404.5972, -1406.6151, -1394.4767, -1406.8914, -1384.3707, -1407.4838, -1374.4191, -1409.1887, -1365.0304, -1412.9646, -1355.8628, -1417.2606, -1346.7694, -1421.7119, -1337.6971, -1426.2065, -1328.6218, -1430.6948, -1319.5298, -1435.1493, -1310.4122, -1439.5511, -1301.2632, -1443.8873, -1292.0787, -1448.1477, -1282.8566, -1452.3259, -1273.5941, -1456.4142, -1264.2902, -1460.4067, -1254.9384, -1464.286, -1245.5134, -1467.9836, -1236.0215, -1471.5062, -1226.4738, -1474.8746, -1216.8782, -1478.1041, -1207.2421, -1481.2106, -1197.5706, -1484.2051, -1187.8677, -1487.0968, -1178.1361, -1489.8899, -1168.3792, -1492.5935, -1158.5984, -1495.2094, -1148.7948, -1497.7383, -1138.9706, -1500.1857, -1129.124, -1502.5421, -1119.2518, -1504.788, -1110.577, -1509.918, -1102.0145, -1515.3207, -1093.4519, -1520.7233, -1084.8892, -1526.1257, -1076.3267, -1531.5284, -1067.7639, -1536.931, -1059.2014, -1542.3337, -1050.6387, -1547.7362, -1042.076, -1553.1388, -1033.5134, -1558.5415, -1024.9509, -1563.9441, -1016.4573, -1569.4543, -1007.9769, -1574.9852, -999.4964, -1580.5159, -991.016, -1586.0466, -982.5355, -1591.5773, -974.0551, -1597.108, -965.5747, -1602.6388, -957.09424, -1608.1696, -948.61383, -1613.7002, -940.13336, -1619.231, -931.65295, -1624.7617, -923.1725, -1630.2925, -914.692, -1635.8231, -906.2116, -1641.3539, -897.7312, -1646.8845, -889.25073, -1652.4153, -880.7703, -1657.946)
+default_color = Color(0.16470589, 0.003921569, 0.003921569, 1)
+joint_mode = 2
+script = ExtResource("3_brs5d")
+path = NodePath("../HeadUpperPath")
+num_points = 200
+
+[node name="HeadLower" type="Line2D" parent="." unique_id=2010806719 node_paths=PackedStringArray("path")]
+points = PackedVector2Array(-872.3031, -1752.7777, -858.68195, -1706.396, -877.9479, -1660.204)
+default_color = Color(0, 0, 0, 1)
+script = ExtResource("3_brs5d")
+path = NodePath("../HeadLowerPath")
+num_points = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1910180830 node_paths=PackedStringArray("line_a", "line_b")]
+color = Color(0.94509804, 0.8039216, 0.6392157, 1)
+polygon = PackedVector2Array(-877.04584, -1753.3046, -885.71735, -1758.5304, -894.3891, -1763.7563, -903.0608, -1768.9823, -911.7324, -1774.2081, -920.40405, -1779.434, -929.11127, -1784.5989, -938.16595, -1789.125, -947.45856, -1793.1409, -956.92, -1796.7427, -966.51935, -1799.9592, -976.23315, -1802.8116, -986.04175, -1805.3192, -995.9297, -1807.4926, -1005.88367, -1809.3411, -1015.89136, -1810.8711, -1025.9417, -1812.0913, -1036.0244, -1813.0066, -1046.13, -1813.6173, -1056.2491, -1813.9414, -1066.3732, -1813.9718, -1076.4943, -1813.7217, -1086.6039, -1813.1827, -1096.6921, -1812.3312, -1106.7496, -1811.171, -1116.7703, -1809.7277, -1126.7483, -1808.0132, -1136.6763, -1806.029, -1146.5496, -1803.7894, -1156.3651, -1801.3082, -1166.1149, -1798.58, -1175.7965, -1795.6194, -1185.4036, -1792.4244, -1194.9308, -1788.9993, -1204.3694, -1785.3367, -1213.7129, -1781.4385, -1222.949, -1777.2921, -1232.0614, -1772.8802, -1241.027, -1768.1779, -1249.8131, -1763.1482, -1258.3531, -1757.7128, -1266.5156, -1751.7279, -1273.9398, -1744.8611, -1279.0334, -1736.1836, -1282.0886, -1726.5374, -1284.8466, -1716.7969, -1288.4781, -1707.3578, -1293.7151, -1698.7125, -1300.555, -1691.2701, -1308.5828, -1685.1168, -1317.383, -1680.1241, -1326.6312, -1676.0127, -1336.1763, -1672.6423, -1345.9216, -1669.9082, -1355.8865, -1668.1449, -1365.9835, -1667.4912, -1376.0856, -1668.0597, -1386.0431, -1669.8523, -1395.696, -1672.8843, -1404.9443, -1676.9891, -1413.7087, -1682.0476, -1421.9851, -1687.8737, -1429.7983, -1694.3103, -1437.2694, -1701.1426, -1444.7839, -1707.9242, -1454.26, -1710.8507, -1464.3799, -1710.9977, -1474.4965, -1710.6102, -1484.6, -1709.9591, -1494.6918, -1709.1465, -1504.7743, -1708.2245, -1514.8488, -1707.2179, -1524.9167, -1706.1477, -1534.9788, -1705.0256, -1545.0361, -1703.8602, -1555.0891, -1702.6592, -1565.1387, -1701.4286, -1575.1852, -1700.1737, -1585.2291, -1698.8998, -1595.2717, -1697.6132, -1605.3126, -1696.3143, -1615.3143, -1694.7474, -1625.2589, -1692.8485, -1635.1545, -1690.7085, -1645.0111, -1688.3939, -1654.835, -1685.9448, -1664.6306, -1683.3859, -1674.4015, -1680.7327, -1684.1497, -1677.9988, -1693.8776, -1675.1923, -1703.5867, -1672.3219, -1713.2767, -1669.3882, -1722.9484, -1666.3936, -1732.5972, -1663.3268, -1730.9503, -1653.7875, -1728.7153, -1643.9127, -1726.4805, -1634.038, -1724.2454, -1624.1631, -1722.0105, -1614.2882, -1719.7755, -1604.4135, -1717.5405, -1594.5386, -1715.3057, -1584.6638, -1713.0708, -1574.789, -1710.8359, -1564.9142, -1708.601, -1555.0394, -1706.1832, -1545.2241, -1702.1713, -1535.9283, -1698.1595, -1526.6326, -1694.1477, -1517.3368, -1690.1357, -1508.0411, -1686.1239, -1498.7452, -1682.112, -1489.4495, -1678.1, -1480.1537, -1674.0883, -1470.8579, -1670.0764, -1461.5621, -1666.0646, -1452.2664, -1662.0529, -1442.9706, -1654.8147, -1437.3252, -1645.064, -1434.6001, -1635.2815, -1431.9908, -1625.4708, -1429.4893, -1615.6346, -1427.0903, -1605.7736, -1424.7964, -1595.8866, -1422.6165, -1585.9738, -1420.5562, -1576.035, -1418.6261, -1566.0701, -1416.8357, -1556.0778, -1415.2057, -1546.0587, -1413.749, -1536.0118, -1412.498, -1525.9412, -1411.456, -1515.8569, -1410.5542, -1505.7634, -1409.7615, -1495.6628, -1409.0677, -1485.5563, -1408.4633, -1475.4452, -1407.9412, -1465.3302, -1407.4988, -1455.2123, -1407.134, -1445.0919, -1406.8464, -1434.9695, -1406.6409, -1424.8456, -1406.5231, -1414.7211, -1406.5076, -1404.5972, -1406.6151, -1394.4767, -1406.8914, -1384.3707, -1407.4838, -1374.4191, -1409.1887, -1365.0304, -1412.9646, -1355.8628, -1417.2606, -1346.7694, -1421.7119, -1337.6971, -1426.2065, -1328.6218, -1430.6948, -1319.5298, -1435.1493, -1310.4122, -1439.5511, -1301.2632, -1443.8873, -1292.0787, -1448.1477, -1282.8566, -1452.3259, -1273.5941, -1456.4142, -1264.2902, -1460.4067, -1254.9384, -1464.286, -1245.5134, -1467.9836, -1236.0215, -1471.5062, -1226.4738, -1474.8746, -1216.8782, -1478.1041, -1207.2421, -1481.2106, -1197.5706, -1484.2051, -1187.8677, -1487.0968, -1178.1361, -1489.8899, -1168.3792, -1492.5935, -1158.5984, -1495.2094, -1148.7948, -1497.7383, -1138.9706, -1500.1857, -1129.124, -1502.5421, -1119.2518, -1504.788, -1110.577, -1509.918, -1102.0145, -1515.3207, -1093.4519, -1520.7233, -1084.8892, -1526.1257, -1076.3267, -1531.5284, -1067.7639, -1536.931, -1059.2014, -1542.3337, -1050.6387, -1547.7362, -1042.076, -1553.1388, -1033.5134, -1558.5415, -1024.9509, -1563.9441, -1016.4573, -1569.4543, -1007.9769, -1574.9852, -999.4964, -1580.5159, -991.016, -1586.0466, -982.5355, -1591.5773, -974.0551, -1597.108, -965.5747, -1602.6388, -957.09424, -1608.1696, -948.61383, -1613.7002, -940.13336, -1619.231, -931.65295, -1624.7617, -923.1725, -1630.2925, -914.692, -1635.8231, -906.2116, -1641.3539, -897.7312, -1646.8845, -889.25073, -1652.4153, -880.7703, -1657.946, -877.9479, -1660.204, -858.68195, -1706.396, -872.3031, -1752.7777)
+script = ExtResource("19_ddjok")
+line_a = NodePath("../HeadUpper")
+line_b = NodePath("../HeadLower")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1575087398]
+curve = SubResource("Curve2D_qjhqk")
+script = ExtResource("117_v7rdv")
+curve_driver_mid_vector = Vector2(0.5, 1.96)
+curve_driver_end_vector = Vector2(1, 0)
+path_length = 3004.565
+path_segments = 25
+curvature = SubResource("Curve_v7rdv")
+
+[node name="HairMarker2" type="Marker2D" parent="." unique_id=1848020772]
+position = Vector2(-683.6904, -139.3767)
 rotation = 1.8232775
 scale = Vector2(0.9998461, 0.9998461)
 script = ExtResource("1_c4xyi")
-target = NodePath("../Skeleton2D/Neck/Neck2")
 offset = Vector2(220.725, -156.5)
 
-[node name="HairMarker3" type="Marker2D" parent="." unique_id=22355386 node_paths=PackedStringArray("target")]
-position = Vector2(-1561.3392, -263.63205)
+[node name="HairMarker3" type="Marker2D" parent="." unique_id=22355386]
+position = Vector2(-664.0484, -271.57336)
 rotation = 0.8200671
 scale = Vector2(0.99974483, 0.99974483)
 script = ExtResource("1_c4xyi")
-target = NodePath("../Skeleton2D/Neck/Neck2/Neck3")
 offset = Vector2(0, -300.26)
 rotation_influence = -0.84
 
-[node name="HairMarker4" type="Marker2D" parent="." unique_id=10489368 node_paths=PackedStringArray("target")]
-position = Vector2(-1980.7272, -245.22537)
+[node name="HairMarker4" type="Marker2D" parent="." unique_id=10489368]
+position = Vector2(-457.15982, -163.88791)
 rotation = -0.3647546
 scale = Vector2(0.9996484, 0.9996484)
 script = ExtResource("1_c4xyi")
-target = NodePath("../Skeleton2D/Neck/Neck2/Neck3/Neck4")
 offset = Vector2(0, -293.62)
 rotation_influence = -0.30000000000000004
 
 [node name="HairMarker5" type="Marker2D" parent="." unique_id=969963884 node_paths=PackedStringArray("target")]
-position = Vector2(-2602.7478, -267.69424)
+position = Vector2(-1061.3715, -1933.6014)
 rotation = -0.020485312
 scale = Vector2(0.999536, 0.999536)
 script = ExtResource("1_c4xyi")
@@ -1573,54 +1418,75 @@ target = NodePath("../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head")
 offset = Vector2(-74.55, -323.515)
 
 [node name="Sprites" type="Node2D" parent="." unique_id=1255655562]
+visible = false
 
 [node name="Template" type="Sprite2D" parent="Sprites" unique_id=1153190476]
-position = Vector2(-1600, -56)
+visible = false
+position = Vector2(-1768.9304, -84.66083)
 scale = Vector2(3, 3)
 texture = ExtResource("1_np5xu")
 
-[node name="NeckPath" type="Path2D" parent="Sprites" unique_id=826120414 node_paths=PackedStringArray("tracked_bones")]
-curve = SubResource("Curve2D_brs5d")
-script = ExtResource("4_civpo")
-tracked_bones = [NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/NeckEndMarker"), NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head"), NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4"), NodePath("../../Skeleton2D/Neck/Neck2/Neck3"), NodePath("../../Skeleton2D/Neck/Neck2"), NodePath("../../Skeleton2D/Neck"), NodePath("../../NeckRootMarker")]
-smoothing_curve = SubResource("Curve_c4xyi")
-
-[node name="NeckLine" type="Line2D" parent="Sprites" unique_id=1477592112 node_paths=PackedStringArray("path")]
-points = PackedVector2Array(-2665.2563, 100.88544, -2601.8813, 80.04783, -2538.5063, 59.210278, -2472.3518, 54.51898, -2405.657, 52.96429, -2338.9624, 51.4096, -2272.2678, 49.854908, -2205.5732, 48.30022, -2138.8784, 46.74553, -2072.1838, 45.19084, -2005.4893, 43.636173, -1938.7947, 42.081512, -1872.0999, 40.526863, -1805.4052, 38.972206, -1738.7109, 37.41757, -1672.0161, 35.862907, -1605.3218, 34.30826, -1538.6271, 32.75361, -1471.9343, 31.127666, -1405.2429, 29.445454, -1338.5511, 27.763235, -1271.8599, 26.081026, -1205.168, 24.398802, -1138.4761, 22.716578, -1071.7847, 21.034369, -1005.0933, 19.352156, -938.40216, 17.66995, -871.7104, 15.987736, -805.01874, 14.305525, -738.3273, 12.623322, -671.6356, 10.941114, -604.9441, 9.25891, -538.25287, 7.5767126, -471.56125, 5.894504, -404.87012, 4.21231, -338.17825, 2.5300956, -271.48706, 0.8478994, -204.79527, -0.8343121, -138.1037, -2.5165186, -71.41256, -4.1987133, -4.7208557, -5.880923, 61.955505, -3.924818, 128.63055, -1.6915574, 195.30641, 0.5417318, 261.98138, 2.7749903, 328.65695, 5.008269, 395.33237, 7.241542, 462.00793, 9.474821, 528.68365, 11.708104, 595.3582, 13.941352, 662.03357, 16.174622)
-width = 900.0
+[node name="NeckOutline" type="Line2D" parent="Sprites" unique_id=691578696 node_paths=PackedStringArray("path")]
+visible = false
+points = PackedVector2Array(-1185.987, -1947.097, -1113.9235, -1944.523, -1042.0623, -1939.5817, -970.6051, -1929.9054, -900.6471, -1913.1809, -831.43835, -1892.9321, -767.2715, -1860.0317, -705.9557, -1822.7981, -650.3417, -1776.898, -602.7282, -1723.315, -559.11487, -1665.8899, -530.0211, -1599.9102, -506.08347, -1532.3201, -492.45807, -1461.5094, -488.5902, -1389.8375, -489.60132, -1317.7347, -502.86697, -1246.8556, -519.06305, -1176.7183, -541.1196, -1108.0646, -566.28046, -1040.5275, -592.9936, -973.54834, -619.7068, -906.56915, -644.8676, -839.0322, -666.9241, -770.3788, -683.12, -700.242, -696.38574, -629.36304, -697.39685, -557.26044, -693.5291, -485.58856, -679.9038, -414.77792, -655.9663, -347.1878, -626.87274, -281.20782, -583.25916, -223.78271, -535.64545, -170.19919, -480.0313, -124.29878, -418.7154, -87.06512, -354.5488, -54.164917, -285.34058, -33.916214, -215.38255, -17.19166, -143.92516, -7.5154376, -72.06362, -2.5740175, 0, 0)
+width = 865.0
 width_curve = SubResource("Curve_62x2f")
-texture = ExtResource("2_n0jjw")
+default_color = Color(0.16078432, 0.011764706, 0.011764706, 1)
 texture_mode = 2
 joint_mode = 2
 script = ExtResource("3_brs5d")
-path = NodePath("../NeckPath")
+path = NodePath("../../Path2D")
+num_points = 40
+
+[node name="NeckLine" type="Line2D" parent="Sprites" unique_id=1477592112 node_paths=PackedStringArray("path")]
+visible = false
+points = PackedVector2Array(-1185.987, -1947.097, -1128.3362, -1945.0378, -1070.6855, -1942.9788, -1013.4793, -1935.711, -956.3135, -1927.9701, -900.6471, -1913.1809, -845.2801, -1896.9819, -792.9385, -1873.192, -741.6048, -1846.8717, -694.8328, -1813.618, -650.3417, -1776.898, -611.4508, -1734.7997, -576.5602, -1688.86, -547.47736, -1639.4982, -524.20245, -1586.7144, -506.08347, -1532.3201, -495.18317, -1475.6716, -488.18576, -1418.6785, -488.99463, -1360.9962, -492.25436, -1303.559, -502.86697, -1246.8556, -514.6517, -1190.4491, -532.29694, -1135.526, -550.2525, -1080.715, -571.62317, -1027.1315, -592.9936, -973.54834, -614.36414, -919.96497, -635.73474, -866.3818, -653.6902, -811.57086, -671.3354, -756.6482, -683.12, -700.242, -693.7326, -643.5387, -696.99243, -586.1015, -697.80133, -528.4194, -690.80414, -471.42645, -679.9038, -414.77792, -661.785, -360.38376, -638.5102, -307.59985, -609.4274, -258.23785, -574.5365, -212.29764, -535.64545, -170.19919, -491.1541, -133.47885, -444.3821, -100.22524, -393.0488, -73.90505, -340.70718, -50.11518, -285.34058, -33.916214, -229.67404, -19.126905, -172.50812, -11.385928, -115.30177, -4.1184278, -57.65089, -2.0592139, 0, 0)
+width = 845.0
+width_curve = SubResource("Curve_62x2f")
+default_color = Color(0.94509804, 0.8039216, 0.6392157, 1)
+texture_mode = 2
+joint_mode = 2
+script = ExtResource("3_brs5d")
+path = NodePath("../../Path2D")
 num_points = 50
 
-[node name="HairPath" type="Path2D" parent="Sprites" unique_id=1093692004 node_paths=PackedStringArray("tracked_bones")]
-curve = SubResource("Curve2D_cirhw")
-script = ExtResource("4_civpo")
-tracked_bones = [NodePath("../../HairMarker5"), NodePath("../../HairMarker4"), NodePath("../../HairMarker3"), NodePath("../../HairMarker2")]
-smoothing_curve = SubResource("Curve_jme2s")
-
-[node name="HairLine" type="Line2D" parent="Sprites" unique_id=399266331 node_paths=PackedStringArray("path")]
-points = PackedVector2Array(-2602.7483, -267.69424, -2583.473, -266.998, -2564.1975, -266.3017, -2544.922, -265.60544, -2525.6467, -264.90915, -2506.3713, -264.2129, -2487.096, -263.51663, -2467.8206, -262.8203, -2448.5452, -262.12405, -2429.2698, -261.4278, -2409.9944, -260.73154, -2390.719, -260.03525, -2371.4436, -259.33896, -2352.1682, -258.6427, -2332.8928, -257.94644, -2313.6174, -257.25012, -2294.3423, -256.5539, -2275.067, -255.8576, -2255.7915, -255.16135, -2236.516, -254.46507, -2217.2407, -253.7688, -2197.9653, -253.07253, -2178.69, -252.37625, -2159.4146, -251.67998, -2140.1392, -250.9837, -2120.8638, -250.28741, -2101.5884, -249.59116, -2082.313, -248.8949, -2063.0376, -248.19861, -2043.7622, -247.50233, -2024.4869, -246.80606, -2005.2115, -246.10979, -1985.9362, -245.41351, -1966.6652, -245.84258, -1947.3956, -246.6883, -1928.1262, -247.53401, -1908.8568, -248.37973, -1889.5874, -249.22545, -1870.318, -250.07118, -1851.0486, -250.91689, -1831.7792, -251.7626, -1812.5098, -252.60834, -1793.2405, -253.45407, -1773.971, -254.2998, -1754.7015, -255.14551, -1735.432, -255.99123, -1716.1626, -256.83694, -1696.8932, -257.68268, -1677.6239, -258.5284, -1658.3545, -259.3741, -1639.0851, -260.21985, -1619.8157, -261.06555, -1600.5463, -261.9113, -1581.2769, -262.75702, -1562.0073, -263.60275, -1542.9028, -261.02917, -1523.8043, -258.33276, -1504.7058, -255.63641, -1485.6072, -252.94005, -1466.5088, -250.24371, -1447.41, -247.5473, -1428.3115, -244.85097, -1409.213, -242.15462, -1390.1145, -239.45825, -1371.016, -236.76189, -1351.9174, -234.06552, -1332.8188, -231.36916, -1313.7202, -228.67278, -1294.6218, -225.97644, -1275.5233, -223.28008, -1256.4248, -220.58372, -1237.326, -217.88734, -1218.2275, -215.19098, -1199.129, -212.49461, -1180.0305, -209.79828, -1160.932, -207.1019, -1141.8335, -204.40555, -1122.735, -201.7092, -1103.6366, -199.01285, -1084.5381, -196.31648, -1065.4395, -193.62012, -1046.341, -190.92377, -1027.2424, -188.22742, -1008.1438, -185.53104, -989.04535, -182.8347, -969.94684, -180.13834, -950.8484, -177.44199, -931.7499, -174.7456, -912.6513, -172.04926, -893.5528, -169.3529, -874.45416, -166.65652, -855.3556, -163.96017, -836.2571, -161.26381, -817.15857, -158.56744, -798.05994, -155.8711, -778.9614, -153.17471, -759.863, -150.47836, -740.76434, -147.78201, -721.6659, -145.08565, -702.56726, -142.38927, -683.46875, -139.69292)
+[node name="HairLine" type="Line2D" parent="Sprites" unique_id=399266331 node_paths=PackedStringArray("target_line")]
+visible = false
+points = PackedVector2Array(-1209.5289, -2232.311, -1151.6661, -2230.2441, -1093.4103, -2228.1636, -1009.32495, -2221.6594, -948.5019, -2213.6978, -855.67535, -2195.2834, -791.4494, -2177.338, -698.0081, -2142.214, -631.96, -2110.024, -546.3791, -2056.7695, -482.66257, -2006.9904, -412.3601, -1938.0986, -357.02335, -1869.6757, -306.73947, -1790.7463, -266.16418, -1705.9016, -237.26666, -1623.7152, -217.07312, -1527.7252, -208.41687, -1448.3969, -209.99728, -1349.3826, -216.77325, -1277.1869, -236.43546, -1183.1257, -253.26114, -1119.0936, -283.7143, -1035.7235, -306.10175, -978.2349, -338.15472, -908.6661, -362.99823, -854.4112, -387.4563, -800.305, -411.41748, -746.33673, -424.22604, -705.4877, -442.52542, -651.6449)
 width = 500.0
 texture = ExtResource("5_53yu8")
 texture_mode = 2
-script = ExtResource("3_brs5d")
-path = NodePath("../HairPath")
-num_points = 100
+script = ExtResource("7_cirhw")
+target_line = NodePath("../NeckLine")
+offset_x_curve = SubResource("Curve_hucby")
+offset_y_curve = SubResource("Curve_uk606")
+max_points = 30
+
+[node name="BellyScaleTest" type="Line2D" parent="Sprites" unique_id=735658838 node_paths=PackedStringArray("target_line")]
+visible = false
+points = PackedVector2Array(-1283.6802, -1699.9828, -1226.0303, -1697.897, -1168.3817, -1695.7599, -1133.0673, -1698.2139, -1077.5634, -1691.2505, -1050.0408, -1693.0941, -999.51416, -1680.2421, -975.6036, -1679.813, -932.3963, -1661.5344, -909.50653, -1656.6183, -874.9405, -1634.5377, -852.45166, -1622.5333, -826.6046, -1598.6632, -805.8689, -1577.3342, -787.7976, -1553.2024, -771.54126, -1521.5328, -759.926, -1497.5693, -751.1504, -1456.2158, -745.0729, -1431.5862, -745.8504, -1382.6624, -745.336, -1355.471, -755.94525, -1301.796, -762.0186, -1269.2931, -780.6503, -1213.5342, -794.8129, -1171.9861, -817.7943, -1116.1941, -840.78107, -1060.3911, -863.76794, -1004.58496, -891.4318, -932.8443, -911.2124, -874.24854, -935.1761, -789.6498, -948.72363, -725.2244, -961.1253, -631.9764, -964.3136, -560.49677, -959.5144, -464.52963, -947.66205, -387.21765, -923.44196, -295.6111, -892.56995, -216.37514, -850.47076, -135.8637, -798.81506, -60.693146, -743.3766, 3.9738007, -672.4741, 68.533875, -609.6131, 115.58488, -524.37317, 164.43845, -459.55533, 195.02594, -367.24753, 226.19951, -304.14026, 243.46767, -212.81805, 258.77808, -152.74802, 266.62442, -69.964005, 271.10553, -12.046307, 273.25208)
+width = 300.0
+width_curve = SubResource("Curve_m47n5")
+texture = ExtResource("7_v7rdv")
+texture_mode = 2
+script = ExtResource("7_cirhw")
+target_line = NodePath("../NeckLine")
+offset_x_curve = SubResource("Curve_qjhqk")
+offset_y_curve = SubResource("Curve_27br7")
+max_points = 60
 
 [node name="Collar" type="Sprite2D" parent="Sprites" unique_id=2024250540 node_paths=PackedStringArray("line")]
-position = Vector2(-538.3621, 53.26091)
-rotation = -0.025957555
+visible = false
+position = Vector2(-662.6088, -295.24747)
+rotation = 1.0971385
 texture = ExtResource("26_pt4mt")
 script = ExtResource("6_pt4mt")
 line = NodePath("../NeckLine")
-pin_percentage = 0.65
-position_offset = Vector2(0, 45.935)
+pin_percentage = 0.75
+position_offset = Vector2(0, 27.08)
 
 [node name="Shoulder" type="Sprite2D" parent="Sprites" unique_id=1535557075]
+visible = false
 position = Vector2(149.67725, 161.50012)
 texture = ExtResource("3_t2dwc")
 
@@ -1631,7 +1497,7 @@ tracked_bones = [NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/Tong
 smoothing_curve = SubResource("Curve_cirhw")
 
 [node name="TongueOutline" type="Line2D" parent="Sprites" unique_id=68373261 node_paths=PackedStringArray("path")]
-points = PackedVector2Array(-3066.5142, 167.43675, -3055.5588, 166.48692, -3044.6033, 165.53706, -3033.648, 164.58725, -3022.6926, 163.63744, -3011.737, 162.6876, -3000.7817, 161.73776, -2989.8264, 160.78796, -2978.8708, 159.83807, -2967.9155, 158.88829, -2956.9602, 157.93845, -2946.0046, 156.98863, -2935.0493, 156.03879, -2924.094, 155.08894, -2913.1384, 154.13913, -2902.183, 153.1893, -2891.2278, 152.23946, -2880.2546, 152.6693, -2869.2783, 153.33774, -2858.3022, 154.00616, -2847.3262, 154.67462, -2836.3499, 155.34308, -2825.3738, 156.01152, -2814.3975, 156.67995, -2803.4214, 157.34842, -2792.445, 158.01686, -2781.469, 158.6853, -2770.493, 159.35374, -2759.5166, 160.0222, -2748.5405, 160.69064, -2737.5645, 161.35907, -2726.5881, 162.02751, -2715.612, 162.69597, -2705.0867, 159.73169, -2694.607, 156.40016, -2684.1272, 153.06879, -2673.6475, 149.73737, -2663.1677, 146.40588, -2652.688, 143.0745, -2642.2083, 139.74307, -2631.7285, 136.41171, -2621.2488, 133.08023, -2610.769, 129.74878, -2600.2893, 126.417366, -2589.8098, 123.08597, -2579.33, 119.7545, -2568.8503, 116.42312, -2558.3704, 113.09169, -2547.8909, 109.7603, -2537.4111, 106.42887, -2526.9314, 103.09745)
+points = PackedVector2Array(-986.6208, -1562.7681, -997.1884, -1559.7052, -1007.7561, -1556.6427, -1018.32385, -1553.5804, -1028.8918, -1550.5188, -1039.4598, -1547.4575, -1050.028, -1544.3966, -1060.5962, -1541.3363, -1071.1647, -1538.2766, -1081.7333, -1535.2174, -1092.3021, -1532.1589, -1102.8711, -1529.1011, -1113.4406, -1526.0446, -1124.0103, -1522.9893, -1134.5806, -1519.9355, -1145.1514, -1516.8842, -1155.7234, -1513.8365, -1166.2975, -1510.7966, -1176.9186, -1508.1509, -1187.8788, -1509.1139, -1198.8358, -1510.113, -1209.7921, -1511.1201, -1220.748, -1512.1307, -1231.7037, -1513.1442, -1242.6593, -1514.159, -1253.6147, -1515.1754, -1264.5701, -1516.1925, -1275.5254, -1517.2102, -1286.4806, -1518.2283, -1297.4359, -1519.2468, -1308.3911, -1520.2649, -1319.3464, -1521.2825, -1330.3019, -1522.2991, -1341.2576, -1523.3124, -1352.2197, -1524.0789, -1363.206, -1523.4845, -1374.1919, -1522.8793, -1385.1776, -1522.2715, -1396.1632, -1521.662, -1407.1487, -1521.0515, -1418.1342, -1520.4404, -1429.1196, -1519.8287, -1440.1051, -1519.2167, -1451.0905, -1518.6041, -1462.0758, -1517.9912, -1473.0613, -1517.3782, -1484.0466, -1516.7648, -1495.032, -1516.1511, -1506.0172, -1515.5374, -1517.0026, -1514.9233, -1527.9879, -1514.3091)
 width = 180.0
 width_curve = SubResource("Curve_pt4mt")
 default_color = Color(0.42745098, 0.13333334, 0.06666667, 1)
@@ -1643,7 +1509,7 @@ path = NodePath("../TonguePath")
 num_points = 50
 
 [node name="TongueLine" type="Line2D" parent="Sprites" unique_id=1100128982 node_paths=PackedStringArray("path")]
-points = PackedVector2Array(-3066.5142, 167.43675, -3039.1257, 165.06218, -3011.737, 162.6876, -2984.3486, 160.31303, -2956.9602, 157.93845, -2929.5715, 155.56387, -2902.183, 153.1893, -2874.7664, 153.00351, -2847.3262, 154.67462, -2819.8855, 156.34573, -2792.445, 158.01686, -2765.0046, 159.68799, -2737.5645, 161.35907, -2710.3267, 161.39738, -2684.1272, 153.06879, -2657.928, 144.74023, -2631.7285, 136.41171, -2605.5293, 128.08307, -2579.33, 119.7545, -2553.1306, 111.42598, -2526.9314, 103.09745)
+points = PackedVector2Array(-986.6208, -1562.7681, -1013.04, -1555.1117, -1039.4598, -1547.4575, -1065.8805, -1539.8064, -1092.3021, -1532.1589, -1118.7253, -1524.5167, -1145.1514, -1516.8842, -1171.5865, -1509.2836, -1198.8358, -1510.113, -1226.226, -1512.6371, -1253.6147, -1515.1754, -1281.0029, -1517.7192, -1308.3911, -1520.2649, -1335.7797, -1522.8064, -1363.206, -1523.4845, -1390.6704, -1521.9669, -1418.1342, -1520.4404, -1445.5978, -1518.9104, -1473.0613, -1517.3782, -1500.5247, -1515.8441, -1527.9879, -1514.3091)
 width = 150.0
 width_curve = SubResource("Curve_53yu8")
 default_color = Color(0.7764706, 0.4392157, 0.3647059, 1)
@@ -1746,14 +1612,14 @@ polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
 bones = ["Wing", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Shoulder", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/InnerCheek U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/InnerCheek L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/EarBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/HeadBrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eye", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck/Neck2/Neck3/Neck4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="EyeTransformRecieve" type="Node2D" parent="Sprites" unique_id=1402945087]
-position = Vector2(-2705.7761, 1.6715546)
-rotation = 0.06863865
-scale = Vector2(1.0003598, 1.0003598)
+position = Vector2(-1164.9661, -1662.693)
+rotation = 0.059805498
+scale = Vector2(1.0008923, 1.0008923)
 
 [node name="UpperPolyMask" type="Polygon2D" parent="Sprites/EyeTransformRecieve" unique_id=2032559984 node_paths=PackedStringArray("line_a", "line_b")]
 clip_children = 1
 color = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-104.000244, 88.00003, -99.92858, 47.75508, -95.8569, 7.5101347, -91.78524, -32.734814, -87.54471, -72.853004, -50.03795, -88.00154, -12.531229, -103.15006, 24.558437, -116.14345, 53.705536, -88.09564, 82.852615, -60.04785, 111.999756, -31.999992, 95.256836, -22.379257, 85.872116, -10.440922, 77.840324, -9.093194, 70.29654, -22.256483, 60.879116, -34.146477, 49.49259, -44.150414, 36.194542, -51.394474, 21.493206, -54.99636, 6.349743, -54.82992, -8.408747, -51.36313, -22.046091, -44.77715, -33.724895, -35.125732, -43.09748, -23.207516, -50.34576, -9.880339, -55.799236, 4.2828836, -59.773384, 18.933523, -62.53161, 33.86239, -64.24269, 48.94816, -64.99027, 64.11227, -72.05416, 72.311226, -87.23706, 72.58728)
+polygon = PackedVector2Array(111.999756, -31.999992, 82.852615, -60.04785, 53.705536, -88.09564, 24.558437, -116.14345, -12.531229, -103.15006, -50.03795, -88.00154, -87.54471, -72.853004, -91.78524, -32.734814, -95.8569, 7.5101347, -99.92858, 47.75508, -104.000244, 88.00003, -87.23706, 72.58728, -72.05416, 72.311226, -64.99027, 64.11227, -64.24269, 48.94816, -62.53161, 33.86239, -59.773384, 18.933523, -55.799236, 4.2828836, -50.34576, -9.880339, -43.09748, -23.207516, -33.724895, -35.125732, -22.046091, -44.77715, -8.408747, -51.36313, 6.349743, -54.82992, 21.493206, -54.99636, 36.194542, -51.394474, 49.49259, -44.150414, 60.879116, -34.146477, 70.29654, -22.256483, 77.840324, -9.093194, 85.872116, -10.440922, 95.256836, -22.379257)
 script = ExtResource("19_ddjok")
 line_a = NodePath("../UpperEyeMaskLine")
 line_b = NodePath("../UpperEyeLine")
@@ -1767,7 +1633,7 @@ uv = PackedVector2Array(-7.703232, 182.17084, 63.511276, 181.06674, 157.91191, 1
 [node name="LowerPolyMask" type="Polygon2D" parent="Sprites/EyeTransformRecieve" unique_id=513959305 node_paths=PackedStringArray("line_a", "line_b")]
 clip_children = 1
 color = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-87.23706, 72.58728, -76.16028, 72.38588, -65.083496, 72.18449, -54.239815, 74.27578, -43.172394, 74.38772, -32.172516, 73.115425, -21.33911, 70.81588, -10.712877, 67.69243, -0.30405316, 63.903862, 9.878119, 59.541412, 19.844448, 54.705406, 29.597727, 49.452644, 39.108356, 43.773026, 48.29207, 37.57998, 57.0468, 30.796387, 65.177025, 23.27855, 72.368484, 14.864257, 77.97561, 5.336503, 81.56346, -4.9598665, 88.41015, -13.669561, 95.256836, -22.379257, 111.999756, -31.999992, 119.55264, 4.8298407, 127.10552, 41.659664, 122.86362, 72.629845, 88.95084, 88.85954, 55.03807, 105.08923, 21.125301, 121.31893, -12.787481, 137.54863, -44.59099, 134.0919, -74.295616, 111.04597, -104.000244, 88.00003)
+polygon = PackedVector2Array(95.256836, -22.379257, 88.41015, -13.669561, 81.56346, -4.9598665, 77.97561, 5.336503, 72.368484, 14.864257, 65.177025, 23.27855, 57.0468, 30.796387, 48.29207, 37.57998, 39.108356, 43.773026, 29.597727, 49.452644, 19.844448, 54.705406, 9.878119, 59.541412, -0.30405316, 63.903862, -10.712877, 67.69243, -21.33911, 70.81588, -32.172516, 73.115425, -43.172394, 74.38772, -54.239815, 74.27578, -65.083496, 72.18449, -76.16028, 72.38588, -87.23706, 72.58728, -104.000244, 88.00003, -74.295616, 111.04597, -44.59099, 134.0919, -12.787481, 137.54863, 21.125301, 121.31893, 55.03807, 105.08923, 88.95084, 88.85954, 122.86362, 72.629845, 127.10552, 41.659664, 119.55264, 4.8298407, 111.999756, -31.999992)
 script = ExtResource("19_ddjok")
 line_a = NodePath("../LowerEyeLine")
 line_b = NodePath("../LowerEyeMaskLine")
@@ -1781,7 +1647,7 @@ uv = PackedVector2Array(-15.6805725, 84.03335, 3.9282684, 126.05227, 71.15854, 1
 
 [node name="LowerPaintPoly" type="Polygon2D" parent="Sprites/EyeTransformRecieve" unique_id=1384998002 node_paths=PackedStringArray("line_a", "line_b")]
 color = Color(0.94509804, 0.8039216, 0.6392157, 1)
-polygon = PackedVector2Array(-87.23706, 72.58728, -76.16028, 72.38588, -65.083496, 72.18449, -54.239815, 74.27578, -43.172394, 74.38772, -32.172516, 73.115425, -21.33911, 70.81588, -10.712877, 67.69243, -0.30405316, 63.903862, 9.878119, 59.541412, 19.844448, 54.705406, 29.597727, 49.452644, 39.108356, 43.773026, 48.29207, 37.57998, 57.0468, 30.796387, 65.177025, 23.27855, 72.368484, 14.864257, 77.97561, 5.336503, 81.56346, -4.9598665, 88.41015, -13.669561, 95.256836, -22.379257, 111.999756, -31.999992, 119.55264, 4.8298407, 127.10552, 41.659664, 122.86362, 72.629845, 88.95084, 88.85954, 55.03807, 105.08923, 21.125301, 121.31893, -12.787481, 137.54863, -44.59099, 134.0919, -74.295616, 111.04597, -104.000244, 88.00003)
+polygon = PackedVector2Array(95.256836, -22.379257, 88.41015, -13.669561, 81.56346, -4.9598665, 77.97561, 5.336503, 72.368484, 14.864257, 65.177025, 23.27855, 57.0468, 30.796387, 48.29207, 37.57998, 39.108356, 43.773026, 29.597727, 49.452644, 19.844448, 54.705406, 9.878119, 59.541412, -0.30405316, 63.903862, -10.712877, 67.69243, -21.33911, 70.81588, -32.172516, 73.115425, -43.172394, 74.38772, -54.239815, 74.27578, -65.083496, 72.18449, -76.16028, 72.38588, -87.23706, 72.58728, -104.000244, 88.00003, -74.295616, 111.04597, -44.59099, 134.0919, -12.787481, 137.54863, 21.125301, 121.31893, 55.03807, 105.08923, 88.95084, 88.85954, 122.86362, 72.629845, 127.10552, 41.659664, 119.55264, 4.8298407, 111.999756, -31.999992)
 script = ExtResource("19_ddjok")
 line_a = NodePath("../LowerEyeLine")
 line_b = NodePath("../LowerEyeMaskLine")
@@ -1800,7 +1666,7 @@ curve = SubResource("Curve2D_pt4mt")
 
 [node name="UpperEyeLine" type="Line2D" parent="Sprites/EyeTransformRecieve" unique_id=1659346 node_paths=PackedStringArray("path")]
 position = Vector2(-0.00024414063, 1.5258789e-05)
-points = PackedVector2Array(-87.23706, 72.58728, -72.05416, 72.311226, -64.99027, 64.11227, -64.24269, 48.94816, -62.53161, 33.86239, -59.773384, 18.933523, -55.799236, 4.2828836, -50.34576, -9.880339, -43.09748, -23.207516, -33.724895, -35.125732, -22.046091, -44.77715, -8.408747, -51.36313, 6.349743, -54.82992, 21.493206, -54.99636, 36.194542, -51.394474, 49.49259, -44.150414, 60.879116, -34.146477, 70.29654, -22.256483, 77.840324, -9.093194, 85.872116, -10.440922, 95.256836, -22.379257)
+points = PackedVector2Array(95.256836, -22.379257, 85.872116, -10.440922, 77.840324, -9.093194, 70.29654, -22.256483, 60.879116, -34.146477, 49.49259, -44.150414, 36.194542, -51.394474, 21.493206, -54.99636, 6.349743, -54.82992, -8.408747, -51.36313, -22.046091, -44.77715, -33.724895, -35.125732, -43.09748, -23.207516, -50.34576, -9.880339, -55.799236, 4.2828836, -59.773384, 18.933523, -62.53161, 33.86239, -64.24269, 48.94816, -64.99027, 64.11227, -72.05416, 72.311226, -87.23706, 72.58728)
 width = 8.0
 width_curve = SubResource("Curve_ddjok")
 default_color = Color(0.16078432, 0.003921569, 0.003921569, 1)
@@ -1813,7 +1679,7 @@ num_points = 20
 
 [node name="UpperEyeMaskLine" type="Line2D" parent="Sprites/EyeTransformRecieve" unique_id=920665047 node_paths=PackedStringArray("path")]
 visible = false
-points = PackedVector2Array(-104.000244, 88.00003, -99.92858, 47.75508, -95.8569, 7.5101347, -91.78524, -32.734814, -87.54471, -72.853004, -50.03795, -88.00154, -12.531229, -103.15006, 24.558437, -116.14345, 53.705536, -88.09564, 82.852615, -60.04785, 111.999756, -31.999992)
+points = PackedVector2Array(111.999756, -31.999992, 82.852615, -60.04785, 53.705536, -88.09564, 24.558437, -116.14345, -12.531229, -103.15006, -50.03795, -88.00154, -87.54471, -72.853004, -91.78524, -32.734814, -95.8569, 7.5101347, -99.92858, 47.75508, -104.000244, 88.00003)
 default_color = Color(0, 1, 0, 1)
 begin_cap_mode = 2
 end_cap_mode = 2
@@ -1822,7 +1688,7 @@ path = NodePath("../UpperEyeMaskPath")
 
 [node name="LowerEyeLine" type="Line2D" parent="Sprites/EyeTransformRecieve" unique_id=1642603117 node_paths=PackedStringArray("path")]
 position = Vector2(-0.00024414063, 1.5258789e-05)
-points = PackedVector2Array(-87.23706, 72.58728, -76.16028, 72.38588, -65.083496, 72.18449, -54.239815, 74.27578, -43.172394, 74.38772, -32.172516, 73.115425, -21.33911, 70.81588, -10.712877, 67.69243, -0.30405316, 63.903862, 9.878119, 59.541412, 19.844448, 54.705406, 29.597727, 49.452644, 39.108356, 43.773026, 48.29207, 37.57998, 57.0468, 30.796387, 65.177025, 23.27855, 72.368484, 14.864257, 77.97561, 5.336503, 81.56346, -4.9598665, 88.41015, -13.669561, 95.256836, -22.379257)
+points = PackedVector2Array(95.256836, -22.379257, 88.41015, -13.669561, 81.56346, -4.9598665, 77.97561, 5.336503, 72.368484, 14.864257, 65.177025, 23.27855, 57.0468, 30.796387, 48.29207, 37.57998, 39.108356, 43.773026, 29.597727, 49.452644, 19.844448, 54.705406, 9.878119, 59.541412, -0.30405316, 63.903862, -10.712877, 67.69243, -21.33911, 70.81588, -32.172516, 73.115425, -43.172394, 74.38772, -54.239815, 74.27578, -65.083496, 72.18449, -76.16028, 72.38588, -87.23706, 72.58728)
 width = 8.0
 width_curve = SubResource("Curve_ddjok")
 default_color = Color(0.16078432, 0.003921569, 0.003921569, 1)
@@ -1835,7 +1701,7 @@ num_points = 20
 
 [node name="LowerEyeMaskLine" type="Line2D" parent="Sprites/EyeTransformRecieve" unique_id=1645515000 node_paths=PackedStringArray("path")]
 visible = false
-points = PackedVector2Array(-104.000244, 88.00003, -74.295616, 111.04597, -44.59099, 134.0919, -12.787481, 137.54863, 21.125301, 121.31893, 55.03807, 105.08923, 88.95084, 88.85954, 122.86362, 72.629845, 127.10552, 41.659664, 119.55264, 4.8298407, 111.999756, -31.999992)
+points = PackedVector2Array(111.999756, -31.999992, 119.55264, 4.8298407, 127.10552, 41.659664, 122.86362, 72.629845, 88.95084, 88.85954, 55.03807, 105.08923, 21.125301, 121.31893, -12.787481, 137.54863, -44.59099, 134.0919, -74.295616, 111.04597, -104.000244, 88.00003)
 default_color = Color(0, 1, 0, 1)
 begin_cap_mode = 2
 end_cap_mode = 2
@@ -1900,63 +1766,28 @@ rest = Transform2D(0.99984634, 0, 0, 0.99984634, 1160, -93)
 scale = Vector2(0.9998337, 0.9998337)
 rest = Transform2D(0.9998337, 0, 0, 0.9998337, 0, 0)
 
-[node name="Neck" type="Bone2D" parent="Skeleton2D" unique_id=1207182117]
-rotation = -0.0062875752
-scale = Vector2(0.9998935, 0.9998935)
+[node name="Neck" type="Bone2D" parent="Skeleton2D" unique_id=1338604305]
+position = Vector2(0, 6)
+rotation = 0.0015940666
 rest = Transform2D(0.99999875, 0.0015940659, -0.0015940659, 0.99999875, 0, 0)
-script = ExtResource("22_vj0q6")
-transform_mode = 0
-target_rotation = -0.006287575
-rotation_easing_params = SubResource("Resource_pt4mt")
-limit_rotation = true
-constraint_data = SubResource("Resource_fdvg0")
-metadata/_custom_type_script = "uid://bv7fcu3p24jav"
 
-[node name="Neck2" type="Bone2D" parent="Skeleton2D/Neck" unique_id=637790929]
-position = Vector2(-904.41547, 17.123302)
-rotation = 0.018747801
-scale = Vector2(0.9999098, 0.9999098)
+[node name="Neck2" type="Bone2D" parent="Skeleton2D/Neck" unique_id=394846442]
+position = Vector2(-154.47015, -522.41077)
+rotation = -0.0031647682
 rest = Transform2D(0.999995, -0.0031647629, 0.0031647629, 0.999995, -904.41547, 17.123302)
-script = ExtResource("22_vj0q6")
-transform_mode = 0
-target_rotation = 0.018747807
-target_position = Vector2(-904.41547, 17.123302)
-rotation_easing_params = SubResource("Resource_cirhw")
-limit_rotation = true
-constraint_data = SubResource("Resource_fdvg0")
-metadata/_custom_type_script = "uid://bv7fcu3p24jav"
 
-[node name="Neck3" type="Bone2D" parent="Skeleton2D/Neck/Neck2" unique_id=1959657685]
-position = Vector2(-604.8968, 22.802515)
-rotation = 0.20774174
-scale = Vector2(0.9998887, 0.9998887)
+[node name="Neck3" type="Bone2D" parent="Skeleton2D/Neck/Neck2" unique_id=895965159]
+position = Vector2(178.25952, -671.29504)
+rotation = 0.23606943
 rest = Transform2D(0.97226477, 0.23388287, -0.23388287, 0.97226477, -604.8968, 22.802515)
-script = ExtResource("22_vj0q6")
-transform_mode = 0
-target_rotation = 0.20774172
-target_position = Vector2(-604.8968, 22.802515)
-rotation_easing_params = SubResource("Resource_62x2f")
-limit_rotation = true
-constraint_data = SubResource("Resource_fdvg0")
-metadata/_custom_type_script = "uid://bv7fcu3p24jav"
 
-[node name="Neck4" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3" unique_id=2121091428]
-position = Vector2(-505.8372, 125.669044)
-rotation = -0.56341726
-scale = Vector2(0.9998963, 0.9998963)
+[node name="Neck4" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3" unique_id=39517116]
+position = Vector2(-594.67444, -285.88696)
+rotation = -0.555175
 rest = Transform2D(0.8498082, -0.52709204, 0.52709204, 0.8498082, -505.8372, 125.669044)
-script = ExtResource("22_vj0q6")
-transform_mode = 0
-target_rotation = -0.5634172
-target_position = Vector2(-505.8372, 125.669044)
-rotation_easing_params = SubResource("Resource_uk606")
-limit_rotation = true
-constraint_data = SubResource("Resource_fdvg0")
-metadata/_custom_type_script = "uid://bv7fcu3p24jav"
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4" unique_id=1230639391]
 position = Vector2(-473.13022, -156.74255)
-scale = Vector2(0.99987954, 0.99987954)
 rest = Transform2D(1, 0, 0, 1, -473.13022, -156.74255)
 editor_settings/show_bone_gizmo = false
 
@@ -2033,12 +1864,13 @@ bone_angle = -96.42898
 [node name="Jaw" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head" unique_id=1483429035]
 position = Vector2(-8.94384, 38.7167)
 rotation = 0.013383687
-scale = Vector2(0.9998423, 0.9998423)
+scale = Vector2(0.9998326, 0.9998326)
 rest = Transform2D(0.99984235, 0, 0, 0.99984235, -8.94384, 38.7167)
 editor_settings/show_bone_gizmo = false
 
 [node name="Innermouth L" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw" unique_id=1868264973]
 position = Vector2(-119.29258, 100.69609)
+rotation = 0.11188347
 rest = Transform2D(1, 0, 0, 1, -119.29258, 100.69609)
 auto_calculate_length_and_angle = false
 length = 47.968
@@ -2081,12 +1913,12 @@ rest = Transform2D(0.90637976, 0.4224639, -0.4224639, 0.90637976, 29.03678, -60.
 
 [node name="Tongue1" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend" unique_id=624768628]
 position = Vector2(-3.1862, 75.3827)
-rotation = 0.002626273
-scale = Vector2(0.99982977, 0.99982977)
+rotation = 0.0065920944
+scale = Vector2(0.9998491, 0.9998491)
 rest = Transform2D(0.99657416, -0.080571204, 0.080571204, 0.99657416, -3.1862, 75.3827)
 script = ExtResource("22_vj0q6")
 transform_mode = 0
-target_rotation = 0.008318857
+target_rotation = 0.0065921093
 target_position = Vector2(-3.1862, 75.3827)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_eoo42")
@@ -2095,12 +1927,12 @@ constraint_data = SubResource("Resource_se10g")
 
 [node name="Tongue2" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1" unique_id=562153487]
 position = Vector2(-180.228, 79.7825)
-rotation = 0.092539914
-scale = Vector2(0.9998405, 0.9998405)
+rotation = 0.09703831
+scale = Vector2(0.9998416, 0.9998416)
 rest = Transform2D(0.9951378, 0.096871324, -0.096871324, 0.9951378, -180.228, 79.7825)
 script = ExtResource("22_vj0q6")
 transform_mode = 0
-target_rotation = 0.15700608
+target_rotation = 0.09703832
 target_position = Vector2(-180.228, 79.7825)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_eoo42")
@@ -2109,12 +1941,12 @@ constraint_data = SubResource("Resource_8jeob")
 
 [node name="Tongue3" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2" unique_id=1035085981]
 position = Vector2(-173.777, 24.6081)
-rotation = -0.12991361
-scale = Vector2(0.9998216, 0.9998216)
+rotation = -0.12990801
+scale = Vector2(0.9998196, 0.9998196)
 rest = Transform2D(0.99139434, -0.12952435, 0.12952435, 0.99139434, -173.777, 24.6081)
 script = ExtResource("22_vj0q6")
 transform_mode = 0
-target_rotation = -1.7339309999999999
+target_rotation = -0.12990803
 target_position = Vector2(-173.777, 24.6081)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_eoo42")
@@ -2123,15 +1955,15 @@ constraint_data = SubResource("Resource_o3jve")
 
 [node name="Tongue4" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3" unique_id=195148506]
 position = Vector2(-175.562, 27.9839)
-rotation = -0.2833392
-scale = Vector2(0.9998289, 0.9998289)
+rotation = -0.28354383
+scale = Vector2(0.99983954, 0.99983954)
 rest = Transform2D(0.9599157, -0.27971575, 0.27971575, 0.9599157, -175.562, 27.9839)
 auto_calculate_length_and_angle = false
 length = 130.878
 bone_angle = 171.24593
 script = ExtResource("22_vj0q6")
 transform_mode = 0
-target_rotation = -2.4212203
+target_rotation = -0.28354388
 target_position = Vector2(-175.562, 27.9839)
 ease_rotation = true
 rotation_easing_params = SubResource("Resource_eoo42")
@@ -2170,7 +2002,7 @@ scale = Vector2(0.999839, 0.999839)
 rest = Transform2D(0.999839, 0, 0, 0.999839, -239.23338, -180.11072)
 auto_calculate_length_and_angle = false
 length = 107.223
-bone_angle = 228.97366
+bone_angle = 228.97337
 
 [node name="Eyebrow" type="Bone2D" parent="Skeleton2D/Neck/Neck2/Neck3/Neck4/Head" unique_id=299622437]
 position = Vector2(-123.37548, -177.28558)
@@ -2218,7 +2050,7 @@ position = Vector2(-2482.46, -1788.69)
 rotation = -0.295378
 
 [node name="NeckEndIK" type="Marker2D" parent="." unique_id=1836125599]
-position = Vector2(-4502.538, 101.84277)
+position = Vector2(-3275.9973, -674.7051)
 rotation = -0.26152688
 
 [node name="HeadTarget" type="Marker2D" parent="NeckEndIK" unique_id=593632298]
@@ -2231,47 +2063,6 @@ position = Vector2(1020.5368, 251.64313)
 position = Vector2(662.03357, 16.174622)
 rotation = 6.0216584
 
-[node name="SoupGroup" type="Node" parent="." unique_id=1363556948]
-script = ExtResource("26_aktjc")
-metadata/_custom_type_script = "uid://1vbc48b2e7ci"
-
-[node name="NeckBaseIK" type="Node" parent="SoupGroup" unique_id=288191648 node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
-script = ExtResource("28_cy2um")
-target_node = NodePath("../../NeckEndIK/NeckMidIK")
-enabled = true
-flip_bend_direction = true
-softness = 1.0
-joint_one_bone_node = NodePath("../../Skeleton2D/Neck")
-joint_two_bone_node = NodePath("../../Skeleton2D/Neck/Neck2")
-metadata/_custom_type_script = "uid://iscrohmgg73r"
-
-[node name="NeckUpperIK" type="Node" parent="SoupGroup" unique_id=1145868697 node_paths=PackedStringArray("target_node", "joint_one_bone_node", "joint_two_bone_node")]
-script = ExtResource("28_cy2um")
-target_node = NodePath("../../NeckEndIK")
-enabled = true
-softness = 1.0
-joint_one_bone_node = NodePath("../../Skeleton2D/Neck/Neck2/Neck3")
-joint_two_bone_node = NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4")
-metadata/_custom_type_script = "uid://iscrohmgg73r"
-
-[node name="SoupLookAt" type="Node" parent="SoupGroup" unique_id=1376050718 node_paths=PackedStringArray("target_node", "bone_node")]
-script = ExtResource("27_xi1gq")
-target_node = NodePath("../../NeckEndIK/HeadTarget")
-enabled = true
-angle_offset_degrees = -78.53
-bone_node = NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head")
-metadata/_custom_type_script = "uid://cu2rfhmwork2f"
-
-[node name="SoupFABRIK" type="Node" parent="SoupGroup" unique_id=956423552 node_paths=PackedStringArray("target_node", "chain_root", "chain_tip")]
-script = ExtResource("29_xfsvd")
-target_node = NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/TongueIK")
-enabled = true
-chain_root = NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1")
-chain_tip = NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4")
-bias_offset_degrees = -67.778
-iterations = 5
-metadata/_custom_type_script = "uid://c0halov2bvjmy"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=106759991]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_47t2j")
@@ -2282,7 +2073,7 @@ active = false
 root_node = NodePath("%AnimationTree/..")
 callback_mode_discrete = 1
 tree_root = SubResource("AnimationNodeBlendTree_cy2um")
-advance_expression_base_node = NodePath("../Data/Brain")
+advance_expression_base_node = NodePath("")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Add2/add_amount = 0.25
 "parameters/Blink Shot/active" = false
@@ -2298,9 +2089,9 @@ parameters/NoseFlareStrength/blend_amount = 0.0
 
 [node name="HeadRemote" type="Node2D" parent="." unique_id=109765805]
 visible = false
-position = Vector2(-2528.1978, 55.820778)
-rotation = -0.3118431
-scale = Vector2(0.99947804, 0.99947804)
+position = Vector2(-986.8215, -1610.0864)
+rotation = -0.3206763
+scale = Vector2(1.00001, 1.00001)
 
 [node name="VoiceBox" type="Node2D" parent="HeadRemote" unique_id=329043386 node_paths=PackedStringArray("Buildup", "Hitch", "Sigh", "SneezeNormal", "SneezeBig", "SneezeStifle", "Sniff")]
 position = Vector2(-466.859, 192.443)
@@ -2315,7 +2106,7 @@ Sniff = NodePath("Sniff")
 metadata/_custom_type_script = "uid://k68sr13hul1s"
 
 [node name="SneezeNormal" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=1652378613]
-stream = SubResource("AudioStreamRandomizer_c4xyi")
+stream = SubResource("AudioStreamRandomizer_v7rdv")
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
 load_audio_directory = "res://assets/audio/Zen_voice"
@@ -2324,7 +2115,7 @@ file_filter = "Normal"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="SneezeStifle" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=1533608323]
-stream = SubResource("AudioStreamRandomizer_cirhw")
+stream = SubResource("AudioStreamRandomizer_27br7")
 volume_db = -2.0
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
@@ -2334,7 +2125,7 @@ file_filter = "Stifle"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="SneezeBig" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=1588684554]
-stream = SubResource("AudioStreamRandomizer_jme2s")
+stream = SubResource("AudioStreamRandomizer_m47n5")
 volume_db = 2.0
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
@@ -2344,7 +2135,7 @@ file_filter = "Big"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Hitch" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=1883123922]
-stream = SubResource("AudioStreamRandomizer_62x2f")
+stream = SubResource("AudioStreamRandomizer_otx0c")
 volume_db = -5.0
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
@@ -2354,7 +2145,7 @@ file_filter = "Hitch"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Buildup" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=604746042]
-stream = SubResource("AudioStreamRandomizer_hucby")
+stream = SubResource("AudioStreamRandomizer_fsf3d")
 volume_db = -4.0
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
@@ -2364,7 +2155,7 @@ file_filter = "Buildup"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Sigh" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=1129571952]
-stream = SubResource("AudioStreamRandomizer_uk606")
+stream = SubResource("AudioStreamRandomizer_o3k1t")
 volume_db = -5.0
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
@@ -2374,7 +2165,7 @@ file_filter = "Sigh"
 metadata/_custom_type_script = "uid://c3va03kfy4cbm"
 
 [node name="Sniff" type="AudioStreamPlayer2D" parent="HeadRemote/VoiceBox" unique_id=1741104729]
-stream = SubResource("AudioStreamRandomizer_fdvg0")
+stream = SubResource("AudioStreamRandomizer_cgx4l")
 volume_db = -6.0
 pitch_scale = 0.9
 script = ExtResource("40_otx0c")
@@ -2573,100 +2364,6 @@ process_material = SubResource("ParticleProcessMaterial_han7q")
 script = ExtResource("110_jxbhp")
 update_on_sneeze = false
 control_curve = SubResource("Curve_vrrce")
-
-[node name="Data" type="Node" parent="." unique_id=2075759362]
-
-[node name="EyeTracking" type="Node" parent="Data" unique_id=215852916 node_paths=PackedStringArray("eye_target", "pupil_bone", "look_roll_back_target", "look_at_nose_target", "look_center_target")]
-unique_name_in_owner = true
-script = ExtResource("114_j3emi")
-eye_target = NodePath("../../EyeTarget")
-pupil_bone = NodePath("../../Skeleton2D/Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil")
-mode = 3
-look_roll_back_target = NodePath("../../HeadRemote/RollBackLookTarget")
-look_at_nose_target = NodePath("../../HeadRemote/NoseLookTarget")
-look_center_target = NodePath("../../HeadRemote/CenterLookTarget")
-limit_length = 55.0
-
-[node name="Lungs" parent="Data" unique_id=1448301577 instance=ExtResource("115_brs5d")]
-unique_name_in_owner = true
-lungs = ExtResource("116_civpo")
-oxygen = ExtResource("117_ddjok")
-IN_WIND_BONUS = 20.0
-OUT_WIND_BONUS = 40.0
-HITCH_WIND_BONUS = 35.0
-SNEEZE_WIND_BONUS = 20000.0
-sneeze_wind_curve = SubResource("Curve_fdvg0")
-
-[node name="Brain" parent="Data" unique_id=1627391972 node_paths=PackedStringArray("lungs", "voice", "animation_tree") instance=ExtResource("118_53yu8")]
-unique_name_in_owner = true
-lungs = NodePath("../Lungs")
-voice = NodePath("../../HeadRemote/VoiceBox")
-animation_tree = NodePath("../../AnimationTree")
-sneeze_trigger_target = 150.0
-sneeze_trigger_decay_seconds = 60.0
-sneeze_trigger_expel = 90.0
-update_timer_max_variance = 0.75
-fit_probability = 0.5
-fit_window_seconds = Vector2(2, 8)
-fit_sneeze_bonus = 4.0
-fit_trigger_count_mult = 0.8
-sneeze_size_curve = SubResource("Curve_08xpl")
-control_sneeze_expel_percent = 0.5
-control_sneeze_size_curve = SubResource("Curve_5vmwn")
-hitch_curve = SubResource("Curve_a46c3")
-buildup_curve = SubResource("Curve_nioki")
-sneeze_curve = SubResource("Curve_gd0xo")
-tickle_curve = SubResource("Curve_3crph")
-hitch_repeat_modifier = SubResource("Resource_7avui")
-buildup_repeat_modifier = SubResource("Resource_5omty")
-sneeze_repeat_modifier = SubResource("Resource_7p24c")
-
-[node name="Chhinkni" type="Node" parent="Data" unique_id=1934446290]
-script = ExtResource("120_c4xyi")
-allergen = ExtResource("121_cirhw")
-progress_sensitivity_curve = SubResource("Curve_y3t7u")
-allergen_time_decay_seconds = 120.0
-particle_count_time_effect = SubResource("Curve_x6lb1")
-particle_decay_seconds = 200.0
-particle_decay_sneeze_seconds = 1.0
-particle_tickle_curve = SubResource("Curve_03s3g")
-particle_tickle_mod_curve = SubResource("Curve_r8y7q")
-particle_burn_curve = SubResource("Curve_470rv")
-particle_burn_mod_curve = SubResource("Curve_hxsvf")
-
-[node name="Dust" type="Node" parent="Data" unique_id=1077992228]
-script = ExtResource("120_c4xyi")
-allergen = ExtResource("122_jme2s")
-progress_tickle_curve = SubResource("Curve_qwbdj")
-progress_burn_curve = SubResource("Curve_p6nv1")
-progress_sensitivity_curve = SubResource("Curve_tln7c")
-allergen_time_decay_seconds = 120.0
-particle_tickle_curve = SubResource("Curve_aypym")
-particle_burn_curve = SubResource("Curve_l2kt4")
-
-[node name="Pollen" type="Node" parent="Data" unique_id=277243056]
-script = ExtResource("120_c4xyi")
-allergen = ExtResource("123_62x2f")
-progress_burn_curve = SubResource("Curve_7q10i")
-progress_sensitivity_curve = SubResource("Curve_darqs")
-particle_decay_seconds = 80.0
-
-[node name="Pepper" type="Node" parent="Data" unique_id=165548512]
-script = ExtResource("120_c4xyi")
-allergen = ExtResource("124_hucby")
-progress_sensitivity_curve = SubResource("Curve_oukup")
-allergen_time_decay_seconds = 30.0
-particle_decay_seconds = 40.0
-particle_tickle_curve = SubResource("Curve_cprny")
-particle_tickle_mod_curve = SubResource("Curve_cjd2j")
-particle_burn_curve = SubResource("Curve_1bsbe")
-particle_burn_mod_curve = SubResource("Curve_5wyuy")
-
-[node name="Cold" type="Node" parent="Data" unique_id=1886086069]
-script = ExtResource("125_uk606")
-tickle_curve = SubResource("Curve_wxlc2")
-burn_curve = SubResource("Curve_jemny")
-sensitivity_curve = SubResource("Curve_3tftd")
 
 [node name="ShaderTextPanel" type="Panel" parent="." unique_id=1267708518]
 unique_name_in_owner = true

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CharacterConfig" format=3 uid="uid://eljqaj50p7b5"]
+
+[ext_resource type="Script" uid="uid://de0j84lrtq3ff" path="res://resources/definitions/character_config.gd" id="1_2pmxf"]
+
+[resource]
+script = ExtResource("1_2pmxf")
+name = &"Chance"
+scene_path = "uid://cotmotidtib6h"
+position = Vector2(1046, 522)
+scale = Vector2(0.25, 0.25)
+z_index = 0
+metadata/_custom_type_script = "uid://de0j84lrtq3ff"

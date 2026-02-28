@@ -5,6 +5,7 @@ extends Node
 var characters : Dictionary[String,CharacterConfig] = {
 	"Kel" : preload("res://resources/character_config/kel_config.tres"),
 	"Zephyr" : preload("res://resources/character_config/zephyr_config.tres"),
+	"Chance" : preload("res://resources/character_config/chance_config.tres")
 }
 
 var current_character_key : String = ""

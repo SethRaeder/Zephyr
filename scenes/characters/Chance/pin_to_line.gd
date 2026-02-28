@@ -11,13 +11,15 @@ var print_counter : int = 0
 func _process(_delta: float) -> void:
 	if line:
 		var index : int = lerp(0,line.get_point_count()-1,pin_percentage)
-		position = line.get_point_position(index) + position_offset
 		var tangent_start : Vector2 = position
 		var tangent_end : Vector2 = position
 		if index > 0:
 			tangent_start = line.get_point_position(index - 1)
 		if index < line.get_point_count() - 1:
 			tangent_end = line.get_point_position(index + 1)
+		
+		#var tangent_normal : Vector2 = tangent_start.direction_to(tangent_end).rotated(PI/2).normalized()
+		position = line.get_point_position(index) + (position_offset.rotated(tangent_start.direction_to(tangent_end).angle()))
 		rotation = tangent_start.direction_to(tangent_end).angle() + rotation_offset
 		
 		#print_counter += 1
