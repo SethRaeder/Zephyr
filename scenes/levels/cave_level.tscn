@@ -91,8 +91,7 @@ position = Vector2(14.3586, -97.2295)
 texture = ExtResource("4_w3mxs")
 
 [node name="CharacterSpawner" type="Node2D" parent="Background/Layer3" unique_id=1866176813 groups=["character_root"]]
-position = Vector2(-1182, -640)
-scale = Vector2(2, 2)
+position = Vector2(1122, 654)
 script = ExtResource("1_kjvhd")
 
 [node name="Layer2" type="Parallax2D" parent="Background" unique_id=1540674420]

@@ -116,7 +116,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_qjhqk"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -111.80991, -6.5224385, 0, 0, 0, 0, -222.02115, -26.45944, 0, 0, 0, 0, -326.75922, -66.1323, 0, 0, 0, 0, -419.64136, -128.7175, 0, 0, 0, 0, -492.98343, -213.36346, 0, 0, 0, 0, -539.84924, -315.0866, 0, 0, 0, 0, -556.1254, -425.89764, 0, 0, 0, 0, -541.71576, -536.9668, 0, 0, 0, 0, -500.36633, -641.0544, 0, 0, 0, 0, -438.3485, -734.31635, 0, 0, 0, 0, -362.79358, -816.99316, 0, 0, 0, 0, -280.58566, -893.058, 0, 0, 0, 0, -198.45885, -969.2103, 0, 0, 0, 0, -123.61775, -1052.5338, 0, 0, 0, 0, -63.705772, -1147.1624, 0, 0, 0, 0, -26.67712, -1252.8641, 0, 0, 0, 0, -19.354992, -1364.6245, 0, 0, 0, 0, -45.34124, -1473.5681, 0, 0, 0, 0, -103.47688, -1569.2982, 0, 0, 0, 0, -187.87004, -1642.931, 0, 0, 0, 0, -289.68427, -1689.5986, 0, 0, 0, 0, -399.91132, -1709.4481, 0, 0, 0, 0, -511.88562, -1707.0492, 0, 0, 0, 0, -622.57776, -1689.9833)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -111.86864, -5.4230194, 0, 0, 0, 0, -222.74286, -21.263084, 0, 0, 0, 0, -330.26538, -52.614464, 0, 0, 0, 0, -430.49927, -102.58612, 0, 0, 0, 0, -518.5061, -171.85944, 0, 0, 0, 0, -589.3985, -258.56735, 0, 0, 0, 0, -639.52, -358.72638, 0, 0, 0, 0, -667.3523, -467.21307, 0, 0, 0, 0, -673.86816, -579.0234, 0, 0, 0, 0, -662.3071, -690.4251, 0, 0, 0, 0, -637.60944, -799.6681, 0, 0, 0, 0, -605.8816, -907.08014, 0, 0, 0, 0, -574.19507, -1014.5044, 0, 0, 0, 0, -549.8363, -1123.8235, 0, 0, 0, 0, -539.17615, -1235.3151, 0, 0, 0, 0, -547.35187, -1347.0162, 0, 0, 0, 0, -577.6644, -1454.8362, 0, 0, 0, 0, -630.9499, -1553.3484, 0, 0, 0, 0, -705.34686, -1637.0687, 0, 0, 0, 0, -796.72375, -1701.8318, 0, 0, 0, 0, -899.7226, -1745.8232, 0, 0, 0, 0, -1009.0865, -1769.9797, 0, 0, 0, 0, -1120.815, -1777.7734, 0, 0, 0, 0, -1232.7719, -1774.6672)
 }
 point_count = 25
 
@@ -800,7 +800,7 @@ font_size = 60
 [node name="NeckCurlerControl" type="Path2D" parent="." unique_id=1575087398 node_paths=PackedStringArray("ik_targets")]
 curve = SubResource("Curve2D_qjhqk")
 script = ExtResource("117_v7rdv")
-curve_drivers = PackedVector2Array(0, 0.014693576, 0.5, 2.4068365, 1, -0.20046528)
+curve_drivers = PackedVector2Array(0, 0.014693576, 0.5, 1.8671885, 1, -0.0628964)
 path_length = 2800.0
 path_segments = 25
 do_IK = true
@@ -841,7 +841,7 @@ offset = Vector2(-74.55, -323.515)
 [node name="Neck" type="Node2D" parent="Sprites" unique_id=2080984676]
 
 [node name="NeckOutline" type="Line2D" parent="Sprites/Neck" unique_id=691578696 node_paths=PackedStringArray("path")]
-points = PackedVector2Array(-622.57776, -1689.9833, -569.4454, -1698.175, -516.3128, -1706.3667, -462.61646, -1708.1047, -408.86896, -1709.2561, -355.8202, -1701.5082, -302.91147, -1691.9806, -253.0313, -1672.7983, -204.16025, -1650.3978, -160.86415, -1619.3685, -120.355255, -1584.0245, -87.198616, -1542.4934, -59.293415, -1496.5427, -39.104397, -1447.421, -26.630945, -1395.1279, -20.81946, -1342.2717, -24.334066, -1288.6271, -32.60184, -1235.9514, -50.375637, -1185.2146, -70.8955, -1135.8065, -99.6532, -1090.3848, -129.60521, -1045.8677, -165.5289, -1005.8725, -201.74408, -966.1641, -241.16496, -929.61096, -280.58585, -893.0578, -320.04562, -856.5467, -359.50552, -820.0355, -396.03793, -780.6152, -432.30405, -740.93054, -463.1556, -697.01154, -492.92416, -652.24585, -515.2521, -603.58295, -535.0998, -553.621, -546.32684, -501.42484, -553.24347, -448.11157, -551.5681, -394.87064, -543.75555, -341.68127, -528.60144, -290.67303, -506.10583, -241.84595, -478.31503, -196.43431, -443.1108, -155.80421, -404.78024, -118.7039, -360.1968, -88.66298, -314.19064, -61.37156, -263.91635, -42.32858, -213.20422, -24.864471, -160.30283, -15.294714, -107.337494, -6.26154, -53.668747, -3.13077, 0, 0)
+points = PackedVector2Array(-1232.7719, -1774.6672, -1179.0328, -1776.1582, -1125.2933, -1777.6492, -1071.6549, -1774.3442, -1018.02545, -1770.6033, -965.3418, -1760.3173, -912.8475, -1748.7223, -862.64386, -1729.9868, -813.2044, -1708.8707, -767.48395, -1681.1082, -723.62335, -1650.0222, -684.5166, -1613.628, -648.8061, -1573.4424, -618.162, -1529.7068, -592.585, -1482.4208, -571.60223, -1433.2733, -557.0523, -1381.5199, -546.0438, -1329.1451, -542.11945, -1275.5284, -540.45526, -1221.9368, -545.57214, -1168.4208, -551.78485, -1115.0786, -563.477, -1062.6058, -575.4622, -1010.2085, -590.67175, -958.6447, -605.8814, -907.0809, -621.1108, -855.5231, -636.34015, -803.9652, -648.4763, -751.6018, -660.33124, -699.1651, -666.93146, -645.8651, -672.4808, -592.39233, -671.5225, -538.7724, -668.39484, -485.10342, -658.4461, -432.49796, -645.0866, -380.4244, -625.4862, -330.6823, -601.42786, -282.606, -572.3846, -237.75778, -538.3562, -196.13797, -500.905, -158.00497, -458.66174, -124.753784, -414.46213, -94.59078, -366.34982, -70.60436, -317.36288, -48.852367, -265.75198, -33.803673, -213.87303, -19.995897, -160.65338, -12.39266, -107.39395, -5.2061014, -53.696976, -2.603051, 0, 0)
 width = 865.0
 width_curve = SubResource("Curve_62x2f")
 default_color = Color(0.16078432, 0.011764706, 0.011764706, 1)
@@ -854,7 +854,7 @@ path = NodePath("../../../NeckCurlerControl")
 num_points = 50
 
 [node name="NeckLine" type="Line2D" parent="Sprites/Neck" unique_id=1477592112 node_paths=PackedStringArray("path")]
-points = PackedVector2Array(-622.57776, -1689.9833, -569.4454, -1698.175, -516.3128, -1706.3667, -462.61646, -1708.1047, -408.86896, -1709.2561, -355.8202, -1701.5082, -302.91147, -1691.9806, -253.0313, -1672.7983, -204.16025, -1650.3978, -160.86415, -1619.3685, -120.355255, -1584.0245, -87.198616, -1542.4934, -59.293415, -1496.5427, -39.104397, -1447.421, -26.630945, -1395.1279, -20.81946, -1342.2717, -24.334066, -1288.6271, -32.60184, -1235.9514, -50.375637, -1185.2146, -70.8955, -1135.8065, -99.6532, -1090.3848, -129.60521, -1045.8677, -165.5289, -1005.8725, -201.74408, -966.1641, -241.16496, -929.61096, -280.58585, -893.0578, -320.04562, -856.5467, -359.50552, -820.0355, -396.03793, -780.6152, -432.30405, -740.93054, -463.1556, -697.01154, -492.92416, -652.24585, -515.2521, -603.58295, -535.0998, -553.621, -546.32684, -501.42484, -553.24347, -448.11157, -551.5681, -394.87064, -543.75555, -341.68127, -528.60144, -290.67303, -506.10583, -241.84595, -478.31503, -196.43431, -443.1108, -155.80421, -404.78024, -118.7039, -360.1968, -88.66298, -314.19064, -61.37156, -263.91635, -42.32858, -213.20422, -24.864471, -160.30283, -15.294714, -107.337494, -6.26154, -53.668747, -3.13077, 0, 0)
+points = PackedVector2Array(-1232.7719, -1774.6672, -1179.0328, -1776.1582, -1125.2933, -1777.6492, -1071.6549, -1774.3442, -1018.02545, -1770.6033, -965.3418, -1760.3173, -912.8475, -1748.7223, -862.64386, -1729.9868, -813.2044, -1708.8707, -767.48395, -1681.1082, -723.62335, -1650.0222, -684.5166, -1613.628, -648.8061, -1573.4424, -618.162, -1529.7068, -592.585, -1482.4208, -571.60223, -1433.2733, -557.0523, -1381.5199, -546.0438, -1329.1451, -542.11945, -1275.5284, -540.45526, -1221.9368, -545.57214, -1168.4208, -551.78485, -1115.0786, -563.477, -1062.6058, -575.4622, -1010.2085, -590.67175, -958.6447, -605.8814, -907.0809, -621.1108, -855.5231, -636.34015, -803.9652, -648.4763, -751.6018, -660.33124, -699.1651, -666.93146, -645.8651, -672.4808, -592.39233, -671.5225, -538.7724, -668.39484, -485.10342, -658.4461, -432.49796, -645.0866, -380.4244, -625.4862, -330.6823, -601.42786, -282.606, -572.3846, -237.75778, -538.3562, -196.13797, -500.905, -158.00497, -458.66174, -124.753784, -414.46213, -94.59078, -366.34982, -70.60436, -317.36288, -48.852367, -265.75198, -33.803673, -213.87303, -19.995897, -160.65338, -12.39266, -107.39395, -5.2061014, -53.696976, -2.603051, 0, 0)
 width = 845.0
 width_curve = SubResource("Curve_62x2f")
 default_color = Color(0.94509804, 0.8039216, 0.6392157, 1)
@@ -867,7 +867,7 @@ path = NodePath("../../../NeckCurlerControl")
 num_points = 50
 
 [node name="HairLine" type="Line2D" parent="Sprites/Neck" unique_id=399266331 node_paths=PackedStringArray("target_line")]
-points = PackedVector2Array(-745.69226, -1972.3452, -692.2572, -1980.5837, -638.2406, -1988.9119, -548.2201, -2003.3143, -489.28424, -2005.4263, -383.65225, -2006.5574, -317.80222, -1997.2769, -207.26479, -1974.2863, -136.31425, -1946.9196, -34.46295, -1895.1917, 34.9785, -1843.7456, 114.83451, -1766.7826, 172.14418, -1689.2095, 221.27222, -1597.351, 255.0134, -1497.9894, 271.98312, -1404.2699, 274.39233, -1293.5966, 263.7841, -1209.0001, 233.09576, -1100.9503, 203.28677, -1031.8025, 147.77348, -938.61676, 108.02385, -885.1099, 41.54779, -812.60425, -2.0669556, -770.6747, -64.397736, -718.21936, -109.488434, -681.98004, -154.5413, -645.7552, -198.9635, -609.8037, -224.32353, -583.571, -263.0904, -545.3366, -273.50204, -524.4501, -301.2372, -484.38803, -301.04272, -467.3118)
+points = PackedVector2Array(-1319.6531, -2070.1958, -1265.6079, -2071.6953, -1210.975, -2073.211, -1129.2039, -2076.2793, -1071.1752, -2072.859, -978.56995, -2066.3477, -915.75507, -2054.3677, -819.87897, -2031.9152, -753.128, -2007.0637, -662.4231, -1965.7445, -595.2251, -1924.0614, -517.6583, -1865.1859, -455.77234, -1804.574, -397.02844, -1733.115, -347.13855, -1654.6416, -309.32904, -1577.4603, -277.03043, -1485.6829, -259.39035, -1409.15, -248.55405, -1311.2473, -247.7757, -1240.1427, -256.2618, -1144.9042, -266.89786, -1081.1664, -288.22943, -995.73175, -305.43146, -938.3025, -330.70978, -867.25085, -350.9538, -813.0593, -371.07147, -759.0603, -390.85092, -705.4452, -401.5822, -665.8373, -416.4629, -613.03455, -418.4341, -582.6591, -424.73654, -532.86975, -419.42346, -508.74704)
 width = 500.0
 texture = ExtResource("5_53yu8")
 texture_mode = 2
@@ -878,8 +878,8 @@ offset_y_curve = SubResource("Curve_uk606")
 max_points = 33
 
 [node name="Collar" type="Sprite2D" parent="Sprites/Neck" unique_id=2024250540 node_paths=PackedStringArray("line")]
-position = Vector2(-587.98883, -331.9316)
-rotation = 1.5433897
+position = Vector2(-640.7546, -260.13278)
+rotation = 1.1988637
 texture = ExtResource("26_pt4mt")
 script = ExtResource("6_pt4mt")
 line = NodePath("../NeckLine")
@@ -892,9 +892,9 @@ position = Vector2(149.67725, 161.50012)
 texture = ExtResource("3_t2dwc")
 
 [node name="JawRemote" type="Node2D" parent="Sprites" unique_id=2110901877]
-position = Vector2(-601.76227, -1606.5767)
-rotation = 0.026416251
-scale = Vector2(0.9997607, 0.9997607)
+position = Vector2(-1186.2645, -1696.4513)
+rotation = -0.19680743
+scale = Vector2(0.99976057, 0.99976057)
 
 [node name="JawContainer" type="Node2D" parent="Sprites/JawRemote" unique_id=1267126305]
 scale = Vector2(1.0001591, 1.0001591)
@@ -1007,8 +1007,8 @@ polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 bones = ["Wing", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Shoulder", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/InnerCheek U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/InnerCheek L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/EarBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/HeadBrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Eyebrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="HeadRemote" type="Node2D" parent="Sprites" unique_id=109765805]
-position = Vector2(-612.07275, -1723.7883)
-rotation = 0.01303254
+position = Vector2(-1222.2668, -1808.4723)
+rotation = -0.21019115
 scale = Vector2(0.99994797, 0.99994797)
 
 [node name="UpperTeeth" type="Polygon2D" parent="Sprites/HeadRemote" unique_id=1600345004]
@@ -1385,8 +1385,8 @@ polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)]
 bones = ["Wing", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Shoulder", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/LipsCorner", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Innermouth U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/InnerCheek U", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/ULipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/ULipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/ULipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/Innermouth L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/InnerCheek L", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/LLipFront", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/LLipMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/LLipBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Jaw/TongueExtend/Tongue1/Tongue2/Tongue3/Tongue4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Ear", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/EarBack", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Nostril", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/HeadBrow", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eyebrow", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "Neck/Neck2/Neck3/Neck4/Head/Eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eye/EyelidU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eye/EyelidL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Neck/Neck2/Neck3/Neck4/Head/Eye/Pupil", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="EyeTransformRecieve" type="Node2D" parent="Sprites" unique_id=1402945087]
-position = Vector2(-797.44824, -1740.8777)
-rotation = 0.013032539
+position = Vector2(-1406.8262, -1784.1002)
+rotation = -0.21019115
 scale = Vector2(1.0008303, 1.0008303)
 
 [node name="EyeColor" type="Polygon2D" parent="Sprites/EyeTransformRecieve" unique_id=881107663]
@@ -1513,8 +1513,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_np5xu")
 
 [node name="HeadAnchor" type="Node2D" parent="." unique_id=828499918 node_paths=PackedStringArray("target_path", "look_at_mark")]
-position = Vector2(-612.07275, -1723.7883)
-rotation = 9.451527
+position = Vector2(-1222.2668, -1808.4723)
+rotation = 9.228303
 script = ExtResource("30_27br7")
 target_path = NodePath("../NeckCurlerControl")
 offset = Vector2(10.505, -33.805)
@@ -1563,8 +1563,8 @@ bone_angle = -123.194
 
 [node name="Jaw" type="Bone2D" parent="HeadAnchor/RotationOffset/Face Rig/Head" unique_id=1483429035]
 position = Vector2(11.837891, 117.074585)
-rotation = 0.013383714
-scale = Vector2(0.9998226, 0.9998226)
+rotation = 0.013383715
+scale = Vector2(0.9998225, 0.9998225)
 rest = Transform2D(0.9997332, 0.01338094, -0.01338094, 0.9997332, 11.837891, 117.074585)
 editor_settings/show_bone_gizmo = false
 
@@ -1607,7 +1607,7 @@ scale = Vector2(0.99983907, 0.99983907)
 rest = Transform2D(0.99983907, 1.1641532e-10, -1.1641532e-10, 0.99983907, -239.2334, -180.11072)
 auto_calculate_length_and_angle = false
 length = 107.223
-bone_angle = 228.97293
+bone_angle = 228.9729
 
 [node name="Eyebrow" type="Bone2D" parent="HeadAnchor/RotationOffset/Face Rig/Head" unique_id=299622437]
 position = Vector2(-170.51695, -112.14799)
@@ -1657,15 +1657,15 @@ position = Vector2(-876.4109, -12.87854)
 gizmo_extents = 173.5
 
 [node name="NeckMidTarget" type="Marker2D" parent="." unique_id=284919500]
-position = Vector2(282.5431, -1058.1333)
+position = Vector2(-263.5519, -1325.5605)
 gizmo_extents = 173.5
 
 [node name="NeckEndTarget" type="Marker2D" parent="." unique_id=1160251966]
-position = Vector2(-2322.5588, -478.14026)
+position = Vector2(-2653.2363, -778.1388)
 gizmo_extents = 173.5
 
 [node name="HeadTarget" type="Marker2D" parent="." unique_id=1534458229]
-position = Vector2(-1670.9414, -1752.1188)
+position = Vector2(-3684.1833, -1318.445)
 gizmo_extents = 173.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=106759991]
