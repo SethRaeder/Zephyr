@@ -22,4 +22,6 @@ func draw_custom_line():
 func _ready() -> void:
 	assert(path)
 	init_line()
-	path.curve.changed.connect(draw_custom_line)
+
+func _process(_delta: float) -> void:
+	draw_custom_line()

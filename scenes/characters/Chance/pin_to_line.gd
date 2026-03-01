@@ -5,6 +5,7 @@ extends Node2D
 @export_range(0,1,0.01) var pin_percentage : float
 @export var position_offset : Vector2
 @export var rotation_offset : float
+@export var rotation_multiplier : float = 1.0
 
 var print_counter : int = 0
 
@@ -20,7 +21,7 @@ func _process(_delta: float) -> void:
 		
 		#var tangent_normal : Vector2 = tangent_start.direction_to(tangent_end).rotated(PI/2).normalized()
 		position = line.get_point_position(index) + (position_offset.rotated(tangent_start.direction_to(tangent_end).angle()))
-		rotation = tangent_start.direction_to(tangent_end).angle() + rotation_offset
+		rotation = (tangent_start.direction_to(tangent_end).angle()*rotation_multiplier) + rotation_offset
 		
 		#print_counter += 1
 		#if print_counter > 50:
