@@ -6,6 +6,5 @@
 script = ExtResource("1_2pmxf")
 name = &"Chance"
 scene_path = "uid://cotmotidtib6h"
-scale = Vector2(0.25, 0.25)
-z_index = 0
+scale = Vector2(0.5, 0.5)
 metadata/_custom_type_script = "uid://de0j84lrtq3ff"

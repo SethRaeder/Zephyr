@@ -78,7 +78,7 @@ func ik_solve() -> void:
 	for p in range(min(curve_drivers.size(), ik_targets.size())):
 		var target_point : Vector2 = ik_targets[p].global_position
 		var point_index : int = lerp(0, curve.get_baked_points().size()-1, curve_drivers[p].x / (curve_drivers.size()-1))
-		var curve_point : Vector2 = (global_position + curve.get_baked_points()[point_index]) * global_scale
+		var curve_point : Vector2 = global_position + (curve.get_baked_points()[point_index] * global_scale)
 		var angle : float = curve_point.direction_to(target_point).rotated(PI/2).angle() + (PI/2)
 		curve_drivers[p].y += ik_smoothing * (angle - curve_drivers[p].y)
 		#print("Point %d : %d [%v] angle to target [%v]: %f"%[p,point_index,curve_point, target_point,angle])

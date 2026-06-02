@@ -768,9 +768,10 @@ states/sniff/position = Vector2(860, 1)
 "states/sniff 2/node" = SubResource("AnimationNodeAnimation_ejpbr")
 "states/sniff 2/position" = Vector2(860, 100)
 transitions = ["Start", "rig_demo", SubResource("AnimationNodeStateMachineTransition_f55j0"), "rig_demo", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_enas5"), "hitch", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_3y0bf"), "IdleTickle", "hitch", SubResource("AnimationNodeStateMachineTransition_e8s6d"), "buildup", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_52bcx"), "hitch", "buildup", SubResource("AnimationNodeStateMachineTransition_l7ab5"), "IdleTickle", "buildup", SubResource("AnimationNodeStateMachineTransition_bvihb"), "buildup", "buildup2", SubResource("AnimationNodeStateMachineTransition_sngg2"), "buildup2", "buildup", SubResource("AnimationNodeStateMachineTransition_wjj2l"), "hitch", "hitch 2", SubResource("AnimationNodeStateMachineTransition_eeniq"), "hitch 2", "hitch", SubResource("AnimationNodeStateMachineTransition_ye4e8"), "buildup", "sigh", SubResource("AnimationNodeStateMachineTransition_obv02"), "sigh", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_l2hsy"), "sniff", "sniff 2", SubResource("AnimationNodeStateMachineTransition_c5uyw"), "sniff 2", "sniff", SubResource("AnimationNodeStateMachineTransition_1exov"), "IdleTickle", "sniff", SubResource("AnimationNodeStateMachineTransition_2a4ye"), "sniff", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_7tebk"), "sniff", "sigh", SubResource("AnimationNodeStateMachineTransition_vtvym"), "SneezeBlend2", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_oxnq4"), "SneezeBlend", "SneezeBlend2", SubResource("AnimationNodeStateMachineTransition_c6mjl"), "buildup", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_o2tv5"), "SneezeBlend", "buildup", SubResource("AnimationNodeStateMachineTransition_8lt0t"), "SneezeBlend", "IdleTickle", SubResource("AnimationNodeStateMachineTransition_6xysc"), "SneezeBlend", "hitch", SubResource("AnimationNodeStateMachineTransition_n5cre"), "SneezeBlend", "sigh", SubResource("AnimationNodeStateMachineTransition_6c0ht"), "sigh", "SneezeBlend", SubResource("AnimationNodeStateMachineTransition_trcj5"), "SneezeBlend", "sniff", SubResource("AnimationNodeStateMachineTransition_n6k6u")]
-graph_offset = Vector2(-185, -359)
+graph_offset = Vector2(121, -367)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_cy2um"]
+graph_offset = Vector2(47.75006, -381.5905)
 nodes/output/position = Vector2(2220, -140)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_r5j13")
 nodes/Add2/position = Vector2(980, -120)
@@ -894,7 +895,7 @@ texture = ExtResource("3_t2dwc")
 [node name="JawRemote" type="Node2D" parent="Sprites" unique_id=2110901877]
 position = Vector2(-1186.2645, -1696.4513)
 rotation = -0.19680743
-scale = Vector2(0.99976057, 0.99976057)
+scale = Vector2(0.9997605, 0.9997605)
 
 [node name="JawContainer" type="Node2D" parent="Sprites/JawRemote" unique_id=1267126305]
 scale = Vector2(1.0001591, 1.0001591)
@@ -1564,7 +1565,7 @@ bone_angle = -123.194
 [node name="Jaw" type="Bone2D" parent="HeadAnchor/RotationOffset/Face Rig/Head" unique_id=1483429035]
 position = Vector2(11.837891, 117.074585)
 rotation = 0.013383715
-scale = Vector2(0.9998225, 0.9998225)
+scale = Vector2(0.99982244, 0.99982244)
 rest = Transform2D(0.9997332, 0.01338094, -0.01338094, 0.9997332, 11.837891, 117.074585)
 editor_settings/show_bone_gizmo = false
 
@@ -1607,7 +1608,7 @@ scale = Vector2(0.99983907, 0.99983907)
 rest = Transform2D(0.99983907, 1.1641532e-10, -1.1641532e-10, 0.99983907, -239.2334, -180.11072)
 auto_calculate_length_and_angle = false
 length = 107.223
-bone_angle = 228.9729
+bone_angle = 228.97289
 
 [node name="Eyebrow" type="Bone2D" parent="HeadAnchor/RotationOffset/Face Rig/Head" unique_id=299622437]
 position = Vector2(-170.51695, -112.14799)
@@ -1670,6 +1671,7 @@ gizmo_extents = 173.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=106759991]
 unique_name_in_owner = true
+active = false
 libraries/ = SubResource("AnimationLibrary_47t2j")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=442726222]
